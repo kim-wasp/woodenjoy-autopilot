@@ -78,9 +78,21 @@ def parse_now():
     return datetime.now(KST)
 
 
+def recently_posted(platform, now, hours=20):
+    """같은 플랫폼에 하루 한 편만: 최근 20시간 안에 올린 글이 있으면 다음 차례로 미뤄요"""
+    for f in (ROOT / "posts").glob("*/post.json"):
+        post = json.loads(f.read_text(encoding="utf-8"))
+        pub = post.get("published") or {}
+        at = pub.get(f"{platform}_at")
+        if at and now - datetime.fromisoformat(at).astimezone(KST) < timedelta(hours=hours):
+            return True
+    return False
+
+
 def cmd_due():
     s, now = settings(), parse_now()
-    for f, post in ready_posts():
+    taken = set()
+    for f, post in sorted(ready_posts(), key=lambda fp: fp[1].get("approved_at") or "9999"):
         if not post.get("approved_at"):
             post["approved_at"] = now.isoformat(timespec="minutes")
             f.write_text(json.dumps(post, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -93,6 +105,9 @@ def cmd_due():
                 continue    # 실패는 자동 재시도 안 함 / 이미 보냈고 크롬 대기 중
             if p == "threads" and times.get("naver") is not None and not done(post, "naver") and nv.get("status") != "failed":
                 continue    # 네이버 공개 주소를 기다려요 (실패했으면 블로그 홈 링크로 진행)
+            if p in taken or (p != "naver" and recently_posted(p, now)):
+                continue    # 이번 차례엔 이미 다른 글이 올라가요
+            taken.add(p)
             print(f.parent.relative_to(ROOT).as_posix(), p)
 
 
