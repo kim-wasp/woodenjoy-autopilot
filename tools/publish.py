@@ -120,9 +120,9 @@ def publish_threads(api, post, cover_url, link):
 
 def find_account(api, word):
     accs = api.call("GET", "/v1/accounts")
-    items = accs.get("accounts", accs if isinstance(accs, list) else [])
+    items = accs if isinstance(accs, list) else (accs.get("data") or accs.get("accounts") or [])
     for a in items:
-        if word in json.dumps(a).lower():
+        if str(a.get("platform", "")).lower() == word or word in json.dumps(a).lower():
             return a["id"]
     raise SystemExit(f"uplika에 {word} 계정이 연결돼 있지 않아요")
 

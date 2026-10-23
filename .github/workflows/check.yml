@@ -33,17 +33,32 @@ jobs:
           [ "$(jq -r .naver.via config/settings.json)" = "uplika" ] || { echo "네이버는 붙여넣기 방식"; exit 0; }
           [ -n "$UPLIKA_API_KEY" ] || { echo "UPLIKA_API_KEY 가 아직 없어서 네이버 업로드는 건너뜀"; exit 0; }
           [ "$(jq -r .auto_publish config/settings.json)" = "false" ] || { echo "자동 모드: 병합 때 바로 공개로 올려요"; exit 0; }
-          if gh pr view ${{ github.event.pull_request.number }} --json comments -q '.comments[].body' | grep -q "네이버 비공개 업로드"; then
+          if gh pr view ${{ github.event.pull_request.number }} --json comments -q '.comments[].body' | grep -q "✅ 네이버 비공개 업로드 완료"; then
             echo "이미 비공개로 올렸어요"; exit 0
           fi
           for d in $(git diff --name-only origin/${{ github.base_ref }}...HEAD -- posts | cut -d/ -f1-2 | sort -u); do
             [ -f "$d/post.json" ] && [ "$(jq -r .status "$d/post.json")" = "ready" ] || continue
-            msg=$(python3 tools/publish_naver.py "$d" --open private 2>&1 | tail -1)
-            gh pr comment ${{ github.event.pull_request.number }} --body "네이버 비공개 업로드: $msg
+            if out=$(python3 tools/publish_naver.py "$d" --open private 2>&1); then
+              gh pr comment ${{ github.event.pull_request.number }} --body "✅ 네이버 비공개 업로드 완료: $(echo "$out" | tail -1)
           네이버 앱에서 글을 확인하고 괜찮으면 이 PR을 병합해 주세요.
           업로드 예정: $(python3 tools/schedule.py show "$d" | tr '\n' ' ')
           네이버는 위 추천 시간에 맞춰 **직접 공개로** 바꿔 주세요. 인스타·스레드는 병합해 두면 정해진 시간에 자동으로 올라가요."
+            else
+              gh pr comment ${{ github.event.pull_request.number }} --body "⚠️ 네이버 업로드 실패 (병합하지 마세요): $(echo "$out" | tail -3)"
+              exit 1
+            fi
           done
+      - name: 네이버 업로드 기록을 PR에 저장 (스레드 링크용)
+        if: success()
+        run: |
+          changed=$(git status --porcelain posts | awk '{print $2}' | grep post.json || true)
+          [ -n "$changed" ] || exit 0
+          mkdir -p /tmp/rec && for f in $changed; do mkdir -p /tmp/rec/$(dirname $f); cp $f /tmp/rec/$f; done
+          git stash -q -u || true
+          git fetch -q origin ${{ github.head_ref }} && git checkout -q -B rec origin/${{ github.head_ref }}
+          cp -r /tmp/rec/posts/. posts/
+          git config user.name "woodenjoy-bot"; git config user.email "bot@users.noreply.github.com"
+          git add posts && git commit -qm "네이버 비공개 업로드 기록" && git push -q origin rec:${{ github.head_ref }} || true
       - name: 자동 승인 (2주 뒤 켜기)
         if: success()
         env:

@@ -46,7 +46,10 @@ class Uplika:
                              headers={"authorization": f"Bearer {self.key}", "content-type": "application/json"})
         if r.status_code >= 400:
             raise RuntimeError(f"uplika 오류 {r.status_code} {path}: {r.text[:400]}")
-        return r.json() if r.text else {}
+        res = r.json() if r.text else {}
+        if isinstance(res, dict) and isinstance(res.get("data"), dict):
+            res = {**res, **res["data"]}   # {"data": {...}} 형태로 오는 응답 풀기
+        return res
 
     def upload(self, path, alt):
         data = path.read_bytes()
@@ -56,8 +59,17 @@ class Uplika:
                                                       "aiGenerated": True})
         if not self.dry:
             put = requests.put(pre["uploadUrl"], data=data, headers={"content-type": pre.get("contentType", "image/jpeg")}, timeout=120)
+            print(f"  이미지 전송 {path.name}: {put.status_code} {put.text[:200] if put.status_code >= 300 else ''}")
             put.raise_for_status()
-        self.call("POST", f"/v1/media/{pre['id']}/complete", {})
+        # 저장소에 반영되기까지 몇 초 걸릴 수 있어서 몇 번 다시 확인해요
+        for i in range(6):
+            try:
+                self.call("POST", f"/v1/media/{pre['id']}/complete", {})
+                break
+            except RuntimeError as e:
+                if "media_not_uploaded" not in str(e) or i == 5:
+                    raise
+                time.sleep(3 * (i + 1))
         return pre["id"]
 
 
@@ -65,9 +77,9 @@ def naver_account(api, settings):
     if settings.get("account_id"):
         return settings["account_id"]
     accs = api.call("GET", "/v1/accounts")
-    items = accs.get("accounts", accs if isinstance(accs, list) else [])
+    items = accs if isinstance(accs, list) else (accs.get("data") or accs.get("accounts") or [])
     for a in items:
-        if "naver" in json.dumps(a).lower():
+        if str(a.get("platform", "")).startswith("naver") or "naver" in json.dumps(a).lower():
             return a["id"]
     raise SystemExit("uplika에 연결된 네이버 블로그가 없어요. uplika 대시보드 → 연결 → Naver Blog")
 

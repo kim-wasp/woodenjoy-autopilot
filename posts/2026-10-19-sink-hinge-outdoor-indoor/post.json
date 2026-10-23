@@ -1,6 +1,6 @@
 {
   "id": "2026-10-19-sink-hinge-outdoor-indoor",
-  "status": "draft",
+  "status": "ready",
   "platforms": [
     "naver",
     "instagram",
@@ -75,5 +75,11 @@
   },
   "experience_used": [
     "E001"
-  ]
+  ],
+  "naver": {
+    "uplika_post_id": "post_059f881b501e066f",
+    "open": "private",
+    "status": "published",
+    "url": "https://blog.naver.com/cafe_peanut/224451812393"
+  }
 }
