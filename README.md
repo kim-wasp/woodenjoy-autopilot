@@ -92,9 +92,9 @@
 | 이름 | 내용 |
 |---|---|
 | UPLIKA_API_KEY | uplika API 키 (uplika 방식) |
-| IG_USER_ID | 인스타 계정 ID (숫자, meta 방식만) |
+| IG_USER_ID | (선택) 인스타 계정 ID. 없으면 토큰 주인 계정 |
 | IG_TOKEN | 인스타 장기 토큰 |
-| THREADS_USER_ID | 스레드 계정 ID (숫자) |
+| THREADS_USER_ID | (선택) 스레드 계정 ID. 없으면 토큰 주인 계정 |
 | THREADS_TOKEN | 스레드 장기 토큰 |
 | NAVER_AD_API_KEY | 검색광고 액세스라이선스 (검색량 조회) |
 | NAVER_AD_SECRET_KEY | 검색광고 비밀키 |

@@ -6,8 +6,8 @@
   python3 tools/publish.py posts/<글폴더> --only threads   # 한 플랫폼만 (시간표 업로드용)
 
 필요한 환경변수 (GitHub 저장소 Settings → Secrets 에 저장):
-  IG_USER_ID, IG_TOKEN            인스타 (Instagram 로그인 방식 API 토큰)
-  THREADS_USER_ID, THREADS_TOKEN  스레드
+  IG_TOKEN                        인스타 (Instagram 로그인 방식 API 토큰). IG_USER_ID는 선택(없으면 me)
+  THREADS_TOKEN                   스레드. THREADS_USER_ID는 선택(없으면 me)
   IMAGE_BASE_URL                  카드 이미지가 공개된 주소 앞부분
                                   예) https://raw.githubusercontent.com/<아이디>/woodenjoy-autopilot/main
 업로드 전에 카드 점검·글 점검을 다시 돌려서 하나라도 실패하면 올리지 않아요.
@@ -29,6 +29,8 @@ TH = "https://graph.threads.net/v1.0"
 
 def env(name):
     v = os.environ.get(name)
+    if not v and name in ("IG_USER_ID", "THREADS_USER_ID"):
+        return "me"   # 계정 ID를 따로 안 넣어도 토큰 주인 계정으로 올라가요
     if not v:
         raise SystemExit(f"환경변수 {name} 가 없어요. GitHub Secrets 설정을 확인하세요.")
     return v
