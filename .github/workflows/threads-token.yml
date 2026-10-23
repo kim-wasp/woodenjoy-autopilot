@@ -1,0 +1,38 @@
+# 스레드 토큰 발급 (그래프 API 탐색기가 안 될 때 쓰는 방법)
+# 1) 브라우저에서 스레드 로그인 주소를 열어 허용 → 주소창에 나온 code=... 값을 복사
+# 2) Actions → 스레드 토큰 발급 → Run workflow → code 칸에 붙여넣기
+# → 60일 토큰을 받아 THREADS_TOKEN 비밀키에 자동 저장해요 (토큰은 화면에 안 나와요)
+# 필요한 Secrets: THREADS_APP_ID, THREADS_APP_SECRET, GH_PAT
+name: 스레드 토큰 발급
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "주소창의 code= 뒤 값 (끝의 #_ 는 빼고)"
+        required: true
+jobs:
+  token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 토큰 받아서 저장
+        env:
+          APP_ID: ${{ secrets.THREADS_APP_ID }}
+          APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          CODE: ${{ github.event.inputs.code }}
+        run: |
+          [ -n "$APP_ID" ] && [ -n "$APP_SECRET" ] || { echo "THREADS_APP_ID / THREADS_APP_SECRET 비밀키가 없어요"; exit 1; }
+          [ -n "$GH_TOKEN" ] || { echo "GH_PAT 비밀키가 없어요 (README 'E. 토큰 자동 연장' 참고)"; exit 1; }
+          CODE="${CODE%%#*}"; CODE="$(echo "$CODE" | sed 's/^.*code=//; s/&.*$//')"
+          short=$(curl -s -X POST https://graph.threads.net/oauth/access_token \
+            -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code \
+            -F redirect_uri="https://example.com/" -F code="$CODE")
+          st=$(echo "$short" | jq -r '.access_token // empty')
+          [ -n "$st" ] || { echo "1단계 실패: $(echo "$short" | jq -c 'del(.access_token)')"; echo "code는 한 번만, 1시간 안에 써야 해요. 로그인 주소부터 다시 해 주세요"; exit 1; }
+          echo "::add-mask::$st"
+          long=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st")
+          lt=$(echo "$long" | jq -r '.access_token // empty')
+          [ -n "$lt" ] || { echo "2단계 실패: $(echo "$long" | jq -c 'del(.access_token)')"; exit 1; }
+          echo "::add-mask::$lt"
+          gh secret set THREADS_TOKEN --body "$lt" --repo ${{ github.repository }}
+          echo "완료: THREADS_TOKEN 저장 (60일). 이후 연장은 '토큰 연장'이 자동으로 해요"
