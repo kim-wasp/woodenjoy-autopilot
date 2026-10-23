@@ -59,8 +59,17 @@ class Uplika:
                                                       "aiGenerated": True})
         if not self.dry:
             put = requests.put(pre["uploadUrl"], data=data, headers={"content-type": pre.get("contentType", "image/jpeg")}, timeout=120)
+            print(f"  이미지 전송 {path.name}: {put.status_code} {put.text[:200] if put.status_code >= 300 else ''}")
             put.raise_for_status()
-        self.call("POST", f"/v1/media/{pre['id']}/complete", {})
+        # 저장소에 반영되기까지 몇 초 걸릴 수 있어서 몇 번 다시 확인해요
+        for i in range(6):
+            try:
+                self.call("POST", f"/v1/media/{pre['id']}/complete", {})
+                break
+            except RuntimeError as e:
+                if "media_not_uploaded" not in str(e) or i == 5:
+                    raise
+                time.sleep(3 * (i + 1))
         return pre["id"]
 
 
