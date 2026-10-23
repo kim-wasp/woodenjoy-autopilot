@@ -1,0 +1,53 @@
+{
+  "_설명": "auto_publish: false 동안은 휴대폰에서 승인(병합)해야 올라가요. 2주 뒤 품질이 안정되면 true 로 바꿔요.",
+  "auto_publish": false,
+  "auto_publish_from": "2026-11-02",
+  "schedule": "일·화·목 저녁 8시 준비(승인 요청) → 승인되면 플랫폼마다 정해진 시간에 업로드",
+  "platforms": [
+    "naver",
+    "instagram",
+    "threads"
+  ],
+  "wordpress_from": "2026-11-04",
+  "naver": {
+    "_설명": "via: uplika(크롬 확장 자동 발행) 또는 manual(붙여넣기). 처음 2주는 승인 요청 때 비공개로 올려 네이버에서 직접 확인해요.",
+    "via": "uplika",
+    "category": "셀프 집수리",
+    "account_id": "",
+    "review_open_type": "private"
+  },
+  "social_via": "meta",
+  "_social_via_설명": "meta: 인스타·스레드는 Meta 공식 API로 직접 (기본) / uplika: 인스타·스레드도 uplika로 (uplika 월 한도에 같이 잡힘)",
+  "slots": {
+    "_설명": "한국 시간(KST). 승인(병합)된 뒤 다가오는 첫 시간에 올라가요. 요일: mon tue wed thu fri sat sun. 3개월쯤 뒤 각 앱 통계(네이버 시간대별 조회수, 인스타 인사이트 팔로워 활동 시간, 스레드 조회수)를 보고 바꿔요.",
+    "naver": {
+      "days": [
+        "mon",
+        "wed",
+        "fri"
+      ],
+      "time": "07:00",
+      "_이유": "검색 유입 위주. 오후·밤 조회 피크 전에 미리 올려 색인 시간을 확보"
+    },
+    "threads": {
+      "days": [
+        "mon",
+        "wed",
+        "fri"
+      ],
+      "time": "12:30",
+      "_이유": "평일 낮(점심) 반응이 좋다는 해외 집계. 네이버 글이 먼저 올라가 있어 링크 연결 가능"
+    },
+    "instagram": {
+      "days": [
+        "mon",
+        "wed",
+        "fri"
+      ],
+      "time": "21:00",
+      "_이유": "퇴근 후 휴식 시간. 팔로워 100명 넘으면 인사이트의 활동 시간으로 교체"
+    },
+    "grace_hours": 3,
+    "_grace_설명": "시간을 3시간 넘게 놓치면(깃허브 지연·실패) 억지로 늦게 올리지 않고 다음 시간으로 미뤄요"
+  }
+}
