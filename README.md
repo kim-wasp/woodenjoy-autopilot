@@ -60,6 +60,19 @@
 - 네이버 업로드가 **실패**하면(예: 「발행이 잠시 제한」) 자동으로 다시 시키지 않아요. 같은 글이 두 번 올라가는 걸 막기 위해서예요. 스레드·인스타는 블로그 홈 링크로 예정대로 올라가요
 - 막히면 Claude에게: "uplika로 내 네이버 블로그 확장이 지금 켜져 있는지, 기다리는 글이 있는지 확인해줘"
 
+### 2-2. 검색량 조회 (네이버 검색광고 키워드 도구, 무료)
+제목·키워드를 고를 때 **실제 월간 검색량**을 보려고 네이버 공식 API를 써요. 광고비를 쓰지 않아도 키 발급과 조회는 무료예요.
+1. searchad.naver.com 에서 광고주 계정 가입 (네이버 아이디로, 사업자 정보 입력. 광고를 집행하지 않아도 돼요)
+2. 검색광고 시스템 → **도구 → API 사용 관리** → 네이버 검색광고 API 서비스 신청 → 키 발급
+3. 화면에 나온 세 가지를 GitHub Secrets 에 저장: **액세스라이선스** → `NAVER_AD_API_KEY`, **비밀키** → `NAVER_AD_SECRET_KEY`, **CUSTOMER_ID** → `NAVER_AD_CUSTOMER_ID`
+4. (선택) 블로그 글 수도 보고 싶으면 developers.naver.com → 애플리케이션 등록 → '검색' API → `NAVER_CLIENT_ID`, `NAVER_CLIENT_SECRET`
+5. GitHub → Actions → **키워드 조사** → Run workflow 로 한 번 돌려 보고 `topics/keywords.json` 이 생기면 끝. 이후 일·화·목 19시에 자동으로 갱신돼요
+
+알아둘 점
+- 검색량은 네이버 광고 시스템이 집계한 최근 한 달 조회수예요. 10 미만은 "<10"으로 나와요
+- 화면의 '경쟁 정도'는 **광고 입찰 경쟁**이에요. 블로그 상위 노출 난이도가 아니에요
+- 조회 주기를 일주일에 3번, 키워드 20개 정도로 잡아서 호출 제한에 걸리지 않게 했어요
+
 ### 2-1. 인스타·스레드는 Meta 공식 API로 직접 올려요 (기본)
 `config/settings.json` 의 `social_via` 가 `"meta"` 예요. 아래 3~5를 해요. (나중에 uplika로 합치고 싶으면 `"uplika"` 로 바꾸고 uplika에 인스타·스레드를 연결하면 돼요. 그러면 uplika 월 한도에 같이 잡혀요.)
 
@@ -83,6 +96,10 @@
 | IG_TOKEN | 인스타 장기 토큰 |
 | THREADS_USER_ID | 스레드 계정 ID (숫자) |
 | THREADS_TOKEN | 스레드 장기 토큰 |
+| NAVER_AD_API_KEY | 검색광고 액세스라이선스 (검색량 조회) |
+| NAVER_AD_SECRET_KEY | 검색광고 비밀키 |
+| NAVER_AD_CUSTOMER_ID | 검색광고 CUSTOMER_ID (숫자) |
+| NAVER_CLIENT_ID / NAVER_CLIENT_SECRET | (선택) 블로그 글 수 조회용 |
 | GH_PAT | 토큰 자동 연장용 GitHub 토큰 (Fine-grained, 이 저장소 Secrets 쓰기 권한) |
 
 meta 방식이면 토큰은 매달 1일·15일에 자동으로 연장돼요(`토큰 연장` 워크플로).
@@ -113,7 +130,7 @@ meta 방식이면 토큰은 매달 1일·15일에 자동으로 연장돼요(`토
 config/   brand.json(계정·색), terms.json(확인된 용어·금지 용어), settings.json(자동 승인·업로드 시간표 등)
 posts/    글마다 폴더: post.json, naver.md, cards.json, cards/*.jpg
 tools/    render_cards.js(카드+이미지 점검), check_text.py(글 점검), naver_markdown.py(네이버 형식 변환),
-          publish_naver.py(네이버 업로드), publish.py(인스타·스레드 업로드), schedule.py(플랫폼별 업로드 시간)
-topics/   backlog.md(글감), used.json(쓴 글), experience.md(사장님 확인 현장 경험), performance.md(발행 후 성과)
+          publish_naver.py(네이버 업로드), publish.py(인스타·스레드 업로드), schedule.py(플랫폼별 업로드 시간), keywords.py(검색량 조회)
+topics/   backlog.md(글감), used.json(쓴 글), seed_keywords.txt·keywords.json(검색량), experience.md(사장님 확인 현장 경험), performance.md(발행 후 성과)
 AUTOPILOT.md  Claude가 따르는 전체 순서
 ```

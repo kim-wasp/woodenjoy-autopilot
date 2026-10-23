@@ -113,6 +113,17 @@ def check(post_dir):
             issues.append("제목: 예전에 쓴 제목과 같아요")
         if not post.get("terms_evidence"):
             issues.append("용어 근거가 비어 있어요 (쇼핑몰 상품명 등에서 확인한 용어를 적어야 해요)")
+        # 검색량: 글에 적은 숫자는 반드시 키워드 도구 조회 결과와 같아야 해요 (지어낸 숫자 방지)
+        vol = post.get("keywords", {}).get("volume")
+        if vol:
+            kwf = ROOT / "topics/keywords.json"
+            saved = json.loads(kwf.read_text(encoding="utf-8"))["keywords"] if kwf.exists() else {}
+            for k, v in vol.items():
+                e = saved.get(k.replace(" ", ""))
+                if not e:
+                    issues.append(f'검색량: "{k}"는 키워드 도구로 조회한 기록이 없어요 (topics/keywords.json)')
+                elif v.get("total") != e.get("total") or v.get("checked") != e.get("checked"):
+                    issues.append(f'검색량: "{k}" 숫자가 조회 기록과 달라요 (기록 {e.get("total")}, {e.get("checked")})')
         # 브리프: 누구의 어떤 질문에 무엇으로 답하는 글인지 (쓰기 전에 정함)
         brief = post.get("brief") or {}
         missing_b = [k for k in BRIEF_KEYS if not str(brief.get(k, "")).strip()]
