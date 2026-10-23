@@ -46,7 +46,10 @@ class Uplika:
                              headers={"authorization": f"Bearer {self.key}", "content-type": "application/json"})
         if r.status_code >= 400:
             raise RuntimeError(f"uplika 오류 {r.status_code} {path}: {r.text[:400]}")
-        return r.json() if r.text else {}
+        res = r.json() if r.text else {}
+        if isinstance(res, dict) and isinstance(res.get("data"), dict):
+            res = {**res, **res["data"]}   # {"data": {...}} 형태로 오는 응답 풀기
+        return res
 
     def upload(self, path, alt):
         data = path.read_bytes()
@@ -65,9 +68,9 @@ def naver_account(api, settings):
     if settings.get("account_id"):
         return settings["account_id"]
     accs = api.call("GET", "/v1/accounts")
-    items = accs.get("accounts", accs if isinstance(accs, list) else [])
+    items = accs if isinstance(accs, list) else (accs.get("data") or accs.get("accounts") or [])
     for a in items:
-        if "naver" in json.dumps(a).lower():
+        if str(a.get("platform", "")).startswith("naver") or "naver" in json.dumps(a).lower():
             return a["id"]
     raise SystemExit("uplika에 연결된 네이버 블로그가 없어요. uplika 대시보드 → 연결 → Naver Blog")
 
