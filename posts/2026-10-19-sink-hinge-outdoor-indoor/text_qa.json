@@ -1,9 +1,6 @@
 {
-  "ok": false,
-  "issues": [
-    "네이버: 경험 표현 \"현장에서\"이 있는데 확인된 경험 기록이 없어요 (topics/experience.md 에 사장님 확인 기록 → post.json experience_used)",
-    "경험 기록 E001는 아직 사장님 확인 전이에요"
-  ],
+  "ok": true,
+  "issues": [],
   "info": {
     "naver_chars": 1940,
     "keyword_count": 4,

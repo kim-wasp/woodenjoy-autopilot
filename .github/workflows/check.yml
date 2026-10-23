@@ -31,6 +31,7 @@ jobs:
           UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
         run: |
           [ "$(jq -r .naver.via config/settings.json)" = "uplika" ] || { echo "네이버는 붙여넣기 방식"; exit 0; }
+          [ -n "$UPLIKA_API_KEY" ] || { echo "UPLIKA_API_KEY 가 아직 없어서 네이버 업로드는 건너뜀"; exit 0; }
           [ "$(jq -r .auto_publish config/settings.json)" = "false" ] || { echo "자동 모드: 병합 때 바로 공개로 올려요"; exit 0; }
           if gh pr view ${{ github.event.pull_request.number }} --json comments -q '.comments[].body' | grep -q "네이버 비공개 업로드"; then
             echo "이미 비공개로 올렸어요"; exit 0
