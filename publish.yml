@@ -1,0 +1,82 @@
+# 승인(병합)된 글을 플랫폼마다 정해진 시간에 올려요.
+# 시간표: config/settings.json 의 slots (한국 시간). 30분마다 깨어나서 "지금 올릴 차례인지" 확인해요.
+# 올리기 직전에 점검을 한 번 더 돌리고, 실패하면 올리지 않아요.
+name: 업로드
+on:
+  schedule:
+    - cron: "5,35 * * * *"     # 30분마다 (깃허브 사정으로 몇 분~수십 분 늦을 수 있어요)
+  push:
+    branches: [main]
+    paths: ["posts/**/post.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 크롬 대기 중이던 네이버 글 상태 확인
+        env:
+          UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
+        run: |
+          [ -n "$UPLIKA_API_KEY" ] || exit 0
+          pip install -q requests
+          for f in posts/*/post.json; do
+            [ "$(jq -r .status "$f")" = "ready" ] || continue
+            st=$(jq -r '.naver.status // ""' "$f")
+            [ -n "$st" ] && [ "$st" != "published" ] && [ "$st" != "failed" ] && python3 tools/publish_naver.py "$(dirname "$f")" --refresh || true
+          done
+      - name: 지금 올릴 차례인 것 찾기
+        id: due
+        run: |
+          python3 tools/schedule.py due > due.txt
+          echo "올릴 것:"; cat due.txt || true
+          echo "any=$([ -s due.txt ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
+          # 처음 승인된 글에는 승인 시각(approved_at)이 기록돼요
+          git status --porcelain posts | grep -q . && echo "changed=yes" >> "$GITHUB_OUTPUT" || true
+      - uses: ./.github/actions/setup
+        if: steps.due.outputs.any == 'yes'
+      - name: 이미지 주소가 열리는지 확인 (meta 방식일 때만, 공개 저장소여야 해요)
+        if: steps.due.outputs.any == 'yes'
+        run: |
+          [ "$(jq -r .social_via config/settings.json)" = "meta" ] || exit 0
+          for d in $(awk '$2!="naver"{print $1}' due.txt | sort -u); do
+            url="https://raw.githubusercontent.com/${{ github.repository }}/main/$d/cards/01.jpg"
+            code=$(curl -s -o /dev/null -w '%{http_code}' "$url")
+            [ "$code" = "200" ] || { echo "이미지 주소가 안 열려요($code): $url"; exit 1; }
+          done
+      - name: 올리기
+        if: steps.due.outputs.any == 'yes'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
+          IMAGE_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/main
+        run: |
+          fail=0
+          while read -r d p; do
+            echo "== $d → $p"
+            if [ "$p" = "naver" ]; then
+              python3 tools/publish_naver.py "$d" --open public || fail=1
+            else
+              python3 tools/publish.py "$d" --only "$p" || fail=1
+            fi
+          done < due.txt
+          exit $fail
+      - name: 다 올라간 글 정리
+        if: always()
+        run: python3 tools/schedule.py close
+      - name: 결과 저장
+        if: always()
+        run: |
+          rm -f due.txt
+          git config user.name "woodenjoy-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add posts topics
+          git diff --cached --quiet && { echo "바뀐 것 없음"; exit 0; }
+          git commit -m "업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
+          git push

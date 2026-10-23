@@ -1,0 +1,10 @@
+{
+  "name": "woodenjoy-autopilot",
+  "private": true,
+  "description": "우드엔조이 블로그·인스타·스레드 자동화",
+  "scripts": {
+    "cards": "node tools/render_cards.js",
+    "check": "python3 tools/check_text.py"
+  },
+  "dependencies": { "playwright": "1.48.2" }
+}

@@ -1,0 +1,33 @@
+# 인스타·스레드 토큰은 60일이면 만료돼요. 매달 1일·15일에 자동으로 연장해요.
+# GH_PAT(저장소 Secrets 수정 권한이 있는 GitHub 토큰)가 있어야 새 토큰을 저장할 수 있어요.
+name: 토큰 연장
+on:
+  schedule:
+    - cron: "0 0 1,15 * *"
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: meta 방식인지 확인
+        id: mode
+        run: echo "meta=$([ "$(jq -r .social_via config/settings.json)" = "meta" ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
+      - name: 인스타 토큰 연장
+        if: steps.mode.outputs.meta == 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          OLD: ${{ secrets.IG_TOKEN }}
+        run: |
+          new=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$OLD" | jq -r .access_token)
+          [ -n "$new" ] && [ "$new" != "null" ] || { echo "인스타 토큰 연장 실패 → 토큰을 새로 발급해 주세요"; exit 1; }
+          gh secret set IG_TOKEN --body "$new" --repo ${{ github.repository }}
+      - name: 스레드 토큰 연장
+        if: steps.mode.outputs.meta == 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          OLD: ${{ secrets.THREADS_TOKEN }}
+        run: |
+          new=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$OLD" | jq -r .access_token)
+          [ -n "$new" ] && [ "$new" != "null" ] || { echo "스레드 토큰 연장 실패 → 토큰을 새로 발급해 주세요"; exit 1; }
+          gh secret set THREADS_TOKEN --body "$new" --repo ${{ github.repository }}

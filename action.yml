@@ -1,0 +1,15 @@
+name: 준비
+description: 한글 글꼴, 브라우저, 파이썬 패키지 설치
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with: { node-version: 20 }
+    - uses: actions/setup-python@v5
+      with: { python-version: "3.12" }
+    - shell: bash
+      run: |
+        sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk jq
+        npm ci --silent || npm install --silent
+        npx playwright install --with-deps chromium
+        pip install -q -r requirements.txt

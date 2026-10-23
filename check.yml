@@ -1,0 +1,57 @@
+# 승인 요청(PR)이 올라오면 카드·글 점검을 다시 돌려요. 통과하면 초록 체크가 붙어요.
+# config/settings.json 의 auto_publish 가 true 면, 점검 통과 시 자동으로 승인(병합)까지 해요.
+name: 점검
+on:
+  pull_request:
+    paths: ["posts/**"]
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: ./.github/actions/setup
+      - name: 바뀐 글 점검
+        run: |
+          set -e
+          for d in $(git diff --name-only origin/${{ github.base_ref }}...HEAD -- posts | cut -d/ -f1-2 | sort -u); do
+            [ -f "$d/post.json" ] || continue
+            echo "== $d"
+            node tools/render_cards.js "$d"
+            python3 tools/check_text.py "$d"
+          done
+      - name: 네이버 비공개 업로드 (검토용)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
+        run: |
+          [ "$(jq -r .naver.via config/settings.json)" = "uplika" ] || { echo "네이버는 붙여넣기 방식"; exit 0; }
+          [ "$(jq -r .auto_publish config/settings.json)" = "false" ] || { echo "자동 모드: 병합 때 바로 공개로 올려요"; exit 0; }
+          if gh pr view ${{ github.event.pull_request.number }} --json comments -q '.comments[].body' | grep -q "네이버 비공개 업로드"; then
+            echo "이미 비공개로 올렸어요"; exit 0
+          fi
+          for d in $(git diff --name-only origin/${{ github.base_ref }}...HEAD -- posts | cut -d/ -f1-2 | sort -u); do
+            [ -f "$d/post.json" ] && [ "$(jq -r .status "$d/post.json")" = "ready" ] || continue
+            msg=$(python3 tools/publish_naver.py "$d" --open private 2>&1 | tail -1)
+            gh pr comment ${{ github.event.pull_request.number }} --body "네이버 비공개 업로드: $msg
+          네이버 앱에서 글을 확인하고 괜찮으면 이 PR을 병합해 주세요.
+          업로드 예정: $(python3 tools/schedule.py show "$d" | tr '\n' ' ')
+          네이버는 위 추천 시간에 맞춰 **직접 공개로** 바꿔 주세요. 인스타·스레드는 병합해 두면 정해진 시간에 자동으로 올라가요."
+          done
+      - name: 자동 승인 (2주 뒤 켜기)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(jq -r .auto_publish config/settings.json)" = "true" ]; then
+            gh pr merge ${{ github.event.pull_request.number }} --squash --delete-branch
+            # 봇이 병합하면 업로드가 저절로 시작되지 않아서 직접 실행해요
+            sleep 10 && gh workflow run publish.yml --ref main
+          else
+            echo "자동 승인 꺼져 있음 → 휴대폰에서 확인 후 '병합' 눌러 주세요"
+          fi
