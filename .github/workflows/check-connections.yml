@@ -1,0 +1,31 @@
+# 연결 확인: 비밀키가 제대로 들어갔는지 계정 이름만 확인해요 (토큰은 화면에 안 나와요)
+name: 연결 확인
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 확인
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          ok() { echo "✅ $1"; }; no() { echo "❌ $1"; }
+          if [ -n "$IG_TOKEN" ]; then
+            r=$(curl -s "https://graph.instagram.com/me?fields=username,account_type&access_token=$IG_TOKEN")
+            u=$(echo "$r" | jq -r '.username // empty'); [ -n "$u" ] && ok "인스타: @$u ($(echo "$r" | jq -r .account_type))" || no "인스타 토큰 오류: $(echo "$r" | jq -c '.error.message')"
+          else no "IG_TOKEN 없음"; fi
+          if [ -n "$THREADS_TOKEN" ]; then
+            r=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$THREADS_TOKEN")
+            u=$(echo "$r" | jq -r '.username // empty'); [ -n "$u" ] && ok "스레드: @$u" || no "스레드 토큰 오류: $(echo "$r" | jq -c '.error.message')"
+          else no "THREADS_TOKEN 없음"; fi
+          if [ -n "$UPLIKA_API_KEY" ]; then
+            c=$(curl -s -o /dev/null -w '%{http_code}' -H "authorization: Bearer $UPLIKA_API_KEY" https://api.uplika.com/v1/accounts)
+            [ "$c" = 200 ] && ok "uplika API 키" || no "uplika API 키 오류 ($c)"
+          else no "UPLIKA_API_KEY 없음"; fi
+          [ -n "$NAVER_AD_API_KEY" ] && ok "네이버 검색광고 키 있음" || no "NAVER_AD_API_KEY 없음"
+          [ -n "$GH_PAT" ] && ok "GH_PAT 있음" || no "GH_PAT 없음"
