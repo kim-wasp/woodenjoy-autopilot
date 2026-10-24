@@ -58,8 +58,9 @@ def plan(post, s, now):
     for p in ORDER:
         if p not in post.get("platforms", []) or p not in slots:
             continue
-        if p == "naver" and not naver_auto(s):
-            out[p] = None   # 사장님이 직접
+        nv = post.get("naver") or {}
+        if p == "naver" and not naver_auto(s) and not (s["naver"].get("via") == "uplika" and nv.get("uplika_post_id")):
+            out[p] = None   # 붙여넣기 방식: 사장님이 직접
             continue
         out[p] = due_time(slots[p], approved, now, grace)
     return out
@@ -101,7 +102,7 @@ def cmd_due():
             if t is None or done(post, p) or now < t:
                 continue
             nv = post.get("naver") or {}
-            if p == "naver" and (nv.get("status") == "failed" or nv.get("open") == "public"):
+            if p == "naver" and (nv.get("status") == "failed" or (nv.get("open") == "public" and not nv.get("url"))):
                 continue    # 실패는 자동 재시도 안 함 / 이미 보냈고 크롬 대기 중
             if p == "threads" and times.get("naver") is not None and not done(post, "naver") and nv.get("status") != "failed":
                 continue    # 네이버 공개 주소를 기다려요 (실패했으면 블로그 홈 링크로 진행)
@@ -136,7 +137,7 @@ def cmd_close():
     for f, post in ready_posts():
         if not post.get("approved_at"):
             continue
-        need = [p for p in post.get("platforms", []) if p != "naver" or naver_auto(s)]
+        need = [p for p in post.get("platforms", []) if p != "naver" or naver_auto(s) or (post.get("naver") or {}).get("uplika_post_id")]
         if (post.get("naver") or {}).get("status") == "failed":
             need = [p for p in need if p != "naver"]
         if all(done(post, p) for p in need):

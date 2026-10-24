@@ -42,7 +42,7 @@ jobs:
               gh pr comment ${{ github.event.pull_request.number }} --body "✅ 네이버 비공개 업로드 완료: $(echo "$out" | tail -1)
           네이버 앱에서 글을 확인하고 괜찮으면 이 PR을 병합해 주세요.
           업로드 예정: $(python3 tools/schedule.py show "$d" | tr '\n' ' ')
-          네이버는 위 추천 시간에 맞춰 **직접 공개로** 바꿔 주세요. 인스타·스레드는 병합해 두면 정해진 시간에 자동으로 올라가요."
+          병합해 두면 네이버는 정해진 시간에 **자동으로 공개**로 바뀌고, 인스타·스레드도 정해진 시간에 자동으로 올라가요."
             else
               gh pr comment ${{ github.event.pull_request.number }} --body "⚠️ 네이버 업로드 실패 (병합하지 마세요): $(echo "$out" | tail -3)"
               exit 1

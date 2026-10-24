@@ -7,6 +7,7 @@
   python3 tools/publish_naver.py posts/<글폴더> --open private    # 비공개로 올리기 (검토용)
   python3 tools/publish_naver.py posts/<글폴더> --open public     # 공개로 올리기
   python3 tools/publish_naver.py posts/<글폴더> --refresh         # 대기 중이던 글 상태·주소 다시 확인
+  python3 tools/publish_naver.py posts/<글폴더> --make-public     # 비공개로 올려 둔 글을 공개로 (같은 주소)
   python3 tools/publish_naver.py posts/<글폴더> --dry-run         # 보낼 내용만 출력
 
 필요한 환경변수: UPLIKA_API_KEY (uplika 대시보드에서 발급, GitHub Secrets에 저장)
@@ -103,7 +104,37 @@ def refresh(post_dir):
     print(f"네이버 상태: {naver['status']} {url or ''}")
 
 
+def make_public(post_dir, dry):
+    """승인 모드에서 비공개로 올려 둔 글을, 승인(병합) 후 정해진 시간에 공개로 바꿔요 (같은 주소 그대로)"""
+    post_file = post_dir / "post.json"
+    post = json.loads(post_file.read_text(encoding="utf-8"))
+    naver = post.get("naver") or {}
+    pid = naver.get("uplika_post_id")
+    if not pid:
+        raise SystemExit("비공개로 올린 기록이 없어요")
+    api = Uplika(dry)
+    cur = api.call("GET", f"/v1/posts/{pid}")
+    opts = (cur.get("options") or {}).get("naver_blog") or {}
+    opts = {**opts, "openType": "public"}
+    opts.pop("categoryId", None)
+    res = api.call("PATCH", f"/v1/posts/{pid}", {"options": {"naver_blog": opts}, "wait": True})
+    if dry:
+        print("미리보기 끝 (공개 전환)")
+        return
+    t = (res.get("targets") or [{}])[0]
+    if t.get("status") == "failed" or res.get("status") == "failed":
+        raise SystemExit(f"공개 전환 실패: {json.dumps(t, ensure_ascii=False)[:300]}")
+    url = res.get("permalink") or t.get("permalink") or naver.get("url")
+    naver.update({"open": "public", "status": res.get("status", "published"), "url": url})
+    post["naver_url"] = url
+    post_file.write_text(json.dumps(post, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"네이버 공개 전환: {url}")
+
+
 def main():
+    if "--make-public" in sys.argv:
+        make_public(Path(sys.argv[1]).resolve(), "--dry-run" in sys.argv)
+        return
     if "--refresh" in sys.argv:
         refresh(Path(sys.argv[1]).resolve())
         return

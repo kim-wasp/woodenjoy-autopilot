@@ -61,7 +61,11 @@ jobs:
           while read -r d p; do
             echo "== $d → $p"
             if [ "$p" = "naver" ]; then
-              python3 tools/publish_naver.py "$d" --open public || fail=1
+              if [ "$(jq -r '.naver.uplika_post_id // ""' "$d/post.json")" != "" ] && [ "$(jq -r '.naver.open // ""' "$d/post.json")" = "private" ]; then
+                python3 tools/publish_naver.py "$d" --make-public || fail=1   # 승인 모드: 비공개 글을 공개로
+              else
+                python3 tools/publish_naver.py "$d" --open public || fail=1   # 자동 모드: 바로 공개로 올리기
+              fi
             else
               python3 tools/publish.py "$d" --only "$p" || fail=1
             fi
