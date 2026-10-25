@@ -6,7 +6,7 @@
 - 이 저장소(woodenjoy-autopilot)를 받아 `config/settings.json`, `config/terms.json`, `topics/used.json`, `topics/backlog.md`를 읽는다
 - `topics/experience.md`(사장님이 확인한 현장 경험), `topics/performance.md`(발행 후 성과)도 읽는다
 - 오늘 날짜 기준 플랫폼: 네이버 + 인스타 + 스레드. 네이버는 `naver.via`가 uplika면 자동(처음 2주는 비공개), manual이면 붙여넣기용 원고. `wordpress_from` 날짜 이후면 myinfobay 글도 같은 주제의 다른 각도로 추가한다(myinfobay-adsense-post 스킬, 문장 겹침 금지)
-- 글 폴더 이름: `posts/<네이버 발행 예정일>-<영문-키워드>`. 발행 예정일은 **다음 월·수·금 중 아직 글(posts/ 폴더나 열린 PR)이 없는 날**로 정한다. 같은 날 두 편을 만들지 않는다 (예: 2026-10-21-drawer-rail-check)
+- 글 폴더 이름: `posts/<네이버 발행 예정일>-<영문-키워드>`. 발행 예정일은 `python3 tools/schedule.py show posts/<기존 글>`로 **아직 올라가지 않은 글(status ready)과 열린 PR의 예정일**을 확인한 뒤, 그 다음 비어 있는 월·수·금으로 정한다. 폴더 이름의 날짜만 보고 정하지 않는다. 같은 날 두 편을 만들지 않는다 (업로드는 플랫폼마다 하루 한 편씩 순서대로 나간다) (예: 2026-10-21-drawer-rail-check)
 
 ## 1. 제목 선정 (검색·검증)
 1. `topics/backlog.md`에서 아직 `used.json`에 없는 후보 5개를 고른다. 계절(겨울 결로·외풍 등)과 최근 이슈를 웹 검색으로 확인해 지금 찾는 사람이 많을 주제를 우선한다
