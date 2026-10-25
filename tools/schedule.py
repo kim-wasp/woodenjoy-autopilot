@@ -104,8 +104,8 @@ def cmd_due():
             nv = post.get("naver") or {}
             if p == "naver" and (nv.get("status") == "failed" or (nv.get("open") == "public" and not nv.get("url"))):
                 continue    # 실패는 자동 재시도 안 함 / 이미 보냈고 크롬 대기 중
-            if p == "threads" and times.get("naver") is not None and not done(post, "naver") and nv.get("status") != "failed":
-                continue    # 네이버 공개 주소를 기다려요 (실패했으면 블로그 홈 링크로 진행)
+            if p in ("threads", "instagram") and times.get("naver") is not None and not done(post, "naver") and nv.get("status") != "failed":
+                continue    # 블로그 글이 공개된 뒤에 SNS를 올려요 (실패했으면 블로그 홈 링크로 진행)
             if p in taken or recently_posted(p, now):
                 continue    # 이번 차례엔 이미 다른 글이 올라가요
             taken.add(p)
