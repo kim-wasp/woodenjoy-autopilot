@@ -125,7 +125,9 @@ def make_public(post_dir, dry):
     if t.get("status") == "failed" or res.get("status") == "failed":
         raise SystemExit(f"공개 전환 실패: {json.dumps(t, ensure_ascii=False)[:300]}")
     url = res.get("permalink") or t.get("permalink") or naver.get("url")
-    naver.update({"open": "public", "status": res.get("status", "published"), "url": url})
+    from datetime import datetime, timedelta, timezone
+    naver.update({"open": "public", "status": res.get("status", "published"), "url": url,
+                  "public_at": datetime.now(timezone(timedelta(hours=9))).isoformat(timespec="seconds")})
     post["naver_url"] = url
     post_file.write_text(json.dumps(post, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"네이버 공개 전환: {url}")
@@ -171,14 +173,14 @@ def main():
         "content": text,
         "accountIds": [account],
         "mediaIds": list(media.values()),
+        # 공개 범위는 글을 만들 때 options.naver_blog.openType 으로 정해요
+        # (임시저장 → 발행 방식은 openType 이 무시돼서 공개로 올라간 적이 있어요)
         "options": {"naver_blog": {"title": post["title"], "category": settings["category"], "tags": tags[:30],
-                                   "layout": "as-is"}},
-        # uplika 문서상 공개 범위(openType)는 '임시저장 → 발행' 단계에서 정해요
-        "draft": True,
+                                   "layout": "as-is", "openType": open_type}},
+        "wait": True,
     }
     res = api.call("POST", "/v1/posts", body)
     pid = res.get("id")
-    res = api.call("POST", f"/v1/posts/{pid}/publish", {"openType": open_type})
     # 4) 확장이 실제로 올릴 때까지 잠깐 확인 (크롬이 꺼져 있으면 '대기'로 남기고 끝)
     url, status = None, "publishing"
     for _ in range(1 if dry else 12):
@@ -198,7 +200,18 @@ def main():
         naver.update({"uplika_post_id": pid, "status": "failed", "failed_open": open_type})
         post_file.write_text(json.dumps(post, ensure_ascii=False, indent=2), encoding="utf-8")
         raise SystemExit(f"네이버 업로드 실패 (자동 재시도 안 함, 확인 후 직접 다시 실행): {json.dumps(st, ensure_ascii=False)[:400]}")
+    # 안전장치: 실제 공개 범위가 요청과 다르면 바로 바로잡아요
+    cur = api.call("GET", f"/v1/posts/{pid}")
+    got = ((cur.get("options") or {}).get("naver_blog") or {}).get("openType")
+    if got != open_type:
+        opts = {**((cur.get("options") or {}).get("naver_blog") or {}), "openType": open_type}
+        opts.pop("categoryId", None)
+        api.call("PATCH", f"/v1/posts/{pid}", {"options": {"naver_blog": opts}, "wait": True})
+        print(f"공개 범위가 {got}로 나와서 {open_type}로 바로잡았어요")
     naver.update({"uplika_post_id": pid, "open": open_type, "status": status})
+    if open_type == "public":
+        from datetime import datetime, timedelta, timezone
+        naver["public_at"] = datetime.now(timezone(timedelta(hours=9))).isoformat(timespec="seconds")
     if url:
         naver["url"] = url
         if open_type == "public":

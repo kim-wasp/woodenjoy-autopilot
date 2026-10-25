@@ -84,7 +84,7 @@ def recently_posted(platform, now, hours=20):
     for f in (ROOT / "posts").glob("*/post.json"):
         post = json.loads(f.read_text(encoding="utf-8"))
         pub = post.get("published") or {}
-        at = pub.get(f"{platform}_at")
+        at = (post.get("naver") or {}).get("public_at") if platform == "naver" else pub.get(f"{platform}_at")
         if at and now - datetime.fromisoformat(at).astimezone(KST) < timedelta(hours=hours):
             return True
     return False
@@ -106,7 +106,7 @@ def cmd_due():
                 continue    # 실패는 자동 재시도 안 함 / 이미 보냈고 크롬 대기 중
             if p == "threads" and times.get("naver") is not None and not done(post, "naver") and nv.get("status") != "failed":
                 continue    # 네이버 공개 주소를 기다려요 (실패했으면 블로그 홈 링크로 진행)
-            if p in taken or (p != "naver" and recently_posted(p, now)):
+            if p in taken or recently_posted(p, now):
                 continue    # 이번 차례엔 이미 다른 글이 올라가요
             taken.add(p)
             print(f.parent.relative_to(ROOT).as_posix(), p)

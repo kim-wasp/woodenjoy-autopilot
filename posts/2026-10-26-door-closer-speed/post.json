@@ -60,7 +60,7 @@
     "크기 표시 대·소": "11번가 상품명(대 DD-12426 / 소 DD-12425)",
     "나사를 돌려도 변화 없으면 교체(속 부품 마모)": "nationallocksupply.com ('valves turn freely with no effect … Replace')"
   },
-  "naver_url": null,
+  "naver_url": "https://blog.naver.com/cafe_peanut/224453318574",
   "instagram": {
     "caption": "추워지니 현관문이 끝까지 안 닫힌다면, 나사 2개부터 보세요.\n\n✔ 도어클로저 속도 나사는 보통 2개: 앞 구간 + 닫히기 직전 마지막 구간\n✔ 조이면(시계 방향) 느리게, 풀면 빠르게\n✔ 한 번에 1/4바퀴씩, 돌린 양은 메모\n\n겨울엔 속 오일이 끈적해져서 느려지는 게 정상이에요.\n몸통에서 오일이 샌다면 조절 말고 교체예요.\n\n저장해두고 계절 바뀔 때 꺼내 보세요.\n구간별 조절법과 교체 기준은 프로필 링크의 블로그에 정리해뒀어요.\n\n#도어클로저 #현관문 #도어클로저속도조절 #셀프집수리 #우드엔조이"
   },
@@ -81,9 +81,10 @@
   "experience_used": [],
   "naver": {
     "uplika_post_id": "post_f3653bd7887dcc5d",
-    "open": "private",
+    "open": "public",
     "status": "published",
-    "url": "https://blog.naver.com/cafe_peanut/224453318574"
+    "url": "https://blog.naver.com/cafe_peanut/224453318574",
+    "public_at": "2026-10-25T19:56:29+09:00"
   },
   "approved_at": "2026-10-25T21:40+09:00"
 }
