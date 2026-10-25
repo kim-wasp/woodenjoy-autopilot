@@ -23,6 +23,7 @@ jobs:
             echo "== $d"
             node tools/render_cards.js "$d"
             python3 tools/check_text.py "$d"
+            python3 tools/check_ai_tell.py "$d"
           done
       - name: 네이버 비공개 업로드 (검토용)
         if: success()
