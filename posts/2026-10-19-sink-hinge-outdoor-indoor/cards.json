@@ -1,131 +1,131 @@
 {
- "slides": [
-  {
-   "title": "싱크대 경첩\n사기 전에\n*이것부터*",
-   "big": true,
-   "sub": "아웃도어 · 인도어, 틀리면 안 맞아요",
-   "body": {
-    "kind": "svg",
-    "height": 380,
-    "svg": "<svg width=\"623\" height=\"360\" viewBox=\"0 0 900 520\" aria-label=\"싱크대 숨은 경첩 그림\">\n      <!-- mounting plate -->\n      <rect x=\"120\" y=\"190\" width=\"170\" height=\"140\" rx=\"22\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"160\" cy=\"260\" r=\"16\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <circle cx=\"250\" cy=\"260\" r=\"16\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <!-- arm -->\n      <rect x=\"290\" y=\"215\" width=\"320\" height=\"90\" rx=\"20\" fill=\"#EDF4F1\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"340\" cy=\"260\" r=\"14\" fill=\"#2F6B57\"/>\n      <circle cx=\"520\" cy=\"260\" r=\"14\" fill=\"#2F6B57\"/>\n      <!-- cup -->\n      <circle cx=\"700\" cy=\"260\" r=\"120\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"700\" cy=\"260\" r=\"80\" fill=\"#FBF3E4\" stroke=\"#2F6B57\" stroke-width=\"5\"/>\n      <text x=\"205\" y=\"410\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">옆판 쪽</text>\n      <text x=\"660\" y=\"440\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">문 쪽 (35파이 홈)</text>\n    </svg>"
-   },
-   "badge": "옷장 · 신발장 · 붙박이장도 똑같아요"
-  },
-  {
-   "title": "닫힌 문을\n앞에서 보세요",
-   "sub": "문 옆으로 옆판 테두리가\n보이는지만 확인하면 돼요",
-   "body": {
-    "kind": "svg",
-    "height": 580,
-    "svg": "<svg width=\"693\" height=\"560\" viewBox=\"0 0 940 760\" aria-label=\"아웃도어와 인도어 정면 비교\">\n      <!-- outdoor: door covers whole box -->\n      <rect x=\"70\" y=\"80\" width=\"340\" height=\"440\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <rect x=\"360\" y=\"260\" width=\"16\" height=\"90\" rx=\"8\" fill=\"#2F6B57\"/>\n      <text x=\"240\" y=\"610\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">아웃도어</text>\n      <text x=\"240\" y=\"672\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">옆판이 안 보여요</text>\n      <!-- indoor: frame visible around door -->\n      <rect x=\"530\" y=\"80\" width=\"340\" height=\"440\" rx=\"6\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <rect x=\"566\" y=\"116\" width=\"268\" height=\"368\" rx=\"4\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <rect x=\"790\" y=\"260\" width=\"16\" height=\"90\" rx=\"8\" fill=\"#2F6B57\"/>\n            <text x=\"700\" y=\"610\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">인도어</text>\n      <text x=\"700\" y=\"672\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">테두리가 보여요</text>\n    </svg>"
-   }
-  },
-  {
-   "title": "위에서 보면\n이렇게 달라요",
-   "sub": "문이 옆판 앞을 덮느냐,\n옆판 사이로 들어가느냐",
-   "body": {
-    "kind": "svg",
-    "height": 580,
-    "svg": "<svg width=\"693\" height=\"560\" viewBox=\"0 0 940 760\" aria-label=\"아웃도어와 인도어 위에서 본 단면\">\n      <text x=\"470\" y=\"62\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"600\" fill=\"#5D6863\">위에서 내려다본 모습</text>\n      <!-- OUTDOOR -->\n      <rect x=\"90\" y=\"140\" width=\"46\" height=\"340\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"90\" y=\"480\" width=\"330\" height=\"46\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"136\" y=\"370\" width=\"18\" height=\"70\" fill=\"#2F6B57\"/>\n      <path d=\"M154 405 L190 405 L190 482\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <circle cx=\"190\" cy=\"503\" r=\"19\" fill=\"#2F6B57\"/>\n      <text x=\"113\" y=\"126\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">옆판</text>\n      <text x=\"300\" y=\"590\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">문</text>\n      <text x=\"255\" y=\"668\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">아웃도어</text>\n      <text x=\"255\" y=\"730\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">팔이 곧아요</text>\n      <!-- INDOOR -->\n      <rect x=\"530\" y=\"140\" width=\"46\" height=\"386\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"527\" y=\"510\" width=\"52\" height=\"16\" fill=\"#E8A33C\"/>\n      <rect x=\"580\" y=\"480\" width=\"300\" height=\"46\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"576\" y=\"350\" width=\"18\" height=\"70\" fill=\"#2F6B57\"/>\n      <path d=\"M594 385 L620 385 L665 445 L665 482\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <circle cx=\"665\" cy=\"503\" r=\"19\" fill=\"#2F6B57\"/>\n      <text x=\"553\" y=\"126\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">옆판</text>\n      <text x=\"740\" y=\"590\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">문</text>\n      <text x=\"705\" y=\"668\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">인도어</text>\n      <text x=\"705\" y=\"730\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">팔이 꺾여요</text>\n      <line x1=\"470\" y1=\"140\" x2=\"470\" y2=\"740\" stroke=\"#CFDDD6\" stroke-width=\"4\" stroke-dasharray=\"14 12\"/>\n    </svg>"
-   }
-  },
-  {
-   "title": "상품명은\n이렇게 읽어요",
-   "body": {
-    "kind": "chips",
-    "example": [
-     "씽크경첩",
-     "110도",
-     "아웃도어",
-     "18T",
-     "댐퍼"
-    ],
-    "legend": [
-     [
-      "110도",
-      "문이 열리는 각도"
-     ],
-     [
-      "아웃도어",
-      "문이 옆판을 덮는 방식"
-     ],
-     [
-      "18T",
-      "판재 두께 · 기존 것과 같게"
-     ],
-     [
-      "댐퍼",
-      "끝에서 천천히 닫힘"
-     ]
-    ]
-   }
-  },
-  {
-   "title": "35파이는\n문에 파인 홈 크기",
-   "sub": "문 안쪽의 둥근 홈 지름이에요\n싱크대는 대부분 35파이",
-   "body": {
-    "kind": "svg",
-    "height": 560,
-    "svg": "<svg width=\"725\" height=\"540\" viewBox=\"0 0 940 700\" aria-label=\"문 안쪽 경첩 홈 35파이\">\n      <rect x=\"250\" y=\"40\" width=\"520\" height=\"620\" rx=\"8\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <text x=\"510\" y=\"640\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#7A4E0F\">문 안쪽 면</text>\n      <circle cx=\"380\" cy=\"190\" r=\"70\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"380\" cy=\"510\" r=\"70\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <line x1=\"310\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#9A6416\" stroke-width=\"6\"/>\n      <path d=\"M310 190 L330 178 L330 202 Z\" fill=\"#9A6416\"/>\n      <path d=\"M450 190 L430 178 L430 202 Z\" fill=\"#9A6416\"/>\n      <line x1=\"460\" y1=\"190\" x2=\"560\" y2=\"190\" stroke=\"#9A6416\" stroke-width=\"4\" stroke-dasharray=\"10 8\"/>\n      <rect x=\"560\" y=\"146\" width=\"240\" height=\"88\" rx=\"16\" fill=\"#FFFFFF\" stroke=\"#9A6416\" stroke-width=\"4\"/>\n      <text x=\"680\" y=\"208\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">35mm</text>\n      <text x=\"120\" y=\"205\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">경첩 홈</text>\n      <line x1=\"210\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#5D6863\" stroke-width=\"4\"/>\n    </svg>"
-   }
-  },
-  {
-   "title": "헷갈리면\n떼어서 들고 가요",
-   "body": {
-    "kind": "steps",
-    "items": [
-     {
-      "d": "문을 한 손으로 받쳐요",
-      "s": "경첩을 풀면 문이 툭 떨어져요"
-     },
-     {
-      "d": "옆판 쪽 나사를 풀어 떼요",
-      "s": "십자 드라이버 하나면 충분해요"
-     },
-     {
-      "d": "상품명과 하나씩 맞춰요",
-      "s": "아웃도어·인도어, 35파이, 18T, 댐퍼"
-     }
-    ],
-    "tip": "회사 이름이 찍혀 있으면 같은 회사 제품으로"
-   }
-  },
-  {
-   "title": "싱크대에만\n쓰는 게 아니에요",
-   "sub": "이름은 씽크경첩, 고르는 법은 똑같아요",
-   "body": {
-    "kind": "grid",
-    "items": [
-     {
-      "svg": "<svg width=\"150\" height=\"170\" viewBox=\"0 0 150 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"6\" width=\"130\" height=\"150\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><line x1=\"75\" y1=\"6\" x2=\"75\" y2=\"156\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"60\" y=\"70\" width=\"6\" height=\"26\" fill=\"#2F6B57\"/><rect x=\"84\" y=\"70\" width=\"6\" height=\"26\" fill=\"#2F6B57\"/><rect x=\"18\" y=\"156\" width=\"10\" height=\"12\" fill=\"#2F6B57\"/><rect x=\"122\" y=\"156\" width=\"10\" height=\"12\" fill=\"#2F6B57\"/></svg>",
-      "label": "옷장 · 장롱"
-     },
-     {
-      "svg": "<svg width=\"170\" height=\"170\" viewBox=\"0 0 170 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"20\" width=\"150\" height=\"140\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><line x1=\"10\" y1=\"66\" x2=\"160\" y2=\"66\" stroke=\"#2F6B57\" stroke-width=\"5\"/><line x1=\"10\" y1=\"112\" x2=\"160\" y2=\"112\" stroke=\"#2F6B57\" stroke-width=\"5\"/><path d=\"M40 52 q15 -14 30 0 z M100 98 q15 -14 30 0 z M50 144 q15 -14 30 0 z\" fill=\"#2F6B57\"/></svg>",
-      "label": "신발장"
-     },
-     {
-      "svg": "<svg width=\"200\" height=\"170\" viewBox=\"0 0 200 170\" aria-hidden=\"true\"><rect x=\"8\" y=\"6\" width=\"184\" height=\"158\" rx=\"4\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"18\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><rect x=\"74\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><rect x=\"130\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/></svg>",
-      "label": "붙박이장"
-     },
-     {
-      "svg": "<svg width=\"150\" height=\"170\" viewBox=\"0 0 150 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"10\" width=\"130\" height=\"150\" rx=\"10\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"26\" y=\"26\" width=\"98\" height=\"80\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><circle cx=\"75\" cy=\"134\" r=\"8\" fill=\"#2F6B57\"/></svg>",
-      "label": "욕실장"
-     }
-    ]
-   }
-  },
-  {
-   "title": "저장해두고\n살 때 꺼내 보세요",
-   "sub": "구분법과 셀프 교체 범위는\n블로그에 정리해뒀어요",
-   "body": {
-    "kind": "svg",
-    "height": 460,
-    "transparent": true,
-    "svg": "<svg width=\"355\" height=\"440\" viewBox=\"0 0 420 520\" aria-label=\"저장 아이콘\">\n      <rect x=\"40\" y=\"20\" width=\"340\" height=\"480\" rx=\"40\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/>\n      <path d=\"M130 90 L290 90 L290 400 L210 340 L130 400 Z\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"10\" stroke-linejoin=\"round\"/>\n    </svg>"
-   },
-   "badge": "프로필 링크 → 블로그",
-   "badge_center": true
-  }
- ]
+  "slides": [
+    {
+      "title": "싱크대 경첩\n모르고 사면\n*또 사러 가요*",
+      "big": true,
+      "sub": "아웃도어 · 인도어 틀리면 문이 안 닫혀요",
+      "body": {
+        "kind": "svg",
+        "height": 380,
+        "svg": "<svg width=\"623\" height=\"360\" viewBox=\"0 0 900 520\" aria-label=\"싱크대 숨은 경첩 그림\">\n      <!-- mounting plate -->\n      <rect x=\"120\" y=\"190\" width=\"170\" height=\"140\" rx=\"22\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"160\" cy=\"260\" r=\"16\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <circle cx=\"250\" cy=\"260\" r=\"16\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <!-- arm -->\n      <rect x=\"290\" y=\"215\" width=\"320\" height=\"90\" rx=\"20\" fill=\"#EDF4F1\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"340\" cy=\"260\" r=\"14\" fill=\"#2F6B57\"/>\n      <circle cx=\"520\" cy=\"260\" r=\"14\" fill=\"#2F6B57\"/>\n      <!-- cup -->\n      <circle cx=\"700\" cy=\"260\" r=\"120\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"700\" cy=\"260\" r=\"80\" fill=\"#FBF3E4\" stroke=\"#2F6B57\" stroke-width=\"5\"/>\n      <text x=\"205\" y=\"410\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">옆판 쪽</text>\n      <text x=\"660\" y=\"440\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">문 쪽 (35파이 홈)</text>\n    </svg>"
+      },
+      "badge": "옷장 · 신발장 · 붙박이장도 똑같아요"
+    },
+    {
+      "title": "닫힌 문을\n앞에서 보세요",
+      "sub": "문 옆으로 옆판 테두리가\n보이는지만 확인하면 돼요",
+      "body": {
+        "kind": "svg",
+        "height": 580,
+        "svg": "<svg width=\"693\" height=\"560\" viewBox=\"0 0 940 760\" aria-label=\"아웃도어와 인도어 정면 비교\">\n      <!-- outdoor: door covers whole box -->\n      <rect x=\"70\" y=\"80\" width=\"340\" height=\"440\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <rect x=\"360\" y=\"260\" width=\"16\" height=\"90\" rx=\"8\" fill=\"#2F6B57\"/>\n      <text x=\"240\" y=\"610\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">아웃도어</text>\n      <text x=\"240\" y=\"672\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">옆판이 안 보여요</text>\n      <!-- indoor: frame visible around door -->\n      <rect x=\"530\" y=\"80\" width=\"340\" height=\"440\" rx=\"6\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <rect x=\"566\" y=\"116\" width=\"268\" height=\"368\" rx=\"4\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/>\n      <rect x=\"790\" y=\"260\" width=\"16\" height=\"90\" rx=\"8\" fill=\"#2F6B57\"/>\n            <text x=\"700\" y=\"610\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">인도어</text>\n      <text x=\"700\" y=\"672\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">테두리가 보여요</text>\n    </svg>"
+      }
+    },
+    {
+      "title": "위에서 보면\n이렇게 달라요",
+      "sub": "문이 옆판 앞을 덮느냐,\n옆판 사이로 들어가느냐",
+      "body": {
+        "kind": "svg",
+        "height": 580,
+        "svg": "<svg width=\"693\" height=\"560\" viewBox=\"0 0 940 760\" aria-label=\"아웃도어와 인도어 위에서 본 단면\">\n      <text x=\"470\" y=\"62\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"600\" fill=\"#5D6863\">위에서 내려다본 모습</text>\n      <!-- OUTDOOR -->\n      <rect x=\"90\" y=\"140\" width=\"46\" height=\"340\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"90\" y=\"480\" width=\"330\" height=\"46\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"136\" y=\"370\" width=\"18\" height=\"70\" fill=\"#2F6B57\"/>\n      <path d=\"M154 405 L190 405 L190 482\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <circle cx=\"190\" cy=\"503\" r=\"19\" fill=\"#2F6B57\"/>\n      <text x=\"113\" y=\"126\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">옆판</text>\n      <text x=\"300\" y=\"590\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">문</text>\n      <text x=\"255\" y=\"668\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">아웃도어</text>\n      <text x=\"255\" y=\"730\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">팔이 곧아요</text>\n      <!-- INDOOR -->\n      <rect x=\"530\" y=\"140\" width=\"46\" height=\"386\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"527\" y=\"510\" width=\"52\" height=\"16\" fill=\"#E8A33C\"/>\n      <rect x=\"580\" y=\"480\" width=\"300\" height=\"46\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"7\"/>\n      <rect x=\"576\" y=\"350\" width=\"18\" height=\"70\" fill=\"#2F6B57\"/>\n      <path d=\"M594 385 L620 385 L665 445 L665 482\" fill=\"none\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <circle cx=\"665\" cy=\"503\" r=\"19\" fill=\"#2F6B57\"/>\n      <text x=\"553\" y=\"126\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">옆판</text>\n      <text x=\"740\" y=\"590\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">문</text>\n      <text x=\"705\" y=\"668\" text-anchor=\"middle\" font-size=\"68\" font-weight=\"900\" fill=\"#1F4F3F\">인도어</text>\n      <text x=\"705\" y=\"730\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#1D2421\">팔이 꺾여요</text>\n      <line x1=\"470\" y1=\"140\" x2=\"470\" y2=\"740\" stroke=\"#CFDDD6\" stroke-width=\"4\" stroke-dasharray=\"14 12\"/>\n    </svg>"
+      }
+    },
+    {
+      "title": "상품명은\n이렇게 읽어요",
+      "body": {
+        "kind": "chips",
+        "example": [
+          "씽크경첩",
+          "110도",
+          "아웃도어",
+          "18T",
+          "댐퍼"
+        ],
+        "legend": [
+          [
+            "110도",
+            "문이 열리는 각도"
+          ],
+          [
+            "아웃도어",
+            "문이 옆판을 덮는 방식"
+          ],
+          [
+            "18T",
+            "판재 두께 · 기존 것과 같게"
+          ],
+          [
+            "댐퍼",
+            "끝에서 천천히 닫힘"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "35파이는\n문에 파인 홈 크기",
+      "sub": "문 안쪽의 둥근 홈 지름이에요\n싱크대는 대부분 35파이",
+      "body": {
+        "kind": "svg",
+        "height": 560,
+        "svg": "<svg width=\"725\" height=\"540\" viewBox=\"0 0 940 700\" aria-label=\"문 안쪽 경첩 홈 35파이\">\n      <rect x=\"250\" y=\"40\" width=\"520\" height=\"620\" rx=\"8\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <text x=\"510\" y=\"640\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#7A4E0F\">문 안쪽 면</text>\n      <circle cx=\"380\" cy=\"190\" r=\"70\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <circle cx=\"380\" cy=\"510\" r=\"70\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"8\"/>\n      <line x1=\"310\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#9A6416\" stroke-width=\"6\"/>\n      <path d=\"M310 190 L330 178 L330 202 Z\" fill=\"#9A6416\"/>\n      <path d=\"M450 190 L430 178 L430 202 Z\" fill=\"#9A6416\"/>\n      <line x1=\"460\" y1=\"190\" x2=\"560\" y2=\"190\" stroke=\"#9A6416\" stroke-width=\"4\" stroke-dasharray=\"10 8\"/>\n      <rect x=\"560\" y=\"146\" width=\"240\" height=\"88\" rx=\"16\" fill=\"#FFFFFF\" stroke=\"#9A6416\" stroke-width=\"4\"/>\n      <text x=\"680\" y=\"208\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">35mm</text>\n      <text x=\"120\" y=\"205\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#5D6863\">경첩 홈</text>\n      <line x1=\"210\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#5D6863\" stroke-width=\"4\"/>\n    </svg>"
+      }
+    },
+    {
+      "title": "헷갈리면\n떼어서 들고 가요",
+      "body": {
+        "kind": "steps",
+        "items": [
+          {
+            "d": "문을 한 손으로 받쳐요",
+            "s": "경첩을 풀면 문이 툭 떨어져요"
+          },
+          {
+            "d": "옆판 쪽 나사를 풀어 떼요",
+            "s": "십자 드라이버 하나면 충분해요"
+          },
+          {
+            "d": "상품명과 하나씩 맞춰요",
+            "s": "아웃도어·인도어, 35파이, 18T, 댐퍼"
+          }
+        ],
+        "tip": "회사 이름이 찍혀 있으면 같은 회사 제품으로"
+      }
+    },
+    {
+      "title": "싱크대에만\n쓰는 게 아니에요",
+      "sub": "이름은 씽크경첩, 고르는 법은 똑같아요",
+      "body": {
+        "kind": "grid",
+        "items": [
+          {
+            "svg": "<svg width=\"150\" height=\"170\" viewBox=\"0 0 150 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"6\" width=\"130\" height=\"150\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><line x1=\"75\" y1=\"6\" x2=\"75\" y2=\"156\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"60\" y=\"70\" width=\"6\" height=\"26\" fill=\"#2F6B57\"/><rect x=\"84\" y=\"70\" width=\"6\" height=\"26\" fill=\"#2F6B57\"/><rect x=\"18\" y=\"156\" width=\"10\" height=\"12\" fill=\"#2F6B57\"/><rect x=\"122\" y=\"156\" width=\"10\" height=\"12\" fill=\"#2F6B57\"/></svg>",
+            "label": "옷장 · 장롱"
+          },
+          {
+            "svg": "<svg width=\"170\" height=\"170\" viewBox=\"0 0 170 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"20\" width=\"150\" height=\"140\" rx=\"6\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><line x1=\"10\" y1=\"66\" x2=\"160\" y2=\"66\" stroke=\"#2F6B57\" stroke-width=\"5\"/><line x1=\"10\" y1=\"112\" x2=\"160\" y2=\"112\" stroke=\"#2F6B57\" stroke-width=\"5\"/><path d=\"M40 52 q15 -14 30 0 z M100 98 q15 -14 30 0 z M50 144 q15 -14 30 0 z\" fill=\"#2F6B57\"/></svg>",
+            "label": "신발장"
+          },
+          {
+            "svg": "<svg width=\"200\" height=\"170\" viewBox=\"0 0 200 170\" aria-hidden=\"true\"><rect x=\"8\" y=\"6\" width=\"184\" height=\"158\" rx=\"4\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"18\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><rect x=\"74\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><rect x=\"130\" y=\"16\" width=\"52\" height=\"138\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"4\"/></svg>",
+            "label": "붙박이장"
+          },
+          {
+            "svg": "<svg width=\"150\" height=\"170\" viewBox=\"0 0 150 170\" aria-hidden=\"true\"><rect x=\"10\" y=\"10\" width=\"130\" height=\"150\" rx=\"10\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"26\" y=\"26\" width=\"98\" height=\"80\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><circle cx=\"75\" cy=\"134\" r=\"8\" fill=\"#2F6B57\"/></svg>",
+            "label": "욕실장"
+          }
+        ]
+      }
+    },
+    {
+      "title": "저장해두고\n살 때 꺼내 보세요",
+      "sub": "구분법과 셀프 교체 범위는\n블로그에 정리해뒀어요",
+      "body": {
+        "kind": "svg",
+        "height": 460,
+        "transparent": true,
+        "svg": "<svg width=\"355\" height=\"440\" viewBox=\"0 0 420 520\" aria-label=\"저장 아이콘\">\n      <rect x=\"40\" y=\"20\" width=\"340\" height=\"480\" rx=\"40\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/>\n      <path d=\"M130 90 L290 90 L290 400 L210 340 L130 400 Z\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"10\" stroke-linejoin=\"round\"/>\n    </svg>"
+      },
+      "badge": "프로필 링크 → 블로그",
+      "badge_center": true
+    }
+  ]
 }
