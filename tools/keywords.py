@@ -116,6 +116,15 @@ def run(words, dry):
             bt = blog_total(w, dry)
             if bt is not None:
                 entry["blog_docs"] = bt
+            # 예전 조회 값은 history 에 남겨요 (글에 적은 숫자를 나중에도 대조할 수 있게)
+            prev = data["keywords"].get(w) or {}
+            hist = dict(prev.get("history") or {})
+            if prev.get("checked") and prev.get("total") is not None:
+                hist.setdefault(prev["checked"], prev["total"])
+            if entry.get("total") is not None:
+                hist[today] = entry["total"]
+            if hist:
+                entry["history"] = dict(sorted(hist.items()))
             data["keywords"][w] = entry
         if not dry:
             time.sleep(1)

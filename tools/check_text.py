@@ -122,8 +122,15 @@ def check(post_dir):
                 e = saved.get(k.replace(" ", ""))
                 if not e:
                     issues.append(f'검색량: "{k}"는 키워드 도구로 조회한 기록이 없어요 (topics/keywords.json)')
-                elif v.get("total") != e.get("total") or v.get("checked") != e.get("checked"):
-                    issues.append(f'검색량: "{k}" 숫자가 조회 기록과 달라요 (기록 {e.get("total")}, {e.get("checked")})')
+                else:
+                    # 그날 조회한 값과 대조 (키워드는 일·화·목마다 다시 조회되니 history 에서 찾아요)
+                    hist = dict(e.get("history") or {})
+                    if e.get("checked"):
+                        hist[e["checked"]] = e.get("total")
+                    if v.get("checked") not in hist:
+                        issues.append(f'검색량: "{k}"를 {v.get("checked")}에 조회한 기록이 없어요 (기록된 날짜 {", ".join(sorted(hist))})')
+                    elif v.get("total") != hist[v["checked"]]:
+                        issues.append(f'검색량: "{k}" 숫자가 {v["checked"]} 조회 기록({hist[v["checked"]]})과 달라요')
         # 브리프: 누구의 어떤 질문에 무엇으로 답하는 글인지 (쓰기 전에 정함)
         brief = post.get("brief") or {}
         missing_b = [k for k in BRIEF_KEYS if not str(brief.get(k, "")).strip()]
