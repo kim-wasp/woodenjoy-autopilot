@@ -19,7 +19,12 @@ HYPE = ["무조건", "100%", "완벽 정리", "완벽하게", "최고의", "BEST
 MEMO = ["[확인 필요]", "TODO", "검토 메모", "실습 예시", "(예시)", "XXX"]
 # 사장님의 실제 경험을 말하는 표현 → topics/experience.md 에 확인된 기록이 있어야 해요
 EXPERIENCE = ["현장에서", "현장 가 보면", "제가 직접", "직접 해 보니", "직접 해보니", "고객님", "의뢰", "시공해 보면",
+              "써 보니", "써보니", "사용해 보니", "사용해보니", "써 봤", "써봤", "사서 써",
               "작업하다 보면", "저희", "우드엔조이에서", "제 경험", "실제로 가 보면"]
+COUPANG_URL = re.compile(r"https?://(?:link\.|www\.|m\.)?coupang\.com\S*")
+COUPANG_MARK = re.compile(r"\[쿠팡:\s*([\w-]+)\s*\|\s*([^\]]+?)\s*\]")
+# 공정위 심사지침: 모호한 표시 금지, 받은 물건·수수료가 있는 글에 '내돈내산' 금지
+VAGUE = ["소정의", "수수료를 받을 수", "수수료 지급 가능", "내돈내산"]
 BRIEF_KEYS = ["reader", "question", "answer", "out_of_scope", "next_action"]
 
 
@@ -43,6 +48,64 @@ def plain(text):
 def ngrams(text, n=3):
     t = re.sub(r"\s+", "", plain(text))
     return {t[i:i + n] for i in range(len(t) - n + 1)}
+
+
+def check_coupang(post, post_dir):
+    """쿠팡 링크가 있는 글: 대가성 문구(본문 첫 부분), 링크 수, 링크 목록, 모호한 표현."""
+    out = []
+    settings = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
+    cfg = settings.get("affiliate", {}).get("coupang", {})
+    md_file = post_dir / "naver.md"
+    md = md_file.read_text(encoding="utf-8") if md_file.exists() else ""
+    marks = COUPANG_MARK.findall(md)
+    items = (post.get("affiliate") or {}).get("items", [])
+    social = {"인스타": (post.get("instagram") or {}).get("caption", ""),
+              "스레드": "\n".join((post.get("threads") or {}).get("posts", []))}
+    for label, t in social.items():
+        if COUPANG_URL.search(t) or COUPANG_MARK.search(t):
+            if label not in [{"instagram": "인스타", "threads": "스레드"}.get(x) for x in cfg.get("platforms", [])]:
+                out.append(f"{label}: 쿠팡 링크는 아직 네이버에만 넣어요 (settings.json affiliate.coupang.platforms)")
+    if not marks and not items:
+        return out
+    if not cfg.get("enabled"):
+        return out + ["쿠팡: settings.json 에서 affiliate.coupang.enabled 가 꺼져 있어요"]
+    lib_f = ROOT / "topics/coupang_links.json"
+    lib = {i["key"]: i for i in json.loads(lib_f.read_text(encoding="utf-8")).get("items", [])} if lib_f.exists() else {}
+    keys = [k for k, _ in marks]
+    for k in keys:
+        if k not in lib:
+            out.append(f'쿠팡: "{k}"가 topics/coupang_links.json 에 없어요')
+        elif not lib[k].get("url"):
+            out.append(f'쿠팡: "{k}" 링크 주소가 아직 없어요 (사장님이 만들어 넣기 전엔 글에서 빼요)')
+        elif not COUPANG_URL.fullmatch(lib[k]["url"]):
+            out.append(f'쿠팡: "{k}" 주소가 쿠팡 주소가 아니에요')
+    if sorted(set(keys)) != sorted(set(items)):
+        out.append(f"쿠팡: 본문 표시 {sorted(set(keys))}와 post.json affiliate.items {sorted(set(items))}가 달라요")
+    limit = cfg.get("naver_max_links", 2)
+    if len(marks) > limit:
+        out.append(f"쿠팡: 네이버 링크가 {len(marks)}개예요 ({limit}개 이하, 교체·구매 문단에만)")
+    disclosure = cfg.get("disclosure", "")
+    body = plain(md)
+    pos = body.find(disclosure) if disclosure else -1
+    if pos < 0:
+        out.append(f'쿠팡: 대가성 문구가 없거나 바뀌었어요 → "{disclosure}" 그대로')
+    elif pos > 80:
+        out.append("쿠팡: 대가성 문구는 본문 첫 부분(첫 줄)에 있어야 해요 (공정위 심사지침, 더보기·글 끝 안 됨)")
+    for label, t in {"네이버": md, **social}.items():
+        for w in VAGUE:
+            if w in t:
+                out.append(f'{label}: "{w}" 같은 모호한·오해 표현은 쓰지 않아요 (공정위 심사지침)')
+    # 시험 기간: 링크 넣은 네이버 글 수 제한
+    until = cfg.get("test_until")
+    if until and post.get("id", "")[:10] <= until:
+        n = 0
+        for f in (ROOT / "posts").glob("*/post.json"):
+            other = json.loads(f.read_text(encoding="utf-8"))
+            if other.get("id") != post.get("id") and (other.get("affiliate") or {}).get("items") and other.get("id", "")[:10] <= until:
+                n += 1
+        if n + 1 > cfg.get("test_max_posts", 3):
+            out.append(f"쿠팡: 시험 기간({until}까지)엔 링크 글을 {cfg.get('test_max_posts', 3)}편까지만 (이미 {n}편)")
+    return out
 
 
 def check(post_dir):
@@ -75,6 +138,8 @@ def check(post_dir):
         subs = re.findall(r"^\*\*(.+?)\*\*\s*$", md, re.M)
         if len(subs) < 3:
             issues.append(f"네이버: 소제목이 {len(subs)}개예요 (3개 이상)")
+        if COUPANG_URL.search(md):
+            issues.append("네이버: 쿠팡 주소를 직접 쓰지 말고 [쿠팡: 키 | 링크 문구] 표시로 넣어요 (topics/coupang_links.json)")
         if len(URL.findall(md)) > 1:
             issues.append("네이버: 외부 링크가 2개 이상이에요 (최대 1개)")
         if any(w in body for w in AD_WORDS):
@@ -143,6 +208,9 @@ def check(post_dir):
             info["keyword_count"] = n
             if n > limit:
                 issues.append(f'네이버: 핵심 키워드 "{kw}"가 {n}번 나와요 (이 길이면 {limit}번 이하, 필요한 곳에만)')
+
+    # ---- 쿠팡 파트너스 ----
+    issues += check_coupang(post, post_dir)
 
     # ---- 인스타 캡션 ----
     if "instagram" in post.get("platforms", []):
