@@ -9,6 +9,7 @@
   [이미지: 카드 02 + 카드 03 (설명)] → ![설명](media:{card02}) 줄 2개
   [표 서식…] 줄            → 삭제 (uplika가 표 서식은 지정 못 함)
   마지막 #태그 줄          → tags 목록으로 분리
+  [쿠팡: 키 | 링크 문구]    → [링크 문구](topics/coupang_links.json 의 그 키 주소)
 
 사용: python3 tools/naver_markdown.py posts/<글폴더>   (변환 결과를 화면에 출력)
 """
@@ -17,7 +18,18 @@ import re
 import sys
 from pathlib import Path
 
-LEFTOVER = re.compile(r"\[(?:/?인용구|/?형광|구분선|표 서식|이미지|사진)")
+LEFTOVER = re.compile(r"\[(?:/?인용구|/?형광|구분선|표 서식|이미지|사진|쿠팡)")
+ROOT = Path(__file__).resolve().parent.parent
+COUPANG = re.compile(r"\[쿠팡:\s*([\w-]+)\s*\|\s*([^\]]+?)\s*\]")
+
+
+def coupang_links():
+    """사장님이 쿠팡 파트너스에서 만든 링크 모음 {키: 주소}. 주소가 빈 항목은 빼요."""
+    f = ROOT / "topics/coupang_links.json"
+    if not f.exists():
+        return {}
+    items = json.loads(f.read_text(encoding="utf-8")).get("items", [])
+    return {i["key"]: i["url"] for i in items if i.get("url")}
 
 
 def card_captions(post_dir):
@@ -29,11 +41,14 @@ def card_captions(post_dir):
     return {f"card{i + 1:02d}": re.sub(r"[*\n]+", " ", s["title"]).strip() for i, s in enumerate(slides)}
 
 
-def convert(md, media=None, captions=None):
+def convert(md, media=None, captions=None, links=None):
     """media: {"card01": "med_…"} 가 주어지면 실제 id로, 없으면 {card01} 자리표시로 둔다.
     captions: {"card01": "설명"} 카드별 이미지 설명."""
     media = media or {}
     captions = captions or {}
+    links = coupang_links() if links is None else links
+    # 쿠팡 표시 → 링크. 주소가 없는 키는 그대로 남겨서 check()가 잡아요
+    md = COUPANG.sub(lambda m: f"[{m.group(2)}]({links[m.group(1)]})" if m.group(1) in links else m.group(0), md)
     lines = md.strip().split("\n")
     out, tags, in_quote, in_table = [], [], False, False
 

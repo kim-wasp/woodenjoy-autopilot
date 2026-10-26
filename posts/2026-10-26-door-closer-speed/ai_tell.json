@@ -1,0 +1,19 @@
+{
+  "naver": {
+    "risk_band": "low",
+    "risk_score": 2,
+    "hints": [
+      "연결어미 뒤 쉼표 7곳 (예: '~고,' '~지만,') → 쉼표 빼기 (C-11)"
+    ]
+  },
+  "instagram": {
+    "risk_band": "low",
+    "risk_score": 0,
+    "hints": []
+  },
+  "threads": {
+    "risk_band": "low",
+    "risk_score": 2,
+    "hints": []
+  }
+}
