@@ -1,0 +1,19 @@
+{
+  "naver": {
+    "risk_band": "low",
+    "risk_score": 2,
+    "hints": [
+      "같은 종결어미가 5문장 연속 → 몇 문장은 끝맺음을 바꾸기 (E-2)"
+    ]
+  },
+  "instagram": {
+    "risk_band": "low",
+    "risk_score": 2,
+    "hints": []
+  },
+  "threads": {
+    "risk_band": "low",
+    "risk_score": 0,
+    "hints": []
+  }
+}
