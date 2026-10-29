@@ -106,9 +106,11 @@
   },
   "naver": {
     "uplika_post_id": "post_bdbbe393d57d7704",
-    "open": "private",
+    "open": "public",
     "status": "published",
-    "url": "https://blog.naver.com/cafe_peanut/224458172177"
+    "url": "https://blog.naver.com/cafe_peanut/224458172177",
+    "public_at": "2026-10-30T07:07:38+09:00"
   },
-  "approved_at": "2026-10-29T21:52+09:00"
+  "approved_at": "2026-10-29T21:52+09:00",
+  "naver_url": "https://blog.naver.com/cafe_peanut/224458172177"
 }
