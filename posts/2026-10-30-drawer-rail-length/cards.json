@@ -22,11 +22,23 @@
     },
     {
       "title": "길이는\n기존 레일 그대로",
-      "sub": "줄자로 끝에서 끝까지",
       "body": {
-        "kind": "svg",
-        "height": 500,
-        "svg": "<svg width=\"700\" height=\"460\" viewBox=\"0 0 940 620\" aria-label=\"기존 레일을 끝에서 끝까지 재기\"><rect x=\"80\" y=\"180\" width=\"780\" height=\"70\" rx=\"10\" fill=\"#E3ECE8\" stroke=\"#2F6B57\" stroke-width=\"8\"/><rect x=\"120\" y=\"198\" width=\"700\" height=\"34\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"4\"/><circle cx=\"170\" cy=\"215\" r=\"9\" fill=\"#2F6B57\"/><circle cx=\"470\" cy=\"215\" r=\"9\" fill=\"#2F6B57\"/><circle cx=\"770\" cy=\"215\" r=\"9\" fill=\"#2F6B57\"/><line x1=\"80\" y1=\"290\" x2=\"80\" y2=\"380\" stroke=\"#9A6416\" stroke-width=\"6\"/><line x1=\"860\" y1=\"290\" x2=\"860\" y2=\"380\" stroke=\"#9A6416\" stroke-width=\"6\"/><line x1=\"102\" y1=\"340\" x2=\"838\" y2=\"340\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M80 340 l24 -16 l0 32 z M860 340 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><text x=\"470\" y=\"450\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#9A6416\">앞 끝 → 뒤 끝</text><text x=\"470\" y=\"540\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"800\" fill=\"#1F4F3F\">같은 길이로 사요</text><text x=\"470\" y=\"130\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">지금 달린 레일</text></svg>"
+        "kind": "steps",
+        "items": [
+          {
+            "d": "서랍을 끝까지 빼요",
+            "s": "옆판의 레일이 다 보이게"
+          },
+          {
+            "d": "레일 앞 끝 → 뒤 끝을 재요",
+            "s": "줄자로, mm 단위로 적어 두기"
+          },
+          {
+            "d": "같은 길이 규격을 골라요",
+            "s": "300·350·400mm처럼 50mm 간격"
+          }
+        ],
+        "tip": "풀기 전에 사진 한 장 찍어 두면 다시 달 때 편해요"
       }
     },
     {
@@ -35,7 +47,7 @@
       "body": {
         "kind": "svg",
         "height": 580,
-        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 720\" aria-label=\"서랍 몸통 깊이와 고를 레일 길이\"><rect x=\"60\" y=\"80\" width=\"40\" height=\"300\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"100\" y=\"80\" width=\"720\" height=\"300\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/><text x=\"460\" y=\"250\" text-anchor=\"middle\" font-size=\"62\" font-weight=\"900\" fill=\"#1F4F3F\">몸통 480mm</text><line x1=\"100\" y1=\"430\" x2=\"775\" y2=\"430\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\"/><line x1=\"100\" y1=\"540\" x2=\"850\" y2=\"540\" stroke=\"#9A6416\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-dasharray=\"30 18\"/><text x=\"460\" y=\"500\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#2F6B57\">450mm  ○</text><text x=\"460\" y=\"620\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">500mm  ×</text><text x=\"460\" y=\"700\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"800\" fill=\"#1F4F3F\">애매하면 짧은 쪽</text></svg>"
+        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 720\" aria-label=\"서랍 몸통 깊이와 고를 레일 길이\"><rect x=\"60\" y=\"80\" width=\"40\" height=\"300\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"100\" y=\"80\" width=\"720\" height=\"300\" fill=\"#2F6B57\" stroke=\"#2F6B57\" stroke-width=\"10\"/><text x=\"460\" y=\"250\" text-anchor=\"middle\" font-size=\"62\" font-weight=\"900\" fill=\"#FFFFFF\">몸통 480mm</text><line x1=\"100\" y1=\"430\" x2=\"775\" y2=\"430\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\"/><line x1=\"100\" y1=\"540\" x2=\"850\" y2=\"540\" stroke=\"#9A6416\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-dasharray=\"30 18\"/><text x=\"460\" y=\"500\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#2F6B57\">450mm  ○</text><text x=\"460\" y=\"620\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">500mm  ×</text><text x=\"460\" y=\"700\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"800\" fill=\"#1F4F3F\">애매하면 짧은 쪽</text></svg>"
       }
     },
     {
@@ -44,7 +56,7 @@
       "body": {
         "kind": "svg",
         "height": 580,
-        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 780\" aria-label=\"수납장 안쪽 폭과 서랍 폭으로 한쪽 틈 재기\"><rect x=\"60\" y=\"60\" width=\"820\" height=\"420\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"12\"/><rect x=\"150\" y=\"130\" width=\"640\" height=\"300\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/><text x=\"470\" y=\"300\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#1F4F3F\">서랍 폭 400</text><line x1=\"88\" y1=\"200\" x2=\"128\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M66 200 l24 -16 l0 32 z M150 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"812\" y1=\"200\" x2=\"852\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M790 200 l24 -16 l0 32 z M874 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"88\" y1=\"560\" x2=\"852\" y2=\"560\" stroke=\"#2F6B57\" stroke-width=\"8\"/><path d=\"M66 560 l24 -16 l0 32 z M874 560 l-24 -16 l0 32 z\" fill=\"#2F6B57\"/><text x=\"470\" y=\"640\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#2F6B57\">안쪽 폭 425</text><text x=\"470\" y=\"735\" text-anchor=\"middle\" font-size=\"54\" font-weight=\"800\" fill=\"#9A6416\">(425-400)÷2 = 12.5mm</text></svg>"
+        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 780\" aria-label=\"수납장 안쪽 폭과 서랍 폭으로 한쪽 틈 재기\"><rect x=\"60\" y=\"60\" width=\"820\" height=\"420\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"12\"/><rect x=\"150\" y=\"130\" width=\"640\" height=\"300\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/><text x=\"470\" y=\"300\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#1F4F3F\">서랍 폭 400</text><line x1=\"88\" y1=\"200\" x2=\"128\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M66 200 l24 -16 l0 32 z M150 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"812\" y1=\"200\" x2=\"852\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M790 200 l24 -16 l0 32 z M874 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"88\" y1=\"560\" x2=\"852\" y2=\"560\" stroke=\"#2F6B57\" stroke-width=\"8\"/><path d=\"M66 560 l24 -16 l0 32 z M874 560 l-24 -16 l0 32 z\" fill=\"#2F6B57\"/><text x=\"470\" y=\"640\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#2F6B57\">안쪽 폭 425</text><text x=\"470\" y=\"735\" text-anchor=\"middle\" font-size=\"54\" font-weight=\"800\" fill=\"#9A6416\">(425-400)÷2 = 12.5mm</text></svg>"
       }
     },
     {
