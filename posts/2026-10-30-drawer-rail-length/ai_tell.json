@@ -1,0 +1,17 @@
+{
+  "naver": {
+    "risk_band": "low",
+    "risk_score": 3,
+    "hints": []
+  },
+  "instagram": {
+    "risk_band": "low",
+    "risk_score": 0,
+    "hints": []
+  },
+  "threads": {
+    "risk_band": "low",
+    "risk_score": 0,
+    "hints": []
+  }
+}
