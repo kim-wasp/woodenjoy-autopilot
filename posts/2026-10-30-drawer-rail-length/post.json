@@ -1,0 +1,113 @@
+{
+  "id": "2026-10-30-drawer-rail-length",
+  "status": "ready",
+  "platforms": [
+    "naver",
+    "instagram",
+    "threads"
+  ],
+  "title": "서랍레일 잘못 사면 안 닫혀요, 길이·옆 틈부터 재세요",
+  "title_options": [
+    "서랍레일 잘못 사면 안 닫혀요, 길이·옆 틈부터 재세요",
+    "서랍레일 교체 전에, 줄자로 두 군데만 재고 가세요",
+    "서랍레일 길이 고르는 법: 애매하면 짧은 쪽이에요",
+    "서랍레일 사러 가기 전, 볼레일·길이·옆 틈 확인하세요",
+    "서랍레일 새로 달았는데 안 닫힌다면, 길이부터 다시 보세요"
+  ],
+  "title_pick_reason": "검색량이 큰 '서랍레일'을 맨 앞에 두고, 잘못 사면 서랍이 안 닫힌다는 손해 회피로 후킹(본문 근거: 레일이 몸통보다 길면 끝까지 안 닫힘, 틈이 좁으면 끼임). 길이·옆 틈 재는 법이 본문 2·3번 소제목에 있음",
+  "thumbnail_text": [
+    "길이·옆 틈",
+    "애매하면 짧게"
+  ],
+  "keywords": {
+    "main": "서랍레일",
+    "sub": [
+      "서랍레일 교체",
+      "볼레일",
+      "3단 볼레일"
+    ],
+    "volume": {
+      "서랍레일": {
+        "total": 4550,
+        "checked": "2026-10-28"
+      },
+      "서랍레일교체": {
+        "total": 1090,
+        "checked": "2026-10-28"
+      },
+      "볼레일": {
+        "total": 650,
+        "checked": "2026-10-29"
+      },
+      "3단볼레일": {
+        "total": 450,
+        "checked": "2026-10-29"
+      }
+    },
+    "why": "서랍레일(4,550)·서랍레일교체(1,090)로 사려는 사람의 질문(무엇을 몇 mm로 사나)이 분명함. 레일 길이·옆 틈 기준을 근거 자료로 확인할 수 있고, 기존 글(경첩·도어클로저·문풍지)과 역할이 다름. 쿠팡 목록에 drawer-rail 링크가 이미 있음. 뽁뽁이(17,910)·방풍비닐(28,940)도 조회했지만 효과 비교 근거가 2018년 방송 한 건뿐이라 이번엔 미룸"
+  },
+  "terms_evidence": {
+    "consumer": [
+      "서랍레일",
+      "볼레일",
+      "3단 볼레일",
+      "댐핑",
+      "푸쉬오픈",
+      "언더레일",
+      "2개 1조",
+      "피스(나사못) 별매",
+      "300mm·350mm·400mm·450mm·500mm"
+    ],
+    "trade": [],
+    "excluded": [
+      "롤러레일(이번 확인에서 상품명 근거를 못 찾음)",
+      "상품명의 45mm(레일 높이인지 폭인지 페이지에 설명이 없어 뺌)",
+      "레일 분리 레버(제품마다 다르고 근거 확인 못 함)"
+    ],
+    "source": "철물코리아 '서랍레일 볼레일 3단 300mm', 꾸밈닷컴 '푸쉬오픈 댐핑 3단 볼레일 (400mm) 2개 1조'(피스 별매 안내), SSG '댐핑 3단볼레일 45mm(길이선택) / 서랍레일'(300~500mm 선택), 리빙올데이 '언더 레일' 분류의 '댐핑 언더 레일 300mm/3단'(250~500mm), 쿠팡 파트너스 목록의 '서랍 볼레일 (길이별)' (2026-10-29 확인)"
+  },
+  "facts_evidence": {
+    "흔한 옆붙임 볼레일은 한쪽에 12.7mm(0.5인치) 틈이 필요": "Firgelli 'What Size of Drawer Slides Do I Need?' ('minimum gap of 12.7mm (0.5 inches) per side'), Lazada Home 'How to measure your drawer and cabinet for a replacement track slider' (2026-08-15, 'standard 12.7 mm (half-inch) clearance on each side'), Liberty Hardware D806 설치 안내서 ('1/2\" narrower than cabinet opening on each side')",
+    "한쪽 틈 = (수납장 안쪽 폭 - 서랍 폭) ÷ 2": "Lazada Home 측정 안내",
+    "틈이 좁으면 서랍이 끼임": "Lazada Home ('If your clearance is too narrow, the drawer will bind')",
+    "서랍 몸통 깊이는 앞판을 빼고 뒤판 바깥부터 앞쪽 안쪽까지, 레일은 그보다 짧게": "Lazada Home ('from the outer surface of the back panel to the inside edge of the front panel', 'must be shorter than this internal depth')",
+    "중간 크기면 짧은 쪽(480mm → 450mm)": "Lazada Home ('a 480 mm box gets a 450 mm slide, not a 500 mm one' 취지)",
+    "레일이 너무 길면 서랍이 끝까지 안 닫힘": "Lazada Home ('A slide that is too long will extend past the back of the drawer box, preventing the drawer from closing fully')",
+    "좌우 레일 높이가 같아야 하고 조금 틀어져도 걸림": "Firgelli ('the same height', 'Even small misalignments create binding')",
+    "50mm 간격 규격(300·350·400·450·500mm)": "SSG 상품 길이 선택, 리빙올데이 언더 레일 목록 (2026-10-29 확인)",
+    "2개 1조 = 좌우 한 쌍, 피스 별매 상품 있음": "꾸밈닷컴 '푸쉬오픈 댐핑 3단 볼레일 (400mm) 2개 1조' ('피스(나사못) 별매')"
+  },
+  "brief": {
+    "reader": "서랍이 덜컹거리거나 레일이 휘고 부러져서, 쇼핑몰에서 서랍레일을 새로 사려는 사람",
+    "question": "서랍레일을 새로 살 때 무엇을 재고 어떤 길이를 골라야 서랍이 다시 잘 닫히나?",
+    "answer": "옆붙임 볼레일인지 확인하고, 기존 레일 길이(없으면 서랍 몸통 깊이보다 짧은 규격)를 고르고, 한쪽 옆 틈이 12.7mm 정도인지 재서 2개 1조로 산다",
+    "out_of_scope": "언더레일 규격 고르기, 서랍 몸통 수리·제작, 레일 브랜드·가격 비교, 서랍 손잡이 교체",
+    "next_action": "오늘 서랍 하나를 빼서 기존 레일 길이와 수납장 안쪽 폭·서랍 폭을 줄자로 재고 메모하기"
+  },
+  "experience_used": [],
+  "experience_pending": [
+    "E003"
+  ],
+  "affiliate": {
+    "program": "coupang",
+    "items": [
+      "drawer-rail"
+    ]
+  },
+  "instagram": {
+    "caption": "서랍레일, 길이 잘못 사면 새로 달아도 안 닫혀요.\n\n✔ 옆판에 쇠 레일이 붙어 있으면 볼레일\n✔ 기존 레일을 앞 끝부터 뒤 끝까지 재서 같은 길이로\n✔ 레일이 없으면 서랍 몸통 깊이보다 짧은 규격 (480mm면 450mm)\n✔ (수납장 안쪽 폭 - 서랍 폭) ÷ 2 = 한쪽 틈, 12.7mm 정도인지\n\n좌우 레일 높이는 똑같이, '2개 1조'가 서랍 하나 분량이에요.\n\n저장해두고 레일 사기 전에 꺼내 보세요.\n상품명 읽는 법까지 프로필 링크의 블로그에 정리해뒀어요.\n\n#서랍레일 #서랍레일교체 #볼레일 #셀프집수리 #우드엔조이"
+  },
+  "threads": {
+    "posts": [
+      "서랍레일 새로 샀는데 서랍이 끝까지 안 닫힌다면, 레일이 서랍보다 긴 거예요.\n\n레일이 서랍 몸통보다 길면 뒤로 튀어나와서 끝까지 안 들어가요. 그래서 길이가 애매할 땐 짧은 쪽을 골라요. 몸통 깊이가 480mm면 500mm가 아니라 450mm예요.",
+      "서랍레일 사기 전에 잴 것\n\n1. 옆판에 쇠 레일이 붙어 있나 (볼레일)\n2. 기존 레일 길이: 앞 끝부터 뒤 끝까지\n3. 레일이 없으면 서랍 몸통 깊이 (앞판 빼고)\n4. (수납장 안쪽 폭 - 서랍 폭) ÷ 2 = 한쪽 틈, 12.7mm 정도\n5. '2개 1조'가 서랍 하나 분량",
+      "새 레일은 왼쪽·오른쪽 높이를 똑같이 맞춰야 서랍이 안 걸려요. 상품명에 있는 '3단·댐핑·푸쉬오픈'이 무슨 뜻인지도 블로그에 정리해뒀어요.\n[네이버 글 링크]"
+    ]
+  },
+  "naver": {
+    "uplika_post_id": "post_bdbbe393d57d7704",
+    "open": "private",
+    "status": "published",
+    "url": "https://blog.naver.com/cafe_peanut/224458172177"
+  }
+}

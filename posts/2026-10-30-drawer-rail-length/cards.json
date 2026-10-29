@@ -1,0 +1,106 @@
+{
+  "slides": [
+    {
+      "title": "서랍레일\n잘못 사면 *안 닫혀요*",
+      "big": true,
+      "sub": "사기 전에 두 군데만 재세요",
+      "body": {
+        "kind": "svg",
+        "height": 420,
+        "svg": "<svg width=\"660\" height=\"400\" viewBox=\"0 0 1000 600\" aria-label=\"옆에서 본 서랍, 레일이 길어 덜 닫힘\"><rect x=\"200\" y=\"60\" width=\"760\" height=\"380\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"12\"/><rect x=\"40\" y=\"70\" width=\"44\" height=\"360\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/><rect x=\"84\" y=\"200\" width=\"560\" height=\"200\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/><line x1=\"84\" y1=\"300\" x2=\"954\" y2=\"300\" stroke=\"#9A6416\" stroke-width=\"18\" stroke-linecap=\"round\"/><line x1=\"106\" y1=\"520\" x2=\"178\" y2=\"520\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M84 520 l24 -16 l0 32 z M200 520 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><text x=\"142\" y=\"585\" text-anchor=\"middle\" font-size=\"54\" font-weight=\"900\" fill=\"#9A6416\">덜 닫힘</text><text x=\"800\" y=\"250\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">레일이 길면</text><text x=\"360\" y=\"150\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"700\" fill=\"#5D6863\">수납장</text></svg>"
+      },
+      "badge": "길이 · 옆 틈"
+    },
+    {
+      "title": "먼저 어떤 레일인지\n보세요",
+      "sub": "서랍을 끝까지 빼고 옆면 확인",
+      "body": {
+        "kind": "svg",
+        "height": 560,
+        "svg": "<svg width=\"700\" height=\"520\" viewBox=\"0 0 940 700\" aria-label=\"앞에서 본 볼레일과 언더레일 위치\"><rect x=\"40\" y=\"60\" width=\"380\" height=\"380\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/><rect x=\"88\" y=\"140\" width=\"284\" height=\"240\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/><rect x=\"52\" y=\"230\" width=\"30\" height=\"60\" fill=\"#9A6416\"/><rect x=\"378\" y=\"230\" width=\"30\" height=\"60\" fill=\"#9A6416\"/><rect x=\"520\" y=\"60\" width=\"380\" height=\"380\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/><rect x=\"548\" y=\"140\" width=\"324\" height=\"200\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"8\"/><rect x=\"560\" y=\"348\" width=\"70\" height=\"26\" fill=\"#9A6416\"/><rect x=\"790\" y=\"348\" width=\"70\" height=\"26\" fill=\"#9A6416\"/><text x=\"230\" y=\"540\" text-anchor=\"middle\" font-size=\"62\" font-weight=\"900\" fill=\"#1F4F3F\">볼레일</text><text x=\"230\" y=\"615\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#5D6863\">옆판에 붙음</text><text x=\"710\" y=\"540\" text-anchor=\"middle\" font-size=\"62\" font-weight=\"900\" fill=\"#1F4F3F\">언더레일</text><text x=\"710\" y=\"615\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"700\" fill=\"#5D6863\">바닥 아래 숨음</text></svg>"
+      }
+    },
+    {
+      "title": "길이는\n기존 레일 그대로",
+      "body": {
+        "kind": "steps",
+        "items": [
+          {
+            "d": "서랍을 끝까지 빼요",
+            "s": "옆판의 레일이 다 보이게"
+          },
+          {
+            "d": "레일 앞 끝 → 뒤 끝을 재요",
+            "s": "줄자로, mm 단위로 적어 두기"
+          },
+          {
+            "d": "같은 길이 규격을 골라요",
+            "s": "300·350·400mm처럼 50mm 간격"
+          }
+        ],
+        "tip": "풀기 전에 사진 한 장 찍어 두면 다시 달 때 편해요"
+      }
+    },
+    {
+      "title": "레일이 없으면\n서랍 깊이보다 짧게",
+      "sub": "앞판은 빼고 몸통만 재요",
+      "body": {
+        "kind": "svg",
+        "height": 580,
+        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 720\" aria-label=\"서랍 몸통 깊이와 고를 레일 길이\"><rect x=\"60\" y=\"80\" width=\"40\" height=\"300\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"6\"/><rect x=\"100\" y=\"80\" width=\"720\" height=\"300\" fill=\"#2F6B57\" stroke=\"#2F6B57\" stroke-width=\"10\"/><text x=\"460\" y=\"250\" text-anchor=\"middle\" font-size=\"62\" font-weight=\"900\" fill=\"#FFFFFF\">몸통 480mm</text><line x1=\"100\" y1=\"430\" x2=\"775\" y2=\"430\" stroke=\"#2F6B57\" stroke-width=\"16\" stroke-linecap=\"round\"/><line x1=\"100\" y1=\"540\" x2=\"850\" y2=\"540\" stroke=\"#9A6416\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-dasharray=\"30 18\"/><text x=\"460\" y=\"500\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#2F6B57\">450mm  ○</text><text x=\"460\" y=\"620\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"900\" fill=\"#9A6416\">500mm  ×</text><text x=\"460\" y=\"700\" text-anchor=\"middle\" font-size=\"56\" font-weight=\"800\" fill=\"#1F4F3F\">애매하면 짧은 쪽</text></svg>"
+      }
+    },
+    {
+      "title": "옆 틈은\n한쪽 12.7mm 정도",
+      "sub": "좁으면 끼어서 뻑뻑해요",
+      "body": {
+        "kind": "svg",
+        "height": 580,
+        "svg": "<svg width=\"700\" height=\"540\" viewBox=\"0 0 940 780\" aria-label=\"수납장 안쪽 폭과 서랍 폭으로 한쪽 틈 재기\"><rect x=\"60\" y=\"60\" width=\"820\" height=\"420\" fill=\"#DCEBE3\" stroke=\"#2F6B57\" stroke-width=\"12\"/><rect x=\"150\" y=\"130\" width=\"640\" height=\"300\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"8\"/><text x=\"470\" y=\"300\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#1F4F3F\">서랍 폭 400</text><line x1=\"88\" y1=\"200\" x2=\"128\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M66 200 l24 -16 l0 32 z M150 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"812\" y1=\"200\" x2=\"852\" y2=\"200\" stroke=\"#9A6416\" stroke-width=\"8\"/><path d=\"M790 200 l24 -16 l0 32 z M874 200 l-24 -16 l0 32 z\" fill=\"#9A6416\"/><line x1=\"88\" y1=\"560\" x2=\"852\" y2=\"560\" stroke=\"#2F6B57\" stroke-width=\"8\"/><path d=\"M66 560 l24 -16 l0 32 z M874 560 l-24 -16 l0 32 z\" fill=\"#2F6B57\"/><text x=\"470\" y=\"640\" text-anchor=\"middle\" font-size=\"60\" font-weight=\"900\" fill=\"#2F6B57\">안쪽 폭 425</text><text x=\"470\" y=\"735\" text-anchor=\"middle\" font-size=\"54\" font-weight=\"800\" fill=\"#9A6416\">(425-400)÷2 = 12.5mm</text></svg>"
+      }
+    },
+    {
+      "title": "상품명은\n이렇게 읽어요",
+      "body": {
+        "kind": "chips",
+        "example": [
+          "댐핑",
+          "3단",
+          "볼레일",
+          "400mm",
+          "2개 1조"
+        ],
+        "legend": [
+          [
+            "3단",
+            "세 겹으로 늘어나요"
+          ],
+          [
+            "댐핑",
+            "끝에서 천천히 닫힘"
+          ],
+          [
+            "400mm",
+            "레일 길이"
+          ],
+          [
+            "2개 1조",
+            "좌우 한 쌍 = 서랍 1개"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "저장해두고\n레일 사기 전에 보세요",
+      "sub": "재는 법과 상품명 읽는 법은\n블로그에 정리해뒀어요",
+      "body": {
+        "kind": "svg",
+        "height": 460,
+        "transparent": true,
+        "svg": "<svg width=\"355\" height=\"440\" viewBox=\"0 0 420 520\" aria-label=\"저장 아이콘\"><rect x=\"40\" y=\"20\" width=\"340\" height=\"480\" rx=\"40\" fill=\"#FFFFFF\" stroke=\"#2F6B57\" stroke-width=\"10\"/><path d=\"M130 90 L290 90 L290 400 L210 340 L130 400 Z\" fill=\"#F6E2BF\" stroke=\"#2F6B57\" stroke-width=\"10\" stroke-linejoin=\"round\"/></svg>"
+      },
+      "badge": "프로필 링크 → 블로그",
+      "badge_center": true
+    }
+  ]
+}
