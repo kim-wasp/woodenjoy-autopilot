@@ -7,6 +7,9 @@ on:
     branches: [main]
     paths: ["content/**/post.json"]
   workflow_dispatch:
+    inputs:
+      branch: { description: "(수동 올리기) 글이 있는 가지. 비우면 예약 확인만", required: false }
+      platform: { description: "(수동 올리기) blog / instagram / threads", required: false, default: "blog" }
 permissions:
   contents: write
 concurrency: publish
@@ -15,10 +18,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || github.ref }}
       - name: 올릴 차례 찾기
         id: due
+        env:
+          BRANCH: ${{ github.event.inputs.branch }}
+          PLATFORM: ${{ github.event.inputs.platform }}
         run: |
-          python3 engine/scheduler.py due > due.txt
+          if [ -n "$BRANCH" ]; then
+            # 수동 올리기: 그 가지의 글 폴더 하나만
+            dir="content/${BRANCH#studio/}"
+            [ -f "$dir/post.json" ] || { echo "글 폴더 없음: $dir"; exit 1; }
+            echo "$dir ${PLATFORM:-blog}" > due.txt
+          else
+            python3 engine/scheduler.py due > due.txt
+          fi
           cat due.txt
           echo "any=$([ -s due.txt ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
@@ -60,9 +75,9 @@ jobs:
         if: always()
         run: |
           rm -f due.txt
-          python3 engine/scheduler.py board
+          [ -n "${{ github.event.inputs.branch }}" ] || python3 engine/scheduler.py board
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
           git add content status
           git diff --cached --quiet && exit 0
           git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
-          git pull -q --rebase && git push -q
+          git pull -q --rebase origin HEAD && git push -q origin HEAD
