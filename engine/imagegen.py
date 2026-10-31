@@ -61,15 +61,25 @@ def generate(prompt, out, cfg, size=(1200, 675)):
         d = r.json()["data"][0]
         raw = base64.b64decode(d["b64_json"]) if d.get("b64_json") else requests.get(d["url"], timeout=120).content
     elif provider == "gemini":
-        model = cfg.get("model", "gemini-2.5-flash-image")
-        r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                          params={"key": secret("GEMINI_API_KEY")}, timeout=300,
-                          json={"contents": [{"parts": [{"text": full + " Aspect ratio 16:9."}]}],
-                                "generationConfig": {"responseModalities": ["IMAGE"]}})
-        if r.status_code >= 400:
-            raise RuntimeError(f"Gemini 이미지 오류 {r.status_code}: {r.text[:300]}")
-        parts = r.json()["candidates"][0]["content"]["parts"]
-        raw = base64.b64decode(next(p["inlineData"]["data"] for p in parts if "inlineData" in p))
+        # 구글은 이미지 모델 이름이 자주 바뀌어요 → 설정한 이름부터 차례로 시도
+        models = [cfg.get("model")] if cfg.get("model", "").startswith("gemini") else []
+        models += ["gemini-3.1-flash-image", "gemini-2.5-flash-image"]
+        raw, err = None, ""
+        for model in dict.fromkeys(models):
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                              params={"key": secret("GEMINI_API_KEY")}, timeout=300,
+                              json={"contents": [{"parts": [{"text": full + " Aspect ratio 16:9."}]}],
+                                    "generationConfig": {"responseModalities": ["IMAGE"]}})
+            if r.status_code == 404:
+                err = f"{model} 없음"
+                continue
+            if r.status_code >= 400:
+                raise RuntimeError(f"Gemini 이미지 오류 {r.status_code}: {r.text[:300]}")
+            parts = r.json()["candidates"][0]["content"]["parts"]
+            raw = base64.b64decode(next(p["inlineData"]["data"] for p in parts if "inlineData" in p))
+            break
+        if raw is None:
+            raise RuntimeError(f"Gemini 이미지 모델을 찾지 못했어요 ({err})")
     else:
         raise SystemExit(f"알 수 없는 이미지 제공자: {provider}")
     _save(raw, out, size)

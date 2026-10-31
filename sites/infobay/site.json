@@ -71,8 +71,8 @@
   },
   "images": {
     "hero": {
-      "provider": "openai",
-      "model": "gpt-image-1",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-image",
       "quality": "high"
     },
     "blog_inline": "mixed",
