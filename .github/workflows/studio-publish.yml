@@ -69,15 +69,29 @@ jobs:
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
           fail=0
-          while read -r d p; do python3 engine/publish.py "$d" "$p" || fail=1; done < due.txt
+          while read -r d p; do
+            set +e; python3 engine/publish.py "$d" "$p" 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
+          done < due.txt
           exit $fail
       - name: 일정표 갱신·기록
         if: always()
+        env:
+          BRANCH: ${{ github.event.inputs.branch }}
         run: |
           rm -f due.txt
           [ -n "${{ github.event.inputs.branch }}" ] || python3 engine/scheduler.py board
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
-          git add content status
+          # 실행 기록을 studio-logs 가지에 남겨요
+          if [ -s pub.log ]; then
+            cp pub.log /tmp/pub.log; cur=$(git rev-parse --abbrev-ref HEAD)
+            git stash -q -u || true
+            if git fetch -q origin studio-logs; then git checkout -q -B studio-logs FETCH_HEAD; else git checkout -q --orphan studio-logs; git rm -rqf .; fi
+            mkdir -p logs; cp /tmp/pub.log "logs/publish-$(TZ=Asia/Seoul date +%Y%m%d-%H%M).log"
+            git add logs && git commit -qm "업로드 기록" && git push -q origin studio-logs || true
+            git checkout -q -f "$cur"; git stash pop -q || true
+          fi
+          rm -f pub.log
+          git add content $( [ -d status ] && echo status )
           git diff --cached --quiet && exit 0
           git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
-          git pull -q --rebase origin HEAD && git push -q origin HEAD
+          b=$(git rev-parse --abbrev-ref HEAD); git pull -q --rebase origin "$b" && git push -q origin "$b"
