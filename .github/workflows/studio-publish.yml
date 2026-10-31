@@ -1,0 +1,44 @@
+# [스튜디오] 승인된 글을 사이트·플랫폼별 시간에 올려요 (30분마다 확인). 결과와 일정표(status/schedule.json)를 기록해요.
+name: 스튜디오 업로드
+on:
+  schedule:
+    - cron: "10,40 * * * *"
+  push:
+    branches: [main]
+    paths: ["content/**/post.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 올릴 차례 찾기
+        id: due
+        run: |
+          python3 engine/scheduler.py due > due.txt
+          cat due.txt
+          echo "any=$([ -s due.txt ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q -r requirements.txt
+      - name: 올리기
+        if: steps.due.outputs.any == 'yes'
+        env:
+          ALL_SECRETS: ${{ toJSON(secrets) }}
+        run: |
+          fail=0
+          while read -r d p; do python3 engine/publish.py "$d" "$p" || fail=1; done < due.txt
+          exit $fail
+      - name: 일정표 갱신·기록
+        if: always()
+        run: |
+          rm -f due.txt
+          python3 engine/scheduler.py board
+          git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
+          git add content status
+          git diff --cached --quiet && exit 0
+          git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
+          git pull -q --rebase && git push -q

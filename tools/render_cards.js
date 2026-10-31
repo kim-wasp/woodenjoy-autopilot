@@ -9,7 +9,10 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const brand = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/brand.json'), 'utf8'));
+// 사이트마다 다른 브랜드·용어를 쓸 수 있어요 (BRAND_FILE, TERMS_FILE 환경변수, 없으면 우드엔조이 기본값)
+const brand = JSON.parse(fs.readFileSync(process.env.BRAND_FILE || path.join(ROOT, 'config/brand.json'), 'utf8'));
+const TERMS_FILE = process.env.TERMS_FILE || path.join(ROOT, 'config/terms.json');
+const COLOR_VARS = { bg: '--bg', pine: '--pine', deep: '--deep', ink: '--ink', amber: '--amber2', amberInk: '--amberInk', muted: '--muted' };
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const br = (s) => esc(s).replace(/\n/g, '<br>');
 // 제목 안에서 *강조* 표시는 초록색으로
@@ -26,6 +29,12 @@ function body(b) {
     case 'chips':
       return `<div class="pname"><p class="ex">${esc(b.label || '쇼핑몰 상품명 예시')}</p><div class="chips">${b.example.map((c, i) => `<span class="chip c${i % 5}">${esc(c)}</span>`).join('')}</div></div>`
         + `<div class="legend">${b.legend.map(([c, d]) => { const i = b.example.indexOf(c); return `<div class="row"><span class="chip c${(i < 0 ? 1 : i) % 5}">${esc(c)}</span><span class="d">${br(d)}</span></div>`; }).join('')}</div>`;
+    case 'image': {
+      // 글 폴더 안의 사진(예: hero.jpg)을 카드에 넣어요
+      const f = path.join(CUR_DIR, b.src);
+      const data = fs.readFileSync(f).toString('base64');
+      return `<div class="card" style="height:${b.height || 640}px"><img src="data:image/jpeg;base64,${data}" style="width:100%;height:100%;object-fit:cover" alt=""></div>`;
+    }
     case 'grid':
       return `<div class="grid">${b.items.map((it) => `<div class="cell">${it.svg || ''}<span class="l">${esc(it.label)}</span></div>`).join('')}</div>`;
     default:
@@ -78,7 +87,7 @@ const QA = () => {
     if (last.bottom > sr.bottom - FOOT_ZONE) issues.push(`본문이 계정명 자리까지 내려옴`);
     const gap = sr.bottom - FOOT_ZONE - last.bottom;
     if (gap > 260) issues.push(`아래 빈 공간 큼 (${Math.round(gap)}px)`);
-    s.querySelectorAll('.card,.cell,.step,.row').forEach((c) => { if (!c.textContent.trim() && !c.querySelector('svg *')) issues.push(`빈 칸: ${c.className}`); });
+    s.querySelectorAll('.card,.cell,.step,.row').forEach((c) => { if (!c.textContent.trim() && !c.querySelector('svg *, img')) issues.push(`빈 칸: ${c.className}`); });
     s.querySelectorAll('svg').forEach((svg) => {
       const vr = svg.getBoundingClientRect();
       svg.querySelectorAll('text').forEach((t) => {
@@ -101,13 +110,16 @@ const QA = () => {
   return res;
 };
 
+let CUR_DIR = '.';
 (async () => {
   const dir = path.resolve(process.argv[2]);
+  CUR_DIR = dir;
   const spec = JSON.parse(fs.readFileSync(path.join(dir, 'cards.json'), 'utf8'));
   const slides = spec.slides;
   if (slides.length < 2 || slides.length > 10) throw new Error('카드는 2~10장이어야 해요 (인스타 캐러셀 제한)');
   const css = fs.readFileSync(path.join(__dirname, 'card.css'), 'utf8');
-  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>${css}</style></head><body>${slides.map((s, i) => slideHtml(s, i, slides.length)).join('\n')}</body></html>`;
+  const vars = Object.entries(brand.colors || {}).filter(([k]) => COLOR_VARS[k]).map(([k, v]) => `${COLOR_VARS[k]}:${v}`).join(';');
+  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>${css}${vars ? `:root{${vars}}` : ''}</style></head><body>${slides.map((s, i) => slideHtml(s, i, slides.length)).join('\n')}</body></html>`;
   const outDir = path.join(dir, 'cards');
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'preview.html'), html);
@@ -128,10 +140,10 @@ const QA = () => {
   const sim = JSON.parse(execFileSync('python3', [path.join(__dirname, 'sim.py'), ...files]).toString());
   const similar = sim.filter((x) => x[2] < 7).map((x) => `${x[0] + 1}장과 ${x[1] + 1}장이 너무 비슷함`);
   const seen = {};
-  report.forEach((r, i) => r.text.split(/(?<=[.요다!?])\s/).forEach((t) => { t = t.trim(); if (t.length > 12 && !t.includes(brand.handle)) (seen[t] = seen[t] || new Set()).add(i + 1); }));
+  report.forEach((r, i) => r.text.split(/(?<=[.요다!?])\s/).forEach((t) => { t = t.trim(); if (t.length > 12 && !t.includes(brand.handle) && !(brand.cardLabel && t.includes(brand.cardLabel))) (seen[t] = seen[t] || new Set()).add(i + 1); }));
   const repeated = Object.entries(seen).filter(([, ids]) => ids.size > 1).map(([t, ids]) => `반복 문장 "${t.slice(0, 20)}" (${[...ids].join(',')}장)`);
   // 금지 용어
-  const terms = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/terms.json'), 'utf8'));
+  const terms = fs.existsSync(TERMS_FILE) ? JSON.parse(fs.readFileSync(TERMS_FILE, 'utf8')) : { banned: [] };
   const banned = [];
   report.forEach((r, i) => terms.banned.forEach((w) => { if (r.text.includes(w.term)) banned.push(`${i + 1}장 금지 용어 "${w.term}" → ${w.use}`); }));
 

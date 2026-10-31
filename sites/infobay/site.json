@@ -1,0 +1,96 @@
+{
+  "id": "infobay",
+  "name": "상식 (커먼센스 · infobay_kr)",
+  "enabled": true,
+  "topic": "한국 생활 상식과 사회적 에티켓 논쟁: 축의금·조의금, 직장 예절, 대중교통·공공장소 매너, 가족·명절 문화처럼 '다들 어떻게 하지?' 싶은 상황",
+  "audience": "20~40대 직장인·사회초년생. 경조사·회사생활에서 '나만 이상한가?' 궁금한 사람",
+  "tone": "친근한 해요체, 짧고 단정한 문장, 첫 줄은 논쟁을 부르는 질문이나 반전",
+  "url": "https://commonsense-one.vercel.app",
+  "writing_guide": "커먼센스는 상황 카드에 '인정/아닌데'로 투표하고 세대별 결과를 보는 앱이에요. SNS 글은 상황을 던지고 의견이 갈리는 지점을 보여준 뒤, 앱에서 투표하고 세대별 결과를 보게 이끌어요. 설문·통계 숫자는 출처가 있는 것만 씁니다(없으면 숫자 없이). 정답을 강요하지 말고 기준(관계·지역·상황)을 알려 주세요.",
+  "blog": {
+    "platform": "none"
+  },
+  "instagram": {
+    "enabled": true,
+    "handle": "infobay_kr",
+    "token_secret": "IG_TOKEN_INFOBAY"
+  },
+  "threads": {
+    "enabled": true,
+    "handle": "infobay_kr",
+    "token_secret": "THREADS_TOKEN_INFOBAY"
+  },
+  "schedule": {
+    "generate": {
+      "days": [
+        "sun",
+        "tue",
+        "thu"
+      ],
+      "time": "20:00"
+    },
+    "slots": {
+      "threads": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "12:30"
+      },
+      "instagram": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "21:00"
+      }
+    },
+    "grace_hours": 3
+  },
+  "approval": true,
+  "llm": {
+    "model": "claude-opus-5-5",
+    "web_search": true
+  },
+  "images": {
+    "hero": {
+      "provider": "openai",
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  },
+  "brand": {
+    "cardLabel": "커먼센스 · 이거 상식이야?",
+    "handle": "@infobay_kr",
+    "colors": {
+      "bg": "#EEF3FB",
+      "pine": "#3182F6",
+      "deep": "#1B3A6B",
+      "ink": "#191F28",
+      "amber": "#FFE8A3",
+      "amberInk": "#8A5A00",
+      "muted": "#5B6472"
+    }
+  },
+  "rules": {
+    "min_chars": 2500,
+    "max_chars": 6000,
+    "require_table": true,
+    "require_sources": true,
+    "banned_words": []
+  },
+  "seeds": [
+    "축의금",
+    "조의금",
+    "부조금",
+    "직장 예절",
+    "회식",
+    "명절 용돈",
+    "더치페이",
+    "대중교통 예절",
+    "결혼식 하객",
+    "카톡 예절"
+  ]
+}

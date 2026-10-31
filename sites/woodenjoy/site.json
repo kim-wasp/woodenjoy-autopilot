@@ -1,0 +1,79 @@
+{
+  "id": "woodenjoy",
+  "name": "가구·인테리어 (우드엔조이)",
+  "enabled": false,
+  "legacy": true,
+  "note": "지금은 기존 우드엔조이 자동화(posts/, AUTOPILOT.md)로 돌아가요. 3단계에서 이 화면으로 옮겨요.",
+  "topic": "셀프 집수리·가구·인테리어",
+  "audience": "집 고치기를 직접 해보려는 사람",
+  "tone": "강한 후킹, 사실만",
+  "url": "https://blog.naver.com/cafe_peanut",
+  "blog": {
+    "platform": "naver",
+    "naver": {
+      "via": "uplika",
+      "category": "인테리어·DIY 자료"
+    }
+  },
+  "instagram": {
+    "enabled": true,
+    "handle": "woodenjoy00",
+    "token_secret": "IG_TOKEN"
+  },
+  "threads": {
+    "enabled": true,
+    "handle": "woodenjoy00",
+    "token_secret": "THREADS_TOKEN"
+  },
+  "schedule": {
+    "generate": {
+      "days": [
+        "sun",
+        "tue",
+        "thu"
+      ],
+      "time": "19:46"
+    },
+    "slots": {
+      "blog": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "07:00"
+      },
+      "threads": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "12:30"
+      },
+      "instagram": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "21:00"
+      }
+    },
+    "grace_hours": 3
+  },
+  "approval": true,
+  "brand": {
+    "cardLabel": "WOOD & JOY · 셀프 집수리",
+    "handle": "@woodenjoy00",
+    "colors": {}
+  },
+  "rules": {
+    "min_chars": 2500,
+    "max_chars": 6000,
+    "require_table": true,
+    "require_sources": true,
+    "banned_words": []
+  },
+  "seeds": []
+}

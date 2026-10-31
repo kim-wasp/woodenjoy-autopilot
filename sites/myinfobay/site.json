@@ -1,0 +1,96 @@
+{
+  "id": "myinfobay",
+  "name": "정치 (myinfobay.com, 준비 중)",
+  "enabled": false,
+  "topic": "정치·정책 이슈를 사실 중심으로 정리 (예정)",
+  "audience": "정치 뉴스를 빠르게 이해하고 싶은 사람",
+  "tone": "신뢰감 있는 해요체, 결론 먼저, 근거와 출처를 분명히",
+  "url": "https://myinfobay.com",
+  "writing_guide": "특정 정당·인물을 편들지 않고 사실·쟁점·각 입장의 근거를 균형 있게 씁니다. 출처는 공식 자료·주요 언론. 비방·추측 금지.",
+  "blog": {
+    "platform": "wordpress",
+    "url": "https://myinfobay.com",
+    "wordpress": {
+      "user": "",
+      "app_password_secret": "WP_MYINFOBAY_PASS",
+      "category": "",
+      "status": "publish"
+    }
+  },
+  "instagram": {
+    "enabled": false,
+    "handle": "",
+    "token_secret": "IG_TOKEN_MYINFOBAY"
+  },
+  "threads": {
+    "enabled": false,
+    "handle": "",
+    "token_secret": "THREADS_TOKEN_MYINFOBAY"
+  },
+  "schedule": {
+    "generate": {
+      "days": [
+        "sun",
+        "tue",
+        "thu"
+      ],
+      "time": "21:00"
+    },
+    "slots": {
+      "blog": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "07:00"
+      },
+      "threads": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "12:30"
+      },
+      "instagram": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "21:00"
+      }
+    },
+    "grace_hours": 3
+  },
+  "approval": true,
+  "llm": {
+    "model": "claude-opus-5-5",
+    "web_search": true
+  },
+  "images": {
+    "hero": {
+      "provider": "openai",
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  },
+  "brand": {
+    "cardLabel": "정치 (myinfobay.com, 준비 중)",
+    "handle": "",
+    "colors": {}
+  },
+  "rules": {
+    "min_chars": 3000,
+    "max_chars": 7000,
+    "require_table": true,
+    "require_sources": true,
+    "banned_words": []
+  },
+  "seeds": [
+    "국회",
+    "정책",
+    "선거"
+  ]
+}
