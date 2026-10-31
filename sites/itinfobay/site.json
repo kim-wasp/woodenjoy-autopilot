@@ -74,7 +74,11 @@
       "provider": "openai",
       "model": "gpt-image-1",
       "quality": "high"
-    }
+    },
+    "blog_inline": "mixed",
+    "photo_style": "Realistic photo of a person using a smartphone or laptop at home or office in Korea, natural light, no visible brand logos, no text",
+    "instagram": "cards",
+    "photos": 3
   },
   "brand": {
     "cardLabel": "IT (itinfobay.com)",
@@ -94,5 +98,14 @@
     "윈도우",
     "카카오톡",
     "크롬"
-  ]
+  ],
+  "monetization": {
+    "stage": "pre_adsense",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": false,
+      "links_file": "sites/itinfobay/coupang.json"
+    }
+  }
 }

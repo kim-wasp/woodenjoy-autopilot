@@ -42,8 +42,14 @@ function body(b) {
   }
 }
 
+// 사진 배경 카드: s.photo = 글 폴더 안 사진 파일 (예: photo1.jpg). 어두운 그라데이션 위에 흰 글자
+function photoStyle(s) {
+  if (!s.photo) return '';
+  const data = fs.readFileSync(path.join(CUR_DIR, s.photo)).toString('base64');
+  return ` style="background-image:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.7) 100%),url(data:image/jpeg;base64,${data});background-size:cover;background-position:center"`;
+}
 function slideHtml(s, i, n) {
-  return `<section class="slide" id="s${i + 1}">
+  return `<section class="slide${s.photo ? ' photo' : ''}" id="s${i + 1}"${photoStyle(s)}>
   <div class="top"><span>${esc(brand.cardLabel)}</span><span>${i + 1} / ${n}</span></div>
   <h1 class="title${s.big ? ' big' : ''}" data-lines="${s.title_lines || (s.title.split('\n').length)}">${em(s.title)}</h1>
   ${s.sub ? `<p class="sub" data-lines="${s.sub_lines || s.sub.split('\n').length}">${br(s.sub)}</p>` : ''}
@@ -86,7 +92,7 @@ const QA = () => {
     const last = kids[kids.length - 1].getBoundingClientRect();
     if (last.bottom > sr.bottom - FOOT_ZONE) issues.push(`본문이 계정명 자리까지 내려옴`);
     const gap = sr.bottom - FOOT_ZONE - last.bottom;
-    if (gap > 260) issues.push(`아래 빈 공간 큼 (${Math.round(gap)}px)`);
+    if (gap > 260 && !s.classList.contains('photo')) issues.push(`아래 빈 공간 큼 (${Math.round(gap)}px)`);
     s.querySelectorAll('.card,.cell,.step,.row').forEach((c) => { if (!c.textContent.trim() && !c.querySelector('svg *, img')) issues.push(`빈 칸: ${c.className}`); });
     s.querySelectorAll('svg').forEach((svg) => {
       const vr = svg.getBoundingClientRect();
@@ -138,7 +144,7 @@ let CUR_DIR = '.';
   await b.close();
 
   const sim = JSON.parse(execFileSync('python3', [path.join(__dirname, 'sim.py'), ...files]).toString());
-  const similar = sim.filter((x) => x[2] < 7).map((x) => `${x[0] + 1}장과 ${x[1] + 1}장이 너무 비슷함`);
+  const similar = sim.filter((x) => x[2] < 7 && !(slides[x[0]].photo && slides[x[1]].photo && slides[x[0]].photo !== slides[x[1]].photo)).map((x) => `${x[0] + 1}장과 ${x[1] + 1}장이 너무 비슷함`);
   const seen = {};
   report.forEach((r, i) => r.text.split(/(?<=[.요다!?])\s/).forEach((t) => { t = t.trim(); if (t.length > 12 && !t.includes(brand.handle) && !(brand.cardLabel && t.includes(brand.cardLabel))) (seen[t] = seen[t] || new Set()).add(i + 1); }));
   const repeated = Object.entries(seen).filter(([, ids]) => ids.size > 1).map(([t, ids]) => `반복 문장 "${t.slice(0, 20)}" (${[...ids].join(',')}장)`);

@@ -74,7 +74,11 @@
       "provider": "openai",
       "model": "gpt-image-1",
       "quality": "high"
-    }
+    },
+    "blog_inline": "mixed",
+    "photo_style": "Realistic documentary photo of Korean adults in everyday life, natural light, candid, no text",
+    "instagram": "photo_cards",
+    "photos": 3
   },
   "brand": {
     "cardLabel": "건강 (forsmartlife.com)",
@@ -94,5 +98,14 @@
     "혈당",
     "영양제",
     "운동"
-  ]
+  ],
+  "monetization": {
+    "stage": "pre_adsense",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": false,
+      "links_file": "sites/forsmartlife/coupang.json"
+    }
+  }
 }

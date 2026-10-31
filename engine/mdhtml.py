@@ -1,7 +1,7 @@
 """간단한 마크다운 → HTML 변환 (워드프레스 본문·미리보기용, 외부 라이브러리 없음).
 
 지원: ## 제목, ### 소제목, 문단, - / 1. 목록, | 표 |, > 인용, **굵게**, [링크](주소), ---
-이미지 자리표시: [[card:3]] → 카드 3번 이미지, [[hero]] → 대표 이미지
+이미지 자리표시: [[card:3]] → 카드 3번 이미지, [[photo:2]] → 사진 2, [[hero]] → 대표 이미지
 """
 import html
 import re
@@ -25,7 +25,7 @@ def convert(md, image_url=None):
         if not s:
             i += 1
             continue
-        m = re.fullmatch(r"\[\[(hero|card:\d+)\]\]", s)
+        m = re.fullmatch(r"\[\[(hero|card:\d+|photo:\d+)\]\]", s)
         if m:
             if image_url:
                 url, alt = image_url(m.group(1))

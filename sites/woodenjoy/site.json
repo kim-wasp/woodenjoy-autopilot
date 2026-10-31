@@ -69,11 +69,40 @@
     "colors": {}
   },
   "rules": {
-    "min_chars": 2500,
-    "max_chars": 6000,
+    "min_chars": 1800,
+    "max_chars": 3800,
     "require_table": true,
-    "require_sources": true,
-    "banned_words": []
+    "require_sources": false,
+    "banned_words": [
+      "일자 경첩",
+      "반곡",
+      "대곡",
+      "반도어"
+    ]
   },
-  "seeds": []
+  "seeds": [],
+  "monetization": {
+    "stage": "adpost",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": true,
+      "links_file": "topics/coupang_links.json"
+    }
+  },
+  "images": {
+    "hero": {
+      "provider": "none"
+    },
+    "blog_inline": "cards",
+    "photo_style": "",
+    "instagram": "cards",
+    "photos": 3
+  },
+  "experience_file": "topics/experience.md",
+  "llm": {
+    "model": "claude-opus-5-5",
+    "web_search": true
+  },
+  "writing_guide": "네이버 애드포스트용. 첫 3줄 훅, 결론 먼저, 질문형 소제목, 표, 현장 팁 인용구, 셀프/업체 경계, 마무리 3줄 요약. 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만."
 }

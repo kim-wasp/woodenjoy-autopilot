@@ -31,7 +31,7 @@ function renderLogin() {
 }
 
 // ---------- 틀 ----------
-const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['schedule', '일정'], ['sites', '사이트'], ['guide', '연결 가이드']];
+const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['schedule', '일정'], ['cards', '앱 카드'], ['sites', '사이트'], ['guide', '연결 가이드']];
 function shell(active, inner) {
   app.innerHTML = `<header class="top"><div class="in"><div class="logo">콘텐츠 스튜디오</div>
     <nav class="tabs">${NAV.map(([k, v]) => `<a href="#/${k}" class="${k === active ? 'on' : ''}">${v}</a>`).join('')}</nav>
@@ -170,7 +170,7 @@ async function viewSite(id) {
   s.blog = s.blog || { platform: 'none' }; s.blog.wordpress = s.blog.wordpress || {}; s.instagram = s.instagram || {}; s.threads = s.threads || {};
   s.schedule = s.schedule || {}; s.schedule.generate = s.schedule.generate || { days: [], time: '20:00' }; s.schedule.slots = s.schedule.slots || {};
   ['blog', 'threads', 'instagram'].forEach((p) => { s.schedule.slots[p] = s.schedule.slots[p] || { days: ['mon', 'wed', 'fri'], time: p === 'blog' ? '07:00' : p === 'threads' ? '12:30' : '21:00' }; });
-  s.llm = s.llm || {}; s.images = s.images || { hero: {} }; s.images.hero = s.images.hero || {}; s.brand = s.brand || { colors: {} }; s.brand.colors = s.brand.colors || {}; s.rules = s.rules || {};
+  s.monetization = s.monetization || { coupang: {} }; s.monetization.coupang = s.monetization.coupang || {}; s.app = s.app || {}; s.llm = s.llm || {}; s.images = s.images || { hero: {} }; s.images.hero = s.images.hero || {}; s.brand = s.brand || { colors: {} }; s.brand.colors = s.brand.colors || {}; s.rules = s.rules || {};
   const v = (x) => esc(x ?? '');
   $('#main').innerHTML = `<div class="page-h"><h1>${isNew ? '사이트 추가' : esc(s.name)}</h1>${s.legacy ? '<span class="chip warn">기존 우드엔조이 방식으로 운영 중</span>' : ''}</div>
   <form id="sf" class="grid g2">
@@ -185,15 +185,15 @@ async function viewSite(id) {
     <label class="f"><span>추가 지시 (글쓰기 규칙·운영자 경험 등)</span><textarea data-k="writing_guide">${v(s.writing_guide)}</textarea></label>
     <label class="f"><span>글감 후보 키워드 (쉼표로)</span><input type="text" data-k="seeds" data-type="list" value="${v((s.seeds || []).join(', '))}"></label>
   </div>
-  <div class="card"><div class="sec">블로그</div>
-    <label class="f"><span>종류</span><select data-k="blog.platform"><option value="none">블로그 없음 (SNS만)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option></select></label>
+  <div class="card"><div class="sec">기본 채널</div>
+    <label class="f"><span>기본 채널 (여기에 인스타·스레드를 더할지 아래에서 골라요)</span><select data-k="blog.platform"><option value="none">블로그 없음 (커먼센스처럼 앱·사이트로 유입)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option></select></label>
     <label class="f"><span>블로그 주소</span><input type="text" data-k="blog.url" value="${v(s.blog.url)}"></label>
     <div class="row2"><label class="f"><span>워드프레스 사용자명</span><input type="text" data-k="blog.wordpress.user" value="${v(s.blog.wordpress.user)}"></label>
     <label class="f"><span>앱 비밀번호의 비밀키 이름</span><input type="text" data-k="blog.wordpress.app_password_secret" value="${v(s.blog.wordpress.app_password_secret)}"></label></div>
     <div class="row2"><label class="f"><span>카테고리</span><input type="text" data-k="blog.wordpress.category" value="${v(s.blog.wordpress.category)}"></label>
     <label class="f"><span>발행 상태</span><select data-k="blog.wordpress.status"><option value="publish">바로 공개</option><option value="draft" ${s.blog.wordpress.status === 'draft' ? 'selected' : ''}>임시글로</option></select></label></div>
     <div class="row2"><label class="f"><span>최소 글자</span><input type="number" data-k="rules.min_chars" data-type="num" value="${v(s.rules.min_chars)}"></label><label class="f"><span>최대 글자</span><input type="number" data-k="rules.max_chars" data-type="num" value="${v(s.rules.max_chars)}"></label></div>
-    <div class="sec">SNS</div>
+    <div class="sec">더할 SNS (선택)</div>
     <label class="f"><span><input type="checkbox" data-k="instagram.enabled" ${s.instagram.enabled ? 'checked' : ''}> 인스타 사용</span></label>
     <div class="row2"><label class="f"><span>인스타 계정</span><input type="text" data-k="instagram.handle" value="${v(s.instagram.handle)}"></label><label class="f"><span>토큰 비밀키 이름</span><input type="text" data-k="instagram.token_secret" value="${v(s.instagram.token_secret)}"></label></div>
     <label class="f"><span><input type="checkbox" data-k="threads.enabled" ${s.threads.enabled ? 'checked' : ''}> 스레드 사용</span></label>
@@ -212,6 +212,35 @@ async function viewSite(id) {
     <div class="row2"><label class="f"><span>카드 위쪽 문구</span><input type="text" data-k="brand.cardLabel" value="${v(s.brand.cardLabel)}"></label><label class="f"><span>카드 아래 계정</span><input type="text" data-k="brand.handle" value="${v(s.brand.handle)}"></label></div>
     <div class="row2"><label class="f"><span>배경색</span><input type="text" data-k="brand.colors.bg" value="${v(s.brand.colors.bg)}" placeholder="#EEF3FB"></label><label class="f"><span>강조색</span><input type="text" data-k="brand.colors.pine" value="${v(s.brand.colors.pine)}" placeholder="#3182F6"></label></div>
     <div class="row2"><label class="f"><span>제목색</span><input type="text" data-k="brand.colors.deep" value="${v(s.brand.colors.deep)}"></label><label class="f"><span>배지색</span><input type="text" data-k="brand.colors.amber" value="${v(s.brand.colors.amber)}"></label></div>
+  </div>
+  <div class="card"><div class="sec">수익화</div>
+    <label class="f"><span>단계</span><select data-k="monetization.stage">
+      <option value="pre_adsense">애드센스 승인 전 (신뢰·독창성 우선, 제휴 링크 없음)</option>
+      <option value="adsense" ${s.monetization.stage === 'adsense' ? 'selected' : ''}>애드센스 운영 중 (클릭률·체류시간·내부 링크)</option>
+      <option value="adpost" ${s.monetization.stage === 'adpost' ? 'selected' : ''}>네이버 애드포스트 (훅·체류·이미지 많이)</option></select></label>
+    <label class="f"><span><input type="checkbox" data-k="monetization.internal_links" ${s.monetization.internal_links !== false ? 'checked' : ''}> 관련 글 내부 링크 넣기</span></label>
+    <label class="f"><span><input type="checkbox" data-k="monetization.humanize" ${s.monetization.humanize !== false ? 'checked' : ''}> AI 티 다듬기 (im-not-ai 규칙으로 한 번 더 윤문)</span></label>
+    <label class="f"><span><input type="checkbox" data-k="monetization.coupang.enabled" ${s.monetization.coupang?.enabled ? 'checked' : ''}> 쿠팡 파트너스 링크 넣기 (승인 전 단계에서는 자동으로 빠져요)</span></label>
+    <label class="f"><span>쿠팡 링크 목록 파일</span><input type="text" data-k="monetization.coupang.links_file" value="${v(s.monetization.coupang?.links_file)}" placeholder="sites/아이디/coupang.json"></label>
+  </div>
+  <div class="card"><div class="sec">이미지</div>
+    <label class="f"><span>블로그 본문 이미지</span><select data-k="images.blog_inline">
+      <option value="cards">정보 카드 (코드로 그린 도표·단계)</option>
+      <option value="photos" ${s.images.blog_inline === 'photos' ? 'selected' : ''}>AI 사진 (사람·현실 장면)</option>
+      <option value="mixed" ${s.images.blog_inline === 'mixed' ? 'selected' : ''}>섞어서 (카드 + 사진)</option>
+      <option value="none" ${s.images.blog_inline === 'none' ? 'selected' : ''}>대표 사진만</option></select></label>
+    <label class="f"><span>인스타 이미지</span><select data-k="images.instagram">
+      <option value="cards">정보 카드뉴스 (지금 방식)</option>
+      <option value="photo_cards" ${s.images.instagram === 'photo_cards' ? 'selected' : ''}>사진 카드뉴스 (사진 위에 글자 + 정보 카드 섞기)</option></select></label>
+    <label class="f"><span>사진 스타일 (영어로 쓰면 더 정확해요)</span><textarea data-k="images.photo_style" placeholder="예: Realistic documentary photo of Korean adults in everyday life, natural light">${v(s.images.photo_style)}</textarea></label>
+    <label class="f"><span>글 한 편당 사진 수</span><input type="number" data-k="images.photos" data-type="num" value="${v(s.images.photos ?? 3)}" min="0" max="6"></label>
+  </div>
+  <div class="card"><div class="sec">앱 카드 (커먼센스)</div>
+    <label class="f"><span>앱 종류</span><select data-k="app.kind"><option value="">없음</option><option value="commonsense" ${s.app.kind === 'commonsense' ? 'selected' : ''}>커먼센스 (사회 이슈로 투표 카드 늘리기)</option></select></label>
+    <div class="row2"><label class="f"><span>DB 주소 비밀키 이름</span><input type="text" data-k="app.supabase_url_secret" value="${v(s.app.supabase_url_secret || 'SUPABASE_URL')}"></label>
+    <label class="f"><span>DB 키 비밀키 이름</span><input type="text" data-k="app.supabase_key_secret" value="${v(s.app.supabase_key_secret || 'SUPABASE_SERVICE_KEY')}"></label></div>
+    <div class="row2"><label class="f"><span>카드 표 이름</span><input type="text" data-k="app.table" value="${v(s.app.table || 'cards')}"></label>
+    <label class="f"><span>한 번에 만들 후보 수</span><input type="number" data-k="app.count" data-type="num" value="${v(s.app.count || 10)}"></label></div>
     <details><summary class="small muted">고급: 설정 JSON 직접 고치기</summary><textarea id="raw" style="min-height:220px;font-family:monospace;font-size:12px">${esc(JSON.stringify(s, null, 2))}</textarea><button type="button" class="btn" id="rawsave" style="margin-top:8px">JSON으로 저장</button></details>
   </div>
   <div class="sticky-actions" style="grid-column:1/-1"><div class="btns"><button class="btn primary">저장</button><a class="btn" href="#/sites">취소</a></div></div>
@@ -235,6 +264,33 @@ async function viewSite(id) {
   };
 }
 
+
+// ---------- 앱 카드 (커먼센스) ----------
+async function viewCards(siteId) {
+  shell('cards', loading());
+  const st = (await sites()).filter((s) => s.app?.kind === 'commonsense');
+  if (!st.length) { $('#main').innerHTML = '<div class="empty">앱 카드를 쓰는 사이트가 없어요 (사이트 설정 → 앱 카드)</div>'; return; }
+  siteId = siteId || st[0].id;
+  const { files } = await api('cards?site=' + siteId);
+  const pend = files.flatMap((f) => f.items.map((it, i) => ({ ...it, file: f.name, i }))).filter((x) => x.status === 'pending');
+  const done = files.flatMap((f) => f.items).filter((x) => x.status !== 'pending').slice(-20).reverse();
+  const txt = (row) => Object.entries(row).map(([k, v]) => `<span class="small muted">${esc(k)}</span> ${esc(v)}`).join('<br>');
+  $('#main').innerHTML = `<div class="page-h"><h1>앱 카드 후보</h1><button class="btn" id="collect">이슈 모아서 새 후보 만들기</button></div>
+  <p class="muted small">최근 사회 이슈에서 의견이 갈릴 만한 생활 상황을 골라 카드 후보로 만들어요 (월·목 오전 자동). 승인한 카드만 앱에 추가돼요.</p>
+  <div class="card"><div class="list">${pend.map((x, k) => `<div class="item" style="align-items:flex-start"><div class="t">${txt(x.row)}<br><span class="small muted">이슈: ${esc(x.issue)} ${x.source?.url ? `· <a href="${esc(x.source.url)}" target="_blank" rel="noopener">출처</a>` : ''} · ${esc(x.why)}</span></div>
+    <div class="seg" style="margin:0" data-k="${k}"><button type="button" data-v="approved">추가</button><button type="button" data-v="rejected">빼기</button></div></div>`).join('') || '<div class="empty">승인 기다리는 후보가 없어요</div>'}</div>
+    ${pend.length ? '<div class="btns" style="margin-top:12px"><button class="btn primary" id="save">고른 대로 앱에 반영</button></div>' : ''}</div>
+  <div class="card" style="margin-top:14px"><h2>최근 처리</h2><div class="list">${done.map((x) => `<div class="item"><div class="t small">${txt(x.row)}</div>${x.status === 'inserted' ? '<span class="chip ok">앱에 추가됨</span>' : x.status === 'approved' ? '<span class="chip brand">추가 대기</span>' : x.status === 'error' ? `<span class="chip bad" title="${esc(x.error)}">오류</span>` : '<span class="chip">뺌</span>'}</div>`).join('') || '<p class="muted small">없음</p>'}</div></div>`;
+  const pick = {};
+  $('#main').querySelectorAll('.seg[data-k]').forEach((sg) => { sg.onclick = (e) => { const b = e.target.closest('button'); if (!b) return; [...sg.children].forEach((c) => c.classList.toggle('on', c === b)); pick[sg.dataset.k] = b.dataset.v; }; });
+  if ($('#save')) $('#save').onclick = async () => {
+    const decisions = Object.entries(pick).map(([k, v]) => ({ file: pend[k].file, i: pend[k].i, status: v }));
+    if (!decisions.length) return toast('추가/빼기를 골라 주세요');
+    try { await api('cards', { method: 'POST', body: { site: siteId, decisions } }); toast('반영 중이에요. 1~2분 뒤 앱에 추가돼요'); setTimeout(() => viewCards(siteId), 2500); } catch (e) { if (e.message !== 'login') toast(e.message); }
+  };
+  $('#collect').onclick = async () => { try { await api('cards', { method: 'POST', body: { site: siteId, mode: 'collect' } }); toast('이슈를 모으는 중이에요. 3~5분 뒤 새로고침하세요'); } catch (e) { if (e.message !== 'login') toast(e.message); } };
+}
+
 // ---------- 연결 가이드 ----------
 function viewGuide() {
   shell('guide', `<div class="page-h"><h1>연결 가이드</h1></div><div class="grid g2 guide">
@@ -246,6 +302,7 @@ function viewGuide() {
   <div class="card"><h2>5. 스레드 토큰 (계정마다)</h2><ol><li>스레드용 앱 → 앱 역할 → <b>Threads 테스터</b>로 계정 추가 → threads.com 설정 → 웹사이트 권한 → 초대 수락</li><li>GitHub Actions → <b>스레드 토큰 발급</b> 순서대로 (code 붙여넣기)</li><li>계정이 여러 개면 비밀키 이름을 계정별로: 예 <code>THREADS_TOKEN_INFOBAY</code></li></ol><p class="small muted">토큰은 60일마다 자동 연장돼요 (토큰 연장 작업)</p></div>
   <div class="card"><h2>6. 네이버 블로그 (uplika)</h2><ol><li>uplika.com → 연결 → Naver Blog → 크롬 확장 설치</li><li>API 키 → GitHub 비밀키 <code>UPLIKA_API_KEY</code></li><li>네이버 글은 크롬이 켜져 있을 때 올라가요</li></ol></div>
   <div class="card"><h2>7. 이 관리화면 (Vercel)</h2><ol><li>vercel.com → <b>Add New → Project</b> → GitHub 저장소 선택</li><li><b>Root Directory</b>를 <code>studio</code>로</li><li><b>Environment Variables</b>: <code>ADMIN_PASSWORD</code>(로그인 비밀번호), <code>GITHUB_TOKEN</code>(저장소 권한 토큰), <code>GITHUB_REPO</code></li><li>Deploy</li></ol></div>
+  <div class="card"><h2>9. 커먼센스 앱 DB (카드 늘리기)</h2><ol><li>supabase.com → 커먼센스 프로젝트 → <b>Project Settings → API</b></li><li><b>Project URL</b> → GitHub 비밀키 <code>SUPABASE_URL</code></li><li><b>service_role</b> 키 → 비밀키 <code>SUPABASE_SERVICE_KEY</code> (이 키는 절대 다른 곳에 붙여넣지 마세요)</li></ol></div>
   <div class="card"><h2>8. GitHub 설정 한 가지</h2><ol><li>저장소 → Settings → Actions → General</li><li>맨 아래 <b>Workflow permissions</b> → <b>Allow GitHub Actions to create and approve pull requests</b> 체크 → Save</li></ol><p class="small muted">이게 꺼져 있으면 '승인 대기'가 만들어지지 않아요</p></div>
   </div>`);
 }
@@ -260,6 +317,7 @@ async function route() {
     if (page === 'create') return viewCreate();
     if (page === 'ideas') return viewIdeas();
     if (page === 'schedule') return viewSchedule();
+    if (page === 'cards') return viewCards(arg);
     if (page === 'sites') return arg ? viewSite(arg) : viewSites();
     if (page === 'guide') return viewGuide();
     return viewHome();

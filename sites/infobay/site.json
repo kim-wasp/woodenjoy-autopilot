@@ -59,7 +59,11 @@
       "provider": "openai",
       "model": "gpt-image-1",
       "quality": "high"
-    }
+    },
+    "blog_inline": "none",
+    "photo_style": "",
+    "instagram": "cards",
+    "photos": 3
   },
   "brand": {
     "cardLabel": "커먼센스 · 이거 상식이야?",
@@ -92,5 +96,29 @@
     "대중교통 예절",
     "결혼식 하객",
     "카톡 예절"
-  ]
+  ],
+  "monetization": {
+    "stage": "adsense",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": false,
+      "links_file": "sites/infobay/coupang.json"
+    }
+  },
+  "app": {
+    "kind": "commonsense",
+    "supabase_url_secret": "SUPABASE_URL",
+    "supabase_key_secret": "SUPABASE_SERVICE_KEY",
+    "table": "cards",
+    "category_table": "categories",
+    "count": 10,
+    "collect": {
+      "days": [
+        "mon",
+        "thu"
+      ],
+      "time": "09:00"
+    }
+  }
 }

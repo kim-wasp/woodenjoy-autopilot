@@ -32,6 +32,60 @@ def link_for(site, post):
     return (post.get("published") or {}).get("blog_url") or site.get("url", "")
 
 
+def body_images(d, post, md):
+    """본문의 [[card:N]]·[[photo:N]] 자리에 들어갈 파일과 대체 텍스트"""
+    import re
+    slides = (load_json(d / "cards.json") or {}).get("slides", [])
+    alts = {p["file"]: p.get("alt", "") for p in post.get("photos", [])}
+    out = {}
+    for kind, n in re.findall(r"\[\[(card|photo):(\d+)\]\]", md):
+        n = int(n)
+        if kind == "card":
+            f = d / "cards" / f"{n:02d}.jpg"
+            alt = slides[n - 1]["title"].replace("*", "").replace("\n", " ") if n <= len(slides) else ""
+        else:
+            f = d / f"photo{n}.jpg"
+            alt = alts.get(f.name, "")
+        if f.exists():
+            out[f"{kind}:{n}"] = (f, alt)
+    return out
+
+
+# ---------- 네이버 (uplika) ----------
+def publish_naver(site, d, post, dry):
+    import re
+    if not dry:
+        os.environ["UPLIKA_API_KEY"] = secret("UPLIKA_API_KEY")
+    from publish_naver import Uplika  # tools/publish_naver.py (크롬 확장으로 올려요)
+    api = Uplika(dry)
+    md = (d / "article.md").read_text(encoding="utf-8")
+    media = {}
+    imgs = body_images(d, post, md)
+    if (d / "hero.jpg").exists():
+        imgs["hero"] = (d / "hero.jpg", post["title"])
+    for key, (f, alt) in imgs.items():
+        media[key] = api.upload(f, alt)
+    def rep(m):
+        k = m.group(1)
+        return f"![{imgs[k][1]}](media:{media[k]}){{.ai}}" if k in media else ""
+    text = re.sub(r"\[\[(hero|card:\d+|photo:\d+)\]\]", rep, md)
+    kw = post.get("keywords") or {}
+    tags = [t.replace(" ", "") for t in [kw.get("main", "")] + kw.get("sub", []) if t][:10]
+    cfg = site["blog"].get("naver", {})
+    acc = cfg.get("account_id")
+    if not acc:
+        accs = api.call("GET", "/v1/accounts")
+        items = accs if isinstance(accs, list) else (accs.get("data") or accs.get("accounts") or [])
+        acc = next(a["id"] for a in items if str(a.get("platform", "")).startswith("naver"))
+    res = api.call("POST", "/v1/posts", {"content": text, "accountIds": [acc], "mediaIds": list(media.values()), "wait": True,
+                                         "options": {"naver_blog": {"title": post["title"], "category": cfg.get("category", ""),
+                                                                    "tags": tags, "layout": "as-is", "openType": "public"}}})
+    t = (res.get("targets") or [{}])[0]
+    if t.get("status") == "failed":
+        raise RuntimeError(f"네이버 업로드 실패: {t.get('error')}")
+    return {"blog": res.get("id"), "blog_url": res.get("permalink") or t.get("permalink")}
+
+
 # ---------- 워드프레스 ----------
 class WP:
     def __init__(self, site, dry):
@@ -76,13 +130,8 @@ def publish_wordpress(site, d, post, dry):
         m = wp.media(d / "hero.jpg", post["title"])
         hero_id, urls["hero"] = m["id"], m["source_url"]
     md = (d / "article.md").read_text(encoding="utf-8")
-    slides = (load_json(d / "cards.json") or {}).get("slides", [])
-    import re
-    for n in sorted({int(x) for x in re.findall(r"\[\[card:(\d+)\]\]", md)}):
-        f = d / "cards" / f"{n:02d}.jpg"
-        if f.exists():
-            alt = slides[n - 1]["title"].replace("*", "").replace("\n", " ") if n <= len(slides) else ""
-            urls[f"card:{n}"] = wp.media(f, alt)["source_url"]
+    for key, (f, alt) in body_images(d, post, md).items():
+        urls[key] = wp.media(f, alt)["source_url"]
     html = mdhtml.convert(md, lambda k: (urls.get(k), post["title"] if k == "hero" else ""))
     body = {"title": post["title"], "content": html, "status": site["blog"]["wordpress"].get("status", "publish"),
             "excerpt": post.get("meta_description", ""), "slug": d.name[11:]}
@@ -175,6 +224,8 @@ def publish(d, platform, dry=False):
         kind = site["blog"]["platform"]
         if kind == "wordpress":
             res = publish_wordpress(site, d, post, dry)
+        elif kind == "naver":
+            res = publish_naver(site, d, post, dry)
         else:
             raise SystemExit(f"블로그 종류 {kind} 는 아직 이 엔진에서 올리지 않아요")
     elif platform == "instagram":

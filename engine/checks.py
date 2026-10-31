@@ -57,8 +57,12 @@ def check(site, post, article_md=None):
             issues.append("블로그: 표가 없어요")
         if rules.get("require_sources", True) and not re.search(r"^## (참고|출처)", md, re.M):
             issues.append("블로그: '## 참고 자료' 출처 목록이 없어요")
-        if "[[hero]]" not in md and not re.search(r"\[\[card:\d+\]\]", md):
-            issues.append("블로그: 본문 이미지 자리([[hero]] 또는 [[card:N]])가 없어요")
+        if "[[hero]]" not in md and not re.search(r"\[\[(card|photo):\d+\]\]", md):
+            issues.append("블로그: 본문 이미지 자리([[hero]]·[[card:N]]·[[photo:N]])가 없어요")
+        if re.search(r"광고(를)? (클릭|눌러)", md):
+            issues.append("블로그: 광고 클릭 유도 문구 (애드센스·애드포스트 정책 위반)")
+        if "link.coupang.com" in md and "쿠팡 파트너스 활동" not in md:
+            issues.append("블로그: 쿠팡 링크가 있는데 대가성 문구가 없어요")
         kw = (post.get("keywords") or {}).get("main", "").replace(" ", "")
         if kw:
             cnt = body.replace(" ", "").count(kw)

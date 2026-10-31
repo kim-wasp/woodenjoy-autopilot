@@ -37,3 +37,9 @@ svg text{font-family:"Noto Sans CJK KR",sans-serif}
 .cell .l{font-size:50px;font-weight:800;color:var(--deep)}
 .slide{margin-bottom:40px}
 .title.big{font-size:104px}
+
+/* 사진 배경 카드 */
+.slide.photo .top,.slide.photo .title,.slide.photo .sub,.slide.photo .foot,.slide.photo .hl{color:#fff}
+.slide.photo .hl{color:var(--amber2)}
+.slide.photo .title,.slide.photo .sub{text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.slide.photo .badge{margin-top:auto;margin-bottom:170px}

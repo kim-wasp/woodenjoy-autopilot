@@ -74,7 +74,11 @@
       "provider": "openai",
       "model": "gpt-image-1",
       "quality": "high"
-    }
+    },
+    "blog_inline": "photos",
+    "photo_style": "Editorial news-style photo of Korean public spaces, government buildings or city streets, no identifiable politicians, no text",
+    "instagram": "photo_cards",
+    "photos": 3
   },
   "brand": {
     "cardLabel": "정치 (myinfobay.com, 준비 중)",
@@ -92,5 +96,14 @@
     "국회",
     "정책",
     "선거"
-  ]
+  ],
+  "monetization": {
+    "stage": "pre_adsense",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": false,
+      "links_file": "sites/myinfobay/coupang.json"
+    }
+  }
 }

@@ -74,7 +74,11 @@
       "provider": "openai",
       "model": "gpt-image-1",
       "quality": "high"
-    }
+    },
+    "blog_inline": "mixed",
+    "photo_style": "",
+    "instagram": "cards",
+    "photos": 3
   },
   "brand": {
     "cardLabel": "건강 (forsmartlife.com)",
@@ -88,5 +92,15 @@
     "require_sources": true,
     "banned_words": []
   },
-  "seeds": []
+  "seeds": [],
+  "monetization": {
+    "stage": "pre_adsense",
+    "internal_links": true,
+    "humanize": true,
+    "coupang": {
+      "enabled": false,
+      "links_file": "sites/_template/coupang.json"
+    }
+  },
+  "app": {}
 }
