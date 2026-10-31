@@ -122,6 +122,17 @@ def site_profile(site):
     return json.dumps(prof, ensure_ascii=False, indent=1)
 
 
+def pending_topics(site_id):
+    """승인 대기 중인 글(studio/<사이트>/… 가지)의 주제 — 같은 주제를 또 만들지 않게"""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "ls-remote", "--heads", "origin", f"studio/{site_id}/*"], cwd=ROOT,
+                             capture_output=True, text=True, timeout=60).stdout
+    except Exception:  # noqa: BLE001
+        return []
+    return [line.split(f"studio/{site_id}/", 1)[1][11:].replace("-", " ") for line in out.splitlines() if f"studio/{site_id}/" in line]
+
+
 def published_posts(site_id):
     out = []
     for d in post_dirs(site_id):
@@ -165,7 +176,8 @@ def build_prompt(site, topic, notes):
     posts = published_posts(site["id"])
     p = [f"[사이트]\n{site_profile(site)}",
          f"[오늘] {now_kst():%Y-%m-%d (%a)}",
-         "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in posts][-30:] or ["(없음)"])]
+         "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in posts][-30:] or ["(없음)"]),
+         "[승인 대기 중인 글 주제(영문 요약) — 이 주제들과도 겹치지 않게, 다른 주제로]\n" + "\n".join(pending_topics(site["id"]) or ["(없음)"])]
     if blog:
         p.append(STAGE_GUIDE.get(m.get("stage", "pre_adsense" if blog_kind(site) == "wordpress" else "adpost"), ""))
         links = [x for x in posts if x["url"]][-40:]

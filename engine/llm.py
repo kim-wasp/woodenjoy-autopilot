@@ -22,10 +22,51 @@ DEFAULT_MODEL = "claude-opus-5-5"
 def _extract_json(text):
     m = re.search(r"```(?:json)?\s*(\{.*\})\s*```", text, re.S)
     raw = m.group(1) if m else text[text.find("{"): text.rfind("}") + 1]
-    return json.loads(raw)
+    return json.loads(raw, strict=False)  # 문자열 안 줄바꿈도 허용
 
 
-def ask_json(system, prompt, model=None, web_search=False, max_tokens=16000, mock_name=None):
+def _stream(body, headers):
+    """스트리밍으로 받아요 (긴 글도 시간 제한에 안 걸리게). 응답을 일반 응답 모양으로 다시 맞춰요."""
+    r = requests.post(API, json={**body, "stream": True}, headers=headers, timeout=900, stream=True)
+    if r.status_code >= 400:
+        return r.status_code, r.text, None
+    blocks, stop, err = {}, None, None
+    for raw in r.iter_lines(decode_unicode=True):
+        if not raw or not raw.startswith("data:"):
+            continue
+        ev = json.loads(raw[5:].strip())
+        t = ev.get("type")
+        if t == "content_block_start":
+            b = dict(ev["content_block"])
+            if b.get("type") in ("tool_use", "server_tool_use"):
+                b["_json"] = ""
+            blocks[ev["index"]] = b
+        elif t == "content_block_delta":
+            b, d = blocks[ev["index"]], ev["delta"]
+            if d["type"] == "text_delta":
+                b["text"] = b.get("text", "") + d["text"]
+            elif d["type"] == "input_json_delta":
+                b["_json"] += d["partial_json"]
+            elif d["type"] == "citations_delta":
+                b.setdefault("citations", []).append(d["citation"])
+        elif t == "message_delta":
+            stop = ev["delta"].get("stop_reason") or stop
+        elif t == "error":
+            err = ev.get("error", {})
+    if err:
+        code = 529 if err.get("type") == "overloaded_error" else 500
+        return code, json.dumps(err, ensure_ascii=False), None
+    content = []
+    for i in sorted(blocks):
+        b = blocks[i]
+        if "_json" in b:
+            js = b.pop("_json")
+            b["input"] = json.loads(js) if js else {}
+        content.append(b)
+    return 200, "", {"content": content, "stop_reason": stop}
+
+
+def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None):
     """프롬프트를 보내고 JSON 한 덩어리를 돌려받아요."""
     if os.environ.get("MOCK_LLM"):
         f = ROOT / "engine/mock" / f"{mock_name or 'post'}.json"
@@ -43,18 +84,17 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=16000, moc
                "content-type": "application/json"}
     last = ""
     for attempt in range(6):
-        r = requests.post(API, json=body, headers=headers, timeout=600)
-        if r.status_code in (429, 500, 502, 503, 529):
+        code, errtext, data = _stream(body, headers)
+        if code in (429, 500, 502, 503, 529):
             time.sleep(15 * (attempt + 1))
             continue
-        if r.status_code == 400 and web_search and "web_search" in r.text:
+        if code == 400 and web_search and "web_search" in errtext:
             log("  웹 검색 도구를 쓸 수 없어서 검색 없이 진행해요")
             body.pop("tools", None)
             web_search = False
             continue
-        if r.status_code >= 400:
-            raise RuntimeError(f"Claude API 오류 {r.status_code}: {r.text[:500]}")
-        data = r.json()
+        if code >= 400:
+            raise RuntimeError(f"Claude API 오류 {code}: {errtext[:500]}")
         if data.get("stop_reason") == "pause_turn":  # 웹 검색이 길어지면 잠시 멈춰요 → 이어서 받기
             log("  웹 검색 이어서 진행")
             body["messages"] = body["messages"][:1] + [{"role": "assistant", "content": data["content"]}]
