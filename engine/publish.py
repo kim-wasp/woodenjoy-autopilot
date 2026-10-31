@@ -17,7 +17,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
-from common import ROOT, load_json, load_site, log, now_kst, save_json, secret  # noqa: E402
+from common import ROOT, load_json, load_site, log, now_kst, save_json, secret, supabase_base  # noqa: E402
 import mdhtml  # noqa: E402
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "kim-wasp/woodenjoy-autopilot")
@@ -92,7 +92,7 @@ def publish_appblog(site, d, post, dry):
     import re
     cfg = site["blog"].get("app", {})
     app = site.get("app") or {}
-    base = ("https://example.supabase.co" if dry else secret(app.get("supabase_url_secret", "SUPABASE_URL"))).rstrip("/")
+    base = supabase_base("https://example.supabase.co" if dry else secret(app.get("supabase_url_secret", "SUPABASE_URL")))
     key = "DRY" if dry else secret(app.get("supabase_key_secret", "SUPABASE_SERVICE_KEY"))
     h = {"apikey": key, **({} if key.startswith("sb_") else {"Authorization": f"Bearer {key}"})}
     bucket, table = cfg.get("bucket", "blog"), cfg.get("table", "posts")

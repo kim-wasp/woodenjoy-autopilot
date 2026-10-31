@@ -77,3 +77,11 @@ def post_dirs(site_id=None):
 
 def log(*a):
     print(*a, flush=True)
+
+
+def supabase_base(raw):
+    """사용자가 넣은 주소에서 https://○○○.supabase.co 부분만 꺼내요 (/rest/v1 등 뒤에 붙은 것 무시)"""
+    import re
+    raw = (raw or "").strip()
+    m = re.match(r"(https?://[^/\s]+)", raw)
+    return m.group(1) if m else raw.rstrip("/")

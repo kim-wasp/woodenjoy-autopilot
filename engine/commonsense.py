@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import SITES, load_json, load_site, log, now_kst, save_json, secret  # noqa: E402
+from common import SITES, supabase_base, load_json, load_site, log, now_kst, save_json, secret  # noqa: E402
 import llm  # noqa: E402
 
 SYSTEM_FIELDS = {"id", "created_at", "updated_at", "deleted_at"}
@@ -24,7 +24,7 @@ SYSTEM_FIELDS = {"id", "created_at", "updated_at", "deleted_at"}
 
 class DB:
     def __init__(self, cfg):
-        self.url = secret(cfg.get("supabase_url_secret", "SUPABASE_URL")).rstrip("/") + "/rest/v1"
+        self.url = supabase_base(secret(cfg.get("supabase_url_secret", "SUPABASE_URL"))) + "/rest/v1"
         key = secret(cfg.get("supabase_key_secret", "SUPABASE_SERVICE_KEY"))
         # 새 형식 키(sb_secret_…)는 apikey 머리말만, 예전 service_role 키는 Bearer 도 함께
         self.h = {"apikey": key, "Content-Type": "application/json", **({} if key.startswith("sb_") else {"Authorization": f"Bearer {key}"})}
