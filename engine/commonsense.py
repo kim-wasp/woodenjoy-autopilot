@@ -157,7 +157,21 @@ def check(site_id):
         total = r.headers.get("content-range", "?/?").split("/")[-1]
         return f"카드 {total}개, 칸: {', '.join(rows[0].keys()) if rows else '-'}"
     step("투표 카드 표 읽기", cards)
-    step("카테고리 표 읽기", lambda: f"{len(db.get(cfg.get('category_table', 'categories'), {'select': '*'}))}개")
+    step("카테고리 표 읽기", lambda: json.dumps(db.get(cfg.get('category_table', 'categories'), {'select': '*'}), ensure_ascii=False)[:1500])
+
+    def values():
+        rows = db.get(cfg.get("table", "cards"), {"select": "*", "limit": 2000})
+        out = []
+        for k in ("category", "track", "status", "correct_answer", "region_scope", "locale", "is_event", "source"):
+            if rows and k in rows[0]:
+                cnt = {}
+                for r in rows:
+                    v = json.dumps(r.get(k), ensure_ascii=False)[:40]
+                    cnt[v] = cnt.get(v, 0) + 1
+                out.append(f"{k}=" + ", ".join(f"{v}×{n}" for v, n in sorted(cnt.items(), key=lambda x: -x[1])[:8]))
+        out.append("예시: " + json.dumps(rows[-1], ensure_ascii=False)[:400] if rows else "")
+        return "\n    " + "\n    ".join(out)
+    step("카드 칸별 값", values)
 
     table = app.get("table", "posts")
 
