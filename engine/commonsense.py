@@ -26,7 +26,8 @@ class DB:
     def __init__(self, cfg):
         self.url = secret(cfg.get("supabase_url_secret", "SUPABASE_URL")).rstrip("/") + "/rest/v1"
         key = secret(cfg.get("supabase_key_secret", "SUPABASE_SERVICE_KEY"))
-        self.h = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+        # 새 형식 키(sb_secret_…)는 apikey 머리말만, 예전 service_role 키는 Bearer 도 함께
+        self.h = {"apikey": key, "Content-Type": "application/json", **({} if key.startswith("sb_") else {"Authorization": f"Bearer {key}"})}
 
     def get(self, table, params):
         r = requests.get(f"{self.url}/{table}", headers=self.h, params=params, timeout=60)

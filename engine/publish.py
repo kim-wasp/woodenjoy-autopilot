@@ -94,7 +94,7 @@ def publish_appblog(site, d, post, dry):
     app = site.get("app") or {}
     base = ("https://example.supabase.co" if dry else secret(app.get("supabase_url_secret", "SUPABASE_URL"))).rstrip("/")
     key = "DRY" if dry else secret(app.get("supabase_key_secret", "SUPABASE_SERVICE_KEY"))
-    h = {"apikey": key, "Authorization": f"Bearer {key}"}
+    h = {"apikey": key, **({} if key.startswith("sb_") else {"Authorization": f"Bearer {key}"})}
     bucket, table = cfg.get("bucket", "blog"), cfg.get("table", "posts")
     slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", d.name)
 
