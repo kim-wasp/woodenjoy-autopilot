@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       site: { description: "사이트 id", required: false, default: "infobay" }
-      mode: { description: "collect(후보 만들기) 또는 insert(승인한 카드 추가)", required: false, default: "collect" }
+      mode: { description: "collect(후보 만들기) / insert(승인한 카드 추가) / check(연결 점검)", required: false, default: "collect" }
 permissions:
   contents: write
 concurrency: studio-cards
@@ -52,4 +52,4 @@ jobs:
           [ -n "$HAS_KEY" ] || { echo "SUPABASE_URL / ANTHROPIC_API_KEY 가 아직 없어서 건너뜀"; exit 0; }
           python3 engine/commonsense.py "$SITE" "$MODE"
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
-          git add sites && git commit -qm "앱 카드 $MODE: $SITE" && git pull -q --rebase && git push -q || echo "바뀐 것 없음"
+          git add sites status && git commit -qm "앱 카드 $MODE: $SITE" && git pull -q --rebase && git push -q || echo "바뀐 것 없음"

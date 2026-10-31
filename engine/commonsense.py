@@ -136,5 +136,60 @@ def recent_inserted(site_id, n=10):
     return out[-n:]
 
 
+def check(site_id):
+    """연결 점검: 카드 표 읽기, 블로그 표 쓰기·지우기, 사진 저장소 올리기·지우기 → status/supabase-check.txt"""
+    site = load_site(site_id)
+    cfg = site.get("app") or {}
+    app = (site.get("blog") or {}).get("app") or {}
+    db = DB(cfg)
+    base = db.url.rsplit("/rest/v1", 1)[0]
+    lines = [f"점검 시각: {now_kst():%Y-%m-%d %H:%M}"]
+
+    def step(name, fn):
+        try:
+            lines.append(f"OK  {name}: {fn()}")
+        except Exception as e:  # noqa: BLE001
+            lines.append(f"실패 {name}: {str(e)[:300]}")
+
+    def cards():
+        rows = db.get(cfg.get("table", "cards"), {"select": "*", "limit": 1})
+        r = requests.get(f"{db.url}/{cfg.get('table', 'cards')}", headers={**db.h, "Prefer": "count=exact", "Range": "0-0"}, timeout=60)
+        total = r.headers.get("content-range", "?/?").split("/")[-1]
+        return f"카드 {total}개, 칸: {', '.join(rows[0].keys()) if rows else '-'}"
+    step("투표 카드 표 읽기", cards)
+    step("카테고리 표 읽기", lambda: f"{len(db.get(cfg.get('category_table', 'categories'), {'select': '*'}))}개")
+
+    table = app.get("table", "posts")
+
+    def posts():
+        db.get(table, {"select": "slug", "limit": 1})
+        r = requests.post(f"{db.url}/{table}", headers={**db.h, "Prefer": "return=minimal"},
+                          json={"slug": "zz-connection-test", "title": "연결 점검", "status": "draft", "content_html": "", "content_md": ""}, timeout=60)
+        if r.status_code >= 400:
+            raise RuntimeError(f"쓰기 {r.status_code}: {r.text[:200]}")
+        r = requests.delete(f"{db.url}/{table}", headers=db.h, params={"slug": "eq.zz-connection-test"}, timeout=60)
+        if r.status_code >= 400:
+            raise RuntimeError(f"지우기 {r.status_code}: {r.text[:200]}")
+        return "쓰기·지우기 됨"
+    step(f"블로그 표({table})", posts)
+
+    bucket = app.get("bucket", "blog")
+
+    def storage():
+        h = {k: v for k, v in db.h.items() if k != "Content-Type"}
+        u = f"{base}/storage/v1/object/{bucket}/zz-connection-test.txt"
+        r = requests.post(u, headers={**h, "Content-Type": "text/plain", "x-upsert": "true"}, data=b"ok", timeout=60)
+        if r.status_code >= 400:
+            raise RuntimeError(f"올리기 {r.status_code}: {r.text[:200]}")
+        pub = requests.get(f"{base}/storage/v1/object/public/{bucket}/zz-connection-test.txt", timeout=60).status_code
+        requests.delete(u, headers=h, timeout=60)
+        return f"올리기 됨, 공개 주소 응답 {pub}"
+    step(f"사진 저장소({bucket})", storage)
+    out = SITES.parent / "status" / "supabase-check.txt"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+
+
 if __name__ == "__main__":
-    {"collect": collect, "insert": insert}[sys.argv[2]](sys.argv[1])
+    {"collect": collect, "insert": insert, "check": check}[sys.argv[2]](sys.argv[1])
