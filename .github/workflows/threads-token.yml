@@ -10,6 +10,10 @@ on:
       code:
         description: "주소창의 code= 뒤 값 (끝의 #_ 는 빼고)"
         required: true
+      target:
+        description: "저장할 비밀키 이름 (우드엔조이 THREADS_TOKEN / 상식 THREADS_TOKEN_INFOBAY)"
+        required: false
+        default: "THREADS_TOKEN"
 jobs:
   token:
     runs-on: ubuntu-latest
@@ -20,6 +24,7 @@ jobs:
           APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
           GH_TOKEN: ${{ secrets.GH_PAT }}
           CODE: ${{ github.event.inputs.code }}
+          TARGET: ${{ github.event.inputs.target || 'THREADS_TOKEN' }}
         run: |
           [ -n "$APP_ID" ] && [ -n "$APP_SECRET" ] || { echo "THREADS_APP_ID / THREADS_APP_SECRET 비밀키가 없어요"; exit 1; }
           [ -n "$GH_TOKEN" ] || { echo "GH_PAT 비밀키가 없어요 (README 'E. 토큰 자동 연장' 참고)"; exit 1; }
@@ -34,5 +39,6 @@ jobs:
           lt=$(echo "$long" | jq -r '.access_token // empty')
           [ -n "$lt" ] || { echo "2단계 실패: $(echo "$long" | jq -c 'del(.access_token)')"; exit 1; }
           echo "::add-mask::$lt"
-          gh secret set THREADS_TOKEN --body "$lt" --repo ${{ github.repository }}
-          echo "완료: THREADS_TOKEN 저장 (60일). 이후 연장은 '토큰 연장'이 자동으로 해요"
+          who=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
+          gh secret set "$TARGET" --body "$lt" --repo ${{ github.repository }}
+          echo "완료: $TARGET 저장 (계정 @$who, 60일). 이후 연장은 '토큰 연장'이 자동으로 해요"

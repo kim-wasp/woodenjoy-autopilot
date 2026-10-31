@@ -31,3 +31,27 @@ jobs:
           new=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$OLD" | jq -r .access_token)
           [ -n "$new" ] && [ "$new" != "null" ] || { echo "스레드 토큰 연장 실패 → 토큰을 새로 발급해 주세요"; exit 1; }
           gh secret set THREADS_TOKEN --body "$new" --repo ${{ github.repository }}
+      - name: 다른 사이트 토큰 연장 (있는 것만)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          IG_TOKEN_INFOBAY: ${{ secrets.IG_TOKEN_INFOBAY }}
+          THREADS_TOKEN_INFOBAY: ${{ secrets.THREADS_TOKEN_INFOBAY }}
+          IG_TOKEN_FORSMARTLIFE: ${{ secrets.IG_TOKEN_FORSMARTLIFE }}
+          THREADS_TOKEN_FORSMARTLIFE: ${{ secrets.THREADS_TOKEN_FORSMARTLIFE }}
+          IG_TOKEN_ITINFOBAY: ${{ secrets.IG_TOKEN_ITINFOBAY }}
+          THREADS_TOKEN_ITINFOBAY: ${{ secrets.THREADS_TOKEN_ITINFOBAY }}
+          IG_TOKEN_MYINFOBAY: ${{ secrets.IG_TOKEN_MYINFOBAY }}
+          THREADS_TOKEN_MYINFOBAY: ${{ secrets.THREADS_TOKEN_MYINFOBAY }}
+        run: |
+          fail=0
+          for name in IG_TOKEN_INFOBAY THREADS_TOKEN_INFOBAY IG_TOKEN_FORSMARTLIFE THREADS_TOKEN_FORSMARTLIFE IG_TOKEN_ITINFOBAY THREADS_TOKEN_ITINFOBAY IG_TOKEN_MYINFOBAY THREADS_TOKEN_MYINFOBAY; do
+            old="${!name}"; [ -n "$old" ] || continue
+            case "$name" in
+              IG_*) url="https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$old" ;;
+              *)    url="https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$old" ;;
+            esac
+            new=$(curl -s "$url" | jq -r .access_token)
+            if [ -n "$new" ] && [ "$new" != "null" ]; then echo "::add-mask::$new"; gh secret set "$name" --body "$new" --repo ${{ github.repository }}; echo "$name 연장"; else echo "$name 연장 실패 → 새로 발급해 주세요"; fail=1; fi
+          done
+          exit $fail
