@@ -1,0 +1,13 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원 → blog
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 296, in <module>
+    publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 275, in publish
+    res = publish_appblog(site, d, post, dry)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 114, in publish_appblog
+    urls["hero"] = upload(d / "hero.jpg")
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 109, in upload
+    raise RuntimeError(f"사진 올리기 실패 {r.status_code}: {r.text[:200]}")
+RuntimeError: 사진 올리기 실패 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
