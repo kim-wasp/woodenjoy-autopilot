@@ -31,7 +31,9 @@
         "url": "https://supple.kr/news/cmvsu6ngw0hwhm5vu4qhfe5a5"
       },
       "why": "'둘 다 일하고 퇴근 시간이 같으면 반반'이라는 쪽과 '돈을 더 버는 것도 가정에 대한 기여'라는 쪽이 맞섬. 부부 관계와 세대에 따라 공평함의 기준이 다름",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "FAM-46",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -51,7 +53,9 @@
         "url": "https://feed.viewus.co.kr/ai/article/349697/"
       },
       "why": "어른들 앞이나 첫 만남에서 인상이 나빠지니 고쳐야 한다는 쪽과, 남에게 피해를 주지 않는 개인 습관이라는 쪽이 부딪힘",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-37",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -71,7 +75,9 @@
         "url": "https://gosiweek.com/article/1065564132199034"
       },
       "why": "구직자는 사생활 침해로 느끼지만, 면접관 중에는 오래 다닐 수 있는지 확인하는 관례적인 질문으로 여기는 사람도 있음. 세대에 따라 다르게 볼 가능성이 큼",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-43",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -91,7 +97,9 @@
         "url": "https://gosiweek.com/article/1065564132199034"
       },
       "why": "근로 조건을 확인하는 건 당연한 권리라는 쪽과, 면접 자리에서 돈 얘기를 먼저 꺼내면 인상이 나빠진다는 쪽이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-44",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -111,7 +119,9 @@
         "url": "https://www.wikitree.co.kr/articles/1167598"
       },
       "why": "축의금은 서로 돕는 돈이니 식대를 고려해야 한다는 쪽과, 비싼 예식장을 고른 건 결혼하는 사람이니 하객이 부담할 이유가 없다는 쪽이 맞섬. 기존 카드 '친분에 따라 액수를 정한다'와는 기준이 다름",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "CER-33",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -131,7 +141,9 @@
         "url": "https://www.wikitree.co.kr/articles/1169258"
       },
       "why": "아이를 맡길 데가 없는 사정이나 와 준 것 자체에 감사해야 한다는 쪽과, 식대를 생각하면 인원만큼 더 내야 한다는 쪽이 갈림. 미혼과 기혼 사이에 생각하는 적정 금액 차이도 큼",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "CER-34",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -151,7 +163,9 @@
         "url": "https://view.asiae.co.kr/article/2026103009013689919"
       },
       "why": "예약 경쟁을 악용한 암표라는 비판이 많지만, 관광지 입장권은 공연·스포츠처럼 법으로 규제되지 않아 '수요와 공급일 뿐'이라는 시각도 있음",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-38",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -171,7 +185,9 @@
         "url": "https://view.asiae.co.kr/article/2026103009013689919"
       },
       "why": "웃돈만 없으면 양도는 괜찮다는 생활 감각과, 취소표로 돌려야 공정하고 사기 위험도 막을 수 있다는 운영 원칙이 부딪힘",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-39",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -191,7 +207,9 @@
         "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008819980"
       },
       "why": "조건을 알고 입주했으니 지켜야 한다는 쪽과, 내 집 안의 사생활까지 관리하는 건 지나치다는 쪽이 갈림. 성별 논쟁을 피하려고 '세입자 손님 숙박 제한'이라는 일반 상황으로 바꿔 씀",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-40",
+      "inserted_at": "2026-10-31T20:55+09:00"
     },
     {
       "row": {
@@ -211,7 +229,9 @@
         "url": "https://digitaltoday.co.kr/news/articleView.html?idxno=711402"
       },
       "why": "마감을 분명히 알려 주는 효율적인 표현이라는 쪽과, 압박을 주는 무례한 말투라는 쪽이 갈림. 다만 설문 대상이 미국·유럽 직장인이라 블로그에서 숫자를 인용할 때 한국 데이터가 아니라고 밝혀야 함",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-45",
+      "inserted_at": "2026-10-31T20:55+09:00"
     }
   ]
 }
