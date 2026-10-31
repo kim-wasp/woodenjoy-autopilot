@@ -27,7 +27,31 @@ jobs:
       - name: 올리기
         if: steps.due.outputs.any == 'yes'
         env:
-          ALL_SECRETS: ${{ toJSON(secrets) }}
+          # 새 사이트 비밀키를 추가하면 여기에도 한 줄 추가해요
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          IG_TOKEN_INFOBAY: ${{ secrets.IG_TOKEN_INFOBAY }}
+          THREADS_TOKEN_INFOBAY: ${{ secrets.THREADS_TOKEN_INFOBAY }}
+          IG_TOKEN_FORSMARTLIFE: ${{ secrets.IG_TOKEN_FORSMARTLIFE }}
+          THREADS_TOKEN_FORSMARTLIFE: ${{ secrets.THREADS_TOKEN_FORSMARTLIFE }}
+          WP_FORSMARTLIFE_PASS: ${{ secrets.WP_FORSMARTLIFE_PASS }}
+          IG_TOKEN_ITINFOBAY: ${{ secrets.IG_TOKEN_ITINFOBAY }}
+          THREADS_TOKEN_ITINFOBAY: ${{ secrets.THREADS_TOKEN_ITINFOBAY }}
+          WP_ITINFOBAY_PASS: ${{ secrets.WP_ITINFOBAY_PASS }}
+          IG_TOKEN_MYINFOBAY: ${{ secrets.IG_TOKEN_MYINFOBAY }}
+          THREADS_TOKEN_MYINFOBAY: ${{ secrets.THREADS_TOKEN_MYINFOBAY }}
+          WP_MYINFOBAY_PASS: ${{ secrets.WP_MYINFOBAY_PASS }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
           fail=0
           while read -r d p; do python3 engine/publish.py "$d" "$p" || fail=1; done < due.txt

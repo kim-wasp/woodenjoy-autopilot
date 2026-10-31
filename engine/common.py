@@ -60,7 +60,7 @@ def secret(name, required=True):
             _SECRETS = {}
     v = _SECRETS.get(name) or os.environ.get(name)
     if not v and required:
-        raise SystemExit(f"비밀키 {name} 가 없어요. GitHub → Settings → Secrets 에 넣어 주세요.")
+        raise SystemExit(f"비밀키 {name} 가 없어요. GitHub → Settings → Secrets 에 넣고, 새 이름이면 .github/workflows/studio-*.yml 의 env 목록에도 추가해 주세요.")
     return v
 
 
