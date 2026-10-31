@@ -18,7 +18,7 @@ from PIL import Image, ImageDraw
 from common import log, secret
 
 NO_TEXT = (" Photorealistic, natural light, no text, no letters, no logos, no watermarks, "
-           "no people's faces in close-up, realistic proportions.")
+           "no people's faces in close-up; never blur or pixelate faces — instead show people from behind, from the side, or naturally out of focus in the background; realistic proportions.")
 
 
 def _save(img_bytes, out, size):
