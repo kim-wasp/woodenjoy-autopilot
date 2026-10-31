@@ -1,0 +1,2 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 글 만들기 시작 · 주제: 자동 선택
+비밀키 OPENAI_API_KEY 가 없어요. GitHub → Settings → Secrets 에 넣고, 새 이름이면 .github/workflows/studio-*.yml 의 env 목록에도 추가해 주세요.
