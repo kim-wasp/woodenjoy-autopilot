@@ -1,5 +1,5 @@
-점검 시각: 2026-10-31 17:50
-실패 투표 카드 표 읽기: Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
-실패 카테고리 표 읽기: Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
-실패 블로그 표(posts): Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
-실패 사진 저장소(blog): 올리기 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
+점검 시각: 2026-10-31 17:51
+OK  투표 카드 표 읽기: 카드 289개, 칸: id, statement, track, category, region_scope, locale, source, verified_at, correct_answer, is_event, status, created_at
+OK  카테고리 표 읽기: 8개
+OK  블로그 표(posts): 쓰기·지우기 됨
+OK  사진 저장소(blog): 올리기 됨, 공개 주소 응답 200
