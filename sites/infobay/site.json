@@ -72,8 +72,7 @@
   "images": {
     "hero": {
       "provider": "gemini",
-      "model": "gemini-3.1-flash-image",
-      "quality": "high"
+      "model": "gemini-3-pro-image"
     },
     "blog_inline": "mixed",
     "photo_style": "Realistic photo of everyday situations in Korea (offices, weddings, subways, family gatherings), natural light, candid, faces not in close-up, no text",

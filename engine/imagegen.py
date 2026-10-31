@@ -63,13 +63,14 @@ def generate(prompt, out, cfg, size=(1200, 675)):
     elif provider == "gemini":
         # 구글은 이미지 모델 이름이 자주 바뀌어요 → 설정한 이름부터 차례로 시도
         models = [cfg.get("model")] if cfg.get("model", "").startswith("gemini") else []
-        models += ["gemini-3.1-flash-image", "gemini-2.5-flash-image"]
+        models += ["gemini-3-pro-image", "gemini-3.1-flash-image", "gemini-2.5-flash-image"]
         raw, err = None, ""
         for model in dict.fromkeys(models):
             r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
                               params={"key": secret("GEMINI_API_KEY")}, timeout=300,
-                              json={"contents": [{"parts": [{"text": full + " Aspect ratio 16:9."}]}],
-                                    "generationConfig": {"responseModalities": ["IMAGE"]}})
+                              json={"contents": [{"parts": [{"text": full}]}],
+                                    "generationConfig": {"responseModalities": ["IMAGE"],
+                                                         "imageConfig": {"aspectRatio": "4:5" if size[1] > size[0] else "16:9"}}})
             if r.status_code == 404:
                 err = f"{model} 없음"
                 continue
