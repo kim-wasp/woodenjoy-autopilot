@@ -97,6 +97,9 @@ def schema(site):
                   "photos": "소제목 아래 적절한 곳에 [[photo:번호]] 2~3개(photo_prompts 번호)",
                   "mixed": "[[card:번호]] 1~2개와 [[photo:번호]] 1~2개를 섞어서",
                   "none": "본문 이미지는 [[hero]] 하나만"}[ic["blog_inline"]]
+        cats = ((site.get("blog") or {}).get("app") or {}).get("categories") or (site.get("blog") or {}).get("categories")
+        if cats:
+            parts.append(f'"category": "글 분류 — 다음 중 하나만: {" / ".join(cats)}"')
         parts += ['"meta_description": "검색 결과 설명 80~150자"',
                   f'"article_md": "본문 마크다운 {r.get("min_chars", 2500)}~{r.get("max_chars", 6000)}자. 첫 문단은 독자 상황+결론. '
                   '## 소제목(질문형), 표 1개 이상, ## 자주 묻는 질문, 마지막에 ## 참고 자료 (출처 링크 목록). '
@@ -272,6 +275,7 @@ def write_post(site, res, d, topic):
         "created_at": now_kst().isoformat(timespec="minutes"), "requested_topic": topic or "",
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
         "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""),
+        "category": res.get("category", ""),
         "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", "")} for p in res.get("photo_prompts") or []],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
         "instagram": res.get("instagram") if "instagram" in platforms else None,

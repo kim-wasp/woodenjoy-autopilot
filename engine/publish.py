@@ -118,7 +118,7 @@ def publish_appblog(site, d, post, dry):
     html = mdhtml.convert(md, lambda k: (urls.get(k), post["title"] if k == "hero" else alts.get(k, "")))
     row = {"slug": slug, "title": post["title"], "description": post.get("meta_description", ""), "content_html": html, "content_md": md,
            "hero_url": urls.get("hero"), "keywords": [(post.get("keywords") or {}).get("main", "")] + (post.get("keywords") or {}).get("sub", []),
-           "sources": post.get("sources", []), "category": cfg.get("category", ""), "status": "published",
+           "sources": post.get("sources", []), "category": post.get("category") if post.get("category") in (cfg.get("categories") or []) else cfg.get("category", ""), "status": "published",
            "published_at": now_kst().isoformat(timespec="seconds")}
     if dry:
         log(f"  [미리보기] {table} 에 글 추가: {row['slug']} ({len(html)}자 HTML)")
@@ -261,7 +261,7 @@ def publish(d, platform, dry=False):
     post = load_json(d / "post.json")
     site = load_site(post["site"])
     pub = post.setdefault("published", {})
-    if pub.get(platform) and not dry:
+    if pub.get(platform) and not dry and not os.environ.get("FORCE"):
         log("이미 올라갔어요")
         return
     log(f"[{site['name']}] {post['title']} → {platform}")

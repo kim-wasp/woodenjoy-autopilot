@@ -70,7 +70,7 @@ jobs:
         run: |
           fail=0
           while read -r d p; do
-            set +e; python3 engine/publish.py "$d" "$p" 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
+            set +e; FORCE="${{ github.event.inputs.branch && '1' || '' }}" python3 engine/publish.py "$d" "$p" 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
           done < due.txt
           exit $fail
       - name: 일정표 갱신·기록

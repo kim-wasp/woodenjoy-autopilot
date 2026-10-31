@@ -14,7 +14,19 @@
       "path": "/blog",
       "table": "posts",
       "bucket": "blog",
-      "category": "상식"
+      "category": "돈·생활",
+      "categories": [
+        "가정/가족",
+        "학교",
+        "직장",
+        "대중교통",
+        "관혼상제",
+        "공공·매너",
+        "맞춤법",
+        "교통상식",
+        "돈·생활",
+        "건강·생활"
+      ]
     }
   },
   "instagram": {
