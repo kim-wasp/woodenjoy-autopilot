@@ -40,6 +40,10 @@ def generate(prompt, out, cfg, size=(1200, 675)):
     if provider == "none":
         return None
     full = prompt.strip() + NO_TEXT
+    keyname = {"openai": "OPENAI_API_KEY", "gemini": "GEMINI_API_KEY"}.get(provider)
+    if keyname and not os.environ.get("MOCK_IMAGE") and not secret(keyname, required=False):
+        log(f"  이미지 키({keyname})가 아직 없어서 사진 없이 진행해요")
+        return None
     if os.environ.get("MOCK_IMAGE"):
         im = Image.new("RGB", size, (216, 226, 222))
         d = ImageDraw.Draw(im)
