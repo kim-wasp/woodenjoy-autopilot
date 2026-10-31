@@ -18,8 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.inputs.branch || github.ref }}
       - name: 올릴 차례 찾기
         id: due
         env:
@@ -28,7 +26,9 @@ jobs:
         run: |
           if [ -n "$BRANCH" ]; then
             # 수동 올리기: 그 가지의 글 폴더 하나만
+            # 프로그램은 main 최신, 글 폴더만 그 가지에서 가져와요
             dir="content/${BRANCH#studio/}"
+            git fetch -q --depth 1 origin "$BRANCH" && git checkout -q FETCH_HEAD -- "$dir" && git reset -q
             [ -f "$dir/post.json" ] || { echo "글 폴더 없음: $dir"; exit 1; }
             echo "$dir ${PLATFORM:-blog}" > due.txt
           else
@@ -91,7 +91,16 @@ jobs:
             git checkout -q -f "$cur"; git stash pop -q || true
           fi
           rm -f pub.log
+          if [ -n "$BRANCH" ]; then
+            # 결과(post.json)를 그 가지에 기록
+            dir="content/${BRANCH#studio/}"; cp "$dir/post.json" /tmp/post.json
+            git fetch -q --depth 1 origin "$BRANCH" && git checkout -q -f -B "$BRANCH" FETCH_HEAD
+            cp /tmp/post.json "$dir/post.json"; git add "$dir/post.json"
+            git diff --cached --quiet && exit 0
+            git commit -qm "수동 업로드 기록" && git push -q origin "$BRANCH"
+            exit 0
+          fi
           git add content $( [ -d status ] && echo status )
           git diff --cached --quiet && exit 0
           git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
-          b=$(git rev-parse --abbrev-ref HEAD); git pull -q --rebase origin "$b" && git push -q origin "$b"
+          git pull -q --rebase && git push -q
