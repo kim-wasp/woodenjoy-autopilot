@@ -1,0 +1,217 @@
+{
+  "created": "2026-10-31T21:04+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "야근이 많은 쪽은 집안일을 덜 맡아도 된다",
+        "track": "NORM",
+        "category": "가정/가족",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "직장인 익명 커뮤니티에 '연봉이 아내의 20배인데 집안일을 반반 해야 하냐'는 글이 올라와 논란이 됨(작성자는 야근으로 고과가 매겨지는 시기라고 덧붙임)",
+      "source": {
+        "title": "\"내 연봉이 20배 많은데, 집안일 반반 해야 돼?\" 삼전 직원글 논란",
+        "url": "https://supple.kr/news/cmvsu6ngw0hwhm5vu4qhfe5a5"
+      },
+      "why": "기존 카드는 '수입 차이' 기준이라, 이번엔 '일하는 시간' 기준으로 바꿨다. 집에 있는 시간에 맞춰 나누는 게 공평하다는 쪽과, 야근도 본인 선택이니 집안일은 같이 해야 한다는 쪽으로 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "면접에서 MBTI를 묻는 건 실례다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "진학사 캐치 구직자 설문(10/19~27, 1006명)에서 불쾌했던 면접 질문으로 'MBTI 등 성격 유형'이 꼽힘(10%)",
+      "source": {
+        "title": "구직자 61% \"면접 불쾌하면 입사 포기\"…가장 싫은 질문은 '결혼·출산 계획'",
+        "url": "https://gosiweek.com/article/1065564132199034"
+      },
+      "why": "가볍게 분위기를 푸는 질문이라는 쪽과, 성격 유형으로 사람을 거른다는 느낌이라 불편하다는 쪽이 맞선다. 세대에 따라 MBTI를 대하는 온도도 많이 다르다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "면접에서 주량·회식 참석 여부를 묻는 건 실례다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "같은 설문에서 '음주량·회식 참여 여부'를 불쾌한 질문으로 꼽은 응답이 14%",
+      "source": {
+        "title": "구직자 61% \"면접 불쾌하면 입사 포기\"…가장 싫은 질문은 '결혼·출산 계획'",
+        "url": "https://gosiweek.com/article/1065564132199034"
+      },
+      "why": "조직 문화가 맞는지 확인하려면 필요하다는 쪽과, 업무와 상관없는 사생활을 묻는 거라는 쪽이 갈린다. 업종이나 회사 분위기에 따라 받아들이는 정도가 다르다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "용건 없이 '잠깐 얘기 좀 해요'만 보내는 건 실례다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "업무 이메일 표현 설문에서 '잠깐 이야기할 수 있을까요?'가 스트레스를 주는 표현으로 꼽힘(40%)",
+      "source": {
+        "title": "정중한 척하지만 기분 나빠…직장인들이 꼽은 최악의 이메일 문구",
+        "url": "https://digitaltoday.co.kr/news/articleView.html?idxno=711402"
+      },
+      "why": "예의 바른 말투일 뿐이라는 쪽과, 무슨 일인지 몰라 괜히 불안해진다는 쪽이 갈린다. 해외 직장인 대상 조사라서, 국내 메신저 문화에서는 어떤지가 투표 포인트다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "추모는 SNS에 인증하지 않고 조용히 하는 것이 예의다",
+        "track": "NORM",
+        "category": "관혼상제",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "마라톤 사망 사고 뒤 일부 러너가 '애도런' 이름으로 달리기 기록을 SNS에 올리면서 추모 방식을 놓고 갑론을박이 벌어짐",
+      "source": {
+        "title": "\"달리다 숨졌는데\"…카이스트 러너 '애도런' 인증샷 두고 갑론을박",
+        "url": "https://www.sidae.com/article/2026102009453657207"
+      },
+      "why": "특정 사건과 고인 이야기는 빼고, 'SNS 추모 인증'이라는 일반 상황으로 바꿨다. 보여주기 같다는 쪽과, 추모 방식은 각자 선택이라는 쪽이 맞선다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "러닝크루가 인도를 무리 지어 달리면 안 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "러닝 관련 논란 기사 댓글에 무리 지어 달리며 인도를 막는 러닝크루에 대한 불만이 함께 올라옴",
+      "source": {
+        "title": "카이스트 러너 추모, '애도런' 인증샷에… 갑론을박",
+        "url": "https://feed.viewus.co.kr/ai/article/342099/"
+      },
+      "why": "인도는 누구나 쓰는 공간이고 운동하는 사람도 똑같은 보행자라는 쪽과, 여럿이 몰려 달리면 보행자에게 위협이 된다는 쪽이 갈린다. 시간대나 장소(공원인지 도심인지)에 따라 판단이 달라진다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "핼러윈 코스튬으로 경찰복 차림은 피해야 한다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "경찰청이 핼러윈 기간(10/26~11/1) 유사 경찰제복 제조·판매·착용을 집중 단속하고, 코스프레 복장도 자제해 달라고 당부함",
+      "source": {
+        "title": "\"경찰 코스튬은 불법\"…핼러윈 앞두고 제조·유통 집중단속",
+        "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01216886645616528"
+      },
+      "why": "실제 제복과 비슷한 옷은 법으로 금지돼 있지만, 그 정도가 아닌 코스프레는 '자제 권고' 수준이다. 축제니까 괜찮다는 쪽과, 사람이 몰리는 곳에서는 혼란을 준다는 쪽이 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "학원은 그 분야 전공자가 운영해야 믿을 수 있다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "방송인이 운영하는 영어 뮤지컬 학원이 소개되자 학원 운영자의 전공·전문성을 두고 갑론을박이 벌어짐",
+      "source": {
+        "title": "정경미, 영어 뮤지컬 학원 '대기' 자랑했다가…\"전공자도 아닌데\" 갑론을박",
+        "url": "https://sports.khan.co.kr/article/202610291256003/"
+      },
+      "why": "특정인 이야기는 빼고 '학원 고를 때 기준'으로 바꿨다. 전공과 학위가 신뢰의 기준이라는 쪽과, 운영자보다 강사진과 수업 결과가 중요하다는 쪽이 맞선다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "쇼핑몰이 AI 모델 사진을 쓰면 꼭 표시해야 한다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "중국 광군제를 앞두고 AI 모델 광고 사진이 논란이 됨. AI 모델을 쓰는 매장은 반품률과 불만이 더 높다는 증언도 나옴",
+      "source": {
+        "title": "\"왜 다리가 3개야?\" 옷 예뻐서 보다가 '기겁'…쇼핑몰에 등장한 '가짜 모델'",
+        "url": "https://view.asiae.co.kr/article/2026103009035052873"
+      },
+      "why": "실제 착용감을 오해하게 만드니 알려야 한다는 쪽과, 보정 사진처럼 광고 연출의 하나일 뿐이라는 쪽이 갈린다. 해외 사례라서 국내 쇼핑에 대입했을 때 생각을 묻는 카드다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "출처가 불확실한 사진·글은 SNS에 퍼뜨리지 않는다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "접경지역 카페에서 북한군을 봤다는 사진이 SNS에 퍼졌는데 AI로 만든 이미지일 수 있다는 의문이 제기됨",
+      "source": {
+        "title": "김포 스타벅스서 북한군 봤다?…진위 놓고 누리꾼 갑론을박",
+        "url": "https://www.segye.com/newsView/20261027514033"
+      },
+      "why": "공유 버튼 하나 누르는 것도 책임이 따른다는 쪽과, 확인하기 어려우니 '이거 진짜?' 하고 묻는 공유 정도는 괜찮다는 쪽이 갈린다. 안보나 정치 이야기는 빼고 공유 습관만 묻는다.",
+      "status": "pending"
+    }
+  ]
+}
