@@ -101,6 +101,33 @@ def collect(site_id):
     log(f"카드 후보 {len(items)}개 → {out.relative_to(SITES.parent)}")
 
 
+_IDS = None
+
+
+def next_id(db, table, category):
+    """앱 카드 id 가 'PUB-36' 처럼 '분류 머리글-번호' 형식이면 같은 분류의 다음 번호를 만들어요"""
+    import re
+    global _IDS
+    if _IDS is None:
+        _IDS = db.get(table, {"select": "id,category", "limit": 5000})
+    if not _IDS or not isinstance(_IDS[0].get("id"), str):
+        return None
+    pref, nums = {}, {}
+    for r in _IDS:
+        m = re.fullmatch(r"([A-Za-z]+)-(\d+)", str(r.get("id")))
+        if m:
+            pref.setdefault(r.get("category"), {}).setdefault(m.group(1), 0)
+            pref[r.get("category")][m.group(1)] += 1
+            nums[m.group(1)] = max(nums.get(m.group(1), 0), int(m.group(2)))
+    if category not in pref:
+        raise RuntimeError(f"분류 '{category}' 의 id 머리글을 몰라요")
+    p = max(pref[category], key=pref[category].get)
+    nums[p] += 1
+    nid = f"{p}-{nums[p]}"
+    _IDS.append({"id": nid, "category": category})
+    return nid
+
+
 def insert(site_id):
     site = load_site(site_id)
     cfg = site.get("app") or {}
@@ -114,7 +141,11 @@ def insert(site_id):
                 continue
             db = db or DB(cfg)
             try:
-                got = db.insert(data.get("table", cfg.get("table", "cards")), it["row"])
+                row = dict(it["row"])
+                nid = next_id(db, data.get("table", cfg.get("table", "cards")), row.get("category"))
+                if nid:
+                    row["id"] = nid
+                got = db.insert(data.get("table", cfg.get("table", "cards")), row)
                 it.update({"status": "inserted", "inserted_id": got.get("id"), "inserted_at": now_kst().isoformat(timespec="minutes")})
                 n += 1
             except Exception as e:  # noqa: BLE001
