@@ -1,0 +1,5 @@
+점검 시각: 2026-10-31 17:50
+실패 투표 카드 표 읽기: Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
+실패 카테고리 표 읽기: Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
+실패 블로그 표(posts): Supabase 읽기 오류 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
+실패 사진 저장소(blog): 올리기 404: {"code":"PGRST125","details":null,"hint":null,"message":"Invalid path specified in request URL"}
