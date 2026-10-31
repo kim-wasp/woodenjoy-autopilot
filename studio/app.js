@@ -280,10 +280,14 @@ async function viewCards(siteId) {
   <p class="muted small">최근 사회 이슈에서 의견이 갈릴 만한 생활 상황을 골라 카드 후보로 만들어요 (월·목 오전 자동). 승인한 카드만 앱에 추가돼요.</p>
   <div class="card"><div class="list">${pend.map((x, k) => `<div class="item" style="align-items:flex-start"><div class="t">${txt(x.row)}<br><span class="small muted">이슈: ${esc(x.issue)} ${x.source?.url ? `· <a href="${esc(x.source.url)}" target="_blank" rel="noopener">출처</a>` : ''} · ${esc(x.why)}</span></div>
     <div class="seg" style="margin:0" data-k="${k}"><button type="button" data-v="approved">추가</button><button type="button" data-v="rejected">빼기</button></div></div>`).join('') || '<div class="empty">승인 기다리는 후보가 없어요</div>'}</div>
-    ${pend.length ? '<div class="btns" style="margin-top:12px"><button class="btn primary" id="save">고른 대로 앱에 반영</button></div>' : ''}</div>
+    ${pend.length ? '<div class="btns" style="margin-top:12px"><button class="btn" id="allAdd">모두 추가</button><button class="btn primary" id="save">고른 대로 앱에 반영</button></div>' : ''}</div>
   <div class="card" style="margin-top:14px"><h2>최근 처리</h2><div class="list">${done.map((x) => `<div class="item"><div class="t small">${txt(x.row)}</div>${x.status === 'inserted' ? '<span class="chip ok">앱에 추가됨</span>' : x.status === 'approved' ? '<span class="chip brand">추가 대기</span>' : x.status === 'error' ? `<span class="chip bad" title="${esc(x.error)}">오류</span>` : '<span class="chip">뺌</span>'}</div>`).join('') || '<p class="muted small">없음</p>'}</div></div>`;
   const pick = {};
   $('#main').querySelectorAll('.seg[data-k]').forEach((sg) => { sg.onclick = (e) => { const b = e.target.closest('button'); if (!b) return; [...sg.children].forEach((c) => c.classList.toggle('on', c === b)); pick[sg.dataset.k] = b.dataset.v; }; });
+  if ($('#allAdd')) $('#allAdd').onclick = () => {
+    $('#main').querySelectorAll('.seg[data-k]').forEach((sg) => { [...sg.children].forEach((c) => c.classList.toggle('on', c.dataset.v === 'approved')); pick[sg.dataset.k] = 'approved'; });
+    toast(`${pend.length}개 모두 '추가'로 골랐어요. 뺄 것만 '빼기'로 바꾸고 '고른 대로 앱에 반영'을 눌러 주세요`);
+  };
   if ($('#save')) $('#save').onclick = async () => {
     const decisions = Object.entries(pick).map(([k, v]) => ({ file: pend[k].file, i: pend[k].i, status: v }));
     if (!decisions.length) return toast('추가/빼기를 골라 주세요');
