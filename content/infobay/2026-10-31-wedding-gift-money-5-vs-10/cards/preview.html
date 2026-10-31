@@ -1,0 +1,101 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>:root{--bg:#EDF4F1;--pine:#2F6B57;--deep:#1F4F3F;--ink:#1D2421;--muted:#5D6863;--amber:#FBF3E4;--amber2:#F6E2BF;--amberInk:#9A6416;--line:#CFDDD6;--white:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;margin:0;font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif;color:var(--ink)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;padding:80px 70px 0 70px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;font-size:36px;color:var(--muted);font-weight:500;height:52px}
+.title{margin-top:44px;font-size:92px;line-height:1.22;font-weight:900;color:var(--deep);letter-spacing:-2px}
+.sub{margin-top:28px;font-size:48px;line-height:1.4;font-weight:500;color:var(--ink);letter-spacing:-1px}
+.card{margin-top:48px;background:var(--white);border-radius:40px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.foot{position:absolute;left:0;right:0;bottom:56px;text-align:center;font-size:38px;font-weight:700;color:var(--pine)}
+svg text{font-family:"Noto Sans CJK KR",sans-serif}
+.badge{margin-top:36px;align-self:flex-start;background:var(--amber2);color:var(--amberInk);font-size:44px;font-weight:700;border-radius:999px;padding:14px 34px}
+.hl{color:var(--pine)}
+/* product name slide */
+.pname{margin-top:48px;background:var(--white);border-radius:40px;padding:44px 40px}
+.pname .ex{font-size:38px;color:var(--muted);font-weight:500}
+.chips{margin-top:20px;display:flex;flex-wrap:nowrap;gap:12px;align-items:center}
+.chip{font-size:42px;font-weight:800;border-radius:18px;padding:8px 16px;line-height:1.3}
+.c0{background:#E3ECE8;color:var(--ink)}
+.c1{background:#DCEFE6;color:var(--deep)}
+.c2{background:var(--amber2);color:#7A4E0F}
+.c3{background:#E6E0F3;color:#4A3B7A}
+.c4{background:#F9E2DE;color:#8A3329}
+.legend{margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;gap:24px;align-items:center;background:var(--white);border-radius:28px;padding:14px 26px}
+.row .chip{font-size:42px;min-width:250px;text-align:center}
+.row .d{font-size:44px;font-weight:600;line-height:1.35}
+/* steps */
+.steps{margin-top:40px;display:flex;flex-direction:column;gap:18px}
+.step{display:flex;gap:32px;align-items:center;background:var(--white);border-radius:32px;padding:24px 34px}
+.num{flex:0 0 96px;height:96px;border-radius:50%;background:var(--pine);color:#fff;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.step .d{font-size:50px;font-weight:700;line-height:1.35}
+.step .s{font-size:38px;font-weight:500;color:var(--muted);margin-top:6px;line-height:1.35}
+.tip{margin-top:26px;background:var(--amber);border:3px solid var(--amber2);border-radius:28px;padding:28px 36px;font-size:42px;font-weight:600;line-height:1.4;color:#5B3D0E}
+/* grid */
+.grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cell{background:var(--white);border-radius:32px;height:290px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.cell .l{font-size:50px;font-weight:800;color:var(--deep)}
+.slide{margin-bottom:40px}
+.title.big{font-size:104px}
+
+/* 사진 배경 카드 */
+.slide.photo .top,.slide.photo .title,.slide.photo .sub,.slide.photo .foot,.slide.photo .hl{color:#fff}
+.slide.photo .hl{color:var(--amber2)}
+.slide.photo .title,.slide.photo .sub{text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.slide.photo .badge{margin-top:auto;margin-bottom:170px}
+:root{--bg:#EEF3FB;--pine:#3182F6;--deep:#1B3A6B;--ink:#191F28;--amber2:#FFE8A3;--amberInk:#8A5A00;--muted:#5B6472}</style></head><body><section class="slide" id="s1">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>1 / 7</span></div>
+  <h1 class="title big" data-lines="2">평균 11.7만<br>1위는 <span class="hl">5만원</span></h1>
+  <p class="sub" data-lines="1">2025년 농협 축의금 이체 데이터</p>
+  <div class="steps"><div class="step"><div class="num">1</div><div><p class="d">5만원 42.3%</p><p class="s">가장 많이 낸 금액</p></div></div><div class="step"><div class="num">2</div><div><p class="d">10만원 39.7%</p><p class="s">2년 새 늘고 있어요</p></div></div></div>
+  
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s2">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>2 / 7</span></div>
+  <h1 class="title" data-lines="2">평균이<br><span class="hl">높은</span> 이유</h1>
+  <p class="sub" data-lines="2">100만원 이상 고액 송금이<br>평균을 끌어올렸어요</p>
+  <div class="grid"><div class="cell"><span class="l">2023년 2.95%</span></div><div class="cell"><span class="l">2025년 3.17%</span></div></div>
+  <div class="badge">농협 이체 데이터</div>
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s3">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>3 / 7</span></div>
+  <h1 class="title" data-lines="2">식장부터<br><span class="hl">확인</span>하세요</h1>
+  <p class="sub" data-lines="2">뷔페와 코스는<br>식대가 약 두 배 차이 나요</p>
+  <div class="grid"><div class="cell"><span class="l">뷔페 평균 6.2만원</span></div><div class="cell"><span class="l">코스 평균 11.9만원</span></div><div class="cell"><span class="l">호텔 12만~18만원</span></div></div>
+  
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s4">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>4 / 7</span></div>
+  <h1 class="title" data-lines="2">금액 정하는<br><span class="hl">4가지</span> 기준</h1>
+  <p class="sub" data-lines="2">이 순서대로 따져 보면<br>고민이 줄어요</p>
+  <div class="grid"><div class="cell"><span class="l">참석 여부</span></div><div class="cell"><span class="l">식사 형태</span></div><div class="cell"><span class="l">받은 금액</span></div><div class="cell"><span class="l">공직자 여부</span></div></div>
+  
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s5">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>5 / 7</span></div>
+  <h1 class="title" data-lines="2">직장 동료는<br><span class="hl">10만원</span>이 1위</h1>
+  <p class="sub" data-lines="2">참석+식사 1인 기준,<br>2025년 5월 조사</p>
+  <div class="steps"><div class="step"><div class="num">1</div><div><p class="d">10만원 61.8%</p><p class="s">1위</p></div></div><div class="step"><div class="num">2</div><div><p class="d">5만원 32.8%</p><p class="s">2위</p></div></div></div>
+  <div class="badge">인크루트 844명</div>
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s6">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>6 / 7</span></div>
+  <h1 class="title" data-lines="2">공무원이면<br>다 <span class="hl">5만원</span>?</h1>
+  <p class="sub" data-lines="2">직무 관련이 있을 때<br>적용되는 한도예요</p>
+  <div class="pname"><p class="ex">직무 관련 시 한도</p><div class="chips"><span class="chip c0">현금 5만원</span><span class="chip c1">합산 10만원</span></div></div><div class="legend"><div class="row"><span class="chip c0">현금 5만원</span><span class="d">축의금 상한</span></div><div class="row"><span class="chip c1">합산 10만원</span><span class="d">화환 포함</span></div></div>
+  <div class="badge">흔한 오해</div>
+  <div class="foot">@infobay_kr</div>
+</section>
+<section class="slide" id="s7">
+  <div class="top"><span>커먼센스 · 이거 상식이야?</span><span>7 / 7</span></div>
+  <h1 class="title" data-lines="2">결혼식 전에<br><span class="hl">저장</span>해 두세요</h1>
+  <p class="sub" data-lines="2">상황별 판단표와 출처는<br>프로필 링크 블로그에</p>
+  <div class="steps"><div class="step"><div class="num">1</div><div><p class="d">못 가고 봉투만</p><p class="s">5만원이 가장 흔해요</p></div></div><div class="step"><div class="num">2</div><div><p class="d">가서 식사까지</p><p class="s">10만원을 많이 골라요</p></div></div><div class="step"><div class="num">3</div><div><p class="d">직무 관련 공직자</p><p class="s">현금은 5만원까지</p></div></div></div>
+  
+  <div class="foot">@infobay_kr</div>
+</section></body></html>

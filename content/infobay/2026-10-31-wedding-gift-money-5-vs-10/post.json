@@ -1,0 +1,125 @@
+{
+  "id": "infobay/2026-10-31-wedding-gift-money-5-vs-10",
+  "site": "infobay",
+  "title": "축의금 5만원 vs 10만원: 평균은 11.7만인데 1위는 5만원인 이유",
+  "status": "draft",
+  "created_at": "2026-10-31T17:02+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "축의금",
+    "sub": [
+      "축의금 5만원",
+      "축의금 10만원",
+      "직장 동료 축의금",
+      "결혼식 식대",
+      "결혼식 불참 축의금",
+      "공무원 축의금 김영란법",
+      "축의금 평균"
+    ]
+  },
+  "brief": {
+    "reader": "가을 결혼식 시즌에 청첩장을 받고 5만원을 낼지 10만원을 낼지 고민하는 20~40대 직장인",
+    "question": "2026년 지금 축의금은 5만원과 10만원 중 얼마가 기준인가?",
+    "answer": "참석해서 식사까지 하면 10만원을 내는 사람이 가장 많고, 못 가고 봉투만 보내면 지금도 5만원이 가장 흔해요. 다만 직무 관련 공직자에게는 현금 5만원 한도가 적용돼요.",
+    "out_of_scope": "조의금·돌잔치 금액, 친척·부모님 축의금, 축의금 세금·증여 문제",
+    "next_action": "청첩장의 예식장 종류와 내가 받았던 금액을 확인해 판단표로 금액을 정하고, 커먼센스 앱에서 투표하기"
+  },
+  "why_this_topic": "10~11월은 가을 결혼식 성수기라 '축의금 얼마' 검색이 몰려요. 최근 한 달 사이 KBC(9월 29일), 네이트 뉴스(10월 21일, 참가격 9월 식대 자료), 위키트리(식사 형태별 식대)가 연달아 축의금 기사를 냈어요. 검색 결과에도 2026년 기준 축의금 가이드 블로그가 여러 개 보여 수요는 확인돼요. 다만 대부분 관계별 금액만 늘어놓고 출처가 없어요. NH농협은행 이체 데이터에서 평균과 최다 금액이 다르다는 반전, 식사 형태별 식대, 청탁금지법의 직무관련성 조건을 출처와 함께 판단표로 묶으면 차별화할 수 있다고 봤어요. 검색량 도구 수치는 확인하지 못했어요.",
+  "meta_description": "2025년 평균 축의금은 11만7천원인데 가장 많이 낸 금액은 5만원(42.3%)이었어요. 식대 중간값, 직장 동료 설문, 공무원 축의금 5만원 한도가 적용되는 진짜 조건까지 출처와 함께 상황별 판단표로 정리했어요.",
+  "hero_prompt": "Realistic photo of a Korean wedding hall buffet area with guests in formal wear holding plates, seen from a distance so no faces are in close-up, soft natural light, candid atmosphere, no text or signage",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "결혼식장 축의금 접수대에서 하객들이 봉투를 건네는 모습"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "사무실 책상 위의 청첩장과 축의금 봉투, 스마트폰"
+    }
+  ],
+  "sources": [
+    {
+      "title": "경향신문 - 결혼식 축의금 얼마할 지 고민이세요? 요즘 대세는 10만원이라네요(NH농협은행 데이터)",
+      "url": "https://www.khan.co.kr/article/202605140847001"
+    },
+    {
+      "title": "KBC - 5만 원은 적고, 10만 원? 20만 원?…결혼식 축의금 얼마 내야 하나",
+      "url": "https://news.ikbc.co.kr/article/view/kbc202609290026"
+    },
+    {
+      "title": "네이트 뉴스 - 나라마다 다른 축의금 문화",
+      "url": "https://m.news.nate.com/view/20261021n22179"
+    },
+    {
+      "title": "위키트리 - 결혼식 '식사 종류'에 따라 다른 축의금? 현실은 이렇습니다",
+      "url": "https://www.wikitree.co.kr/articles/1168027"
+    },
+    {
+      "title": "ZDNet Korea - 직장 동료 '적정 축의금' 844명에게 물어보니",
+      "url": "https://zdnet.co.kr/view/?no=20250526084442"
+    },
+    {
+      "title": "국민일보 - 직장 동료 결혼 축의금 얼마낼까…이젠 10만원 대세",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=0028158534"
+    },
+    {
+      "title": "더쎈뉴스 - 인크루트, 직장인 축의금 기준 '10만 원'(표본오차)",
+      "url": "https://www.mhns.co.kr/news/articleView.html?idxno=716546"
+    },
+    {
+      "title": "머니투데이 - 직장동료 5만원은 옛말…고물가가 끌어 올린 '축의금 공식'",
+      "url": "https://www.mt.co.kr/society/2025/05/27/2025052708025015904"
+    },
+    {
+      "title": "국가법령정보센터 - 청탁금지법 시행령 별표 1 음식물·경조사비·선물 등의 가액 범위",
+      "url": "https://law.go.kr/flDownload.do?gubun=&flSeq=116109059"
+    },
+    {
+      "title": "국민권익위원회 - 청탁금지법상 경조사비 가능 여부 질의",
+      "url": "https://www.acrc.go.kr/board.es?mid=a10502120000&bid=130&tag=&act=view&list_no=80121&nPage=1"
+    },
+    {
+      "title": "국민권익위원회 - 경조사비 관련 문의",
+      "url": "https://www.acrc.go.kr/board.es?mid=a10502120000&bid=130&tag=&act=view&list_no=41818&nPage=1"
+    },
+    {
+      "title": "강원특별자치도 감사위원회 - 허용되는 금품등 상한액(현금+화환 예시)",
+      "url": "https://state.gwd.go.kr/audit/antisolicitation/upperlimit"
+    },
+    {
+      "title": "찾기쉬운 생활법령정보 - 금품 등의 수수 행위",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?popMenu=ov&csmSeq=911&ccfNo=2&cciNo=2&cnpClsNo=3"
+    },
+    {
+      "title": "glasswallet - 관계별 조의금·축의금 기준표 2026(받은 만큼 돌려주기 관례)",
+      "url": "https://glasswallet.com/calculate/condolence-money/wedding-amount/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "caption": "평균 축의금 11만7천원인데 가장 많이 낸 금액은 5만원이에요.\n\n2025년 NH농협은행 이체 데이터에서 5만원이 42.3%로 1위, 10만원은 39.7%로 2위였어요.\n직장 동료 결혼식에 가서 밥까지 먹는다면 10만원이라는 답이 61.8%였어요(인크루트 844명 조사).\n공무원은 다 5만원? 직무 관련이 있을 때 적용되는 한도예요.\n\n청첩장 받을 때 꺼내 보게 저장해 두세요.\n상황별 판단표와 출처는 프로필 링크의 커먼센스 블로그에 정리했어요.\n\n#축의금 #축의금얼마 #결혼식하객 #직장생활 #경조사비"
+  },
+  "threads": {
+    "posts": [
+      "작년 평균 축의금이 11만7천원이래요. 그런데 가장 많이 낸 금액은 5만원이었어요.\n\nNH농협은행 이체 데이터에서 5만원이 42.3%, 10만원이 39.7%였거든요. 평균은 100만원 넘는 고액 송금이 끌어올린 거예요.\n\n그럼 10만원 내고 호텔 코스 먹으면 민폐일까요? 안 가고 5만원 보내는 건 괜찮을까요? 다들 어떻게 하세요?",
+      "정리해 보면\n- 못 가고 봉투만 보내면 5만원이 가장 흔해요\n- 직장 동료 결혼식에 가서 식사까지 하면 10만원이라는 답이 61.8%였어요(인크루트, 2025)\n- 식대는 뷔페 평균 6만2천원, 코스 평균 11만9천원이에요\n- 공무원·교사에게 보내는 현금 5만원 한도는 직무 관련이 있을 때 적용돼요",
+      "상황별로 몇 만원이 많이 쓰이는지 판단표로 만들고 출처도 전부 달았어요. 같은 상황을 두고 20·30·40대가 어떻게 투표했는지도 볼 수 있어요.\n{LINK}"
+    ]
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 1장: 아래 빈 공간 큼 (291px)",
+      "카드: 2장과 3장이 너무 비슷함",
+      "카드: 3장과 4장이 너무 비슷함",
+      "카드: 5장과 7장이 너무 비슷함"
+    ],
+    "at": "2026-10-31T17:02+09:00"
+  }
+}
