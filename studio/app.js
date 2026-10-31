@@ -178,6 +178,7 @@ async function viewSite(id) {
     ${isNew ? `<label class="f"><span>사이트 id (영문, 예: forsmartlife)</span><input type="text" id="sid" required pattern="[a-z0-9][a-z0-9-]{1,30}"></label>` : ''}
     <label class="f"><span>이름</span><input type="text" data-k="name" value="${v(s.name)}"></label>
     <label class="f"><span><input type="checkbox" data-k="enabled" ${s.enabled ? 'checked' : ''}> 이 사이트 자동화 사용</span></label>
+    ${s.legacy !== undefined ? `<label class="f"><span><input type="checkbox" data-k="legacy" ${s.legacy ? 'checked' : ''}> 기존 우드엔조이 자동화로 계속 운영 (체크를 풀면 스튜디오로 전환)</span></label>` : ''}
     <label class="f"><span>사이트 주소 (SNS 링크로도 써요)</span><input type="text" data-k="url" value="${v(s.url)}"></label>
     <label class="f"><span>주제</span><textarea data-k="topic">${v(s.topic)}</textarea></label>
     <label class="f"><span>독자</span><input type="text" data-k="audience" value="${v(s.audience)}"></label>
