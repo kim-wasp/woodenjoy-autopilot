@@ -41,7 +41,8 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=16000, moc
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}]
     headers = {"x-api-key": secret("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
                "content-type": "application/json"}
-    for attempt in range(4):
+    last = ""
+    for attempt in range(6):
         r = requests.post(API, json=body, headers=headers, timeout=600)
         if r.status_code in (429, 500, 502, 503, 529):
             time.sleep(15 * (attempt + 1))
@@ -54,10 +55,16 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=16000, moc
         if r.status_code >= 400:
             raise RuntimeError(f"Claude API 오류 {r.status_code}: {r.text[:500]}")
         data = r.json()
+        if data.get("stop_reason") == "pause_turn":  # 웹 검색이 길어지면 잠시 멈춰요 → 이어서 받기
+            log("  웹 검색 이어서 진행")
+            body["messages"] = body["messages"][:1] + [{"role": "assistant", "content": data["content"]}]
+            continue
         text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
         try:
             return _extract_json(text)
         except (ValueError, json.JSONDecodeError):
+            last = f"JSON 형식 오류 (stop={data.get('stop_reason')}, 글자수 {len(text)}): {text[:300]}"
+            log("  " + last)
             body["messages"] += [{"role": "assistant", "content": text},
                                  {"role": "user", "content": "형식이 잘못됐어요. 설명 없이 JSON 한 덩어리만 다시 주세요."}]
-    raise RuntimeError("Claude API 가 계속 바빠요. 잠시 뒤 다시 실행하세요")
+    raise RuntimeError(last or "Claude API 가 계속 바빠요. 잠시 뒤 다시 실행하세요")

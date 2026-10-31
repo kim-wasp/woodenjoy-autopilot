@@ -71,6 +71,15 @@ jobs:
           MODE: ${{ github.event.inputs.mode }}
         run: |
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
+          # 실행 기록을 studio-logs 가지에 남겨요 (실패 원인 확인용)
+          save_log() {
+            cp gen.log /tmp/gen.log 2>/dev/null || echo "기록 없음" > /tmp/gen.log
+            cur=$(git rev-parse --abbrev-ref HEAD)
+            if git fetch -q origin studio-logs 2>/dev/null; then git checkout -q -B studio-logs FETCH_HEAD; else git checkout -q --orphan studio-logs; git rm -rqf . ; fi
+            mkdir -p logs; cp /tmp/gen.log "logs/$1-$(TZ=Asia/Seoul date +%Y%m%d-%H%M).log"
+            git add logs && git commit -qm "실행 기록: $1" && git push -q origin studio-logs || true
+            git checkout -q -f "$cur"
+          }
           for site in ${{ steps.pick.outputs.sites }}; do
             if [ "$MODE" = "ideas" ]; then
               python3 engine/generate.py "$site" --ideas
@@ -80,13 +89,14 @@ jobs:
             if [ -n "$REDO" ]; then
               git checkout -q "$REDO"
               dir=$(git diff --name-only origin/main...HEAD -- content | head -1 | cut -d/ -f1-3)
-              set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --out "$dir" | tee gen.log; ok=$?; set -e
+              set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --out "$dir" 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
               git add content && git commit -qm "다시 만들기: $(jq -r .title $dir/post.json)" && git push -q origin "$REDO"
               gh pr comment "$REDO" --body "🔁 다시 만들었어요 ($( [ $ok = 0 ] && echo '점검 통과' || echo '점검 실패')). 고칠 점: ${NOTES:-없음}"
               git checkout -q main
               continue
             fi
-            set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" | tee gen.log; ok=$?; set -e
+            set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
+            save_log "$site"
             dir=$(grep '::set-output-dir::' gen.log | tail -1 | sed 's/::set-output-dir:://')
             [ -n "$dir" ] || { echo "글 폴더가 없어요"; exit 1; }
             title=$(jq -r .title "$dir/post.json")
