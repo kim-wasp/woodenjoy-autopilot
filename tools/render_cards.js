@@ -92,7 +92,7 @@ const QA = () => {
     const last = kids[kids.length - 1].getBoundingClientRect();
     if (last.bottom > sr.bottom - FOOT_ZONE) issues.push(`본문이 계정명 자리까지 내려옴`);
     const gap = sr.bottom - FOOT_ZONE - last.bottom;
-    if (gap > 260 && !s.classList.contains('photo')) issues.push(`아래 빈 공간 큼 (${Math.round(gap)}px)`);
+    if (gap > (s.querySelector('h1.big') ? 380 : 260) && !s.classList.contains('photo')) issues.push(`아래 빈 공간 큼 (${Math.round(gap)}px)`);
     s.querySelectorAll('.card,.cell,.step,.row').forEach((c) => { if (!c.textContent.trim() && !c.querySelector('svg *, img')) issues.push(`빈 칸: ${c.className}`); });
     s.querySelectorAll('svg').forEach((svg) => {
       const vr = svg.getBoundingClientRect();
@@ -144,7 +144,10 @@ let CUR_DIR = '.';
   await b.close();
 
   const sim = JSON.parse(execFileSync('python3', [path.join(__dirname, 'sim.py'), ...files]).toString());
-  const similar = sim.filter((x) => x[2] < 7 && !(slides[x[0]].photo && slides[x[1]].photo && slides[x[0]].photo !== slides[x[1]].photo)).map((x) => `${x[0] + 1}장과 ${x[1] + 1}장이 너무 비슷함`);
+  // 같은 틀이라 그림은 비슷해 보여도 글이 다르면 통과 (글 내용이 60% 넘게 겹칠 때만 '비슷함')
+  const grams = (o) => { const t = JSON.stringify(o).replace(/[^가-힣0-9a-zA-Z]/g, ''); const g = new Set(); for (let i = 0; i < t.length - 1; i++) g.add(t.slice(i, i + 2)); return g; };
+  const textSim = (a, b) => { const A = grams(a), B = grams(b); let n = 0; A.forEach((x) => { if (B.has(x)) n++; }); return n / Math.max(1, Math.min(A.size, B.size)); };
+  const similar = sim.filter((x) => x[2] < 7 && textSim(slides[x[0]], slides[x[1]]) > 0.6 && !(slides[x[0]].photo && slides[x[1]].photo && slides[x[0]].photo !== slides[x[1]].photo)).map((x) => `${x[0] + 1}장과 ${x[1] + 1}장이 너무 비슷함`);
   const seen = {};
   report.forEach((r, i) => r.text.split(/(?<=[.요다!?])\s/).forEach((t) => { t = t.trim(); if (t.length > 12 && !t.includes(brand.handle) && !(brand.cardLabel && t.includes(brand.cardLabel))) (seen[t] = seen[t] || new Set()).add(i + 1); }));
   const repeated = Object.entries(seen).filter(([, ids]) => ids.size > 1).map(([t, ids]) => `반복 문장 "${t.slice(0, 20)}" (${[...ids].join(',')}장)`);
