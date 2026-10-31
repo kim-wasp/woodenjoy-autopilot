@@ -1,14 +1,21 @@
 {
   "id": "infobay",
-  "name": "상식 (커먼센스 · infobay_kr)",
+  "name": "상식 (커먼센스 · 블로그 + infobay_kr)",
   "enabled": true,
   "topic": "한국 생활 상식과 사회적 에티켓 논쟁: 축의금·조의금, 직장 예절, 대중교통·공공장소 매너, 가족·명절 문화처럼 '다들 어떻게 하지?' 싶은 상황",
   "audience": "20~40대 직장인·사회초년생. 경조사·회사생활에서 '나만 이상한가?' 궁금한 사람",
   "tone": "친근한 해요체, 짧고 단정한 문장, 첫 줄은 논쟁을 부르는 질문이나 반전",
   "url": "https://commonsense-one.vercel.app",
-  "writing_guide": "커먼센스는 상황 카드에 '인정/아닌데'로 투표하고 세대별 결과를 보는 앱이에요. SNS 글은 상황을 던지고 의견이 갈리는 지점을 보여준 뒤, 앱에서 투표하고 세대별 결과를 보게 이끌어요. 설문·통계 숫자는 출처가 있는 것만 씁니다(없으면 숫자 없이). 정답을 강요하지 말고 기준(관계·지역·상황)을 알려 주세요.",
+  "writing_guide": "커먼센스는 상황 카드에 '인정/아닌데'로 투표하고 세대별 결과를 보는 앱이고, /blog 는 같은 주제를 검색으로 찾는 사람을 위한 상식 글이에요. 블로그 글은 '다들 어떻게 하지?' 질문에 실제 기준(관례·예절 안내·공식 자료·설문 출처)을 정리하고, 의견이 갈리는 지점은 앱 투표로 이어 주세요(본문 끝에 '이 상황, 당신은?' 투표 유도 문단). 설문·통계 숫자는 출처가 있는 것만. 정답을 강요하지 말고 관계·지역·상황별 기준을 알려 주세요.",
   "blog": {
-    "platform": "none"
+    "platform": "appblog",
+    "url": "https://commonsense-one.vercel.app",
+    "app": {
+      "path": "/blog",
+      "table": "posts",
+      "bucket": "blog",
+      "category": "상식"
+    }
   },
   "instagram": {
     "enabled": true,
@@ -45,6 +52,14 @@
           "fri"
         ],
         "time": "21:00"
+      },
+      "blog": {
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "07:00"
       }
     },
     "grace_hours": 3
@@ -60,8 +75,8 @@
       "model": "gpt-image-1",
       "quality": "high"
     },
-    "blog_inline": "none",
-    "photo_style": "",
+    "blog_inline": "mixed",
+    "photo_style": "Realistic photo of everyday situations in Korea (offices, weddings, subways, family gatherings), natural light, candid, faces not in close-up, no text",
     "instagram": "cards",
     "photos": 3
   },
@@ -98,7 +113,7 @@
     "카톡 예절"
   ],
   "monetization": {
-    "stage": "adsense",
+    "stage": "pre_adsense",
     "internal_links": true,
     "humanize": true,
     "coupang": {

@@ -86,6 +86,51 @@ def publish_naver(site, d, post, dry):
     return {"blog": res.get("id"), "blog_url": res.get("permalink") or t.get("permalink")}
 
 
+# ---------- 앱 블로그 (커먼센스 /blog, Supabase) ----------
+def publish_appblog(site, d, post, dry):
+    """사진은 Supabase Storage(공개 버킷)에, 글은 posts 표에 넣어요. 앱의 /blog 페이지가 이 표를 읽어요."""
+    import re
+    cfg = site["blog"].get("app", {})
+    app = site.get("app") or {}
+    base = ("https://example.supabase.co" if dry else secret(app.get("supabase_url_secret", "SUPABASE_URL"))).rstrip("/")
+    key = "DRY" if dry else secret(app.get("supabase_key_secret", "SUPABASE_SERVICE_KEY"))
+    h = {"apikey": key, "Authorization": f"Bearer {key}"}
+    bucket, table = cfg.get("bucket", "blog"), cfg.get("table", "posts")
+    slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", d.name)
+
+    def upload(f):
+        path = f"{slug}/{f.name if f.parent == d else 'card-' + f.name}"
+        if dry:
+            log(f"  [미리보기] 사진 올리기 {bucket}/{path}")
+        else:
+            r = requests.post(f"{base}/storage/v1/object/{bucket}/{path}", headers={**h, "Content-Type": "image/jpeg", "x-upsert": "true"},
+                              data=f.read_bytes(), timeout=120)
+            if r.status_code >= 400:
+                raise RuntimeError(f"사진 올리기 실패 {r.status_code}: {r.text[:200]}")
+        return f"{base}/storage/v1/object/public/{bucket}/{path}"
+    md = (d / "article.md").read_text(encoding="utf-8")
+    urls = {}
+    if (d / "hero.jpg").exists():
+        urls["hero"] = upload(d / "hero.jpg")
+    for k, (f, alt) in body_images(d, post, md).items():
+        urls[k] = upload(f)
+    alts = {k: a for k, (f, a) in body_images(d, post, md).items()}
+    html = mdhtml.convert(md, lambda k: (urls.get(k), post["title"] if k == "hero" else alts.get(k, "")))
+    row = {"slug": slug, "title": post["title"], "description": post.get("meta_description", ""), "content_html": html, "content_md": md,
+           "hero_url": urls.get("hero"), "keywords": [(post.get("keywords") or {}).get("main", "")] + (post.get("keywords") or {}).get("sub", []),
+           "sources": post.get("sources", []), "category": cfg.get("category", ""), "status": "published",
+           "published_at": now_kst().isoformat(timespec="seconds")}
+    if dry:
+        log(f"  [미리보기] {table} 에 글 추가: {row['slug']} ({len(html)}자 HTML)")
+    else:
+        r = requests.post(f"{base}/rest/v1/{table}", headers={**h, "Content-Type": "application/json", "Prefer": "resolution=merge-duplicates,return=representation"},
+                          params={"on_conflict": "slug"}, json=row, timeout=60)
+        if r.status_code >= 400:
+            raise RuntimeError(f"글 저장 실패 {r.status_code}: {r.text[:300]}")
+    url = site["blog"].get("url", site.get("url", "")).rstrip("/") + cfg.get("path", "/blog") + "/" + slug
+    return {"blog": slug, "blog_url": url}
+
+
 # ---------- 워드프레스 ----------
 class WP:
     def __init__(self, site, dry):
@@ -226,6 +271,8 @@ def publish(d, platform, dry=False):
             res = publish_wordpress(site, d, post, dry)
         elif kind == "naver":
             res = publish_naver(site, d, post, dry)
+        elif kind == "appblog":
+            res = publish_appblog(site, d, post, dry)
         else:
             raise SystemExit(f"블로그 종류 {kind} 는 아직 이 엔진에서 올리지 않아요")
     elif platform == "instagram":

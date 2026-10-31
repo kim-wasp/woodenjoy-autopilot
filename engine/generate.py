@@ -114,7 +114,8 @@ def schema(site):
 def site_profile(site):
     keys = ["name", "topic", "audience", "tone", "url", "writing_guide"]
     prof = {k: site[k] for k in keys if site.get(k)}
-    prof["base"] = {"naver": "네이버 블로그", "wordpress": "워드프레스 블로그", "none": "블로그 없음(SNS → 사이트/앱으로 유입)"}[blog_kind(site)]
+    prof["base"] = {"naver": "네이버 블로그", "wordpress": "워드프레스 블로그", "appblog": "앱 안의 블로그(커먼센스 /blog, 애드센스 목표)",
+                    "none": "블로그 없음(SNS → 사이트/앱으로 유입)"}[blog_kind(site)]
     prof["sns"] = [p for p in ("instagram", "threads") if site.get(p, {}).get("enabled")]
     return json.dumps(prof, ensure_ascii=False, indent=1)
 

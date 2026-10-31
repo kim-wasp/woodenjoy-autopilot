@@ -55,7 +55,7 @@ async function viewHome() {
   </div>`;
 }
 const runChip = (r) => r.status !== 'completed' ? '<span class="chip warn">진행 중</span>' : r.conclusion === 'success' ? '<span class="chip ok">성공</span>' : `<span class="chip bad">${esc(r.conclusion || '실패')}</span>`;
-const platforms = (s) => [s.blog?.platform && s.blog.platform !== 'none' ? (s.blog.platform === 'naver' ? '네이버' : '워드프레스') : null, s.instagram?.enabled ? '인스타' : null, s.threads?.enabled ? '스레드' : null].filter(Boolean);
+const platforms = (s) => [s.blog?.platform && s.blog.platform !== 'none' ? ({ naver: '네이버', wordpress: '워드프레스', appblog: '앱 블로그' }[s.blog.platform]) : null, s.instagram?.enabled ? '인스타' : null, s.threads?.enabled ? '스레드' : null].filter(Boolean);
 
 // ---------- 승인 대기 ----------
 async function viewReviewList() {
@@ -187,7 +187,7 @@ async function viewSite(id) {
     <label class="f"><span>글감 후보 키워드 (쉼표로)</span><input type="text" data-k="seeds" data-type="list" value="${v((s.seeds || []).join(', '))}"></label>
   </div>
   <div class="card"><div class="sec">기본 채널</div>
-    <label class="f"><span>기본 채널 (여기에 인스타·스레드를 더할지 아래에서 골라요)</span><select data-k="blog.platform"><option value="none">블로그 없음 (커먼센스처럼 앱·사이트로 유입)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option></select></label>
+    <label class="f"><span>기본 채널 (여기에 인스타·스레드를 더할지 아래에서 골라요)</span><select data-k="blog.platform"><option value="none">블로그 없음 (커먼센스처럼 앱·사이트로 유입)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option><option value="appblog" ${s.blog.platform === 'appblog' ? 'selected' : ''}>앱 안의 블로그 (커먼센스 /blog)</option></select></label>
     <label class="f"><span>블로그 주소</span><input type="text" data-k="blog.url" value="${v(s.blog.url)}"></label>
     <div class="row2"><label class="f"><span>워드프레스 사용자명</span><input type="text" data-k="blog.wordpress.user" value="${v(s.blog.wordpress.user)}"></label>
     <label class="f"><span>앱 비밀번호의 비밀키 이름</span><input type="text" data-k="blog.wordpress.app_password_secret" value="${v(s.blog.wordpress.app_password_secret)}"></label></div>
