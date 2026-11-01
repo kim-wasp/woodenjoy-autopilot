@@ -1,0 +1,38 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 방풍비닐 붙이기 전에 결로·테이프·대피통로
+  카드 점검 실패:
+  - 1장: 아래 빈 공간 큼 (500px)
+  - 2장: 계정명 자리 침범: "커튼·블라인드 뒤 창가 구석부터 매일"
+  - 2장: 계정명 자리 침범: "국립환경과학원 기준"
+  - 2장: 본문이 계정명 자리까지 내려옴
+  - 4장: 계정명 자리 침범: "소방서 안내"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  - 5장: 계정명 자리 침범: "모르겠으면 관리사무소에 위치를 물어보"
+  - 5장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 1장: 아래 빈 공간 큼 (500px)
+   - 카드: 2장: 계정명 자리 침범: "커튼·블라인드 뒤 창가 구석부터 매일"
+   - 카드: 2장: 계정명 자리 침범: "국립환경과학원 기준"
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+   - 카드: 4장: 계정명 자리 침범: "소방서 안내"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+   - 카드: 5장: 계정명 자리 침범: "모르겠으면 관리사무소에 위치를 물어보"
+   - 카드: 5장: 본문이 계정명 자리까지 내려옴
+  카드 점검 실패:
+  - 1장: 계정명 자리 침범: "붙이기 전 체크"
+  - 1장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 1장: 계정명 자리 침범: "붙이기 전 체크"
+   - 카드: 1장: 본문이 계정명 자리까지 내려옴
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e/cards
+  AI 티 다듬기 완료 (바뀐 비율 2%)
+  비용 추정: Claude+사진 약 2,350원 ($1.678)
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 435, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 405, in generate
+    log(f"완료: {d.relative_to(ROOT)} · 점검 {'통과' if not issues else '실패 ' + str(len(issues)) + '건'}")
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e' is not in the subpath of '/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot'
