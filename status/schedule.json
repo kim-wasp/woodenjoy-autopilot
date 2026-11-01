@@ -1,0 +1,33 @@
+{
+  "updated": "2026-11-01T11:36+09:00",
+  "items": [
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
+      "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
+      "platform": "blog",
+      "at": "2026-10-31T20:59:50+09:00",
+      "state": "done",
+      "url": "https://commonsense-one.vercel.app/blog/wedding-gift-money-how-much-2026"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
+      "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
+      "platform": "threads",
+      "at": "2026-11-02T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
+      "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
+      "platform": "instagram",
+      "at": "2026-11-02T21:00+09:00",
+      "state": "planned"
+    }
+  ]
+}
