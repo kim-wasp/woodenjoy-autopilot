@@ -88,6 +88,8 @@ jobs:
             fi
             if [ -n "$REDO" ]; then
               git checkout -q "$REDO"
+              # 프로그램은 main 최신으로 (가지에는 글 폴더만 저장)
+              git restore --source origin/main --worktree -- engine tools sites studio .github 2>/dev/null || true
               dir=$(git diff --name-only origin/main...HEAD -- content | head -1 | cut -d/ -f1-3)
               set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --out "$dir" 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
               git add content && git commit -qm "다시 만들기: $(jq -r .title $dir/post.json)" && git push -q origin "$REDO" || echo "::error::다시 만들기 저장 실패"
