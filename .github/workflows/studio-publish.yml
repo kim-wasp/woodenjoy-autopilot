@@ -102,5 +102,16 @@ jobs:
           fi
           git add content $( [ -d status ] && echo status )
           git diff --cached --quiet && exit 0
-          git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
-          git pull -q --rebase && git push -q
+          # 바뀐 파일만 따로 두었다가 최신 main 위에 다시 얹어서 올려요 (동시에 다른 작업이 올려도 안전)
+          files=$(git diff --cached --name-only); mkdir -p /tmp/keep
+          for f in $files; do mkdir -p "/tmp/keep/$(dirname "$f")"; cp "$f" "/tmp/keep/$f"; done
+          for i in 1 2 3 4; do
+            git fetch -q --depth 1 origin main && git reset -q --hard FETCH_HEAD
+            for f in $files; do mkdir -p "$(dirname "$f")"; cp "/tmp/keep/$f" "$f"; done
+            git add $files
+            git diff --cached --quiet && exit 0
+            git commit -qm "스튜디오 업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
+            git push -q origin HEAD:main && exit 0
+            echo "::warning::올리기 겹침, 다시 시도 $i"; sleep 5
+          done
+          echo "::error::기록 저장 실패"; exit 1
