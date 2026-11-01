@@ -90,7 +90,8 @@ jobs:
               git checkout -q "$REDO"
               dir=$(git diff --name-only origin/main...HEAD -- content | head -1 | cut -d/ -f1-3)
               set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --out "$dir" 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
-              git add content && git commit -qm "다시 만들기: $(jq -r .title $dir/post.json)" && git push -q origin "$REDO"
+              git add content && git commit -qm "다시 만들기: $(jq -r .title $dir/post.json)" && git push -q origin "$REDO" || echo "::error::다시 만들기 저장 실패"
+              save_log "$site-redo"
               gh pr comment "$REDO" --body "🔁 다시 만들었어요 ($( [ $ok = 0 ] && echo '점검 통과' || echo '점검 실패')). 고칠 점: ${NOTES:-없음}"
               git checkout -q main
               continue

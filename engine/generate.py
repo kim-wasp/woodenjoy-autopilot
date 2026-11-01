@@ -374,7 +374,7 @@ def generate(site_id, topic=None, notes=None, out=None):
     log(f"[{site['name']}] 글 만들기 시작 · 주제: {topic or '자동 선택'}")
     res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes), model=llm_cfg.get("model"),
                        web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post")
-    d = Path(out) if out else CONTENT / site_id / f"{now_kst():%Y-%m-%d}-{slugify(res.get('slug') or res['title'])}"
+    d = (ROOT / out).resolve() if out else CONTENT / site_id / f"{now_kst():%Y-%m-%d}-{slugify(res.get('slug') or res['title'])}"
     prev_cost = load_json(d / "post.json", {}).get("cost") if out else None
     issues = []
     for attempt in range(3):
