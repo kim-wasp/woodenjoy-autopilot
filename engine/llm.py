@@ -16,6 +16,16 @@ import requests
 from common import ROOT, log, secret
 
 API = "https://api.anthropic.com/v1/messages"
+
+# 이번 실행에서 쓴 양 (비용 추정용): 모델별 입력·출력 토큰, 웹 검색 횟수
+USAGE = {}
+
+
+def _add_usage(model, inp=0, out=0, searches=0):
+    u = USAGE.setdefault(model, {"input_tokens": 0, "output_tokens": 0, "web_searches": 0, "calls": 0})
+    u["input_tokens"] += inp
+    u["output_tokens"] += out
+    u["web_searches"] += searches
 DEFAULT_MODEL = "claude-opus-5-5"
 
 
@@ -31,11 +41,16 @@ def _stream(body, headers):
     if r.status_code >= 400:
         return r.status_code, r.text, None
     blocks, stop, err = {}, None, None
+    inp = out = searches = 0
     for raw in r.iter_lines(decode_unicode=True):
         if not raw or not raw.startswith("data:"):
             continue
         ev = json.loads(raw[5:].strip())
         t = ev.get("type")
+        if t == "message_start":
+            u = (ev.get("message") or {}).get("usage") or {}
+            inp = sum(u.get(k) or 0 for k in ("input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens"))
+            out = u.get("output_tokens") or 0
         if t == "content_block_start":
             b = dict(ev["content_block"])
             if b.get("type") in ("tool_use", "server_tool_use"):
@@ -51,8 +66,13 @@ def _stream(body, headers):
                 b.setdefault("citations", []).append(d["citation"])
         elif t == "message_delta":
             stop = ev["delta"].get("stop_reason") or stop
+            u = ev.get("usage") or {}
+            out = max(out, u.get("output_tokens") or 0)
+            searches = max(searches, ((u.get("server_tool_use") or {}).get("web_search_requests")) or 0)
         elif t == "error":
             err = ev.get("error", {})
+    _add_usage(body.get("model", "?"), inp, out, searches)
+    USAGE[body.get("model", "?")]["calls"] += 1
     if err:
         code = 529 if err.get("type") == "overloaded_error" else 500
         return code, json.dumps(err, ensure_ascii=False), None

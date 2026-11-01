@@ -17,6 +17,8 @@ from PIL import Image, ImageDraw
 
 from common import log, secret
 
+IMAGES = {}  # 이번 실행에서 만든 사진 수 (모델별)
+
 NO_TEXT = (" Photorealistic, natural light, no text, no letters, no logos, no watermarks, "
            "no people's faces in close-up; never blur or pixelate faces — instead show people from behind, from the side, or naturally out of focus in the background; realistic proportions.")
 
@@ -60,6 +62,7 @@ def generate(prompt, out, cfg, size=(1200, 675)):
             raise RuntimeError(f"OpenAI 이미지 오류 {r.status_code}: {r.text[:300]}")
         d = r.json()["data"][0]
         raw = base64.b64decode(d["b64_json"]) if d.get("b64_json") else requests.get(d["url"], timeout=120).content
+        IMAGES[cfg.get("model", "gpt-image-1")] = IMAGES.get(cfg.get("model", "gpt-image-1"), 0) + 1
     elif provider == "gemini":
         # 구글은 이미지 모델 이름이 자주 바뀌어요 → 설정한 이름부터 차례로 시도
         models = [cfg.get("model")] if cfg.get("model", "").startswith("gemini") else []
@@ -78,6 +81,7 @@ def generate(prompt, out, cfg, size=(1200, 675)):
                 raise RuntimeError(f"Gemini 이미지 오류 {r.status_code}: {r.text[:300]}")
             parts = r.json()["candidates"][0]["content"]["parts"]
             raw = base64.b64decode(next(p["inlineData"]["data"] for p in parts if "inlineData" in p))
+            IMAGES[model] = IMAGES.get(model, 0) + 1
             break
         if raw is None:
             raise RuntimeError(f"Gemini 이미지 모델을 찾지 못했어요 ({err})")

@@ -337,6 +337,31 @@ def humanize(site, md):
 
 
 # ---------- 실행 ----------
+def usage_cost(prev=None):
+    """이번 실행에서 쓴 Claude 토큰·웹 검색·사진 수와 추정 비용. 다시 만들기를 하면 누적해요."""
+    pr = load_json(ROOT / "engine/prices.json", {})
+    c = {"claude": {}, "images": {}, "usd": 0.0}
+    for m, u in llm.USAGE.items():
+        p = (pr.get("claude") or {}).get(m) or (pr.get("claude") or {}).get("default") or {}
+        usd = u["input_tokens"] / 1e6 * p.get("input_per_m", 0) + u["output_tokens"] / 1e6 * p.get("output_per_m", 0) \
+            + u["web_searches"] / 1000 * pr.get("web_search_per_1000", 0)
+        c["claude"][m] = {**u, "usd": round(usd, 4)}
+        c["usd"] += usd
+    for m, n in imagegen.IMAGES.items():
+        each = (pr.get("image_per_each") or {}).get(m, (pr.get("image_per_each") or {}).get("default", 0))
+        c["images"][m] = {"count": n, "usd": round(n * each, 4)}
+        c["usd"] += n * each
+    if prev and prev.get("total_usd"):
+        c["previous_usd"] = round(prev["total_usd"], 4)
+    total = c["usd"] + c.get("previous_usd", 0)
+    c["usd"] = round(c["usd"], 4)
+    c["total_usd"] = round(total, 4)
+    c["total_krw"] = int(round(total * pr.get("usd_krw", 1400), -1))
+    c["note"] = "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+    log(f"  비용 추정: Claude+사진 약 {c['total_krw']:,}원 (${total:.3f})")
+    return c
+
+
 def generate(site_id, topic=None, notes=None, out=None):
     site = load_site(site_id)
     llm_cfg = site.get("llm", {})
@@ -344,6 +369,7 @@ def generate(site_id, topic=None, notes=None, out=None):
     res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes), model=llm_cfg.get("model"),
                        web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post")
     d = Path(out) if out else CONTENT / site_id / f"{now_kst():%Y-%m-%d}-{slugify(res.get('slug') or res['title'])}"
+    prev_cost = load_json(d / "post.json", {}).get("cost") if out else None
     issues = []
     for attempt in range(3):
         make_images(site, res, d)
@@ -368,6 +394,7 @@ def generate(site_id, topic=None, notes=None, out=None):
             (d / "article.md").write_text(new, encoding="utf-8")
     post = load_json(d / "post.json")
     post["checks"] = {"ok": not issues, "issues": issues, "at": now_kst().isoformat(timespec="minutes")}
+    post["cost"] = usage_cost(prev_cost)
     save_json(d / "post.json", post)
     preview_html(site, post, d)
     log(f"완료: {d.relative_to(ROOT)} · 점검 {'통과' if not issues else '실패 ' + str(len(issues)) + '건'}")
