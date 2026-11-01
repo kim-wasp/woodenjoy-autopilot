@@ -1,0 +1,11 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 방풍비닐 붙이기 전에 결로·테이프·대피통로
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 435, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 374, in generate
+    res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes), model=llm_cfg.get("model"),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/llm.py", line 117, in ask_json
+    raise RuntimeError(f"Claude API 오류 {code}: {errtext[:500]}")
+RuntimeError: Claude API 오류 400: {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CgcGjyUQ3WmKSJLyGd3ES"}
