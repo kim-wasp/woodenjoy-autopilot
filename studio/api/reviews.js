@@ -14,7 +14,7 @@ async function detail(dir, ref) {
   const files = await listDir(dir, ref);
   const has = (n) => files.some((f) => f.name === n);
   let html = has('article.html') ? await readFile(`${dir}/article.html`, ref) : null;
-  if (html) html = html.replace(/src="(hero\.jpg|cards\/\d+\.jpg)"/g, (_, f) => `src="${rawUrl(`${dir}/${f}`, ref)}"`);
+  if (html) html = html.replace(/src="(hero\.jpg|photo\d+\.jpg|cards\/\d+\.jpg)"/g, (_, f) => `src="${rawUrl(`${dir}/${f}`, ref)}"`);
   return {
     dir, post, html,
     hero: has('hero.jpg') ? rawUrl(`${dir}/hero.jpg`, ref) : null,
