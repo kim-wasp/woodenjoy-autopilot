@@ -24,9 +24,11 @@ function body(b) {
     case 'svg':
       return `<div class="card" style="height:${b.height || 560}px;${b.transparent ? 'background:transparent' : ''}">${b.svg}</div>`;
     case 'steps':
+      b.items = b.items || [];
       return `<div class="steps">${b.items.map((it, i) => `<div class="step"><div class="num">${i + 1}</div><div><p class="d">${br(it.d)}</p>${it.s ? `<p class="s">${br(it.s)}</p>` : ''}</div></div>`).join('')}</div>`
         + (b.tip ? `<p class="tip">${br(b.tip)}</p>` : '');
     case 'chips':
+      b.legend = b.legend || []; b.example = b.example || b.legend.map((x) => x[0]);
       return `<div class="pname"><p class="ex">${esc(b.label || '쇼핑몰 상품명 예시')}</p><div class="chips">${b.example.map((c, i) => `<span class="chip c${i % 5}">${esc(c)}</span>`).join('')}</div></div>`
         + `<div class="legend">${b.legend.map(([c, d]) => { const i = b.example.indexOf(c); return `<div class="row"><span class="chip c${(i < 0 ? 1 : i) % 5}">${esc(c)}</span><span class="d">${br(d)}</span></div>`; }).join('')}</div>`;
     case 'image': {
@@ -36,6 +38,7 @@ function body(b) {
       return `<div class="card" style="height:${b.height || 640}px"><img src="data:image/jpeg;base64,${data}" style="width:100%;height:100%;object-fit:cover" alt=""></div>`;
     }
     case 'grid':
+      b.items = b.items || [];
       return `<div class="grid">${b.items.map((it) => `<div class="cell">${it.svg || ''}<span class="l">${esc(it.label)}</span></div>`).join('')}</div>`;
     default:
       throw new Error('알 수 없는 카드 종류: ' + b.kind);
