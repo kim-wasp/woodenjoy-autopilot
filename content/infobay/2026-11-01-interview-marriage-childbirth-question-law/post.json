@@ -1,0 +1,165 @@
+{
+  "id": "infobay/2026-11-01-interview-marriage-childbirth-question-law",
+  "site": "infobay",
+  "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
+  "status": "draft",
+  "created_at": "2026-11-01T22:12+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "면접 결혼 계획 질문",
+    "sub": [
+      "면접 출산 계획 질문",
+      "채용절차법 과태료",
+      "면접 금지 질문",
+      "면접 사적인 질문 대처",
+      "남녀고용평등법 7조",
+      "인권위 면접 성차별 진정"
+    ]
+  },
+  "brief": {
+    "reader": "하반기 면접을 앞뒀거나 막 면접에서 결혼·출산 계획 질문을 받고 기분이 상한 20~30대 구직자·이직 준비생",
+    "question": "면접에서 결혼·출산 계획을 묻는 건 불법인가, 받으면 어떻게 해야 하나?",
+    "answer": "업무와 상관없다면 실례가 맞고 차별로 판단된 사례도 있어요. 다만 채용절차법 과태료(최대 500만원)는 서류에 적게 했을 때 얘기예요. 면접에서 말로 묻는 건 고용노동부 해석상 이 법의 과태료 대상이 아니라서 남녀고용평등법이나 인권위 진정 쪽으로 대응해야 해요.",
+    "out_of_scope": "개별 사건이 법 위반인지 판단, 불합격 취소 소송 절차, 공무원 채용 시험 규정, 해외 법률 자세한 내용",
+    "next_action": "면접 직후 질문 내용을 메모하고, 지원서 양식에 금지 항목이 있었는지 확인하기. 앱에서 '면접에서 결혼·출산 계획을 묻는 건 실례다' 카드에 투표하기"
+  },
+  "why_this_topic": "검색량 수치는 확보하지 못했어요. 그 대신 시기와 최신 뉴스를 근거로 골랐어요. 11월은 하반기 공채 면접 시즌이에요. 마침 2026년 10월 30~31일 진학사 캐치가 구직자 1,006명 설문을 내놨고(면접 불쾌 질문 1위 '결혼·연애·출산 계획' 37%), 여러 매체가 한꺼번에 보도했어요. 검색 결과를 보면 '면접에서 물으면 과태료'라는 안내글과 '면접 질문은 과태료 대상이 아니다'라는 고용노동부 해석이 섞여 있어서, 정확하게 정리하면 신뢰를 얻을 여지가 커요. 최근 글(축의금 금액)이나 승인 대기 주제(축의금 5만 vs 10만)와도 겹치지 않고, 앱 신규 카드 '면접에서 결혼·출산 계획을 묻는 건 실례다'와 바로 이어져요.",
+  "meta_description": "면접에서 결혼·출산 계획을 물으면 과태료 500만원일까요? 채용절차법은 서류만 다루고, 면접 질문은 남녀고용평등법·인권위 진정으로 대응해요. 구직자 37%가 꼽은 불쾌 질문 1위, 대처법과 메모 체크리스트를 정리했어요.",
+  "hero_prompt": "Realistic photo of a job interview in a modern Korean office meeting room, an applicant in a navy suit seen from behind facing two interviewers across a white table, one interviewer gesturing as if asking a question, soft natural light, candid, faces not in close-up, no text or signage",
+  "category": "직장",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "면접을 마치고 복도 벤치에 앉아 수첩에 메모하는 지원자"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "면접관 세 명과 지원자 한 명이 마주 앉은 회사 면접실"
+    }
+  ],
+  "sources": [
+    {
+      "title": "면접 때 구직자에 '이 질문' 하면 인재 안온다 – ZDNet Korea",
+      "url": "https://zdnet.co.kr/view/?no=20261030083655"
+    },
+    {
+      "title": "구직자 61% 면접 불쾌하면 입사 포기 – 피앤피뉴스",
+      "url": "https://gosiweek.com/article/1065564132199034"
+    },
+    {
+      "title": "구직자 61% 면접 불쾌하면 연봉·복지 좋아도 입사 포기 – 스타트업엔",
+      "url": "https://www.startupn.kr/news/articleView.html?idxno=60463"
+    },
+    {
+      "title": "남친 있어요? 결혼 계획은? 선 넘는 질문에 취준생들 폭발 – 한국경제",
+      "url": "https://www.hankyung.com/article/202605283450g"
+    },
+    {
+      "title": "채용절차법 – 대한민국 정책브리핑",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148866903"
+    },
+    {
+      "title": "[노동법 극장] 취업 이력서에 결혼 여부까지 적어야 하나요? – 정책브리핑",
+      "url": "https://v.daum.net/v/20210719143523255?f=p"
+    },
+    {
+      "title": "구직자에 키, 결혼 등 일과 무관한 정보 물으면 과태료 500만원 – 서울신문",
+      "url": "https://www.seoul.co.kr/news/society/2019/07/02/20190702500035"
+    },
+    {
+      "title": "면접때 출산 계획 물어도 처벌 못해…입법 시급한 공정채용법 – 서울경제",
+      "url": "https://www.sedaily.com/article/13771154"
+    },
+    {
+      "title": "면접 때 부모직업 물으면 과태료? – 서울경제",
+      "url": "https://www.sedaily.com/article/12344335"
+    },
+    {
+      "title": "채용서류에서 몸무게·혼인여부·재산 물으면 위법 – 서울&",
+      "url": "https://www.seouland.com/arti/culture/culture_general/13765.html"
+    },
+    {
+      "title": "이력서에 결혼 여부, 임신 여부 등의 기재를 요구할 수 있나요? – 세무사신문",
+      "url": "https://webzine.kacta.or.kr/news/articleView.html?idxno=20053"
+    },
+    {
+      "title": "채용절차의 공정화에 관한 법률 일부개정법률안 – 국민참여입법센터",
+      "url": "https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2214844/detailRP"
+    },
+    {
+      "title": "채용절차의 공정화에 관한 법률 전부개정법률안 – 국민참여입법센터",
+      "url": "https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2209064/detailRP"
+    },
+    {
+      "title": "윤상현, 면접 과정서 직무 무관·차별적 질문 금지 법안 대표발의 – 네이트 뉴스",
+      "url": "https://m.news.nate.com/view/20260201n05027"
+    },
+    {
+      "title": "채용 차별 금지 법률, 채용 공고 작성 시 꼭 알아야 할 4가지 – 나인하이어",
+      "url": "https://blog.ninehire.com/glossary-discrimination-laws-in-hiring"
+    },
+    {
+      "title": "고용정책 기본법 제7조 – LBOX",
+      "url": "https://lbox.kr/statute/%EA%B3%A0%EC%9A%A9%EC%A0%95%EC%B1%85%EA%B8%B0%EB%B3%B8%EB%B2%95/%EB%B3%B8%EB%AC%B8%20%3E%20%EC%A0%9C1%EC%9E%A5%20%3E%20%EC%A0%9C7%EC%A1%B0?statuteName=%EA%B3%A0%EC%9A%A9%EC%A0%95%EC%B1%85+%EA%B8%B0%EB%B3%B8%EB%B2%95&statuteType=%EB%B2%95%EB%A5%A0&effectiveDate=2024-01-09&proclamationNumber=%EC%A0%9C+19965%ED%98%B8&proclamationDate=2024-01-09&revisionType=%EC%9D%BC%EB%B6%80%EA%B0%9C%EC%A0%95"
+    },
+    {
+      "title": "인권위 女비서 채용 때 혼인여부·키 물어보면 고용차별 – 이데일리",
+      "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03355446615927608"
+    },
+    {
+      "title": "인권위, 공기업 채용시 성차별적 질문에 재발방지 권고 – 매일노동뉴스",
+      "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=206550"
+    },
+    {
+      "title": "취업 뒤 결혼하면 육아는, 시부모는? 면접 떨어진 여성의 울분 – 이데일리",
+      "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03981926629280816"
+    },
+    {
+      "title": "채용 면접 시 성차별, 집중 인권상담 및 진정 접수 – 국가인권위원회",
+      "url": "https://www.humanrights.go.kr/site/program/board/basicboard/view?menuid=001004002001&pagesize=10&boardtypeid=24&boardid=7608745"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "caption": "면접에서 결혼 계획 물으면 과태료 500만원? 절반은 틀린 말이에요.\n\n구직자 1006명 조사에서 불쾌한 면접 질문 1위는 ‘결혼·연애·출산 계획’(37%)이었어요.\n과태료가 붙는 건 지원서에 혼인 여부를 적게 했을 때예요. 1회 300만원, 3회 이상이면 500만원이에요.\n면접에서 말로 묻는 건 고용노동부 해석상 채용절차법 과태료 대상이 아니에요. 대신 남녀고용평등법이나 인권위 진정으로 대응할 수 있어요.\n\n면접 전에 꺼내 보게 저장해 두세요 📌\n상황별 비교표와 메모 체크리스트는 프로필 링크 블로그에 있어요.\n\n#면접질문 #면접꿀팁 #채용절차법 #취준 #하반기공채"
+  },
+  "threads": {
+    "posts": [
+      "면접에서 “결혼 계획 있어요?” 물으면 회사가 과태료 500만원 문다고 알고 있죠?\n\n반은 맞고 반은 틀려요.\n\n과태료는 지원서에 혼인 여부나 출산 계획을 적게 했을 때 얘기예요. 면접에서 말로 묻는 건 고용노동부 해석상 채용절차법 과태료 대상이 아니에요.\n\n그렇다고 문제없는 질문이냐 하면 그것도 아니에요. 구직자 1006명 조사에서 불쾌한 면접 질문 1위가 이거였거든요(37%).\n\n이 질문, 실례라고 보세요?",
+      "정리하면 이래요.\n\n· 지원서에 혼인·가족 칸 → 채용절차법 과태료 (1회 300만원, 2회 400만원, 3회 이상 500만원)\n· 면접에서 말로 질문 → 이 법의 과태료 대상 아님\n· 공고에 ‘미혼’ 조건 → 남녀고용평등법, 500만원 이하 벌금\n· 결혼 예정 시기 질문, 여성에게만 한 일·가정 병행 질문 → 인권위가 차별로 판단한 사례 있음\n\n면접 직후에 질문 문구, 날짜, 동석자를 메모해 두세요. 내 사건이 어디에 해당하는지는 노무사 상담으로 확인하는 게 정확해요.",
+      "블로그에 상황별 비교표 7가지, 답하는 방법 3가지, 메모 체크리스트를 정리했어요. 면접 질문까지 금지하자는 개정안이 지금 어디까지 왔는지도 같이 적었어요.\n\n앱에서 ‘면접에서 결혼·출산 계획을 묻는 건 실례다’ 카드에 투표하면 세대별 생각도 볼 수 있어요.\n\n{LINK}"
+    ]
+  },
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-01T22:13+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 33813,
+        "output_tokens": 41232,
+        "web_searches": 6,
+        "calls": 3,
+        "usd": 1.0199
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.4219,
+    "total_usd": 1.4219,
+    "total_krw": 1990,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
