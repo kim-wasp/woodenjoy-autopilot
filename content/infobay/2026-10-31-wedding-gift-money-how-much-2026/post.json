@@ -2,7 +2,7 @@
   "id": "infobay/2026-10-31-wedding-gift-money-how-much-2026",
   "site": "infobay",
   "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-10-31T17:35+09:00",
   "requested_topic": "",
   "keywords": {
@@ -111,5 +111,6 @@
     "blog_url": "https://commonsense-one.vercel.app/blog/wedding-gift-money-how-much-2026",
     "blog_at": "2026-10-31T20:59:50+09:00"
   },
-  "category": "관혼상제"
+  "category": "관혼상제",
+  "approve_note": "인스타, 스레드 모두 해당 앱카드 번호 링크로 가도록 해줘"
 }
