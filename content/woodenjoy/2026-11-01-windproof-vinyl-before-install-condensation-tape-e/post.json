@@ -1,0 +1,136 @@
+{
+  "id": "woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
+  "site": "woodenjoy",
+  "title": "방풍비닐 붙이기 전에, 결로·테이프·대피통로 3가지부터 보세요",
+  "status": "draft",
+  "created_at": "2026-11-01T22:05+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "방풍비닐",
+    "sub": [
+      "외풍차단",
+      "창문단열",
+      "뽁뽁이",
+      "창문문풍지",
+      "외풍"
+    ]
+  },
+  "brief": {
+    "reader": "11월 들어 창문·베란다 외풍 때문에 방풍비닐을 사서 직접 붙이려는 사람",
+    "question": "방풍비닐을 붙이고 나서 결로·곰팡이, 테이프 흘러내림, 안전 문제 없이 겨울을 나려면 무엇을 확인해야 하나?",
+    "answer": "창틀을 완전히 말린 뒤 윗면부터 붙이고, 실내 습도를 40~60%로 맞추며 하루 3번 환기하고, 베란다의 경량칸막이·대피공간은 막지 않으면 됩니다.",
+    "out_of_scope": "샷시 교체·창호 공사 비용, 단열 필름 시공법, 뽁뽁이 효과의 정확한 온도 수치",
+    "next_action": "습도계를 하나 두고, 붙이기 전에 창틀을 닦아 말리고, 베란다 옆집 쪽 벽이 경량칸막이인지 확인하기"
+  },
+  "why_this_topic": "제공된 네이버 검색량에서 '방풍비닐'이 월 28,940회로 목록 1위이고 뽁뽁이(17,910), 외풍차단(2,520)도 높습니다. 11월 초는 월동 준비를 시작하는 시기라 검색이 몰립니다. 최근 글(문풍지, 경첩, 도어클로저, 서랍레일)과 겹치지 않으면서 문풍지 글과는 자연스럽게 이어집니다. 검색해 보니 효과 홍보 글은 많은데, 결로·곰팡이와 테이프 흘러내림 후기, 그리고 경량칸막이 같은 피난시설을 막지 말라는 소방서 당부를 한 글에서 함께 다룬 곳은 드물었습니다.",
+  "meta_description": "방풍비닐은 붙이는 것보다 붙인 뒤가 더 중요해요. 곰팡이를 막는 실내 습도 40~60%, 하루 3번 30분 환기, 테이프가 흘러내리는 이유, 베란다 경량칸막이를 막으면 안 되는 이유까지 한 번에 정리했습니다.",
+  "hero_prompt": "A bright Korean apartment living room window in early winter, clear windproof plastic film neatly sealed around the window frame with a zipper opening, a small digital hygrometer on the windowsill, soft morning light, faint condensation at the glass edge, realistic photo, no text, no logos",
+  "category": "",
+  "photos": [],
+  "sources": [
+    {
+      "title": "방풍비닐 이슈가 된 이유 - 판다랭크",
+      "url": "https://pandarank.net/contents/692a9ce0a279e7c4ebd0a3ab"
+    },
+    {
+      "title": "지퍼형 방풍비닐 설치~ 효과 좋네요~ - 클리앙",
+      "url": "https://www.clien.net/service/board/use/10004830"
+    },
+    {
+      "title": "주택 실내공기질 관리 - 서울시 실내공기",
+      "url": "https://cleanindoor.seoul.go.kr/contents.do?contentsNo=36"
+    },
+    {
+      "title": "겨울철 적정 습도는 몇인가요? - 후다닥건강",
+      "url": "https://m.whodadoc.com/ourtown/doctorqna/view?id=103816"
+    },
+    {
+      "title": "공동주택 '경량칸막이' 막으면 위험해요 - 한국아파트신문",
+      "url": "https://www.hapt.co.kr/news/articleView.html?idxno=42958"
+    },
+    {
+      "title": "도봉소방서, '경량칸막이' 물건 적치하지 마세요! - FPN Daily",
+      "url": "https://www.fpn119.co.kr/127604"
+    },
+    {
+      "title": "화재 피난행동요령 아파트 입주자 - 부산광역시교육청 자료",
+      "url": "https://home.pen.go.kr/upload/schoolsafe/na/bbs_3312/ntt_930882/doc_cacdv179f-83v3f-41v43-8fv92-9233v1dabv4646_v9729.pdf"
+    },
+    {
+      "title": "월동준비! 뽁뽁이의 단열효과 - 롯데정밀화학 공식 블로그",
+      "url": "https://www.finelfc.com/644"
+    },
+    {
+      "title": "단열스프레이 효과 '대박' 날까, 뽁뽁이보다 보온 뛰어나 - 이데일리",
+      "url": "https://m.edaily.co.kr/News/Read?newsId=01528486609235752&mediaCodeNo=257"
+    },
+    {
+      "title": "다이소 2000원대 결로 흡수 테이프 - 뉴스와",
+      "url": "https://www.news-wa.com/article/life/lifeinfo/2026/10/31/20261031500021"
+    },
+    {
+      "title": "Pressure-sensitive adhesive - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pressure-sensitive_adhesive"
+    },
+    {
+      "title": "겨울철 실내 습도 조절 방법 - 호빵정보",
+      "url": "https://hobbanginfo.com/%EA%B2%A8%EC%9A%B8-%EC%8B%A4%EB%82%B4-%EC%8A%B5%EB%8F%84-%EC%A1%B0%EC%A0%88-%EB%B0%A9%EB%B2%95-%EA%B0%80%EC%8A%B5%EA%B8%B0/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "caption": "방풍비닐 붙이고 봄에 곰팡이 보는 집, 이유는 따로 있어요\n\n차가운 창틀에선 테이프 힘이 약해서 다음 날 흘러내리기 쉬워요. 완전히 말린 뒤 윗면부터 붙이세요.\n습도계가 60%를 넘으면 곰팡이 주의예요. 환기는 하루 3번, 30분 이상.\n베란다라면 옆집 쪽 경량칸막이는 비닐로 막지 마세요.\n\n붙이는 날 다시 보려면 저장해 두세요 📌\n표로 정리한 전체 글은 프로필 링크 블로그에 있어요.\n\n#방풍비닐 #외풍차단 #창문단열 #뽁뽁이 #셀프집수리"
+  },
+  "threads": {
+    "posts": [
+      "방풍비닐, 붙이는 것보다 붙인 뒤가 더 문제예요.\n\n창과 비닐 사이가 꽉 막히면 공기가 안 돌아서 물방울이 맺히고, 그게 오래 머물면 곰팡이가 생기기 쉬워요. 다음 날 아침 비닐이 흘러내렸다는 후기도 흔한데, 차가운 면에선 양면테이프 힘이 약해지기 때문이에요.\n\n그리고 하나 더. 베란다 옆집 쪽 벽이 '경량칸막이'일 수 있어요. 불났을 때 부수고 옆집으로 피하는 벽이라 비닐로 덮으면 안 됩니다.",
+      "정리하면\n① 창틀을 닦고 완전히 말린 뒤 윗면부터 붙이기\n② 습도 40~60% 유지, 60% 넘으면 환기·제습\n③ 환기는 오전·오후·저녁 하루 3번, 30분 이상\n④ 1992년 이후 3층 이상 아파트는 경량칸막이·대피공간 위치부터 확인",
+      "방풍비닐·뽁뽁이·문풍지가 각각 뭘 막는지 비교표, 습도 구간표, 셀프로 할 일과 업체를 불러야 할 때까지 블로그에 정리해 뒀어요. 붙이기 전에 한 번 보시면 시행착오가 줄어요.\n{LINK}"
+    ]
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 1장: 아래 빈 공간 큼 (500px)",
+      "카드: 2장: 계정명 자리 침범: \"3\"",
+      "카드: 2장: 계정명 자리 침범: \"후기: 박스테이프로 보강\"",
+      "카드: 2장: 계정명 자리 침범: \"봄에 뗄 거라면 벨크로형이 탈부착이 \"",
+      "카드: 2장: 본문이 계정명 자리까지 내려옴",
+      "카드: 3장: 계정명 자리 침범: \"60% 이상\"",
+      "카드: 3장: 계정명 자리 침범: \"곰팡이 자라기 쉬움\"",
+      "카드: 3장: 본문이 계정명 자리까지 내려옴",
+      "카드: 4장: 계정명 자리 침범: \"서울시 실내공기 안내\"",
+      "카드: 4장: 본문이 계정명 자리까지 내려옴",
+      "카드: 5장: 계정명 자리 침범: \"3\"",
+      "카드: 5장: 계정명 자리 침범: \"소방서: 피난 방해물 금지\"",
+      "카드: 5장: 본문이 계정명 자리까지 내려옴",
+      "카드: 6장: 계정명 자리 침범: \"뽁뽁이형\"",
+      "카드: 6장: 계정명 자리 침범: \"비닐이 에어캡 소재\"",
+      "카드: 6장: 본문이 계정명 자리까지 내려옴",
+      "카드: 7장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-01T22:05+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 26556,
+        "output_tokens": 31705,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.7903
+      }
+    },
+    "images": {},
+    "usd": 0.7903,
+    "total_usd": 0.7903,
+    "total_krw": 1110,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
