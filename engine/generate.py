@@ -328,10 +328,17 @@ def humanize(site, md):
     rules = (ROOT / "tools/humanize/quick-rules.md").read_text(encoding="utf-8")[:14000]
     res = llm.ask_json(
         "당신은 한국어 윤문가입니다. 사실·숫자·고유명사·링크·[[...]] 표시·표·제목 구조는 그대로 두고 AI 티가 나는 문장만 고칩니다. 출력은 JSON 한 덩어리.",
-        "아래 규칙으로 블로그 글의 AI 티를 빼 주세요. 바꾸는 양은 30% 이하, 후킹(첫 문단의 강한 말)은 살리세요.\n\n[규칙]\n" + rules
-        + '\n\n[글]\n' + md + '\n\n출력: {"article_md": "고친 전체 글", "changed": ["고친 이유 몇 가지"]}',
+        "아래 규칙으로 블로그 글에서 AI 티가 나는 문장만 찾아 고쳐 주세요. 고칠 게 없으면 빈 목록. 후킹(첫 문단의 강한 말)은 살리세요.\n"
+        "비용 절약을 위해 전체 글을 다시 쓰지 말고, 바꿀 문장만 원문 그대로(from)와 고친 문장(to)으로 주세요. 최대 25개.\n\n[규칙]\n" + rules
+        + '\n\n[글]\n' + md + '\n\n출력: {"edits": [{"from": "원문 문장 그대로", "to": "고친 문장"}]}',
         model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="humanize")
-    new = res.get("article_md") or md
+    new = md
+    if res.get("article_md"):
+        new = res["article_md"]
+    for e in (res.get("edits") or [])[:25]:
+        f, t = (e.get("from") or "").strip(), (e.get("to") or "").strip()
+        if f and t and new.count(f) == 1:
+            new = new.replace(f, t)
     keep = re.findall(r"\[\[[^\]]+\]\]|https?://[^\s)]+|\d[\d,.]*", md)
     lost = [k for k in set(keep) if k not in new]
     ratio = 1 - difflib.SequenceMatcher(None, md, new).ratio()
@@ -391,9 +398,17 @@ def generate(site_id, topic=None, notes=None, out=None):
         log("  점검에 걸림 → 고치기:\n   - " + "\n   - ".join(issues))
         if attempt == 2 or os.environ.get("MOCK_LLM"):
             break
-        res = llm.ask_json(SYSTEM, "아래 JSON 에서 점검에 걸린 부분만 고쳐서 전체 JSON 을 다시 주세요. 사실과 후킹은 유지하세요.\n\n"
-                           f"[점검 결과]\n- " + "\n- ".join(issues) + "\n\n[이전 JSON]\n" + json.dumps(res, ensure_ascii=False),
+        # 비용 절약: 걸린 항목(최상위 키)만 다시 받아서 합쳐요 (전체를 다시 쓰지 않음)
+        need = sorted({"cards" if x.startswith("카드") else "instagram" if x.startswith("인스타") else
+                       "threads" if x.startswith("스레드") else "article_md" for x in issues})
+        part = {k: res.get(k) for k in need}
+        if "article_md" in need:
+            part["meta_description"] = res.get("meta_description")
+        fix = llm.ask_json(SYSTEM, "점검에 걸린 부분만 고쳐 주세요. 사실과 후킹은 유지하세요. "
+                           f"출력은 이 키들만 담은 JSON 한 덩어리: {list(part.keys())}\n\n"
+                           f"[점검 결과]\n- " + "\n- ".join(issues) + "\n\n[고칠 부분]\n" + json.dumps(part, ensure_ascii=False),
                            model=llm_cfg.get("model"), web_search=False, mock_name=f"{site_id}_post")
+        res = {**res, **{k: v for k, v in fix.items() if k in part and v}}
     if not issues and res.get("article_md"):
         new = humanize(site, res["article_md"])
         if new != res["article_md"] and not checks.check(site, load_json(d / "post.json"), new):
