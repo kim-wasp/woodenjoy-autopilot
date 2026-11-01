@@ -1,1 +1,9 @@
-{ "functions": { "api/*.js": { "maxDuration": 60 } } }
+{
+  "functions": { "api/*.js": { "maxDuration": 60 } },
+  "crons": [
+    { "path": "/api/tick?what=generate", "schedule": "5 11 * * *" },
+    { "path": "/api/tick?what=publish", "schedule": "5 22 * * *" },
+    { "path": "/api/tick?what=publish", "schedule": "5 4 * * *" },
+    { "path": "/api/tick?what=publish", "schedule": "5 12 * * *" }
+  ]
+}

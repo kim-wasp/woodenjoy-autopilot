@@ -6,7 +6,7 @@ on:
     - cron: "5,35 * * * *"
   workflow_dispatch:
     inputs:
-      site: { description: "사이트 id (예: infobay)", required: true }
+      site: { description: "사이트 id (예: infobay)", required: false }
       topic: { description: "주제나 제목 (비우면 자동 선택)", required: false }
       notes: { description: "고칠 점 (다시 만들기)", required: false }
       redo_branch: { description: "다시 만들 승인 요청의 브랜치 (비우면 새 글)", required: false }
@@ -25,7 +25,7 @@ jobs:
       - name: 만들 사이트 정하기
         id: pick
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ -n "${{ github.event.inputs.site }}" ]; then
             echo "sites=${{ github.event.inputs.site }}" >> "$GITHUB_OUTPUT"
           else
             echo "sites=$(python3 engine/scheduler.py generate | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
@@ -110,4 +110,11 @@ jobs:
           사이트: $site · 폴더: $dir
           ${issues:-점검 통과}" || gh pr create --base main --head "$branch" --title "$prefix [$site] $title" --body "사이트: $site · 폴더: $dir"
             git checkout -q main
+            # 예약 회차를 만들었다고 기록 (같은 회차를 두 번 만들지 않게)
+            for i in 1 2 3; do
+              git fetch -q origin main && git reset -q --hard origin/main
+              python3 engine/scheduler.py mark-generated "$site"
+              git add status/generated.json && git commit -qm "글 만들기 기록: $site" && git push -q origin HEAD:main && break
+              sleep 5
+            done
           done

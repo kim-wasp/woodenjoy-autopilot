@@ -94,17 +94,41 @@ def cmd_due():
                 print(d.relative_to(ROOT).as_posix(), p)
 
 
+GEN_STATE = ROOT / "status" / "generated.json"
+
+
+def last_slot(g, now):
+    """지금 이전의 가장 최근 '글 만들기' 시각"""
+    t = next_slot(g, now - timedelta(days=8))
+    last = None
+    while t <= now:
+        last = t
+        t = next_slot(g, t + timedelta(minutes=1))
+    return last
+
+
 def cmd_generate():
-    """사이트별 '글 만들기' 시간이 지금(같은 시각의 30분 안)인지"""
+    """'글 만들기' 시각이 지났는데 아직 그 회차를 안 만든 사이트 (GitHub 예약이 늦거나 건너뛰어도 20시간 안이면 따라잡아요)"""
     now = now_kst()
+    state = load_json(GEN_STATE, {})
     for sid in site_ids():
         site = load_site(sid)
         g = (site.get("schedule") or {}).get("generate")
         if not site.get("enabled") or site.get("legacy") or not g:
             continue
-        t = next_slot(g, now - timedelta(minutes=30))
-        if t <= now:
-            print(sid)
+        t = last_slot(g, now)
+        if not t or now - t > timedelta(hours=20):
+            continue
+        done = state.get(sid)
+        if done and datetime.fromisoformat(done) >= t:
+            continue
+        print(sid)
+
+
+def cmd_mark_generated(sid):
+    state = load_json(GEN_STATE, {})
+    state[sid] = now_kst().isoformat(timespec="minutes")
+    save_json(GEN_STATE, state)
 
 
 def cmd_board():
@@ -130,4 +154,7 @@ def cmd_board():
 
 
 if __name__ == "__main__":
-    {"due": cmd_due, "generate": cmd_generate, "board": cmd_board}[sys.argv[1]]()
+    if sys.argv[1] == "mark-generated":
+        cmd_mark_generated(sys.argv[2])
+    else:
+        {"due": cmd_due, "generate": cmd_generate, "board": cmd_board}[sys.argv[1]]()
