@@ -94,6 +94,8 @@ jobs:
               set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --out "$dir" 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
               git add content && git commit -qm "다시 만들기: $(jq -r .title $dir/post.json)" && git push -q origin "$REDO" || echo "::error::다시 만들기 저장 실패"
               save_log "$site-redo"
+              # 승인 대기 목록에 바뀐 제목·점검 결과가 보이게
+              gh pr edit "$REDO" --title "$([ $ok = 0 ] && echo '[승인 대기]' || echo '[점검 실패]') [$site] $(jq -r .title $dir/post.json)" || true
               gh pr comment "$REDO" --body "🔁 다시 만들었어요 ($( [ $ok = 0 ] && echo '점검 통과' || echo '점검 실패')). 고칠 점: ${NOTES:-없음}"
               git checkout -q main
               continue
