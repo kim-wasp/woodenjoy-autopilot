@@ -138,6 +138,11 @@ def pending_topics(site_id):
 
 def published_posts(site_id):
     out = []
+    legacy_dir = load_site(site_id).get("legacy_posts_dir")
+    if legacy_dir:  # 예전 방식으로 쓴 글도 '최근 글'·내부 링크 후보로
+        for f in sorted((ROOT / legacy_dir).glob("*/post.json")):
+            p = load_json(f, {})
+            out.append({"title": p.get("title", ""), "url": (p.get("naver") or {}).get("url")})
     for d in post_dirs(site_id):
         p = load_json(d / "post.json", {})
         url = (p.get("published") or {}).get("blog_url")
@@ -150,7 +155,7 @@ def keyword_data(site):
     kw = load_json(own) or load_json(ROOT / "topics/keywords.json") or {}
     rows = []
     for k, v in (kw.get("keywords") or {}).items():
-        if own.exists() or any(s.replace(" ", "") in k or k in s.replace(" ", "") for s in site.get("seeds", [])):
+        if own.exists() or not site.get("seeds") or any(s.replace(" ", "") in k or k in s.replace(" ", "") for s in site.get("seeds", [])):
             rows.append(f"{k}: 월 {v.get('total')}회 ({v.get('checked')})")
     return "\n".join(rows[:60])
 

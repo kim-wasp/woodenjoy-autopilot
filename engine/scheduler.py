@@ -37,8 +37,18 @@ def due_time(slot, approved, now, grace):
 
 
 def recently(site_id, platform, now, hours=20):
+    ats = []
     for d in post_dirs(site_id):
-        at = (load_json(d / "post.json", {}).get("published") or {}).get(f"{platform}_at")
+        ats.append((load_json(d / "post.json", {}).get("published") or {}).get(f"{platform}_at"))
+    # 예전 방식(posts/)으로 같은 계정에 올린 것도 같이 봐요 (하루 한 편 지키기)
+    legacy_dir = (load_site(site_id).get("legacy_posts_dir") or "")
+    if legacy_dir:
+        for f in (ROOT / legacy_dir).glob("*/post.json"):
+            lp = load_json(f, {})
+            ats.append((lp.get("published") or {}).get(f"{platform}_at"))
+            if platform == "blog":
+                ats.append((lp.get("naver") or {}).get("public_at"))
+    for at in ats:
         if at and now - datetime.fromisoformat(at).astimezone(KST) < timedelta(hours=hours):
             return True
     return False
@@ -72,7 +82,10 @@ def cmd_due():
                 post["approved_at"] = now.isoformat(timespec="minutes")
                 save_json(d / "post.json", post)
             pub = post.get("published") or {}
+            start = (site.get("schedule") or {}).get("start_from")
             for p, t in plan(site, post, now).items():
+                if start and now.strftime("%Y-%m-%d") < start:
+                    continue
                 if pub.get(p) or now < t or p in taken or recently(sid, p, now):
                     continue
                 if p != "blog" and "blog" in post["platforms"] and not pub.get("blog"):

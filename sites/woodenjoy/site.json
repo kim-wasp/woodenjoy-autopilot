@@ -1,9 +1,9 @@
 {
   "id": "woodenjoy",
   "name": "가구·인테리어 (우드엔조이)",
-  "enabled": false,
-  "legacy": true,
-  "note": "지금은 기존 우드엔조이 자동화(posts/, AUTOPILOT.md)로 돌아가요. 3단계에서 이 화면으로 옮겨요.",
+  "enabled": true,
+  "legacy": false,
+  "note": "2026-11-01 스튜디오로 옮김. 예전 글(posts/)은 기존 업로드가 마저 올리고, 새 글은 11/6(금)부터 이 화면 일정으로 올라가요.",
   "topic": "셀프 집수리·가구·인테리어",
   "audience": "집 고치기를 직접 해보려는 사람",
   "tone": "강한 후킹, 사실만",
@@ -12,7 +12,8 @@
     "platform": "naver",
     "naver": {
       "via": "uplika",
-      "category": "인테리어·DIY 자료"
+      "category": "인테리어·DIY 자료",
+      "account_id": "conn_a60a9493d7cf850d"
     }
   },
   "instagram": {
@@ -32,7 +33,7 @@
         "tue",
         "thu"
       ],
-      "time": "19:46"
+      "time": "20:00"
     },
     "slots": {
       "blog": {
@@ -60,7 +61,8 @@
         "time": "21:00"
       }
     },
-    "grace_hours": 3
+    "grace_hours": 3,
+    "start_from": "2026-11-06"
   },
   "approval": true,
   "brand": {
@@ -104,5 +106,6 @@
     "model": "claude-opus-5-5",
     "web_search": true
   },
-  "writing_guide": "네이버 애드포스트용. 첫 3줄 훅, 결론 먼저, 질문형 소제목, 표, 현장 팁 인용구, 셀프/업체 경계, 마무리 3줄 요약. 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만."
+  "writing_guide": "네이버 애드포스트용. 첫 3줄 훅, 결론 먼저, 질문형 소제목, 표, 현장 팁 인용구, 셀프/업체 경계, 마무리 3줄 요약. 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만.",
+  "legacy_posts_dir": "posts"
 }
