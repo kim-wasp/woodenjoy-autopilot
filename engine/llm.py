@@ -114,6 +114,8 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
             web_search = False
             continue
         if code >= 400:
+            if "credit balance" in errtext:
+                raise RuntimeError("Claude API 크레딧이 다 떨어졌어요 → console.anthropic.com → Billing 에서 충전해 주세요")
             raise RuntimeError(f"Claude API 오류 {code}: {errtext[:500]}")
         if data.get("stop_reason") == "pause_turn":  # 웹 검색이 길어지면 잠시 멈춰요 → 이어서 받기
             log("  웹 검색 이어서 진행")
