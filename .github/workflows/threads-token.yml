@@ -26,19 +26,20 @@ jobs:
           CODE: ${{ github.event.inputs.code }}
           TARGET: ${{ github.event.inputs.target || 'THREADS_TOKEN' }}
         run: |
-          [ -n "$APP_ID" ] && [ -n "$APP_SECRET" ] || { echo "THREADS_APP_ID / THREADS_APP_SECRET 비밀키가 없어요"; exit 1; }
-          [ -n "$GH_TOKEN" ] || { echo "GH_PAT 비밀키가 없어요 (README 'E. 토큰 자동 연장' 참고)"; exit 1; }
+          [ -n "$APP_ID" ] && [ -n "$APP_SECRET" ] || { echo "::error::THREADS_APP_ID / THREADS_APP_SECRET 비밀키가 없어요"; exit 1; }
+          [ -n "$GH_TOKEN" ] || { echo "::error::GH_PAT 비밀키가 없어요"; exit 1; }
           CODE="${CODE%%#*}"; CODE="$(echo "$CODE" | sed 's/^.*code=//; s/&.*$//')"
           short=$(curl -s -X POST https://graph.threads.net/oauth/access_token \
             -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code \
             -F redirect_uri="https://example.com/" -F code="$CODE")
           st=$(echo "$short" | jq -r '.access_token // empty')
-          [ -n "$st" ] || { echo "1단계 실패: $(echo "$short" | jq -c 'del(.access_token)')"; echo "code는 한 번만, 1시간 안에 써야 해요. 로그인 주소부터 다시 해 주세요"; exit 1; }
+          [ -n "$st" ] || { echo "::error::1단계 실패: $(echo "$short" | jq -c 'del(.access_token)' 2>/dev/null || echo "$short" | head -c 300) — code는 한 번만, 1시간 안에 써야 해요"; exit 1; }
           echo "::add-mask::$st"
           long=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st")
           lt=$(echo "$long" | jq -r '.access_token // empty')
-          [ -n "$lt" ] || { echo "2단계 실패: $(echo "$long" | jq -c 'del(.access_token)')"; exit 1; }
+          [ -n "$lt" ] || { echo "::error::2단계 실패: $(echo "$long" | jq -c 'del(.access_token)' 2>/dev/null || echo "$long" | head -c 300)"; exit 1; }
           echo "::add-mask::$lt"
           who=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
-          gh secret set "$TARGET" --body "$lt" --repo ${{ github.repository }}
+          gh secret set "$TARGET" --body "$lt" --repo ${{ github.repository }} || { echo "::error::비밀키 저장 실패 (GH_PAT 권한: Secrets 읽기·쓰기 필요)"; exit 1; }
+          echo "::notice::완료 $TARGET @$who"
           echo "완료: $TARGET 저장 (계정 @$who, 60일). 이후 연장은 '토큰 연장'이 자동으로 해요"
