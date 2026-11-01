@@ -53,7 +53,11 @@ module.exports = guard(async (req, res) => {
     post.status = 'ready';
     if (notes) post.approve_note = notes;
     await writeFile(`${dir}/post.json`, JSON.stringify(post, null, 2) + '\n', `승인: ${post.title}`, ref);
-    await gh('PUT', `/repos/${REPO}/pulls/${pr.number}/merge`, { merge_method: 'squash', commit_title: `승인: ${post.title}` });
+    // 방금 고친 내용을 GitHub가 확인하는 데 몇 초 걸려요 → 잠깐 기다렸다 다시 시도
+    for (let i = 0; ; i++) {
+      try { await gh('PUT', `/repos/${REPO}/pulls/${pr.number}/merge`, { merge_method: 'squash', commit_title: `승인: ${post.title}` }); break; }
+      catch (e) { if (i >= 7 || !/405|409/.test(e.message)) throw e; await new Promise((r) => setTimeout(r, 2000)); }
+    }
     await gh('DELETE', `/repos/${REPO}/git/refs/heads/${ref}`).catch(() => {});
     return send(res, 200, { ok: true });
   }
