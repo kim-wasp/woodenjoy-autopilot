@@ -1,0 +1,101 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>:root{--bg:#EDF4F1;--pine:#2F6B57;--deep:#1F4F3F;--ink:#1D2421;--muted:#5D6863;--amber:#FBF3E4;--amber2:#F6E2BF;--amberInk:#9A6416;--line:#CFDDD6;--white:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;margin:0;font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif;color:var(--ink)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;padding:80px 70px 0 70px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;font-size:36px;color:var(--muted);font-weight:500;height:52px}
+.title{margin-top:44px;font-size:92px;line-height:1.22;font-weight:900;color:var(--deep);letter-spacing:-2px}
+.sub{margin-top:28px;font-size:48px;line-height:1.4;font-weight:500;color:var(--ink);letter-spacing:-1px}
+.card{margin-top:48px;background:var(--white);border-radius:40px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.foot{position:absolute;left:0;right:0;bottom:56px;text-align:center;font-size:38px;font-weight:700;color:var(--pine)}
+svg text{font-family:"Noto Sans CJK KR",sans-serif}
+.badge{margin-top:36px;align-self:flex-start;background:var(--amber2);color:var(--amberInk);font-size:44px;font-weight:700;border-radius:999px;padding:14px 34px}
+.hl{color:var(--pine)}
+/* product name slide */
+.pname{margin-top:48px;background:var(--white);border-radius:40px;padding:44px 40px}
+.pname .ex{font-size:38px;color:var(--muted);font-weight:500}
+.chips{margin-top:20px;display:flex;flex-wrap:nowrap;gap:12px;align-items:center}
+.chip{font-size:42px;font-weight:800;border-radius:18px;padding:8px 16px;line-height:1.3}
+.c0{background:#E3ECE8;color:var(--ink)}
+.c1{background:#DCEFE6;color:var(--deep)}
+.c2{background:var(--amber2);color:#7A4E0F}
+.c3{background:#E6E0F3;color:#4A3B7A}
+.c4{background:#F9E2DE;color:#8A3329}
+.legend{margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;gap:24px;align-items:center;background:var(--white);border-radius:28px;padding:14px 26px}
+.row .chip{font-size:42px;min-width:250px;text-align:center}
+.row .d{font-size:44px;font-weight:600;line-height:1.35}
+/* steps */
+.steps{margin-top:40px;display:flex;flex-direction:column;gap:18px}
+.step{display:flex;gap:32px;align-items:center;background:var(--white);border-radius:32px;padding:24px 34px}
+.num{flex:0 0 96px;height:96px;border-radius:50%;background:var(--pine);color:#fff;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.step .d{font-size:50px;font-weight:700;line-height:1.35}
+.step .s{font-size:38px;font-weight:500;color:var(--muted);margin-top:6px;line-height:1.35}
+.tip{margin-top:26px;background:var(--amber);border:3px solid var(--amber2);border-radius:28px;padding:28px 36px;font-size:42px;font-weight:600;line-height:1.4;color:#5B3D0E}
+/* grid */
+.grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cell{background:var(--white);border-radius:32px;height:290px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.cell .l{font-size:50px;font-weight:800;color:var(--deep)}
+.slide{margin-bottom:40px}
+.title.big{font-size:104px}
+
+/* 사진 배경 카드 */
+.slide.photo .top,.slide.photo .title,.slide.photo .sub,.slide.photo .foot,.slide.photo .hl{color:#fff}
+.slide.photo .hl{color:var(--amber2)}
+.slide.photo .title,.slide.photo .sub{text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.slide.photo .badge{margin-top:auto;margin-bottom:170px}
+</style></head><body><section class="slide" id="s1">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>1 / 7</span></div>
+  <h1 class="title big" data-lines="2">방풍비닐 치고<br><span class="hl">곰팡이</span> 핀다?</h1>
+  <p class="sub" data-lines="1">붙이기 전 3가지만 확인</p>
+  <div class="grid"><div class="cell"><span class="l">습도 40~60%</span></div><div class="cell"><span class="l">테이프 자국</span></div><div class="cell"><span class="l">피난시설</span></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s2">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>2 / 7</span></div>
+  <h1 class="title" data-lines="2">결로는<br><span class="hl">습도</span> 싸움</h1>
+  <p class="sub" data-lines="1">비닐 친 창은 숫자로 관리</p>
+  <div class="steps"><div class="step"><div class="num">1</div><div><p class="d">실내 습도 40~60%</p><p class="s">국립환경과학원 권장</p></div></div><div class="step"><div class="num">2</div><div><p class="d">환기 하루 3회 이상</p><p class="s">1회 30분 이상, 맞통풍</p></div></div><div class="step"><div class="num">3</div><div><p class="d">8시간마다 한 번</p><p class="s">기상 후·오후·취침 전</p></div></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s3">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>3 / 7</span></div>
+  <h1 class="title" data-lines="2">습도계<br><span class="hl">60%</span> 넘으면</h1>
+  <p class="sub" data-lines="2">곰팡이 신호예요<br>숫자별 의미 보기</p>
+  <div class="pname"><p class="ex">창가 습도계 숫자 읽는 법</p><div class="chips"><span class="chip c0">40% 미만</span><span class="chip c1">40~60%</span><span class="chip c2">60% 이상</span></div></div><div class="legend"><div class="row"><span class="chip c0">40% 미만</span><span class="d">너무 건조한 쪽</span></div><div class="row"><span class="chip c1">40~60%</span><span class="d">권장 습도 범위</span></div><div class="row"><span class="chip c2">60% 이상</span><span class="d">곰팡이 농도 약 2.7배</span></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s4">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>4 / 7</span></div>
+  <h1 class="title" data-lines="2">이 4곳은<br><span class="hl">막지</span> 마세요</h1>
+  <p class="sub" data-lines="1">불 나면 쓰는 피난 통로예요</p>
+  <div class="grid"><div class="cell"><span class="l">경량칸막이</span></div><div class="cell"><span class="l">대피공간 문</span></div><div class="cell"><span class="l">하향식 피난구</span></div><div class="cell"><span class="l">완강기 창</span></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s5">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>5 / 7</span></div>
+  <h1 class="title" data-lines="2">경량칸막이<br><span class="hl">찾는 법</span></h1>
+  <p class="sub" data-lines="1">베란다 벽을 두드려 보세요</p>
+  <div class="steps"><div class="step"><div class="num">1</div><div><p class="d">두드리면 통통 소리</p><p class="s">9mm 석고보드 벽</p></div></div><div class="step"><div class="num">2</div><div><p class="d">1992년 7월 이후</p><p class="s">3층 이상 베란다 설치 의무</p></div></div><div class="step"><div class="num">3</div><div><p class="d">앞 공간은 비우기</p><p class="s">수납장·선반도 두지 않기</p></div></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s6">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>6 / 7</span></div>
+  <h1 class="title" data-lines="2">테이프 자국<br><span class="hl">기름</span>으로 녹여요</h1>
+  <p class="sub" data-lines="2">봄에 뗄 때<br>흠집 없이 지우기</p>
+  <div class="pname"><p class="ex">테이프 자국 지우는 재료</p><div class="chips"><span class="chip c0">선크림</span><span class="chip c1">소독용 알코올</span><span class="chip c2">칼·거친 수세미</span></div></div><div class="legend"><div class="row"><span class="chip c0">선크림</span><span class="d">바르고 20~30분 뒤 닦기</span></div><div class="row"><span class="chip c1">소독용 알코올</span><span class="d">솜에 묻혀 문지르기</span></div><div class="row"><span class="chip c2">칼·거친 수세미</span><span class="d">유리 흠집 위험, 금지</span></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section>
+<section class="slide" id="s7">
+  <div class="top"><span>WOOD &amp; JOY · 셀프 집수리</span><span>7 / 7</span></div>
+  <h1 class="title" data-lines="2">붙이기 전<br>이것만 <span class="hl">저장</span></h1>
+  <p class="sub" data-lines="2">표·FAQ 전체는<br>프로필 블로그에</p>
+  <div class="grid"><div class="cell"><span class="l">습도 40~60%</span></div><div class="cell"><span class="l">환기 하루 3회</span></div><div class="cell"><span class="l">피난시설 비우기</span></div><div class="cell"><span class="l">자국은 기름으로</span></div></div>
+  
+  <div class="foot">@woodenjoy00</div>
+</section></body></html>
