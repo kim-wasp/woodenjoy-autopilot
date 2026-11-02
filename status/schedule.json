@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T09:42+09:00",
+  "updated": "2026-11-02T13:29+09:00",
   "items": [
     {
       "site": "infobay",
@@ -26,15 +26,6 @@
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
       "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
-      "platform": "threads",
-      "at": "2026-11-02T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
-      "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
       "platform": "instagram",
       "at": "2026-11-02T21:00+09:00",
       "state": "planned"
@@ -42,8 +33,8 @@
     {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-01-interview-marriage-childbirth-question-law",
-      "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
+      "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
+      "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
       "platform": "threads",
       "at": "2026-11-04T12:30+09:00",
       "state": "planned"
@@ -64,6 +55,15 @@
       "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
       "platform": "blog",
       "at": "2026-11-06T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-01-interview-marriage-childbirth-question-law",
+      "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
+      "platform": "threads",
+      "at": "2026-11-06T12:30+09:00",
       "state": "planned"
     },
     {
