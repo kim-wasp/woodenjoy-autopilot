@@ -23,7 +23,22 @@ NO_TEXT = (" Photorealistic, natural light, no text, no letters, no logos, no wa
            "no people's faces in close-up; never blur or pixelate faces — instead show people from behind, from the side, or naturally out of focus in the background; realistic proportions.")
 
 
-def _save(img_bytes, out, size):
+def _realism(im):
+    """AI 사진 특유의 매끈함을 줄여요: 휴대폰 사진 같은 약한 노이즈·살짝 낮은 선명도"""
+    import random
+    from PIL import ImageFilter
+    im = im.filter(ImageFilter.GaussianBlur(0.4))
+    noise = Image.effect_noise(im.size, 18).convert("RGB")
+    im = Image.blend(im, noise, 0.035)
+    # 색을 아주 조금 따뜻하게/차갑게 (매번 다르게)
+    r, g, b = im.split()
+    k = random.uniform(-6, 6)
+    r = r.point(lambda v: max(0, min(255, int(v + k))))
+    b = b.point(lambda v: max(0, min(255, int(v - k))))
+    return Image.merge("RGB", (r, g, b))
+
+
+def _save(img_bytes, out, size, realism=False):
     im = Image.open(io.BytesIO(img_bytes)).convert("RGB")
     w, h = size
     # 가운데를 기준으로 원하는 비율로 자르고 크기 맞추기
@@ -34,7 +49,10 @@ def _save(img_bytes, out, size):
     else:
         nh = int(im.width / r)
         im = im.crop((0, (im.height - nh) // 2, im.width, (im.height - nh) // 2 + nh))
-    im.resize((w, h), Image.LANCZOS).save(out, "JPEG", quality=90)
+    im = im.resize((w, h), Image.LANCZOS)
+    if realism:
+        im = _realism(im)
+    im.save(out, "JPEG", quality=86 if realism else 90)
 
 
 def generate(prompt, out, cfg, size=(1200, 675)):
@@ -73,7 +91,7 @@ def generate(prompt, out, cfg, size=(1200, 675)):
                               params={"key": secret("GEMINI_API_KEY")}, timeout=300,
                               json={"contents": [{"parts": [{"text": full}]}],
                                     "generationConfig": {"responseModalities": ["IMAGE"],
-                                                         "imageConfig": {"aspectRatio": "4:5" if size[1] > size[0] else "16:9"}}})
+                                                         "imageConfig": {"aspectRatio": "1:1" if size[1] == size[0] else ("4:5" if size[1] > size[0] else "16:9")}}})
             if r.status_code == 404:
                 err = f"{model} 없음"
                 continue
@@ -87,6 +105,6 @@ def generate(prompt, out, cfg, size=(1200, 675)):
             raise RuntimeError(f"Gemini 이미지 모델을 찾지 못했어요 ({err})")
     else:
         raise SystemExit(f"알 수 없는 이미지 제공자: {provider}")
-    _save(raw, out, size)
+    _save(raw, out, size, realism=bool((cfg or {}).get("realism")))
     log(f"  대표 이미지 생성 ({provider})")
     return out

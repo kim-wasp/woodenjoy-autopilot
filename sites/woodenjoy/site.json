@@ -98,10 +98,13 @@
   },
   "images": {
     "hero": {
-      "provider": "none"
+      "provider": "gemini",
+      "model": "gemini-3-pro-image",
+      "realism": true,
+      "thumb_text": true
     },
     "blog_inline": "cards",
-    "photo_style": "",
+    "photo_style": "Candid amateur smartphone snapshot (iPhone, 26mm wide lens), taken by a Korean handyman on site in an ordinary lived-in Korean apartment; slightly tilted framing, uneven indoor mixed lighting (window daylight plus warm ceiling light), real dust, scuffs, fingerprints, everyday clutter at the edges, ordinary materials (white PVC window frames, laminate floor, wallpaper seams); not staged, not a showroom, no perfect symmetry, no glossy CGI or 3D-render look, no heavy background blur, no HDR, natural colors.",
     "instagram": "cards",
     "photos": 3
   },
@@ -110,6 +113,6 @@
     "model": "claude-opus-5-5",
     "web_search": true
   },
-  "writing_guide": "네이버 애드포스트용. 첫 3줄 훅, 결론 먼저, 질문형 소제목, 표, 현장 팁 인용구, 셀프/업체 경계, 마무리 3줄 요약. 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만.",
+  "writing_guide": "네이버 애드포스트 + 홈피드(홈판) 노출용. 첫 3줄 훅(독자가 겪는 손해·실수 장면 → 이 글을 읽으면 얻는 것 → 결론 힌트), 결론 먼저, 질문형 소제목, 표, 현장 팁 인용구, 셀프/업체 경계, 중간에 체크리스트 1개(끝까지 읽게), 마무리 3줄 요약 뒤 독자에게 묻는 질문 1개로 끝내기(댓글 유도, 예: 여러분 집 창문은 어떤 타입인가요?). 제목: 핵심 키워드를 앞에, 뒤에는 손해·실수·숫자로 궁금하게(사실만, 45자 이내). 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만.",
   "legacy_posts_dir": "posts"
 }

@@ -10,7 +10,7 @@ on:
       topic: { description: "주제나 제목 (비우면 자동 선택)", required: false }
       notes: { description: "고칠 점 (다시 만들기)", required: false }
       redo_branch: { description: "다시 만들 승인 요청의 브랜치 (비우면 새 글)", required: false }
-      mode: { description: "post 또는 ideas", required: false, default: "post" }
+      mode: { description: "post / ideas / threads / thumb", required: false, default: "post" }
 permissions:
   contents: write
   pull-requests: write
@@ -93,6 +93,20 @@ jobs:
                 sleep 5
               done
               save_log "$site-threads"   # 저장한 다음에 기록 (고친 파일이 남아 있으면 기록 가지로 못 넘어가요)
+              continue
+            fi
+            if [ "$MODE" = "thumb" ]; then
+              # 이미 만든 글의 대표사진+홈피드 썸네일만 다시 만들기 (TOPIC = 글 폴더, NOTES = 썸네일 문구)
+              dir="$TOPIC"
+              python3 engine/generate.py "$site" --thumb "$dir" --notes "$NOTES" 2>&1 | tee -a gen.log
+              rm -rf /tmp/keepd && cp -r "$dir" /tmp/keepd
+              for i in 1 2 3; do
+                git fetch -q origin main && git reset -q --hard origin/main
+                rm -rf "$dir" && cp -r /tmp/keepd "$dir"
+                git add "$dir" && git commit -qm "대표사진 다시 만들기: $dir" && git push -q origin HEAD:main && break
+                sleep 5
+              done
+              save_log "$site-thumb"
               continue
             fi
             if [ "$MODE" = "ideas" ]; then

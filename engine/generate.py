@@ -118,7 +118,13 @@ def schema(site):
                   f'이미지 자리: 첫 문단 뒤 [[hero]], {inline}"']
     if need_photos:
         parts.append(f'"photo_prompts": [{{"id": 1, "prompt": "사진 묘사(영어). {ic["photo_style"] or "주제에 맞는 현실적인 장면"}", "alt": "한국어 대체 텍스트"}}] 최대 {ic["photos"]}개')
-    parts += ['"hero_prompt": "대표 사진 묘사(영어). 글 주제 장면, 사진 속 글자 없음"',
+    if ic["hero"].get("thumb_text"):
+        parts += ['"hero_prompt": "대표 사진 묘사(영어). 홈피드 썸네일용: 이 글이 해결하는 문제 장면(고장·틈·실수 등 before 상태)을 한국 아파트 실내에서 '
+                  '휴대폰으로 대충 찍은 듯한 현실적인 장면 하나. 물건 1~2개에 초점, 화면 가운데는 비교적 단순하게(글자가 올라감), 사진 속 글자 없음"',
+                  '"thumb_text": "대표사진 위에 크게 넣을 후킹 문구. 2줄(줄바꿈 \\n), 줄마다 4~11자. 손해·실수·숫자로 궁금하게, 사실만, 제목과 똑같이 쓰지 말 것. 예: \"이렇게 붙이면\\n바람 그대로 들어와요\""']
+    else:
+        parts += ['"hero_prompt": "대표 사진 묘사(영어). 글 주제 장면, 사진 속 글자 없음"']
+    parts += [
               '"cards": {"slides": [...]}']
     if site.get("instagram", {}).get("enabled"):
         parts.append('"instagram": {"caption": "첫 줄 60자 이내 후킹 → 핵심 2~4줄 → 저장 유도 → 프로필 링크 안내. 링크 금지, 해시태그 5개 이하"}')
@@ -262,12 +268,50 @@ def render_cards(site, d):
     return qa.get("issues", []) if r.returncode else []
 
 
+def make_thumb(d, text):
+    """대표사진(hero.jpg) 위에 후킹 문구를 크게 얹어 네이버 홈피드 썸네일로 만들어요. 원본은 hero_raw.jpg"""
+    import shutil
+    raw = d / "hero_raw.jpg"
+    if not raw.exists():
+        shutil.copy(d / "hero.jpg", raw)
+    r = subprocess.run(["node", str(ROOT / "tools/render_thumb.js"), str(raw), str(d / "hero.jpg"), text],
+                       capture_output=True, text=True)
+    log("  " + (r.stdout.strip() or r.stderr.strip()[:300]))
+
+
+def remake_thumb(site_id, dir_, text=None):
+    """이미 만든 글의 대표사진을 사실적인 사진+후킹 문구 썸네일로 다시 만들어요"""
+    site = load_site(site_id)
+    d = (ROOT / dir_).resolve()
+    post = load_json(d / "post.json", {})
+    ic = img_cfg(site)
+    text = (text or post.get("thumb_text") or "").replace("\\n", "\n")
+    for f in ("hero.jpg", "hero_raw.jpg"):
+        (d / f).unlink(missing_ok=True)
+    imagegen.generate(post["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=(1080, 1080))
+    if text and (d / "hero.jpg").exists():
+        make_thumb(d, text)
+        post["thumb_text"] = text
+    md = (d / "article.md").read_text(encoding="utf-8")
+    if "[[hero]]" not in md:  # 대표사진 자리가 없으면 첫 문단 뒤에
+        parts = md.split("\n\n", 2)
+        md = "\n\n".join(parts[:2] + ["[[hero]]"] + parts[2:]) if len(parts) > 2 else md + "\n\n[[hero]]"
+        (d / "article.md").write_text(md, encoding="utf-8")
+    post.setdefault("cost", {})
+    save_json(d / "post.json", post)
+    preview_html(site, post, d)
+    log(f"대표사진 다시 만들기 끝: {d.name} (이미지 {sum(imagegen.IMAGES.values())}장)")
+
+
 def make_images(site, res, d):
     d.mkdir(parents=True, exist_ok=True)
     ic = img_cfg(site)
     if ic["hero"].get("provider") != "none" and not (d / "hero.jpg").exists() and res.get("hero_prompt"):
         try:
-            imagegen.generate(res["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"])
+            size = (1080, 1080) if ic["hero"].get("thumb_text") else (1200, 675)
+            imagegen.generate(res["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
+            if ic["hero"].get("thumb_text") and res.get("thumb_text") and (d / "hero.jpg").exists():
+                make_thumb(d, res["thumb_text"])
         except Exception as e:  # noqa: BLE001
             log(f"  대표 이미지 실패: {e}")
     for ph in (res.get("photo_prompts") or [])[:ic["photos"]]:
@@ -282,6 +326,8 @@ def make_images(site, res, d):
     # 없는 사진을 가리키는 카드는 정리해요
     for s in res["cards"].get("slides", []):
         b = s.get("body") or {}
+        if b.get("kind") == "image" and b.get("src", "hero.jpg") == "hero.jpg" and (d / "hero_raw.jpg").exists():
+            b["src"] = "hero_raw.jpg"
         if b.get("kind") == "image" and not (d / b.get("src", "hero.jpg")).exists():
             s.pop("body")
         if s.get("photo") and not (d / s["photo"]).exists():
@@ -299,7 +345,7 @@ def write_post(site, res, d, topic):
         "id": f"{site['id']}/{d.name}", "site": site["id"], "title": res["title"], "status": "draft",
         "created_at": now_kst().isoformat(timespec="minutes"), "requested_topic": topic or "",
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
-        "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""),
+        "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""), "thumb_text": res.get("thumb_text", ""),
         "category": res.get("category", ""),
         "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", "")} for p in res.get("photo_prompts") or []],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
@@ -537,8 +583,11 @@ if __name__ == "__main__":
     ap.add_argument("--out")
     ap.add_argument("--ideas", action="store_true")
     ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
+    ap.add_argument("--thumb", help="이 글 폴더의 대표사진+홈피드 썸네일만 다시 만들기 (--notes = 썸네일 문구, 줄바꿈은 \\n)")
     a = ap.parse_args()
-    if a.threads:
+    if a.thumb:
+        remake_thumb(a.site, a.thumb, a.notes)
+    elif a.threads:
         rewrite_threads(a.site, a.threads)
     elif a.ideas:
         ideas(a.site)
