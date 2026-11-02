@@ -31,6 +31,10 @@ def main():
                     who = j.get("username", "?")
                     ok = "OK " if who == cfg.get("handle") else "확인필요"
                     lines.append(f"{ok} {sid} {plat}: @{who} (설정 계정 @{cfg.get('handle')}) {j.get('account_type', '')}")
+                    if plat == "threads":
+                        q = requests.get("https://graph.threads.net/v1.0/me/threads_publishing_limit",
+                                         params={"fields": "quota_usage,config", "access_token": tok}, timeout=30)
+                        lines.append(f"    올리기 권한 확인: {q.status_code} {q.text[:200]}")
             except Exception as e:  # noqa: BLE001
                 lines.append(f"실패 {sid} {plat}: {e}")
     out = ROOT / "status" / "social-check.txt"
