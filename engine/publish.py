@@ -236,20 +236,36 @@ def publish_instagram(site, d, post, dry):
 
 
 def publish_threads(site, d, post, dry):
+    """본문 → 댓글 → 대댓글. 중간에 실패해도 올린 것까지 기록해서, 다음 실행 때 본문을 또 올리지 않고 이어서 올려요."""
     tok = "DRY" if dry else secret(site["threads"]["token_secret"])
-    urls = card_urls(d)
     link = link_for(site, post)
-    ids, reply_to = [], None
+    prog = post.setdefault("threads_progress", {"ids": []})
+    ids = list(prog.get("ids") or [])
+    reply_to = ids[-1] if ids else None
     for i, text in enumerate(post["threads"]["posts"]):
-        data = {"text": text.replace("{LINK}", link), "access_token": tok}
-        data["media_type"] = "TEXT"  # 스레드는 글만 (사장님 지시: 이미지 없이 후킹 글에 집중)
+        if i < len(ids):
+            continue
+        data = {"text": text.replace("{LINK}", link), "access_token": tok, "media_type": "TEXT"}  # 글만 (사장님 지시)
         if reply_to:
             data["reply_to_id"] = reply_to
-        c = _post(dry, f"{TH}/me/threads", data)
-        _wait(dry, TH, c["id"], tok, "status")
-        p = _post(dry, f"{TH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
+        try:
+            c = _post(dry, f"{TH}/me/threads", data)
+            _wait(dry, TH, c["id"], tok, "status")
+            p = _post(dry, f"{TH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
+        except Exception as e:
+            if not dry:
+                prog["ids"] = ids
+                prog["error"] = str(e)[:300]
+                save_json(d / "post.json", post)
+                if "permission" in str(e) and ids:
+                    raise RuntimeError(f"스레드 본문은 올라갔는데 댓글 권한이 없어요(토큰을 댓글 권한까지 넣어 다시 받아야 해요): {e}")
+            raise
         ids.append(p["id"])
         reply_to = p["id"]
+        if not dry:
+            prog["ids"] = ids
+            save_json(d / "post.json", post)
+    post.pop("threads_progress", None)
     return {"threads": ids}
 
 

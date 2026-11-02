@@ -86,6 +86,8 @@ def cmd_due():
             for p, t in plan(site, post, now).items():
                 if start and now.strftime("%Y-%m-%d") < start:
                     continue
+                if p in (post.get("hold") or []):
+                    continue
                 if pub.get(p) or now < t or p in taken or recently(sid, p, now):
                     continue
                 if p != "blog" and "blog" in post["platforms"] and not pub.get("blog"):

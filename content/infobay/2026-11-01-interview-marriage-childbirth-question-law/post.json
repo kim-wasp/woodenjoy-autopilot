@@ -167,5 +167,9 @@
     "blog": "interview-marriage-childbirth-question-law",
     "blog_url": "https://commonsense-one.vercel.app/blog/interview-marriage-childbirth-question-law",
     "blog_at": "2026-11-02T07:37:17+09:00"
-  }
+  },
+  "hold": [
+    "threads"
+  ],
+  "hold_reason": "스레드 토큰에 댓글 권한(threads_manage_replies)이 없어 본문만 올라가고 멈춤. 토큰 다시 받은 뒤 hold 해제"
 }
