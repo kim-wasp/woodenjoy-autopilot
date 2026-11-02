@@ -1,0 +1,29 @@
+# 도메인 등록 가능 여부 확인 (whois). 결과 → status/domain-check.txt
+name: 도메인 확인
+on:
+  workflow_dispatch:
+    inputs:
+      names: { description: "띄어쓰기로 구분한 도메인 목록", required: true }
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y -qq whois >/dev/null
+      - name: 확인
+        env:
+          NAMES: ${{ github.event.inputs.names }}
+        run: |
+          mkdir -p status; out=status/domain-check.txt; echo "확인 시각: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')" > $out
+          for d in $NAMES; do
+            r=$(timeout 20 whois "$d" 2>&1 | head -c 4000)
+            if echo "$r" | grep -qiE "No match for|NOT FOUND|No Data Found|is not registered|requested domain was not found|no entries found|Status: free|available for registration"; then s="가능"
+            elif echo "$r" | grep -qiE "Registrar|Creation Date|Registered Date|등록일|Domain Name:"; then s="등록됨"
+            else s="확인불가"; fi
+            echo "$s $d" >> $out; sleep 1
+          done
+          cat $out
+          git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
+          git add $out && git commit -qm "도메인 확인" && git pull -q --rebase && git push -q
