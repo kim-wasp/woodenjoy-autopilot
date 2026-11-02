@@ -21,6 +21,7 @@ from common import ROOT, load_json, load_site, log, now_kst, save_json, secret, 
 import mdhtml  # noqa: E402
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "kim-wasp/woodenjoy-autopilot")
+TEST = False
 RAW = f"https://raw.githubusercontent.com/{REPO}/main"
 
 
@@ -77,9 +78,11 @@ def publish_naver(site, d, post, dry):
         accs = api.call("GET", "/v1/accounts")
         items = accs if isinstance(accs, list) else (accs.get("data") or accs.get("accounts") or [])
         acc = next(a["id"] for a in items if str(a.get("platform", "")).startswith("naver"))
+    title = ("[시험] " if TEST else "") + post["title"]
     res = api.call("POST", "/v1/posts", {"content": text, "accountIds": [acc], "mediaIds": list(media.values()), "wait": True,
-                                         "options": {"naver_blog": {"title": post["title"], "category": cfg.get("category", ""),
-                                                                    "tags": tags, "layout": "as-is", "openType": "public"}}})
+                                         "options": {"naver_blog": {"title": title, "category": cfg.get("category", ""),
+                                                                    "tags": tags, "layout": "as-is",
+                                                                    "openType": "private" if TEST else "public"}}})
     t = (res.get("targets") or [{}])[0]
     if t.get("status") == "failed":
         raise RuntimeError(f"네이버 업로드 실패: {t.get('error')}")
@@ -297,6 +300,9 @@ def publish(d, platform, dry=False):
     if dry:
         log("미리보기 끝")
         return
+    if TEST:
+        log(f"시험 업로드 끝 (기록하지 않음): {res}")
+        return
     pub.update(res)
     pub[f"{platform}_at"] = now_kst().isoformat(timespec="seconds")
     if all(pub.get(p) for p in post["platforms"]):
@@ -304,6 +310,8 @@ def publish(d, platform, dry=False):
     save_json(d / "post.json", post)
     log(f"완료: {res}")
 
+
+TEST = "--test" in sys.argv  # 네이버 비공개 시험: 제목 앞 [시험], 기록 안 남김
 
 if __name__ == "__main__":
     publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)

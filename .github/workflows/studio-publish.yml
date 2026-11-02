@@ -10,6 +10,7 @@ on:
     inputs:
       branch: { description: "(수동 올리기) 글이 있는 가지. 비우면 예약 확인만", required: false }
       platform: { description: "(수동 올리기) blog / instagram / threads", required: false, default: "blog" }
+      test: { description: "(시험) yes 면 네이버 비공개·기록 안 함", required: false, default: "" }
 permissions:
   contents: write
 concurrency: publish
@@ -27,8 +28,11 @@ jobs:
           if [ -n "$BRANCH" ]; then
             # 수동 올리기: 그 가지의 글 폴더 하나만
             # 프로그램은 main 최신, 글 폴더만 그 가지에서 가져와요
-            dir="content/${BRANCH#studio/}"
-            git fetch -q --depth 1 origin "$BRANCH" && git checkout -q FETCH_HEAD -- "$dir" && git reset -q
+            if [ "${BRANCH#content/}" != "$BRANCH" ]; then dir="$BRANCH"  # main 에 있는 글 폴더를 바로 지정
+            else
+              dir="content/${BRANCH#studio/}"
+              git fetch -q --depth 1 origin "$BRANCH" && git checkout -q FETCH_HEAD -- "$dir" && git reset -q
+            fi
             [ -f "$dir/post.json" ] || { echo "글 폴더 없음: $dir"; exit 1; }
             echo "$dir ${PLATFORM:-blog}" > due.txt
           else
@@ -70,7 +74,7 @@ jobs:
         run: |
           fail=0
           while read -r d p; do
-            set +e; FORCE="${{ github.event.inputs.branch && '1' || '' }}" python3 engine/publish.py "$d" "$p" 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
+            set +e; FORCE="${{ github.event.inputs.branch && '1' || '' }}" python3 engine/publish.py "$d" "$p" ${{ github.event.inputs.test == 'yes' && '--test' || '' }} 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
           done < due.txt
           exit $fail
       - name: 일정표 갱신·기록
@@ -91,6 +95,8 @@ jobs:
             git checkout -q -f "$cur"; git stash pop -q || true
           fi
           rm -f pub.log
+          if [ -n "$BRANCH" ] && [ "${{ github.event.inputs.test }}" = "yes" ]; then exit 0; fi
+          if [ -n "$BRANCH" ] && [ "${BRANCH#content/}" != "$BRANCH" ]; then BRANCH=""; fi
           if [ -n "$BRANCH" ]; then
             # 결과(post.json)를 그 가지에 기록
             dir="content/${BRANCH#studio/}"; cp "$dir/post.json" /tmp/post.json
