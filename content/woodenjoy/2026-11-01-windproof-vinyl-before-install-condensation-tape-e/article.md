@@ -57,7 +57,7 @@
 
 ## 비닐까지 칠 필요 없는 집도 있나요?
 
-바람이 창 전체 말고 틈 몇 군데로만 들어온다면 비닐보다 문풍지가 간단할 수 있어요. 틈 찾는 법은 [문풍지 사기 전에, 향 하나로 바람 들어오는 틈부터 찾으세요](https://blog.naver.com/cafe_peanut/224455782137)에 정리해 두었습니다. 틈을 찾은 뒤라면 [문풍지](https://link.coupang.com/a/h9VDv0Rxo4)로 해결되는 경우도 있어요. *(이 링크는 쿠팡 파트너스 활동의 일환으로, 구매 시 운영자가 일정액의 수수료를 받습니다.)*
+바람이 창 전체 말고 틈 몇 군데로만 들어온다면 비닐보다 문풍지가 간단할 수 있어요. 틈 찾는 법은 [문풍지 사기 전에, 향 하나로 바람 들어오는 틈부터 찾으세요](https://blog.naver.com/cafe_peanut/224455782137)에 정리해 두었습니다. 틈을 찾은 뒤라면 [문풍지](https://link.coupang.com/a/h9VDv0Rxo4)로 해결되는 경우도 있어요.
 
 현관문이 끝까지 안 닫혀서 생기는 바람이라면 비닐보다 [도어클로저 속도 조절, 현관문이 덜 닫힐 때 나사 2개만 보세요](https://blog.naver.com/cafe_peanut/224453318574)를 먼저 확인해 보세요.
 
@@ -82,7 +82,6 @@
 
 - [정책브리핑 - 실내생활 늘어나는 겨울철, 공기질 관리 어떻게?](https://m.korea.kr/news/policyNewsView.do?newsId=148909591)
 - [아던트뉴스 - 겨울철 환기와 결로 곰팡이](https://www.ardentnews.co.kr/news/articleView.html?idxno=21033)
-- [곰팡이 시공 현장 - 방풍비닐 후 결로 곰팡이](https://blog.daum.net/pyangsei/530)
 - [MBC 스마트 리빙 - 창문 테이프 자국 어떻게 지울까?](https://imnews.imbc.com/replay/2020/nwtoday/article/5921015_32531.html)
 - [강원소방 - 피난시설 사용법 알아봐요](https://fire.gwd.go.kr/inje119/partici/partici_notice?articleSeq=11091770)
 - [FPN - 도봉소방서, 경량칸막이 물건 적치하지 마세요](https://www.fpn119.co.kr/127604)

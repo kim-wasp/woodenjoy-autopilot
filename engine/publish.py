@@ -70,6 +70,15 @@ def publish_naver(site, d, post, dry):
         k = m.group(1)
         return f"![{imgs[k][1]}](media:{media[k]}){{.ai}}" if k in media else ""
     text = re.sub(r"\[\[(hero|card:\d+|photo:\d+)\]\]", rep, md)
+    # 쿠팡 링크가 있는 문단 아래에 상품 이미지 카드(@card) 추가 → 눈에 잘 띄게 (네이버는 HTML 배너를 못 넣어요)
+    seen, lines = set(), []
+    for line in text.split("\n"):
+        lines.append(line)
+        for u in re.findall(r"https://link\.coupang\.com/[^\s)\]]+", line):
+            if u not in seen and not line.lstrip().startswith(("-", "|")):
+                seen.add(u)
+                lines += ["", f"@card({u})", ""]
+    text = "\n".join(lines)
     kw = post.get("keywords") or {}
     tags = [t.replace(" ", "") for t in [kw.get("main", "")] + kw.get("sub", []) if t][:10]
     cfg = site["blog"].get("naver", {})

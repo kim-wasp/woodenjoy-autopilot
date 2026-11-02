@@ -205,7 +205,9 @@ def build_prompt(site, topic, notes):
             p.append("[내부 링크 후보 — 관련 있는 글만 본문에 2~3개 자연스럽게 [제목](주소)로]\n" + "\n".join(f"- {x['title']}: {x['url']}" for x in links))
         cp = coupang_items(site)
         if cp:
-            p.append("[쿠팡 파트너스 링크 — 독자에게 실제로 필요한 문단에만 최대 2개, 아래 주소만 그대로 사용, 다른 쇼핑 링크 금지]\n"
+            p.append("[쿠팡 파트너스 링크 — 독자에게 실제로 필요한 문단에만 최대 2개, 아래 주소만 그대로 사용, 다른 쇼핑 링크 금지. "
+                     "대가성 문구는 프로그램이 글 맨 위에 한 번 넣으니 본문·링크 옆에는 쓰지 마세요. "
+                     "링크는 문장 안에 [상품 이름](주소)로만 넣으면 프로그램이 상품 이미지 카드로 바꿔요]\n"
                      + "\n".join(f"- {i['name']} ({i.get('note', '')}): {i['url']}" for i in cp))
     exp = experiences(site)
     if exp:
@@ -306,6 +308,8 @@ def write_post(site, res, d, topic):
         cp = coupang_items(site)
         disclosure = (site.get("monetization") or {}).get("coupang", {}).get(
             "disclosure", "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.")
+        # 대가성 문구는 맨 위 한 번만 (공정위 지침: 본문 첫 부분) → 링크 옆 중복 문구 제거
+        md = re.sub(r"\s*[*_]?\(?이 링크는 쿠팡 파트너스[^)\n]*\)?[*_]?", "", md)
         if cp and "link.coupang.com" in md and disclosure not in md:
             md = disclosure + "\n\n" + md
             post["coupang"] = True
@@ -422,6 +426,17 @@ def generate(site_id, topic=None, notes=None, out=None):
                            f"[점검 결과]\n- " + "\n- ".join(issues) + "\n\n[고칠 부분]\n" + json.dumps(part, ensure_ascii=False),
                            model=llm_cfg.get("model"), web_search=False, mock_name=f"{site_id}_post")
         res = {**res, **{k: v for k, v in fix.items() if k in part and v}}
+    if res.get("article_md") and not os.environ.get("MOCK_LLM"):
+        import sources
+        md2, dead = sources.verify_article((d / "article.md").read_text(encoding="utf-8"))
+        if dead:
+            log(f"  열리지 않는 출처·링크 {len(dead)}개 뺌: " + ", ".join(dead[:5]))
+            (d / "article.md").write_text(md2, encoding="utf-8")
+            res["article_md"] = md2
+            p_ = load_json(d / "post.json")
+            p_["sources"] = [x for x in p_.get("sources", []) if x.get("url") not in dead]
+            p_["dead_links_removed"] = dead
+            save_json(d / "post.json", p_)
     if not issues and res.get("article_md"):
         new = humanize(site, res["article_md"])
         if new != res["article_md"] and not checks.check(site, load_json(d / "post.json"), new):
