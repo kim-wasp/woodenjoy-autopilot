@@ -1,0 +1,217 @@
+{
+  "created": "2026-11-02T12:50+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "식당에서 남녀 손님의 밥 양을 다르게 주면 안 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "같은 가격인데 여성 손님에게 국수 양을 적게 준 식당 경험담이 SNS에서 논란이 됨",
+      "source": {
+        "title": "“남자 국수 하나! 여자 국수 하나!”... 같은 가격에 양은 달랐던 식당",
+        "url": "https://www.insight.co.kr/news/578721"
+      },
+      "why": "'같은 돈 냈으면 같은 양을 줘야 한다'는 쪽과 '남길 걸 줄여 주는 배려이고 더 달라면 주는 관행'이라는 쪽이 갈림. 지역 백반집과 프랜차이즈의 관행 차이, 세대 차이도 드러날 수 있는 주제",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "밥 양을 적게 달라고 하면 값도 깎아줘야 한다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "식당 음식 양 차등 논란 뒤 '적게 주면 덜 받거나 대·중·소로 고르게 하자'는 제안이 나옴",
+      "source": {
+        "title": "“남자 국수 하나! 여자 국수 하나!”... 같은 가격에 양은 달랐던 식당",
+        "url": "https://www.insight.co.kr/news/578721"
+      },
+      "why": "'양이 줄면 값도 줄어야 공정하다'는 쪽과 '가격에는 인건비·자릿값이 들어 있어 덜어 줘도 원가가 거의 같다'는 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "식당에서 아이가 떨어뜨린 수저·그릇은 보호자가 치운다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "아이가 입에 넣었던 숟가락을 보호자가 공용 수저통에 다시 넣고, 바닥에 떨어진 식기도 그냥 둔 사연에 비판이 쏟아짐",
+      "source": {
+        "title": "“빨던 숟가락을 그대로…” 식당서 아이 보호자가 보인 충격 행동",
+        "url": "https://wikitree.co.kr/articles/1170962"
+      },
+      "why": "공용 수저통에 다시 넣으면 안 된다는 데는 대체로 의견이 같지만, 떨어진 식기를 손님이 직접 줍고 치우는 게 예의인지 '직원을 불러 바꿔 달라고 하면 된다'는 게 맞는지는 사람마다 기준이 다름",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "복직하자마자 다시 육아휴직을 쓰는 건 동료에게 미안한 일이다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "육아휴직 후 복직하자마자 둘째를 임신한 직장인이 동료 눈치를 보며 고민하는 사연이 화제가 됨",
+      "source": {
+        "title": "육휴 후 복직 1달 반 만에 둘째 임신...‘10년차 워킹맘’ 낙태 고민에 갑론을박",
+        "url": "https://www.insight.co.kr/news/580081"
+      },
+      "why": "'대체 인력이 없으면 팀이 부담을 진다'는 쪽과 '제도로 보장된 휴직을 미안해하게 만드는 분위기가 문제'라는 쪽이 갈림. 회사 규모나 대체 인력이 있는지에 따라 판단이 달라짐 (원 사연의 임신 중단 부분은 카드에서 뺐음)",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "임신 사실은 안정기 전까지 회사에 알리지 않아도 된다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "복직 직후 임신을 알게 된 직장인이 동료들에게 언제 어떻게 알릴지 부담스러워한 사연",
+      "source": {
+        "title": "“복직 한 달 반 만에 둘째 임신”…낙태 고민하는 워킹맘에 갑론을박",
+        "url": "https://feed.viewus.co.kr/ai/article/353327/"
+      },
+      "why": "'개인 건강 정보라 본인이 정할 때 알리면 된다'는 쪽과 '업무를 미리 나누려면 빨리 공유하는 게 배려'라는 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "친한 친구에게도 재산·투자 수익은 말하지 않는 게 좋다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "투자로 큰 자산을 모은 대기업 직장인이 '털어놓을 사람이 없다'고 쓴 블라인드 글에 반응이 엇갈림",
+      "source": {
+        "title": "'90억 자산' 삼전 직원, \"현타 온다\" 왜?…누리꾼들 '갑론을박'",
+        "url": "https://economist.co.kr/article/view/ecn202610280031"
+      },
+      "why": "'돈 이야기는 가족·배우자 외엔 하지 않는 게 원칙'이라는 쪽과 '친구끼리 재테크 정보를 나누는 건 자연스럽다'는 쪽이 갈림. 세대마다 기준이 다를 수 있음",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "당직 중 일이 없어 쉬는 시간도 근무시간으로 봐야 한다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "'출동 없는 야간엔 쉬는데 연봉이 높다'며 소방관 처우를 문제 삼은 공무원의 익명 글을 두고 논쟁이 벌어짐",
+      "source": {
+        "title": "\"꿀잠에 연봉 2배, 빨대 맞다\"… '소방관 폄하' 공무원 글에 갑론을박",
+        "url": "https://www.hankookilbo.com/news/article/A2026102716240005622"
+      },
+      "why": "'언제든 바로 나가야 하는 대기도 일'이라는 쪽과 '실제로 일한 시간만 근무로 쳐야 한다'는 쪽이 갈림. 특정 직업 논쟁과 정치 발언은 빼고 당직·대기 상황으로 바꿨음",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "전공자가 아니어도 학원을 차려 가르쳐도 된다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "방송인이 운영하는 영어뮤지컬 학원이 대기 줄이 생길 만큼 인기라는 소개 뒤, 운영자가 비전공자라는 자격 논쟁이 붙음",
+      "source": {
+        "title": "Jung Kyung-mi touted a waitlist at her English musical academy... then came debate: “She is not even a major”",
+        "url": "https://sports.khan.co.kr/en/article/202610291258007/"
+      },
+      "why": "'전공·학위가 있어야 믿고 맡긴다'는 쪽과 '실력과 수업 결과로 판단하면 된다'는 쪽이 맞섬. 특정인 대신 일반적인 학원 상황으로 바꿨음",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "교통카드 잔액이 부족하면 버스 기사가 그냥 태워줘도 된다",
+        "track": "NORM",
+        "category": "대중교통",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "잔액 부족 안내가 나와도 요금을 안 내고 버스에 타는 사례가 여러 지역에서 목격됐다는 글이 퍼짐",
+      "source": {
+        "title": "외국인 버스 무임승차 논란 서울 부산 제주서 목격담 확산",
+        "url": "https://news.jkn.co.kr/post/1042796"
+      },
+      "why": "'한 번쯤은 사정을 봐주는 게 인정'이라는 쪽과 '봐주기가 쌓이면 무임승차가 습관이 된다'는 쪽이 갈림. 원래 이슈의 국적 프레임은 혐오로 번질 수 있어 모든 승객에게 해당하는 상황으로 바꿨음",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "지하철 경로 무임 나이는 70세로 올려도 된다",
+        "track": "NORM",
+        "category": "대중교통",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "어르신 지하철 무임승차 비용을 누가 낼지 묻는 대한교통학회 성인 2,000명 조사 결과가 보도됨",
+      "source": {
+        "title": "노인 지하철 무임승차 논란…국민 10명 중 4명 “중앙정부가 주로”",
+        "url": "https://www.segye.com/newsView/20261022517808"
+      },
+      "why": "'기대수명이 늘었으니 기준을 올려야 한다'는 쪽과 '이동권과 복지 효과를 생각하면 지금 기준을 지켜야 한다'는 쪽이 맞섬. 세대별로 결과가 크게 갈릴 수 있음",
+      "status": "pending"
+    }
+  ]
+}
