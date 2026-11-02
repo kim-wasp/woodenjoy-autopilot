@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T07:37+09:00",
+  "updated": "2026-11-02T09:07+09:00",
   "items": [
     {
       "site": "infobay",
@@ -10,15 +10,6 @@
       "at": "2026-10-31T20:59:50+09:00",
       "state": "done",
       "url": "https://commonsense-one.vercel.app/blog/wedding-gift-money-how-much-2026"
-    },
-    {
-      "site": "woodenjoy",
-      "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
-      "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
-      "platform": "blog",
-      "at": "2026-11-02T07:00+09:00",
-      "state": "planned"
     },
     {
       "site": "infobay",
@@ -42,24 +33,6 @@
     {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-01-interview-marriage-childbirth-question-law",
-      "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
-      "platform": "threads",
-      "at": "2026-11-02T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "woodenjoy",
-      "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
-      "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
-      "platform": "threads",
-      "at": "2026-11-02T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-10-31-wedding-gift-money-how-much-2026",
       "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
       "platform": "instagram",
@@ -71,8 +44,35 @@
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-01-interview-marriage-childbirth-question-law",
       "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
+      "platform": "threads",
+      "at": "2026-11-04T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-01-interview-marriage-childbirth-question-law",
+      "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
       "platform": "instagram",
-      "at": "2026-11-02T21:00+09:00",
+      "at": "2026-11-04T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
+      "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
+      "platform": "blog",
+      "at": "2026-11-06T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
+      "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
+      "platform": "threads",
+      "at": "2026-11-06T12:30+09:00",
       "state": "planned"
     },
     {
@@ -81,7 +81,7 @@
       "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
       "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
       "platform": "instagram",
-      "at": "2026-11-02T21:00+09:00",
+      "at": "2026-11-06T21:00+09:00",
       "state": "planned"
     }
   ]

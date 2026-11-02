@@ -132,10 +132,21 @@ def cmd_mark_generated(sid):
 
 
 def cmd_board():
+    """일정표: 실제 올리는 규칙(하루 한 편, 블로그 먼저, 시작일)을 그대로 따라 예상 시각을 계산해요"""
     now = now_kst()
     items = []
     for sid in site_ids():
         site = load_site(sid)
+        sch = site.get("schedule") or {}
+        slots = sch.get("slots", {})
+        start = sch.get("start_from")
+        start_dt = datetime.fromisoformat(start + "T00:00").replace(tzinfo=KST) if start else None
+        used = {}  # 플랫폼별로 이미 차 있는 날짜
+        for d in post_dirs(sid):
+            pub = load_json(d / "post.json", {}).get("published") or {}
+            for p in ORDER:
+                if pub.get(f"{p}_at"):
+                    used.setdefault(p, set()).add(datetime.fromisoformat(pub[f"{p}_at"]).astimezone(KST).date())
         for d in post_dirs(sid):
             post = load_json(d / "post.json", {})
             pub = post.get("published") or {}
@@ -144,10 +155,26 @@ def cmd_board():
                 if pub.get(f"{p}_at"):
                     items.append({**base, "platform": p, "at": pub[f"{p}_at"], "state": "done",
                                   "url": pub.get("blog_url") if p == "blog" else None})
-            if post.get("status") == "ready" and post.get("approved_at"):
-                for p, t in plan(site, post, now).items():
-                    if not pub.get(p):
-                        items.append({**base, "platform": p, "at": t.isoformat(timespec="minutes"), "state": "planned"})
+        for d, post in ready_posts(sid):
+            if not post.get("approved_at"):
+                continue
+            pub = post.get("published") or {}
+            base = {"site": sid, "site_name": site.get("name"), "dir": d.relative_to(ROOT).as_posix(), "title": post.get("title")}
+            blog_t = None
+            for p, t in plan(site, post, now).items():
+                if pub.get(p):
+                    continue
+                floor = max([x for x in (now, start_dt, blog_t) if x is not None])
+                if t < floor:
+                    t = next_slot(slots[p], floor)
+                for _ in range(60):
+                    if t.date() not in used.get(p, set()):
+                        break
+                    t = next_slot(slots[p], t + timedelta(minutes=1))
+                used.setdefault(p, set()).add(t.date())
+                if p == "blog":
+                    blog_t = t
+                items.append({**base, "platform": p, "at": t.isoformat(timespec="minutes"), "state": "planned"})
     items.sort(key=lambda x: x["at"])
     save_json(ROOT / "status/schedule.json", {"updated": now.isoformat(timespec="minutes"), "items": items[-200:]})
     print(f"일정 {len(items)}건 → status/schedule.json")
