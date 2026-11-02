@@ -217,6 +217,7 @@ def check(site_id):
             raise RuntimeError(f"지우기 {r.status_code}: {r.text[:200]}")
         return "쓰기·지우기 됨"
     step(f"블로그 표({table})", posts)
+    step("블로그 글 목록", lambda: "\n    " + "\n    ".join(f"{r.get('status')} {r.get('published_at')} {r.get('category')} {r.get('slug')}" for r in db.get(table, {"select": "slug,status,published_at,category", "order": "published_at.desc", "limit": 20})))
 
     bucket = app.get("bucket", "blog")
 
