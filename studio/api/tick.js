@@ -12,6 +12,6 @@ module.exports = async (req, res) => {
     catch (e) { out[wf] = e.message; }
   };
   if (what === 'generate' || what === 'both') await run('studio-generate.yml');
-  if (what === 'publish' || what === 'both') await run('studio-publish.yml');
+  if (what === 'publish' || what === 'both') { await run('studio-publish.yml'); await run('publish.yml'); } // publish.yml: 예전 방식 남은 글
   send(res, 200, out);
 };
