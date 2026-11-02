@@ -35,6 +35,8 @@ def main():
                         q = requests.get("https://graph.threads.net/v1.0/me/threads_publishing_limit",
                                          params={"fields": "quota_usage,config", "access_token": tok}, timeout=30)
                         lines.append(f"    올리기 권한 확인: {q.status_code} {q.text[:200]}")
+                        q = requests.get("https://graph.threads.net/v1.0/me/replies", params={"fields": "id", "limit": 1, "access_token": tok}, timeout=30)
+                        lines.append(f"    댓글 권한(새 토큰이면 200): {q.status_code} {q.text[:120]}")
             except Exception as e:  # noqa: BLE001
                 lines.append(f"실패 {sid} {plat}: {e}")
     out = ROOT / "status" / "social-check.txt"
