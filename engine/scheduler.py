@@ -84,7 +84,8 @@ def cmd_due():
             pub = post.get("published") or {}
             start = (site.get("schedule") or {}).get("start_from")
             for p, t in plan(site, post, now).items():
-                if start and now.strftime("%Y-%m-%d") < start:
+                st = start.get(p) if isinstance(start, dict) else start  # 플랫폼별 시작일도 가능
+                if st and now.strftime("%Y-%m-%d") < st:
                     continue
                 if p in (post.get("hold") or []):
                     continue
@@ -142,7 +143,10 @@ def cmd_board():
         sch = site.get("schedule") or {}
         slots = sch.get("slots", {})
         start = sch.get("start_from")
-        start_dt = datetime.fromisoformat(start + "T00:00").replace(tzinfo=KST) if start else None
+
+        def start_dt(p):
+            st = start.get(p) if isinstance(start, dict) else start
+            return datetime.fromisoformat(st + "T00:00").replace(tzinfo=KST) if st else None
         used = {}  # 플랫폼별로 이미 차 있는 날짜
         for d in post_dirs(sid):
             pub = load_json(d / "post.json", {}).get("published") or {}
@@ -166,7 +170,7 @@ def cmd_board():
             for p, t in plan(site, post, now).items():
                 if pub.get(p):
                     continue
-                floor = max([x for x in (now, start_dt, blog_t) if x is not None])
+                floor = max([x for x in (now, start_dt(p), blog_t) if x is not None])
                 if t < floor:
                     t = next_slot(slots[p], floor)
                 for _ in range(60):
