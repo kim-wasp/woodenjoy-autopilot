@@ -124,6 +124,10 @@ def schema(site):
         parts.append('"instagram": {"caption": "첫 줄 60자 이내 후킹 → 핵심 2~4줄 → 저장 유도 → 프로필 링크 안내. 링크 금지, 해시태그 5개 이하"}')
     if site.get("threads", {}).get("enabled"):
         parts.append('"threads": {"posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"]}')
+    m = site.get("monetization") or {}
+    if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
+        parts.append('"coupang_wish": [{"name": "이 글 독자가 실제로 살 만한 상품(쇼핑몰에서 쓰는 이름)", "search": "쿠팡 검색어", '
+                     '"after": "본문에서 이 상품을 넣을 문단의 문장 일부(그대로 복사, 15~30자)"}] 0~2개. 아래 등록된 쿠팡 링크에 없는 상품만')
     parts.append('"sources": [{"title": "출처 제목", "url": "https://..."}]')
     return "{\n  " + ",\n  ".join(parts) + "\n}"
 
@@ -315,9 +319,32 @@ def write_post(site, res, d, topic):
             post["coupang"] = True
         (d / "article.md").write_text(md, encoding="utf-8")
         res["article_md"] = md
+    wish = [w for w in (res.get("coupang_wish") or []) if w.get("name")]
+    if wish:
+        post["coupang_wish"] = wish
+        add_coupang_wish(site, wish, d, post["title"])
     save_json(d / "post.json", post)
     save_json(d / "cards.json", res["cards"])
     return post
+
+
+def add_coupang_wish(site, wish, d, title):
+    """링크가 필요한 상품을 쿠팡 링크 목록에 '링크 필요'로 올려요 → 관리화면 '쿠팡 링크'에 보여요"""
+    c = (site.get("monetization") or {}).get("coupang") or {}
+    f = ROOT / c.get("links_file", f"sites/{site['id']}/coupang.json")
+    data = load_json(f, {"items": []})
+    have = {(i.get("search") or i.get("name") or "").replace(" ", "") for i in data.get("items", [])}
+    for w in wish:
+        k = (w.get("search") or w["name"]).replace(" ", "")
+        if k in have:
+            continue
+        data.setdefault("items", []).append({
+            "key": slugify(w.get("search") or w["name"])[:40] or f"item-{len(data['items']) + 1}",
+            "name": w["name"], "search": w.get("search", ""), "url": "",
+            "status": f"링크 필요 ({now_kst():%m/%d}, {title[:30]})",
+            "post_dir": d.relative_to(ROOT).as_posix(), "after": w.get("after", ""), "site": site["id"]})
+        have.add(k)
+    save_json(f, data)
 
 
 def preview_html(site, post, d):

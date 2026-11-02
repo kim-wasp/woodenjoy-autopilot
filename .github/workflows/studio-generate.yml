@@ -130,10 +130,12 @@ jobs:
           ${issues:-점검 통과}" || gh pr create --base main --head "$branch" --title "$prefix [$site] $title" --body "사이트: $site · 폴더: $dir"
             git checkout -q main
             # 예약 회차를 만들었다고 기록 (같은 회차를 두 번 만들지 않게)
+            cp topics/coupang_links.json /tmp/coupang_links.json 2>/dev/null || true
             for i in 1 2 3; do
               git fetch -q origin main && git reset -q --hard origin/main
               python3 engine/scheduler.py mark-generated "$site"
-              git add status/generated.json && git commit -qm "글 만들기 기록: $site" && git push -q origin HEAD:main && break
+              python3 engine/merge_wish.py /tmp/coupang_links.json topics/coupang_links.json
+              git add status/generated.json topics/coupang_links.json && git commit -qm "글 만들기 기록: $site" && git push -q origin HEAD:main && break
               sleep 5
             done
           done

@@ -31,7 +31,7 @@ function renderLogin() {
 }
 
 // ---------- 틀 ----------
-const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['schedule', '일정'], ['cards', '앱 카드'], ['sites', '사이트'], ['guide', '연결 가이드']];
+const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
 function shell(active, inner) {
   app.innerHTML = `<header class="top"><div class="in"><div class="logo">콘텐츠 스튜디오</div>
     <nav class="tabs">${NAV.map(([k, v]) => `<a href="#/${k}" class="${k === active ? 'on' : ''}">${v}</a>`).join('')}</nav>
@@ -44,10 +44,12 @@ const loading = (t) => `<div class="empty">${t || '불러오는 중…'}</div>`;
 // ---------- 홈 ----------
 async function viewHome() {
   shell('home', loading());
-  const [rv, sc, rn, st] = await Promise.all([api('reviews'), api('schedule'), api('run'), sites()]);
+  const [rv, sc, rn, st, cp] = await Promise.all([api('reviews'), api('schedule'), api('run'), sites(), api('coupang').catch(() => ({ items: [] }))]);
+  const need = (cp.items || []).filter((x) => !x.url), have = (cp.items || []).filter((x) => x.url);
   const planned = (sc.items || []).filter((x) => x.state === 'planned').slice(0, 6);
   $('#main').innerHTML = `<div class="page-h"><h1>오늘 할 일</h1></div>
   <div class="grid g2">
+    <a class="card" href="#/coupang" style="color:inherit"><h2>쿠팡 링크</h2><div class="stat">${need.length}<span class="small muted"> 개 필요</span></div><p class="muted small">${need.length ? '글에 넣을 상품 링크를 만들어 주세요 · ' : ''}등록된 링크 ${have.length}개</p></a>
     <a class="card" href="#/review" style="color:inherit"><h2>승인 대기</h2><div class="stat">${rv.items.length}<span class="small muted"> 편</span></div><p class="muted small">확인하고 승인하면 정해진 시간에 올라가요</p></a>
     <div class="card"><h2>다음 업로드</h2><div class="list">${planned.map((x) => `<div class="item"><span class="pf">${PF[x.platform]}</span><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.site_name)} · ${fmt(x.at)}</span></div></div>`).join('') || '<p class="muted small">예정된 업로드가 없어요</p>'}</div></div>
     <div class="card"><h2>최근 실행</h2><div class="list">${rn.runs.map((r) => `<a class="item" href="${esc(r.url)}" target="_blank" rel="noopener"><div class="t"><b>${esc(r.name)}</b><span class="small muted">${fmt(r.created)}</span></div>${runChip(r)}</a>`).join('') || '<p class="muted small">기록 없음</p>'}</div></div>
@@ -267,6 +269,23 @@ async function viewSite(id) {
 }
 
 
+// ---------- 쿠팡 링크 ----------
+async function viewCoupang() {
+  shell('coupang', loading());
+  const { items } = await api('coupang');
+  const need = items.filter((x) => !x.url), have = items.filter((x) => x.url);
+  $('#main').innerHTML = `<div class="page-h"><h1>쿠팡 파트너스 링크</h1></div>
+  <p class="muted small">쿠팡 파트너스 → <b>링크 생성</b>(상품 주소 붙여넣기)으로 만든 <b>https://link.coupang.com/…</b> 주소를 넣어 주세요. 링크가 필요한 상품은 글을 만들 때 프로그램이 골라서 여기에 올려요. 아직 안 올라간 글이면 링크를 넣는 순간 그 글 본문에도 들어가요.</p>
+  <div class="card"><h2>링크 필요 (${need.length})</h2><div class="list">${need.map((x) => `<div class="item" style="align-items:flex-start;flex-wrap:wrap"><div class="t"><b>${esc(x.name)}</b><span class="small muted">쿠팡 검색어: ${esc(x.search || x.name)} · ${esc(x.status || '')}</span></div>
+    <div style="display:flex;gap:6px;width:100%;margin-top:6px"><input type="url" placeholder="https://link.coupang.com/a/..." data-key="${esc(x.key)}" style="flex:1"><button class="btn primary small" data-save="${esc(x.key)}">넣기</button><a class="btn small" href="https://www.coupang.com/np/search?q=${encodeURIComponent(x.search || x.name)}" target="_blank" rel="noopener">쿠팡에서 찾기</a></div></div>`).join('') || '<p class="muted small">지금은 필요한 링크가 없어요</p>'}</div></div>
+  <div class="card" style="margin-top:14px"><h2>상품 직접 추가</h2><div class="row2"><label class="f"><span>상품 이름(쇼핑몰 이름 그대로)</span><input id="nn"></label><label class="f"><span>쿠팡 파트너스 링크</span><input id="nu" type="url" placeholder="https://link.coupang.com/a/..."></label></div><div class="btns"><button class="btn primary" id="add">추가</button></div></div>
+  <div class="card" style="margin-top:14px"><h2>등록된 링크 (${have.length})</h2><div class="list">${have.map((x) => `<div class="item"><div class="t"><b>${esc(x.name)}</b><span class="small muted">${esc(x.url)}</span></div><button class="ghost small" data-del="${esc(x.key)}">빼기</button></div>`).join('')}</div></div>`;
+  const post = async (b) => { try { const r = await api('coupang', { method: 'POST', body: b }); toast(r.message || '저장했어요'); setTimeout(viewCoupang, 1200); } catch (e) { if (e.message !== 'login') toast(e.message); } };
+  $('#main').querySelectorAll('[data-save]').forEach((b) => { b.onclick = () => { const v = $(`input[data-key="${b.dataset.save}"]`).value.trim(); if (!v) return toast('링크를 넣어 주세요'); post({ action: 'set', key: b.dataset.save, url: v }); }; });
+  $('#main').querySelectorAll('[data-del]').forEach((b) => { b.onclick = () => { if (confirm('목록에서 뺄까요?')) post({ action: 'remove', key: b.dataset.del }); }; });
+  $('#add').onclick = () => post({ action: 'add', name: $('#nn').value.trim(), url: $('#nu').value.trim() });
+}
+
 // ---------- 앱 카드 (커먼센스) ----------
 async function viewCards(siteId) {
   shell('cards', loading());
@@ -324,6 +343,7 @@ async function route() {
     if (page === 'ideas') return viewIdeas();
     if (page === 'schedule') return viewSchedule();
     if (page === 'cards') return viewCards(arg);
+    if (page === 'coupang') return viewCoupang();
     if (page === 'sites') return arg ? viewSite(arg) : viewSites();
     if (page === 'guide') return viewGuide();
     return viewHome();
