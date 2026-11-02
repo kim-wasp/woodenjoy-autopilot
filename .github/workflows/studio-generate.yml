@@ -81,6 +81,20 @@ jobs:
             git checkout -q -f "$cur"
           }
           for site in ${{ steps.pick.outputs.sites }}; do
+            if [ "$MODE" = "threads" ]; then
+              # 이미 승인된 글의 스레드 문구만 다시 쓰기 (TOPIC = 글 폴더들, 띄어쓰기로 구분)
+              for dir in $TOPIC; do python3 engine/generate.py "$site" --threads "$dir" 2>&1 | tee -a gen.log; done
+              save_log "$site-threads"
+              files=$(for dir in $TOPIC; do echo "$dir/post.json"; done); mkdir -p /tmp/keep
+              for f in $files; do mkdir -p "/tmp/keep/$(dirname "$f")"; cp "$f" "/tmp/keep/$f"; done
+              for i in 1 2 3; do
+                git fetch -q origin main && git reset -q --hard origin/main
+                for f in $files; do cp "/tmp/keep/$f" "$f"; done
+                git add $files && git commit -qm "스레드 문구 다시 쓰기: $site" && git push -q origin HEAD:main && break
+                sleep 5
+              done
+              continue
+            fi
             if [ "$MODE" = "ideas" ]; then
               python3 engine/generate.py "$site" --ideas
               git add sites && git commit -qm "글감 추천: $site" && git pull -q --rebase && git push -q || true

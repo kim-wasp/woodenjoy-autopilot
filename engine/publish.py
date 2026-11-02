@@ -242,10 +242,7 @@ def publish_threads(site, d, post, dry):
     ids, reply_to = [], None
     for i, text in enumerate(post["threads"]["posts"]):
         data = {"text": text.replace("{LINK}", link), "access_token": tok}
-        if i == 0 and urls:
-            data.update({"media_type": "IMAGE", "image_url": urls[0]})
-        else:
-            data["media_type"] = "TEXT"
+        data["media_type"] = "TEXT"  # 스레드는 글만 (사장님 지시: 이미지 없이 후킹 글에 집중)
         if reply_to:
             data["reply_to_id"] = reply_to
         c = _post(dry, f"{TH}/me/threads", data)

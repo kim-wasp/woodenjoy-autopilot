@@ -96,6 +96,8 @@ def check(site, post, article_md=None):
                 issues.append(f"스레드 {i + 1}: {len(body)}자 (500자 이하)")
             if i < len(th) - 1 and ("{LINK}" in t or URL.search(t)):
                 issues.append(f"스레드 {i + 1}: 링크는 마지막 글에만")
+        if th and len(th[0]) > 250:
+            issues.append(f"스레드 본문: {len(th[0])}자 (짧게, 250자 이하)")
         texts["스레드"] = "\n".join(th)
 
     for label, text in texts.items():

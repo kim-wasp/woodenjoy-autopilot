@@ -48,6 +48,15 @@ STAGE_GUIDE = {
     "adpost": "[수익화 단계: 네이버 애드포스트]\n- 첫 3줄 훅, 결론 먼저, 질문형 소제목, 표와 이미지가 많은 글(모바일에서 끝까지 스크롤하게). 체류시간과 공감·저장을 노리세요.",
 }
 
+THREADS_GUIDE = """스레드 규칙 (사장님 지시):
+- 말투: 친구한테 말하듯 친근한 반말. 짧게. 후킹이 가장 중요.
+- posts[0] 본문: 2~5줄, 200자 이내. 첫 줄에서 바로 멈추게(반전·도발 질문·"이거 나만 그래?"). 재미있는 에피소드나 상황 한 장면으로 시작해요.
+  에피소드는 사실만: 기사·커뮤니티에서 실제 화제가 된 사연, 또는 "~하면 어떡할래?" 같은 가정 상황. 내가 겪은 척 지어낸 경험담 금지(운영자 경험 목록에 있는 것만 가능).
+  본문에는 링크·해시태그·숫자 나열·정보 정리 금지. 이미지 없이 글만 올라가요.
+- posts[1] 댓글(본문에 다는 첫 댓글): 반말, 전하고 싶은 핵심 정보 2~4줄.
+- posts[2] 대댓글: 반말 1~2줄 + {LINK} (더 자세한 건 여기).
+"""
+
 CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
 - slides 6~8장. 1장째는 표지(가장 강한 후킹, "big": true), 마지막 장은 저장·유입 안내.
 - 장마다 새 정보 하나. 같은 문장 반복 금지.
@@ -112,7 +121,7 @@ def schema(site):
     if site.get("instagram", {}).get("enabled"):
         parts.append('"instagram": {"caption": "첫 줄 60자 이내 후킹 → 핵심 2~4줄 → 저장 유도 → 프로필 링크 안내. 링크 금지, 해시태그 5개 이하"}')
     if site.get("threads", {}).get("enabled"):
-        parts.append('"threads": {"posts": ["본문(후킹 질문/반전, 500자 이내)", "댓글1(핵심 정리)", "댓글2(블로그·사이트로 이어지는 이유 + {LINK})"]}')
+        parts.append('"threads": {"posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"]}')
     parts.append('"sources": [{"title": "출처 제목", "url": "https://..."}]')
     return "{\n  " + ",\n  ".join(parts) + "\n}"
 
@@ -216,6 +225,8 @@ def build_prompt(site, topic, notes):
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
     p.append(CARD_GUIDE)
+    if site.get("threads", {}).get("enabled"):
+        p.append(THREADS_GUIDE)
     if img_cfg(site)["instagram"] == "photo_cards":
         p.append(PHOTO_CARD_GUIDE)
     p.append("[출력 JSON 형식]\n" + schema(site))
@@ -437,6 +448,27 @@ def ideas(site_id):
     log(f"글감 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
 
 
+def rewrite_threads(site_id, dir_):
+    """이미 만든 글의 스레드 문구만 새 규칙으로 다시 써요 (글·카드는 그대로)"""
+    site = load_site(site_id)
+    d = (ROOT / dir_).resolve()
+    post = load_json(d / "post.json")
+    md = (d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else ""
+    exp = experiences(site) if "experiences" in globals() else ""
+    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
+                       + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"posts": ["본문", "댓글", "대댓글 + {LINK}"]}',
+                       model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
+    posts = [x for x in (res.get("posts") or []) if x]
+    if len(posts) < 2:
+        raise SystemExit("스레드 문구를 못 받았어요")
+    if "{LINK}" not in posts[-1]:
+        posts[-1] += "\n{LINK}"
+    post["threads"] = {"posts": posts}
+    post.setdefault("cost", {})
+    save_json(d / "post.json", post)
+    log(f"스레드 다시 씀: {post['title']}\n  " + "\n  ---\n  ".join(posts))
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("site")
@@ -444,8 +476,11 @@ if __name__ == "__main__":
     ap.add_argument("--notes")
     ap.add_argument("--out")
     ap.add_argument("--ideas", action="store_true")
+    ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
     a = ap.parse_args()
-    if a.ideas:
+    if a.threads:
+        rewrite_threads(a.site, a.threads)
+    elif a.ideas:
         ideas(a.site)
     else:
         _, iss = generate(a.site, a.topic, a.notes, a.out)
