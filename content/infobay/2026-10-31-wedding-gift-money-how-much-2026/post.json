@@ -114,9 +114,5 @@
   "category": "관혼상제",
   "approve_note": "인스타, 스레드에 해당 앱카드 링크로 가도록 해줘",
   "approved_at": "2026-11-01T11:36+09:00",
-  "cost": {},
-  "hold": [
-    "threads"
-  ],
-  "hold_reason": "스레드 토큰에 댓글 권한(threads_manage_replies)이 없어 본문만 올라가고 멈춤. 토큰 다시 받은 뒤 hold 해제"
+  "cost": {}
 }
