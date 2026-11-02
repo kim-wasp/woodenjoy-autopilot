@@ -98,6 +98,9 @@ def check(site, post, article_md=None):
                 issues.append(f"스레드 {i + 1}: 링크는 마지막 글에만")
         if th and len(th[0]) > 250:
             issues.append(f"스레드 본문: {len(th[0])}자 (짧게, 250자 이하)")
+        jon = sum(len(re.findall(r"(요|니다|세요)[.!?]?(\s|$)", t)) for t in th)
+        if jon > 1:
+            issues.append(f"스레드: 존댓말 문장 {jon}개 (친근한 반말로)")
         texts["스레드"] = "\n".join(th)
 
     for label, text in texts.items():

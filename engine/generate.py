@@ -49,7 +49,9 @@ STAGE_GUIDE = {
 }
 
 THREADS_GUIDE = """스레드 규칙 (사장님 지시):
-- 말투: 친구한테 말하듯 친근한 반말. 짧게. 후킹이 가장 중요.
+- 말투: 친구한테 말하듯 친근한 반말. 본문·댓글·대댓글 모든 문장을 반말로 끝내요(~야, ~지?, ~거든, ~더라, ~해, ~임).
+  '~요', '~습니다', '~세요' 로 끝나는 문장 금지. 예) "축의금 5만원 내면 욕먹을까?" "이거 나만 몰랐어?" "생각보다 많더라"
+- 짧게. 후킹이 가장 중요.
 - posts[0] 본문: 2~5줄, 200자 이내. 첫 줄에서 바로 멈추게(반전·도발 질문·"이거 나만 그래?"). 재미있는 에피소드나 상황 한 장면으로 시작해요.
   에피소드는 사실만: 기사·커뮤니티에서 실제 화제가 된 사연, 또는 "~하면 어떡할래?" 같은 가정 상황. 내가 겪은 척 지어낸 경험담 금지(운영자 경험 목록에 있는 것만 가능).
   본문에는 링크·해시태그·숫자 나열·정보 정리 금지. 이미지 없이 글만 올라가요.
@@ -448,6 +450,17 @@ def ideas(site_id):
     log(f"글감 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
 
 
+def th_problems(posts):
+    """반말·길이 점검"""
+    out = []
+    jon = sum(len(re.findall(r"(요|니다|세요)[.!?]?(\s|$)", t)) for t in posts)
+    if jon:
+        out.append(f"존댓말 문장 {jon}개 → 전부 반말로")
+    if posts and len(posts[0]) > 200:
+        out.append(f"본문 {len(posts[0])}자 → 200자 이내로 줄이기")
+    return out
+
+
 def rewrite_threads(site_id, dir_):
     """이미 만든 글의 스레드 문구만 새 규칙으로 다시 써요 (글·카드는 그대로)"""
     site = load_site(site_id)
@@ -459,6 +472,11 @@ def rewrite_threads(site_id, dir_):
                        + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"posts": ["본문", "댓글", "대댓글 + {LINK}"]}',
                        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
     posts = [x for x in (res.get("posts") or []) if x]
+    bad = th_problems(posts)
+    if bad:
+        res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n아래 스레드 글을 고쳐 주세요: " + " / ".join(bad) + "\n\n" + json.dumps({"posts": posts}, ensure_ascii=False)
+                           + '\n\n출력: {"posts": [...]}', model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
+        posts = [x for x in (res.get("posts") or []) if x] or posts
     if len(posts) < 2:
         raise SystemExit("스레드 문구를 못 받았어요")
     if "{LINK}" not in posts[-1]:
