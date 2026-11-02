@@ -104,10 +104,9 @@ def publish_threads(api, post, cover_url, link):
     for i, text in enumerate(post["threads"]["posts"]):
         text = text.replace("[네이버 글 링크]", link)
         data = {"text": text, "access_token": tok}
-        if i == 0:
-            data.update({"media_type": "IMAGE", "image_url": cover_url})
-        else:
-            data.update({"media_type": "TEXT", "reply_to_id": reply_to})
+        data["media_type"] = "TEXT"  # 스레드는 글만 (사장님 지시)
+        if reply_to:
+            data["reply_to_id"] = reply_to
         c = api.post(f"{TH}/{uid}/threads", data)
         api.wait_ready(TH, c["id"], tok, field="status", ok="FINISHED")
         if not api.dry:
