@@ -84,7 +84,6 @@ jobs:
             if [ "$MODE" = "threads" ]; then
               # 이미 승인된 글의 스레드 문구만 다시 쓰기 (TOPIC = 글 폴더들, 띄어쓰기로 구분)
               for dir in $TOPIC; do python3 engine/generate.py "$site" --threads "$dir" 2>&1 | tee -a gen.log; done
-              save_log "$site-threads"
               files=$(for dir in $TOPIC; do echo "$dir/post.json"; done); mkdir -p /tmp/keep
               for f in $files; do mkdir -p "/tmp/keep/$(dirname "$f")"; cp "$f" "/tmp/keep/$f"; done
               for i in 1 2 3; do
@@ -93,6 +92,7 @@ jobs:
                 git add $files && git commit -qm "스레드 문구 다시 쓰기: $site" && git push -q origin HEAD:main && break
                 sleep 5
               done
+              save_log "$site-threads"   # 저장한 다음에 기록 (고친 파일이 남아 있으면 기록 가지로 못 넘어가요)
               continue
             fi
             if [ "$MODE" = "ideas" ]; then
