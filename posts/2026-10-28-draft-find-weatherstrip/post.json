@@ -1,6 +1,6 @@
 {
   "id": "2026-10-28-draft-find-weatherstrip",
-  "status": "ready",
+  "status": "published",
   "platforms": [
     "naver",
     "instagram",
@@ -114,6 +114,13 @@
   "naver_url": "https://blog.naver.com/cafe_peanut/224455782137",
   "published": {
     "instagram": "18133979626684317",
-    "instagram_at": "2026-10-30T12:23:11.221412+00:00"
+    "instagram_at": "2026-10-30T12:23:11.221412+00:00",
+    "threads": [
+      "18119185832002655",
+      "18092864534228493",
+      "18016511840970963"
+    ],
+    "threads_at": "2026-11-02T03:38:51.880047+00:00",
+    "at": "2026-11-02T03:38:51.880047+00:00"
   }
 }
