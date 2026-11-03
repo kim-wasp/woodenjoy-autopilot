@@ -1,0 +1,137 @@
+{
+  "id": "infobay/2026-11-03-condolence-money-how-much-2026",
+  "site": "infobay",
+  "title": "조의금 5만원 vs 10만원? 설문 1위와 성균관 권고가 다른 이유",
+  "status": "ready",
+  "created_at": "2026-11-03T20:44+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "조의금 얼마",
+    "sub": [
+      "부의금 5만원",
+      "조의금 10만원",
+      "조의금 봉투 쓰는 법",
+      "직장 동료 부친상 조의금",
+      "김영란법 조의금",
+      "부의 근조"
+    ]
+  },
+  "brief": {
+    "reader": "부고 문자를 받고 5만원과 10만원 사이에서 고민하는 20~40대 직장인",
+    "question": "조의금, 관계별로 얼마를 내고 봉투에는 뭐라고 써야 할까?",
+    "answer": "2026년 설문에서는 10만원을 낸다는 답(61.8%)이 가장 많았어요. 성균관유도회는 5만원이면 충분하다고 권고했어요. 업무로만 아는 사이는 5만원, 가까운 사이는 10만원에서 시작하면 되고, 받는 쪽이 직무 관련 공직자라면 현금은 5만원까지만 낼 수 있어요.",
+    "out_of_scope": "결혼식 축의금 기준, 장례 절차와 상주 쪽 비용, 조의금 세금 문제",
+    "next_action": "관계별 판단표에서 내 상황을 찾아 금액을 정하고, 봉투 앞면에 ‘부의’나 ‘근조’를 쓴 뒤 커먼센스 앱에서 투표해 보기"
+  },
+  "why_this_topic": "최근 글 두 편(축의금 평균, 면접 결혼 질문)과 승인 대기 중인 글(축의금 5 vs 10)이 모두 결혼식이나 면접 이야기라서 장례 쪽 조의금으로 골랐어요. 정확한 검색량 자료는 찾지 못했어요. 대신 최근 1~2개월 사이 ‘조의금 액수 관계별 기준표 2026’, ‘부의금 5만원이면 적은 걸까’, ‘조의금 봉투 쓰는법’ 같은 글이 여러 사이트에 새로 올라온 것을 확인했어요. 이 키워드를 노리는 글이 계속 나온다는 뜻이에요. 1차 근거도 충분해요. 2026년 5월 조선일보·틸리언 프로가 성인 1,500명에게 조사한 결과, 2024년 12월 성균관유도회 5만원 권고, 법제처·권익위의 청탁금지법 경조사비 기준이 있어요. 숫자를 확인할 수 있고 ‘설문은 10만원, 권고는 5만원’이라는 반전도 있어서 앱 투표로 이어 가기 좋아요.",
+  "meta_description": "조의금 5만원이면 적을까요? 2026년 성인 1,500명 설문에서는 10만원이 61.8%로 1위였고, 성균관유도회는 5만원을 권고했어요. 관계별 판단표, 김영란법 5만원 한도, 부의·근조 봉투 쓰는 법을 정리했어요.",
+  "hero_prompt": "Realistic photo of hands in a black suit sleeve writing on a plain white condolence envelope with a black pen at a table in a Korean funeral hall reception area, a few banknotes beside it, soft natural light, candid, no readable text or characters",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "사무실 책상에서 휴대폰 송금 화면과 흰 부의 봉투를 함께 놓고 조의금을 고민하는 직장인"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "장례식장 빈소 입구의 부의함과 흰 봉투, 검은 정장을 입은 조문객의 뒷모습"
+    }
+  ],
+  "sources": [
+    {
+      "title": "10만원 봉투도 그저 그렇다…요즘 경조사에 얼마 내십니까 (조선일보, 네이트 뉴스)",
+      "url": "https://m.news.nate.com/view/20260516n00218"
+    },
+    {
+      "title": "10만원 봉투도 그저 그렇다… 요즘 경조사에 얼마 내십니까 (조선일보, 다음)",
+      "url": "https://v.daum.net/v/9pKHS94qHE"
+    },
+    {
+      "title": "“부의금은 5만원이면 충분하다”…성균관유도회 권고 (연합뉴스)",
+      "url": "https://v.daum.net/v/20241218154737788"
+    },
+    {
+      "title": "“부의금 얼마? 5만원이면 충분” 성균관유도회 권고 (한경매거진)",
+      "url": "https://magazine.hankyung.com/business/article/202412185296b"
+    },
+    {
+      "title": "금품 등의 수수 행위 - 찾기쉬운 생활법령정보",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?popMenu=ov&csmSeq=911&ccfNo=2&cciNo=2&cnpClsNo=3"
+    },
+    {
+      "title": "허용되는 금품등 상한액 - 강원특별자치도 감사위원회",
+      "url": "https://state.gwd.go.kr/audit/antisolicitation/upperlimit"
+    },
+    {
+      "title": "강남구 청탁금지법 사례집",
+      "url": "https://gangnam.go.kr/kimlaw/list.do?mid=ID05_042003&keyword=%EA%B2%BD%EC%A1%B0%EC%82%AC&gbn=03&pgno=1&keyfield=bdm_main_title"
+    },
+    {
+      "title": "문상 때 봉투 쓰는 법 (국립국어원 견해 소개)",
+      "url": "https://sarak.yes24.com/blog/udal2008/post-view/1868157"
+    },
+    {
+      "title": "장례식 부조금 봉투 쓰는법 - 고이 장례 가이드북",
+      "url": "https://www.goifuneral.co.kr/guidebook/tip/ongoing/1/"
+    },
+    {
+      "title": "부의금 봉투 작성법과 금액 기준 정리 - 삼고라이프",
+      "url": "https://samgolife.co.kr/magazine/blog/f-guide/condolence-money-envelope-guide"
+    },
+    {
+      "title": "삼가 고인의 명복을 빕니다, 바른 표기와 대체 표현 - 삼고라이프",
+      "url": "https://samgolife.co.kr/magazine/blog/f-book/%EC%82%BC%EA%B0%80%EA%B3%A0%EC%9D%B8%EC%9D%98%EB%AA%85%EB%B3%B5%EC%9D%84%EB%B9%95%EB%8B%88%EB%8B%A4-%EB%B0%94%EB%A5%B8%ED%91%9C%EA%B8%B0"
+    },
+    {
+      "title": "부의금 봉투 쓰는법 완벽 가이드 (짝수 회피 관례 설명)",
+      "url": "https://xn--299a782aupgcrb5yqa608c.com/%EB%B6%80%EC%9D%98%EA%B8%88-%EB%B4%89%ED%88%AC-%EC%93%B0%EB%8A%94%EB%B2%95"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "caption": "조의금 5만원이면 적을까? 설문 1위와 예법 권고가 달라요\n\n2026년 성인 1,500명 설문에서는 10만원을 낸다는 답이 61.8%로 가장 많았어요. 평균은 9만5,300원이에요.\n그런데 성균관유도회는 “5만원이면 충분, 형편껏”이라고 권고했어요.\n상대가 일과 관련된 공무원·교직원이라면 현금 5만원이 법적 한도예요.\n봉투 앞면에는 부의나 근조 두 글자만 쓰면 돼요.\n\n부고는 갑자기 와요. 저장해 두고 그때 꺼내 보세요.\n관계별 판단표 전체는 프로필 링크의 커먼센스 블로그에 있어요.\n\n#조의금 #부의금 #장례식예절 #직장인상식 #경조사비"
+  },
+  "threads": {
+    "posts": [
+      "동료 부친상 부고 떴는데 단톡에서 다들 얼마 할지 눈치만 보고 있으면 어떡할래?\n난 5만원 쳤다가 지우고 10만원 쳤다가 또 지웠어.\n이거 나만 이래?",
+      "올해 5월 성인 1,500명 설문에서는 10만원 낸다는 사람이 제일 많았어. 61.8%임.\n근데 성균관유도회는 5만원이면 충분하다고 권고했거든.\n상대가 일로 엮인 공무원이나 교사면 현금은 5만원까지만 돼.\n봉투 앞면엔 부의나 근조 두 글자면 끝이야.",
+      "관계별로 얼마 내면 되는지 표로 정리해 놨어. 부고 오기 전에 한번 봐 둬 {LINK}"
+    ]
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 4장: 계정명 자리 침범: \"2024.12 권고\"",
+      "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-03T20:44+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 12148,
+        "output_tokens": 19817,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.4949
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 0.8969,
+    "total_usd": 0.8969,
+    "total_krw": 1260,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
