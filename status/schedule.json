@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T05:56+09:00",
+  "updated": "2026-11-04T07:37+09:00",
   "items": [
     {
       "site": "infobay",
@@ -47,8 +47,9 @@
       "dir": "content/infobay/2026-11-03-condolence-money-how-much-2026",
       "title": "조의금 5만원 vs 10만원? 설문 1위와 성균관 권고가 다른 이유",
       "platform": "blog",
-      "at": "2026-11-04T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-04T07:37:18+09:00",
+      "state": "done",
+      "url": "https://commonsense-one.vercel.app/blog/condolence-money-how-much-2026"
     },
     {
       "site": "woodenjoy",
@@ -56,8 +57,9 @@
       "dir": "content/woodenjoy/2026-11-01-windproof-vinyl-before-install-condensation-tape-e",
       "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
       "platform": "blog",
-      "at": "2026-11-04T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-04T07:37:23+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "infobay",
