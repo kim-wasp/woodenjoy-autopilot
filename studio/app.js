@@ -100,7 +100,11 @@ async function viewReview(n) {
   <div class="btns"><button class="btn primary" id="ok">승인하기</button><button class="btn" id="redo">다시 만들기</button><button class="btn danger" id="no">버리기</button></div></div>`;
   $('#seg').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; [...$('#seg').children].forEach((x) => x.classList.toggle('on', x === b)); $('#pane').innerHTML = panes[b.dataset.k](); };
   const act = async (action, msg) => {
-    try { await api('reviews', { method: 'POST', body: { n: d.pr ? d.pr.n : n, action, notes: $('#notes').value, topic: p.requested_topic || p.title } }); toast(msg); location.hash = '#/review'; } catch (e) { if (e.message !== 'login') toast(e.message); }
+    try {
+      const r = await api('reviews', { method: 'POST', body: { n: d.pr ? d.pr.n : n, action, notes: $('#notes').value, topic: p.requested_topic || p.title } });
+      if (r && r.next_ideas) { toast('승인했어요. 다음 글 이슈 후보를 받는 중이에요 (2~3분). 글감에서 골라 견해를 써 주세요'); location.hash = '#/ideas/' + r.next_ideas; return; }
+      toast(msg); location.hash = '#/review';
+    } catch (e) { if (e.message !== 'login') toast(e.message); }
   };
   $('#ok').onclick = () => { if (p.checks && !p.checks.ok && !confirm('점검에 실패한 글이에요. 그래도 승인할까요?')) return; act('approve', '승인했어요. 정해진 시간에 올라가요'); };
   if ($('#op')) $('#op').onclick = async () => {
@@ -355,7 +359,7 @@ async function route() {
     if (!(await (await fetch('/api/auth')).json()).ok) return renderLogin();
     if (page === 'review') return arg ? viewReview(arg) : viewReviewList();
     if (page === 'create') return viewCreate();
-    if (page === 'ideas') return viewIdeas();
+    if (page === 'ideas') return viewIdeas(arg || undefined);
     if (page === 'schedule') return viewSchedule();
     if (page === 'cards') return viewCards(arg);
     if (page === 'coupang') return viewCoupang();

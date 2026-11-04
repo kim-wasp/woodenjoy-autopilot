@@ -59,6 +59,13 @@ module.exports = guard(async (req, res) => {
       catch (e) { if (i >= 7 || !/405|409/.test(e.message)) throw e; await new Promise((r) => setTimeout(r, 2000)); }
     }
     await gh('DELETE', `/repos/${REPO}/git/refs/heads/${ref}`).catch(() => {});
+    // 정치처럼 사장님이 주제를 고르는 사이트는 승인하면 다음 글 이슈 후보를 바로 받아 둬요
+    const sid = ref.split('/')[1];
+    const site = await readJson(`sites/${sid}/site.json`).catch(() => null);
+    if (site && site.opinion) {
+      await gh('POST', `/repos/${REPO}/actions/workflows/studio-generate.yml/dispatches`, { ref: 'main', inputs: { site: sid, topic: '', notes: '', redo_branch: '', mode: 'ideas', view: '' } }).catch(() => {});
+      return send(res, 200, { ok: true, next_ideas: sid });
+    }
     return send(res, 200, { ok: true });
   }
   if (action === 'reject') {
