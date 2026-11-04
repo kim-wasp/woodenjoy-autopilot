@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T21:10+09:00",
+  "updated": "2026-11-04T21:14+09:00",
   "items": [
     {
       "site": "infobay",
@@ -90,6 +90,15 @@
       "at": "2026-11-04T21:10:15+09:00",
       "state": "done",
       "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-04-yoon-election-law-appeal-397-refund-timeline",
+      "title": "윤석열 2심도 당선무효형…국힘 397억 반환, 빠르면 언제?",
+      "platform": "blog",
+      "at": "2026-11-05T12:00+09:00",
+      "state": "planned"
     },
     {
       "site": "woodenjoy",
