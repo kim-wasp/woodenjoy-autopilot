@@ -55,9 +55,22 @@ def check(site, post, article_md=None):
             issues.append(f"블로그: 소제목(##)이 {h2}개 (3개 이상)")
         if rules.get("require_table", True) and not re.search(r"^\|.*\|$", md, re.M):
             issues.append("블로그: 표가 없어요")
-        if rules.get("require_sources", True) and not re.search(r"^## (참고|출처)", md, re.M):
+        static = site["blog"]["platform"] == "static"
+        if static:
+            # 짧은 글 형식: 한 줄 결론, 핵심은 짧게, 나머지는 '더 자세히'로
+            if not post.get("conclusion"):
+                issues.append("블로그: 한 줄 결론(conclusion)이 없어요")
+            if not re.search(r"^## 더 자세히", md, re.M):
+                issues.append("블로그: '## 더 자세히' 칸이 없어요")
+            core = plain(re.split(r"^## (?:편집자 생각|더 자세히)", md, maxsplit=1, flags=re.M)[0])
+            core_n = len(re.sub(r"\s+", " ", core).strip())
+            if core_n > rules.get("core_max_chars", 1200):
+                issues.append(f"블로그: 핵심 부분이 {core_n}자 (짧고 쉽게 {rules.get('core_max_chars', 1200)}자 이내로)")
+            if rules.get("require_sources", True) and not post.get("sources"):
+                issues.append("블로그: 출처(sources)가 없어요")
+        elif rules.get("require_sources", True) and not re.search(r"^## (참고|출처)", md, re.M):
             issues.append("블로그: '## 참고 자료' 출처 목록이 없어요")
-        if "[[hero]]" not in md and not re.search(r"\[\[(card|photo):\d+\]\]", md):
+        if not static and "[[hero]]" not in md and not re.search(r"\[\[(card|photo):\d+\]\]", md):
             issues.append("블로그: 본문 이미지 자리([[hero]]·[[card:N]]·[[photo:N]])가 없어요")
         if re.search(r"광고(를)? (클릭|눌러)", md):
             issues.append("블로그: 광고 클릭 유도 문구 (애드센스·애드포스트 정책 위반)")

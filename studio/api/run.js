@@ -4,9 +4,9 @@ const { REPO, MOCK, gh, guard, send, body } = require('./_lib');
 const NAMES = { 'studio-generate.yml': '글 만들기', 'studio-publish.yml': '업로드' };
 module.exports = guard(async (req, res) => {
   if (req.method === 'POST') {
-    const { site, topic = '', notes = '', mode = 'post' } = await body(req);
+    const { site, topic = '', notes = '', mode = 'post', view = '' } = await body(req);
     if (!site) return send(res, 400, { error: '사이트를 고르세요' });
-    if (!MOCK) await gh('POST', `/repos/${REPO}/actions/workflows/studio-generate.yml/dispatches`, { ref: 'main', inputs: { site, topic, notes, mode, redo_branch: '' } });
+    if (!MOCK) await gh('POST', `/repos/${REPO}/actions/workflows/studio-generate.yml/dispatches`, { ref: 'main', inputs: { site, topic, notes, mode, redo_branch: '', view } });
     return send(res, 200, { ok: true });
   }
   if (MOCK) return send(res, 200, { runs: [{ name: '글 만들기', status: 'completed', conclusion: 'success', created: new Date().toISOString(), url: '#' }] });

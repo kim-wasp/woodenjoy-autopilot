@@ -174,7 +174,7 @@ def publish_static(site, d, post, dry):
     cats = cfg.get("categories") or []
     meta = {"title": post["title"], "description": post.get("meta_description", ""), "date": today,
             "category": post.get("category") if post.get("category") in cats else cfg.get("category", ""),
-            "summary": post.get("summary") or [], "tags": [(post.get("keywords") or {}).get("main", "")] + (post.get("keywords") or {}).get("sub", []),
+            "conclusion": post.get("conclusion", ""), "tags": [(post.get("keywords") or {}).get("main", "")] + (post.get("keywords") or {}).get("sub", []),
             "sources": [{"title": x.get("title", ""), "url": x["url"]} for x in post.get("sources", []) if x.get("url")]}
     if (d / "hero.jpg").exists():
         meta["hero"] = "hero.jpg"

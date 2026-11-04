@@ -119,14 +119,24 @@ async function viewCreate(pre = {}) {
   <div class="grid g2"><form class="card" id="cf">
     <label class="f"><span>사이트</span><select id="site">${st.map((s) => `<option value="${s.id}" ${pre.site === s.id ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
     <label class="f"><span>주제나 제목 (비우면 검색량·시기를 보고 자동으로 골라요)</span><input type="text" id="topic" value="${esc(pre.topic || '')}" placeholder="예: 축의금 얼마가 적당할까"></label>
+    <div id="viewbox"></div>
     <label class="f"><span>추가 요청 (선택)</span><textarea id="cnotes" placeholder="예: 20대 사회초년생 눈높이로"></textarea></label>
     <button class="btn primary" ${st.length ? '' : 'disabled'}>만들기 시작</button>
     <p class="small muted" style="margin-top:10px">글 → 대표 사진 → 카드 → 인스타·스레드 → 점검까지 5~10분 걸려요. 끝나면 <a href="#/review">승인 대기</a>에 올라와요.</p>
   </form>
   <div class="card"><h2>최근 실행</h2><div class="list">${runs.map((r) => `<a class="item" href="${esc(r.url)}" target="_blank" rel="noopener"><div class="t"><b>${esc(r.name)}</b><span class="small muted">${fmt(r.created)} · ${r.event === 'schedule' ? '예약' : '직접'}</span></div>${runChip(r)}</a>`).join('') || '<p class="muted small">기록 없음</p>'}</div></div></div>`;
+  const viewBox = () => {
+    const s = st.find((x) => x.id === $('#site').value) || {};
+    $('#viewbox').innerHTML = s.opinion ? `${pre.idea ? `<div class="card" style="margin-bottom:12px"><p class="small"><b>핵심 사실</b> ${esc(pre.idea.facts || '')}</p><p class="small" style="margin-top:6px"><b>양쪽 입장</b> ${esc(pre.idea.sides || '')}</p>${pre.idea.question ? `<p class="small" style="margin-top:6px"><b>생각해 볼 질문</b> ${esc(pre.idea.question)}</p>` : ''}</div>` : ''}
+      <label class="f"><span>내 견해 (이걸 바탕으로 글을 써요. 글 끝 '편집자 생각'에 쉬운 말로 줄여 들어가요)</span><textarea id="view" rows="8" placeholder="이 이슈에 대한 사장님 생각을 편하게 적어 주세요. 길어도 괜찮아요.">${esc(pre.view || '')}</textarea></label>` : '';
+  };
+  viewBox();
+  $('#site').onchange = viewBox;
   $('#cf').onsubmit = async (e) => {
     e.preventDefault();
-    try { await api('run', { method: 'POST', body: { site: $('#site').value, topic: $('#topic').value, notes: $('#cnotes').value } }); toast('만들기 시작! 5~10분 뒤 승인 대기를 확인하세요'); setTimeout(() => viewCreate(), 4000); } catch (e2) { if (e2.message !== 'login') toast(e2.message); }
+    const s = st.find((x) => x.id === $('#site').value) || {};
+    if (s.opinion && !($('#view')?.value || '').trim() && !confirm('견해 없이 만들까요? (편집자 생각 칸 없이 사실 정리만 나와요)')) return;
+    try { await api('run', { method: 'POST', body: { site: $('#site').value, topic: $('#topic').value, notes: $('#cnotes').value, view: $('#view')?.value || '' } }); toast('만들기 시작! 5~10분 뒤 승인 대기를 확인하세요'); setTimeout(() => viewCreate(), 4000); } catch (e2) { if (e2.message !== 'login') toast(e2.message); }
   };
 }
 
@@ -139,10 +149,10 @@ async function viewIdeas(siteId) {
   const ideas = one?._ideas?.ideas || [];
   $('#main').innerHTML = `<div class="page-h"><h1>글감</h1><button class="btn" id="more">새로 추천받기</button></div>
   <div class="seg">${st.map((s) => `<button class="${s.id === siteId ? 'on' : ''}" data-id="${s.id}">${esc(s.name)}</button>`).join('')}</div>
-  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · 웹 검색과 네이버 검색량을 보고 골랐어요` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
-  <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span></div><button class="btn" data-i="${i}">이걸로 만들기</button></div>`).join('')}</div></div>`;
+  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? '최근 48시간 보도를 보고 골랐어요. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요' : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
+  <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span>${x.facts ? `<span class="small" style="margin-top:4px">${esc(x.facts)}</span><span class="small muted">${esc(x.sides || '')}</span>` : ''}</div><button class="btn" data-i="${i}">${one?.opinion ? '고르고 견해 쓰기' : '이걸로 만들기'}</button></div>`).join('')}</div></div>`;
   $('.seg').onclick = (e) => { const b = e.target.closest('button'); if (b) viewIdeas(b.dataset.id); };
-  $('#main').querySelectorAll('[data-i]').forEach((b) => { b.onclick = () => viewCreate({ site: siteId, topic: ideas[b.dataset.i].title }); });
+  $('#main').querySelectorAll('[data-i]').forEach((b) => { b.onclick = () => viewCreate({ site: siteId, topic: ideas[b.dataset.i].title, idea: ideas[b.dataset.i] }); });
   $('#more').onclick = async () => { try { await api('run', { method: 'POST', body: { site: siteId, mode: 'ideas' } }); toast('추천 받는 중이에요. 2~3분 뒤 새로고침하세요'); } catch (e) { if (e.message !== 'login') toast(e.message); } };
 }
 

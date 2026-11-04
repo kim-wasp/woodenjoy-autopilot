@@ -118,7 +118,13 @@ def schema(site):
         cats = ((site.get("blog") or {}).get("app") or {}).get("categories") or ((site.get("blog") or {}).get("static") or {}).get("categories") or (site.get("blog") or {}).get("categories")
         if cats:
             parts.append(f'"category": "글 분류 — 다음 중 하나만: {" / ".join(cats)}"')
-        parts += ['"meta_description": "검색 결과 설명 80~150자"',
+        if blog_kind(site) == "static":
+            parts += ['"meta_description": "검색 결과 설명 80~150자"',
+                      '"article_md": "짧고 쉬운 글 마크다운. 구조: ## 소제목(질문형, 아주 짧게) 3~4개, 각 2~4문장(쉬운 말, 중학생도 알게, 문장 짧게) → '
+                      '(편집자 견해가 주어졌을 때만) ## 편집자 생각 → ## 더 자세히 (표 1개 이상, 앞으로 볼 일정, 필요하면 쟁점 비교·자주 묻는 질문). '
+                      '## 더 자세히 위쪽(핵심) 합계 600~1000자. 첫 소제목 앞 도입 문단 없이 바로 시작. 대표 사진은 프로그램이 넣으니 [[hero]] 쓰지 말 것. 참고 자료 목록은 쓰지 말고 sources 에만"']
+        else:
+            parts += ['"meta_description": "검색 결과 설명 80~150자"',
                   f'"article_md": "본문 마크다운 {r.get("min_chars", 2500)}~{r.get("max_chars", 6000)}자. 첫 문단은 독자 상황+결론. '
                   '## 소제목(질문형), 표 1개 이상, ## 자주 묻는 질문, 마지막에 ## 참고 자료 (출처 링크 목록). '
                   f'이미지 자리: 첫 문단 뒤 [[hero]], {inline}"']
@@ -131,7 +137,7 @@ def schema(site):
     else:
         parts += ['"hero_prompt": "대표 사진 묘사(영어). 글 주제 장면, 사진 속 글자 없음"']
     if blog_kind(site) == "static":
-        parts.append('"summary": ["한눈에 보기 3줄: 무슨 일인지 / 핵심 쟁점 / 앞으로 볼 것. 각 60자 이내, 사실만"]')
+        parts.append('"conclusion": "한 줄 결론: 바쁜 사람이 이것만 읽어도 되는 결론 1~2문장, 70자 안팎, 쉬운 말, 사실만"')
     if needs_cards(site):
         parts.append('"cards": {"slides": [...]}')
     if site.get("instagram", {}).get("enabled"):
@@ -211,7 +217,7 @@ def experiences(site):
     return "\n\n".join(ok)[:4000]
 
 
-def build_prompt(site, topic, notes):
+def build_prompt(site, topic, notes, view=None):
     blog = blog_kind(site) != "none"
     m = site.get("monetization") or {}
     posts = published_posts(site["id"])
@@ -247,6 +253,12 @@ def build_prompt(site, topic, notes):
         extra = commonsense.recent_inserted(site["id"])
     if extra:
         p.append("[앱에 새로 들어간 카드 — 주제로 쓰기 좋아요]\n" + "\n".join(extra[-10:]))
+    if view:
+        p.append("[편집자 견해 — 사장님이 직접 쓴 원문. 글의 관점과 '## 편집자 생각' 칸의 바탕]\n" + view + "\n\n"
+                 "규칙: 1) 본문(사실 정리)은 견해와 상관없이 사실과 양쪽 입장을 공정하게 써요. "
+                 "2) '## 편집자 생각' 칸은 이 견해를 쉬운 말로 줄여 써요. 입장·주장 방향은 절대 바꾸거나 누그러뜨리지 말고, 짧은 문단 3개 이내(합쳐서 400자 안팎). "
+                 "3) 견해 속 사실(숫자·날짜·사건)은 웹 검색으로 확인해 틀리면 바로잡고, 확인 안 되면 빼요. 특정인 비방·확인 안 된 의혹 단정은 빼요. "
+                 "4) 견해의 문장을 그대로 길게 옮기지 말고 사장님 말투로 다시 써요.")
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
     if needs_cards(site):
@@ -300,7 +312,8 @@ def remake_thumb(site_id, dir_, text=None):
     text = (text or post.get("thumb_text") or "").replace("\\n", "\n")
     for f in ("hero.jpg", "hero_raw.jpg"):
         (d / f).unlink(missing_ok=True)
-    imagegen.generate(post["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=(1080, 1080))
+    size = (1080, 1080) if ic["hero"].get("thumb_text") else (1200, 675)
+    imagegen.generate(post["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
     if text and (d / "hero.jpg").exists():
         make_thumb(d, text)
         post["thumb_text"] = text
@@ -392,6 +405,7 @@ def write_post(site, res, d, topic):
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
         "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""), "thumb_text": res.get("thumb_text", ""),
         "category": res.get("category", ""), "summary": res.get("summary") or old.get("summary") or [],
+        "conclusion": res.get("conclusion") or old.get("conclusion", ""),
         "opinion": old.get("opinion", ""),
         "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", "")} for p in res.get("photo_prompts") or []],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
@@ -512,11 +526,11 @@ def usage_cost(prev=None):
     return c
 
 
-def generate(site_id, topic=None, notes=None, out=None):
+def generate(site_id, topic=None, notes=None, out=None, view=None):
     site = load_site(site_id)
     llm_cfg = site.get("llm", {})
     log(f"[{site['name']}] 글 만들기 시작 · 주제: {topic or '자동 선택'}")
-    res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes), model=llm_cfg.get("model"),
+    res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes, view), model=llm_cfg.get("model"),
                        web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post")
     d = (ROOT / out).resolve() if out else CONTENT / site_id / f"{now_kst():%Y-%m-%d}-{slugify(res.get('slug') or res['title'])}"
     prev_cost = load_json(d / "post.json", {}).get("cost") if out else None
@@ -538,6 +552,10 @@ def generate(site_id, topic=None, notes=None, out=None):
         # 비용 절약: 걸린 항목(최상위 키)만 다시 받아서 합쳐요 (전체를 다시 쓰지 않음)
         need = sorted({"cards" if x.startswith("카드") else "instagram" if x.startswith("인스타") else
                        "threads" if x.startswith("스레드") else "article_md" for x in issues})
+        if any("결론" in x for x in issues):
+            need.append("conclusion")
+        if any("출처(sources)" in x for x in issues):
+            need.append("sources")
         part = {k: res.get(k) for k in need}
         if "article_md" in need:
             part["meta_description"] = res.get("meta_description")
@@ -563,6 +581,8 @@ def generate(site_id, topic=None, notes=None, out=None):
             (d / "article.md").write_text(new, encoding="utf-8")
     post = load_json(d / "post.json")
     post["checks"] = {"ok": not issues, "issues": issues, "at": now_kst().isoformat(timespec="minutes")}
+    if view:
+        post["opinion"] = view
     post["cost"] = usage_cost(prev_cost)
     save_json(d / "post.json", post)
     preview_html(site, post, d)
@@ -573,6 +593,20 @@ def generate(site_id, topic=None, notes=None, out=None):
 
 def ideas(site_id):
     site = load_site(site_id)
+    if site.get("opinion"):  # 정치처럼 사장님이 주제를 고르고 견해를 쓰는 사이트
+        prompt = "\n\n".join([
+            f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d %H:%M}",
+            "[최근 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
+            "웹 검색으로 최근 48시간 안에 보도가 많고 사람들이 궁금해하는 정치 이슈(국내와 국제를 섞어서) 5개를 골라 주세요. "
+            "사장님이 이 중 하나를 골라 자기 견해를 쓰게 돼요. 그래서 각 이슈마다 견해를 쓰기 쉽게 핵심 사실과 양쪽 입장을 아주 쉬운 말로 짧게 정리해 주세요. "
+            "특정 진영에 치우친 이름(한쪽만 쓰는 법안 별칭 등)은 피하거나 두 이름을 같이 써요. "
+            'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만)", "keyword": "핵심 키워드", "why": "왜 지금인지(보도·일정)", '
+            '"facts": "핵심 사실 2~3문장", "sides": "찬성 측 한 줄 / 반대 측 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉬운)"}]}'])
+        res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas")
+        res["updated"] = now_kst().isoformat(timespec="minutes")
+        save_json(SITES / site_id / "ideas.json", res)
+        log(f"이슈 후보 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
+        return
     prompt = "\n\n".join([
         f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d}",
         "[최근 제목]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
@@ -627,6 +661,7 @@ if __name__ == "__main__":
     ap.add_argument("site")
     ap.add_argument("--topic")
     ap.add_argument("--notes")
+    ap.add_argument("--view", help="편집자 견해(사장님 의견) — 이 견해를 바탕으로 글을 써요")
     ap.add_argument("--out")
     ap.add_argument("--ideas", action="store_true")
     ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
@@ -642,5 +677,5 @@ if __name__ == "__main__":
     elif a.ideas:
         ideas(a.site)
     else:
-        _, iss = generate(a.site, a.topic, a.notes, a.out)
+        _, iss = generate(a.site, a.topic, a.notes, a.out, a.view)
         sys.exit(1 if iss else 0)
