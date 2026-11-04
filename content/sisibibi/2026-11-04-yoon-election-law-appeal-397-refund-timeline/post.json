@@ -1,0 +1,135 @@
+{
+  "id": "sisibibi/2026-11-04-yoon-election-law-appeal-397-refund-timeline",
+  "site": "sisibibi",
+  "title": "윤석열 2심도 당선무효형…국힘 397억 반환, 빠르면 언제?",
+  "status": "draft",
+  "created_at": "2026-11-04T17:04+09:00",
+  "requested_topic": "윤석열 선거법 2심도 당선무효형, '397억 반환'은 언제 정해질까",
+  "keywords": {
+    "main": "윤석열 선거법 2심",
+    "sub": [
+      "397억 반환",
+      "국민의힘 선거비용 반환",
+      "당선무효형",
+      "허위사실 공표",
+      "대법원 상고",
+      "선거비용 보전금",
+      "공직선거법 265조의2"
+    ]
+  },
+  "brief": {
+    "reader": "윤석열 선거법 2심 결과 기사를 보고 '그래서 397억은 언제, 진짜 내는 거냐'가 궁금한 20~50대",
+    "question": "국민의힘의 397억 원 반환은 언제 정해지고, 언제까지 내야 하나?",
+    "answer": "대법원에서 형이 확정돼야 반환 의무가 생기고, 법정 기한대로면 대법원 선고는 2027년 2월 4일까지, 그 뒤 선관위 고지일부터 30일 안에 내야 해요.",
+    "out_of_scope": "윤 전 대통령의 내란 등 다른 형사재판 내용, 유죄·무죄에 대한 법리 평가, 대법원 결과 예측",
+    "next_action": "'더 자세히'의 체크리스트대로 상고장 접수, 대법원 선고일 지정, 상고기각인지 파기환송인지를 뉴스에서 확인하기"
+  },
+  "why_this_topic": "2026년 11월 4일 서울고법 2심 선고 당일이라 '윤석열 2심', '397억 반환' 검색이 몰리는 시점이에요. 주요 언론 기사 대부분은 '확정되면 397억 반환'까지만 쓰고, 상고 기한(7일), 대법원 법정 기한(3개월), 선관위 고지 뒤 30일 납부, 미납 시 세무서 징수까지 이어지는 일정은 한 번에 정리하지 않았어요. 그 빈자리를 채우려고 고른 주제예요.",
+  "meta_description": "윤석열 선거법 2심도 징역 1년6개월·집행유예 3년. 국민의힘 397억 반환은 대법원 확정 뒤에야 생겨요. 상고 기한, 대법원 기한, 30일 납부, 미납 시 절차를 날짜로 정리했어요.",
+  "hero_prompt": "A neat stack of court documents and a closed wooden gavel on a dark wooden desk next to an empty transparent ballot box, soft late-afternoon window light, calm and neutral mood, shallow depth of field, no people, no text, no logos, no party colors",
+  "thumb_text": "",
+  "category": "국내정치",
+  "summary": [],
+  "conclusion": "2심도 당선무효형이지만 397억 반환 의무는 대법원 확정 뒤에 생겨요. 법정 기한대로면 내년 2월 4일까지 선고, 그 뒤 30일 안에 내야 해요.",
+  "opinion": "진영 논리로 소비하기보다 사법부 판결을 겸허히 수용하고 정치적 불확실성을 최소화하는 방향으로 정국을 수습해야하긴 하지만\n지금 사회가 어느 누구도 책임지지 않으려는 사회가 되어가는 입장에서 보면 선거비용 반환을 해서라도 책임을 지는 모습을 보여야 한다고 생각함. 물론 윤석열의 정당이었던 국민의 힘 뿐만 아니라 어느 진영의 누구라도 책임질 일이 있으면 금전적이든 사법적이든 책임을 지는 모습을 보여야 정치적 신뢰가 다시 쌓아 나갈 수 있다고 생각함.\n그 다음에 사법부의 공정성을 따져 물어도  된다고 봄. 정권에 따라 사법부가 흔들리지 않을 정책적, 법적 장치를 만드는건 차차 해나가면 되는 일. ",
+  "photos": [],
+  "sources": [
+    {
+      "title": "오마이뉴스 - 윤석열 당선무효형... 국힘 397억 반환 가능성↑",
+      "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003281651"
+    },
+    {
+      "title": "전자신문 - 尹, 항소심도 징역형 집행유예…확정 땐 국힘 397억 반환",
+      "url": "https://www.etnews.com/20261104000372"
+    },
+    {
+      "title": "더시사법률 - 윤석열 2심도 당선무효형…국민의힘 397억원 반환은 언제",
+      "url": "https://www.tsisalaw.com/news/article.html?no=30959"
+    },
+    {
+      "title": "서울경제 - 尹 선거법 패소에 397억 반환 위기...野 '李 재판도 재개'",
+      "url": "https://m.sedaily.com/article/20110245"
+    },
+    {
+      "title": "이투데이 - '선거법 위반' 尹 2심도 당선무효형…法 '양형 왜곡 안 돼'",
+      "url": "https://www.etoday.co.kr/news/view/2644164"
+    },
+    {
+      "title": "한국경제 - 尹 2심도 당선무효형",
+      "url": "https://hankyung.com/article/202611045621H"
+    },
+    {
+      "title": "경북일보 - 윤석열 항소심도 당선무효형…국민의힘 397억원 반환 위기",
+      "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089654"
+    },
+    {
+      "title": "아주경제 - 尹 측 '정치적 해명에 형사 처벌 부당…대법에서 끝까지 다툴 것'",
+      "url": "https://www.ajunews.com/view/20261104155920601"
+    },
+    {
+      "title": "뉴스토마토 - 윤석열, 선거법 위반 1심서 징역 1년6개월",
+      "url": "https://www.newstomato.com/readnews.aspx?no=1308353"
+    },
+    {
+      "title": "파이낸셜뉴스 - 尹 선거법 2심도 징역형..국민의힘 397억 토해내나",
+      "url": "https://www.fnnews.com/news/202611041455360971"
+    },
+    {
+      "title": "일간투데이 - 尹 2심도 당선무효형…국힘 397억 '부메랑' 청구서",
+      "url": "https://www.dtoday.co.kr/news/articleView.html?idxno=801402"
+    },
+    {
+      "title": "싱글리스트 - '尹 당선무효' 확정시 역대최대 선거비용 환수…국힘 미반납땐 추징",
+      "url": "https://www.slist.kr/news/articleView.html?idxno=778974"
+    },
+    {
+      "title": "SBS - 검찰, 즉시 상고…대법원 선고 3개월 내 나올까 (공직선거법 270조 운용 관련)",
+      "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008037606&plink=ORI&cooper=RSS"
+    },
+    {
+      "title": "CaseNote - 공직선거법 제270조(선거범의 재판기간에 관한 강행규정)",
+      "url": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EA%B3%B5%EC%A7%81%EC%84%A0%EA%B1%B0%EB%B2%95/%EC%A0%9C270%EC%A1%B0"
+    },
+    {
+      "title": "국가법령정보센터 - 공직선거법 제265조의2(당선무효된 자 등의 비용반환)",
+      "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B3%B5%EC%A7%81%EC%84%A0%EA%B1%B0%EB%B2%95&joLnkStr=%EB%B2%95+%EC%A0%9C265%EC%A1%B0%EC%9D%982%EC%A0%9C1%ED%95%AD&ordinNm=%EA%B3%B5%EC%A7%81%EC%84%A0%EA%B1%B0%EB%B2%95&lsId=006033&lsClsCd=OL&mode=10&joNo=026502000&chrClsCd=010202&ancYd=20170224"
+    },
+    {
+      "title": "중앙선거관리위원회 선거법규 - 당선무효 및 공무담임의 제한",
+      "url": "http://law.nec.go.kr/lawweb/necwAnbrInqy4030.do?genActiontypeCd=2ACT1010&nextWinWd='&nextWinHg=''&nextWinTypeAttr='&elinfoId=201202150157&elinfoSid=0002&back_elinfoId=201202150157&back_elinfoSid=0002"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-04T17:04+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 21772,
+        "output_tokens": 17507,
+        "web_searches": 6,
+        "calls": 3,
+        "usd": 0.4972
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.6312,
+    "total_usd": 0.6312,
+    "total_krw": 880,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
