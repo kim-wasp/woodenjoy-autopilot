@@ -593,21 +593,40 @@ def generate(site_id, topic=None, notes=None, out=None, view=None):
 
 def ideas(site_id):
     site = load_site(site_id)
-    if site.get("opinion"):  # 정치처럼 사장님이 주제를 고르고 견해를 쓰는 사이트
+    if site.get("opinion"):  # 정치처럼 사장님이 주제를 고르고 견해를 쓰는 사이트 → 숫자(검색 급증·기사 수)로 고르기
+        import trends
+        tr = trends.google_trends()
+        pool = trends.news_pool()
+        log(f"  구글 트렌드 {len(tr)}개, 네이버 정치 헤드라인 {len(pool)}개")
+        tr_txt = "\n".join(f"- {t['keyword']} (검색 {t['traffic_label']}) 관련 기사: " + " / ".join(n["title"] for n in t["news"]) for t in tr[:40])
+        pool_txt = "\n".join(f"- {x['title']} :: {x['desc']}" for x in pool[:220])
         prompt = "\n\n".join([
-            f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d %H:%M}",
-            "[최근 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
-            "웹 검색으로 최근 48시간 안에 보도가 많고 사람들이 궁금해하는 정치 이슈 3개를 골라 주세요(국내 위주, 큰 국제 이슈가 있으면 1개). 검색은 꼭 필요한 만큼만. "
-            "사장님이 이 중 하나를 골라 자기 견해를 쓰게 돼요. 그래서 각 이슈마다 견해를 쓰기 쉽게 핵심 사실과 양쪽 입장을 아주 쉬운 말로 짧게 정리해 주세요. "
-            "특정 진영에 치우친 이름(한쪽만 쓰는 법안 별칭 등)은 피하거나 두 이름을 같이 써요. "
-            'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만)", "keyword": "핵심 키워드", "why": "왜 지금인지(보도·일정)", '
-            '"facts": "핵심 사실 2~3문장", "sides": "찬성 측 한 줄 / 반대 측 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉬운)"}]}'])
-        res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas",
-                           max_tokens=4000, max_searches=3)
-        res["cost"] = usage_cost()
-        res["updated"] = now_kst().isoformat(timespec="minutes")
-        save_json(SITES / site_id / "ideas.json", res)
-        log(f"이슈 후보 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
+            f"[사이트]\n{site_profile(site)}", f"[지금] {now_kst():%Y-%m-%d %H:%M}",
+            "[최근 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
+            "[구글 트렌드 한국 실시간 인기 검색어]\n" + (tr_txt or "(못 읽음)"),
+            "[네이버 뉴스 최근 24시간 정치 헤드라인]\n" + (pool_txt or "(못 읽음)"),
+            "위 자료만 보고(웹 검색 없이) 지금 사람들이 가장 많이 보는 정치 이슈 후보 6개를 골라 주세요. 연예·스포츠·사건사고는 정치와 직접 관련 없으면 빼요. "
+            "헤드라인이 여러 개 겹치는 이슈일수록 좋아요. 사실은 위 헤드라인에 있는 것만 쓰고 지어내지 마세요. "
+            "한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이 써요. "
+            'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만)", "keyword": "네이버 뉴스 검색어(2~3단어, 이 이슈 기사만 걸리게)", '
+            '"trend_keyword": "관련 있는 구글 트렌드 검색어(없으면 빈 문자열)", "facts": "핵심 사실 2문장(쉬운 말)", '
+            '"sides": "찬성 측 한 줄 / 반대 측 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉽게)"}]}'])
+        res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=False, mock_name=f"{site_id}_ideas", max_tokens=5000)
+        ranked = []
+        for x in (res.get("ideas") or [])[:6]:
+            n, top = trends.count_24h(x.get("keyword") or x.get("title", ""))
+            t = next((t for t in tr if x.get("trend_keyword") and t["keyword"] == x["trend_keyword"]), None) or trends.trend_match(x.get("keyword", ""), tr)
+            x["metrics"] = {"news_24h": n, "news_capped": n >= 500, "trend": t["keyword"] if t else "", "trend_traffic": t["traffic"] if t else 0,
+                            "trend_label": t["traffic_label"] if t else ""}
+            x["links"] = top
+            x["why"] = f"네이버 24시간 기사 {n}{'+' if n >= 500 else ''}건" + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
+            x["score"] = n + (t["traffic"] / 100 if t else 0)
+            ranked.append(x)
+        ranked.sort(key=lambda x: x["score"], reverse=True)
+        out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),
+               "basis": "구글 트렌드 한국 실시간 인기 검색어 + 네이버 뉴스 최근 24시간 기사 수", "cost": usage_cost()}
+        save_json(SITES / site_id / "ideas.json", out)
+        log("이슈 후보 3개 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in out["ideas"]))
         return
     prompt = "\n\n".join([
         f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d}",

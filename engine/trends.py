@@ -1,0 +1,121 @@
+"""오늘의 이슈를 숫자로 고르기 (정치 블로그 글감용)
+
+1) 구글 트렌드 한국 실시간 인기 검색어 (검색 급증, 대략 검색 수)
+2) 네이버 뉴스 검색 API (최근 24시간 기사 수, 헤드라인)
+비밀키: NAVER_CLIENT_ID, NAVER_CLIENT_SECRET (네이버 개발자센터 검색 API)
+"""
+import html
+import re
+from datetime import datetime, timedelta
+from email.utils import parsedate_to_datetime
+
+import requests
+
+from common import log, now_kst, secret
+
+TRENDS_URLS = ["https://trends.google.com/trending/rss?geo=KR", "https://trends.google.co.kr/trending/rss?geo=KR"]
+POOL_QUERIES = ["국회", "대통령실", "더불어민주당", "국민의힘", "본회의 법안", "외교부", "정부 발표", "선거"]
+UA = {"User-Agent": "Mozilla/5.0 (studio trends)"}
+
+
+def _txt(s):
+    return html.unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
+
+
+def _traffic(s):
+    """'2,000+' / '2만+' → 숫자"""
+    s = (s or "").replace(",", "").replace("+", "").strip()
+    m = re.match(r"([\d.]+)\s*(만|천|K|M)?", s, re.I)
+    if not m:
+        return 0
+    n = float(m.group(1))
+    return int(n * {"만": 10000, "천": 1000, "k": 1000, "m": 1000000}.get((m.group(2) or "").lower(), 1))
+
+
+def google_trends():
+    for url in TRENDS_URLS:
+        try:
+            r = requests.get(url, headers=UA, timeout=30)
+            if r.status_code == 200 and "<item>" in r.text:
+                return parse_trends(r.text)
+        except requests.RequestException as e:
+            log(f"  구글 트렌드 읽기 실패: {e}")
+    log("  구글 트렌드를 못 읽었어요 → 네이버 기사 수만으로 골라요")
+    return []
+
+
+def parse_trends(xml):
+    out = []
+    for it in re.findall(r"<item>(.*?)</item>", xml, re.S):
+        g = lambda tag: (re.search(rf"<{tag}>(.*?)</{tag}>", it, re.S) or [None, ""])[1]  # noqa: E731
+        news = [{"title": _txt(t), "url": _txt(u), "source": _txt(s)} for t, u, s in
+                re.findall(r"<ht:news_item_title>(.*?)</ht:news_item_title>.*?<ht:news_item_url>(.*?)</ht:news_item_url>.*?<ht:news_item_source>(.*?)</ht:news_item_source>", it, re.S)]
+        out.append({"keyword": _txt(g("title")), "traffic": _traffic(_txt(g("ht:approx_traffic"))), "traffic_label": _txt(g("ht:approx_traffic")), "news": news[:3]})
+    return out
+
+
+def _naver(query, start=1):
+    r = requests.get("https://openapi.naver.com/v1/search/news.json", timeout=20,
+                     params={"query": query, "display": 100, "start": start, "sort": "date"},
+                     headers={"X-Naver-Client-Id": secret("NAVER_CLIENT_ID"), "X-Naver-Client-Secret": secret("NAVER_CLIENT_SECRET")})
+    r.raise_for_status()
+    return r.json().get("items", [])
+
+
+def _recent(items, since):
+    out = []
+    for i in items:
+        try:
+            if parsedate_to_datetime(i["pubDate"]) >= since:
+                out.append(i)
+        except (KeyError, TypeError, ValueError):
+            pass
+    return out
+
+
+def news_pool(hours=24):
+    """정치 관련 최근 헤드라인 모음 (AI가 이슈를 묶는 재료)"""
+    since = now_kst() - timedelta(hours=hours)
+    seen, pool = set(), []
+    for q in POOL_QUERIES:
+        try:
+            for i in _recent(_naver(q), since):
+                t = _txt(i.get("title"))
+                k = re.sub(r"\W", "", t)[:30]
+                if k in seen:
+                    continue
+                seen.add(k)
+                pool.append({"title": t, "desc": _txt(i.get("description"))[:120], "url": i.get("originallink") or i.get("link")})
+        except requests.RequestException as e:
+            log(f"  네이버 뉴스 '{q}' 실패: {e}")
+    return pool
+
+
+def count_24h(query, hours=24, max_pages=5):
+    """최근 24시간 기사 수 (최대 500건까지 셈) + 최근 기사 3개"""
+    since = now_kst() - timedelta(hours=hours)
+    n, top = 0, []
+    for p in range(max_pages):
+        try:
+            items = _naver(query, 1 + p * 100)
+        except requests.RequestException as e:
+            log(f"  기사 수 세기 실패 '{query}': {e}")
+            break
+        rec = _recent(items, since)
+        n += len(rec)
+        top += [{"title": _txt(i.get("title")), "url": i.get("originallink") or i.get("link")} for i in rec[:3 - len(top)]] if len(top) < 3 else []
+        if len(rec) < len(items) or len(items) < 100:
+            break
+    return n, top
+
+
+def trend_match(keyword, trends):
+    """후보 키워드와 겹치는 구글 트렌드 검색어의 검색 수"""
+    k = keyword.replace(" ", "")
+    best = None
+    for t in trends:
+        tk = t["keyword"].replace(" ", "")
+        if tk and (tk in k or k in tk or any(w in tk for w in keyword.split() if len(w) >= 3)):
+            if not best or t["traffic"] > best["traffic"]:
+                best = t
+    return best
