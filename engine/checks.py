@@ -53,6 +53,32 @@ def threads_style(posts, topic_tag=None):
     return out
 
 
+IG_BAIT = ["YES 남겨", "댓글에 YES", "공감하면", "동의하면", "좋아요 눌러", "좋아요 꾹", "맞팔", "선팔"]
+
+
+def caption_style(ig, post=None):
+    """인스타 캡션 점검 (instagram-kr 스킬 규칙): 반응 낚시, AI 티, 이모지, 표지 반복"""
+    out = []
+    for w in IG_BAIT:
+        if w in ig:
+            out.append(f"반응 낚시 문구 '{w}' 빼기")
+    for w in TH_STOCK:
+        if w in ig:
+            out.append(f"상투어 '{w}' 빼기")
+    if "—" in ig or "–" in ig:
+        out.append("대시(—) 대신 쉼표나 줄바꿈")
+    if re.search(r"아니라[^\n.?!]{0,30}(예요|이에요|입니다)[.!]?(\s|$)", ig):
+        out.append("'X가 아니라 Y예요' 대구 대신 Y를 바로 말하기")
+    n = len(EMOJI.findall(ig))
+    if n > 3:
+        out.append(f"이모지 {n}개 → 3개 이하")
+    cover = ((post or {}).get("instagram") or {}).get("cover_hooks") or []
+    first = ig.strip().split("\n")[0].replace(" ", "")
+    if first and any(first == str(c).replace("*", "").replace("\n", "").replace(" ", "") for c in cover[:1]):
+        out.append("캡션 첫 줄이 표지 문구와 똑같아요 (다른 각도로)")
+    return out
+
+
 HYPE = ["무조건", "100%", "완벽 정리", "완벽하게", "최고의", "BEST", "베스트", "가장 쉬운", "누구나 쉽게", "보장합니다",
         "상위노출", "상위 노출", "기적", "단 하나의 비밀"]
 MEMO = ["[확인 필요]", "TODO", "검토 메모", "실습 예시", "(예시)", "XXX", "{LINK}"]
@@ -134,6 +160,7 @@ def check(site, post, article_md=None):
             issues.append("인스타: 캡션 링크는 눌리지 않아요 (프로필 링크로 안내)")
         if len(ig.split("\n")[0]) > 60:
             issues.append("인스타: 첫 줄이 60자 넘어요")
+        issues += [f"인스타: {x}" for x in caption_style(ig, post)]
         texts["인스타"] = ig
 
     th = (post.get("threads") or {}).get("posts")
