@@ -166,6 +166,12 @@
   "published": {
     "blog": "interview-marriage-childbirth-question-law",
     "blog_url": "https://commonsense-one.vercel.app/blog/interview-marriage-childbirth-question-law",
-    "blog_at": "2026-11-02T07:37:17+09:00"
+    "blog_at": "2026-11-02T07:37:17+09:00",
+    "threads": [
+      "18117366293591379",
+      "18007096620006472",
+      "18113435249177986"
+    ],
+    "threads_at": "2026-11-04T13:30:21+09:00"
   }
 }
