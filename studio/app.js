@@ -57,7 +57,7 @@ async function viewHome() {
   </div>`;
 }
 const runChip = (r) => r.status !== 'completed' ? '<span class="chip warn">진행 중</span>' : r.conclusion === 'success' ? '<span class="chip ok">성공</span>' : `<span class="chip bad">${esc(r.conclusion || '실패')}</span>`;
-const platforms = (s) => [s.blog?.platform && s.blog.platform !== 'none' ? ({ naver: '네이버', wordpress: '워드프레스', appblog: '앱 블로그' }[s.blog.platform]) : null, s.instagram?.enabled ? '인스타' : null, s.threads?.enabled ? '스레드' : null].filter(Boolean);
+const platforms = (s) => [s.blog?.platform && s.blog.platform !== 'none' ? ({ naver: '네이버', wordpress: '워드프레스', appblog: '앱 블로그', static: '독립 블로그' }[s.blog.platform]) : null, s.instagram?.enabled ? '인스타' : null, s.threads?.enabled ? '스레드' : null].filter(Boolean);
 
 // ---------- 승인 대기 ----------
 async function viewReviewList() {
@@ -94,6 +94,8 @@ async function viewReview(n) {
   $('#main').innerHTML = `<div class="page-h"><div><p class="muted small">${esc(site.name || p.site)}${d.pr ? ` · <a href="${esc(d.pr.url)}" target="_blank" rel="noopener">GitHub에서 보기</a>` : ''}</p><h1>${esc(p.title)}</h1></div></div>
   <div class="seg" id="seg">${tabs.map(([k, v], i) => `<button data-k="${k}" class="${i ? '' : 'on'}">${v}</button>`).join('')}</div>
   <div id="pane">${panes[tabs[0][0]]()}</div>
+  ${site.opinion ? `<div class="actions"><label class="f" style="margin-bottom:10px"><span>편집자 생각 (사장님 의견, 글 끝에 '편집자 생각'으로 붙어요. 비우고 누르면 칸을 빼요)</span><textarea id="opinion" rows="5" placeholder="예: 이 법안은 취지는 좋지만 재원 대책이 없어서 반대해요. 특히 ...">${esc(p.opinion || '')}</textarea></label>
+  <div class="btns"><button class="btn" id="op">의견 넣기</button></div></div>` : ''}
   <div class="actions"><label class="f" style="margin-bottom:10px"><span>고칠 점 (다시 만들기 때 반영)</span><textarea id="notes" placeholder="예: 첫 줄을 더 세게, 3번 카드 문구를 짧게"></textarea></label>
   <div class="btns"><button class="btn primary" id="ok">승인하기</button><button class="btn" id="redo">다시 만들기</button><button class="btn danger" id="no">버리기</button></div></div>`;
   $('#seg').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; [...$('#seg').children].forEach((x) => x.classList.toggle('on', x === b)); $('#pane').innerHTML = panes[b.dataset.k](); };
@@ -101,6 +103,9 @@ async function viewReview(n) {
     try { await api('reviews', { method: 'POST', body: { n: d.pr ? d.pr.n : n, action, notes: $('#notes').value, topic: p.requested_topic || p.title } }); toast(msg); location.hash = '#/review'; } catch (e) { if (e.message !== 'login') toast(e.message); }
   };
   $('#ok').onclick = () => { if (p.checks && !p.checks.ok && !confirm('점검에 실패한 글이에요. 그래도 승인할까요?')) return; act('approve', '승인했어요. 정해진 시간에 올라가요'); };
+  if ($('#op')) $('#op').onclick = async () => {
+    try { await api('reviews', { method: 'POST', body: { n: d.pr ? d.pr.n : n, action: 'opinion', notes: $('#opinion').value, topic: p.title } }); toast('의견을 넣는 중이에요. 2~3분 뒤 블로그 탭 맨 아래에서 볼 수 있어요'); location.hash = '#/review'; } catch (e) { if (e.message !== 'login') toast(e.message); }
+  };
   $('#redo').onclick = () => act('redo', '다시 만드는 중이에요. 5~10분 뒤 이 화면에서 바뀐 내용을 볼 수 있어요');
   $('#no').onclick = () => { if (confirm('이 글을 버릴까요?')) act('reject', '버렸어요'); };
 }
@@ -190,7 +195,7 @@ async function viewSite(id) {
     <label class="f"><span>글감 후보 키워드 (쉼표로)</span><input type="text" data-k="seeds" data-type="list" value="${v((s.seeds || []).join(', '))}"></label>
   </div>
   <div class="card"><div class="sec">기본 채널</div>
-    <label class="f"><span>기본 채널 (여기에 인스타·스레드를 더할지 아래에서 골라요)</span><select data-k="blog.platform"><option value="none">블로그 없음 (커먼센스처럼 앱·사이트로 유입)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option><option value="appblog" ${s.blog.platform === 'appblog' ? 'selected' : ''}>앱 안의 블로그 (커먼센스 /blog)</option></select></label>
+    <label class="f"><span>기본 채널 (여기에 인스타·스레드를 더할지 아래에서 골라요)</span><select data-k="blog.platform"><option value="none">블로그 없음 (커먼센스처럼 앱·사이트로 유입)</option><option value="wordpress" ${s.blog.platform === 'wordpress' ? 'selected' : ''}>워드프레스</option><option value="naver" ${s.blog.platform === 'naver' ? 'selected' : ''}>네이버 (uplika)</option><option value="appblog" ${s.blog.platform === 'appblog' ? 'selected' : ''}>앱 안의 블로그 (커먼센스 /blog)</option><option value="static" ${s.blog.platform === 'static' ? 'selected' : ''}>독립 블로그 (GitHub → Cloudflare)</option></select></label>
     <label class="f"><span>블로그 주소</span><input type="text" data-k="blog.url" value="${v(s.blog.url)}"></label>
     <div class="row2"><label class="f"><span>워드프레스 사용자명</span><input type="text" data-k="blog.wordpress.user" value="${v(s.blog.wordpress.user)}"></label>
     <label class="f"><span>앱 비밀번호의 비밀키 이름</span><input type="text" data-k="blog.wordpress.app_password_secret" value="${v(s.blog.wordpress.app_password_secret)}"></label></div>

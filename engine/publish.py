@@ -143,6 +143,77 @@ def publish_appblog(site, d, post, dry):
     return {"blog": slug, "blog_url": url}
 
 
+# ---------- 독립 정적 블로그 (예: 시시비비노트, GitHub 저장소 → Cloudflare가 자동으로 띄움) ----------
+def publish_static(site, d, post, dry):
+    """글 폴더를 블로그 저장소의 posts/<날짜>-<슬러그>/ 로 복사하고 올려요. 저장소에 올라가면 Cloudflare가 1~2분 안에 사이트를 다시 만들어요."""
+    import re
+    import shutil
+    import subprocess
+    import tempfile
+    import yaml
+    cfg = site["blog"].get("static", {})
+    slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", d.name)
+    today = now_kst().date().isoformat()
+    md = (d / "article.md").read_text(encoding="utf-8")
+    md = re.sub(r"^\s*\[\[hero\]\]\s*$", "", md, flags=re.M)  # 대표 사진은 블로그 틀이 제목 아래에 넣어요
+    imgs = body_images(d, post, md)
+    files = []
+
+    def rep(m):
+        k = m.group(1)
+        if k not in imgs:
+            return ""
+        f, alt = imgs[k]
+        name = f.name if f.parent == d else "card-" + f.name
+        files.append((f, name))
+        return f"![{alt}]({name})"
+    md = re.sub(r"^\s*\[\[(card:\d+|photo:\d+)\]\]\s*$", rep, md, flags=re.M)
+    # 출처 목록은 블로그 틀이 글 끝에 따로 보여 줘요 → 본문의 참고 자료 칸은 빼요
+    md = re.sub(r"\n## (참고 자료|참고|출처)\s*\n.*?(?=\n## |\Z)", "\n", md, flags=re.S)
+    md = re.sub(r"\n{3,}", "\n\n", md).strip() + "\n"
+    cats = cfg.get("categories") or []
+    meta = {"title": post["title"], "description": post.get("meta_description", ""), "date": today,
+            "category": post.get("category") if post.get("category") in cats else cfg.get("category", ""),
+            "summary": post.get("summary") or [], "tags": [(post.get("keywords") or {}).get("main", "")] + (post.get("keywords") or {}).get("sub", []),
+            "sources": [{"title": x.get("title", ""), "url": x["url"]} for x in post.get("sources", []) if x.get("url")]}
+    if (d / "hero.jpg").exists():
+        meta["hero"] = "hero.jpg"
+        meta["hero_alt"] = post["title"]
+        files.append((d / "hero.jpg", "hero.jpg"))
+    text = "---\n" + yaml.safe_dump(meta, allow_unicode=True, sort_keys=False) + "---\n" + md
+    folder = f"{cfg.get('path', 'posts')}/{today}-{slug}"
+    url = site["blog"].get("url", site.get("url", "")).rstrip("/") + f"/posts/{slug}/"
+    if dry:
+        log(f"  [미리보기] {cfg['repo']} {folder}/post.md ({len(md)}자) + 사진 {len(files)}장 → {url}")
+        return {"blog": folder, "blog_url": url}
+    tok = secret(cfg.get("token_secret", "SISIBIBI_TOKEN"))
+    tmp = Path(tempfile.mkdtemp())
+    run = lambda *a: subprocess.run(a, cwd=tmp, check=True, capture_output=True, text=True)  # noqa: E731
+    subprocess.run(["git", "clone", "-q", "--depth", "1", f"https://x-access-token:{tok}@github.com/{cfg['repo']}.git", str(tmp)],
+                   check=True, capture_output=True, text=True)
+    old = [p for p in (tmp / cfg.get("path", "posts")).glob(f"*-{slug}") if p.is_dir()]
+    for p in old:  # 같은 글을 다시 올리면 바꿔요 (날짜가 달라도 하나만)
+        shutil.rmtree(p)
+    out = tmp / folder
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "post.md").write_text(text, encoding="utf-8")
+    for f, name in files:
+        shutil.copy(f, out / name)
+    run("git", "config", "user.name", "studio-bot")
+    run("git", "config", "user.email", "bot@users.noreply.github.com")
+    run("git", "add", "-A")
+    run("git", "commit", "-qm", f"글 올림: {post['title']}")
+    for i in range(3):
+        r = subprocess.run(["git", "push", "-q", "origin", "HEAD"], cwd=tmp, capture_output=True, text=True)
+        if r.returncode == 0:
+            break
+        subprocess.run(["git", "pull", "-q", "--rebase"], cwd=tmp, capture_output=True, text=True)
+    else:
+        raise RuntimeError(f"블로그 저장소에 올리기 실패: {r.stderr.replace(tok, '***')[:300]}")
+    shutil.rmtree(tmp, ignore_errors=True)
+    return {"blog": folder, "blog_url": url}
+
+
 # ---------- 워드프레스 ----------
 class WP:
     def __init__(self, site, dry):
@@ -298,6 +369,8 @@ def publish(d, platform, dry=False):
             res = publish_naver(site, d, post, dry)
         elif kind == "appblog":
             res = publish_appblog(site, d, post, dry)
+        elif kind == "static":
+            res = publish_static(site, d, post, dry)
         else:
             raise SystemExit(f"블로그 종류 {kind} 는 아직 이 엔진에서 올리지 않아요")
     elif platform == "instagram":

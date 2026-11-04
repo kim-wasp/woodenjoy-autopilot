@@ -94,6 +94,12 @@ def img_cfg(site):
     }
 
 
+def needs_cards(site):
+    """카드뉴스가 필요한지: 인스타를 켜거나 블로그 본문에 카드를 넣을 때만"""
+    ic = img_cfg(site)
+    return bool(site.get("instagram", {}).get("enabled")) or (blog_kind(site) != "none" and ic["blog_inline"] in ("cards", "mixed"))
+
+
 def schema(site):
     blog = blog_kind(site) != "none"
     ic = img_cfg(site)
@@ -109,7 +115,7 @@ def schema(site):
                   "photos": "소제목 아래 적절한 곳에 [[photo:번호]] 2~3개(photo_prompts 번호)",
                   "mixed": "[[card:번호]] 1~2개와 [[photo:번호]] 1~2개를 섞어서",
                   "none": "본문 이미지는 [[hero]] 하나만"}[ic["blog_inline"]]
-        cats = ((site.get("blog") or {}).get("app") or {}).get("categories") or (site.get("blog") or {}).get("categories")
+        cats = ((site.get("blog") or {}).get("app") or {}).get("categories") or ((site.get("blog") or {}).get("static") or {}).get("categories") or (site.get("blog") or {}).get("categories")
         if cats:
             parts.append(f'"category": "글 분류 — 다음 중 하나만: {" / ".join(cats)}"')
         parts += ['"meta_description": "검색 결과 설명 80~150자"',
@@ -124,8 +130,10 @@ def schema(site):
                   '"thumb_text": "대표사진 위에 크게 넣을 후킹 문구. 2줄(줄바꿈 \\n), 줄마다 4~11자. 손해·실수·숫자로 궁금하게, 사실만, 제목과 똑같이 쓰지 말 것. 예: \"이렇게 붙이면\\n바람 그대로 들어와요\""']
     else:
         parts += ['"hero_prompt": "대표 사진 묘사(영어). 글 주제 장면, 사진 속 글자 없음"']
-    parts += [
-              '"cards": {"slides": [...]}']
+    if blog_kind(site) == "static":
+        parts.append('"summary": ["한눈에 보기 3줄: 무슨 일인지 / 핵심 쟁점 / 앞으로 볼 것. 각 60자 이내, 사실만"]')
+    if needs_cards(site):
+        parts.append('"cards": {"slides": [...]}')
     if site.get("instagram", {}).get("enabled"):
         parts.append('"instagram": {"caption": "첫 줄 60자 이내 후킹 → 핵심 2~4줄 → 저장 유도 → 프로필 링크 안내. 링크 금지, 해시태그 5개 이하"}')
     if site.get("threads", {}).get("enabled"):
@@ -142,6 +150,7 @@ def site_profile(site):
     keys = ["name", "topic", "audience", "tone", "url", "writing_guide"]
     prof = {k: site[k] for k in keys if site.get(k)}
     prof["base"] = {"naver": "네이버 블로그", "wordpress": "워드프레스 블로그", "appblog": "앱 안의 블로그(커먼센스 /blog, 애드센스 목표)",
+                    "static": "독립 블로그(자체 도메인, 애드센스·구글 검색·구글 디스커버 목표)",
                     "none": "블로그 없음(SNS → 사이트/앱으로 유입)"}[blog_kind(site)]
     prof["sns"] = [p for p in ("instagram", "threads") if site.get(p, {}).get("enabled")]
     return json.dumps(prof, ensure_ascii=False, indent=1)
@@ -173,6 +182,8 @@ def published_posts(site_id):
 
 
 def keyword_data(site):
+    if site.get("keywords") is False or blog_kind(site) == "static":
+        return ""  # 정치처럼 그날 뉴스로 고르는 사이트는 네이버 검색량 표를 쓰지 않아요
     own = SITES / site["id"] / "keywords.json"
     kw = load_json(own) or load_json(ROOT / "topics/keywords.json") or {}
     rows = []
@@ -238,7 +249,8 @@ def build_prompt(site, topic, notes):
         p.append("[앱에 새로 들어간 카드 — 주제로 쓰기 좋아요]\n" + "\n".join(extra[-10:]))
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
-    p.append(CARD_GUIDE)
+    if needs_cards(site):
+        p.append(CARD_GUIDE)
     if site.get("threads", {}).get("enabled"):
         p.append(THREADS_GUIDE)
     if img_cfg(site)["instagram"] == "photo_cards":
@@ -303,6 +315,39 @@ def remake_thumb(site_id, dir_, text=None):
     log(f"대표사진 다시 만들기 끝: {d.name} (이미지 {sum(imagegen.IMAGES.values())}장)")
 
 
+OPINION_SYS = ("당신은 정치 블로그 편집자의 문장을 다듬는 교정자예요. 편집자의 입장과 주장 방향은 절대 바꾸거나 누그러뜨리거나 반대 입장을 섞지 않아요. "
+               "맞춤법·문장만 자연스러운 해요체로 다듬고, 사실 주장은 본문과 출처에 있는 범위에서만. 본문과 다른 사실(숫자, 날짜)이 있으면 본문 기준으로 고치고 notes 에 적어요. "
+               "특정인에 대한 욕설·모욕·확인 안 된 의혹 단정은 빼고 notes 에 적어요. 출력은 JSON 한 덩어리.")
+
+
+def add_opinion(site_id, dir_, notes):
+    """사장님 의견(notes)을 다듬어 글 끝 '## 편집자 생각'으로 붙여요 (출처 앞). 다시 넣으면 바꿔요."""
+    site = load_site(site_id)
+    d = (ROOT / dir_).resolve()
+    post = load_json(d / "post.json", {})
+    md = (d / "article.md").read_text(encoding="utf-8")
+    md = re.sub(r"\n## 편집자 생각\n.*?(?=\n## |\Z)", "\n", md, flags=re.S).rstrip() + "\n"
+    if not (notes or "").strip():
+        log("의견이 비어 있어요 → 편집자 생각 칸을 뺐어요")
+        post["opinion"] = ""
+    else:
+        res = llm.ask_json(OPINION_SYS, f"[본문]\n{md[:9000]}\n\n[편집자 의견 원문]\n{notes}\n\n"
+                           '[출력 JSON]\n{"opinion_md": "다듬은 편집자 생각 2~6문단 마크다운(소제목 없이)", "notes": "바꾼 점·뺀 점(없으면 빈 문자열)"}',
+                           model=site.get("llm", {}).get("model"), web_search=False, mock_name=f"{site_id}_opinion")
+        op = (res.get("opinion_md") or "").strip()
+        block = f"## 편집자 생각\n\n> 아래는 시시비비노트 편집자의 개인 의견이에요. 위 사실 정리와 구분해서 읽어 주세요.\n\n{op}\n"
+        m = re.search(r"\n## (참고 자료|출처|참고)\b", md)
+        md = (md[:m.start()] + "\n" + block + md[m.start():]) if m else md.rstrip() + "\n\n" + block
+        post["opinion"] = notes
+        post["opinion_edit_notes"] = res.get("notes", "")
+        log(f"편집자 생각 넣음 ({len(op)}자){' · ' + res['notes'] if res.get('notes') else ''}")
+    (d / "article.md").write_text(md, encoding="utf-8")
+    prev = post.get("cost")
+    post["cost"] = usage_cost(prev)
+    save_json(d / "post.json", post)
+    preview_html(site, post, d)
+
+
 def make_images(site, res, d):
     d.mkdir(parents=True, exist_ok=True)
     ic = img_cfg(site)
@@ -324,7 +369,7 @@ def make_images(site, res, d):
         except Exception as e:  # noqa: BLE001
             log(f"  사진 {ph['id']} 실패: {e}")
     # 없는 사진을 가리키는 카드는 정리해요
-    for s in res["cards"].get("slides", []):
+    for s in (res.get("cards") or {}).get("slides", []):
         b = s.get("body") or {}
         if b.get("kind") == "image" and b.get("src", "hero.jpg") == "hero.jpg" and (d / "hero_raw.jpg").exists():
             b["src"] = "hero_raw.jpg"
@@ -346,7 +391,8 @@ def write_post(site, res, d, topic):
         "created_at": now_kst().isoformat(timespec="minutes"), "requested_topic": topic or "",
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
         "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""), "thumb_text": res.get("thumb_text", ""),
-        "category": res.get("category", ""),
+        "category": res.get("category", ""), "summary": res.get("summary") or old.get("summary") or [],
+        "opinion": old.get("opinion", ""),
         "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", "")} for p in res.get("photo_prompts") or []],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
         "instagram": res.get("instagram") if "instagram" in platforms else None,
@@ -370,7 +416,8 @@ def write_post(site, res, d, topic):
         post["coupang_wish"] = wish
         add_coupang_wish(site, wish, d, post["title"])
     save_json(d / "post.json", post)
-    save_json(d / "cards.json", res["cards"])
+    if res.get("cards"):
+        save_json(d / "cards.json", res["cards"])
     return post
 
 
@@ -477,7 +524,7 @@ def generate(site_id, topic=None, notes=None, out=None):
     for attempt in range(3):
         make_images(site, res, d)
         post = write_post(site, res, d, topic)
-        card_issues = render_cards(site, d)
+        card_issues = render_cards(site, d) if needs_cards(site) else []
         issues = checks.check(site, post, res.get("article_md")) + [f"카드: {x}" for x in card_issues]
         cp_urls = {i["url"] for i in coupang_items(site)}
         for u in re.findall(r"https?://link\.coupang\.com/\S+?(?=[)\s])", res.get("article_md") or ""):
@@ -584,8 +631,11 @@ if __name__ == "__main__":
     ap.add_argument("--ideas", action="store_true")
     ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
     ap.add_argument("--thumb", help="이 글 폴더의 대표사진+홈피드 썸네일만 다시 만들기 (--notes = 썸네일 문구, 줄바꿈은 \\n)")
+    ap.add_argument("--opinion", help="이 글 폴더에 편집자 생각(--notes)을 붙이기")
     a = ap.parse_args()
-    if a.thumb:
+    if a.opinion:
+        add_opinion(a.site, a.opinion, a.notes)
+    elif a.thumb:
         remake_thumb(a.site, a.thumb, a.notes)
     elif a.threads:
         rewrite_threads(a.site, a.threads)

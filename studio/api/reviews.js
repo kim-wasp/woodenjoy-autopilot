@@ -43,7 +43,7 @@ module.exports = guard(async (req, res) => {
     const d = await detail(dirOfBranch(pr.head.ref), pr.head.sha);
     return send(res, 200, { ...d, pr: { n: pr.number, url: pr.html_url, branch: pr.head.ref } });
   }
-  // POST: approve | reject | redo
+  // POST: approve | reject | redo | opinion
   const { n, action, notes = '', topic = '' } = await body(req);
   if (MOCK) return send(res, 200, { ok: true, mock: true, action });
   const pr = await gh('GET', `/repos/${REPO}/pulls/${Number(n)}`);
@@ -64,6 +64,11 @@ module.exports = guard(async (req, res) => {
   if (action === 'reject') {
     await gh('PATCH', `/repos/${REPO}/pulls/${pr.number}`, { state: 'closed' });
     await gh('DELETE', `/repos/${REPO}/git/refs/heads/${ref}`).catch(() => {});
+    return send(res, 200, { ok: true });
+  }
+  if (action === 'opinion') {
+    const site = ref.split('/')[1];
+    await gh('POST', `/repos/${REPO}/actions/workflows/studio-generate.yml/dispatches`, { ref: 'main', inputs: { site, topic, notes, redo_branch: ref, mode: 'opinion' } });
     return send(res, 200, { ok: true });
   }
   if (action === 'redo') {

@@ -123,7 +123,10 @@ def cmd_generate():
         if not t or now - t > timedelta(hours=20):
             continue
         done = state.get(sid)
-        if done and datetime.fromisoformat(done) >= t:
+        dd = datetime.fromisoformat(done) if done else None
+        if dd and dd.tzinfo is None:
+            dd = dd.replace(tzinfo=t.tzinfo)  # 예전 기록(시간대 없음)은 한국 시간으로
+        if dd and dd >= t:
             continue
         print(sid)
 
