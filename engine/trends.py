@@ -54,7 +54,24 @@ def parse_trends(xml):
     return out
 
 
+def has_naver():
+    return bool(secret("NAVER_CLIENT_ID", required=False) and secret("NAVER_CLIENT_SECRET", required=False))
+
+
+def _gnews(query):
+    """구글 뉴스 RSS (열쇠 필요 없음, 최근 기사 최대 100개) → 네이버 형식으로"""
+    r = requests.get("https://news.google.com/rss/search", params={"q": f"{query} when:1d", "hl": "ko", "gl": "KR", "ceid": "KR:ko"}, headers=UA, timeout=20)
+    r.raise_for_status()
+    out = []
+    for it in re.findall(r"<item>(.*?)</item>", r.text, re.S):
+        g = lambda tag: (re.search(rf"<{tag}[^>]*>(.*?)</{tag}>", it, re.S) or [None, ""])[1]  # noqa: E731
+        out.append({"title": g("title"), "link": _txt(g("link")), "pubDate": _txt(g("pubDate")), "description": ""})
+    return out
+
+
 def _naver(query, start=1):
+    if not has_naver():
+        return _gnews(query) if start == 1 else []
     r = requests.get("https://openapi.naver.com/v1/search/news.json", timeout=20,
                      params={"query": query, "display": 100, "start": start, "sort": "date"},
                      headers={"X-Naver-Client-Id": secret("NAVER_CLIENT_ID"), "X-Naver-Client-Secret": secret("NAVER_CLIENT_SECRET")})
@@ -89,6 +106,10 @@ def news_pool(hours=24):
         except requests.RequestException as e:
             log(f"  네이버 뉴스 '{q}' 실패: {e}")
     return pool
+
+
+def source_name():
+    return "네이버 뉴스" if has_naver() else "구글 뉴스"
 
 
 def count_24h(query, hours=24, max_pages=5):

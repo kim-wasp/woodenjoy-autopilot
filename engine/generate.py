@@ -597,14 +597,14 @@ def ideas(site_id):
         import trends
         tr = trends.google_trends()
         pool = trends.news_pool()
-        log(f"  구글 트렌드 {len(tr)}개, 네이버 정치 헤드라인 {len(pool)}개")
+        log(f"  구글 트렌드 {len(tr)}개, {trends.source_name()} 정치 헤드라인 {len(pool)}개")
         tr_txt = "\n".join(f"- {t['keyword']} (검색 {t['traffic_label']}) 관련 기사: " + " / ".join(n["title"] for n in t["news"]) for t in tr[:40])
         pool_txt = "\n".join(f"- {x['title']} :: {x['desc']}" for x in pool[:220])
         prompt = "\n\n".join([
             f"[사이트]\n{site_profile(site)}", f"[지금] {now_kst():%Y-%m-%d %H:%M}",
             "[최근 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
             "[구글 트렌드 한국 실시간 인기 검색어]\n" + (tr_txt or "(못 읽음)"),
-            "[네이버 뉴스 최근 24시간 정치 헤드라인]\n" + (pool_txt or "(못 읽음)"),
+            f"[{trends.source_name()} 최근 24시간 정치 헤드라인]\n" + (pool_txt or "(못 읽음)"),
             "위 자료만 보고(웹 검색 없이) 지금 사람들이 가장 많이 보는 정치 이슈 후보 6개를 골라 주세요. 연예·스포츠·사건사고는 정치와 직접 관련 없으면 빼요. "
             "헤드라인이 여러 개 겹치는 이슈일수록 좋아요. 사실은 위 헤드라인에 있는 것만 쓰고 지어내지 마세요. "
             "한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이 써요. "
@@ -619,12 +619,12 @@ def ideas(site_id):
             x["metrics"] = {"news_24h": n, "news_capped": n >= 500, "trend": t["keyword"] if t else "", "trend_traffic": t["traffic"] if t else 0,
                             "trend_label": t["traffic_label"] if t else ""}
             x["links"] = top
-            x["why"] = f"네이버 24시간 기사 {n}{'+' if n >= 500 else ''}건" + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
+            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= (500 if trends.has_naver() else 100) else ''}건" + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
             x["score"] = n + (t["traffic"] / 100 if t else 0)
             ranked.append(x)
         ranked.sort(key=lambda x: x["score"], reverse=True)
         out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),
-               "basis": "구글 트렌드 한국 실시간 인기 검색어 + 네이버 뉴스 최근 24시간 기사 수", "cost": usage_cost()}
+               "basis": f"구글 트렌드 한국 실시간 인기 검색어 + {trends.source_name()} 최근 24시간 기사 수", "cost": usage_cost()}
         save_json(SITES / site_id / "ideas.json", out)
         log("이슈 후보 3개 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in out["ideas"]))
         return
