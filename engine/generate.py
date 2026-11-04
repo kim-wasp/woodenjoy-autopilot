@@ -55,8 +55,18 @@ THREADS_GUIDE = """스레드 규칙 (사장님 지시):
 - posts[0] 본문: 2~5줄, 200자 이내. 첫 줄에서 바로 멈추게(반전·도발 질문·"이거 나만 그래?"). 재미있는 에피소드나 상황 한 장면으로 시작해요.
   에피소드는 사실만: 기사·커뮤니티에서 실제 화제가 된 사연, 또는 "~하면 어떡할래?" 같은 가정 상황. 내가 겪은 척 지어낸 경험담 금지(운영자 경험 목록에 있는 것만 가능).
   본문에는 링크·해시태그·숫자 나열·정보 정리 금지. 이미지 없이 글만 올라가요.
-- posts[1] 댓글(본문에 다는 첫 댓글): 반말, 전하고 싶은 핵심 정보 2~4줄.
+  첫 줄은 15자 안팎 한 줄. 아래 패턴 중 이 글에 가장 센 것으로, 반드시 구체적 사실·숫자·물건·장면으로 채워요:
+  반전(다들 믿는 상식 뒤집기) / 실수 장면(흔히 하는 실수) / 숫자(돈·시간·개수) / 장면(바로 그려지는 상황) / 진짜 궁금한 질문 / 둘 중 뭐가 나은지 비교.
+  먼저 첫 줄 후보 3개를 서로 다른 패턴으로 만들어 hooks 에 넣고, 그중 가장 센 것을 본문 첫 줄로 써요.
+  에피소드 2~4줄에는 숫자나 구체적인 물건 하나를 꼭 넣어요. 마지막 줄은 정보가 댓글에 있다는 걸 자연스럽게 알려요(매번 같은 문장 말고).
+  줄바꿈은 숨 쉴 자리에서만. 한 문장 한 줄씩 끝까지 늘어놓지 말아요.
+- posts[1] 댓글(본문에 다는 첫 댓글): 반말, 바로 써먹을 핵심 정보 2~4줄. 순서가 있으면 번호. 수치·규격·방법은 확인된 사실만.
 - posts[2] 대댓글: 반말 1~2줄 + {LINK} (더 자세한 건 여기).
+- topic_tag: 주제 태그 1개(# 없이, 20자 이내, 마침표·& 금지). 사람들이 실제로 찾는 넓은 주제(예: 셀프인테리어, 목공, 생활꿀팁). 매번 새로 지어낸 긴 태그 금지.
+- 반응 낚시 금지: "동의하면 댓글", "공감하면 좋아요", "동의?", "다들 어때?" 같은 말(메타가 걸러내요). 끝은 사람들이 진짜 한마디 하고 싶어지는 구체적 질문이나 핵심 한 줄로.
+- AI 티 금지: "X가 아니라 Y야" 식 대구 뒤집기, "~도 없고 ~도 없고" 부정 나열, "결과는? ~" "핵심은: ~" 같은 혼자 묻고 답하기,
+  "이제 걱정 끝!" "꿀팁 대방출" 같은 상투어, 결산하는 마무리 문장, 대시(—, –), 줄마다 이모지, 근거 없는 감정 연출("솔직히 말할게, 진짜 무서웠어").
+  이모지는 쓰더라도 1~2개, 가족·피부색 조합 이모지 금지.
 """
 
 CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
@@ -143,7 +153,7 @@ def schema(site):
     if site.get("instagram", {}).get("enabled"):
         parts.append('"instagram": {"caption": "첫 줄 60자 이내 후킹 → 핵심 2~4줄 → 저장 유도 → 프로필 링크 안내. 링크 금지, 해시태그 5개 이하"}')
     if site.get("threads", {}).get("enabled"):
-        parts.append('"threads": {"posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"]}')
+        parts.append('"threads": {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"], "topic_tag": "주제 태그 1개"}')
     m = site.get("monetization") or {}
     if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
         parts.append('"coupang_wish": [{"name": "이 글 독자가 실제로 살 만한 상품(쇼핑몰에서 쓰는 이름)", "search": "쿠팡 검색어", '
@@ -641,15 +651,15 @@ def ideas(site_id):
     log(f"글감 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
 
 
-def th_problems(posts):
-    """반말·길이 점검"""
+def th_problems(posts, topic_tag=None):
+    """반말·길이·AI 티·반응 낚시·주제 태그 점검"""
     out = []
     jon = sum(len(re.findall(r"(요|니다|세요)[.!?]?(\s|$)", t)) for t in posts)
     if jon:
         out.append(f"존댓말 문장 {jon}개 → 전부 반말로")
     if posts and len(posts[0]) > 200:
         out.append(f"본문 {len(posts[0])}자 → 200자 이내로 줄이기")
-    return out
+    return out + checks.threads_style(posts, topic_tag)
 
 
 def rewrite_threads(site_id, dir_):
@@ -660,19 +670,21 @@ def rewrite_threads(site_id, dir_):
     md = (d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else ""
     exp = experiences(site) if "experiences" in globals() else ""
     res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
-                       + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"posts": ["본문", "댓글", "대댓글 + {LINK}"]}',
+                       + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문", "댓글", "대댓글 + {LINK}"], "topic_tag": "주제 태그 1개"}',
                        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
     posts = [x for x in (res.get("posts") or []) if x]
-    bad = th_problems(posts)
+    hooks, tag = res.get("hooks") or [], res.get("topic_tag")
+    bad = th_problems(posts, tag)
     if bad:
-        res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n아래 스레드 글을 고쳐 주세요: " + " / ".join(bad) + "\n\n" + json.dumps({"posts": posts}, ensure_ascii=False)
-                           + '\n\n출력: {"posts": [...]}', model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
+        res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n아래 스레드 글을 고쳐 주세요: " + " / ".join(bad) + "\n\n" + json.dumps({"posts": posts, "topic_tag": tag}, ensure_ascii=False)
+                           + '\n\n출력: {"posts": [...], "topic_tag": "..."}', model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
         posts = [x for x in (res.get("posts") or []) if x] or posts
+        tag = res.get("topic_tag") or tag
     if len(posts) < 2:
         raise SystemExit("스레드 문구를 못 받았어요")
     if "{LINK}" not in posts[-1]:
         posts[-1] += "\n{LINK}"
-    post["threads"] = {"posts": posts}
+    post["threads"] = {"posts": posts, "hooks": hooks, "topic_tag": tag}
     post.setdefault("cost", {})
     save_json(d / "post.json", post)
     log(f"스레드 다시 씀: {post['title']}\n  " + "\n  ---\n  ".join(posts))

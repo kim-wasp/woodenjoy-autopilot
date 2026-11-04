@@ -9,6 +9,7 @@
 """
 import base64
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -331,8 +332,18 @@ def publish_threads(site, d, post, dry):
         data = {"text": text.replace("{LINK}", link), "access_token": tok, "media_type": "TEXT"}  # 글만 (사장님 지시)
         if reply_to:
             data["reply_to_id"] = reply_to
+        tag = re.sub(r"[.&#]", "", str((post["threads"].get("topic_tag") or ""))).strip()[:50]
+        if i == 0 and tag:
+            data["topic_tag"] = tag  # 주제 태그 1개 (본문에만)
         try:
-            c = _post(dry, f"{TH}/me/threads", data)
+            try:
+                c = _post(dry, f"{TH}/me/threads", data)
+            except Exception as e:  # 태그 때문에 거절되면 태그 없이 한 번 더
+                if "topic_tag" not in data:
+                    raise
+                log(f"  주제 태그 '{tag}' 거절됨 → 태그 없이 올려요: {str(e)[:120]}")
+                data.pop("topic_tag")
+                c = _post(dry, f"{TH}/me/threads", data)
             _wait(dry, TH, c["id"], tok, "status")
             p = _post(dry, f"{TH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
         except Exception as e:

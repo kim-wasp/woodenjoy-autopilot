@@ -16,6 +16,43 @@ try:
 except Exception:  # noqa: BLE001
     metrics_v2 = None
 
+TH_BAIT = ["동의하면", "공감하면", "좋아요 눌러", "좋아요 꾹", "댓글 달아", "댓글로 알려", "동의?", "다들 어때", "너희 생각은"]
+TH_STOCK = ["걱정 끝", "대방출", "총정리", "알아보자", "알아볼게", "결론부터 말하면", "솔직히 말할게", "핵심은:", "결과는?"]
+EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
+
+
+def threads_style(posts, topic_tag=None):
+    """스레드 문구 점검 (threads-kr 스킬 규칙): 반응 낚시, AI 티, 이모지, 주제 태그"""
+    out = []
+    allt = "\n".join(posts)
+    for w in TH_BAIT:
+        if w in allt:
+            out.append(f"반응 낚시 문구 '{w}' 빼기")
+    for w in TH_STOCK:
+        if w in allt:
+            out.append(f"상투어 '{w}' 빼기")
+    if "—" in allt or "–" in allt:
+        out.append("대시(—) 대신 쉼표나 줄바꿈")
+    if re.search(r"아니라[^\n.?!]{0,30}(야|거야|임)[.!]?(\s|$)", allt):
+        out.append("'X가 아니라 Y야' 대구 대신 Y를 바로 말하기")
+    if "‍" in allt:
+        out.append("조합 이모지(가족·피부색 등) 빼기")
+    if len(EMOJI.findall(allt)) > 2:
+        out.append(f"이모지 {len(EMOJI.findall(allt))}개 → 2개 이하")
+    if posts:
+        first = posts[0].strip().split("\n")[0]
+        if len(first) > 30:
+            out.append(f"본문 첫 줄 {len(first)}자 → 한 줄 15자 안팎으로")
+        lines = [x for x in posts[0].split("\n") if x.strip()]
+        if len(lines) >= 5 and all(len(x) <= 20 for x in lines):
+            out.append("한 문장 한 줄씩 늘어놓기 → 숨 쉴 자리에서만 줄바꿈")
+    if topic_tag is not None:
+        t = str(topic_tag).strip()
+        if not t or len(t) > 20 or re.search(r"[.&#]", t):
+            out.append(f"주제 태그 '{t}' → # 없이 20자 이내 1개, 마침표·& 금지")
+    return out
+
+
 HYPE = ["무조건", "100%", "완벽 정리", "완벽하게", "최고의", "BEST", "베스트", "가장 쉬운", "누구나 쉽게", "보장합니다",
         "상위노출", "상위 노출", "기적", "단 하나의 비밀"]
 MEMO = ["[확인 필요]", "TODO", "검토 메모", "실습 예시", "(예시)", "XXX", "{LINK}"]
@@ -114,6 +151,7 @@ def check(site, post, article_md=None):
         jon = sum(len(re.findall(r"(요|니다|세요)[.!?]?(\s|$)", t)) for t in th)
         if jon > 1:
             issues.append(f"스레드: 존댓말 문장 {jon}개 (친근한 반말로)")
+        issues += [f"스레드: {x}" for x in threads_style(th, (post.get("threads") or {}).get("topic_tag"))]
         texts["스레드"] = "\n".join(th)
 
     for label, text in texts.items():
