@@ -86,7 +86,7 @@ def _stream(body, headers):
     return 200, "", {"content": content, "stop_reason": stop}
 
 
-def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None):
+def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None, max_searches=6):
     """프롬프트를 보내고 JSON 한 덩어리를 돌려받아요."""
     if os.environ.get("MOCK_LLM"):
         f = ROOT / "engine/mock" / f"{mock_name or 'post'}.json"
@@ -99,7 +99,7 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
         "messages": [{"role": "user", "content": prompt}],
     }
     if web_search:
-        body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}]
+        body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}]
     headers = {"x-api-key": secret("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
                "content-type": "application/json"}
     last = ""

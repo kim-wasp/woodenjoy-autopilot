@@ -597,12 +597,14 @@ def ideas(site_id):
         prompt = "\n\n".join([
             f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d %H:%M}",
             "[최근 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
-            "웹 검색으로 최근 48시간 안에 보도가 많고 사람들이 궁금해하는 정치 이슈(국내와 국제를 섞어서) 5개를 골라 주세요. "
+            "웹 검색으로 최근 48시간 안에 보도가 많고 사람들이 궁금해하는 정치 이슈 3개를 골라 주세요(국내 위주, 큰 국제 이슈가 있으면 1개). 검색은 꼭 필요한 만큼만. "
             "사장님이 이 중 하나를 골라 자기 견해를 쓰게 돼요. 그래서 각 이슈마다 견해를 쓰기 쉽게 핵심 사실과 양쪽 입장을 아주 쉬운 말로 짧게 정리해 주세요. "
             "특정 진영에 치우친 이름(한쪽만 쓰는 법안 별칭 등)은 피하거나 두 이름을 같이 써요. "
             'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만)", "keyword": "핵심 키워드", "why": "왜 지금인지(보도·일정)", '
             '"facts": "핵심 사실 2~3문장", "sides": "찬성 측 한 줄 / 반대 측 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉬운)"}]}'])
-        res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas")
+        res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas",
+                           max_tokens=4000, max_searches=3)
+        res["cost"] = usage_cost()
         res["updated"] = now_kst().isoformat(timespec="minutes")
         save_json(SITES / site_id / "ideas.json", res)
         log(f"이슈 후보 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")

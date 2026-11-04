@@ -153,7 +153,7 @@ async function viewIdeas(siteId) {
   const ideas = one?._ideas?.ideas || [];
   $('#main').innerHTML = `<div class="page-h"><h1>글감</h1><button class="btn" id="more">새로 추천받기</button></div>
   <div class="seg">${st.map((s) => `<button class="${s.id === siteId ? 'on' : ''}" data-id="${s.id}">${esc(s.name)}</button>`).join('')}</div>
-  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? '최근 48시간 보도를 보고 골랐어요. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요' : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
+  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? `최근 48시간 보도를 보고 골랐어요${one._ideas.cost ? ` (비용 약 ${Number(one._ideas.cost.total_krw || 0).toLocaleString()}원)` : ''}. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요` : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
   <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span>${x.facts ? `<span class="small" style="margin-top:4px">${esc(x.facts)}</span><span class="small muted">${esc(x.sides || '')}</span>` : ''}</div><button class="btn" data-i="${i}">${one?.opinion ? '고르고 견해 쓰기' : '이걸로 만들기'}</button></div>`).join('')}</div></div>`;
   $('.seg').onclick = (e) => { const b = e.target.closest('button'); if (b) viewIdeas(b.dataset.id); };
   $('#main').querySelectorAll('[data-i]').forEach((b) => { b.onclick = () => viewCreate({ site: siteId, topic: ideas[b.dataset.i].title, idea: ideas[b.dataset.i] }); });
