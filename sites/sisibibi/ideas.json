@@ -1,18 +1,19 @@
 {
   "ideas": [
     {
-      "title": "윤석열 전 대통령 선거법 2심도 당선무효형, 대법원에서 확정되면 국민의힘이 397억을 돌려줘야 해요",
+      "title": "윤석열 선거법 2심도 당선무효형, '397억 반환'은 언제 정해질까",
       "keyword": "윤석열 선거법 2심",
       "trend_keyword": "윤석열",
-      "facts": "윤석열 전 대통령이 공직선거법 위반 사건 2심에서도 징역형 집행유예, 곧 당선무효형을 받았어요. 2심 재판부는 변호사 소개와 건진법사 관련 발언이 허위사실 공표라고 봤고, 대법원에서 확정되면 국민의힘은 397억 원을 돌려줘야 해요.",
-      "sides": "민주당: '당연한 판단'이라고 평가했어요 / 다른 쪽: 아직 대법원 판단이 남아 확정된 판결은 아니에요(윤 전 대통령 측과 국민의힘의 반응은 헤드라인에 없어 따로 확인이 필요해요)",
-      "question": "한 사람의 선거법 위반으로 정당이 수백억 원을 돌려주게 되는 지금 제도, 사장님은 합리적이라고 보세요, 손볼 필요가 있다고 보세요?",
+      "facts": "윤석열 전 대통령이 선거법 위반 사건 2심에서도 징역형 집행유예를 받았어요. 당선무효형이라서 대법원에서 그대로 확정되면 국민의힘이 397억 원을 돌려줘야 한다고 보도됐어요.",
+      "sides": "조국혁신당은 397억 원을 확보하려면 국민의힘 당사를 가압류해야 한다고 주장해요. / 아직 대법원 판단이 남아 있어서 반환 여부는 확정 전이에요(윤 전 대통령 측도 선고 뒤 입장을 냈어요).",
+      "question": "대법원 확정 전에 '397억 반환'을 다루는 보도와 정치권 주장, 어디까지가 적절하다고 보세요?",
       "metrics": {
         "news_24h": 100,
-        "news_capped": false,
+        "news_6h": 100,
+        "news_capped": true,
         "trend": "윤석열",
-        "trend_traffic": 500,
-        "trend_label": "500+"
+        "trend_traffic": 1000,
+        "trend_label": "1000+"
       },
       "links": [
         {
@@ -28,19 +29,20 @@
           "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5UZWJqXzJObGc3Z2NYNVF4TnppTWpudm1VS0kxQjUxeTJHbVVzSWZCYldITkRfcGxLeVBoZVItc3M0VzVrMS1SczJOTkpMTzlJS09qZU9IaWRlTHcyd0E?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건, 구글 검색 급증 '윤석열' 500+",
-      "score": 105.0
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 구글 검색 급증 '윤석열' 1000+",
+      "score": 210.0
     },
     {
-      "title": "여당은 '조작기소 특검법', 국민의힘은 '대통령 범죄 세탁소'라고 불러요. 이 법이 왜 이렇게 시끄러울까요?",
+      "title": "'조작기소 특검법' vs '범죄 세탁소', 법사위에서 무슨 일이 있었나",
       "keyword": "조작기소 특검법",
       "trend_keyword": "",
-      "facts": "11월 4일 민주당이 이끄는 가운데 국회 법사위에 이른바 '조작기소 특검법안'(민주당이 붙인 이름)이 올라갔고 국민의힘 의원들은 모두 퇴장했어요. 같은 날 법사위 소위원회도 이 법안을 의결했고, 민주당은 5일 처리를, 국민의힘은 필리버스터(무제한 토론)로 막겠다고 예고했어요.",
-      "sides": "찬성(민주당): 한병도 원내대표는 '공소취소' 조항을 이미 뺐는데 국민의힘이 법안을 왜곡한다고 말해요 / 반대(국민의힘): 나경원 의원은 특검 대상 12건 중 8건이 이 대통령 사건이라며 철회를 요구해요",
-      "question": "국회 전문위원이 '대통령 재판이 진행 중인데 여당이 특검을 추천하는 구조'를 지적했어요. 사장님은 특검을 누가 추천하느냐가 이 논란의 핵심이라고 보세요?",
+      "facts": "국회 법사위가 여당 주도로 '조작기소 특검법안'을 상정했고, 국민의힘은 반발하며 퇴장했어요. 야당은 필리버스터(무제한 토론)로 맞서겠다고 했고, 국회 전문위원은 '대통령 재판이 진행 중인데 여당이 특검을 추천하는 구조'를 지적했어요.",
+      "sides": "여당은 법안 이름 그대로 '조작된 기소'를 특검으로 가려야 한다는 입장이에요. / 나경원 의원은 특검 대상 12건 중 8건이 이 대통령 사건이라며 '국회가 대통령 범죄 세탁소냐'고 철회를 요구했어요.",
+      "question": "현직 대통령 관련 사건이 들어간 특검을 여당이 추천하는 구조, 어떻게 보세요?",
       "metrics": {
         "news_24h": 100,
-        "news_capped": false,
+        "news_6h": 100,
+        "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": ""
@@ -59,57 +61,58 @@
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QRkdzRElOYThZdE03djJPdTNvUjhoaGFEUTVmbVM1QzVyTjlDNkRBcWNNZlpvVk1OaFlTYXgzOUNSS1BycGlmQ0MwcUlyeThZdUk2aE5qbjRyNVXSAWBBVV95cUxNWUQwd1FZbktEcWpEQUxaVGtpZ0tHbzNmSG8wVEUzakY0WEFDa1ZmV3ZURmZXMUhxVENNTGFxc3FxSm9ELUhpRGNEUjVNMzVVTGdoYk1NT1FmbGtQcThYTXc?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건",
-      "score": 100
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건)",
+      "score": 200
     },
     {
-      "title": "역대 최대 821조 예산, 여야가 가장 크게 부딪히는 곳은 '미래대응기금'이에요",
-      "keyword": "미래대응기금 예산",
+      "title": "821조 예산 심사 시작, 162조 '미래대응기금'이 왜 싸움거리일까",
+      "keyword": "미래대응기금",
       "trend_keyword": "",
-      "facts": "국회 예산결산특별위원회가 이틀 동안 종합정책질의를 열고 821조 원 규모의 내년도 예산안 심사를 시작했어요. 여당은 예산안을 12월 2일까지 처리하겠다고 밝혔어요.",
-      "sides": "비판 측: 미래대응기금의 30%가 '쌈짓돈'처럼 쓰일 수 있다고 지적해요 / 반박 측: 박홍근 의원은 기금이 국회 통제를 받고 국회 동의 없이 독단으로 운용할 수 없다고 말해요",
-      "question": "쓸 곳을 미리 정하지 않은 돈이 있으면 급할 때 빨리 쓸 수 있지만 감시는 약해질 수 있어요. 사장님은 빠른 대응과 국회 감시 중 무엇이 더 중요하다고 보세요?",
+      "facts": "국회 예결위가 821조 원 규모의 내년도 예산안 심사를 시작했어요. 162조 원 미래대응기금 배분을 두고 여야가 부딪혔고, 지방과 교육계도 목소리를 내고 있어요.",
+      "sides": "박홍근 의원은 미래기금이 국회 동의 없이 독단적으로 운용될 수 없고 국회 통제를 받는다고 반박했어요. / 반대쪽에서는 기금의 30%가 '쌈짓돈'처럼 쓰일 수 있다고 지적했어요.",
+      "question": "큰 기금을 정부가 유연하게 쓰는 것과 국회가 세세하게 통제하는 것, 어느 쪽이 더 중요하다고 보세요?",
       "metrics": {
         "news_24h": 100,
-        "news_capped": false,
+        "news_6h": 55,
+        "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": ""
       },
       "links": [
         {
-          "title": "국회, 내년도 예산안 심사 돌입‥미래대응기금 두고 여야 공방 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1zYmkyTHE1U0JKcUliODJ4ek12a1FqTHU0ZlJtTGFhbDdDZWZ0VFB3VXcwNnhiQktlM2ZYSk5wanFQZDNJT2xzVVFRSDdmQkMza2ZwbGtDTEZsZi1CbC13SUo1OGpyLXhUM2t3c3BJbU5PQTFwQXFpT9IBeEFVX3lxTE1jbDVBSE5PWlJHbFlReGxXMFUxSlM5NFZ6MnlPVVdlSkRuNV9SaDRHcWdQN25GU0FxRjNYNGJ4R3BtMEttVHFEbktWNk9yclp5NERKSEdvN3d4QXNiMWJIdGw3ZTZoTWVVUEdseHBycDlsanV5UXh6bA?oc=5"
-        },
-        {
-          "title": "미래대응기금 162조…與 “미래투자” vs 野 “사금고” - 매일일보",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQdU9ETGZ5S21wM2h0QWVIVnhOZm1fM1ZBV043bU55eHViMmdVWEdmWmRxV1gtT1BQYTRsaEhxQUl4WDljV3ZnZUNuR3N5emM4U0E4Z1pfQlpXSDJ5UWRvRUR2Nnk?oc=5"
+          "title": "“미래대응기금은 지방재정 안정성을 위해 쓰여야 한다” - 인천일보",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9RRWYxaXJIZ0FFSXdya21rOWg2ekRGSHhQTGlHZUd0ZGhjZEFyblRWNjlfSEJwSk5GMV91VHIyaWtNQ0x1RE1rUnZYTGVHb3NZaFEwTWJoN0I0WVpSeDRoSGFGekZCa2VxdHc?oc=5"
         },
         {
           "title": "'회전형 재원' 없는 미래대응기금…\"국부펀드와 함께 투자해야\" - 머니투데이 - 머니투데이",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5KMU5wQzByNUxSVjFBbEd5LU9VbkgzRDgtTjlpU1AwdHJNc0NiOG5yTWlES1ZnVG02bTJVNHVrVFFrSUp6UDJnZTBiZGk5ZHU3LWxFbDdQem10QllxOXBvbDJ6amJRRDROR3NZ0gFwQVVfeXFMUEdyTzJmQWtjUkw4YTYwOTAyZzREbTFMMnQ3YnhxYUhTR0Jlbm0zWDM5N1N2TVBDdzlQdUFwTEdZNFJmSXA5UXdDQlpvazdUdnZKZmFJcG81RmJwdllmSk1icXBPWExURkFpOGJFdlZhZA?oc=5"
+        },
+        {
+          "title": "예결위서 ‘미래대응기금 신설’ 공방…與 “재정 안전장치” 野 “총선용 사금고” - 산경일보",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02dDlnYVA5TlVlZUVpc09PZ01oWmVxeEFacTd5WGE3QjI3aURVRlItUmpnZUMyN2ZOTlJoellwU0l3Q21qMVJLejloS3dEUVY5enhQQ3NSejY2bmxOLVhZbWtSYzJ4UUwxU1JYQnpNMmk?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건",
-      "score": 100
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 55건)",
+      "score": 155
     }
   ],
-  "updated": "2026-11-04T16:27+09:00",
+  "updated": "2026-11-04T16:46+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 31147,
-        "output_tokens": 9008,
+        "input_tokens": 9811,
+        "output_tokens": 4444,
         "web_searches": 0,
-        "calls": 2,
-        "usd": 0.3047
+        "calls": 1,
+        "usd": 0.1281
       }
     },
     "images": {},
-    "usd": 0.3047,
-    "total_usd": 0.3047,
-    "total_krw": 430,
+    "usd": 0.1281,
+    "total_usd": 0.1281,
+    "total_krw": 180,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
