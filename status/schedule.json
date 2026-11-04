@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T15:02+09:00",
+  "updated": "2026-11-04T16:14+09:00",
   "items": [
     {
       "site": "infobay",
@@ -78,6 +78,15 @@
       "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
       "platform": "instagram",
       "at": "2026-11-04T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-04-us-midterm-korea",
+      "title": "트럼프가 졌다고 한국이 편해질까? 아니요",
+      "platform": "blog",
+      "at": "2026-11-05T12:00+09:00",
       "state": "planned"
     },
     {
