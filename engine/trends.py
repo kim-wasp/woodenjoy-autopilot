@@ -102,7 +102,7 @@ def news_pool(hours=24):
                 if k in seen:
                     continue
                 seen.add(k)
-                pool.append({"title": t, "desc": _txt(i.get("description"))[:120], "url": i.get("originallink") or i.get("link")})
+                pool.append({"title": t, "desc": _txt(i.get("description"))[:60], "url": i.get("originallink") or i.get("link")})
         except requests.RequestException as e:
             log(f"  네이버 뉴스 '{q}' 실패: {e}")
     return pool

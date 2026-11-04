@@ -598,8 +598,8 @@ def ideas(site_id):
         tr = trends.google_trends()
         pool = trends.news_pool()
         log(f"  구글 트렌드 {len(tr)}개, {trends.source_name()} 정치 헤드라인 {len(pool)}개")
-        tr_txt = "\n".join(f"- {t['keyword']} (검색 {t['traffic_label']}) 관련 기사: " + " / ".join(n["title"] for n in t["news"]) for t in tr[:40])
-        pool_txt = "\n".join(f"- {x['title']} :: {x['desc']}" for x in pool[:220])
+        tr_txt = "\n".join(f"- {t['keyword']} (검색 {t['traffic_label']}) 관련 기사: " + " / ".join(n["title"] for n in t["news"]) for t in tr[:20])
+        pool_txt = "\n".join(f"- {x['title']} :: {x['desc']}" for x in pool[:120])
         prompt = "\n\n".join([
             f"[사이트]\n{site_profile(site)}", f"[지금] {now_kst():%Y-%m-%d %H:%M}",
             "[최근 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
