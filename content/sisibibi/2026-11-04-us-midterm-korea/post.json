@@ -1,0 +1,65 @@
+{
+  "id": "sisibibi/2026-11-04-us-midterm-korea",
+  "site": "sisibibi",
+  "title": "트럼프가 졌다고 한국이 편해질까? 아니요",
+  "status": "ready",
+  "created_at": "2026-11-04T16:30+09:00",
+  "requested_topic": "미국 중간선거와 한국",
+  "keywords": {
+    "main": "미국 중간선거",
+    "sub": [
+      "관세",
+      "대미투자",
+      "한미관계"
+    ]
+  },
+  "brief": {},
+  "why_this_topic": "11월 3일 미국 중간선거 결과(민주당 상원 과반, 하원 과반 예측)와 한국 관세·대미투자 영향. 사장님이 고른 첫 주제",
+  "meta_description": "미국 중간선거에서 민주당이 의회를 가져갔어요. 한국 관세와 3,500억 달러 투자에 바뀌는 것과 안 바뀌는 것을 1분 안에 정리했어요.",
+  "hero_prompt": "Exterior of the United States Capitol building in Washington D.C. at early morning, overcast soft light, wide shot from a distance across the lawn, no people, no flags emphasized, no text",
+  "category": "국제정치",
+  "conclusion": "미국 의회는 민주당으로 넘어갔지만 관세와 투자 약속은 그대로예요. 한국이 볼 건 누가 이겼냐가 아니라, 약속을 실제로 지킬 권한이 미국 어디에 있냐예요.",
+  "opinion": "(사장님이 준 칼럼에서 견해 부분을 뽑아 줄임: 누가 이기든 외교 성과 계산 방식을 바꿔야, 권한이 어디 있는지, 사업별 3가지 확인, 친분과 발표를 성과로 착각 말 것)",
+  "photos": [],
+  "sources": [
+    {
+      "title": "파이낸셜포스트, 민주당 상하원 압승 유력",
+      "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=284663"
+    },
+    {
+      "title": "여성신문, 미 민주 4년 만에 하원 탈환",
+      "url": "https://www.womennews.co.kr/news/articleView.html?idxno=284105"
+    },
+    {
+      "title": "아시아경제, 민주당 승리해도 관세 변화 없어",
+      "url": "https://view.asiae.co.kr/article/2026110310353177712"
+    },
+    {
+      "title": "파이낸셜뉴스, 정부 美중간선거 이후 한미관계 예단 어려워",
+      "url": "https://www.fnnews.com/news/202611040837058201"
+    },
+    {
+      "title": "뉴시스, 대미투자특별법 국회 통과",
+      "url": "https://mobile.newsis.com/view/NISX20260312_0003545887"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 0,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-04T16:30+09:00"
+  },
+  "cost": {
+    "total_krw": 0,
+    "total_usd": 0,
+    "note": "대화에서 직접 작성 (API 토큰 사용 없음)",
+    "claude": {},
+    "images": {}
+  }
+}
