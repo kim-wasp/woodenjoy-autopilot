@@ -1,0 +1,141 @@
+{
+  "id": "sisibibi/2026-11-04-fabricated-indictment-special-counsel-bill-revisio",
+  "site": "sisibibi",
+  "title": "조작기소 특검법, 공소취소 조항 빠지면 뭐가 남나: 원안·수정안 비교",
+  "status": "draft",
+  "created_at": "2026-11-04T15:13+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "조작기소 특검법",
+    "sub": [
+      "공소취소 특검법",
+      "조작기소 특검법 수정안",
+      "공소취소 조항 삭제",
+      "필리버스터 24시간",
+      "11월 5일 본회의",
+      "7번째 특검"
+    ]
+  },
+  "brief": {
+    "reader": "11월 5일 본회의를 앞두고 '조작기소 특검법'과 '공소취소 특검법'이라는 서로 다른 이름을 들으며 무엇이 바뀌었는지 헷갈리는 정치 뉴스 독자",
+    "question": "공소취소 조항을 뺀다는데 조작기소 특검법에는 무엇이 남고 여야는 왜 여전히 부딪치나?",
+    "answer": "수정안에서는 특검이 남의 사건을 넘겨받아 공소를 유지할지 정하는 권한과 사건 이첩 요구권이 빠지지만, 수사 대상 12건 중 8건이 대통령 관련이라는 구조는 그대로라서 이해충돌 논쟁이 남아 있습니다.",
+    "out_of_scope": "개별 사건(대장동·쌍방울 등)의 유무죄 판단, 법안의 위헌 여부 결론, 통과 가능성 예측",
+    "next_action": "11월 5일 본회의 상정 여부와 필리버스터 종결 표결 시점을 확인하고, 뉴스를 볼 때 원안 숫자인지 수정안 숫자인지부터 따져 보기"
+  },
+  "why_this_topic": "11월 3일 민주당 당론 채택, 11월 4일 법사위 상정과 국민의힘 집단 퇴장, 11월 5일 본회의 처리 추진과 '전 법안 필리버스터' 예고가 48시간 안에 이어졌습니다. 그 사이 파이낸셜뉴스·한국경제·문화일보·SBS·아이뉴스24·디지털타임스 등 주요 매체가 일제히 보도했습니다. 같은 법을 두고 '조작기소 특검법'과 '공소취소 특검법'이라는 이름이 함께 쓰이고 원안(357명·180일)과 수정안(309명·200일) 숫자가 뒤섞여 보도되면서, 사실관계를 정리한 글에 대한 수요가 크다고 판단했습니다. 미국 중간선거(11월 3일)도 후보였지만 개표가 아직 진행 중이라 확정된 사실이 부족해 제외했습니다. 별도 검색량 자료는 확인하지 못했습니다.",
+  "meta_description": "조작기소 특검법 수정안에서 공소취소 조항과 이첩 요구권이 빠집니다. 원안과 무엇이 다른지, 여야 논리, 11월 5일 본회의와 필리버스터 24시간 규칙까지 표로 정리했어요.",
+  "hero_prompt": "Wide-angle photograph of an empty legislative plenary chamber in Seoul with rows of vacant wooden desks and dark leather seats, soft morning light from above. In the foreground a stack of bound legal documents and a closed folder rest on a desk. Neutral, muted tones, no people, no flags, no party colors, no logos, no visible text or lettering anywhere in the image, documentary news photography style.",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "summary": [
+    "민주당, 조작기소 특검법 5일 본회의 처리 추진",
+    "공소취소권 삭제했지만 12건 중 8건 대통령 관련, 이해충돌 공방",
+    "국힘 필리버스터 예고, 종결 표결은 시작 24시간 뒤 가능"
+  ],
+  "opinion": "",
+  "photos": [],
+  "sources": [
+    {
+      "title": "파이낸셜뉴스 – '조작기소 특검법' 법사위 상정, 野 집단퇴장 속 與 5일 본회의 추진",
+      "url": "https://www.fnnews.com/news/202611041422342101"
+    },
+    {
+      "title": "파이낸셜뉴스 – 與, 조작기소 특검법 '공소취소 조항' 삭제",
+      "url": "https://www.fnnews.com/news/202611040500590312"
+    },
+    {
+      "title": "문화일보 – 檢수사권 뺏고 특검 무한반복… 입맛대로 무소불위 수사 논란",
+      "url": "https://www.munhwa.com/article/11628758"
+    },
+    {
+      "title": "문화일보 – 검찰 해체한 李정부, 7번째 특검 만든다",
+      "url": "https://munhwa.com/article/11628760"
+    },
+    {
+      "title": "문화일보 사설 – 검사 30명에 수사권 줘서 7번째 특검 한다는 자가당착",
+      "url": "https://www.munhwa.com/article/11628700"
+    },
+    {
+      "title": "한국경제 – 與 '조작기소 특검법' 당론…5일 본회의 상정 추진",
+      "url": "https://www.hankyung.com/article/2026110337061"
+    },
+    {
+      "title": "한국경제 – 조작기소 특검법 당론 채택…아예 李를 특검으로 임명하라",
+      "url": "https://www.hankyung.com/article/202611044346H"
+    },
+    {
+      "title": "아이뉴스24 – 민주당 '조작기소 특검법' 당론…국힘 필리버스터 검토",
+      "url": "https://m.inews24.com/v/2022221"
+    },
+    {
+      "title": "아이뉴스24 – 한병도 국힘, 조작기소특검법 저지 필버 예고…무책임한 처사",
+      "url": "https://m.inews24.com/v/2022404"
+    },
+    {
+      "title": "SBS – '조작기소 특검법' 두고 시작부터 파행…국힘, 10분만 퇴장",
+      "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008830121"
+    },
+    {
+      "title": "아시아경제 – 與, 5일 '조작기소 특검법' 본회의 추진…野 전 법안 필리버스터 맞불",
+      "url": "https://view.asiae.co.kr/article/2026110411300125524"
+    },
+    {
+      "title": "법률신문 – 與 '조작기소 특검법' 발의…국조특위 종료",
+      "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=220204"
+    },
+    {
+      "title": "경향신문 – 이 대통령 재판 8개 모두 무효화되는 길 열리나…'조작기소 특검법안' 논란 확산",
+      "url": "https://www.khan.co.kr/article/202605041748001"
+    },
+    {
+      "title": "뉴스타파 – [칼럼] '조작기소 특검' 위헌 논란과 4가지 해법",
+      "url": "https://newstapa.org/article/jLBev"
+    },
+    {
+      "title": "동행미디어 시대 – 최근 2년간 필리버스터 32번, 강제종결 28번",
+      "url": "https://www.sidae.com/article/2026072114363923285"
+    },
+    {
+      "title": "머니투데이 – 與 예고 '필리버스터 제한법' 방식은?",
+      "url": "https://www.mt.co.kr/politics/2026/07/06/2026070609450977908"
+    },
+    {
+      "title": "네이트뉴스 – 與, 형소법 처리 후 '패트법' 본회의 상정…자정에 필버 자동종료",
+      "url": "https://m.news.nate.com/view/20260731n24398"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-04T15:13+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 28031,
+        "output_tokens": 26394,
+        "web_searches": 6,
+        "calls": 3,
+        "usd": 0.7
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.834,
+    "total_usd": 0.834,
+    "total_krw": 1170,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
