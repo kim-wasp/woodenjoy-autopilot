@@ -1,0 +1,8 @@
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: 자동 선택
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 6266자 (기준 2,500~6,000자)
+  AI 티 다듬기 완료 (바뀐 비율 1%)
+  비용 추정: Claude+사진 약 1,170원 ($0.834)
+완료: content/sisibibi/2026-11-04-fabricated-indictment-special-counsel-bill-revisio · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-04-fabricated-indictment-special-counsel-bill-revisio
