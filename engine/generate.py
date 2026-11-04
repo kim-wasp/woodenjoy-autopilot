@@ -616,11 +616,12 @@ def ideas(site_id):
         for x in (res.get("ideas") or [])[:6]:
             n, top = trends.count_24h(x.get("keyword") or x.get("title", ""))
             t = next((t for t in tr if x.get("trend_keyword") and t["keyword"] == x["trend_keyword"]), None) or trends.trend_match(x.get("keyword", ""), tr)
-            x["metrics"] = {"news_24h": n, "news_capped": n >= 500, "trend": t["keyword"] if t else "", "trend_traffic": t["traffic"] if t else 0,
+            n6 = trends.count_6h(x.get("keyword") or x.get("title", "")) if n >= 100 else 0
+            x["metrics"] = {"news_24h": n, "news_6h": n6, "news_capped": n >= 100, "trend": t["keyword"] if t else "", "trend_traffic": t["traffic"] if t else 0,
                             "trend_label": t["traffic_label"] if t else ""}
             x["links"] = top
-            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= (500 if trends.has_naver() else 100) else ''}건" + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
-            x["score"] = n + (t["traffic"] / 100 if t else 0)
+            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f" (최근 6시간 {n6}건)" if n >= 100 else "") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
+            x["score"] = n + n6 + (t["traffic"] / 100 if t else 0)
             ranked.append(x)
         ranked.sort(key=lambda x: x["score"], reverse=True)
         out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),

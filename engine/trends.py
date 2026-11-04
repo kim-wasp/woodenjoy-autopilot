@@ -1,8 +1,9 @@
 """오늘의 이슈를 숫자로 고르기 (정치 블로그 글감용)
 
 1) 구글 트렌드 한국 실시간 인기 검색어 (검색 급증, 대략 검색 수)
-2) 네이버 뉴스 검색 API (최근 24시간 기사 수, 헤드라인)
-비밀키: NAVER_CLIENT_ID, NAVER_CLIENT_SECRET (네이버 개발자센터 검색 API)
+2) 구글 뉴스 RSS (최근 24시간·6시간 기사 수, 헤드라인)
+네이버 검색 API는 쓰지 않아요: 2026-09-07 약관 개정으로 검색 결과를 AI에 넣거나 광고 수익화에 쓰는 것이 금지됐고,
+개발자센터 신규 신청도 2026-07-30에 끝났어요.
 """
 import html
 import re
@@ -55,12 +56,12 @@ def parse_trends(xml):
 
 
 def has_naver():
-    return bool(secret("NAVER_CLIENT_ID", required=False) and secret("NAVER_CLIENT_SECRET", required=False))
+    return False  # 약관상 쓰지 않아요 (위 설명)
 
 
-def _gnews(query):
+def _gnews(query, window="1d"):
     """구글 뉴스 RSS (열쇠 필요 없음, 최근 기사 최대 100개) → 네이버 형식으로"""
-    r = requests.get("https://news.google.com/rss/search", params={"q": f"{query} when:1d", "hl": "ko", "gl": "KR", "ceid": "KR:ko"}, headers=UA, timeout=20)
+    r = requests.get("https://news.google.com/rss/search", params={"q": f"{query} when:{window}", "hl": "ko", "gl": "KR", "ceid": "KR:ko"}, headers=UA, timeout=20)
     r.raise_for_status()
     out = []
     for it in re.findall(r"<item>(.*?)</item>", r.text, re.S):
@@ -128,6 +129,14 @@ def count_24h(query, hours=24, max_pages=5):
         if len(rec) < len(items) or len(items) < 100:
             break
     return n, top
+
+
+def count_6h(query):
+    """기사가 100건을 넘어 24시간 수로 순위가 안 갈릴 때: 최근 6시간 기사 수"""
+    try:
+        return len(_gnews(query, "6h"))
+    except requests.RequestException:
+        return 0
 
 
 def trend_match(keyword, trends):
