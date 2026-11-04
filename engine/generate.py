@@ -89,6 +89,7 @@ CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
   논쟁형(사회 통념: 표지 논쟁 질문 → 양쪽 입장 → 확인된 데이터 → 투표 안내, 한쪽 조롱 금지).
 - 표지는 혼자서도 피드에서 멈추게, 표지만 보고 주제가 보이게. 답은 안에 있다는 열린 고리를 남겨 넘기게 해요.
   표지 후보 3개를 서로 다른 패턴(반전/실수/숫자/장면/질문/비교)으로 instagram.cover_hooks 에 넣고 가장 센 것을 표지 title 로 써요.
+- 크기는 1080x1350(4:5, Meta 게시 API가 받는 가장 긴 세로). 프로필 그리드는 표지를 3:4로 좌우 조금 잘라 보여주니 표지 핵심 글자는 가운데에.
 - 표지에 개수를 약속했으면 안쪽 장에서 정확히 그 개수만큼 채워요(부풀리려고 빈 장 넣기 금지).
 - 마지막 장은 행동 하나만: 저장(쓸 때 꺼내보기) 또는 보내기(이 고민 있는 친구에게) 또는 프로필 링크. 셋을 한꺼번에 요구하지 않아요."""
 
@@ -310,6 +311,45 @@ def render_cards(site, d):
     log("  " + (r.stdout.strip() or r.stderr.strip()).replace("\n", "\n  "))
     qa = load_json(d / "cards/qa.json", {"ok": False, "issues": [r.stderr.strip()[:300]]})
     return qa.get("issues", []) if r.returncode else []
+
+
+CARD_REVIEW = """카드뉴스 이미지 눈 검사 (card-image-check 스킬 규칙). 코드 검사는 이미 통과했어요. 사람 눈으로만 잡히는 것만 보세요.
+A. 내용: 1) 그림이 제목·라벨과 같은 것을 말하는가(그림을 말로 다시 설명해 보고 제목과 맞는지) 2) 부품·물건 모양이 실제와 맞는가
+   3) 카드 내용이 블로그 글·캡션과 어긋나지 않는가(예: '자세한 건 블로그에'라고 했는데 글에 그 내용이 없음) 4) 표지에 약속한 개수와 실제 장 수가 맞는가
+B. 글자: 5) 오타·띄어쓰기(한 자씩 읽기) 6) 글자가 그림·다른 글자와 겹치거나 잘림
+C. 구성: 7) 같거나 비슷한 내용·그림이 반복되는 장 8) 표지만 보고 주제가 보이는가, 마지막 장에 행동 안내(저장·보내기·블로그)가 있는가
+확실한 문제만 적으세요. 취향 의견, 애매한 것은 적지 마세요.
+출력: {"issues": ["3장: 그림은 인도어인데 제목은 아웃도어", ...]} 문제가 없으면 {"issues": []}"""
+
+
+def review_cards(site, d, res):
+    """렌더링된 카드를 Claude가 직접 보고 내용·오타·반복을 점검해요 (코드로 못 잡는 것)"""
+    import base64
+    import io
+    from PIL import Image
+    files = sorted((d / "cards").glob("[0-9][0-9].jpg"))
+    if not files or os.environ.get("MOCK_LLM"):
+        return []
+    blocks = []
+    for i, f in enumerate(files[:12], 1):
+        im = Image.open(f).convert("RGB")
+        im.thumbnail((540, 675))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=80)
+        blocks += [{"type": "text", "text": f"{i}장"},
+                   {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]
+    ctx = {"title": res.get("title"), "caption": (res.get("instagram") or {}).get("caption", ""), "article": (res.get("article_md") or "")[:6000]}
+    blocks.append({"type": "text", "text": CARD_REVIEW + "\n\n[글·캡션]\n" + json.dumps(ctx, ensure_ascii=False)})
+    try:
+        out = llm.ask_json("당신은 꼼꼼한 카드뉴스 검수자입니다. 출력은 설명 없이 JSON 한 덩어리입니다.", blocks,
+                           model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=2000, mock_name="card_review")
+    except Exception as e:  # noqa: BLE001  눈 검사가 실패해도 글 만들기는 계속
+        log(f"  카드 눈 검사 건너뜀: {str(e)[:120]}")
+        return []
+    issues = [str(x) for x in (out.get("issues") or []) if str(x).strip()][:8]
+    if issues:
+        log("  카드 눈 검사:\n   - " + "\n   - ".join(issues))
+    return issues
 
 
 def make_thumb(d, text):
@@ -559,6 +599,8 @@ def generate(site_id, topic=None, notes=None, out=None, view=None):
         make_images(site, res, d)
         post = write_post(site, res, d, topic)
         card_issues = render_cards(site, d) if needs_cards(site) else []
+        if needs_cards(site) and not card_issues:
+            card_issues = review_cards(site, d, res)
         issues = checks.check(site, post, res.get("article_md")) + [f"카드: {x}" for x in card_issues]
         cp_urls = {i["url"] for i in coupang_items(site)}
         for u in re.findall(r"https?://link\.coupang\.com/\S+?(?=[)\s])", res.get("article_md") or ""):
