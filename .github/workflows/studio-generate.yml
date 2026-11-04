@@ -75,11 +75,15 @@ jobs:
           # 실행 기록을 studio-logs 가지에 남겨요 (실패 원인 확인용)
           save_log() {
             cp gen.log /tmp/gen.log 2>/dev/null || echo "기록 없음" > /tmp/gen.log
-            cur=$(git rev-parse --abbrev-ref HEAD)
-            if git fetch -q origin studio-logs 2>/dev/null; then git checkout -q -B studio-logs FETCH_HEAD; else git checkout -q --orphan studio-logs; git rm -rqf . ; fi
-            mkdir -p logs; cp /tmp/gen.log "logs/$1-$(TZ=Asia/Seoul date +%Y%m%d-%H%M).log"
-            git add logs && git commit -qm "실행 기록: $1" && git push -q origin studio-logs || true
-            git checkout -q -f "$cur"
+            # 작업 폴더는 건드리지 않고 따로 꺼낸 폴더에서 기록을 올려요 (고친 파일이 있어도 실패하지 않게)
+            (
+              set +e
+              rm -rf /tmp/logwt; git worktree prune
+              if git fetch -q origin studio-logs 2>/dev/null; then git worktree add -q -f /tmp/logwt FETCH_HEAD; else git worktree add -q -f --detach /tmp/logwt && (cd /tmp/logwt && git checkout -q --orphan tmp-logs && git rm -rqf .); fi
+              cd /tmp/logwt && mkdir -p logs && cp /tmp/gen.log "logs/$1-$(TZ=Asia/Seoul date +%Y%m%d-%H%M).log" \
+                && git add logs && git commit -qm "실행 기록: $1" && git push -q origin HEAD:studio-logs
+              cd - >/dev/null; git worktree remove -f /tmp/logwt
+            ) || true
           }
           for site in ${{ steps.pick.outputs.sites }}; do
             if [ "$MODE" = "threads" ]; then
