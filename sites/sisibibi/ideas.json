@@ -1,44 +1,12 @@
 {
   "ideas": [
     {
-      "title": "윤석열 선거법 2심도 당선무효형, '397억 반환'은 언제 정해질까",
-      "keyword": "윤석열 선거법 2심",
-      "trend_keyword": "윤석열",
-      "facts": "윤석열 전 대통령이 선거법 위반 사건 2심에서도 징역형 집행유예를 받았어요. 당선무효형이라서 대법원에서 그대로 확정되면 국민의힘이 397억 원을 돌려줘야 한다고 보도됐어요.",
-      "sides": "조국혁신당은 397억 원을 확보하려면 국민의힘 당사를 가압류해야 한다고 주장해요. / 아직 대법원 판단이 남아 있어서 반환 여부는 확정 전이에요(윤 전 대통령 측도 선고 뒤 입장을 냈어요).",
-      "question": "대법원 확정 전에 '397억 반환'을 다루는 보도와 정치권 주장, 어디까지가 적절하다고 보세요?",
-      "metrics": {
-        "news_24h": 100,
-        "news_6h": 100,
-        "news_capped": true,
-        "trend": "윤석열",
-        "trend_traffic": 1000,
-        "trend_label": "1000+"
-      },
-      "links": [
-        {
-          "title": "[속보]윤석열 ‘선거법 위반’ 2심도 징역형 집유···확정 땐 국민의힘 397억 뱉어내야 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tZ2RYcGVXN2FFVDAtOXpPUk83a0hoLWhhTFVCRlVjM1RSVlNWb1FQX1dZQ1Q4ay1kWXR1cnhPUlRuQUlIOTJ5N0tBQ1pjTkpXcXlEaXJGb2c2Z9IBX0FVX3lxTFB5T2huYjF6N0xKN2QxNnp3cEY2OU9WOGx3ZC1ILVh4VWtvdXFleWRpV2dSLXdqTmpfaUQ2UDBEdVZBZDRPMjl4NThOVjJKUkRoLUFNdkhIYi1va0l3cVJr?oc=5"
-        },
-        {
-          "title": "윤석열, 선거법 2심서도 당선무효형…확정 땐 국힘 397억 반환 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YRDZNa04yd1FQaWc1bzZsU1k1Y2R4UnhGMGR5MTVaMHZ2OWk5R0R3UExSZzNhQkhFOEhaRDlxREhQSzlNYzFLTW9KUG5zU0I5NmJCVXFHa0p6SzhjMGlNWU1xMGxHWWdRWmUzOEJIdnRmQQ?oc=5"
-        },
-        {
-          "title": "'국힘 397억 반환' 걸린 윤석열 2심 곧 선고...YTN 생중계 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5UZWJqXzJObGc3Z2NYNVF4TnppTWpudm1VS0kxQjUxeTJHbVVzSWZCYldITkRfcGxLeVBoZVItc3M0VzVrMS1SczJOTkpMTzlJS09qZU9IaWRlTHcyd0E?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 구글 검색 급증 '윤석열' 1000+",
-      "score": 210.0
-    },
-    {
-      "title": "'조작기소 특검법' vs '범죄 세탁소', 법사위에서 무슨 일이 있었나",
+      "title": "'조작기소 특검법' 법사위 상정…국힘 퇴장, 필리버스터까지 예고된 이유",
       "keyword": "조작기소 특검법",
       "trend_keyword": "",
-      "facts": "국회 법사위가 여당 주도로 '조작기소 특검법안'을 상정했고, 국민의힘은 반발하며 퇴장했어요. 야당은 필리버스터(무제한 토론)로 맞서겠다고 했고, 국회 전문위원은 '대통령 재판이 진행 중인데 여당이 특검을 추천하는 구조'를 지적했어요.",
-      "sides": "여당은 법안 이름 그대로 '조작된 기소'를 특검으로 가려야 한다는 입장이에요. / 나경원 의원은 특검 대상 12건 중 8건이 이 대통령 사건이라며 '국회가 대통령 범죄 세탁소냐'고 철회를 요구했어요.",
-      "question": "현직 대통령 관련 사건이 들어간 특검을 여당이 추천하는 구조, 어떻게 보세요?",
+      "facts": "'조작기소 특검법'(여당이 붙인 법안 이름)이 여당 주도로 국회 법사위에 올라갔고, 국민의힘은 퇴장했어요. 수사 대상을 넓히고 공소취소는 빼는 쪽으로 바뀌었고, 여야 협상이 깨지자 국회의장이 다시 협상하라고 권고했어요. 국민의힘은 이 법을 포함한 6개 안건에 필리버스터를 예고했어요.",
+      "sides": "추진 쪽(여당): 법 이름처럼 검찰 기소가 조작됐는지 특검으로 따져야 한다는 입장이에요(세부 근거는 확인 필요) / 반대 쪽(국민의힘): 나경원 의원은 \"국회가 대통령 범죄 세탁소냐\"며 철회를 요구했어요",
+      "question": "공소취소를 법안에서 뺀 걸 두고 '한발 물러선 것'으로 보세요, 아니면 수사 대상을 넓힌 게 더 큰 문제라고 보세요?",
       "metrics": {
         "news_24h": 100,
         "news_6h": 100,
@@ -49,31 +17,31 @@
       },
       "links": [
         {
+          "title": "‘조작기소 특검법’ 與 주도 법사위 소위 통과 - 법률신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uZWJtZXNRR2I5R1kyVzlWZTY0dkI0T3NuajA5VnVrYkx6THJsWDJXeXJOcFZKU1JUYUNhMENvSXJfMWhtdlJDY1NRMHh2SFRIRHg3YjNXYVdLcG8xRmtHNWE2Vm4tb0VqUzN5X3V30gFyQVVfeXFMTnVnNlJ4UFdXai0tUUVydTh0RFVjSXRDQmFEVW1iT25nNVM5aDZyMFB1MTBiRzdmM1A2ak1XTUd3NDc0Q0lpb3ZfeDh4NEFLQlo4X3NxMDNITWEyenBXNmFJRmd1a1ljNlBRYmVoaHloNEVn?oc=5"
+        },
+        {
           "title": "與 주도로 ’조작기소 특검법안’ 법사위 상정…국힘 반발·퇴장 - 연합뉴스TV",
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1UaTJaMXZta21YZ3o2S1k1dEZlckNxLVIxcC00WG9QS3NmR05iWUpibERBaXFKWVhUQ3FKa081dVoxQW9YTlJvdWVVU1VSd0Q0dDB4c2g1YmthWGQ2b3dGOThpWGdyMUk?oc=5"
         },
         {
-          "title": "속보 법사위 소위, 민주당 주도로 '조작기소 특검법안' 의결 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NbEM5Q0o5WVZvN3FuN2htNTFyd0JGQkZqejRPR3FmY3N5b3haaGhqSGhMSldQNUtRNHJiNzl3LVQxaEYwS21GdW1Cd2ZuSERMazEwM1JsclprT3BGenc?oc=5"
-        },
-        {
-          "title": "'조작기소 특검법안' 통과되면…12건 중 8건이 李대통령 관련 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QRkdzRElOYThZdE03djJPdTNvUjhoaGFEUTVmbVM1QzVyTjlDNkRBcWNNZlpvVk1OaFlTYXgzOUNSS1BycGlmQ0MwcUlyeThZdUk2aE5qbjRyNVXSAWBBVV95cUxNWUQwd1FZbktEcWpEQUxaVGtpZ0tHbzNmSG8wVEUzakY0WEFDa1ZmV3ZURmZXMUhxVENNTGFxc3FxSm9ELUhpRGNEUjVNMzVVTGdoYk1NT1FmbGtQcThYTXc?oc=5"
+          "title": "‘조작기소 특검법’ 민주당 주도 법사소위 통과 - 경인일보",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sUkx1YU1oWnRONk1NVTcwS0NJbmNnUWtnUEVmMnljOWNtY3dLTlpkMjBIRjJ6bk9EUjJlWU9uOC11anVzYkNoYzNvOEJEb1d4ZXc?oc=5"
         }
       ],
       "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건)",
       "score": 200
     },
     {
-      "title": "821조 예산 심사 시작, 162조 '미래대응기금'이 왜 싸움거리일까",
-      "keyword": "미래대응기금",
+      "title": "821조 역대 최대 예산, 여야가 싸우는 건 딱 하나 '미래대응기금'",
+      "keyword": "미래대응기금 예산안",
       "trend_keyword": "",
-      "facts": "국회 예결위가 821조 원 규모의 내년도 예산안 심사를 시작했어요. 162조 원 미래대응기금 배분을 두고 여야가 부딪혔고, 지방과 교육계도 목소리를 내고 있어요.",
-      "sides": "박홍근 의원은 미래기금이 국회 동의 없이 독단적으로 운용될 수 없고 국회 통제를 받는다고 반박했어요. / 반대쪽에서는 기금의 30%가 '쌈짓돈'처럼 쓰일 수 있다고 지적했어요.",
-      "question": "큰 기금을 정부가 유연하게 쓰는 것과 국회가 세세하게 통제하는 것, 어느 쪽이 더 중요하다고 보세요?",
+      "facts": "국회가 821조 원 규모의 2027년 예산안 심사를 시작했고, 예결위가 4~5일 이틀 동안 종합정책질의를 해요. 여야는 '미래대응기금'을 두고 맞붙었고, 한국행정학회 전문가들은 이 기금에 대한 국회 통제권을 강화하고 세수 추계의 독립성도 보장해야 한다고 말했어요.",
+      "sides": "기금 편성 쪽: 정부·여당이 예산안에 담아 추진 중이에요(구체 논리는 헤드라인에 없어 확인 필요) / 우려 쪽: 국회가 돈 쓰는 걸 제대로 감시하기 어렵다는 지적이 있어요(행정학회 전문가)",
+      "question": "국회 통제 장치를 더 붙인다면 미래대응기금 자체는 필요하다고 보세요, 아니면 기금이라는 방식부터 문제라고 보세요?",
       "metrics": {
         "news_24h": 100,
-        "news_6h": 55,
+        "news_6h": 46,
         "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
@@ -81,38 +49,70 @@
       },
       "links": [
         {
-          "title": "“미래대응기금은 지방재정 안정성을 위해 쓰여야 한다” - 인천일보",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9RRWYxaXJIZ0FFSXdya21rOWg2ekRGSHhQTGlHZUd0ZGhjZEFyblRWNjlfSEJwSk5GMV91VHIyaWtNQ0x1RE1rUnZYTGVHb3NZaFEwTWJoN0I0WVpSeDRoSGFGekZCa2VxdHc?oc=5"
+          "title": "미래대응기금 예산 절반인 12개 사업 중 ‘성장투자’ 사업은 3개뿐 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9DU3JLd24tRGs1RkVUQU0wQkhpN2hZWWUtREhLRnNNTTJfYzNTdVhicmEtcmhWZGhfZzNBajNGMEMxSVBaZ3ZEcmE1SWZOT0w1ZmI5LXZ0RlRSUdIBX0FVX3lxTE1Cb25PcEo0eUpER01qcEVIamgtVjd1WUlwcUh6UkwzNExtbHhlYVQzZFFsd0pzejVjTkhjVW5CVF9GZWpHUndFZTQ5VmVHcjNjWDZwVnhDN3pMdnF1dG9F?oc=5"
         },
         {
-          "title": "'회전형 재원' 없는 미래대응기금…\"국부펀드와 함께 투자해야\" - 머니투데이 - 머니투데이",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5KMU5wQzByNUxSVjFBbEd5LU9VbkgzRDgtTjlpU1AwdHJNc0NiOG5yTWlES1ZnVG02bTJVNHVrVFFrSUp6UDJnZTBiZGk5ZHU3LWxFbDdQem10QllxOXBvbDJ6amJRRDROR3NZ0gFwQVVfeXFMUEdyTzJmQWtjUkw4YTYwOTAyZzREbTFMMnQ3YnhxYUhTR0Jlbm0zWDM5N1N2TVBDdzlQdUFwTEdZNFJmSXA5UXdDQlpvazdUdnZKZmFJcG81RmJwdllmSk1icXBPWExURkFpOGJFdlZhZA?oc=5"
+          "title": "국회, 821조 원 규모 2027년 예산안 심사 돌입…미래대응기금 놓고 여야 격돌 - 동아일보",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1OdnVRaDU0UXhjc0xyVHZ6d3llbHpLM1hPcjZPNXRnNEc3b2ZWSEVuSm1GeWY5alhvVUlvVGUtbklNaHJlRnBzc21BTUdWYndqeVJ2UlVoa0ZkMTlvLXdsQTFvTHNuSWhvd1d5bjlPLXpzYlh5NTZN0gFmQVVfeXFMT09ucGhLcmpMNjNwZmJLWVVfM1Zya3BWOXpBTVlaQjZ5NURtRXctOVM0VHhrakhtRFVMU0dMOG9uSVFpSVJHcXlQZ2FrUm1BeWZnYjVhSnFIUDJGQXVsai00al9UdDl3?oc=5"
         },
         {
-          "title": "예결위서 ‘미래대응기금 신설’ 공방…與 “재정 안전장치” 野 “총선용 사금고” - 산경일보",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02dDlnYVA5TlVlZUVpc09PZ01oWmVxeEFacTd5WGE3QjI3aURVRlItUmpnZUMyN2ZOTlJoellwU0l3Q21qMVJLejloS3dEUVY5enhQQ3NSejY2bmxOLVhZbWtSYzJ4UUwxU1JYQnpNMmk?oc=5"
+          "title": "정부 “미래대응기금발 지방정부 재원 부담 최소화” - 경북일보",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9jeGxBZEN5YTBQRlpNMEFRSDBFSUM3WS11NDdCUXprWU12b19KdTB4cXdUWlhQb0ttUkhMVmotTGZZc1JfeDRBcG5NdHlQWk92Q1ZSb051bE5BQmVKT09LRVlDX1dLSENqbW9PM1VoYw?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 55건)",
-      "score": 155
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 46건)",
+      "score": 146
+    },
+    {
+      "title": "재개발 \"30년씩 걸린다\"…李대통령이 장위동에서 국회에 넘긴 숙제",
+      "keyword": "장위동 재개발 대통령",
+      "trend_keyword": "",
+      "facts": "이재명 대통령이 서울 장위동 공공재개발 현장을 찾아 \"30년씩 걸린다는데\" 재정비가 너무 오래 걸린다고 말했어요. 공공이 주도해 속도를 내야 한다고 했고, 국회에도 관련 법을 빨리 처리해 달라고 요청했어요.",
+      "sides": "속도전 쪽: 공공이 앞장서고 국회가 법을 빨리 바꿔야 재개발이 빨라진다는 입장이에요 / 신중 쪽: 헤드라인에는 반대 논리가 없어 공공 주도 방식에 대한 비판은 보도 확인이 필요해요",
+      "question": "재개발이 느린 진짜 이유가 법과 절차라고 보세요, 아니면 주민 합의 같은 다른 문제가 더 크다고 보세요?",
+      "metrics": {
+        "news_24h": 42,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": ""
+      },
+      "links": [
+        {
+          "title": "장위동 재개발 현장 찾은 이 대통령 “부패 없고 신속한 공공 재개발로 중심 옮겨야” - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5fa0JqbzFBRElTUENvbnlYN3owSDFZWjVSSnM3UnFnVE9ZSlh0S0Q1SjY4VzRFalNSem1GaEFxSEpIUjZ4OHBTSFZhdHMxRE1vOUJJcm1aZ0txUQ?oc=5"
+        },
+        {
+          "title": "장위동 재개발 찾은 李대통령 \"재정비 너무 오래 걸려, 국회서 신속 처리해야\" - 뉴스1",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1VNGkxRkZUUG45ZllKbTBXR19Ca0pKSXE5aHg5Y3VpTWpIX3BxaTNuR2x1cWpnOUlJVTNqaG1oQWxTX256RjdSUmVMWDVVems4UVlidGlrdkN6cWs?oc=5"
+        },
+        {
+          "title": "이 대통령, 장위동 재개발 현장 시찰…\"공공이 하면 속도 빠르고 부정부패 줄어\" - 조세일보",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vbHY4bWR2eGNpak1nT2k1aG9kOURXb1Q5dnIzUGNaVXh2bmJmdlBOQm1iR3BhREo2bnB4MElEWmd6YUJUR1lHd2ZKMUd3T1kxUVdsWUNHQXFRenRLZGFMdTh3VTBaVTVFUDlkOHRaTXdnZVh3?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 42건",
+      "score": 42
     }
   ],
-  "updated": "2026-11-04T16:46+09:00",
+  "updated": "2026-11-04T21:16+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 9811,
-        "output_tokens": 4444,
+        "input_tokens": 9717,
+        "output_tokens": 4122,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1281
+        "usd": 0.1213
       }
     },
     "images": {},
-    "usd": 0.1281,
-    "total_usd": 0.1281,
-    "total_krw": 180,
+    "usd": 0.1213,
+    "total_usd": 0.1213,
+    "total_krw": 170,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
