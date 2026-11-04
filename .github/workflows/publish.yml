@@ -83,4 +83,6 @@ jobs:
           git add posts topics
           git diff --cached --quiet && { echo "바뀐 것 없음"; exit 0; }
           git commit -m "업로드 기록 $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
-          git push
+          # 다른 작업이 먼저 올렸으면 받아서 합친 뒤 다시 올려요
+          for i in 1 2 3; do git push && exit 0; git pull -q --rebase || true; sleep 5; done
+          exit 1
