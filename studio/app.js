@@ -82,7 +82,7 @@ async function viewReview(n) {
   tabs.push(['qa', '점검·근거']);
   const link = site.url || '';
   const panes = {
-    blog: () => `<div class="card"><div class="article"><h1 style="font-size:26px;margin-bottom:6px">${esc(p.title)}</h1><p class="muted small">${esc(p.meta_description || '')}</p>${d.html}</div></div>`,
+    blog: () => `<div class="card"><div class="article"><h1 style="font-size:26px;margin-bottom:6px">${esc(p.title)}</h1><p class="muted small">${esc(p.meta_description || '')}</p>${p.conclusion ? `<div class="card" style="margin:12px 0"><b class="small">한 줄 결론</b><p style="margin-top:4px">${esc(p.conclusion)}</p></div>` : ''}${d.html}</div></div>`,
     ig: () => `<div class="card"><div class="carousel">${d.cards.map((u, i) => `<img src="${esc(u)}" alt="카드 ${i + 1}">`).join('')}</div><div class="caption">${esc(p.instagram.caption)}</div></div>`,
     th: () => `<div class="card"><div class="thread">${p.threads.posts.map((t, i) => `${i ? '<div class="tline"></div>' : ''}<div class="tpost"><div class="av">${esc((site.threads?.handle || 'T')[0].toUpperCase())}</div><div class="tx"><b class="small">@${esc(site.threads?.handle || '')}</b><br>${esc(t).replace('{LINK}', `<span class="lk">${esc(link)}</span>`)}${i === 0 && d.cards[0] ? `<img src="${esc(d.cards[0])}" alt="">` : ''}</div></div>`).join('')}</div></div>`,
     qa: () => `<div class="grid g2"><div class="card"><h2>점검 결과</h2>${(p.checks?.issues || []).length ? `<ul class="issues">${p.checks.issues.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<p><span class="chip ok">모두 통과</span></p>'}</div>
