@@ -26,7 +26,7 @@ GUIDE = """스레드 투표 글 규칙 (사장님 지시):
 - 말투: 친구한테 말하듯 친근한 반말. 모든 문장을 반말로 끝내요. '~요', '~습니다' 금지.
 - 본문(text): 2~4줄, 150자 이내. 첫 줄에서 멈추게 하는 후킹(상황 한 장면, 도발 질문, '이거 나만 그래?'). 마지막 줄은 투표를 부르는 질문.
 - 사실처럼 단정하는 숫자·통계 금지(투표 전이니까). 특정인 비방, 남녀 갈등 조장, 정치·지역·종교 금지.
-- 선택지 2개(option_a, option_b): 각 25자 이내. 앱과 맞춰 '인정 (…)' / '아닌데 (…)' 형식, 괄호 안은 짧은 이유. 예: '인정 (기본 예의지)', '아닌데 (그건 오바)'.
+- 선택지 2개(option_a, option_b): 스레드 제한이 25바이트라 한글로 띄어쓰기 포함 8자 이내. 앱과 맞춰 '인정 (…)' / '아닌데 (…)' 형식, 괄호 안은 한글 3~4자 이유. 예: '인정 (예의지)', '아닌데 (오바임)', '인정 (내 권리지)'.
 - 대댓글(reply): 반말 1~2줄 + {LINK}. 예: '20대랑 50대가 완전 갈렸던데 세대별 결과는 여기 👉 {LINK}'
 - 링크는 대댓글에만. 본문·선택지에 링크 금지. 이모지는 글마다 2개 이하."""
 
@@ -69,8 +69,8 @@ def make_queue(site, n=7):
     for p in res.get("polls") or []:
         if str(p.get("card_id")) not in ids:
             continue
-        p["option_a"], p["option_b"] = p.get("option_a", "")[:25], p.get("option_b", "")[:25]
-        if not (p.get("text") and p["option_a"] and p["option_b"]):
+        p["option_a"], p["option_b"] = fit(p.get("option_a", ""), "인정"), fit(p.get("option_b", ""), "아닌데")
+        if not p.get("text"):
             continue
         p["card_id"] = str(p["card_id"])
         polls.append(p)
@@ -80,6 +80,15 @@ def make_queue(site, n=7):
     save_json(STATE, all_st)
     log(f"  [{site['name']}] 스레드 투표 대기열 +{len(polls)}개 (모두 {len(s['queue'])}개)")
     return polls
+
+
+def fit(opt, fallback):
+    """스레드 투표 선택지는 UTF-8 25바이트까지 (한글 약 8자). 넘으면 괄호 이유를 빼요."""
+    opt = (opt or "").strip()
+    if 0 < len(opt.encode()) <= 25:
+        return opt
+    head = opt.split("(")[0].strip()
+    return head if 0 < len(head.encode()) <= 25 else fallback
 
 
 def _post(url, data):
@@ -127,7 +136,7 @@ def due(dry=False):
             continue
         tok = secret(site["threads"]["token_secret"])
         pid = _publish(tok, {"media_type": "TEXT", "text": p["text"],
-                             "poll_attachment": json.dumps({"option_a": p["option_a"], "option_b": p["option_b"]}, ensure_ascii=False)})
+                             "poll_attachment": json.dumps({"option_a": fit(p["option_a"], "인정"), "option_b": fit(p["option_b"], "아닌데")}, ensure_ascii=False)})
         rec = {**p, "id": pid, "at": now.isoformat(timespec="minutes"), "link": link}
         try:
             rec["reply_id"] = _publish(tok, {"media_type": "TEXT", "text": reply, "reply_to_id": pid})
