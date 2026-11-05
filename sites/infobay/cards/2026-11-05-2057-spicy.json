@@ -1,0 +1,527 @@
+{
+  "created": "2026-11-05T20:57+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "애인이 이성 친구와 단둘이 밥 먹는 건 이해해 줘야 한다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'밥 한 끼가 뭐 어때' 쪽과 '단둘이는 선 넘었다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인끼리는 휴대폰 잠금 비밀번호를 서로 공유하는 게 맞다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'숨길 게 없으면 공유한다' 쪽과 '연인 사이에도 사생활이 있다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "새 애인이 생겨도 전 연인과 친구로 연락하며 지내도 된다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'끝난 사이니 상관없다' 쪽과 '지금 애인에 대한 배려가 아니다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "아무리 바빠도 애인에게는 하루 한 번 이상 먼저 연락해야 한다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "연락을 애정 표현으로 보는 쪽과 부담스러운 의무로 보는 쪽이 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "애인의 메시지 답장이 반나절 넘게 늦으면 서운해해도 된다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'반나절이면 서운할 만하다' 쪽과 '바쁠 수도 있는데 집착이다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "사귄 지 100일·200일 같은 기념일은 매번 꼭 챙겨야 한다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "기념일을 낭만으로 보는 쪽과 쓸데없는 숙제로 보는 쪽이 반반",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인이 SNS에 나와의 연애를 공개하지 않는 건 이해해 줘야 한다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'개인 성향이다' 쪽과 '왜 숨기냐' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인 중 수입이 더 많은 쪽이 데이트 비용을 더 내는 게 맞다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "능력대로 내는 게 공평하다는 쪽과 반반이 공평하다는 쪽이 정면충돌",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "애인이 이성 친구들과 술 마시는 중엔 중간중간 연락을 줘야 한다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'안심시켜 주는 게 예의다' 쪽과 '감시받는 느낌이다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "애인과 헤어지면 그동안 주고받은 선물은 돌려주는 게 맞다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'준 건 끝이다' 쪽과 '비싼 건 돌려줘야 깔끔하다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "애인이 전 연인에게 받은 선물을 아직 쓰고 있어도 괜찮다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'물건은 물건일 뿐이다' 쪽과 '찝찝해서 싫다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인 사이에도 위치 공유 앱을 켜두는 건 자연스러운 일이다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'안전하고 편하다' 쪽과 '사생활 침해다' 쪽이 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "애인이 SNS에서 이성의 사진에 '좋아요'를 눌러도 신경 쓰면 안 된다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'좋아요 하나로 예민하다' 쪽과 '신경 쓰이는 게 당연하다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인끼리 싸운 날에도 잠들기 전에는 반드시 화해하는 게 맞다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'감정은 그날 풀어야 한다' 쪽과 '시간을 두고 식혀야 한다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연애 중엔 친구 약속보다 애인과의 약속을 우선하는 게 맞다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'애인이 1순위다' 쪽과 '먼저 잡은 약속이 우선이다' 쪽이 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "친한 친구라도 돈을 빌려줄 땐 차용증을 써 달라고 해도 된다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'돈 문제는 확실히 해야 한다' 쪽과 '우정에 금 가는 행동이다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "빌린 돈은 안 갚으면서 여행 사진을 올리는 친구에겐 따져도 된다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'당연히 따질 일이다' 쪽과 '사생활과 빚은 별개다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "술을 안 마신 사람도 술값까지 똑같이 N빵하는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'모임 비용은 같이 낸다' 쪽과 '안 먹은 건 빼야 공평하다' 쪽이 정면충돌",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "모임에서 계산할 땐 1원 단위까지 정확히 나눠 받는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'정확한 게 깔끔하다' 쪽과 '쩨쩨해 보인다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연락 없던 친구가 청첩장을 보내면 축의금을 안 내도 된다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'필요할 때만 연락했다' 쪽과 '그래도 축하는 해야 한다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "내 결혼식에 안 온 사람의 경조사에는 나도 안 가도 된다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'주고받는 게 원칙이다' 쪽과 '사정이 있었을 수도 있다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "결혼하면 양가 부모님 용돈은 똑같은 금액으로 드려야 한다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'양가 공평이 기본이다' 쪽과 '형편에 맞게 다를 수 있다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "부모님 용돈은 형제 중 돈 잘 버는 사람이 더 내는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'여유 있는 쪽이 더 내야 한다' 쪽과 'N분의 1이 공평하다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "맞벌이 부부는 월급과 상관없이 생활비를 반반 내는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'반반이 공평하다' 쪽과 '수입 비율대로 내야 한다' 쪽이 정면충돌",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "결혼한 부부라도 각자 번 돈은 통장을 따로 관리하는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'각자 관리가 편하다' 쪽과 '부부면 합쳐야 한다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인 간 기념일 선물은 서로 비슷한 가격대로 맞추는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'주고받는 건 균형이 맞아야 한다' 쪽과 '마음이 중요하지 가격이 아니다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "가족에게 빌려준 돈이라도 은행 이자만큼은 받는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'돈은 돈이다' 쪽과 '가족끼리 이자는 정 없다' 쪽으로 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "친구 생일 선물은 내가 받았던 가격만큼 돌려주는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'받은 만큼 주는 게 예의다' 쪽과 '계산하는 우정은 싫다' 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "친분이 얕아도 부고 연락을 받았으면 조의금은 내는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'슬픈 일엔 챙기는 게 도리다' 쪽과 '안 친하면 부담 줄 필요 없다' 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "모임 회비를 냈어도 불참한 날 몫은 돌려받지 않는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "초반 성장용 맵게 카드 (연애·돈)",
+      "source": {},
+      "why": "'회비는 회비다' 쪽과 '안 쓴 돈은 돌려줘야 공평하다' 쪽이 정면충돌",
+      "status": "pending"
+    }
+  ]
+}
