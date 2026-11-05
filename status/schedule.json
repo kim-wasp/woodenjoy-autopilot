@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T13:29+09:00",
+  "updated": "2026-11-05T17:34+09:00",
   "items": [
     {
       "site": "infobay",
@@ -108,6 +108,15 @@
       "title": "뽁뽁이 붙이는 면, 택배용·단열용 달라요… 반대로 붙이면 들떠요",
       "platform": "blog",
       "at": "2026-11-06T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-05-fabricated-indictment-special-counsel-filibuster-n",
+      "title": "조작기소 특검법 필리버스터, 표결은 빨라도 언제? ‘24시간 규칙’",
+      "platform": "blog",
+      "at": "2026-11-06T12:00+09:00",
       "state": "planned"
     },
     {
