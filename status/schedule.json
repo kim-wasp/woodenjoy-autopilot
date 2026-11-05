@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T21:06+09:00",
+  "updated": "2026-11-05T21:07+09:00",
   "items": [
     {
       "site": "infobay",
@@ -165,6 +165,15 @@
       "state": "planned"
     },
     {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
+      "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
+      "platform": "blog",
+      "at": "2026-11-09T07:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-05-ticket-resale-face-value-law-2026",
@@ -198,6 +207,24 @@
       "title": "뽁뽁이 붙이는 면, 택배용·단열용 달라요… 반대로 붙이면 들떠요",
       "platform": "instagram",
       "at": "2026-11-09T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
+      "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
+      "platform": "threads",
+      "at": "2026-11-11T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
+      "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
+      "platform": "instagram",
+      "at": "2026-11-11T21:00+09:00",
       "state": "planned"
     }
   ]
