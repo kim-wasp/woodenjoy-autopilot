@@ -1,0 +1,10 @@
+{
+  "_설명": "외부 원본을 바탕으로 만든 스킬. tools/check_upstream.py 가 2주마다 원본 저장소가 바뀌었는지 확인해요.",
+  "humanize-korean": {
+    "repo": "epoko77-ai/im-not-ai",
+    "path": "skills/humanize-korean/references/quick-rules.md",
+    "license": "MIT",
+    "last_commit": "4ad425a",
+    "last_checked": "2026-11-06T00:14+09:00"
+  }
+}
