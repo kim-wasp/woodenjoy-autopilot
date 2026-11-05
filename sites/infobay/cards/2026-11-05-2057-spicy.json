@@ -28,7 +28,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'밥 한 끼가 뭐 어때' 쪽과 '단둘이는 선 넘었다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-1",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -45,7 +47,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'숨길 게 없으면 공유한다' 쪽과 '연인 사이에도 사생활이 있다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-2",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -62,7 +66,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'끝난 사이니 상관없다' 쪽과 '지금 애인에 대한 배려가 아니다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-3",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -79,7 +85,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "연락을 애정 표현으로 보는 쪽과 부담스러운 의무로 보는 쪽이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-4",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -96,7 +104,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'반나절이면 서운할 만하다' 쪽과 '바쁠 수도 있는데 집착이다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-5",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -113,7 +123,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "기념일을 낭만으로 보는 쪽과 쓸데없는 숙제로 보는 쪽이 반반",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-6",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -130,7 +142,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'개인 성향이다' 쪽과 '왜 숨기냐' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-7",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -147,7 +161,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "능력대로 내는 게 공평하다는 쪽과 반반이 공평하다는 쪽이 정면충돌",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-8",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -164,7 +180,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'안심시켜 주는 게 예의다' 쪽과 '감시받는 느낌이다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-9",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -181,7 +199,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'준 건 끝이다' 쪽과 '비싼 건 돌려줘야 깔끔하다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-10",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -198,7 +218,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'물건은 물건일 뿐이다' 쪽과 '찝찝해서 싫다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-11",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -215,7 +237,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'안전하고 편하다' 쪽과 '사생활 침해다' 쪽이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-12",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -232,7 +256,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'좋아요 하나로 예민하다' 쪽과 '신경 쓰이는 게 당연하다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-13",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -249,7 +275,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'감정은 그날 풀어야 한다' 쪽과 '시간을 두고 식혀야 한다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-14",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -266,7 +294,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'애인이 1순위다' 쪽과 '먼저 잡은 약속이 우선이다' 쪽이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-15",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -283,7 +313,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'돈 문제는 확실히 해야 한다' 쪽과 '우정에 금 가는 행동이다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-1",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -300,7 +332,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'당연히 따질 일이다' 쪽과 '사생활과 빚은 별개다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-2",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -317,7 +351,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'모임 비용은 같이 낸다' 쪽과 '안 먹은 건 빼야 공평하다' 쪽이 정면충돌",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-3",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -334,7 +370,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'정확한 게 깔끔하다' 쪽과 '쩨쩨해 보인다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-4",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -351,7 +389,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'필요할 때만 연락했다' 쪽과 '그래도 축하는 해야 한다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-5",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -368,7 +408,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'주고받는 게 원칙이다' 쪽과 '사정이 있었을 수도 있다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-6",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -385,7 +427,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'양가 공평이 기본이다' 쪽과 '형편에 맞게 다를 수 있다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-7",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -402,7 +446,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'여유 있는 쪽이 더 내야 한다' 쪽과 'N분의 1이 공평하다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-8",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -419,7 +465,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'반반이 공평하다' 쪽과 '수입 비율대로 내야 한다' 쪽이 정면충돌",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-9",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -436,7 +484,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'각자 관리가 편하다' 쪽과 '부부면 합쳐야 한다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-10",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -453,7 +503,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'주고받는 건 균형이 맞아야 한다' 쪽과 '마음이 중요하지 가격이 아니다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-11",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -470,7 +522,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'돈은 돈이다' 쪽과 '가족끼리 이자는 정 없다' 쪽으로 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-12",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -487,7 +541,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'받은 만큼 주는 게 예의다' 쪽과 '계산하는 우정은 싫다' 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-13",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -504,7 +560,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'슬픈 일엔 챙기는 게 도리다' 쪽과 '안 친하면 부담 줄 필요 없다' 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-14",
+      "inserted_at": "2026-11-05T22:08+09:00"
     },
     {
       "row": {
@@ -521,7 +579,9 @@
       "issue": "초반 성장용 맵게 카드 (연애·돈)",
       "source": {},
       "why": "'회비는 회비다' 쪽과 '안 쓴 돈은 돌려줘야 공평하다' 쪽이 정면충돌",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-15",
+      "inserted_at": "2026-11-05T22:08+09:00"
     }
   ]
 }
