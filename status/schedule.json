@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T07:37+09:00",
+  "updated": "2026-11-06T08:54+09:00",
   "items": [
     {
       "site": "infobay",
@@ -164,6 +164,15 @@
       "title": "방풍비닐 치고 곰팡이 핀다? 붙이기 전 결로·테이프·대피로 확인",
       "platform": "instagram",
       "at": "2026-11-06T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-06-fabricated-indictment-special-counsel-bill-vote-in",
+      "title": "조작기소 특검법 오늘 표결…공소취소 뺐는데 왜 또 싸우나",
+      "platform": "blog",
+      "at": "2026-11-07T12:00+09:00",
       "state": "planned"
     },
     {
