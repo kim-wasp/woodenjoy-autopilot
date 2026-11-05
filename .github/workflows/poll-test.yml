@@ -1,0 +1,9 @@
+name: 스레드 투표 시험
+on: {workflow_dispatch: {}}
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests -q && python3 tools/poll_test.py
+        env: {THREADS_TOKEN_INFOBAY: "${{ secrets.THREADS_TOKEN_INFOBAY }}"}
