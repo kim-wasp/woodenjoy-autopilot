@@ -22,6 +22,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import skills  # noqa: E402
 from common import CONTENT, ROOT, SITES, load_json, load_site, log, now_kst, post_dirs, save_json, slugify  # noqa: E402
 import checks  # noqa: E402
 import imagegen  # noqa: E402
@@ -283,14 +284,18 @@ def build_prompt(site, topic, notes, view=None):
                  "4) 견해의 문장을 그대로 길게 옮기지 말고 사장님 말투로 다시 써요.")
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
+    if blog_kind(site) == "naver":
+        p.append(skills.block("naver-woodenjoy-post"))
     if needs_cards(site):
         p.append(CARD_GUIDE)
+        p.append(skills.block("instagram-kr"))
     if site.get("threads", {}).get("enabled"):
         p.append(THREADS_GUIDE)
+        p.append(skills.block("threads-kr"))
     if img_cfg(site)["instagram"] == "photo_cards":
         p.append(PHOTO_CARD_GUIDE)
     p.append("[출력 JSON 형식]\n" + schema(site))
-    return "\n\n".join(p)
+    return "\n\n".join(x for x in p if x)
 
 
 # ---------- 파일·이미지 ----------
@@ -340,7 +345,7 @@ def review_cards(site, d, res):
         blocks += [{"type": "text", "text": f"{i}장"},
                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]
     ctx = {"title": res.get("title"), "caption": (res.get("instagram") or {}).get("caption", ""), "article": (res.get("article_md") or "")[:6000]}
-    blocks.append({"type": "text", "text": CARD_REVIEW + "\n\n[글·캡션]\n" + json.dumps(ctx, ensure_ascii=False)})
+    blocks.append({"type": "text", "text": CARD_REVIEW + "\n\n" + skills.block("card-image-check") + "\n\n[글·캡션]\n" + json.dumps(ctx, ensure_ascii=False)})
     try:
         out = llm.ask_json("당신은 꼼꼼한 카드뉴스 검수자입니다. 출력은 설명 없이 JSON 한 덩어리입니다.", blocks,
                            model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=2000, mock_name="card_review")
@@ -537,7 +542,7 @@ def preview_html(site, post, d):
 def humanize(site, md):
     if not md or not (site.get("monetization") or {}).get("humanize", True) or os.environ.get("MOCK_LLM"):
         return md
-    rules = (ROOT / "tools/humanize/quick-rules.md").read_text(encoding="utf-8")[:14000]
+    rules = skills.text("humanize-korean", 14000) or (ROOT / "tools/humanize/quick-rules.md").read_text(encoding="utf-8")[:14000]
     res = llm.ask_json(
         "당신은 한국어 윤문가입니다. 사실·숫자·고유명사·링크·[[...]] 표시·표·제목 구조는 그대로 두고 AI 티가 나는 문장만 고칩니다. 출력은 JSON 한 덩어리.",
         "아래 규칙으로 블로그 글에서 AI 티가 나는 문장만 찾아 고쳐 주세요. 고칠 게 없으면 빈 목록. 후킹(첫 문단의 강한 말)은 살리세요.\n"
@@ -722,7 +727,7 @@ def rewrite_threads(site_id, dir_):
     post = load_json(d / "post.json")
     md = (d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else ""
     exp = experiences(site) if "experiences" in globals() else ""
-    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
+    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n" + skills.block("threads-kr") + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
                        + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문", "댓글", "대댓글 + {LINK}"], "topic_tag": "주제 태그 1개"}',
                        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
     posts = [x for x in (res.get("posts") or []) if x]

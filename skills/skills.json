@@ -1,0 +1,10 @@
+{
+  "_설명": "콘텐츠 스튜디오가 쓰는 Claude 스킬 목록. tools/sync_skills.py 가 2주마다 Claude 최신본과 비교해 이 폴더를 갱신해요.",
+  "skills": {
+    "naver-woodenjoy-post": "우드엔조이 네이버 블로그 글·제목·썸네일",
+    "instagram-kr": "인스타 카드뉴스·캡션",
+    "threads-kr": "스레드 글·대댓글·투표",
+    "card-image-check": "카드뉴스 이미지 눈 검사",
+    "humanize-korean": "AI 티 지우기(윤문)"
+  }
+}
