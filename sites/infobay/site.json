@@ -148,7 +148,7 @@
     }
   },
   "threads_poll": {
-    "enabled": true,
+    "enabled": false,
     "time": "20:00",
     "link": "https://myinfobay.com/vote/{id}"
   }
