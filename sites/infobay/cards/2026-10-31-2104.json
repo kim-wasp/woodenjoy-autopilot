@@ -31,7 +31,7 @@
         "url": "https://supple.kr/news/cmvsu6ngw0hwhm5vu4qhfe5a5"
       },
       "why": "기존 카드는 '수입 차이' 기준이라, 이번엔 '일하는 시간' 기준으로 바꿨다. 집에 있는 시간에 맞춰 나누는 게 공평하다는 쪽과, 야근도 본인 선택이니 집안일은 같이 해야 한다는 쪽으로 갈린다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -51,7 +51,7 @@
         "url": "https://gosiweek.com/article/1065564132199034"
       },
       "why": "가볍게 분위기를 푸는 질문이라는 쪽과, 성격 유형으로 사람을 거른다는 느낌이라 불편하다는 쪽이 맞선다. 세대에 따라 MBTI를 대하는 온도도 많이 다르다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -71,7 +71,7 @@
         "url": "https://gosiweek.com/article/1065564132199034"
       },
       "why": "조직 문화가 맞는지 확인하려면 필요하다는 쪽과, 업무와 상관없는 사생활을 묻는 거라는 쪽이 갈린다. 업종이나 회사 분위기에 따라 받아들이는 정도가 다르다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -91,7 +91,7 @@
         "url": "https://digitaltoday.co.kr/news/articleView.html?idxno=711402"
       },
       "why": "예의 바른 말투일 뿐이라는 쪽과, 무슨 일인지 몰라 괜히 불안해진다는 쪽이 갈린다. 해외 직장인 대상 조사라서, 국내 메신저 문화에서는 어떤지가 투표 포인트다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -111,7 +111,7 @@
         "url": "https://www.sidae.com/article/2026102009453657207"
       },
       "why": "특정 사건과 고인 이야기는 빼고, 'SNS 추모 인증'이라는 일반 상황으로 바꿨다. 보여주기 같다는 쪽과, 추모 방식은 각자 선택이라는 쪽이 맞선다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -131,7 +131,7 @@
         "url": "https://feed.viewus.co.kr/ai/article/342099/"
       },
       "why": "인도는 누구나 쓰는 공간이고 운동하는 사람도 똑같은 보행자라는 쪽과, 여럿이 몰려 달리면 보행자에게 위협이 된다는 쪽이 갈린다. 시간대나 장소(공원인지 도심인지)에 따라 판단이 달라진다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -151,7 +151,7 @@
         "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01216886645616528"
       },
       "why": "실제 제복과 비슷한 옷은 법으로 금지돼 있지만, 그 정도가 아닌 코스프레는 '자제 권고' 수준이다. 축제니까 괜찮다는 쪽과, 사람이 몰리는 곳에서는 혼란을 준다는 쪽이 갈린다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -171,7 +171,7 @@
         "url": "https://sports.khan.co.kr/article/202610291256003/"
       },
       "why": "특정인 이야기는 빼고 '학원 고를 때 기준'으로 바꿨다. 전공과 학위가 신뢰의 기준이라는 쪽과, 운영자보다 강사진과 수업 결과가 중요하다는 쪽이 맞선다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -191,7 +191,7 @@
         "url": "https://view.asiae.co.kr/article/2026103009035052873"
       },
       "why": "실제 착용감을 오해하게 만드니 알려야 한다는 쪽과, 보정 사진처럼 광고 연출의 하나일 뿐이라는 쪽이 갈린다. 해외 사례라서 국내 쇼핑에 대입했을 때 생각을 묻는 카드다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -211,7 +211,7 @@
         "url": "https://www.segye.com/newsView/20261027514033"
       },
       "why": "공유 버튼 하나 누르는 것도 책임이 따른다는 쪽과, 확인하기 어려우니 '이거 진짜?' 하고 묻는 공유 정도는 괜찮다는 쪽이 갈린다. 안보나 정치 이야기는 빼고 공유 습관만 묻는다.",
-      "status": "pending"
+      "status": "approved"
     }
   ]
 }
