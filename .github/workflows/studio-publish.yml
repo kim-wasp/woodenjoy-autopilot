@@ -78,6 +78,15 @@ jobs:
             set +e; FORCE="${{ github.event.inputs.branch && '1' || '' }}" python3 engine/publish.py "$d" "$p" ${{ github.event.inputs.test == 'yes' && '--test' || '' }} 2>&1 | tee -a pub.log; [ ${PIPESTATUS[0]} = 0 ] || fail=1; set -e
           done < due.txt
           exit $fail
+      - name: 스레드 매일 투표 (커먼센스)
+        if: github.event.inputs.branch == ''
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          THREADS_TOKEN_INFOBAY: ${{ secrets.THREADS_TOKEN_INFOBAY }}
+        run: python3 engine/threads_poll.py due 2>&1 | tee -a pub.log
       - name: 일정표 갱신·기록
         if: always()
         env:
