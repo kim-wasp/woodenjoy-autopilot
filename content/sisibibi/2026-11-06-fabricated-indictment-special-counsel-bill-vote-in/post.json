@@ -1,0 +1,126 @@
+{
+  "id": "sisibibi/2026-11-06-fabricated-indictment-special-counsel-bill-vote-in",
+  "site": "sisibibi",
+  "title": "조작기소 특검법 오늘 표결…공소취소 뺐는데 왜 또 싸우나",
+  "status": "draft",
+  "created_at": "2026-11-06T08:19+09:00",
+  "requested_topic": "'숙원' vs '반헌법'…조작기소 특검법 내일 통과 유력, 남은 '공소 취소' 논란은?",
+  "keywords": {
+    "main": "조작기소 특검법",
+    "sub": [
+      "조작기소 특검법 공소취소",
+      "공소취소 조항 삭제",
+      "조작기소 특검 수사대상",
+      "필리버스터 종결 표결",
+      "특검 공소취소 우회로",
+      "검찰인권존중미래위원회"
+    ]
+  },
+  "brief": {
+    "reader": "조작기소 특검법 통과 뉴스를 봤지만 '공소취소 조항은 빠졌다는데 왜 아직 싸우지?'가 궁금한 사람",
+    "question": "공소취소 조항을 지웠는데도 왜 '공소취소 특검'이라는 논란이 계속되나요?",
+    "answer": "조항은 빠졌지만 다른 조항 해석이나 법무장관·재판부를 거치는 길로 대통령 재판에 영향을 줄 수 있다는 지적이 남아 있어서예요.",
+    "out_of_scope": "필리버스터 종결 절차의 세부 시간 계산(앞선 글에서 다룸), 개별 사건의 유무죄 판단, 조희대 대법원장 국정조사 문제",
+    "next_action": "통과 뒤 특검 후보 추천, 검사 파견 규모, 미래위 권고가 나오는지 같은 체크포인트를 지켜보기"
+  },
+  "why_this_topic": "11월 5일 본회의에 상정됐고 6일 오후 표결이 예정돼 검색이 몰리는 시점이에요. 표결 시각 자체는 앞선 글에서 다뤘기 때문에 이번 글은 겹치지 않게 '공소취소 조항 삭제 뒤에도 남은 쟁점'을 다뤘어요. 경향신문과 한겨레가 법사위 전문위원 검토보고서와 우회로 문제를 짚은 직후라 검색 결과에도 정리된 비교 글이 부족해요.",
+  "meta_description": "조작기소 특검법이 6일 오후 표결돼요. 공소취소 조항은 빠졌는데 왜 논란이 계속될까요? 원안과 수정안 차이, 우회로 3가지, 양쪽 주장을 표 한 장으로 정리했어요.",
+  "hero_prompt": "Wide shot of an empty South Korean National Assembly plenary chamber with rows of vacant seats and desks, a few closed document folders and a microphone on the speaker's podium, soft natural daylight, calm documentary photo style, no people, no text, no logos, neutral colors",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "summary": [],
+  "conclusion": "조작기소 특검법은 오늘 오후 통과가 유력해요. 공소취소 조항은 빠졌지만 다른 길이 남았다는 지적이 있어서 논란은 이어질 거예요.",
+  "opinion": "우리나라는 삼권분립의 국가 아닌가\n왜 항상 국회의원들, 즉 입법이 항상 제일 위레 있다고 생각하는거지?\n이번일이 국회가 대통령의 지시(지시라고 표현하는 것도 저급하지만)에 따라 움직이는 기관이냐고 한다는데, 그럼 이제껏 정부한테는 국회가 이래라 저래라 했으면서...\n대통령제의 국가에서는 어쩔수 없이 완벽히 삼권분립이라고 정확히 권력이나 힘을 1/3씩 가지고 행할수는 없다고 본다면 리더의 혹은 구성원들의 역량에 따라 힘의 균형이 왔다갔다 할수도 있는일인거지\n지금 이재명 대통령이 강하게 밀고나가니까 견제하려고 그러는것도 있겠지만 좀 상식적으로 대응했으면...이제껏 마음대로 구속하고 기소했던 검찰의 행태에 대한 인과응보라고 생각하고 다음을 기약할건 기약하고 정책적으로 이성적으로 대처하는 국회의, 아니 국가기관의 모습을 좀 보여줬으면 좋겠다.",
+  "photos": [],
+  "sources": [
+    {
+      "title": "'조작기소 특검법' 국회 상정…국힘 필리버스터에 6일 표결할 듯 - 한국경제",
+      "url": "https://www.hankyung.com/article/2026110588047"
+    },
+    {
+      "title": "'조작기소 특검법안' 본회의 상정…국힘 필리버스터에 내일 표결 전망 - SBS Biz",
+      "url": "https://biz.sbs.co.kr/article/20000344557"
+    },
+    {
+      "title": "'조작기소 특검법안' 필리버스터 대치… 6일 표결 - 파이낸셜뉴스",
+      "url": "https://www.fnnews.com/news/202611051834263293"
+    },
+    {
+      "title": "'조작기소 특검법' 오늘 본회의 통과할 듯 - 파이낸셜뉴스(뉴시스)",
+      "url": "https://www.fnnews.com/news/202611060500519106"
+    },
+    {
+      "title": "공소취소 권한 삭제한 조작기소특검 5일 본회의 상정…수사·기소권 모두 쥐었다 - 경향신문",
+      "url": "https://www.khan.co.kr/article/202611051753001/"
+    },
+    {
+      "title": "‘수사·기소권 모두 쥔’ 조작기소특검법 본회의 상정 - 경향신문",
+      "url": "https://www.khan.co.kr/article/202611052145015/"
+    },
+    {
+      "title": "‘공소취소’ 뺐지만 공정성 시비 여전···대통령 재판에 영향 가능성 - 경향신문",
+      "url": "https://www.khan.co.kr/article/202611051652001/"
+    },
+    {
+      "title": "국회 통과 앞둔 조작기소 특검법…공소 취소 등 논란 계속될 듯 - 한겨레(네이트)",
+      "url": "https://m.news.nate.com/view/20261105n26290"
+    },
+    {
+      "title": "이 대통령 '공소취소 조항 삭제...진상 규명에 집중해 달라' - YTN",
+      "url": "https://www.ytn.co.kr/_ln/0101_202609182248144825"
+    },
+    {
+      "title": "'대통령 지시 시인하나'…국힘, '조작 기소 특검법' 맹공 - 이데일리",
+      "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02361606645444984"
+    },
+    {
+      "title": "조작기소 특검, 공소취소 우려에 '법치주의 대원칙 위배' 논란까지 - 매일일보",
+      "url": "https://www.m-i.kr/news/articleView.html?idxno=2015095"
+    },
+    {
+      "title": "'조작기소 특검법' 상정에 필버충돌 - 데일리안",
+      "url": "https://www.dailian.co.kr/news/view/1711518/"
+    },
+    {
+      "title": "국힘 '李·文 면죄부 나눠먹기' … '조작기소 특검' 필리버스터 예고 - 뉴데일리",
+      "url": "https://www.newdaily.co.kr/site/data/html/2026/11/05/2026110500179.html"
+    },
+    {
+      "title": "수사·기소 분리한다더니 검사에게 다시 수사권 준 조작기소특검법 - 오마이뉴스",
+      "url": "https://ohmynews.com/NWS_Web/Series/series_premium_pg.aspx?CMPT_CD=M0112&CNTN_CD=A0003282308&PAGE_CD=N0002"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 0,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-06T08:19+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 15259,
+        "output_tokens": 10859,
+        "web_searches": 6,
+        "calls": 2,
+        "usd": 0.3382
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.4722,
+    "total_usd": 0.4722,
+    "total_krw": 660,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
