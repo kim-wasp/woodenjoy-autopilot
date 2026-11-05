@@ -1,0 +1,19 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  대표 이미지 생성 (gemini)
+  홈피드 썸네일 완성 (쇼바 숫자 하나에 / 문이 쾅 닫혀요)
+  카드 점검 실패:
+  - 1장: 계정명 자리 침범: "상부장 쇼바 교체"
+  - 1장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 1장: 계정명 자리 침범: "상부장 쇼바 교체"
+   - 카드: 1장: 본문이 계정명 자리까지 내려옴
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length/cards
+  카드 눈 검사:
+   - 2장: '쇼바 몸통 표기 예시'에 50N과 8kg(=80N급)이 한 쇼바에 함께 적혀 있어 힘 숫자가 서로 맞지 않아요. 표지에서 약속한 '80N·248mm'와도 다르니 예시를 '80N 248mm' 또는 '8kg 248mm'처럼 한 가지 힘 숫자로 통일해야 해요.
+  점검에 걸림 → 고치기:
+   - 카드: 2장: '쇼바 몸통 표기 예시'에 50N과 8kg(=80N급)이 한 쇼바에 함께 적혀 있어 힘 숫자가 서로 맞지 않아요. 표지에서 약속한 '80N·248mm'와도 다르니 예시를 '80N 248mm' 또는 '8kg 248mm'처럼 한 가지 힘 숫자로 통일해야 해요.
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length/cards
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 1,110원 ($0.795)
+완료: content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length · 점검 통과
+::set-output-dir::content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length
