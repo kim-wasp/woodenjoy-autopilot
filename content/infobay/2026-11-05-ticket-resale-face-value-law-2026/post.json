@@ -1,0 +1,175 @@
+{
+  "id": "infobay/2026-11-05-ticket-resale-face-value-law-2026",
+  "site": "infobay",
+  "title": "티켓 양도 정가면 괜찮을까? 암표법 기준, 1장 웃돈도 걸리는 경우",
+  "status": "ready",
+  "created_at": "2026-11-05T20:43+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "티켓 양도 암표 처벌",
+    "sub": [
+      "콘서트 티켓 양도",
+      "암표법 개정",
+      "정가 양도",
+      "티켓 되팔기",
+      "공연법 부정판매",
+      "한국시리즈 암표",
+      "암표 신고포상금"
+    ]
+  },
+  "brief": {
+    "reader": "갑자기 못 가게 된 콘서트·야구 표를 중고거래나 양도 플랫폼에 올리려는 20~40대",
+    "question": "8월에 바뀐 암표법 기준으로 표를 정가나 웃돈 받고 넘기면 처벌받나?",
+    "answer": "산 값 그대로 한 번 넘기는 건 부정판매 요건에 들지 않지만, 웃돈을 반복해서 받거나 1장이라도 정가 2배 넘게 받으면 제재 대상이 될 수 있어요.",
+    "out_of_scope": "영화 티켓 세부 규정, 해외 티켓 거래, 개별 사건에 대한 법률 판단",
+    "next_action": "표를 넘기기 전에 취소 가능 여부, 예매처 양도 규정, 가격을 차례로 확인하기"
+  },
+  "why_this_topic": "검색량 수치 자료는 못 찾았어요. 그래서 뉴스 흐름을 근거로 골랐어요. 11월 2일 대형 암표 단속이 크게 보도됐어요. <cite index=\"19-3\">이들은 정가 8만 1000원짜리 한국시리즈 티켓을 최대 110배 가격인 893만원에 판매한 것으로 드러났다.</cite> 국무총리도 직접 SNS에 글을 올렸어요. <cite index=\"20-5\">한성숙 국무총리는 한국시리즈 개막을 앞둔 오늘(2일) 자신의 SNS(엑스·옛 트위터)에 '이제 암표로 돈 못 법니다'라는 글을 게시</cite>했어요. 개정법은 <cite index=\"2-1\">지난 8월 28일부터 '암표' 거래 근절을 위한 개정 공연법이 시행됐다.</cite> 다만 기준선은 아직 흐릿해요. <cite index=\"6-25\">몇 번을 팔면 상습인지, 어느 정도 규모면 영업인지에 대한 기준이 법률에는 없다.</cite> 그래서 '내 표 1장 넘기는 것도 걸리나?'가 지금 많이 궁금한 질문이에요. 연말 공연 시즌에 들어가는 시기이기도 해요. 앱 새 카드 '인기 입장권을 웃돈 받고 되파는 건 안 된다', '못 가게 된 예약표는 정가로 남에게 넘겨도 된다'와 바로 이어져요. 최근 글(축의금·조의금·면접)이나 승인 대기 주제(축의금 5 vs 10)와도 겹치지 않아요.",
+  "meta_description": "못 가게 된 콘서트·야구 표, 정가 양도는 괜찮을까요? 8월 28일 시행된 개정 공연법 기준으로 정가 양도, 1장 웃돈, 수고비 명목 거래가 어디까지 괜찮은지 표로 정리했어요.",
+  "hero_prompt": "Long line of young people waiting outside a concert arena in Seoul in late autumn evening, warm venue lights, people holding phones, seen from a distance and from behind, realistic candid photo, no text, no readable signs or logos",
+  "thumb_text": "",
+  "category": "공공·매너",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "저녁 무렵 야구장 입구로 들어가는 관중들"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "지하철에서 휴대폰으로 예매한 표를 확인하는 직장인"
+    }
+  ],
+  "sources": [
+    {
+      "title": "문화체육관광부 대표 국정성과: 암표 근절 위한 관련 법 개정",
+      "url": "https://www.mcst.go.kr/site/s_policy/govPolicy/performView.jsp?pSeq=1115"
+    },
+    {
+      "title": "더파워: 암표 팔았다간 '50배 과징금'…부정구매 신고엔 최대 5000만원",
+      "url": "https://www.thepowernews.co.kr/view.php?ud=202608281442072965de3f0aa1be_7"
+    },
+    {
+      "title": "문화일보: \"못 가면 취소가 원칙\"… 본인 티켓 1장도 2배 가격에 되팔땐 처벌[10문10답]",
+      "url": "https://www.munhwa.com/article/11608626"
+    },
+    {
+      "title": "경향신문: 암표상 1명이 1억원어치 팔려 했다···문체부, 170명 수사 의뢰",
+      "url": "https://www.khan.co.kr/article/202610071024001/"
+    },
+    {
+      "title": "문화일보: 문체부, 새 암표법 시행 후 170명 첫 수사 의뢰",
+      "url": "https://www.munhwa.com/article/11621834"
+    },
+    {
+      "title": "국제뉴스: 문체부, 암표 거래 혐의자 170명 수사의뢰",
+      "url": "https://www.gukjenews.com/news/articleView.html?idxno=3715739"
+    },
+    {
+      "title": "파이낸셜뉴스: 8만원짜리가 893만원.. 포스트시즌 암표상 인천과 울산서 덜미",
+      "url": "https://www.fnnews.com/news/202611021438479127"
+    },
+    {
+      "title": "뷰어스: 한국시리즈 암표상 24명 입건… 정가 '110배' 거래",
+      "url": "https://feed.viewus.co.kr/ai/article/354868/"
+    },
+    {
+      "title": "뉴스1: 韓총리 \"암표로 이제 돈 못 벌어…부당이익 끝까지 환수\"",
+      "url": "https://www.news1.kr/politics/president/6340363"
+    },
+    {
+      "title": "이투데이(네이트): 매크로 없어도 웃돈 암표 처벌…판매액 최대 50배 과징금",
+      "url": "https://m.news.nate.com/view/20260828n19882"
+    },
+    {
+      "title": "스포츠월드(네이트): 암표 근절법 개정안 시행…부정판매 시 최대 50배 과징금",
+      "url": "https://m.news.nate.com/view/20260829n00127"
+    },
+    {
+      "title": "뉴데일리: 공연·스포츠 암표 근절한다…최대 50배 과징금 \"영비법도 개정\"",
+      "url": "https://www.newdaily.co.kr/site/data/html/2026/08/28/2026082800191.html"
+    },
+    {
+      "title": "더팩트: 매크로 안 써도 처벌…개정 공연법, 무엇이 달라졌나",
+      "url": "https://v.daum.net/v/20260914000237238"
+    },
+    {
+      "title": "이슈인사이트: 8월 28일 암표법, 50배 과징금은 무엇을 바꾸나",
+      "url": "https://www.issueinsight.co.kr/news/articleView.html?idxno=2993"
+    },
+    {
+      "title": "법률신문: 암표, 인터넷·SNS상 거래는 무죄? (경범죄처벌법 암표매매 규정)",
+      "url": "https://www.lawtimes.co.kr/news/102670"
+    },
+    {
+      "title": "대륜 법률정보: 암표처벌 수위와 신고 방법 (암표 통합 신고 누리집)",
+      "url": "https://www.daeryunlaw-entertainment.com/lawInfo_new/2882"
+    },
+    {
+      "title": "한국시리즈 암표 사기 피하는 법 (선입금·캡처본 거래 주의)",
+      "url": "https://foxcg.com/korean-series-ticket-scalping-fraud-prevention"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "실수 바로잡기형",
+    "cover_hooks": [
+      "콘서트 표 1장\n웃돈도 걸려요?",
+      "8만원 야구표가\n893만원에",
+      "매크로 안 쓰면\n괜찮다? ✕"
+    ],
+    "caption": "못 간 공연 표, 정가에 넘기면 암표일까요?\n\n산 값 그대로 1번 넘기는 건 부정판매가 아니에요.\n본인 표 1장도 정가 2배 이상이면 제재 대상이 될 수 있어요.\n수고비·수수료 명목 웃돈도 실제 거래로 판단해요.\n\n양도 글 올리기 전에 꺼내 보게 저장해 두세요. 자세한 표는 프로필 링크에 있어요.\n\n#생활꿀팁 #암표 #티켓양도 #콘서트티켓 #공연법",
+    "caption_note": ""
+  },
+  "threads": {
+    "hooks": [
+      "8만원 야구표가 893만원에 팔렸대",
+      "못 간 콘서트 표, 정가에 넘기면 암표야?",
+      "수고비 5천원 붙이면 괜찮을 줄 알았지?"
+    ],
+    "posts": [
+      "8만원 야구표가 893만원에 팔렸대\n한국시리즈 표였고 판 사람들은 결국 입건됐어.\n\n근데 내가 진짜 궁금한 건 이거야. 갑자기 못 가게 된 콘서트 표 1장, 정가에 넘기면 나도 걸려? 수고비 몇천원 붙이면?\n8월에 바뀐 기준 댓글에 적어둘게",
+      "1. 산 값 그대로 1번 넘기는 건 법이 말하는 부정판매가 아님\n2. 1장 1번은 원칙상 상습으로 안 보는데, 본인 표 1장도 정가 2배 넘게 받으면 제재될 수 있대 (문체부)\n3. 수고비·수수료 명목 웃돈도 실제 거래로 판단해서 수사 대상에 들어갔어\n4. 기본 원칙은 취소부터야",
+      "과징금 50배랑 경기장 앞 현장 거래 벌금까지 표로 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "생활꿀팁"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 4장: '고시 대상 → 판매액 5배 과징금'이라고 단정했지만, 글에는 '판매금액의 5배 안에서 과징금이 나올 수 있어요'라고 되어 있음(5배 이내·가능성)",
+      "카드: 7장: 4칸 중 '취소 먼저·규정 확인·산 값 이하'가 3장의 1·2·3번(취소 기한, 예매처 양도 규정, 산 값 이하)과 같은 내용의 반복임",
+      "카드: 7장: '이 4가지만 다시 확인'의 네 번째 항목 '1회만'이 글의 체크리스트 네 번째 항목('선입금·캡처본 거래를 요구받지 않았나?')과 다름"
+    ],
+    "at": "2026-11-05T20:44+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 21921,
+        "output_tokens": 19614,
+        "web_searches": 5,
+        "calls": 4,
+        "usd": 0.53
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 0.932,
+    "total_usd": 0.932,
+    "total_krw": 1300,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
