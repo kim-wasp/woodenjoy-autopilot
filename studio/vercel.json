@@ -1,4 +1,10 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "studio/**": false,
+      "studio-logs": false
+    }
+  },
   "functions": {
     "api/*.js": {
       "maxDuration": 60
