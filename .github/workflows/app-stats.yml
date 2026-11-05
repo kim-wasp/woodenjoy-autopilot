@@ -9,32 +9,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
       - name: 세기
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: |
+          pip install requests -q
           python3 - <<'PY' | tee topics/app_stats.txt
-          import os, json, urllib.request, collections, datetime
-          u = os.environ["SUPABASE_URL"].rstrip("/") + "/rest/v1/"
-          h = {"apikey": os.environ["SUPABASE_SERVICE_KEY"], "Authorization": "Bearer " + os.environ["SUPABASE_SERVICE_KEY"]}
-          def get(path):
-              out, start = [], 0
+          import sys, collections, datetime
+          sys.path.insert(0, "engine")
+          import commonsense
+          db = commonsense.DB({})
+          def get(t, sel):
+              out = []
               while True:
-                  r = urllib.request.Request(u + path, headers={**h, "Range": f"{start}-{start+999}"})
-                  rows = json.load(urllib.request.urlopen(r)); out += rows
+                  rows = db.get(t, {"select": sel, "limit": 1000, "offset": len(out)}); out += rows
                   if len(rows) < 1000: return out
-                  start += 1000
-          resp = get("responses?select=card_id,user_id,created_at")
-          prof = get("profiles?select=id,birth_year")
-          ages = collections.Counter((2026 - p["birth_year"]) // 10 * 10 for p in prof if p.get("birth_year"))
+          resp = get("responses", "*")
+          prof = get("profiles", "*")
+          by = {p["id"]: p for p in prof}
+          ages = collections.Counter((2026 - int(p["birth_year"])) // 10 * 10 for p in prof if p.get("birth_year"))
           per = collections.Counter(r["card_id"] for r in resp)
-          days = collections.Counter(str(r.get("created_at", ""))[:10] for r in resp)
+          tcol = next((k for k in (resp[0] if resp else {}) if "at" in k and "creat" in k), None)
+          days = collections.Counter(str(r.get(tcol, ""))[:10] for r in resp) if tcol else {}
           print("확인:", datetime.datetime.utcnow().isoformat()[:16], "UTC")
-          print("총 투표 수:", len(resp)); print("투표한 사람 수:", len({r['user_id'] for r in resp}))
+          print("총 투표 수:", len(resp)); print("투표한 사람 수:", len({r["user_id"] for r in resp}))
           print("프로필(나이) 입력한 사람:", len(prof), "/ 나이대:", dict(sorted(ages.items())))
-          print("투표 받은 카드 수:", len(per), "/ 카드당 최다:", per.most_common(5))
-          print("최근 14일 날짜별 투표:", sorted(days.items())[-14:])
+          print("투표 받은 카드 수:", len(per), "/ 표 많은 카드:", per.most_common(5))
+          print("카드당 표 수 분포(10표 이상 카드 수):", sum(1 for v in per.values() if v >= 10), "/ 30표 이상:", sum(1 for v in per.values() if v >= 30))
+          print("최근 14일 날짜별 투표:", sorted(days.items())[-14:] if days else "날짜 칸 없음")
           PY
       - name: 저장
         run: |
