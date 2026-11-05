@@ -172,5 +172,10 @@
     "total_krw": 1300,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-05T21:06+09:00"
+  "approved_at": "2026-11-05T21:06+09:00",
+  "published": {
+    "blog": "ticket-resale-face-value-law-2026",
+    "blog_url": "https://myinfobay.com/blog/ticket-resale-face-value-law-2026",
+    "blog_at": "2026-11-06T07:37:19+09:00"
+  }
 }

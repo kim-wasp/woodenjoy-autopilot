@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T03:41+09:00",
+  "updated": "2026-11-06T07:37+09:00",
   "items": [
     {
       "site": "infobay",
@@ -107,8 +107,9 @@
       "dir": "content/infobay/2026-11-05-ticket-resale-face-value-law-2026",
       "title": "티켓 양도 정가면 괜찮을까? 암표법 기준, 1장 웃돈도 걸리는 경우",
       "platform": "blog",
-      "at": "2026-11-06T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-06T07:37:19+09:00",
+      "state": "done",
+      "url": "https://myinfobay.com/blog/ticket-resale-face-value-law-2026"
     },
     {
       "site": "woodenjoy",
@@ -116,8 +117,9 @@
       "dir": "content/woodenjoy/2026-11-04-bubble-wrap-window-which-side",
       "title": "뽁뽁이 붙이는 면, 택배용·단열용 달라요… 반대로 붙이면 들떠요",
       "platform": "blog",
-      "at": "2026-11-06T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-06T07:37:24+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
