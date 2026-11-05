@@ -50,7 +50,9 @@ def candidate_cards(site, used):
     import commonsense
     db = commonsense.DB(site.get("app") or {})
     rows = db.get((site.get("app") or {}).get("table", "cards"), {"select": "id,statement,category,track", "limit": "1000"})
-    return [r for r in rows if str(r.get("id")) not in used and r.get("statement")]
+    rows = [r for r in rows if str(r.get("id")) not in used and r.get("statement")]
+    hot = {c["name"] for c in commonsense.SPICY_CATS}
+    return [r for r in rows if r.get("category") in hot] + [r for r in rows if r.get("category") not in hot]
 
 
 def make_queue(site, n=7):
@@ -62,7 +64,7 @@ def make_queue(site, n=7):
         return []
     sample = "\n".join(f"- [{c['id']}] ({c.get('category', '')}) {c['statement']}" for c in cards[:250])
     prompt = (f"{GUIDE}\n\n[앱 카드 목록 — id, 분류, 상황 문장]\n{sample}\n\n"
-              f"위 카드 중에서 스레드에서 의견이 가장 팽팽하게 갈리고 댓글이 붙을 만한 것 {n}개를 골라(분류가 겹치지 않게 섞어서), 규칙대로 써 주세요. "
+              f"위 카드 중에서 스레드에서 의견이 가장 팽팽하게 갈리고 댓글이 붙을 만한 것 {n}개를 골라(연애·돈 분류가 있으면 절반 이상은 거기서, 나머지는 분류가 겹치지 않게), 규칙대로 써 주세요. "
               '출력 JSON: {"polls": [{"card_id": "카드 id 그대로", "text": "본문", "option_a": "인정 (…)", "option_b": "아닌데 (…)", "reply": "대댓글 + {LINK}"}]}')
     res = llm.ask_json("당신은 한국 스레드에서 반응을 잘 끌어내는 카피라이터예요. 사실만, 규칙을 지켜요. 출력은 JSON 한 덩어리.",
                        prompt, model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=4000, mock_name="threads_polls")

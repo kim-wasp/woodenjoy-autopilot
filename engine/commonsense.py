@@ -102,6 +102,53 @@ def collect(site_id):
 
 
 _IDS = None
+SPICY_CATS = [{"name": "연애", "prefix": "LOV"}, {"name": "돈", "prefix": "MON"}]
+
+SPICY_GUIDE = """초반 성장용 '맵게' 카드 규칙 (사장님 지시, 2026-11):
+- 목표: 보자마자 '이건 내가 맞지' 하고 투표·공유하게 만드는 피 튀기는 생활 상황. 순한 카드 금지.
+- 소재: 연애(데이트 비용, 연락 빈도, 이성 친구, 전 연인, 기념일, 비밀번호 공유), 돈(더치페이, 축의금, 빌려준 돈, 경조사비, 부모님 용돈, 맞벌이 생활비, N빵, 선물 가격).
+- 문장: 기존 카드처럼 '~해도 된다 / ~하는 게 맞다' 한 줄 단정문(30~45자). 인정/아닌데로 정확히 반반 갈릴 만한 것.
+- 넘으면 안 되는 선(애드센스·메타 정책): 욕설, 성적 묘사·스킨십 수위, 혐오 표현(한남·김치녀·틀딱 등), 성별·세대·지역 전체를 깎아내리는 일반화, 정치·종교, 실존 인물·회사 저격, 범죄·불법 조장.
+- 남녀가 나오면 한쪽을 깎지 말고 '애인이', '상대가'처럼 성별 없이 쓰거나 양쪽 다 해당되게."""
+
+
+def spicy(site_id, n=30):
+    """연애·돈 '맵게' 카드 후보 → 관리화면 '앱 카드'에서 승인 → insert 로 앱에 추가 (새 분류도 그때 만들어요)"""
+    site = load_site(site_id)
+    cfg = site.get("app") or {}
+    table = cfg.get("table", "cards")
+    db = DB(cfg)
+    sample = db.get(table, {"select": "*", "limit": 30})
+    existing = db.get(table, {"select": "*", "limit": 2000})
+    fields = editable_fields(sample)
+    names = [c["name"] for c in SPICY_CATS]
+    prompt = "\n\n".join([
+        SPICY_GUIDE,
+        "[카드 형식 — 이 칸만 채우세요]\n" + json.dumps(fields, ensure_ascii=False),
+        "[기존 카드 예시 — 말투·형식 참고]\n" + json.dumps([{k: r.get(k) for k in fields} for r in sample[:10]], ensure_ascii=False, indent=0),
+        "[이미 있는 카드 — 겹치지 않게]\n" + "\n".join(texts_of(existing, fields)[-400:]),
+        f"카드 {n}개를 만드세요. category 는 {names} 중 하나(반반 정도), track 은 'NORM', status 는 'draft', source·correct_answer 는 null, is_event 는 false, region_scope 'KR', locale 'ko-KR'.\n"
+        'JSON: {"items": [{"row": {칸: 값}, "why": "어떻게 갈릴지 한 줄"}]}'])
+    res = llm.ask_json("당신은 생활 상식 투표 앱의 카드 편집자예요. 출력은 JSON 한 덩어리.", prompt,
+                       model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=8000, mock_name=f"{site_id}_cards")
+    items = []
+    for it in res.get("items", []):
+        row = {k: v for k, v in (it.get("row") or {}).items() if k in fields}
+        if row.get("statement") and row.get("category") in names:
+            items.append({"row": row, "issue": "초반 성장용 맵게 카드 (연애·돈)", "source": {}, "why": it.get("why", ""), "status": "pending"})
+    out = SITES / site_id / "cards" / f"{now_kst():%Y-%m-%d-%H%M}-spicy.json"
+    save_json(out, {"created": now_kst().isoformat(timespec="minutes"), "table": table, "fields": fields, "items": items})
+    log(f"맵게 카드 후보 {len(items)}개 → {out.relative_to(SITES.parent)}")
+
+
+def ensure_category(db, cfg, name):
+    t = cfg.get("category_table", "categories")
+    rows = db.get(t, {"select": "*"})
+    if any(r.get("name") == name for r in rows):
+        return
+    order = max([r.get("display_order") or 0 for r in rows] + [0]) + 1
+    db.insert(t, {"name": name, "display_order": order, "locale": "ko-KR"})
+    log(f"  새 분류 '{name}' 만들었어요")
 
 
 def next_id(db, table, category):
@@ -120,7 +167,11 @@ def next_id(db, table, category):
             pref[r.get("category")][m.group(1)] += 1
             nums[m.group(1)] = max(nums.get(m.group(1), 0), int(m.group(2)))
     if category not in pref:
-        raise RuntimeError(f"분류 '{category}' 의 id 머리글을 몰라요")
+        extra = {c["name"]: c["prefix"] for c in SPICY_CATS}
+        if category not in extra:
+            raise RuntimeError(f"분류 '{category}' 의 id 머리글을 몰라요")
+        pref[category] = {extra[category]: 1}
+        nums.setdefault(extra[category], 0)
     p = max(pref[category], key=pref[category].get)
     nums[p] += 1
     nid = f"{p}-{nums[p]}"
@@ -142,6 +193,8 @@ def insert(site_id):
             db = db or DB(cfg)
             try:
                 row = dict(it["row"])
+                if row.get("category") in {c["name"] for c in SPICY_CATS}:
+                    ensure_category(db, cfg, row["category"])
                 nid = next_id(db, data.get("table", cfg.get("table", "cards")), row.get("category"))
                 if nid:
                     row["id"] = nid
@@ -238,4 +291,4 @@ def check(site_id):
 
 
 if __name__ == "__main__":
-    {"collect": collect, "insert": insert, "check": check}[sys.argv[2]](sys.argv[1])
+    {"collect": collect, "insert": insert, "check": check, "spicy": spicy}[sys.argv[2]](sys.argv[1])

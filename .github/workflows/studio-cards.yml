@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       site: { description: "사이트 id", required: false, default: "infobay" }
-      mode: { description: "collect(후보 만들기) / insert(승인한 카드 추가) / check(앱 연결 점검) / social(인스타·스레드 연결 점검)", required: false, default: "collect" }
+      mode: { description: "collect(후보 만들기) / spicy(연애·돈 맵게 카드 후보) / insert(승인한 카드 추가) / check(앱 연결 점검) / social(인스타·스레드 연결 점검)", required: false, default: "collect" }
 permissions:
   contents: write
 concurrency: studio-cards
