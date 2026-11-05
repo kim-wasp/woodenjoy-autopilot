@@ -1,4 +1,4 @@
-점검 시각: 2026-11-02 14:07
+점검 시각: 2026-11-05 20:52
 OK  투표 카드 표 읽기: 카드 299개, 칸: id, statement, track, category, region_scope, locale, source, verified_at, correct_answer, is_event, status, created_at
 OK  카테고리 표 읽기: [{"id": 1, "name": "가정/가족", "display_order": 1, "locale": "ko-KR"}, {"id": 2, "name": "학교", "display_order": 2, "locale": "ko-KR"}, {"id": 3, "name": "직장", "display_order": 3, "locale": "ko-KR"}, {"id": 4, "name": "대중교통", "display_order": 4, "locale": "ko-KR"}, {"id": 5, "name": "관혼상제", "display_order": 5, "locale": "ko-KR"}, {"id": 6, "name": "공공·매너", "display_order": 6, "locale": "ko-KR"}, {"id": 9, "name": "맞춤법", "display_order": 7, "locale": "ko-KR"}, {"id": 10, "name": "교통상식", "display_order": 8, "locale": "ko-KR"}]
 OK  카드 칸별 값: 
@@ -13,6 +13,7 @@ OK  카드 칸별 값:
     예시: {"id": "WRK-45", "statement": "업무 메일에 '최대한 빨리'라고 재촉해도 된다", "track": "NORM", "category": "직장", "region_scope": "KR", "locale": "ko-KR", "source": null, "verified_at": null, "correct_answer": null, "is_event": false, "status": "draft", "created_at": "2026-10-31T11:55:35.128277+00:00"}
 OK  블로그 표(posts): 쓰기·지우기 됨
 OK  블로그 글 목록: 
+    published 2026-11-03T22:37:16+00:00 관혼상제 condolence-money-how-much-2026
     published 2026-11-01T22:37:16+00:00 직장 interview-marriage-childbirth-question-law
     published 2026-10-31T11:59:48+00:00 관혼상제 wedding-gift-money-how-much-2026
 OK  사진 저장소(blog): 올리기 됨, 공개 주소 응답 200
