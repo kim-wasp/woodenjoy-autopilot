@@ -1,0 +1,42 @@
+# 커먼센스 앱 숫자 확인: 투표 수, 참여자 수, 카드별 표 수 (개인 정보 없이 숫자만)
+name: 앱 통계
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 세기
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python3 - <<'PY' | tee topics/app_stats.txt
+          import os, json, urllib.request, collections, datetime
+          u = os.environ["SUPABASE_URL"].rstrip("/") + "/rest/v1/"
+          h = {"apikey": os.environ["SUPABASE_SERVICE_KEY"], "Authorization": "Bearer " + os.environ["SUPABASE_SERVICE_KEY"]}
+          def get(path):
+              out, start = [], 0
+              while True:
+                  r = urllib.request.Request(u + path, headers={**h, "Range": f"{start}-{start+999}"})
+                  rows = json.load(urllib.request.urlopen(r)); out += rows
+                  if len(rows) < 1000: return out
+                  start += 1000
+          resp = get("responses?select=card_id,user_id,created_at")
+          prof = get("profiles?select=id,birth_year")
+          ages = collections.Counter((2026 - p["birth_year"]) // 10 * 10 for p in prof if p.get("birth_year"))
+          per = collections.Counter(r["card_id"] for r in resp)
+          days = collections.Counter(str(r.get("created_at", ""))[:10] for r in resp)
+          print("확인:", datetime.datetime.utcnow().isoformat()[:16], "UTC")
+          print("총 투표 수:", len(resp)); print("투표한 사람 수:", len({r['user_id'] for r in resp}))
+          print("프로필(나이) 입력한 사람:", len(prof), "/ 나이대:", dict(sorted(ages.items())))
+          print("투표 받은 카드 수:", len(per), "/ 카드당 최다:", per.most_common(5))
+          print("최근 14일 날짜별 투표:", sorted(days.items())[-14:])
+          PY
+      - name: 저장
+        run: |
+          git config user.name "woodenjoy-bot"; git config user.email "bot@users.noreply.github.com"
+          git add topics/app_stats.txt && git commit -qm "앱 통계" && git push || true
