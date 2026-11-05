@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-04-yoon-election-law-appeal-397-refund-timeline",
   "site": "sisibibi",
   "title": "윤석열 2심도 당선무효형…국힘 397억 반환, 빠르면 언제?",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-04T17:04+09:00",
   "requested_topic": "윤석열 선거법 2심도 당선무효형, '397억 반환'은 언제 정해질까",
   "keywords": {
@@ -132,5 +132,10 @@
     "total_krw": 880,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-04T21:14+09:00"
+  "approved_at": "2026-11-04T21:14+09:00",
+  "published": {
+    "blog": "posts/2026-11-05-yoon-election-law-appeal-397-refund-timeline",
+    "blog_url": "https://sisibibinote.kr/posts/yoon-election-law-appeal-397-refund-timeline/",
+    "blog_at": "2026-11-05T13:16:01+09:00"
+  }
 }
