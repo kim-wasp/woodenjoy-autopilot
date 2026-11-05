@@ -32,7 +32,7 @@ def alive(url):
 LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 
 
-def verify_article(md, keep_hosts=("link.coupang.com", "blog.naver.com/cafe_peanut", "commonsense-one.vercel.app")):
+def verify_article(md, keep_hosts=("link.coupang.com", "blog.naver.com/cafe_peanut", "commonsense-one.vercel.app", "myinfobay.com")):
     """반환: (고친 글, 뺀 주소 목록). 참고 자료 줄은 통째로 빼고, 본문 링크는 글자만 남겨요."""
     removed = []
     out = []
