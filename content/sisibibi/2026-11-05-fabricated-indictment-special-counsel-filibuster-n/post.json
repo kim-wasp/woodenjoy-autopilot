@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-05-fabricated-indictment-special-counsel-filibuster-n",
   "site": "sisibibi",
   "title": "조작기소 특검법 필리버스터, 표결은 빨라도 언제? ‘24시간 규칙’",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-05T13:33+09:00",
   "requested_topic": "오늘 3시 본회의 오르는 '조작기소 특검법'…국힘은 필리버스터 예고, 다음은?",
   "keywords": {
@@ -139,5 +139,10 @@
     "total_krw": 750,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-05T17:34+09:00"
+  "approved_at": "2026-11-05T17:34+09:00",
+  "published": {
+    "blog": "posts/2026-11-06-fabricated-indictment-special-counsel-filibuster-n",
+    "blog_url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-filibuster-n/",
+    "blog_at": "2026-11-06T12:55:55+09:00"
+  }
 }
