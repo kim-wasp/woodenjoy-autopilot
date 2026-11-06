@@ -1,6 +1,6 @@
 {
   "id": "2026-10-30-drawer-rail-length",
-  "status": "ready",
+  "status": "published",
   "platforms": [
     "naver",
     "instagram",
@@ -115,6 +115,13 @@
   "naver_url": "https://blog.naver.com/cafe_peanut/224458172177",
   "published": {
     "instagram": "18226250977339164",
-    "instagram_at": "2026-11-04T14:26:45.124470+00:00"
+    "instagram_at": "2026-11-04T14:26:45.124470+00:00",
+    "threads": [
+      "18032395361916989",
+      "17919992910458093",
+      "18119470304041760"
+    ],
+    "threads_at": "2026-11-06T04:26:00.466178+00:00",
+    "at": "2026-11-06T04:26:00.466178+00:00"
   }
 }
