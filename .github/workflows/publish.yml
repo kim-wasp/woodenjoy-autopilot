@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { ref: main }   # 줄 서서 기다린 경우에도 시작할 때의 최신 기록으로 (같은 글 두 번 올리기 방지)
       - name: 크롬 대기 중이던 네이버 글 상태 확인
         env:
           UPLIKA_API_KEY: ${{ secrets.UPLIKA_API_KEY }}
