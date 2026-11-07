@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T09:52+09:00",
+  "updated": "2026-11-07T11:29+09:00",
   "items": [
     {
       "site": "infobay",
@@ -178,6 +178,15 @@
       "title": "조작기소 특검법 오늘 표결…공소취소 뺐는데 왜 또 싸우나",
       "platform": "blog",
       "at": "2026-11-07T12:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-07-fabricated-indictment-special-counsel-passed-next-",
+      "title": "조작기소 특검법 통과, 남은 건 국무회의…7번째 특검 수사대상 12개",
+      "platform": "blog",
+      "at": "2026-11-08T12:00+09:00",
       "state": "planned"
     },
     {
