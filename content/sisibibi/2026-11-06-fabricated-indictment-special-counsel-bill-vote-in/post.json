@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-06-fabricated-indictment-special-counsel-bill-vote-in",
   "site": "sisibibi",
   "title": "조작기소 특검법 오늘 표결…공소취소 뺐는데 왜 또 싸우나",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-06T08:19+09:00",
   "requested_topic": "'숙원' vs '반헌법'…조작기소 특검법 내일 통과 유력, 남은 '공소 취소' 논란은?",
   "keywords": {
@@ -123,5 +123,10 @@
     "total_krw": 660,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-06T08:54+09:00"
+  "approved_at": "2026-11-06T08:54+09:00",
+  "published": {
+    "blog": "posts/2026-11-07-fabricated-indictment-special-counsel-bill-vote-in",
+    "blog_url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-bill-vote-in/",
+    "blog_at": "2026-11-07T12:54:59+09:00"
+  }
 }
