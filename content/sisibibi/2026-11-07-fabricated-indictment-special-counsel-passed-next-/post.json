@@ -1,0 +1,118 @@
+{
+  "id": "sisibibi/2026-11-07-fabricated-indictment-special-counsel-passed-next-",
+  "site": "sisibibi",
+  "title": "조작기소 특검법 통과, 남은 건 국무회의…7번째 특검 수사대상 12개",
+  "status": "draft",
+  "created_at": "2026-11-07T11:27+09:00",
+  "requested_topic": "조작기소 특검법 통과, 남은 건 대통령 재가뿐…7번째 특검은 뭘 수사하나",
+  "keywords": {
+    "main": "조작기소 특검법 통과",
+    "sub": [
+      "조작기소 특검 수사대상",
+      "조작기소 특검법 공포",
+      "조작기소 특검 임명",
+      "7번째 특검",
+      "조작기소 특검법 국무회의",
+      "조작기소 특검 309명 200일"
+    ]
+  },
+  "brief": {
+    "reader": "조작기소 특검법이 국회를 통과했다는 뉴스를 보고 앞으로 어떻게 되는지, 무엇을 수사하는지 빠르게 알고 싶은 20~50대",
+    "question": "국회를 통과한 조작기소 특검법은 앞으로 무엇이 남았고, 7번째 특검은 무엇을 수사하나요?",
+    "answer": "국무회의 의결과 공포가 남았는데, 이르면 10일 공포되고 21~22일께 특검이 임명될 전망이에요. 수사 대상은 이재명 대통령 관련 6개 항목을 포함한 12개 항목이에요.",
+    "out_of_scope": "각 사건의 유무죄 판단, 법안의 위헌 여부에 대한 결론, 필리버스터 진행 과정 상세",
+    "next_action": "10일 국무회의 결과와 국민의힘의 특검 후보 추천 참여 여부를 지켜보기"
+  },
+  "why_this_topic": "11월 6일 본회의 통과 직후라 '조작기소 특검법 통과·공포·수사대상' 검색이 몰리는 시점이에요. 기사들이 수사 대상 개수(12개와 17개)와 임명 날짜(21일과 22일)를 다르게 써서 헷갈리기 쉬워요. 그래서 절차·일정·대상·양쪽 논리를 한 번에 정리한 글이 필요해요. 기존 글(필리버스터, 표결 당일)과 달리 통과 '이후'의 절차와 수사 범위만 다뤄요.",
+  "meta_description": "조작기소 특검법이 6일 찬성 167표로 국회를 통과했어요. 이제 국무회의와 공포가 남았고 특검 임명은 21~22일께로 예상돼요. 수사대상 12개와 309명·200일 규모, 양쪽 쟁점을 한 번에 정리했어요.",
+  "hero_prompt": "Wide shot of an empty South Korean National Assembly plenary chamber in soft evening light, rows of empty wooden desks and chairs, a neat stack of bound legal documents on a desk in the foreground, calm and neutral mood, no people, no text, no logos, no party colors",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "summary": [],
+  "conclusion": "조작기소 특검법은 국무회의·공포만 남았어요. 이르면 10일 공포, 21~22일께 특검을 임명해 12개 항목을 최장 200일 수사해요.",
+  "opinion": "하기로 했으면 제대로 했으면\n정치적 거래는 하지말고",
+  "photos": [],
+  "sources": [
+    {
+      "title": "헤럴드경제 - 조작기소 특검법, 더불어민주당 주도 국회 본회의 통과",
+      "url": "https://biz.heraldcorp.com/article/10928893"
+    },
+    {
+      "title": "아시아경제 - 조작기소특검, 재판 중 사건까지 파고든다… 공소취소 불씨도",
+      "url": "https://view.asiae.co.kr/article/2026110618564443887"
+    },
+    {
+      "title": "한국일보 - 靑, 조작기소 특검법 통과에 '입장 없다'지만...이르면 내주 국무회의 처리",
+      "url": "https://www.hankookilbo.com/news/article/A2026110617480005624"
+    },
+    {
+      "title": "일간경기 - 조작기소 특검법 국회 통과",
+      "url": "https://www.1gan.co.kr/news/articleView.html?idxno=418266"
+    },
+    {
+      "title": "이투데이 - 與, ‘조작기소 특검법’ 처리",
+      "url": "https://www.etoday.co.kr/news/view/2645224"
+    },
+    {
+      "title": "세계일보 - 與, ‘조작기소 특검법’ 강행처리… 野 집단 퇴장",
+      "url": "https://www.segye.com/newsView/20261106514918"
+    },
+    {
+      "title": "연합뉴스(코리아타임스 게재) - 조작기소 특검법안, 與주도로 국회통과(종합)",
+      "url": "https://www.koreatimes.com/article/11630663"
+    },
+    {
+      "title": "SBS Biz - 조작기소특검, 309명·최대 200일 활동",
+      "url": "https://biz.sbs.co.kr/article/20000344856"
+    },
+    {
+      "title": "파이낸셜뉴스(뉴시스) - '조작기소 특검법' 통과…들끓는 검사들",
+      "url": "https://fnnews.com/news/202611061736506342"
+    },
+    {
+      "title": "폴리뉴스 - '조작기소 특검법' 재석 168명 중 찬성 167명으로 통과",
+      "url": "https://www.polinews.co.kr/news/articleView.html?idxno=747950"
+    },
+    {
+      "title": "재경일보 - 국회 조작기소 특검법 가결…10일 공포 예정",
+      "url": "https://news.jkn.co.kr/post/1075904"
+    },
+    {
+      "title": "뉴데일리 - 조작기소 특검법, 끝내 국회 통과",
+      "url": "https://newdaily.co.kr/site/data/html/2026/11/06/2026110600237.html"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-07T11:27+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 19014,
+        "output_tokens": 11369,
+        "web_searches": 3,
+        "calls": 3,
+        "usd": 0.3334
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.4674,
+    "total_usd": 0.4674,
+    "total_krw": 650,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
