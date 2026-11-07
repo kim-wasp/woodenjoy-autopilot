@@ -1,47 +1,15 @@
 {
   "ideas": [
     {
-      "title": "조작기소 특검법 통과, 남은 건 대통령 재가뿐…7번째 특검은 뭘 수사하나",
-      "keyword": "조작기소 특검법 통과",
-      "trend_keyword": "",
-      "facts": "조작기소 특검법이 민주당 주도로 국회 본회의를 통과했고, 국민의힘은 표결에 불참했어요. 이재명 정부 들어 7번째 특검으로, 이 대통령 관련 사건 6건과 문재인 정부 때 사건도 조사 대상이며 이제 대통령 재가만 남았어요.",
-      "sides": "민주당: 정치검찰의 조작 기소를 밝히는 진실규명 / 국민의힘: 대통령 재판을 지우는 '방탄 악법'이자 사법 파괴",
-      "question": "대통령 본인 사건이 수사 대상인 법을 대통령이 재가하는 구조를 어떻게 보세요?",
-      "metrics": {
-        "news_24h": 100,
-        "news_6h": 44,
-        "news_capped": true,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": ""
-      },
-      "links": [
-        {
-          "title": "'조작기소 특검법' 통과‥국힘은 장외 투쟁 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE42a2dpZkQzZ2xsa0o3eVlCVC1FWEdNcFgzamEzb09tUURJaWU3UzFidnJtREw5MVhZcThwSENzMVdOaGpjUXAxbGNWcFc3eDJUczZqVFpsTE1IM0xXVi1rME52ZDJMcEt4Zkd0YlBmdFJ2MDNNRGVoLWFB0gF6QVVfeXFMT0JTRFJWN2xfSkNUdDd4TVFGUFNKb1kzNnBpeWdEdUZsVEc2R0lfTDNERk5tNTlfZEZRMk1Xa0xfTUFOSDJtTkxUMWNOeWRYSmpnNVliWmo2Qkd3V2VtYXVVMzBFeE5LYmRSU2tCSmVNUmlSV0FGRTlJc3c?oc=5"
-        },
-        {
-          "title": "국민의힘, 한 달 만에 장외로…‘조작기소특검법’ 규탄 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5yZmtoSGp1bGlORWFxRW92bFF2YVZIcm5Sb19TUHhZZ3RPTnlJSU5leUdlWXlKV2tGa0liOE5mMjdJb283MHdaM3pLcWNwSmgzNDRIV09jMkVvTnhHS3N5WnRmTXZfbFU?oc=5"
-        },
-        {
-          "title": "‘조작기소 특검법’ 여당 주도로 국회 통과…국힘 표결 불참 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EVkNLOE9zYzAySUZQZ1AxM3JPLUVOTHgzRlMzU2RJZkRnQWR3cWdDdGZWMWFQZmdXY1M5MHFsNThtaThXY0tIQ0pSdVdFbEtFTUVIalBRTms0bk1oQVdxMEdBYmJTZ1NSMHVzRUc4a0lSR3FS?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 44건)",
-      "score": 144
-    },
-    {
-      "title": "법무장관 이용철·경찰청장 김종철…'국정쇄신' 인선 4명, 누가 어디로",
+      "title": "법무장관·국세청장·경찰청장 후보 한꺼번에 지명…'국정쇄신 인선' 4명은 누구?",
       "keyword": "이용철 법무장관",
       "trend_keyword": "",
-      "facts": "이 대통령이 새 법무부 장관 후보에 이용철, 국세청장 후보에 안덕수 서울지방국세청장을 지명했어요. 청와대 정무수석에는 최인호 전 민주당 의원, 경찰청장에는 김종철 차장이 내정됐어요.",
-      "sides": "기대하는 쪽: 민변 출신 법무장관에게 사법개혁을 맡긴 인사 / 우려하는 쪽: 성남시 인수위 출신, 대통령과의 '성남 인연' 인사",
-      "question": "이번 인선에서 '쇄신'이라는 말이 맞다고 보세요, 아니면 측근 인사로 보세요?",
+      "facts": "이재명 대통령이 법무부 장관 후보로 이용철 청장, 국세청장 후보로 안덕수 서울지방국세청장, 경찰청장 후보로 김종철 경찰청 차장을 지명했어요. 청와대 정무수석에는 최인호 전 더불어민주당 의원이 임명됐어요.",
+      "sides": "기대하는 쪽: 민변 출신에게 사법개혁을, 민생치안 전문가에게 경찰을 맡긴다 / 우려하는 쪽: 일부 보도가 '성남 인연'을 부각해 측근 인사라는 지적이 나올 수 있어요(구체적 비판 내용은 취재해서 확인 필요)",
+      "question": "이번 인선에서 사장님이 가장 눈여겨보는 자리와 그 이유는 뭔가요?",
       "metrics": {
         "news_24h": 100,
-        "news_6h": 24,
+        "news_6h": 28,
         "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
@@ -61,20 +29,20 @@
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE52cDJoSlVXNUUxWEJpN0QzVXJ4aDFlZE44TDFnMWYxQ2J1Y3VfUTd0bm1XNTFHRnpZYUswNUU2LVREMjVzX3ExMlZ0UGlibUwwajhtMVJmbE1rUdIBX0FVX3lxTFBzUEtJR0Jqd2VGUWlHdjlqdFdGaE1lUm83Z1ZDekI4UVB5ODRfOE9UUm01aUZPVTRvTFk4NUlsWjRvcmVtanp1RmFocndsRzE5TkduQndSeEJ2Wll1UWFF?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 24건)",
-      "score": 124
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 28건)",
+      "score": 128
     },
     {
-      "title": "시도의회 의장 10명이 국회의장을 찾은 이유…'지방의회법' 연내 될까",
-      "keyword": "지방의회법 연내 제정",
+      "title": "시도의회 의장 10명이 국회의장을 찾아간 이유, '지방의회법' 올해 안에 될까?",
+      "keyword": "지방의회법 제정",
       "trend_keyword": "",
-      "facts": "경기·인천·세종·제주 등 전국 10개 시도의회 의장이 국회의장을 만나 지방의회법을 올해 안에 만들어 달라고 요청했어요. 세종시의회는 행정수도특별법과 국회세종의사당 조기 착공도 함께 건의했어요.",
-      "sides": "찬성 측: 시도의회 의장들은 연내 제정을 한목소리로 요구 / 반대·신중 측: 헤드라인에서는 확인되지 않아 추가 확인 필요",
-      "question": "지방의회에 따로 법을 만들어 주는 게 지역 주민에게 실제로 득이 될까요?",
+      "facts": "전국 10개 시도의회 의장이 국회의장을 만나 '지방의회법'을 올해 안에 만들어 달라고 한목소리로 요청했어요. 세종·인천·경기·제주 등의 의장들은 행정수도특별법, 제주특별법 같은 지역 현안도 함께 건의했어요.",
+      "sides": "찬성 측: 지방의회 권한과 독립성을 법으로 따로 보장해야 한다 / 신중론: 헤드라인에는 반대 근거가 나오지 않아 국회 논의 내용 취재가 필요해요",
+      "question": "지방의회 권한을 키우는 게 주민 생활에 실제로 도움이 될 거라고 보세요?",
       "metrics": {
-        "news_24h": 86,
-        "news_6h": 0,
-        "news_capped": false,
+        "news_24h": 100,
+        "news_6h": 9,
+        "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": ""
@@ -85,34 +53,66 @@
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBxSHNlUUt6VVpjVXNwVGtrZFozT0w4UnhVU2Q4T2lxamY4dmZ1YU9BWW9OWTZEcy0yQnZQYllTTHBQemJoOUVNMFFWZ0dTdm1GUDR0R0JyekNLT09uT290RlFUVlpiS0dBdFlSX0lzRHd3OG8?oc=5"
         },
         {
-          "title": "남종섭 경기도의회 의장, 조정식 국회의장에 지방의회법 연내 제정 요청 - 매일일보",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QaFh2bXVOYzdoSGRpSmNiS3ZSRWFYTnNYdVZuOVluRmR3WDdWWkpiaWNUSmhmaWxSQUNFdl9yWDkwMEFRZy0wVWtPVTNXZVZSeWtMU3ZUTnNDdTVxMFVfTmZveWY?oc=5"
+          "title": "대구시의회, 지방의회법 제정 촉구···\"독립적 권한 보장해야” - 서울파이낸스",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rT2JXaHZ5NlBMOXpqTVpVMVcxRXNVaWJFOEgtUy1BalZXTmUtM25RYmJoVDJYOTJlYnJWLVJIdFNKME1QVVcwRlRYV2lEUmZQMWtNZG9oZkliLTRsY0dWcTZ3UjVJb1J1NFE?oc=5"
         },
         {
-          "title": "세종시의회 안신일 의장, 조정식 국회의장 만나 행정수도특별법·지방의회법 연내 제정 요청 - 천지일보",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE40Y1U3M1FnUGIyNm5wSlJBSDFEc1VocFFLa05PQTFxcFlfVTBSWWpfYkJoWFNac0JadUxESG1rTmk2SjZyeDdCZHdqWjlNNFBic1ROeGlXY2V5STRvT3g1OGt4RXRKUlRZWFE?oc=5"
+          "title": "남종섭 경기도의회 의장, 조정식 국회의장에 지방의회법 연내 제정 요청 - 매일일보",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QaFh2bXVOYzdoSGRpSmNiS3ZSRWFYTnNYdVZuOVluRmR3WDdWWkpiaWNUSmhmaWxSQUNFdl9yWDkwMEFRZy0wVWtPVTNXZVZSeWtMU3ZUTnNDdTVxMFVfTmZveWY?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 86건",
-      "score": 86
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 9건)",
+      "score": 109
+    },
+    {
+      "title": "특검법 통과 다음 수순은 '거리'? 국민의힘 장외투쟁, 양쪽 주장 한 번에 정리",
+      "keyword": "국민의힘 장외투쟁",
+      "trend_keyword": "",
+      "facts": "조작기소 특검법(국민의힘은 '이재명 방탄 악법'이라고 불러요)이 여당 주도로 국회 본회의를 통과했고, 국민의힘은 표결에 불참했어요. 국민의힘은 대규모 규탄 집회를 열고 장외투쟁을 예고했으며, 대통령 재가만 남은 상태라고 보도됐어요.",
+      "sides": "민주당: 조작 기소 의혹의 진실을 밝히고 정치검찰을 엄벌해야 한다 / 국민의힘: 대통령 재판을 없애는 '공소취소'이자 사법 파괴다",
+      "question": "장외투쟁이 국민의힘 주장을 알리는 데 효과가 있을지, 사장님은 어떻게 보세요?",
+      "metrics": {
+        "news_24h": 85,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": ""
+      },
+      "links": [
+        {
+          "title": "'조작기소 특검법' 통과‥국힘은 장외 투쟁 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE42a2dpZkQzZ2xsa0o3eVlCVC1FWEdNcFgzamEzb09tUURJaWU3UzFidnJtREw5MVhZcThwSENzMVdOaGpjUXAxbGNWcFc3eDJUczZqVFpsTE1IM0xXVi1rME52ZDJMcEt4Zkd0YlBmdFJ2MDNNRGVoLWFB0gF6QVVfeXFMT0JTRFJWN2xfSkNUdDd4TVFGUFNKb1kzNnBpeWdEdUZsVEc2R0lfTDNERk5tNTlfZEZRMk1Xa0xfTUFOSDJtTkxUMWNOeWRYSmpnNVliWmo2Qkd3V2VtYXVVMzBFeE5LYmRSU2tCSmVNUmlSV0FGRTlJc3c?oc=5"
+        },
+        {
+          "title": "“이재명 재판취소 악법”…국민의힘 ‘조작기소특검법 규탄’ 대규모 장외집회 - 경기일보",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBYSTE2dktSVEVLYTFEZkNCR3YwZnVvc3dKWlp3d0hSSFpydmdMUzRIR1dwUWFKVElpRkQzUHJDRzZqQXJhUlZOYjVEajdReUVCenJMOE8xV3JzbDA?oc=5"
+        },
+        {
+          "title": "국민의힘, 서울 도심서 '조작기소특검법' 규탄 대규모 집회 - news.sbs.co.kr",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcmIzVlhSQnJTd0ZyYVhxSU0yeE1wMlp0WUJ0ZFFUYWN0U2E4dzFEYm14Wnk5MGN6cUdCc3dOX0M1Rkh5Vm56dFdMaHYzTHdiYlZzVXl0a0d4R1FWc3pfb3g0dmo2aDl0Nk1IdEdMNU9aRnBQdHJnb2tKWnphY1YzaS05RVNvZw?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 85건",
+      "score": 85
     }
   ],
-  "updated": "2026-11-07T11:23+09:00",
+  "updated": "2026-11-07T11:31+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10269,
-        "output_tokens": 4241,
+        "input_tokens": 10307,
+        "output_tokens": 4924,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1259
+        "usd": 0.1397
       }
     },
     "images": {},
-    "usd": 0.1259,
-    "total_usd": 0.1259,
-    "total_krw": 180,
+    "usd": 0.1397,
+    "total_usd": 0.1397,
+    "total_krw": 200,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
