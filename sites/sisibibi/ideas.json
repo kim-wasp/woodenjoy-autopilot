@@ -1,14 +1,14 @@
 {
   "ideas": [
     {
-      "title": "‘탄핵’까지 나왔다…특검법 통과 뒤 국민의힘은 왜 거리로 나갔나",
-      "keyword": "특검법 장외집회",
+      "title": "이용철 법무장관 후보, 청문회 열기도 전에 '철회하라' vs '정쟁 그만'",
+      "keyword": "이용철 법무장관",
       "trend_keyword": "",
-      "facts": "민주당은 ‘조작기소 특검법’, 국민의힘은 ‘대통령 탈옥법’이라고 부르는 법안이 국회를 통과했어요. 그 뒤 국민의힘은 서울 도심에서 대규모 장외집회를 열었고, 장동혁 대표는 ‘이 대통령을 탄핵해야 한다’고 말했어요.",
-      "sides": "민주당: 조작 기소라는 위헌 요소를 없애는 법이고, 장외투쟁은 정치검찰을 감싸는 ‘방탄’이다 / 국민의힘: 대통령이 자기 혐의를 스스로 덮는 ‘셀프 면죄’이고, 법조계에서도 위헌 논란이 있다",
-      "question": "법안 통과 뒤 장외집회와 탄핵 주장까지 나온 지금, 독자에게 가장 먼저 짚어 줄 쟁점은 무엇이라고 보세요?",
+      "facts": "국민의힘은 이용철 법무부 장관 후보자의 인사청문회가 열리기도 전에 지명 철회를 요구했어요. 더불어민주당은 이를 '방탄 망상'이라고 부르며 정쟁을 멈추라고 맞섰어요.",
+      "sides": "철회 요구 측(국민의힘): 법무장관으로 부적절하니 지명을 거둬야 한다 / 반대 측(민주당): 청문회도 하기 전에 철회를 요구하는 건 정쟁이다",
+      "question": "청문회 전에 철회를 요구하는 것, 사장님은 '정당한 견제'와 '절차 무시' 중 어느 쪽으로 보세요?",
       "metrics": {
-        "news_24h": 55,
+        "news_24h": 44,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -17,62 +17,62 @@
       },
       "links": [
         {
-          "title": "국힘, 조작기소 특검법 규탄 장외집회⋯與 \"정치검찰 방탄\" - 경북신문",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8zQkM3LUJSZDB1RDR3QnFWV3RFbkkzU3VVTUdtalJKeTlKNmxoTi1FSFpiNnNGMnJKYl9PaGlEakdsRmV0MWVWMi1zS091WlVwQlNWZHdjQ3o?oc=5"
+          "title": "與 \"국힘, 이용철 법무장관 후보 청문 전부터 철회 요구…정쟁몰이 중단하라\" - 뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtODdBV1BLSjItR2dUY2VRN3Z0UlZaX0xKZEZRdklaczFPOE5wZFdJUko5ZVZyNEZHSDd5T0lXb0xOM01Td3ZHckhhVldRYTJOdWlYX2ZCRkpzSzhNZmtQRdIBeEFVX3lxTFBlOW9heEdxSncyTDlhcmZJQXdZMG0tWmlyaW5yT0VHOXRJS1ZKZmliSWM1YlZnamluOVVDN2NRVmJGcWM5NVFISlFlcGxVZDQ1a1FtUDRXMUQxLU1BLVBsNTgtZmxDeGV1cktNcmFWY0JSMVNZRjE3LQ?oc=5"
         },
         {
-          "title": "국힘, ‘조작기소 특검법’ 규탄 대규모 장외집회 열어 - 경기신문",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE00SGYwM0xEODBwTkN3aFZnV0RWQi1RVUN2akc4SlBRUDZsaWVRRnEtdTBLV043OTJPd2M4MGFqU05jRW11OFZyXy1veTZHeDJpUko2Z0daUUZDTm5acGJuV1Fn?oc=5"
+          "title": "국힘, 이용철 법무장관 지명에 “대장동 설계자에 공소취소 설계 맡길 속셈” - 주간경향",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lUzRQQU1iT0F6eGZJU2R0MlBOTVZyaFZ6MExySV8tMkQ4LWJiRUZzSENSRm1ybjJ2aWtYdXRQSnE3THFOeXlfQm80TFA0dDBlWEtydXBCbnpPMnMwalE?oc=5"
         },
         {
-          "title": "국힘, '조작기소특검법 규탄' 장외집회…張 \"李대통령 탄핵해야\" - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5iUjhLZFRaclhaWkR3TE1aLVg1Q3N4QTFaM0I1Q0txdzdMdzdYV3d2ekJfaklkRmxDNXFfYUhfcFN4YkRENmpvdlpnWEdIVXRDeHNDYWc3ck1vcnPSAWBBVV95cUxPNlptc3RKd2tQR2tkUjI2UmFrdE8xUVZuSHZtbjZXNzljUzRaV3NLdFhjdE9XM3owdUdvaVRZRGJ1N1pDakIzNnpReXpKOWU2VmQwSG9WNHpVcDdWLVZvdjE?oc=5"
+          "title": "'방사청장'을 '법무장관 후보자'로...깜짝 인선 배경은? - YTN",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE43MGU4ZnUwWXoxVzd3VE1aLUwxT2t1XzF6Tmhabjc3cUFMQjRUTUtHUnF2MWdVcVFBLUZBQXFPOGZQNHNNZHJqcVRWc1dEZEs5amZ5cjFTazFrMGhmeHc?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 55건",
-      "score": 55
+      "why": "구글 뉴스 24시간 기사 44건",
+      "score": 44
     },
     {
-      "title": "네타냐후 19년 집권 끝나나…정부 구성권이 ‘반네타냐후’ 아이젠코트에게",
-      "keyword": "아이젠코트 정부 구성권",
-      "trend_keyword": "",
-      "facts": "이스라엘 대통령이 전직 육군 참모총장 아이젠코트에게 먼저 정부를 꾸릴 권한을 줬어요. 아이젠코트는 네타냐후에 반대하는 쪽 인물로, 언론은 ‘총리직에 성큼 다가섰다’고 전했어요.",
-      "sides": "교체 기대 쪽: 오랜 네타냐후 집권이 끝날 계기가 될 수 있다 / 신중 쪽: 정부 구성권을 받은 것이지 아직 연립정부가 꾸려진 것은 아니다",
-      "question": "이스라엘 정권 교체 가능성, 한국 독자에게는 어떤 점에서 중요하다고 보세요?",
+      "title": "북한 해커가 털어간 돈 1조8700억?…가상자산 해킹 잇따르자 금융당국 긴급 소집",
+      "keyword": "가상자산 해킹 금융당국",
+      "trend_keyword": "자산",
+      "facts": "가상자산 업계에서 해킹이 잇따르자 금융당국이 업체 보안 책임자들을 불러 모았어요. 북한 해커들이 AI까지 써서 1조8700억 원을 털어 갔다는 보도가 나왔고, 미국과 한국 정부가 함께 대응해야 한다는 해외 전문가 지적도 나왔어요.",
+      "sides": "규제 강화 측: 보안 의무와 책임을 더 무겁게 해야 한다 / 신중 측: 규제만 늘리면 업계 부담이 커지니 정부 간 공조와 수사가 먼저다",
+      "question": "가상자산 해킹 피해, 사장님은 '업체 책임 강화'와 '국가 차원 대응' 중 어디가 더 급하다고 보세요?",
       "metrics": {
-        "news_24h": 19,
+        "news_24h": 12,
         "news_6h": 0,
         "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": ""
+        "trend": "자산",
+        "trend_traffic": 2000,
+        "trend_label": "2000+"
       },
       "links": [
         {
-          "title": "네타냐후 19년 집권 끝나나...아이젠코트에 정부 구성권 부여 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0tcDdmcHFKWGs5ZFctZXNfT3NsY21zTzlkRWJxZnFjc0U5M0p2SnFqWGpLOWdCQzVtcU5MNDFSZlRTT1d3LUVkUUNhV1BjMDVQNE1wOGRadk9vbmVlNmc?oc=5"
+          "title": "금융당국, 가상자산업계 잇단 해킹에 보안 책임자 소집 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92cnBYbEpobjJIMVl1bTdaQ096Zng5Nlc3TGVCa3VLVlpoMlYtNmhEeVFFRnhyWHNkZi1KMFRnTU9TTkhrNDlPazQ1VDJFRWdEelpLdEJNaFBkRFFUeVp1bVNsSW5naEk?oc=5"
         },
         {
-          "title": "이스라엘 야권 리더 아이젠코트에 연정구성권‥네타냐후, 실각 위기 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBjOVBHbzREQkFpNmxXM0RuekV0Qk51X3NJMGE0am1fNUhFbTFWcG1FR1JsaWFoY0czdHlpWW0wQ0xPbDNPaG5KR0pTTEMwa29yWTM4VnA5c0tET1UzMWlFbU45dDBSXzM3TFdTMXdYcjRseGdt0gF0QVVfeXFMTTJ0SUFaTkZxSDVzT2M2cGN4VEdpQk9sM1NUTmNTR3JMblV6emN1MU42enpKdmVlUVlJczJycmQzaUN0dXM0SUQ3eXhGNE9BMElkZUpXMUVSRGpPUTdITGpMeXJjbFFQMHBRejFfcE5KeS1OV1U?oc=5"
+          "title": "가상자산업계 잇단 해킹에…금융당국, 보안 책임자 소집 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JTUo5RFBIeHpTbXdnelZtZkVWenFJWHEtZEtTQjNPUjVaUHJOY25mMEtaNThwRExqcDNyc2ZnYzZmZHVCNW14TFBNdUdQQXRVSkwtaTA2UVRBRWfSAWBBVV95cUxQemVhVUQ1UGRWSzg5WEJBbE1veG5kcXRZOGpkVWRIVmY4MXVmdzRPVDd3YkVyVUxNTkVxbTN2UEgwRzdGTER5ZnlMTElOUzFiS2FwNW5TQnBpYzFBYTBqTDU?oc=5"
         },
         {
-          "title": "이스라엘 야권 리더 아이젠코트에 연정구성권…네탄냐후 실각 위기 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBkckJiRkd0NzVfb3pjcjRucEp0X3FadTZQM2Y1T1pCT1NlVGd0M3dPQXkzNk9STlo0WGVkUHJZTy1wVnVjUE9vc2ZfTVNZZTNkT3J2bl9uZk1xRVk?oc=5"
+          "title": "금융당국, 오는 19일 가상자산업계와 해킹 대응 회의 - 중앙신문",
+          "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNbTRWY2lNaVZjU3VObi1oNUJYdk56bm92T0tnNE1KemwzX0F3V2xFamdfRmZmWHdUY21jc2EyTUFoQ3MybXY0RS1kWFNQanJEUE1XOUc3WVRhTEF5enQzLTd6RHM0UlRaNGMxR0ZCenEzazZRSFFzVUFuWEFtQVVLUFZzUFJoNjF4cVdwbHZWN3NTeWVRS2oweDFQcFJ3X01nbERvN3V6QllvLUtrdjR6UDFVbFNFTm5ZcTNLbmMyNmVzM01jMmVmRG5Kd2FiSU5oZV9UVG9pUnJVR0lHeDIxSXZ0dXNmN1M1SzdpeEZEMEUzME96VExhcjRBZVFOVTYyeTRNTnhtNmVoR3JMOEViVC1oSXpxWlBZenJGVkwzOVhqSFZWNFBTWTh5Z3laTnljLTlQeXJsSmVZdC00THNlc0s0NnZxQ2c?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 19건",
-      "score": 19
+      "why": "구글 뉴스 24시간 기사 12건, 구글 검색 급증 '자산' 2000+",
+      "score": 32.0
     },
     {
-      "title": "820조 예산 심사 시작…여야 싸움터는 ‘162조 기금’",
+      "title": "내년 예산 820조 중 '162조 기금'이 최대 쟁점…여야는 무엇을 두고 부딪히나",
       "keyword": "미래대응기금 예산",
       "trend_keyword": "",
-      "facts": "국회가 내년도 정부 예산안 820조9000억 원을 본격적으로 심사하기 시작했어요. 여야가 가장 크게 부딪치는 곳은 162조 원 규모의 ‘미래대응기금’이고, 세수 불확실성과 AI 투자도 쟁점이에요.",
-      "sides": "찬성 쪽: 미래 산업과 AI에 크게 투자하려면 큰 기금이 필요하다 / 반대 쪽: 세수가 불확실한데 기금 규모와 쓰임새를 국회가 꼼꼼히 따져야 한다",
-      "question": "162조 미래대응기금, 규모보다 쓰임새를 먼저 봐야 할까요, 규모 자체를 먼저 봐야 할까요?",
+      "facts": "국회가 내년도 예산안 820조9000억 원 심사에 들어갔고, 162조 원 규모 '미래대응기금'이 최대 쟁점으로 꼽혀요. 국민의힘은 이 기금을 '지방소멸기금'이라고 부르며 철회를 요구했어요.",
+      "sides": "찬성 측: 미래에 대비하는 기금이니 국회 심의로 다듬어 쓰자 / 반대 측(국민의힘): 기금 운용이 문제라며 예산에서 빼라",
+      "question": "162조 원짜리 기금을 한 번에 만드는 방식, 사장님은 '필요한 대비'와 '과한 몸집' 중 어느 쪽에 가깝게 보세요?",
       "metrics": {
-        "news_24h": 15,
+        "news_24h": 16,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -85,34 +85,34 @@
           "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBRMzRvUWRuUzk1OXRDMjduN0R2OGVBTEpHTnpNYUhFQm02WUJKTExCZ2NhX0ZTYnoxUGFES2ZyY3dfMG0wcXQ3Mkc2WnZhX1dlOExiV2dvd0RFZGJ6MkE?oc=5"
         },
         {
-          "title": "필버 대결 2라운드 예고에 예산 공방도 본격화…여야 대치 격화 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBNSC1jazljWHR4bVowU3Q0TWZBQjVwNG50V2N4Q0t6amtYS1EyVjFwRFVxNDNNRFhZeGlJUW13a2ZfVmdiVTJXbTRjV0NQMnRTUXJWdkhjVkVZTWJRbVZsbNIBYEFVX3lxTFBNSC1jazljWHR4bVowU3Q0TWZBQjVwNG50V2N4Q0t6amtYS1EyVjFwRFVxNDNNRFhZeGlJUW13a2ZfVmdiVTJXbTRjV0NQMnRTUXJWdkhjVkVZTWJRbVZsbA?oc=5"
+          "title": "국힘 \"李정부 미래대응기금은 지방소멸기금\"…내년도 예산 철회 촉구 - 뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zQXZmR1NBSEJsMW94R0pPY0hSV25icTJpbF9rMXg5RUI3M3BVV1liNEZ3a2VJcUI2dmxvNy0tQ2lNVHRFcGxibGhSRVpmZXlEOTFUemV2b1YtbFBZcGJURNIBeEFVX3lxTE9SU0J4TjU0dmxZY0hncnRkTXI5UFN2R0U5eUIyenJIYnc2aUZ6WFdiRm81V0JpdkZuNTZ1ekttNEU2cURHRlZGS0RJYlhBakcxTTNZdDJyMGFpMDVGUXgzVzdxX1NjQ0xSMHJuazVVeTBvcGtZRlpQSg?oc=5"
         },
         {
-          "title": "예결위, 예산안 부별심사 돌입…미래대응기금 놓고 與 \"미래 투자재원\" 野 \"총선용 사금고\" - 뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE95QVNxZ3ZiaUJ3UjlNNmxfejBWT01TZU40R0hockRaQlYxdjlvMlJxWVFPX3UtNmZIOTZHdVFXQkRXdE5lRTRZV2RDTEVLQjU1SHNUR1NLbUtKMXhmWmthQw?oc=5"
+          "title": "필버 대결 2라운드 예고에 예산 공방도 본격화…여야 대치 격화 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBNSC1jazljWHR4bVowU3Q0TWZBQjVwNG50V2N4Q0t6amtYS1EyVjFwRFVxNDNNRFhZeGlJUW13a2ZfVmdiVTJXbTRjV0NQMnRTUXJWdkhjVkVZTWJRbVZsbNIBYEFVX3lxTFBNSC1jazljWHR4bVowU3Q0TWZBQjVwNG50V2N4Q0t6amtYS1EyVjFwRFVxNDNNRFhZeGlJUW13a2ZfVmdiVTJXbTRjV0NQMnRTUXJWdkhjVkVZTWJRbVZsbA?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 15건",
-      "score": 15
+      "why": "구글 뉴스 24시간 기사 16건",
+      "score": 16
     }
   ],
-  "updated": "2026-11-08T11:06+09:00",
+  "updated": "2026-11-08T11:41+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10148,
-        "output_tokens": 4479,
+        "input_tokens": 10127,
+        "output_tokens": 4621,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1302
+        "usd": 0.1329
       }
     },
     "images": {},
-    "usd": 0.1302,
-    "total_usd": 0.1302,
-    "total_krw": 180,
+    "usd": 0.1329,
+    "total_usd": 0.1329,
+    "total_krw": 190,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
