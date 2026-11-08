@@ -10,6 +10,7 @@
   [표 서식…] 줄            → 삭제 (uplika가 표 서식은 지정 못 함)
   마지막 #태그 줄          → tags 목록으로 분리
   [쿠팡: 키 | 링크 문구]    → [링크 문구](topics/coupang_links.json 의 그 키 주소)
+  쿠팡 대가성 문구 줄       → 굵게 + 글자 19 + 빨강 (본문보다 크고 눈에 띄게)
 
 사용: python3 tools/naver_markdown.py posts/<글폴더>   (변환 결과를 화면에 출력)
 """
@@ -93,6 +94,10 @@ def convert(md, media=None, captions=None, links=None):
                 in_table = True
             continue
         in_table = False
+        if "쿠팡 파트너스 활동의 일환" in s and not in_quote:
+            # 공정위 지침: 본문 첫 부분에 본문보다 크고 눈에 띄는 색으로 (굵게 + 19 + 빨강)
+            out.append(f"**{s.strip('*_ ')}** {{.size=19 .color=#e7000b}}")
+            continue
         if in_quote:
             out.append("> " + s if s else ">")
             continue

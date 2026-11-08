@@ -71,6 +71,9 @@ def publish_naver(site, d, post, dry):
         k = m.group(1)
         return f"![{imgs[k][1]}](media:{media[k]}){{.ai}}" if k in media else ""
     text = re.sub(r"\[\[(hero|card:\d+|photo:\d+)\]\]", rep, md)
+    # 쿠팡 대가성 문구: 공정위 지침대로 본문 첫 부분에, 본문보다 크고 눈에 띄는 색으로 (굵게 + 19 + 빨강)
+    text = re.sub(r"^[*_ ]*(이 포스팅은 쿠팡 파트너스 활동의 일환으로[^\n]*?)[*_ ]*$",
+                  lambda m: f"**{m.group(1)}** {{.size=19 .color=#e7000b}}", text, count=1, flags=re.M)
     # 쿠팡 링크가 있는 문단 아래에 상품 이미지 카드(@card) 추가 → 눈에 잘 띄게 (네이버는 HTML 배너를 못 넣어요)
     seen, lines = set(), []
     for line in text.split("\n"):
