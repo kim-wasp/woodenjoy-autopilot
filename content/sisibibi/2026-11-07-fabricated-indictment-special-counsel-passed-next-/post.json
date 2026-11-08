@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-07-fabricated-indictment-special-counsel-passed-next-",
   "site": "sisibibi",
   "title": "조작기소 특검법 통과, 남은 건 국무회의…7번째 특검 수사대상 12개",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-07T11:27+09:00",
   "requested_topic": "조작기소 특검법 통과, 남은 건 대통령 재가뿐…7번째 특검은 뭘 수사하나",
   "keywords": {
@@ -115,5 +115,10 @@
     "total_krw": 650,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-07T11:29+09:00"
+  "approved_at": "2026-11-07T11:29+09:00",
+  "published": {
+    "blog": "posts/2026-11-08-fabricated-indictment-special-counsel-passed-next-",
+    "blog_url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-passed-next-/",
+    "blog_at": "2026-11-08T12:34:16+09:00"
+  }
 }
