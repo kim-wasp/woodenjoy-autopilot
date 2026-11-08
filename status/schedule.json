@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T21:09+09:00",
+  "updated": "2026-11-08T22:30+09:00",
   "items": [
     {
       "site": "infobay",
@@ -192,6 +192,15 @@
       "url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-passed-next-/"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-08-year-end-party-skip-company-dinner-2026",
+      "title": "송년회 빠져도 될까? 회식 반복 권유는 괴롭힘 아니라는 노동부 사례",
+      "platform": "blog",
+      "at": "2026-11-09T07:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
@@ -246,12 +255,30 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-08-year-end-party-skip-company-dinner-2026",
+      "title": "송년회 빠져도 될까? 회식 반복 권유는 괴롭힘 아니라는 노동부 사례",
+      "platform": "threads",
+      "at": "2026-11-11T12:30+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
       "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
       "platform": "threads",
       "at": "2026-11-11T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-08-year-end-party-skip-company-dinner-2026",
+      "title": "송년회 빠져도 될까? 회식 반복 권유는 괴롭힘 아니라는 노동부 사례",
+      "platform": "instagram",
+      "at": "2026-11-11T21:00+09:00",
       "state": "planned"
     },
     {
