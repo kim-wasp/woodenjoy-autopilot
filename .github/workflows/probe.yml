@@ -1,8 +1,0 @@
-name: probe
-on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-jobs:
-  p:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          for h in woodenjoy-autopilot-studio.vercel.app woodenjoy-autopilot-studio-info-bay-org-s-projects.vercel.app; do echo "$h $(curl -sS -o /tmp/o -w '%{http_code}' "https://$h/api/tick?what=none") $(head -c 200 /tmp/o)"; done

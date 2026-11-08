@@ -1,0 +1,18 @@
+// 정각 알람: Cloudflare 예약(분 단위로 정확)이 콘텐츠 스튜디오를 깨워요.
+// GitHub 예약은 자주 건너뛰고, Vercel 무료 예약은 1시간 안 아무 때나 울려서 만들었어요.
+// 시간은 UTC 기준이에요 (한국 시간 = UTC + 9). 무료 플랜은 예약 5개까지.
+{
+  "name": "studio-alarm",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "triggers": {
+    "crons": [
+      "1 22 * * *",       // 07:01 블로그 (우드엔조이, 커먼센스)
+      "1,31 3 * * *",     // 12:01 시시비비 / 12:31 스레드
+      "1 11,12 * * *",    // 20:01 스레드 투표 / 21:01 인스타
+      "6 11 * * *"        // 20:06 다음 글 만들기
+    ]
+  },
+  "vars": { "STUDIO_TICK": "https://woodenjoy-autopilot-studio.vercel.app/api/tick" }
+}
