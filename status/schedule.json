@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T11:22+09:00",
+  "updated": "2026-11-08T11:40+09:00",
   "items": [
     {
       "site": "infobay",
@@ -197,6 +197,15 @@
       "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
       "platform": "blog",
       "at": "2026-11-09T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-08-ppp-rally-impeachment-after-special-counsel-bill",
+      "title": "국민의힘 ‘이재명 탄핵’ 외쳤지만 필요한 건 200표…왜 거리로?",
+      "platform": "blog",
+      "at": "2026-11-09T12:00+09:00",
       "state": "planned"
     },
     {
