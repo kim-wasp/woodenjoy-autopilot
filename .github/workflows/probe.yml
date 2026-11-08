@@ -1,0 +1,7 @@
+name: probe
+on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ALARM $(curl -sS -w ' [%{http_code}]' https://studio-alarm.kim-wasp.workers.dev/)"
