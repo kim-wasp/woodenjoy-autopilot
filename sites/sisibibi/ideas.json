@@ -1,118 +1,121 @@
 {
   "ideas": [
     {
-      "title": "11개월째 국회에 묶인 우주항공 특별법…사천·고흥 주민 500명이 올라간 이유",
+      "title": "11개월째 국회에 묶인 우주항공 특별법…사천·고흥 주민 500명이 국회 온 이유",
       "keyword": "우주항공복합도시 특별법",
       "trend_keyword": "",
-      "facts": "경남 사천과 전남 고흥 주민 500여 명이 국회에 모여 '우주항공복합도시 특별법'을 올해 안에 만들어 달라고 촉구했어요. 이 법은 11개월째 국회에 계류 중이고, 박완수 경남지사도 국회 앞 결의대회에 나왔어요.",
-      "sides": "찬성 측: 영호남이 함께 요구하는 우주항공 산업 기반이라 연내 통과가 필요하다 / 신중 측: 반대 논리는 헤드라인에 없어서 계류 이유를 취재로 확인해야 함",
-      "question": "지역 특별법이 계속 늘어나는 흐름, 균형발전에 꼭 필요하다고 보세요, 아니면 기준이 더 엄격해야 한다고 보세요?",
+      "facts": "경남 사천과 전남 고흥 주민·의회 관계자 500여 명이 국회에 모여 '우주항공복합도시 특별법'을 연내에 만들어 달라고 촉구했어요. 보도에 따르면 이 법안은 11개월째 국회에 계류 중이고, 고흥군은 누리호를 옮길 철도망이 없다며 철도 반영도 함께 요구했어요.",
+      "sides": "제정 촉구 측: 기업과 인재가 머무는 우주항공도시를 만들려면 특별법이 필요하다 / 신중 측: 헤드라인에서는 반대 논리가 확인되지 않아, 11개월 계류 이유를 의안정보시스템과 상임위 회의록으로 확인 필요",
+      "question": "지역 맞춤 '특별법'이 늘어나는 흐름, 꼭 필요한 지원이라고 보세요, 아니면 너무 많다고 보세요?",
       "metrics": {
-        "news_24h": 87,
-        "news_6h": 0,
-        "news_capped": false,
+        "news_24h": 100,
+        "news_6h": 57,
+        "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
-        "trend_label": ""
+        "trend_label": "",
+        "naver_month": 310
       },
       "links": [
         {
-          "title": "고흥군·사천시, 우주항공복합도시 특별법 제정 촉구 결의대회 진행 - LG헬로비전",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB0RWdsTVAzek9COGMyUEVaeW5EWjlGTVlxbWd6ekp2cy0tMlVwZFZBSnIyRWhvQVNuM2RpdjBJbHNaSFNMUVQ5Q1lWSnJRUk9ZdmZfU0ZPOWRFQWFLd19kOFZqTGNPcnlPdzY5bjZqd3pDQ1NTNHfSAXZBVV95cUxQdEVnbE1QM3pPQjhjMlBFWnluRFo5Rk1ZcW1nenpKdnMtLTJVcGRWQUpyMkVob0FTbjNkaXYwSWxzWkhTTFFUOUNZVkpyUVJPWXZmX1NGTzlkRUFhS3dfZDhWakxjT3J5T3c2OW42and6Q0NTUzR3?oc=5"
+          "title": "‘우주항공복합도시 건설 특별법’ 이르면 12월 제정 - 경남일보",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84eVd4VzF0VF9TRjgzTzY5OFQyTFBHYXp1OVN2aDZzU2pRSllYTkt3WklzUW90T29lRWVGUW5ZdkVydmFmZmFxWTZkRnJteWp1UnloSlJ5N2ItS3ZFTVE1TnY2cnh4cGhuX04w?oc=5"
         },
         {
-          "title": "“우주항공복합도시 특별법, 더 이상 미룰 수 없다” - 뉴스경남",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1JUXhzMkhsU19zQWlzdGFEV3owa0M3RkY0dFlhV191eFRrRHZVUkFqdURVeUg4YTAyWWxjSzhpZkRBeDNITkVDOVlFc1piYjRVbFROOGFJOWRHRXRSYWtsY1dFVXVhT0d4?oc=5"
+          "title": "사천·고흥을 우주항공복합도시로 - 경남매일",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBIODlYSk9tSzdHdjRsdXJ3OFBmaVZIdlpIMnhoZ1JxWVNORVR6ZXkzTDFNaGJ5ZEpmbVNaSDBfbFVralZQQl9sOVVLOUJfbzJPVV9ZT3NjX2Y4NzUyUDM5eU05ci1UYVlKX0E?oc=5"
         },
         {
-          "title": "사천·고흥을 우주항공복합도시로…경남·전남광주, 특별법 촉구 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGNzR4cXJmWmo4MWQ5eHBKSzN6cmowSDZZLUNzU1RJdTVFRW1VWGs1SXFpNmUxTExnTU52dUlUOWRGUllGOHhxWFdZcFBFRU9YclRkUzRZUUxZenPSAWBBVV95cUxPMVBUUGRXOVBSZmFCTFo5eU9ZNkp5TzFrRHg3UFlGS25uTzgyLXZDZnRrTVZ5SW9CME1IdlRhZUM2YjU1SFVCdlFnUS1LRWM0NlB4UGdwb3dmMmxxTDlNdEY?oc=5"
+          "title": "전남광주-경남도 \"우주항공복합도시 특별법 연내 제정\" 촉구 - KBC광주방송",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kOWJ1Q2dza3oxUnlkU21iOEFUWFNJVC1PRzdNUkwxcHgtRVBESkNjUE1Gc2xlYV9tb2VaWjNWSVRuQkE2ektla25pQkxaVXhjeWhHcTA4dW1GX0c2bWxkck53?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 87건",
-      "score": 87
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 57건), 네이버 월간 검색 310회",
+      "score": 160.1
     },
     {
-      "title": "소방 예산 2조, 대통령도 국힘도 '늘리자'…그럼 어디서 갈릴까",
-      "keyword": "소방 예산 2조",
+      "title": "미래대응기금이 뭐길래 여야가 싸울까? 쟁점은 '소방 지원'과 '국회 통제'",
+      "keyword": "미래대응기금 국회",
       "trend_keyword": "",
-      "facts": "이재명 대통령이 소방의 날 기념식에서 소방 인력과 재원을 확충하겠다고 했고, 당정은 2조 원 지원을 검토하고 있어요. 국민의힘도 국회에서 영화 '소방관' 상영회를 열고 \"소방예산을 확 바꾸겠다\"고 했어요.",
-      "sides": "정부·여당: 사는 지역과 관계없이 균등한 소방 안전을 위해 재원을 안정적으로 확보하겠다 / 국민의힘: 소방예산 구조 자체를 확 바꾸겠다(구체안은 확인 필요)",
-      "question": "여야가 모두 '늘리자'는 예산, 실제로 차이가 나는 건 돈의 크기일까요, 방식일까요?",
+      "facts": "국회 예결위와 상임위에서 '미래대응기금'의 사용처와 국회 통제 문제를 놓고 여야가 맞섰어요. 이재명 대통령이 소방 재원을 안정적으로 확보하겠다고 했고, 당정이 2조원 지원을 검토한다는 보도도 함께 나왔어요.",
+      "sides": "찬성 측: 미래 성장에 투자하는 돈이고 소방 지원에도 쓸 수 있다 / 반대 측: 국회의 예산 심사를 우회해 국회 예산통제권을 약하게 만든다",
+      "question": "정부가 기금으로 돈을 유연하게 쓰는 것과 국회가 하나하나 심사하는 것 중 어느 쪽에 더 무게를 두세요?",
       "metrics": {
-        "news_24h": 36,
+        "news_24h": 93,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
-        "trend_label": ""
+        "trend_label": "",
+        "naver_month": 15
       },
       "links": [
         {
-          "title": "소방에 ‘2조’ 푼다지만…‘항구적’ 재원 확보는 과제 - 뉴스토마토",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LVTM3aWJKaVBzZlV5cFpDbmR4cXYwMVlIMGZ5OXV3cEZtbktmQUtPZ3NDckJCaXlXSWx3ckhWa1FWUVdfcmhMdlI4U2ZSVFlLYURvSDlGUnAydjVZb0NlaA?oc=5"
+          "title": "미래대응기금 놓고 여야 공방... 국회 통제·소방 지원 쟁점 - 매일일보",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5GQ3BNdDFyNmt2S3NoenQ0NVlwNlRQVFR1LWcxQ2xFVHNMcnZvbDNBSjVBaEJvU1B1eXVGZ2xuczNTanN4WHRRQlpKMk54M2ZuenpiTTRQeGtpM0Qxc3Atajd6Rmg?oc=5"
         },
         {
-          "title": "소방 재정 지원 뒤늦게 꺼낸 당정…경남 현장선 아쉬움 - 경남도민일보",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1oU1RBWGFmLXRncEJiS2JLS3NtT3hqNzEtOGdPUjlVR0RKb0xKY3pGUExOWVFZd1ZLRXdsR3JqN1habWdrRHBPMWdHZjlCTDZOMVM4WkZkbldLNVI5SWhmejQ5VTB5MEo1ZkE?oc=5"
+          "title": "여야, 미래대응기금 놓고 충돌...“미래 성장 투자” vs “국회 예산심사 우회” - M이코노미뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE80UDV2RE4xN2h4S1FtVnpSaDRLS18zaU1aT2tRdnpmanJTdFk5SmFDbGpScHczY1BrUUk0YXctdXdzXzF0bWNnOHJYY3FqY0drdHFKVVRZVmZhYUs1ZEw3QVVEZjhNck0?oc=5"
         },
         {
-          "title": "소방 2조 지원…초과세수 없을 땐 \"어떻게…\" - 프라임경제",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBncUctaExEdHV4Mk9vV0JJc2ZEaGNsTERpSTJzdHhwLXItQUFPT1lZT1pXZDdyUUNuNWJHZjB3dWxnb1pWUVI5S1JQcGJoc0Iwc0xtZGZOS0FqcU8wNW9hYw?oc=5"
+          "title": "\"미래 투자\" \"쌈짓돈\"‥162조 미래대응기금 '정면충돌' - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9oamxVOUlJQjI1b3B3Rm9teG1BeDBvdFNwU1ZuYUEtc2JTQlItQzl0eHVnMlRkUWVNeG1paFJaenZWeUxhaHQ3OU9zRU1Ucmk5VW00Z0ktUUdVYmhIYldQbEZ0UFBBdWFzTGZnVkZmRnBwRTlvVjFZZNIBeEFVX3lxTE5ZNXhIX2FVc0Vialg2MFFKTlVSWlFMbG9FWGpCQ05JeXY5UThELTBWOXMyQ2ZlRjBoSWRSM2kwakgyTkRmWnM1dVJ5aGVTZEY5TVJmblh4VTJwQ0lUWWdLUEVWOVNfMzNSYk9RdFlpOE9TUjZ4Rl9SQg?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 36건",
-      "score": 36
+      "why": "구글 뉴스 24시간 기사 93건, 네이버 월간 검색 15회",
+      "score": 93.15
     },
     {
-      "title": "미래대응기금 2.5조 삭감 공방…'미래 투자'냐 '국회 심사 우회'냐",
-      "keyword": "미래대응기금 공방",
+      "title": "조작기소 특검법, 바로 공포 안 하고 '1주일 뒤' 국무회의로…왜 늦췄나",
+      "keyword": "특검법 국무회의 상정",
       "trend_keyword": "",
-      "facts": "국회 상임위에서 여야가 '미래대응기금'을 두고 맞붙었어요. 정무위에서는 이 기금 2.5조 원 삭감을 두고 공방이 벌어졌어요.",
-      "sides": "찬성 측: 미래 성장 동력에 투자하는 돈이다 / 반대 측: 국회 예산 심사를 우회하는 포퓰리즘 예산이다",
-      "question": "기금으로 큰돈을 굴리는 방식, 국회 견제 문제와 정책 속도 중 어느 쪽에 더 무게를 두세요?",
+      "facts": "국회를 통과한 이른바 '조작기소 특검법'을 청와대가 다음 날 국무회의가 아닌 다음 주 국무회의에 올린다고 밝혔어요. 언론은 이를 두고 1주일 여유를 뒀다고 보도했어요.",
+      "sides": "법안 추진 측: 국회를 통과한 특검이니 절차대로 공포해야 한다 / 반대 측: 헤드라인에는 이번 일정에 대한 반대 측 입장이 없어 따로 확인 필요(지난 글의 쟁점 반복은 피하기)",
+      "question": "청와대가 상정을 1주일 미룬 걸 신중한 검토로 보세요, 아니면 정치적 계산으로 보세요?",
       "metrics": {
-        "news_24h": 23,
+        "news_24h": 41,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
-        "trend_label": ""
+        "trend_label": "",
+        "naver_month": 10
       },
       "links": [
         {
-          "title": "예결위, 162조 미래대응기금 공방…민주 ‘재정 안정’ 국힘 ‘짝퉁 예비비’ - 경기신문",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE14blZrcW5feHBTWDNJS2NsQnNFNDVUSmZBRjJ5aGQ5Rl8tNXZ5M3dfS2hFRC1zdW5Zd2U0ZzR3VzZYblpqSTZPVFBxVy1YNkxOVWFDM3g2Qm9ya0wtTmcxRVZB?oc=5"
+          "title": "‘조작기소 특검법’ 국무회의 상정 다음 주로…17일 심의할 듯 - JTBC",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9aakkwaXVtSW5GN3ZNMndTbmtFNnNWWnRxYzFwSlN2WmxDUEpCUG5tczB1ZEhSaEozd05YMWdMNGR5SWJ2VnN2c3VQaGtrZ3hrWkhGNw?oc=5"
         },
         {
-          "title": "미래대응기금 놓고 여야 충돌…농지 전수조사도 공방 - 경북매일",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE92ZFRPM253UzdQMnFrMmo5V1dUOEE4VjBkT1R5WkNmTmZwQVd5SDJGOHg4bzBhOVk4azhZaWhMNVR2WG9xMmMyYlc0WjNzMWlIOTExcWJXWW5jUQ?oc=5"
+          "title": "靑, ’조작기소 특검법’ 다음 주 국무회의 상정 예정 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yT0lrdkducVF2RFlmYjVSSXhVMTZPWVViazdfNDZwZUk1ZGcwZ3NYb0NSOTZsS0VlbDAzNS1RTDBfeER6b01HZnBsX1JjODF0SmVKMVM3WDU4RHpWTG5VbmJDRkptd00?oc=5"
         },
         {
-          "title": "예결위 미래대응기금 공방…與 \"재정 안정\" 野 \"빚투 걱정\"(종합) - 뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1PNl9NUG5WTmIzNlpOd0pxWk05R1prVHozS0l0eGlTcmN4TmxXazh3SWU0enVHVHhFV2o5dzdtcWFrWGpwT2JWNlZOZ1l1MHV1enJUTjk3M1FjUFhFOHJhSdIBeEFVX3lxTE1sRDBQMkZfSkZUNldEa2tMVTNfb3NPT01oNWVuY1lRMTNUaldPTzJsN3JDUnpRSExWUTdNQkc5MGxfQmJreW1XdDAzZFpHQ29tVW1UN1g0UWRtYXFwdk9XVE5LbktpVXR2YnN2bWxiSHhMYUZ3MXV6Vg?oc=5"
+          "title": "청와대 “‘조작기소 특검법’ 17일 국무회의 상정 예정” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9uT3ZGZEE0bFY2M3hVcDhMZXVITWhNQm0yLXl6LWZSdXJCYUFJbDZKeTVHb1NhdEU1UDNlR2RCQUN3U29CTjkweVZHUU1UU3g0QmtScjZsaTY0LW1FSnVrcnVFb3NyUQ?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 23건",
-      "score": 23
+      "why": "구글 뉴스 24시간 기사 41건, 네이버 월간 검색 10회",
+      "score": 41.1
     }
   ],
-  "updated": "2026-11-09T18:34+09:00",
-  "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수",
+  "updated": "2026-11-09T22:15+09:00",
+  "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10122,
-        "output_tokens": 4096,
+        "input_tokens": 10373,
+        "output_tokens": 3795,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1224
+        "usd": 0.1174
       }
     },
     "images": {},
-    "usd": 0.1224,
-    "total_usd": 0.1224,
-    "total_krw": 170,
+    "usd": 0.1174,
+    "total_usd": 0.1174,
+    "total_krw": 160,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
