@@ -687,13 +687,15 @@ def ideas(site_id):
             n6 = trends.count_6h(x.get("keyword") or x.get("title", "")) if n >= 100 else 0
             x["metrics"] = {"news_24h": n, "news_6h": n6, "news_capped": n >= 100, "trend": t["keyword"] if t else "", "trend_traffic": t["traffic"] if t else 0,
                             "trend_label": t["traffic_label"] if t else ""}
+            nv = trends.naver_volume(x.get("keyword") or "")
+            x["metrics"]["naver_month"] = nv
             x["links"] = top
-            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f" (최근 6시간 {n6}건)" if n >= 100 else "") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
-            x["score"] = n + n6 + (t["traffic"] / 100 if t else 0)
+            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f" (최근 6시간 {n6}건)" if n >= 100 else "") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "") + (f", 네이버 월간 검색 {nv:,}회" if nv else "")
+            x["score"] = n + n6 + (t["traffic"] / 100 if t else 0) + ((nv or 0) / 100)
             ranked.append(x)
         ranked.sort(key=lambda x: x["score"], reverse=True)
         out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),
-               "basis": f"구글 트렌드 한국 실시간 인기 검색어 + {trends.source_name()} 최근 24시간 기사 수", "cost": usage_cost()}
+               "basis": f"구글 트렌드 한국 실시간 인기 검색어 + {trends.source_name()} 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()}
         save_json(SITES / site_id / "ideas.json", out)
         log("이슈 후보 3개 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in out["ideas"]))
         return

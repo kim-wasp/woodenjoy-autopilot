@@ -149,3 +149,25 @@ def trend_match(keyword, trends):
             if not best or t["traffic"] > best["traffic"]:
                 best = t
     return best
+
+
+def naver_volume(keyword):
+    """네이버 월간 검색 수 (검색광고 키워드 도구, PC+모바일). 검색 API가 아니라서 약관 문제 없음.
+    키워드 도구는 띄어쓰기 없는 단어만 받아요. 못 읽으면 None."""
+    import os, sys
+    from pathlib import Path
+    if not os.environ.get("NAVER_AD_API_KEY"):
+        return None
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+    try:
+        import keywords as kt
+        w = re.sub(r"\s+", "", keyword or "")[:30]
+        if not w:
+            return None
+        for it in kt.ad_request([w], False):
+            if kt.norm(it.get("relKeyword", "")) == w:
+                return kt.to_int(it.get("monthlyPcQcCnt", 0)) + kt.to_int(it.get("monthlyMobileQcCnt", 0))
+        return 0
+    except Exception as e:  # noqa: BLE001
+        log(f"  네이버 검색량 실패 '{keyword}': {e}")
+        return None
