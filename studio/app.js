@@ -164,11 +164,29 @@ async function viewIdeas(siteId) {
 async function viewSchedule() {
   shell('schedule', loading());
   const sc = await api('schedule');
+  const pad = (n) => String(n).padStart(2, '0');
+  const dkey = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const today = dkey(new Date());
   const by = {};
-  (sc.items || []).forEach((x) => { const k = x.at.slice(0, 10); (by[k] = by[k] || []).push(x); });
-  const keys = Object.keys(by).sort().reverse();
+  (sc.items || []).forEach((x) => { const k = dkey(new Date(x.at)); (by[k] = by[k] || []).push(x); });
+  Object.values(by).forEach((l) => l.sort((a, b) => a.at.localeCompare(b.at)));
+  const row = (x) => `<div class="item"><span class="pf">${PF[x.platform]}</span><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.site_name)} · ${fmt(x.at).split(' ')[1]}</span></div>${x.state === 'done' ? (x.url ? `<a class="chip ok" href="${esc(x.url)}" target="_blank" rel="noopener">올라감 ↗</a>` : '<span class="chip ok">올라감</span>') : '<span class="chip brand">예정</span>'}</div>`;
+  const day = (k) => `<div class="day-h">${fmt(k + 'T00:00').split(' ')[0]}${k === today ? ' 오늘' : ''}</div><div class="list">${by[k].map(row).join('')}</div>`;
+  // 지난 날짜는 주(월~일) 단위로 묶어 접어 둬요. 'n주차'는 그 주 목요일이 속한 달 기준
+  const weekOf = (k) => {
+    const d = new Date(k + 'T00:00'); const mon = new Date(d); mon.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+    const thu = new Date(mon); thu.setDate(mon.getDate() + 3); const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+    return { id: dkey(mon), label: `${thu.getFullYear()}년 ${thu.getMonth() + 1}월 ${Math.ceil(thu.getDate() / 7)}주차`, range: `${mon.getMonth() + 1}/${mon.getDate()}~${sun.getMonth() + 1}/${sun.getDate()}` };
+  };
+  const keys = Object.keys(by).sort();
+  const upcoming = keys.filter((k) => k >= today);
+  const weeks = {};
+  keys.filter((k) => k < today).forEach((k) => { const w = weekOf(k); (weeks[w.id] = weeks[w.id] || { ...w, days: [] }).days.push(k); });
+  const past = Object.values(weeks).sort((a, b) => b.id.localeCompare(a.id));
+  const count = (ds) => ds.reduce((n, k) => n + by[k].length, 0);
   $('#main').innerHTML = `<div class="page-h"><h1>일정</h1><span class="small muted">${sc.updated ? '갱신 ' + fmt(sc.updated) : ''}</span></div>
-  <div class="card">${keys.map((k) => `<div class="day-h">${fmt(k + 'T00:00').split(' ')[0]}</div><div class="list">${by[k].map((x) => `<div class="item"><span class="pf">${PF[x.platform]}</span><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.site_name)} · ${fmt(x.at).split(' ')[1]}</span></div>${x.state === 'done' ? (x.url ? `<a class="chip ok" href="${esc(x.url)}" target="_blank" rel="noopener">올라감 ↗</a>` : '<span class="chip ok">올라감</span>') : '<span class="chip brand">예정</span>'}</div>`).join('')}</div>`).join('') || '<div class="empty">아직 일정이 없어요. 글을 승인하면 여기에 보여요.</div>'}</div>`;
+  <div class="card"><div class="sec">오늘과 다가오는 일정</div>${upcoming.map(day).join('') || '<p class="muted small">예정된 일정이 없어요. 글을 승인하면 여기에 보여요.</p>'}</div>
+  ${past.length ? `<div class="card"><div class="sec">지난 일정</div>${past.map((w) => `<details class="week"><summary><b>${w.label}</b><span class="small muted">${w.range} · ${count(w.days)}건</span></summary>${w.days.slice().reverse().map(day).join('')}</details>`).join('')}</div>` : ''}`;
 }
 
 // ---------- 사이트 ----------

@@ -99,3 +99,10 @@ textarea{min-height:90px;resize:vertical}
 .actions textarea{min-height:60px}
 .sticky-actions{position:sticky;bottom:76px;z-index:3;background:var(--surface);border-radius:var(--r);box-shadow:0 4px 18px rgba(16,24,40,.12);padding:10px 12px;margin-top:16px}
 @media (min-width:761px){.sticky-actions{bottom:16px}}
+.week{border-top:1px solid var(--line);padding:10px 0}
+.week:first-of-type{border-top:0}
+.week summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;list-style:none;padding:4px 0}
+.week summary::-webkit-details-marker{display:none}
+.week summary::before{content:'▸';font-size:12px;color:var(--sub);width:12px}
+.week[open] summary::before{content:'▾'}
+.week .day-h:first-of-type{margin-top:8px}
