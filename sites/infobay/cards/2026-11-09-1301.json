@@ -31,7 +31,9 @@
         "url": "https://view.asiae.co.kr/article/2026110908580986219"
       },
       "why": "한쪽은 늦은 밤까지 배려해야 한다고 보고, 다른 쪽은 내 집에서 생활하는 것까지 막는 건 지나친 요구라고 봄. 기사에 따르면 욕실 물 쓰는 소리(급배수 소음)는 법에서 정한 층간소음에 들어가지 않음",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-51",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -51,7 +53,9 @@
         "url": "https://view.asiae.co.kr/article/2026110908580986219"
       },
       "why": "교대 근무나 야근처럼 사는 시간이 다른 사람의 사정과, 잠을 깨는 아래·윗집의 불편 중 무엇을 먼저 볼지가 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-52",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -71,7 +75,9 @@
         "url": "https://view.asiae.co.kr/article/2026110908580986219"
       },
       "why": "짧게 나는 생활 소음을 어디까지 참아야 하는지 기준이 사람마다 달라서 '배려'와 '간섭' 사이 선이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-53",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -91,7 +97,9 @@
         "url": "https://www.wikitree.co.kr/articles/1171797"
       },
       "why": "상대가 익숙한 방식으로 건넨 인사를 받아 주는 게 예의라는 쪽과, 신체 접촉을 어디까지 허용할지는 본인이 정할 일이라는 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-54",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -111,7 +119,9 @@
         "url": "https://www.wikitree.co.kr/articles/1171797"
       },
       "why": "사적인 만남과 공식 업무 자리의 예절 기준이 다르다는 시각과, 업무 자리라도 몸이 닿는 인사를 강요할 수는 없다는 시각이 부딪힘",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-54",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -131,7 +141,9 @@
         "url": "https://www.youtube.com/watch?v=-D7oSQHbmyo"
       },
       "why": "기록을 재는 대회라면 몸으로 돕는 것도 반칙이라는 쪽과, 순위 경쟁이 아닌 일반 참가자끼리의 응원이라는 쪽으로 나뉨. 러닝 붐으로 아마추어 대회 참가가 늘면서 생활 이슈가 됨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-55",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -151,7 +163,9 @@
         "url": "https://www.mydaily.co.kr/page/view/2026102920105760025"
       },
       "why": "성인이 출연료를 받고 알고 나온 거라 감수할 몫이라는 쪽과, 일반인을 웃음거리로 만드는 건 선을 넘었다는 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-56",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -171,7 +185,9 @@
         "url": "https://news.nate.com/view/20261102n35745"
       },
       "why": "방송에 나온 이상 검증받아야 한다는 쪽과, 확인 안 된 지인 폭로는 악플이고 사생활 침해라는 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-57",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -191,7 +207,9 @@
         "url": "https://supple.kr/community/politics/137899069"
       },
       "why": "별점은 맛만 보고 매기는 거라는 쪽과, 응대·분위기까지 포함한 경험 전체를 평가하는 거라는 쪽이 갈림. 같은 글에서 별점 0.1점 차이가 매출에 영향을 준다는 통계도 인용되지만 출처는 밝히지 않음",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-58",
+      "inserted_at": "2026-11-09T22:25+09:00"
     },
     {
       "row": {
@@ -211,7 +229,9 @@
         "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008836320"
       },
       "why": "교육 기회를 넓히는 배려라는 쪽과, 다른 학생들도 형편이 어려운데 특정 집단만 지원하는 건 불공정하다는 쪽이 맞섬. 원래 이슈의 대상 집단은 빼고, 누구나 겪는 '특별전형의 공정성' 문제로 바꿈",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "SCH-64",
+      "inserted_at": "2026-11-09T22:26+09:00"
     }
   ]
 }
