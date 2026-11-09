@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-08-ppp-rally-impeachment-after-special-counsel-bill",
   "site": "sisibibi",
   "title": "국민의힘 ‘이재명 탄핵’ 외쳤지만 필요한 건 200표…왜 거리로?",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-08T11:14+09:00",
   "requested_topic": "‘탄핵’까지 나왔다…특검법 통과 뒤 국민의힘은 왜 거리로 나갔나",
   "keywords": {
@@ -123,5 +123,10 @@
     "total_krw": 750,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-08T11:40+09:00"
+  "approved_at": "2026-11-08T11:40+09:00",
+  "published": {
+    "blog": "posts/2026-11-09-ppp-rally-impeachment-after-special-counsel-bill",
+    "blog_url": "https://sisibibinote.kr/posts/ppp-rally-impeachment-after-special-counsel-bill/",
+    "blog_at": "2026-11-09T12:01:51+09:00"
+  }
 }

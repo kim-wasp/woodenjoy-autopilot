@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T09:48+09:00",
+  "updated": "2026-11-09T12:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -217,8 +217,9 @@
       "dir": "content/sisibibi/2026-11-08-ppp-rally-impeachment-after-special-counsel-bill",
       "title": "국민의힘 ‘이재명 탄핵’ 외쳤지만 필요한 건 200표…왜 거리로?",
       "platform": "blog",
-      "at": "2026-11-09T12:00+09:00",
-      "state": "planned"
+      "at": "2026-11-09T12:01:51+09:00",
+      "state": "done",
+      "url": "https://sisibibinote.kr/posts/ppp-rally-impeachment-after-special-counsel-bill/"
     },
     {
       "site": "infobay",
