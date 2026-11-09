@@ -1,0 +1,10 @@
+// 관리자 메일 거르개: admin@sisibibinote.kr, admin@myinfobay.com 으로 온 메일을 읽고
+// 욕설, 악성 메일은 버리고 나머지만 사장님 Gmail로 넘겨요. 메일 서버는 없어요 (Cloudflare Email Routing).
+{
+  "name": "mail-filter",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "observability": { "enabled": true },
+  "vars": { "FORWARD_TO": "kim.wasp@gmail.com" }
+}
