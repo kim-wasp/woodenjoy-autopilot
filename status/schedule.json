@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T07:37+09:00",
+  "updated": "2026-11-10T08:02+09:00",
   "items": [
     {
       "site": "infobay",
@@ -260,6 +260,15 @@
       "at": "2026-11-09T21:03:15+09:00",
       "state": "done",
       "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-09-space-aerospace-city-special-act-sacheon-goheung-r",
+      "title": "우주항공 특별법 11개월째 계류…사천·고흥 500명이 국회 간 이유",
+      "platform": "blog",
+      "at": "2026-11-10T12:00+09:00",
+      "state": "planned"
     },
     {
       "site": "woodenjoy",
