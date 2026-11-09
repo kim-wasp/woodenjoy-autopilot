@@ -1,0 +1,12 @@
+name: probe
+on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests && cd engine && python3 -c "import trends;[print('NV',k,trends.naver_volume(k)) for k in ['조작기소 특검법','국민의힘 장외집회','이재명 탄핵']]"
+        env:
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
