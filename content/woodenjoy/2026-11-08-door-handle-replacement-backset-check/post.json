@@ -142,5 +142,10 @@
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
   "approved_at": "2026-11-08T22:32+09:00",
-  "coupang": true
+  "coupang": true,
+  "published": {
+    "blog": "post_f351a6eb62fd3157",
+    "blog_url": "https://blog.naver.com/cafe_peanut/224472533940",
+    "blog_at": "2026-11-11T08:14:13+09:00"
+  }
 }
