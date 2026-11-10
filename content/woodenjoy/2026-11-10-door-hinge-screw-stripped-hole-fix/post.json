@@ -1,0 +1,139 @@
+{
+  "id": "woodenjoy/2026-11-10-door-hinge-screw-stripped-hole-fix",
+  "site": "woodenjoy",
+  "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
+  "status": "draft",
+  "created_at": "2026-11-10T20:15+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "방문경첩 나사 헛돌 때",
+    "sub": [
+      "방문경첩",
+      "방문 처짐",
+      "경첩교체",
+      "이지경첩"
+    ]
+  },
+  "brief": {
+    "reader": "방문 손잡이 쪽이 바닥을 긁어서 경첩 나사를 조이려는데 나사가 헛도는 사람",
+    "question": "방문경첩 나사가 헛돌 때 어떻게 다시 단단히 고정하나요?",
+    "answer": "문을 받치고 위 경첩부터 조여 보고, 헛돌면 이쑤시개·나무젓가락을 본드에 묻혀 구멍 속만 채운 뒤 굳으면 다시 박습니다.",
+    "out_of_scope": "문틀 교체, 문짝 대패질, 현관 방화문·도어클로저 수리, 경첩 홈 새로 파기",
+    "next_action": "끌리는 위치를 확인하고 문을 받친 다음 위 경첩 나사부터 점검하기"
+  },
+  "why_this_topic": "네이버 검색량 '방문경첩' 월 1,880회(2026-11-09)로 최근에 쓴 싱크대 경첩·문고리와 다른 수요가 확실하고, '경첩나사헛돌때'(월 10회)는 검색 의도가 분명한 롱테일이라 함께 잡았습니다. 상위 자료는 대부분 '이쑤시개로 메우라'에서 끝나는데, 꽉 채우고 본드로 굳혔다가 나사가 안 들어간 실패 사례와 목공용 본드의 작업 최저 온도(오공 205 표기 10℃)는 거의 다루지 않습니다. 11월에 난방 안 한 방에서 작업하는 경우를 생각하면 지금 쓰기 좋은 내용입니다. 등록된 '목공용 본드' 쿠팡 링크도 이 문단에 딱 맞습니다.",
+  "meta_description": "방문경첩 나사가 헛돌아 문이 바닥에 끌릴 때 고치는 순서예요. 위 경첩부터 보는 이유, 이쑤시개·나무젓가락으로 구멍 메우는 양, 꽉 채우면 실패하는 까닭, 추운 방에서 확인할 목공용 본드 온도까지 정리했어요.",
+  "hero_prompt": "Realistic casual smartphone photo inside a Korean apartment: a white wooden interior room door slightly open, its bottom corner on the handle side scraping a light laminate floor with a faint scuff mark, upper door hinge with one screw sticking out slightly loose. Slightly tilted frame, mixed warm ceiling light and cool daylight, a bit of dust and a slipper at the edge of the frame, ordinary lived-in look. Center area of the image kept simple (plain door surface) for overlay text. No text, no people, no showroom styling, no HDR, no heavy background blur, not a 3D render.",
+  "thumb_text": "방문 바닥 긁으면\n위 경첩 나사부터",
+  "category": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "sources": [
+    {
+      "title": "낡은 방문 경첩 교체하고 문틈까지 조절하는 법 (내맘대로집)",
+      "url": "https://nmjib.com/magazine/mokgong-58"
+    },
+    {
+      "title": "싱크대 경첩 나사 헛돌때 문 고치는 셀프수리 (모두나무)",
+      "url": "https://modunamu.com/entry/%EC%8B%B1%ED%81%AC%EB%8C%80-%EA%B2%BD%EC%B2%A9-%EB%82%98%EC%82%AC-%ED%97%9B%EB%8F%8C%EB%95%8C-%EB%AC%B8-%EA%B3%A0%EC%B9%98%EB%8A%94-%EC%85%80%ED%94%84%EC%88%98%EB%A6%AC"
+    },
+    {
+      "title": "헛도는 나사 꽉 조으려면 어떻게 하나요? (아하)",
+      "url": "https://www.a-ha.io/questions/4d7b184c0b80ec58950420ee295c32cb"
+    },
+    {
+      "title": "문 처짐·바닥 끌림, 원인과 수리 방법 정리",
+      "url": "https://imdoor.co.kr/blog/door-sagging-repair"
+    },
+    {
+      "title": "방문 틀어짐: 닫히지 않는 문을 바로잡는 순서",
+      "url": "https://room301.kr/free/228"
+    },
+    {
+      "title": "방문 경첩 조절 방법, 문이 처지거나 문틀에 걸릴 때 고치는 순서",
+      "url": "https://jipfixcheck.com/door-hinge-adjustment/"
+    },
+    {
+      "title": "205 목공용 접착제 (웅케미칼)",
+      "url": "https://wchem.kr/product/205/?v=dcf0d7d2cd12"
+    },
+    {
+      "title": "오공 목공용 본드 205 800g (화방넷)",
+      "url": "https://hwabang.net/product/%EC%98%A4%EA%B3%B5-%EB%AA%A9%EA%B3%B5%EC%9A%A9-%EB%B3%B8%EB%93%9C-205-800g/58722/"
+    },
+    {
+      "title": "4인치 방문 이지경첩 상품 정보",
+      "url": "https://77ro.co.kr/product/4%EC%9D%B8%EC%B9%98-%EB%B0%A9%EB%AC%B8-%EC%9D%B4%EC%A7%80%EA%B2%BD%EC%B2%A9/747/"
+    },
+    {
+      "title": "방문용 이지경첩 (스텐) 4인치 (1조3개입)",
+      "url": "https://www.77g.com/products/ly_H39420"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "실수 바로잡기형",
+    "cover_hooks": [
+      "헛도는 경첩 나사, 꽉 채우면 실패",
+      "방문이 바닥 긁으면 위 경첩부터",
+      "추운 방 본드, 10℃ 표기부터 봐요"
+    ],
+    "caption": "방문이 바닥에 끌린다면 위 경첩 나사부터 보세요.\n문 아래를 받치고 위 경첩부터 살살 조여요.\n헛돌면 이쑤시개나 나무젓가락으로 구멍 속만 채워요.\n목공용 본드는 표기된 온도를 확인하고 굳은 다음에 박아요.\n경첩 만지기 전에 꺼내 볼 수 있게 저장해 두세요. 자세한 글은 프로필 링크에 있어요.\n\n#셀프인테리어 #방문경첩 #경첩교체 #셀프집수리"
+  },
+  "threads": {
+    "hooks": [
+      "이쑤시개 꽉 채우면 나사 안 들어가",
+      "방문이 바닥 긁으면 위 경첩부터 봐",
+      "헛도는 나사, 본드 붓고 끝일까?"
+    ],
+    "posts": [
+      "이쑤시개 꽉 채우면 나사 안 들어가\n헛도는 경첩 구멍에 나무젓가락이랑 이쑤시개를 빈틈없이 박고\n목공본드로 하루 굳혔다는 후기가 있었거든.\n막상 나사가 아예 안 들어가서 드릴로 길을 다시 냈더라.\n어디까지 채워야 하는지 댓글에 적어둘게",
+      "1. 문 아래를 책이나 나무토막으로 받치고 시작해. 안 받치고 조이면 나사산이 망가질 수 있어\n2. 손잡이 쪽 아래가 끌리면 위 경첩 나사부터 봐\n3. 헛돌면 이쑤시개나 깎은 나무젓가락에 본드 묻혀서 구멍 속만 채워. 끝까지 꽉 메우진 마\n4. 오공 205 기준으로 작업 최저 온도 10℃, 압착 1~2시간이야. 추운 방이면 먼저 데우고 해",
+      "업체 불러야 하는 경우랑 체크리스트는 블로그에 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "방문경첩 이지경첩 4인치 (3개입)",
+      "search": "방문경첩 이지경첩 4인치",
+      "after": "경첩 자체가 휘었다면 새 경첩으로 바꿔야 해요"
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 6장: 아래 빈 공간 큼 (289px)"
+    ],
+    "at": "2026-11-10T20:15+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 44240,
+        "output_tokens": 27248,
+        "web_searches": 4,
+        "calls": 4,
+        "usd": 0.7619
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.8959,
+    "total_usd": 0.8959,
+    "total_krw": 1250,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
