@@ -1,47 +1,80 @@
 {
   "ideas": [
     {
-      "title": "5조 ‘미래대응기금’, 야당은 ‘AI판 대장동’이라는데 여당에서도 말이 나온 이유",
-      "keyword": "미래대응기금 국회",
+      "title": "초광역특구법, 경총은 '만들어 달라' 시민사회는 '재벌 특혜'…같은 법을 두고 왜 정반대일까",
+      "keyword": "초광역특구법",
       "trend_keyword": "",
-      "facts": "내년 예산안 심사에서 5조 원 규모의 ‘미래대응기금’ 사업을 두고 여야가 부딪히고 있어요. 야당은 ‘AI판 대장동’이라고 비판했고, 여당에서도 국회가 상시로 감독해야 한다는 말이 나왔으며 국회 교육위원장은 기금을 서둘러 만드는 것에 반대했어요.",
-      "sides": "정부·여당 쪽: 미래 대비 사업에 쓸 기금이 필요하다는 입장(구체 근거는 본문 작성 때 정부 자료로 확인 필요) / 야당·비판 쪽: 국회 통제를 덜 받는 ‘쌈짓돈’이 될 수 있다는 지적",
-      "question": "정부가 큰 기금을 새로 만들 때 국회가 어디까지 들여다봐야 한다고 보세요?",
+      "facts": "경총이 초광역특구법 제정과 노조법 보완을 포함한 19개 과제를 국회에 건의했어요. 반면 국회 일부와 시민사회는 '재벌 특혜'라며 법안을 철회하라고 요구했어요.",
+      "sides": "경총 등 찬성 측: 기업 혁신을 위해 초광역특구법을 제정해야 한다 / 시민사회 등 반대 측: 재벌 특혜이니 법안을 철회해야 한다",
+      "question": "초광역특구, 지역 성장의 기회라고 보세요, 대기업 특혜 우려가 더 크다고 보세요?",
       "metrics": {
-        "news_24h": 94,
+        "news_24h": 70,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 15
+        "naver_month": 5500
       },
       "links": [
         {
-          "title": "'곳간'이냐 '쌈짓돈'이냐...미래대응기금 '극과 극' - YTN",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBCcHY5SFZETkEydTRZbGdkeFhBMGREaXhULVNCdVBDdG01bFlNRmZPb2JhbWNZcEdJcV9RS3gzdm9ya0d0UEdWeHpTSldxNTVnWWt3Qy1Tbl9IV3ByNFpULWZpN0pQOWZKVXA3ZDZ0TWZJUHBkVHc?oc=5"
+          "title": "초광역특구에 320여 개 규제특례…지역주도 성장 지원 - 대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYlRhSW5sTjU2S09tRnprQnQtVHBGUThPOEFmajI1OGxDSEd0d3VjWXo3Q0ZYRW9LQlNSTTJlYzBCQXh6WjJjN3EtUHhyT0p5RS04UVY3N2FEYzBQanlQQ09Id0Jubjc0RjNyR3k1V0RWYmJtTDRjQ29FU2xzNjJ4ZzNJUG5jSXk0VVE?oc=5"
         },
         {
-          "title": "노동부 예산안 심사 ‘미래대응기금’ 논쟁 격화 - 매일노동뉴스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1EWlIzaEVTb3lybjNJbmZiLXY4UXJjSnA4TXItZHBIMHQ0RWlObmhhMWlMQmpNa1NVSmk3eWU3bGRoMnJtVEh2UjBpNGk4ZTF5RXVwRUF3dkJWaldMeE5LWDRFM0xCUEJFRnNTUm9qZVA?oc=5"
+          "title": "초광역특구법 320여 개 규제특례 추진…충청권 산업·생활 변화는? - 대전인터넷신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4yalNubldsNklwaFZxdUl1cGxOanBSbGlhSXdMNV9MUTc3WUgybTZ6MVF0RUNmaUpLVVFaa05wV0tqb1RvQ3N1Vzc2aGJpQQ?oc=5"
         },
         {
-          "title": "예산안 심사 시동‥162조 미래기금 '정면 충돌' - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44dUEtSHVCOExWc3VRRjdVU0g1WXlIM1FWclpxWUFoZmtrZHVnV0ttTjB6dWg4OTZ6aTBYMTJ6NmxpdnJhT3JPYWdPNVRHd3Z0andUTWF0ZzBKUGdFQlV6VU15alJlQVFLU05oQW84Q0FhbExKOHIzdjZ30gF6QVVfeXFMUGJqcFI1T0pzRnppRFg4dF9uOVU5SWZ6LUZESjdTN2V2MHZ5blNqRk1ET211Wmt3YzBXTXF2cTducWJtUUFqV0VRMFJLY05ydWlyQUtuNWJxOEZLWG1DbmxIUC1rVGRTaDM1cmtjSkoyLXdMYzcyeTVtbFE?oc=5"
+          "title": "정부 “내년 상반기 초광역특구 지정”…울부경 공동 대응 주목 - 울산매일 - 울산최초, 최고의 조간신문",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5aUVpoa21sa1AzMUlZRFdWR0JHaS1YY0V0VTBIMGc2SmlEWmlFTHJvdzVZSDN0R29oTzRMbFdqTk9hMHlrR3JybjJSTDYwbWNUNnBWZWZMamlRNVJOc25UZFBWU21iUEx2NVHSAW5BVV95cUxOTG41dHZKbFRvV3czczJEYlBucGhxX3hvQno4Q0lKRVpEbzY4STZmVE0yRXc4cGVCQ1hEcVlMTTNuYU9tbWQ1U1d1dVdVcU9laFZSeDlLVzRaX01YdEh5N1VYX09uV01TRXotNzZpdw?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 94건, 네이버 월간 검색 15회",
-      "score": 94.15
+      "why": "구글 뉴스 24시간 기사 70건, 네이버 월간 검색 5,500회",
+      "score": 125.0
     },
     {
-      "title": "‘조작기소 특검법’ 10일 국무회의 안 올렸다…청와대가 1주일 늦춘 뒤 생길 일",
-      "keyword": "특검법 국무회의 상정",
+      "title": "청해부대 작전구역, 호르무즈 쪽으로 넓힌다…'우회 파병'인가 '전쟁 개입 없다'인가, 이제 국회 손에",
+      "keyword": "청해부대 작전구역 확대",
       "trend_keyword": "",
-      "facts": "지난 글 이후 새로 생긴 일은 청와대가 국회를 통과한 ‘조작기소 특검법’(헤드라인 표기)을 10일 국무회의에 올리지 않고 다음 주에 올리겠다고 밝힌 거예요. 이 법 때문에 예산 국회가 파행할 수 있다는 보도도 함께 나왔어요.",
-      "sides": "추진 쪽: 국회가 통과시킨 법이니 절차대로 공포해야 한다 / 반대 쪽: 이 특검법은 받아들일 수 없어 예산 심사에도 협조하기 어렵다는 입장",
-      "question": "청와대가 1주일 여유를 둔 것, 신중한 판단이라고 보세요, 시간 끌기라고 보세요?",
+      "facts": "국무회의가 청해부대 작전구역을 호르무즈 쪽으로 넓히는 파견 동의안을 의결했고, 대통령 재가를 거쳐 국회에 냈어요. 이란이 반발하고 있어서 국회 심사가 순탄하지 않을 거라는 보도가 많아요.",
+      "sides": "정부·국방부: 호르무즈 안정화에 기여하는 첫 조치이고 전쟁에는 관여하지 않는다는 원칙을 지킨다 / 시민단체 등 반대 측: 사실상 '우회 파병'이니 철회하고 국회는 동의안을 부결하라",
+      "question": "작전구역 확대, 국익을 위한 기여라고 보세요, 아니면 분쟁에 휘말릴 위험이 더 크다고 보세요?",
       "metrics": {
-        "news_24h": 47,
+        "news_24h": 100,
+        "news_6h": 9,
+        "news_capped": true,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 65
+      },
+      "links": [
+        {
+          "title": "’청해부대 작전구역 확대’ 국무회의 의결…공은 국회로 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zenRFcE9tSHZITlVDWEdqUmhVaThHdnVTWDBDQjE1bHU3S1REQXpOUUxxcTdYOENOc3pfVy03bmVod2JMQ2xYV1NHbERCeC14UzJsVGZGRmYyVmJkdGxFeEZ4WTk3bEU?oc=5"
+        },
+        {
+          "title": "국무회의서 ‘청해부대 작전구역 확대’ 의결…‘호르무즈 안정화 기여 첫 조치’로 공은 국회로 - 문화일보",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkc3pzNUFvemxlNG5ObURPdXBybThuMjhCa19nekF2OWhudWstQUtwWHlMSHhLeGI1Y2ZCOUlHSWFFWnRsc0IzOU5yVjdvelJ1?oc=5"
+        },
+        {
+          "title": "국무회의서 '청해부대 작전구역 확대' 의결…공은 국회로(종합3보) - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MZjRySHJ3NVozZ01uRElyTDhqT3cwcGZZLXRIQ2tHVmpSLWpfSlpTNjdjWjBYclVncnlEbzUzWnBNaDFxenBFRzJjRTA0MXJPSUlMRzNtMmZyZkXSAWBBVV95cUxOd3RtM2dlTEFXLWZRNWk3T1pTNTJGU1VBMGlkTXRWVkFaUDQ5RnFCaGxzWWRYTF9jclZoajRYaXFvc2NLTWpUUERoNTJhbkQyMWFMUkFqWWNsaVQ1bGt4NE8?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 9건), 네이버 월간 검색 65회",
+      "score": 109.65
+    },
+    {
+      "title": "'주가누르기 방지법' 정기국회 처리한다는데…아직 못 정한 '의무공개매수제'가 뭐길래",
+      "keyword": "주가누르기 방지법",
+      "trend_keyword": "",
+      "facts": "민주당은 이른바 '주가누르기 방지법'을 정기국회 안에 처리하겠다고 밝혔어요. 하지만 의무공개매수제를 두고는 이견이 남아 있어 내용 정리를 다 끝내지 못했다고 해요.",
+      "sides": "추진 측(민주당): 정기국회 안에 반드시 처리한다 / 이견 측: 의무공개매수제는 아직 의견을 모으는 중이라 서두르면 안 된다는 목소리가 있어요(구체 주장은 기사 확인 필요)",
+      "question": "처리 시점이 먼저일까요, 의무공개매수제 합의가 먼저일까요?",
+      "metrics": {
+        "news_24h": 55,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -51,71 +84,38 @@
       },
       "links": [
         {
-          "title": "청와대, ’조작기소 특검법’ 다음 주 국무회의 상정 예정 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uLV8zdTMtTnNIUlo0ekFiOFpVbmtMdjdWYVI2S0F5MXFXOWRTLXNJVGtHNFpWQW44aGFTTTY3RmdTaE1VZ3VuLW5VbnhlUkcxT2RBNldVX1V5a21saVNKeEtZRzF6ZXM?oc=5"
+          "title": "與 “주가 누르기 방지법 내달초까지 처리”… 재계 “시장 혼란” - 동아일보",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1Zam1jVEVSRUR2Zk15MkQxUmluMkhheFBvS0ZNenBvSUh3bG5NSHhKZzBka2RMM2Yya19qLVVFSnd3ZmtuUHBFN3Y5V09md3kxR1lyMHU2MTN1dFVCZGVtUmZKcUJGWTl2eER0SWY3RlZ4UDVpWHRN0gFmQVVfeXFMTTcyaENkWjFiT3BoT0dfcmJYdVFPUHlHa3JHaVV3SmNscC1hUnY2R3V6NEp1YmNNVndxbXItOTl2dDRDMnNROHJKYUJ5cmF4VzFtUWNFWlk3ZWlaUmlSWTZyVkpLT3Fn?oc=5"
         },
         {
-          "title": "‘조작기소 특검법’ 국무회의 상정 다음 주로…17일 심의할 듯 - JTBC",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9aakkwaXVtSW5GN3ZNMndTbmtFNnNWWnRxYzFwSlN2WmxDUEpCUG5tczB1ZEhSaEozd05YMWdMNGR5SWJ2VnN2c3VQaGtrZ3hrWkhGNw?oc=5"
+          "title": "민주당, 주가누르기방지법 정기국회 내 처리 방침 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE01Tm05UHA4RzBqN2c1QVZaZ1p1cFRnMEJ4T0pkNFFMYklhZ0hNYW5qUElHSkdxZ0k4NmFPcmRPU3AyLWJURzV0WGpFd0xfQ0M4aGNKOUlUQlBxQdIBX0FVX3lxTE9Tb1RneGQxOGU1TE1ESGY5Z0poOHFrNDJCVGNkNElKZ3hkb2lNczJpMXBFVDVCcy1uWlkyYkZZRUtXZTM2VTBQSWthUzdRTzF6ZElub0RyT2lKS3p6N3dB?oc=5"
         },
         {
-          "title": "靑 \"조작기소 특검법, 내일 아닌 다음 주 국무회의 상정 예정\" - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBua2xwVkxrZS1KaDhjTWZXTFpYeVlWV2RuOWpYZGcxWTlScmtBcmtyd3kyeGZIVVZ2WDRvS0Nfb2Uxd0wwY3FvYWU2ZUc5TmFVNzlYdmtwUjctaFnSAWBBVV95cUxPNENNVThYZnMtcHZRQndSYmpFaHZuRzlybDNsUGI2SWNpNmtfZVFfNmFjSVIxcTRrZ002UTVRV2F2V0IzNUREc2dFTVNMS0ZLSEtqYXlFWVdkMVVXQlM1NmY?oc=5"
+          "title": "與 \"주가누르기방지법, 정기국회내 처리…내용 정리는 다 안돼\" - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1zdWdCN3ZtV1lndW5Oc3ZCNm1KZWJWdVQ3OHVSX19LTHMwMzVMdXZYWGlnSUl4Nllxb2lRNzNrS3hWNkp1QS1oV1BDM1pKM3Q0bl9OdDlBRHZFMWfSAWBBVV95cUxPV0Z2bEZfd1FtWDNYQ1RZX2RZazFBZk1ibVk4NnVlaVZSYVdUQTZxdUF4SW5QbTREbXREd21lelp3Y0ZqWlRXUWluUXJvODNELTJWTjFXZ1VsNEJCdGRGYVI?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 47건, 네이버 월간 검색 10회",
-      "score": 47.1
-    },
-    {
-      "title": "소방에 2조 원 검토…대통령 약속과 ‘미래대응기금’이 엮인 이유",
-      "keyword": "소방 재원 2조",
-      "trend_keyword": "",
-      "facts": "이재명 대통령은 소방공무원 오찬에서 소방 재원을 안정적으로 확보하고 인력·재원을 늘리겠다고 말했어요. 당정은 소방에 2조 원 지원을 검토하고 있고, 미래대응기금을 둘러싼 여야 공방에서도 소방 지원이 쟁점으로 꼽혔어요.",
-      "sides": "지원 확대 쪽: 사는 곳과 상관없이 고른 소방 안전을 보장해야 한다 / 신중 쪽: 어떤 돈으로, 국회 통제를 어떻게 받으며 쓸지 먼저 따져야 한다",
-      "question": "소방 예산을 늘리는 건 좋지만, 돈의 출처까지 따져야 한다고 보세요?",
-      "metrics": {
-        "news_24h": 20,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 10
-      },
-      "links": [
-        {
-          "title": "소방 재정 '국비 2조' 지원한다는데…재원 마련 어떻게? - 뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5UVXZLZjZtMmtldFF3RnVhaXNMMHUxb1BubVJSLUtDYjFwMzhiMGdzSVp0QnZsamR3VFJOc1dveEc3X2d1NFVTeDM0akJQcUhOc0ZZNElBN3JEYmVwbERMNndPbE8zWnFHMzdJWlhrQkR4djZKc2VGT9IBeEFVX3lxTE5UVXZLZjZtMmtldFF3RnVhaXNMMHUxb1BubVJSLUtDYjFwMzhiMGdzSVp0QnZsamR3VFJOc1dveEc3X2d1NFVTeDM0akJQcUhOc0ZZNElBN3JEYmVwbERMNndPbE8zWnFHMzdJWlhrQkR4djZKc2VGTw?oc=5"
-        },
-        {
-          "title": "소방에 ‘2조’ 푼다지만…‘항구적’ 재원 확보는 과제 - 뉴스토마토",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LVTM3aWJKaVBzZlV5cFpDbmR4cXYwMVlIMGZ5OXV3cEZtbktmQUtPZ3NDckJCaXlXSWx3ckhWa1FWUVdfcmhMdlI4U2ZSVFlLYURvSDlGUnAydjVZb0NlaA?oc=5"
-        },
-        {
-          "title": "'2조 원+α' 국가 지원…소방재정 숨통 트이나 - 뉴스1",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9LRFFHYi14VzV0VjN5VXRWWXBIUHdqbUJLSU1kbXh1STg2NTlyc0loQXNzOG03ekVLNGh1TnhDdzNpZDN0WEZZNjVTSzQ4LUE?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 20건, 네이버 월간 검색 10회",
-      "score": 20.1
+      "why": "구글 뉴스 24시간 기사 55건, 네이버 월간 검색 10회",
+      "score": 55.1
     }
   ],
-  "updated": "2026-11-10T08:03+09:00",
+  "updated": "2026-11-11T08:14+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10609,
-        "output_tokens": 3973,
+        "input_tokens": 10554,
+        "output_tokens": 4795,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1219
+        "usd": 0.1381
       }
     },
     "images": {},
-    "usd": 0.1219,
-    "total_usd": 0.1219,
-    "total_krw": 170,
+    "usd": 0.1381,
+    "total_usd": 0.1381,
+    "total_krw": 190,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
