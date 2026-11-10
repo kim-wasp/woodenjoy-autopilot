@@ -1,0 +1,152 @@
+{
+  "id": "infobay/2026-11-10-night-shower-washing-machine-noise-rule-2026",
+  "site": "infobay",
+  "title": "밤 10시 샤워·세탁기 층간소음일까? 법은 제외, 규약은 '자제'",
+  "status": "ready",
+  "created_at": "2026-11-10T20:10+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "밤 샤워 층간소음",
+    "sub": [
+      "밤 10시 세탁기",
+      "층간소음 기준",
+      "샤워 물소리 층간소음",
+      "세탁기 소음 시간",
+      "층간소음 야간 기준",
+      "아파트 관리규약 층간소음"
+    ]
+  },
+  "brief": {
+    "reader": "야근·회식으로 늦게 들어와 밤에 씻고 빨래하는 20~40대 아파트 거주자, 또는 윗집 밤 물소리에 잠을 설치는 사람",
+    "question": "밤 10시 이후 샤워나 세탁기 소리도 층간소음에 들어갈까?",
+    "answer": "샤워·세탁기 물소리는 법이 정한 층간소음에서 빠지지만, 서울시 관리규약 준칙은 밤 10시~오전 6시에 세탁·샤워 소음을 '자제'하라고 정해 두었어요.",
+    "out_of_scope": "층간소음 소송 절차 세부, 바닥 시공·매트 제품 추천, 보복소음 처벌",
+    "next_action": "우리 단지 관리규약의 '자제' 항목을 확인하고, 커먼센스에서 '밤 10시 이후 세탁기' 카드에 투표하기"
+  },
+  "why_this_topic": "11월 6일 스레드에 올라온 '밤 10시 이후 세탁기·샤워 자제' 아파트 공지문이 11월 6~10일 뉴시스·한국경제·서울신문·인사이트·로톡뉴스 등에 잇달아 보도되며 찬반 논쟁이 이어지고 있어요. 지금 검색 수요가 몰리는 주제예요. 검색량 수치 자료는 따로 확인하지 못했고, 같은 주에 기사가 몰린 것을 근거로 골랐어요. 앱에 새로 들어간 카드(밤 10시 이후 세탁기·자정 넘어 샤워·밤 믹서기)와 바로 이어지고, 최근 글(축의금·조의금·면접·암표·송년회)과 겹치지 않아요. 나와 있는 기사 대부분이 찬반 반응만 옮기고 끝나서, 법과 관리규약 준칙을 나란히 놓은 비교표를 넣으면 독창성을 챙길 수 있어요.",
+  "meta_description": "밤 10시 넘어 샤워하거나 세탁기 돌리면 층간소음일까요? 법에선 급배수 소음이 빠지지만 서울시 관리규약 준칙은 '자제'를 권해요. 야간 dB 기준과 갈등 대응 순서까지 표로 정리했어요.",
+  "hero_prompt": "Realistic photo of a Korean high-rise apartment complex at night, a few windows lit including a bathroom window with frosted glass, calm and quiet mood, natural night light, shot from the ground, no people, no text",
+  "thumb_text": "",
+  "category": "공공·매너",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "밤에 아파트 다용도실에 놓인 드럼세탁기"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "아파트 엘리베이터 앞 게시판에 붙은 공지문"
+    }
+  ],
+  "sources": [
+    {
+      "title": "찾기쉬운 생활법령: 윗집 TV 소리나 화장실 배관 물소리도 층간소음 규제 대상인가요",
+      "url": "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=96&onhunqueSeq=6296"
+    },
+    {
+      "title": "찾기쉬운 생활법령: 공동주택 소음",
+      "url": "https://easylaw.go.kr/CSP/CnpClsMainBtr.laf?popMenu=ov&csmSeq=1890&ccfNo=2&cciNo=1&cnpClsNo=1"
+    },
+    {
+      "title": "서울특별시 공동주택관리규약 준칙 (제93조 층간소음 생활수칙)",
+      "url": "https://openapt.seoul.go.kr/include/mngAgreeInfo.html"
+    },
+    {
+      "title": "서울시 공동주택 통합정보마당: 층간소음",
+      "url": "https://openapt.seoul.go.kr/commonPortal/programLink.do?jspNm=%2Fportal%2FcMenu%2FfloorNoise%2FfloorNoise.open"
+    },
+    {
+      "title": "연합뉴스 [팩트체크] 밤중 샤워나 목욕 소리도 층간소음이라고?",
+      "url": "https://v.daum.net/v/kcCzYAq2x3?f=p"
+    },
+    {
+      "title": "로톡뉴스: '밤 10시 씻지 말라' 아파트 공지문 시끌…참을 한도 넘었는지가 핵심 쟁점",
+      "url": "https://lawtalknews.co.kr/article/6FLX6Y6K5X2A"
+    },
+    {
+      "title": "미디어데일: 퇴근하면 밤 10시인데…청소기·세탁기 사용, 몇 시까지 괜찮을까",
+      "url": "http://www.mediadale.com/news/articleView.html?idxno=292313"
+    },
+    {
+      "title": "한국경제: '밤 10시 이후 샤워 자제해달라'…아파트 공지문에 난리",
+      "url": "https://www.hankyung.com/article/2026110828567"
+    },
+    {
+      "title": "뉴시스(네이트): '밤 10시 넘으면 씻지도 말라고?'…아파트 공지문에 엇갈린 반응",
+      "url": "https://m.news.nate.com/view/20261106n33871"
+    },
+    {
+      "title": "TILNOTE: 층간소음 기준 주간 39dB 야간 34dB (2023년 1월 개정 기준)",
+      "url": "https://tilnote.io/en/pages/6ae2912d91befeb4cdc2db7d"
+    },
+    {
+      "title": "대한법률: 층간소음 민사 손해배상, 수인한도 판단 기준",
+      "url": "https://www.daehanlaw.com/articles/6a4cb131ee7ffdf60ba65317"
+    },
+    {
+      "title": "유가크루: 층간소음 112 신고와 이웃사이센터 신고 경로",
+      "url": "https://www.yugacrew.com/crewletter/floor-noise-112-report"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "논쟁형",
+    "cover_hooks": [
+      "밤 10시 샤워, 층간소음일까?",
+      "샤워 물소리, 법으론 층간소음 아니에요",
+      "새벽 3시 물소리 공지문, 누가 맞을까"
+    ],
+    "caption": "새벽 퇴근하고 씻는 소리, 참아야 할 소음일까요?\n\n샤워·세면대 물소리는 법정 층간소음에서 빠져요.\n세탁기 작동음도 이웃사이센터 업무 범위 밖이에요.\n대신 서울시 관리규약 준칙은 밤 10시~오전 6시에 세탁·샤워 소음을 '자제'하라고 적어 뒀어요.\n\n투표랑 dB 기준표는 프로필 링크에 있어요.\n\n#층간소음 #층간소음기준 #아파트생활 #밤샤워"
+  },
+  "threads": {
+    "hooks": [
+      "샤워 물소리는 층간소음 아님",
+      "밤 10시 넘으면 씻지도 말라고?",
+      "새벽 3시까지 물 트는 윗집"
+    ],
+    "posts": [
+      "샤워 물소리는 법적으론 층간소음 아니더라.\n\n얼마 전 어떤 아파트에 밤 10시 넘으면 세탁기랑 샤워 좀 자제해 달라는 공지문이 붙었거든. 새벽 2~3시까지 물소리가 난다고.\n야근하고 오면 씻지도 말란 거냐는 쪽이랑 새벽엔 조용히가 상식이라는 쪽으로 딱 갈렸어.\n\n법이랑 아파트 규약이 각각 뭐라는지 댓글에 적어둘게.",
+      "1. 법(공동주택 층간소음 규칙)은 욕실 급수·배수 소음을 층간소음에서 빼. 세탁기 작동음도 이웃사이센터 업무 범위 밖이야. 대신 세탁기가 바닥을 쿵쿵 치는 소리는 들어가.\n2. 근데 서울시 관리규약 준칙은 밤 10시~오전 6시에 세탁·청소, 주방·샤워 소음을 자제하라고 적어놨어.\n3. 자제 항목은 위반금 매기기 어렵다는 변호사 해석이 있어. 서울시는 세탁기·청소기를 오전 9시~오후 8시 사이에 쓰라고 안내하고.\n4. 법정 층간소음이 아니어도 참을 한도를 넘으면 법적 책임이 생길 수 있대.",
+      "야간 dB 기준이랑 소리 났을 때 어디에 말하는지 순서까지 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "층간소음"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 3장: '법이 정한 층간소음 범위' 박스에 직접충격·공기전달과 함께 '급배수'가 들어 있어, 제목('법에선 제외')·본문(급배수 소음은 처음부터 빠짐)과 반대로 급배수가 법정 범위에 포함된 것처럼 읽힘",
+      "카드: 7장: '밤10시 세탁기' 띄어쓰기 오류 → '밤 10시 세탁기'"
+    ],
+    "at": "2026-11-10T20:11+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 33570,
+        "output_tokens": 21872,
+        "web_searches": 5,
+        "calls": 4,
+        "usd": 0.6217
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.0237,
+    "total_usd": 1.0237,
+    "total_krw": 1430,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
