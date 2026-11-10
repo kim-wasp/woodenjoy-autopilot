@@ -14,7 +14,14 @@
       "via": "uplika",
       "category": "인테리어·DIY 자료",
       "account_id": "conn_a60a9493d7cf850d"
-    }
+    },
+    "wordpress": {
+      "user": "",
+      "app_password_secret": "",
+      "category": "",
+      "status": "publish"
+    },
+    "url": ""
   },
   "instagram": {
     "enabled": true,
@@ -29,9 +36,9 @@
   "schedule": {
     "generate": {
       "days": [
-        "sun",
         "tue",
-        "thu"
+        "thu",
+        "sun"
       ],
       "time": "20:00"
     },
@@ -42,7 +49,7 @@
           "wed",
           "fri"
         ],
-        "time": "07:00"
+        "time": "08:00"
       },
       "threads": {
         "days": [
@@ -72,7 +79,12 @@
   "brand": {
     "cardLabel": "WOOD & JOY · 셀프 집수리",
     "handle": "@woodenjoy00",
-    "colors": {}
+    "colors": {
+      "bg": "",
+      "pine": "",
+      "deep": "",
+      "amber": ""
+    }
   },
   "rules": {
     "min_chars": 1200,
@@ -114,5 +126,12 @@
     "web_search": true
   },
   "writing_guide": "네이버 애드포스트 + 홈피드(홈판) 노출용. 독자는 긴 글을 안 읽어요. 짧고 알아보기 쉽게: 첫 줄 한 줄 결론(독자가 겪는 손해·실수 장면 + 답), 질문형 소제목마다 2~4문장 또는 항목 나열, 서술형 긴 문단 금지. 표 1개와 체크리스트 1개(사기 전·하기 전 확인할 것), 현장 팁은 인용구 한두 줄, 셀프/업체 경계는 표나 한 줄로. 마무리는 3줄 요약 뒤 독자에게 묻는 질문 1개(댓글 유도). 제목: 핵심 키워드를 앞에, 뒤에는 손해·실수·숫자로 궁금하게(사실만, 45자 이내). 소비자 용어(쇼핑몰 상품명)만, 업계 용어는 괄호로 한 번. 경험담은 확인된 기록만.",
-  "legacy_posts_dir": "posts"
+  "legacy_posts_dir": "posts",
+  "app": {
+    "kind": "",
+    "supabase_url_secret": "SUPABASE_URL",
+    "supabase_key_secret": "SUPABASE_SERVICE_KEY",
+    "table": "cards",
+    "count": 10
+  }
 }
