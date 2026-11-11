@@ -1,0 +1,130 @@
+{
+  "id": "sisibibi/2026-11-12-choi-min-hee-hyena-remark-apology-photo-journalist",
+  "site": "sisibibi",
+  "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
+  "status": "draft",
+  "created_at": "2026-11-12T08:13+09:00",
+  "requested_topic": "'하이에나 떼들' 최민희 발언, 일주일 만에 \"표현 과했다\" 사과…기자협회는 국회서 성명",
+  "keywords": {
+    "main": "최민희 하이에나",
+    "sub": [
+      "최민희 하이에나 떼들",
+      "최민희 사과",
+      "사진기자협회 성명",
+      "영상기자협회 최민희",
+      "최민희 단톡방 유출",
+      "민주당 수석최고위원"
+    ]
+  },
+  "brief": {
+    "reader": "‘하이에나 떼들’ 기사를 보고 무슨 말이었고 사과가 왜 또 논란인지 빨리 알고 싶은 사람",
+    "question": "최민희 위원은 무슨 말을 했고, 사과한 뒤에도 논란이 이어지는 이유는 뭘까?",
+    "answer": "11월 5일 500여 명이 있는 단톡방에 취재기자들을 ‘하이에나 떼들’이라고 쓰고 11일 두 번 사과했어요. 그런데 ‘유출’을 문제 삼은 말 때문에 기자협회가 사과의 진정성을 따지고 있어요.",
+    "out_of_scope": "신천지 ‘3자 비밀연합’ 의혹의 사실 여부, 명예훼손·모욕죄 성립 여부에 대한 법적 판단",
+    "next_action": "협회 면담 결과와 민주당 지도부의 공식 입장이 나오는지 지켜보기"
+  },
+  "why_this_topic": "11월 11일 하루 동안 뉴스1·파이낸셜뉴스·경향신문·오마이뉴스 등 주요 언론이 발언, 사과, 협회 성명을 잇따라 보도해 관심이 몰렸어요. 대부분의 기사는 사과 장면이나 한쪽 비판만 다뤄요. 그래서 시간 순서와 양쪽 논리, 남은 변수를 한 번에 정리한 글이 필요하다고 봤어요. 최근 쓴 글과 승인 대기 중인 주제(특검법, 미국 중간선거)와도 겹치지 않아요.",
+  "meta_description": "최민희 수석최고위원이 11월 5일 단톡방에 취재기자를 ‘하이에나 떼들’이라고 썼다가 11일 사과했어요. 사진·영상기자협회 성명, 유출 논란, 양쪽 입장과 남은 변수를 정리했어요.",
+  "hero_prompt": "Empty press waiting area in a hallway of the South Korean National Assembly building, several professional camera tripods and camera bags left on the polished floor, soft afternoon light through tall windows, no people, no faces, no text, no logos, neutral documentary photography style",
+  "thumb_text": "",
+  "category": "국내정치",
+  "summary": [],
+  "conclusion": "최민희 위원은 ‘하이에나 떼들’ 글을 올리고 엿새 뒤인 11일 두 번 사과했어요. 기자협회는 진정성을 문제 삼으며 민주당 차원의 조치를 요구하고 있어요.",
+  "opinion": "세련되고 스마트한 정치인이 없다\n정치철학이나 정치이념만 없는줄 알았더니...\n여야를 막론하고 이정도로 자제력도 없고 영민하지 못하면서 어떻게 정치를 하겠다고 사람들 앞에 나서서 떠드는건지...\n요즘같이 스마트기기들이 판을 치는 세상에 언제 어느 순간에 했던 말과 행동이 세상에 알려질지 모르는 시대에 대놓고 저런 말실수를 한다는건 정말 이해하기 힘들다. 영화만 봐도 자신의 수행비서 혹은 수행기사가 뒤에서 하는 얘기를 녹취하는 장면이 나오는데...요즘이야말로 낮말은 새가 듣고 밤말은 쥐가 듣는다는 속담을 항상 머릿속에 떠올리고 다녀야할 시기가 아닌가 싶다.\n최민희는 적당히 넘어가려하지말고 당에서는 특히나 제식구 감싸기로 넘어가려하지말길...",
+  "photos": [],
+  "sources": [
+    {
+      "title": "한국경제 - 최민희, '하이에나 떼' 막말 사과…단톡방엔 \"누군가 퍼날라\" 저격",
+      "url": "https://www.hankyung.com/article/202611110233H"
+    },
+    {
+      "title": "파이낸셜뉴스 - 최민희, 기자들 '하이에나 떼' 비유 사과…\"잘못된 표현·생각\"",
+      "url": "https://www.fnnews.com/news/202611111623403682"
+    },
+    {
+      "title": "경향신문 - “하이에나 떼들” 최민희, 11년 전에는 “끔찍하다”",
+      "url": "https://www.khan.co.kr/article/202611111618001"
+    },
+    {
+      "title": "오마이뉴스 - \"기자들 하이에나들이라 생각?\"... 최민희 \"잘못된 표현\"",
+      "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003284038"
+    },
+    {
+      "title": "오마이뉴스 - 사진기자협회장 \"최민희 사과문? 안 본 걸로 하겠다\"",
+      "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003283949&PAGE_CD=N0002&CMPT_CD=M0112"
+    },
+    {
+      "title": "아주경제 - 최민희 '하이에나 떼' 발언 논란…영상·사진기자협회 \"취재 활동 모욕\"",
+      "url": "https://www.ajunews.com/view/20261111141419229"
+    },
+    {
+      "title": "쿠키뉴스 - 최민희, ‘하이에나’ 발언 사과했지만…‘유출’ 언급에 논란 확산",
+      "url": "https://www.kukinews.com/article/view/kuk202611110177"
+    },
+    {
+      "title": "뉴스토마토 - 최민희, 사진기자에 \"하이에나 떼\"…실명 저격에 협회도 대응(종합)",
+      "url": "https://www.newstomato.com/ReadNews.aspx?no=1320159"
+    },
+    {
+      "title": "재경일보 - 최민희, 기자들 ‘하이에나’ 지칭 사과…협회는 재발 방지 요구",
+      "url": "https://news.jkn.co.kr/post/1086336"
+    },
+    {
+      "title": "서울경제 - 최민희, 사진기자에 “하이에나 떼들” 막말…논란 일자 사과",
+      "url": "https://m.sedaily.com/article/20113121"
+    },
+    {
+      "title": "천지일보 - 최민희 ‘하이에나 떼’ 논란에 “상처입은 기자들께 사과”",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3447896"
+    },
+    {
+      "title": "아이뉴스24 - '하이에나떼' 논란 최민희 \"일부 언론에 답답한 느낌 토로\"",
+      "url": "https://m.inews24.com/v/2025108"
+    },
+    {
+      "title": "더팩트(네이트) - 최민희, 기자들 '하이에나' 발언 공식 사과",
+      "url": "https://m.news.nate.com/view/20261111n27020"
+    },
+    {
+      "title": "월요신문 - 사진기자협회, 최민희 '하이에나 떼' 발언에 \"공개 사과하라\"",
+      "url": "https://www.wolyo.co.kr/news/articleView.html?idxno=320325"
+    },
+    {
+      "title": "주간경향 - 최민희 “끝까지 정청래와 함께 하겠다”",
+      "url": "https://weekly.khan.co.kr/article/202608181124001/"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-12T08:13+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 20376,
+        "output_tokens": 16565,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.4628
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.5968,
+    "total_usd": 0.5968,
+    "total_krw": 840,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
