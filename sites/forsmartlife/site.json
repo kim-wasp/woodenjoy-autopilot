@@ -11,7 +11,7 @@
     "platform": "wordpress",
     "url": "https://forsmartlife.com",
     "wordpress": {
-      "user": "",
+      "user": "gracelyun28",
       "app_password_secret": "WP_FORSMARTLIFE_PASS",
       "category": "",
       "status": "publish"
@@ -30,9 +30,9 @@
   "schedule": {
     "generate": {
       "days": [
-        "sun",
         "tue",
-        "thu"
+        "thu",
+        "sun"
       ],
       "time": "21:00"
     },
@@ -83,7 +83,12 @@
   "brand": {
     "cardLabel": "건강 (forsmartlife.com)",
     "handle": "",
-    "colors": {}
+    "colors": {
+      "bg": "",
+      "pine": "",
+      "deep": "",
+      "amber": ""
+    }
   },
   "rules": {
     "min_chars": 3000,
@@ -107,5 +112,12 @@
       "enabled": false,
       "links_file": "sites/forsmartlife/coupang.json"
     }
+  },
+  "app": {
+    "kind": "",
+    "supabase_url_secret": "SUPABASE_URL",
+    "supabase_key_secret": "SUPABASE_SERVICE_KEY",
+    "table": "cards",
+    "count": 10
   }
 }
