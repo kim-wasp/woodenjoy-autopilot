@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T13:29+09:00",
+  "updated": "2026-11-11T15:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -327,6 +327,15 @@
       "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
       "platform": "instagram",
       "at": "2026-11-11T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-11-super-regional-special-zone-act-kefe-vs-civil-soci",
+      "title": "초광역특구법, 경총은 '빨리' 시민단체는 '재벌 특혜'…갈린 이유 3가지",
+      "platform": "blog",
+      "at": "2026-11-12T12:00+09:00",
       "state": "planned"
     },
     {
