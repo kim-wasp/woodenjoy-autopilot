@@ -70,6 +70,7 @@ else:
         if page >= int(r.headers.get("X-WP-TotalPages", 1)): break
         page += 1
 report = []
+backup = {}
 for p in posts:
     try:
         new, ch = rewrite(p)
@@ -79,8 +80,12 @@ for p in posts:
     report.append({"id": p["id"], "title": p["title"]["raw"], "link": p["link"], "changes": ch, "first_person_left": left, "wiki_left": new.count("wikipedia.org")})
     print(p["id"], p["title"]["raw"][:40], "바꾼 문단", len(ch), "남은 경험담", left, "남은 위키", new.count("wikipedia.org"))
     if APPLY and ch:
+        backup[p["id"]] = p["content"]["raw"]
         r = S.post(f"{API}/posts/{p['id']}", json={"content": new}, timeout=90)
+        report[-1]["applied"] = r.status_code < 400
         if r.status_code >= 400: print("  반영 실패", r.status_code, r.text[:200])
 os.makedirs("status/audit", exist_ok=True)
 json.dump({"apply": APPLY, "usage": llm.USAGE, "report": report}, open(f"status/audit/rewrite-{'apply' if APPLY else 'preview'}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+if backup:
+    json.dump(backup, open("status/audit/rewrite-backup.json", "w", encoding="utf-8"), ensure_ascii=False)
 print("비용(토큰)", llm.USAGE)
