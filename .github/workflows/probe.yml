@@ -1,24 +1,12 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
       - run: |
-          npm i --no-save playwright@1.49.1 >/dev/null && npx playwright install --with-deps chromium >/dev/null
-          mkdir -p shots && node -e "
-          const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();
-          for (const [n,u,w,h] of [['home-d','https://forsmartlife.com/',1280,800],['home-m','https://forsmartlife.com/',390,844],['post-old-d','https://forsmartlife.com/'+'?p=0',1280,800]]){}
-          const shots=[['home-d','https://forsmartlife.com/',1280,800,true],['home-m','https://forsmartlife.com/',390,844,true],['about-d','https://forsmartlife.com/about/',1280,800,false]];
-          const pg=await (await b.newContext({deviceScaleFactor:1})).newPage();
-          for (const [n,u,w,h,full] of shots){await pg.setViewportSize({width:w,height:h});await pg.goto(u,{waitUntil:'load',timeout:60000});await pg.waitForTimeout(1500);await pg.screenshot({path:'shots/'+n+'.png',fullPage:full});}
-          const links=await pg.evaluate(()=>[...document.querySelectorAll('a')].map(a=>a.href));
-          await pg.goto('https://forsmartlife.com/',{waitUntil:'load'});
-          const uniq=['https://forsmartlife.com/nasal-congestion-home-care/','https://forsmartlife.com/pneumococcal-vaccine-history-check/'];
-          for (const [i,u] of [[0,uniq[0]],[1,uniq[uniq.length-1]]]){ if(!u) continue; for (const [w,h,s] of [[1280,800,'d'],[390,844,'m']]){await pg.setViewportSize({width:w,height:h});await pg.goto(u,{waitUntil:'load',timeout:60000});await pg.waitForTimeout(1500);await pg.screenshot({path:'shots/post'+i+'-'+s+'.png',fullPage:true});}}
-          console.log('POSTS',uniq.slice(0,3).join(' '));
-          await b.close();})()"
-          cd shots && git init -q && git checkout -q -b audit-shots && git config user.name bot && git config user.email bot@users.noreply.github.com && git add . && git commit -qm shots && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" audit-shots
+          A=$(printf '%s' "gracelyun28:$WP" | base64 -w0)
+          echo "ME $(curl -sS -o /tmp/me -w '%{http_code}' -H "Authorization: Basic $A" 'https://forsmartlife.com/wp-json/wp/v2/users/me?context=edit') $(head -c 200 /tmp/me | sed 's/"email":"[^"]*"/"email":"(숨김)"/' | grep -oE '"(name|slug|roles)":[^,]*' | tr '\n' ' ')"
+          echo "DRAFTS $(curl -sS -o /dev/null -w '%{http_code}' -H "Authorization: Basic $A" 'https://forsmartlife.com/wp-json/wp/v2/posts?status=draft&per_page=1')"
+          echo "RANKMATH $(curl -sS -o /dev/null -w '%{http_code}' 'https://forsmartlife.com/wp-json/rankmath/v1')"
+        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
