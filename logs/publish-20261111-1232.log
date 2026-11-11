@@ -1,0 +1,15 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 송년회 빠져도 될까? 회식 반복 권유는 괴롭힘 아니라는 노동부 사례 → threads
+완료: {'threads': ['17930133099426203', '18130708558887553', '18289410982290541']}
+[가구·인테리어 (우드엔조이)] 상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요 → threads
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 413, in <module>
+    publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 393, in publish
+    res = publish_threads(site, d, post, dry)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 351, in publish_threads
+    p = _post(dry, f"{TH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 289, in _post
+    raise RuntimeError(f"업로드 실패 {r.status_code}: {r.text[:300]}")
+RuntimeError: 업로드 실패 400: {"error":{"message":"The requested resource does not exist","type":"OAuthException","code":24,"error_subcode":4279009,"is_transient":false,"error_user_title":"Media Not Found","error_user_msg":"The media with id 18156292204513734 cannot be found.","fbtrace_id":"AUVoMUHq4Pzy65I_gf0NxXq"}}
