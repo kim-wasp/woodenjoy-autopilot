@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q requests && mkdir -p status/audit && python3 tools/wp_audit2.py https://forsmartlife.com gracelyun28 status/audit/forsmartlife-detail.json
+      - run: pip install -q requests && python3 tools/wp_cleanup.py
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 상세 점검 자료" && git pull -q --rebase && git push -q
+          git add status/audit && git commit -qm "forsmartlife 정리 미리보기" && git pull -q --rebase && git push -q || true
