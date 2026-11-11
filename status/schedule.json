@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T12:32+09:00",
+  "updated": "2026-11-11T12:55+09:00",
   "items": [
     {
       "site": "infobay",
@@ -302,6 +302,16 @@
       "url": null
     },
     {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
+      "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
+      "platform": "threads",
+      "at": "2026-11-11T12:55:36+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-08-year-end-party-skip-company-dinner-2026",
@@ -340,8 +350,8 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-05-cabinet-gas-strut-replacement-kg-length",
-      "title": "상부장 가스쇼바 교체, kg 잘못 고르면 문이 쾅 닫히거나 안 닫혀요",
+      "dir": "content/woodenjoy/2026-11-08-door-handle-replacement-backset-check",
+      "title": "문고리 교체 전 백셋부터 재세요, 60·70mm 틀리면 반품",
       "platform": "threads",
       "at": "2026-11-13T12:30+09:00",
       "state": "planned"
@@ -367,8 +377,8 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-08-door-handle-replacement-backset-check",
-      "title": "문고리 교체 전 백셋부터 재세요, 60·70mm 틀리면 반품",
+      "dir": "content/woodenjoy/2026-11-10-door-hinge-screw-stripped-hole-fix",
+      "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "threads",
       "at": "2026-11-16T12:30+09:00",
       "state": "planned"
@@ -380,15 +390,6 @@
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "instagram",
       "at": "2026-11-16T21:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "woodenjoy",
-      "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-10-door-hinge-screw-stripped-hole-fix",
-      "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
-      "platform": "threads",
-      "at": "2026-11-18T12:30+09:00",
       "state": "planned"
     }
   ]
