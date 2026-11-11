@@ -132,5 +132,9 @@
     "blog": "post_681279a4d122aa5e",
     "blog_url": null,
     "blog_at": "2026-11-09T07:01:29+09:00"
+  },
+  "threads_progress": {
+    "ids": [],
+    "error": "업로드 실패 400: {\"error\":{\"message\":\"The requested resource does not exist\",\"type\":\"OAuthException\",\"code\":24,\"error_subcode\":4279009,\"is_transient\":false,\"error_user_title\":\"Media Not Found\",\"error_user_msg\":\"The media with id 18156292204513734 cannot be found.\",\"fbtrace_id\":\"AUVoMUHq4Pzy65I_gf0NxXq\"}}"
   }
 }
