@@ -5,8 +5,21 @@ jobs:
   p:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: pip install -q requests && mkdir -p status/audit && python3 tools/wp_audit.py https://forsmartlife.com status/audit/forsmartlife.json
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
       - run: |
-          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 점검 자료" && git pull -q --rebase && git push -q
+          npm i --no-save playwright@1.49.1 >/dev/null && npx playwright install --with-deps chromium >/dev/null
+          mkdir -p shots && node -e "
+          const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();
+          for (const [n,u,w,h] of [['home-d','https://forsmartlife.com/',1280,800],['home-m','https://forsmartlife.com/',390,844],['post-old-d','https://forsmartlife.com/'+'?p=0',1280,800]]){}
+          const shots=[['home-d','https://forsmartlife.com/',1280,800,true],['home-m','https://forsmartlife.com/',390,844,true],['about-d','https://forsmartlife.com/about/',1280,800,false]];
+          const pg=await (await b.newContext({deviceScaleFactor:1})).newPage();
+          for (const [n,u,w,h,full] of shots){await pg.setViewportSize({width:w,height:h});await pg.goto(u,{waitUntil:'networkidle',timeout:60000});await pg.waitForTimeout(1500);await pg.screenshot({path:'shots/'+n+'.png',fullPage:full});}
+          const links=await pg.evaluate(()=>[...document.querySelectorAll('a')].map(a=>a.href));
+          await pg.goto('https://forsmartlife.com/',{waitUntil:'networkidle'});
+          const posts=await pg.evaluate(()=>[...document.querySelectorAll('article a, h2 a, .entry-title a')].map(a=>a.href).filter(h=>h.includes('forsmartlife.com/')));
+          const uniq=[...new Set(posts)];
+          for (const [i,u] of [[0,uniq[0]],[1,uniq[uniq.length-1]]]){ if(!u) continue; for (const [w,h,s] of [[1280,800,'d'],[390,844,'m']]){await pg.setViewportSize({width:w,height:h});await pg.goto(u,{waitUntil:'networkidle',timeout:60000});await pg.waitForTimeout(1500);await pg.screenshot({path:'shots/post'+i+'-'+s+'.png',fullPage:true});}}
+          console.log('POSTS',uniq.slice(0,3).join(' '));
+          await b.close();})()"
+          cd shots && git init -q && git checkout -q -b audit-shots && git config user.name bot && git config user.email bot@users.noreply.github.com && git add . && git commit -qm shots && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" audit-shots
