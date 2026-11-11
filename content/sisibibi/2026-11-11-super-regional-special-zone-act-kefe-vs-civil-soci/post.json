@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-11-super-regional-special-zone-act-kefe-vs-civil-soci",
   "site": "sisibibi",
   "title": "초광역특구법, 경총은 '빨리' 시민단체는 '재벌 특혜'…갈린 이유 3가지",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-11T08:26+09:00",
   "requested_topic": "초광역특구법, 경총은 '만들어 달라' 시민사회는 '재벌 특혜'…같은 법을 두고 왜 정반대일까",
   "keywords": {
@@ -132,5 +132,10 @@
     "total_krw": 620,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-11T15:01+09:00"
+  "approved_at": "2026-11-11T15:01+09:00",
+  "published": {
+    "blog": "posts/2026-11-11-super-regional-special-zone-act-kefe-vs-civil-soci",
+    "blog_url": "https://sisibibinote.kr/posts/super-regional-special-zone-act-kefe-vs-civil-soci/",
+    "blog_at": "2026-11-11T16:43:38+09:00"
+  }
 }
