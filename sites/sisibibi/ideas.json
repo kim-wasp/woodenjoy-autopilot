@@ -1,14 +1,14 @@
 {
   "ideas": [
     {
-      "title": "'하이에나 떼들' 최민희 발언, 일주일 만에 \"표현 과했다\" 사과…기자협회는 국회서 성명",
-      "keyword": "최민희 하이에나",
+      "title": "개헌하면 지금 대통령도 또 출마? 조정식 의장 '현직 연임은 불가'",
+      "keyword": "조정식 연임 불가",
       "trend_keyword": "",
-      "facts": "최민희 의원이 국회 사진기자들을 향해 \"하이에나 떼들\"이라고 말해 논란이 커졌어요. 처음엔 \"당시 느낌을 쓴 것\"이라고 했다가 일주일 만에 \"표현이 과했다\"며 사과했고, 사진·영상기자협회는 국회에서 성명을 냈어요.",
-      "sides": "비판 측: 국회 취재기자 전체를 비하한 막말이다 / 최 의원 측: 당시 느낌을 쓴 것이었고 표현이 과했던 점은 사과한다",
-      "question": "일주일 뒤 사과로 이 논란이 정리됐다고 보세요, 아니면 국회 차원의 조치가 더 필요하다고 보세요?",
+      "facts": "조정식 국회의장이 개헌은 국회가 중심이 돼 추진하고, 현직 대통령 연임은 불가능하다고 밝혔어요. 이재명 대통령과 이 문제를 논의한 적이 없고, 논란을 빚어 국민께 송구하다는 말도 했어요.",
+      "sides": "조 의장 측: 현직 연임 불가를 원칙으로 못박고 개헌을 정쟁 대상으로 삼지 말자 / 문제 제기 측: 어떤 논란이 있었고 누가 무슨 근거로 비판했는지는 헤드라인에 없어 확인이 필요해요",
+      "question": "의장이 '현직 연임 불가'를 먼저 못박은 게 개헌 논의를 살릴까요, 아니면 논란을 수습한 정도로 보세요?",
       "metrics": {
-        "news_24h": 86,
+        "news_24h": 61,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -18,63 +18,30 @@
       },
       "links": [
         {
-          "title": "최민희 “하이에나 떼들”…당원 단톡방서 사진기자 비하 논란 - 중앙일보",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9MaVNUQlMwME5ZazVXdW8xVnd4c2lob05LMEFSWGxSVEhZQklDQnJkUEo1MDd5Mk1SSlhFaWQzRXkwSlRxbG1OSGVmTnBWRE9yNmtvUUt3?oc=5"
+          "title": "조정식 \"현직 대통령 연임 불가\"…과거 발언에 \"국민께 송구\" | - 주간조선",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kMy16R3ZsaW91THhKM3hzNHVIOTc4Q1BqNDVaUlljN1hBdnJHT3RhaUYxTG02dXAtaklzZVpVNEVQWk5lS09rYWZSYklPZDdwVU9nSDVpeHRMbV9nWUhnY0R4U1cxeXFTWGI4Z2RB?oc=5"
         },
         {
-          "title": "최민희, 기자들에 “하이에나 떼” 논란일자 “부적절, 사과” …사진기자협회 “법적대응 검토” - JTBC",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9iTThYMHFxNi1DXzE2S192SzdPNnJ4cW93ZHc0YndzMFZEamtjc0lJMHVsWXFmNmdTRmRUR0RvUXZKdUpIdm9RWnU5N3g4cFRDbFhhZw?oc=5"
+          "title": "조정식 “현직 대통령 연임은 불가, 논란 빚어 송구” - 중앙일보",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9pVmVZNi1Wd09iZS03RlZ0bV92REpIMDJCLUVzT3FIeXV1U0ZpNG9jOHRxc1hIVFhzV3RCOUlaQkpDay1CaG9xRVZhcmJwclF5RjQ1Nnl3?oc=5"
         },
         {
-          "title": "[속보]최민희, 기자들 향해 \"하이에나 떼\"...논란 커지자 사과 - KBC광주방송",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA3eUx1cUIzb0s5MmFJZjMyNW5PSXIzMlFGVmozZVBES1JtV3hTbE9wME95RlhpZzVtVEJ4SVlkal9aQ3Vrb2NnUkhlMV8wNUxKSGxpZkJUcXh3R2hTNWFFeA?oc=5"
+          "title": "조정식 \"현직 대통령 연임 불가‥논란 빚어 송구\" - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBwZ3E3cUMxbVQweko5YU9tc3JxSG91em12ZTdJaFhXYmdjb1dUVXNpbnYtdjZwbFVrdllLamE3UlZUZVhEWjFaelAtdWcxM3UxWkNQbVlyTm5kRHhUR0FqZE1SQllpVzF6R2dxOWE1N0xsM3paZ2xkTNIBeEFVX3lxTE5kTzJKVXZLQldsSmdJMjlMd1B0Q3dYN1pWdFR3TERnNU9Qd0RmdXA0UzI2V28wRVZjZXREdEtpeGVTQWxYM0Fpdkl0X2FUYzRlZGtvN1dJRDdCVy1hWmRIZFpQdGRwU1lQbFFiSUxvX3J1UGNndndWbw?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 86건, 네이버 월간 검색 10회",
-      "score": 86.1
+      "why": "구글 뉴스 24시간 기사 61건, 네이버 월간 검색 10회",
+      "score": 61.1
     },
     {
-      "title": "청해부대 오만 남쪽까지 넓힌다?…'상선 보호' vs '우회 파병', 국방위 이르면 16일 상정",
-      "keyword": "청해부대 임무확대",
+      "title": "건보공단에 수사권? 특사경법 법사위 소위 통과…의사들이 '졸속'이라는 이유",
+      "keyword": "건보공단 특사경법",
       "trend_keyword": "",
-      "facts": "청해부대 활동 범위를 오만 남쪽까지 넓히는 '임무확대' 연장안이 국회로 넘어가 심사가 시작됐어요. 이르면 11월 16일 국방위원회에 올라갈 예정이고, 이란은 반발하고 있다는 보도가 나왔어요.",
-      "sides": "확대 찬성 측: 통과되면 우리 상선을 지키는 범위가 넓어진다 / 반대·우려 측: 사실상 '꼼수·우회 파병'이라 국회가 막거나 임무를 더 명확히 해야 한다(경실련 등)",
-      "question": "상선 보호를 위해 범위를 넓히는 게 맞다고 보세요, 아니면 국회가 임무를 더 좁고 분명하게 정해야 한다고 보세요?",
+      "facts": "건강보험공단에 특별사법경찰 권한, 쉽게 말해 수사권을 주는 법안이 국회 법사위 소위를 통과했어요. 서울시의사회는 '졸속 입법'이라며 국회 본회의 처리를 멈추라고 요구했어요.",
+      "sides": "추진 측: 국회 첫 관문을 넘기며 입법에 속도를 내고 있어요. 다만 추진 근거는 헤드라인에 없어 확인이 필요해요 / 의료계: 공단에 강제수사권을 주는 건 졸속이고 수사권이 남용될 수 있어요",
+      "question": "공단에 수사권을 주는 것, 단속에 필요한 장치로 보세요, 아니면 권한이 지나치다고 보세요?",
       "metrics": {
-        "news_24h": 70,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 20
-      },
-      "links": [
-        {
-          "title": "국회, 청해부대 ‘임무확대’ 연장안 심사 착수…이르면 16일 국방위 상정 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjWHZhM1BfU0l6Zk4tS2UzTUREQnc2XzF6dWpkMU9pN3I0bVZBMGNLNE5uaVo3Z2dnVkNPdk5UUDZmME16RVVjZ29qaUVnaUNaY2s3MGxzQjFUa0E?oc=5"
-        },
-        {
-          "title": "’청해부대 임무 확대’ 국회로…“전쟁 개입은 없다“ - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUVGY1X2lQV3hFTnNobVhUWTBOSHZvZTlYaGNRb3dINkxiaGxwMzBGZVpxREdXVjRBUEdvbnFCekFCR2pOZlhEcmZtN1IzZnJ2bHZjaUMtT1hYWlloTmtqcm13emdFRkE?oc=5"
-        },
-        {
-          "title": "청해부대 작전 확대 논란…경실련 “국회, 우회파병 막아야” - 한국NGO신문",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9fdldHWUljUjhBaFhOQjA5MHJRYS1wV2tvQllpbGtrdTdCX1JqQjUwZmY3VGk2NGtZOTAyN3ZKeEFIeS1ZWTJQSW40bHJMSTVOUllnS0gwVWJ2eGpmQ2hEN2llaUxHaWdK?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 70건, 네이버 월간 검색 20회",
-      "score": 70.2
-    },
-    {
-      "title": "종부세 공제 14억으로 통일될까…주담대 공제 '세대원 전원 실거주'엔 국회가 \"과도\"",
-      "keyword": "종부세 공제 14억",
-      "trend_keyword": "",
-      "facts": "정부 세제안이 국회로 넘어갔고, 종부세 공제 기준을 14억 원으로 통일하는 방안이 쟁점이에요. 주택담보대출 공제에 '세대원 전원 실거주' 조건을 붙인 부분엔 국회에서 \"과도하다\"는 의견이 나와, 이재명 대통령이 여당 지도부와 청와대 만찬에서 종부세 이견을 조율할지 주목받았어요.",
-      "sides": "정부안 쪽: 세제개편안대로 기준을 정리해야 한다 / 국회 일부: 주담대 공제 실거주 조건 등은 과도해 고쳐야 한다(김민석 대표는 '당·청 엇박자는 아니다'라고 해명)",
-      "question": "종부세·주담대 공제 조건, 정부안대로 가는 게 맞다고 보세요, 국회가 손봐야 한다고 보세요?",
-      "metrics": {
-        "news_24h": 57,
+        "news_24h": 25,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -84,38 +51,71 @@
       },
       "links": [
         {
-          "title": "[단독]‘서울 민심’ 달래려 비거주 종부세 14억 공제?···적용 땐 강남3구·마용성에 혜택 집중 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE40VnF4TTFQWkxCRkgwSFFaLUVQTkFKM0JYS2l6SW9NR2NmNnBWNWUyaDdJWmxJTDRlSjJzMDhOeTdKOFFTTHRjdVZvSkdJUWJKZ2doeVRpclVXQdIBX0FVX3lxTE5WVmpDWFB1LTJ1MUdqZW0wdkRtLW11MlQ2aVViZHlVeE9qamFJQ2ZkVC1GZU92R0tIN0lCNEdybTF6aUl5U2k1czduQ1RuaWpmWUpBZ2JhbTBnYlEtSTI4?oc=5"
+          "title": "특사경 '권한 남용' 우려에 복지부, 관리·감독 기구 추진 - 의협신문",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1valo0cGJhQWQ5N0R6NzJncThIUkd3dGlNaUJKQVB2Uy02VEdWLWRHNGhjT0s5SkpDNXlKR2Y5bTREQzJfa1pJWVIzeUUtYUFFYURzRWthdXRfcTNsSlNvd1JzN2g4ZTNiNEZUMTduMnBTUQ?oc=5"
         },
         {
-          "title": "‘종부세 공제 14억 통일되나’…국회로 넘어간 세제안 - 문화일보",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA2OTNzSEh2dnhKblNCTEpOU1ZqSEdDMDkycV9feGRaV3dIaUVBUEhPUzRmOVlLMEZOVUJSc1JROHBlYjFRTXdrX2hzdXVYZ2Ux?oc=5"
+          "title": "건보공단 특사경법 소위 통과…복지부 \"이중 통제장치로 권한 남용 원천 차단\" - 약업닷컴",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5RYTE2OTA4UFB6MEFibVRwdmFhcGswZWNYSEN6aFVTZnhxUjRGOHMydG5TZlU5Zk9nRVpBNnp2R3loMEQyczlhSTNsNDNsY1JRUlNua0hhZXU3ZmVaUkRHTFR3RlR6Q2Y1R0xiaEdGbw?oc=5"
         },
         {
-          "title": "이형일, 與 '종부세 공제 14억 통일' 요구에…\"거주 주택 우대 원칙 유지\" - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5MYkRhUFJCdXpCS0lYUmw4S3NPZ0JWSllneUlVZ0I4b2VQTWVVUXpNTlFScHFGYmJndzNwcTcwNEc0cnBFU19pOWJvZHlabFNoWW9QMXJQT2RWLUIy?oc=5"
+          "title": "의료계 반대에도 건보공단 특사경법 법사위 1소위 통과 - MEDI:GATE NEWS",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1aaHRDRFJWTFRoM3pQS21neERVb05ydXJRcUM5eXhMMlhFRmJkdDYwMEp5VlpCeFhiVVN5OXlrYjNLZ2U5N3k0dF9WU0Jab3JSY28zdHZXMA?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 57건, 네이버 월간 검색 15회",
-      "score": 57.15
+      "why": "구글 뉴스 24시간 기사 25건, 네이버 월간 검색 15회",
+      "score": 25.15
+    },
+    {
+      "title": "여당 첫 차별금지법 발의…'형사처벌 뺐다'는데 뭐가 달라지나",
+      "keyword": "박주민 차별금지법",
+      "trend_keyword": "",
+      "facts": "박주민 의원이 22대 국회에서 여당 의원으로는 처음 차별금지법을 발의했어요. 형사처벌은 빼고, 차별 피해를 바로잡는 구제에 무게를 둔 법안이에요.",
+      "sides": "찬성 측: 국회가 차별금지법 입법을 더 미루면 안 돼요(한겨레 사설) / 반대 측: 헤드라인에 반대 논리가 없어 확인이 필요해요",
+      "question": "형사처벌을 뺀 차별금지법, 합의를 넓히는 현실적인 길로 보세요, 아니면 효과가 약해진다고 보세요?",
+      "metrics": {
+        "news_24h": 24,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 15
+      },
+      "links": [
+        {
+          "title": "박주민 의원, 평등법 발의…차별금지 입법, 20년의 벽 넘을까 - 더인디고",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fSGw0WV9Dem9aZkNSNlRCYnFLakhDRWdCWjNmNV9JcjNoZDFOU2ZJb2FCUE9PN3BEdjRfTzZBN2Q1WG9JWElkWExCOERIUTQ?oc=5"
+        },
+        {
+          "title": "박주민, 22대 국회 여당 첫 ‘차별금지법’ 발의…형사 처벌 빼고 구제에 무게 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIQUxpbVV4MTd5N3ptNmU0WnZ2WXI4YzBaeWN5N0Jkd2xfSkJ1Mlprck9uOWtuSmpmR09xMUlLR1JMdVpram9nSjBqR1ozTjRBU3p0NTJ0cmFhdS1WakcwRGNZcExjLXlzd2tLZlhpR2hCMmpZ?oc=5"
+        },
+        {
+          "title": "박주민, '모든 영역 차별' 막는 평등법 발의…22대 국회엔 입법될까 - 프레시안",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ObVdfNGxtcjVCVjVieERlWkM4MGZhUGYxMVctempBRzdybXlIZ0pOMEN1UHJiWERtSnUtaHF0RDc2ckxGUlhnNTFvUENKaXRDWDVtT0tpM3g2ZER5dTE4VTdRRkZtOXVvOUpJajlnU0tmdUszbzQwRnpvMA?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 24건, 네이버 월간 검색 15회",
+      "score": 24.15
     }
   ],
-  "updated": "2026-11-11T15:02+09:00",
+  "updated": "2026-11-12T08:21+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10060,
-        "output_tokens": 4277,
+        "input_tokens": 10318,
+        "output_tokens": 4865,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1258
+        "usd": 0.1386
       }
     },
     "images": {},
-    "usd": 0.1258,
-    "total_usd": 0.1258,
-    "total_krw": 180,
+    "usd": 0.1386,
+    "total_usd": 0.1386,
+    "total_krw": 190,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
