@@ -10,4 +10,4 @@ jobs:
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 정리 미리보기" && git pull -q --rebase && git push -q || true
+          git add status/audit && git commit -qm "forsmartlife 정리 미리보기2" && git pull -q --rebase && git push -q || true

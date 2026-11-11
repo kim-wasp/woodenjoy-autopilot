@@ -48,8 +48,11 @@ for pid in NOINDEX:
     say("B noindex", pid, "요청", "성공" if ok else f"실패 {r.status_code}", "| 공개 화면:", robots)
 
 # D, E
-THUMB = re.compile(r"_0?1-1024x1024\.(png|jpe?g|webp)", re.I)
+THUMB = re.compile(r"-1024x1024\.(?:png|jpe?g|webp)", re.I)
 def strip_thumb(raw):
+    first = re.search(r'<img[^>]*src="([^"]+)"', raw)
+    if not first or not THUMB.search(first.group(1)):
+        return raw, None  # 본문 첫 이미지가 정사각 카드일 때만
     # 블록(<!-- wp:image -->) 통째로, 아니면 <figure>, 아니면 <img> 를 담은 문단
     for pat in [r"<!-- wp:image[^>]*-->\s*<figure[^>]*>(?:(?!</figure>).)*?{THUMB}(?:(?!</figure>).)*?</figure>\s*<!-- /wp:image -->",
                 r"<figure[^>]*>(?:(?!</figure>).)*?{THUMB}(?:(?!</figure>).)*?</figure>",
