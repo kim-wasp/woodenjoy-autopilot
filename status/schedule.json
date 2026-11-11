@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T07:37+09:00",
+  "updated": "2026-11-12T08:20+09:00",
   "items": [
     {
       "site": "infobay",
@@ -340,6 +340,15 @@
       "at": "2026-11-11T21:03:08+09:00",
       "state": "done",
       "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-12-choi-min-hee-hyena-remark-apology-photo-journalist",
+      "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
+      "platform": "blog",
+      "at": "2026-11-12T12:00+09:00",
+      "state": "planned"
     },
     {
       "site": "woodenjoy",
