@@ -1,12 +1,13 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
+permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          A=$(printf '%s' "gracelyun28:$WP" | base64 -w0)
-          echo "ME $(curl -sS -o /tmp/me -w '%{http_code}' -H "Authorization: Basic $A" 'https://forsmartlife.com/wp-json/wp/v2/users/me?context=edit') $(head -c 200 /tmp/me | sed 's/"email":"[^"]*"/"email":"(숨김)"/' | grep -oE '"(name|slug|roles)":[^,]*' | tr '\n' ' ')"
-          echo "DRAFTS $(curl -sS -o /dev/null -w '%{http_code}' -H "Authorization: Basic $A" 'https://forsmartlife.com/wp-json/wp/v2/posts?status=draft&per_page=1')"
-          echo "RANKMATH $(curl -sS -o /dev/null -w '%{http_code}' 'https://forsmartlife.com/wp-json/rankmath/v1')"
+      - uses: actions/checkout@v4
+      - run: pip install -q requests && mkdir -p status/audit && python3 tools/wp_audit2.py https://forsmartlife.com gracelyun28 status/audit/forsmartlife-detail.json
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
+      - run: |
+          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
+          git add status/audit && git commit -qm "forsmartlife 상세 점검 자료" && git pull -q --rebase && git push -q
