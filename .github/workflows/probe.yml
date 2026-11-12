@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q requests && python3 tools/wp_retitle.py --apply
+      - run: pip install -q requests && python3 tools/wp_trash_dupes.py
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 제목 다듬기 반영" && git pull -q --rebase && git push -q || true
+          git add status/audit && git commit -qm "forsmartlife 중복 글 휴지통" && git pull -q --rebase && git push -q || true
