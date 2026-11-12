@@ -1,0 +1,143 @@
+{
+  "id": "forsmartlife/2026-11-13-norovirus-symptoms-prevention-disinfection",
+  "site": "forsmartlife",
+  "title": "노로바이러스 증상·예방법: 손소독제 말고 비누, 굴은 85℃에서 1분",
+  "status": "ready",
+  "created_at": "2026-11-13T00:57+09:00",
+  "requested_topic": "노로바이러스 증상과 예방법: 손 씻기·굴 익혀 먹기, 알코올 소독이 안 통하는 이유\n카테고리: 계절 건강\n이 글이 답할 질문: 노로바이러스 감염 시 나타나는 증상, 전염 경로, 가정에서 할 수 있는 예방·소독법, 병원에 가야 하는 탈수 신호는 무엇인가.\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 13,410회, 11월 시기 주제",
+  "keywords": {
+    "main": "노로바이러스 증상",
+    "sub": [
+      "노로바이러스 예방법",
+      "노로바이러스 잠복기",
+      "노로바이러스 소독 락스 희석",
+      "노로바이러스 손소독제",
+      "굴 노로바이러스",
+      "노로바이러스 탈수",
+      "노로바이러스 등원 출근"
+    ]
+  },
+  "brief": {
+    "reader": "11~12월 굴을 먹거나 아이·부모를 돌보다 가족 중 구토·설사 환자가 생겨 걱정하는 30~60대",
+    "question": "노로바이러스 증상과 전염 경로는 무엇이고, 집에서는 어떻게 예방·소독하며, 언제 병원에 가야 하나요?",
+    "answer": "12~48시간 뒤 구토·설사가 갑자기 시작되고, 알코올 손소독제보다 비누로 30초 이상 손 씻기, 굴은 85℃에서 1분 이상 익히기, 구토물은 락스 1:물 39로 닦기가 핵심이에요. 소변이 줄거나 물을 못 마시면 진료를 받아야 해요.",
+    "out_of_scope": "약 이름·용량 추천, 검사 방법, 집단급식소 법정 관리 절차, 다른 장염 원인균 상세",
+    "next_action": "집에 있는 락스 농도를 확인해 희석 비율을 메모하고, 가족 중 고위험군(65세 이상·5세 미만·면역저하자)의 탈수 신호를 확인해 두기"
+  },
+  "why_this_topic": "네이버 월간 검색 13,410회, 11월 시기 주제. 질병관리청은 2026년 11월 12일 노로바이러스가 주로 11월~이듬해 4월에 생기고 12~1월에 환자가 몰린다고 안내했어요. 2026년 42주차 표본감시 환자도 전주보다 38.1% 늘었어요.",
+  "meta_description": "노로바이러스 증상과 잠복기(12~48시간), 손소독제가 잘 듣지 않는 이유, 굴 85℃ 1분 익히기, 락스 1:39 희석 소독, 증상 소실 후 48시간 출근 자제, 병원 가야 하는 탈수 신호까지 공식 자료로 정리했어요.",
+  "hero_prompt": "Realistic documentary photo of a Korean adult washing hands thoroughly with soap lather under running water at a kitchen sink in a Korean home, early winter, soft natural light, close-up on hands and foam, candid, no text, no brand labels",
+  "thumb_text": "",
+  "category": "계절 건강",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "집 주방에서 굴을 냄비에 넣고 충분히 끓여 익히는 모습",
+      "prompt": "Realistic documentary photo of a Korean middle-aged adult cooking oysters in a boiling pot of soup on a stove in a typical Korean apartment kitchen, steam rising, natural light from the window, candid, no text, no medical gore, no pills or products as the main subject"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "고무장갑과 마스크를 쓰고 천으로 화장실 문손잡이를 닦는 모습",
+      "prompt": "Realistic documentary photo of a Korean adult wearing rubber gloves and a mask wiping a bathroom door handle with a cloth at home in Korea, natural light, candid, no text, no visible brand labels, no medical gore, no pills or products as the main subject"
+    }
+  ],
+  "sources": [
+    {
+      "title": "질병관리청 보도자료 - 노로바이러스 감염증 환자 증가, 영유아 예방수칙 준수 당부(2026.1.16.)",
+      "url": "https://www.kdca.go.kr/bbs/kdca/42/309764/artclView.do?layout=unknown"
+    },
+    {
+      "title": "질병관리청 보도참고자료 PDF(2026.1.16.) - 증상·예방·락스 희석",
+      "url": "https://www.kdca.go.kr/bbs/kdca/42/304658/download.do"
+    },
+    {
+      "title": "정책브리핑 - 노로바이러스 감염증 10주 연속 증가(질병관리청, 2026.1.23.)",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156741066"
+    },
+    {
+      "title": "질병관리청 보도자료 - 겨울철 노로바이러스 감염증 주의 당부(12.8.)",
+      "url": "https://www.kdca.go.kr/bbs/kdca/42/215511/artclView.do?layout=unknown"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 - 탈수",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6551"
+    },
+    {
+      "title": "정책브리핑(식약처) - 어패류 85도 1분 이상 익혀 먹어야",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148925536"
+    },
+    {
+      "title": "정책브리핑(식약처) - 겨울철 노로바이러스 식중독 주의, 어패류 완전히 익혀먹어야",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148923174&pWise=sub&pWiseSub=J2"
+    },
+    {
+      "title": "식품안전나라 - 노로바이러스 예방수칙(락스 40배·200배 희석, 조리자 1주일 제한)",
+      "url": "https://www.foodsafetykorea.go.kr/hazard/rspnsPlanInfo/rspnsPlanInfoDetail.do?start_idx=1&show_cnt=10&rspns_plan_seq=61"
+    },
+    {
+      "title": "식품안전나라 - 노로바이러스 자료(지사제 관련 안내)",
+      "url": "https://www.foodsafetykorea.go.kr/upload/20150206/20150206053427_1423211667930.pdf"
+    },
+    {
+      "title": "전남교육청 가정통신문 - 노로바이러스 세탁물 70℃·락스 1:330 안내",
+      "url": "https://www.jnei.go.kr/data/attach_data/jangsung/damyangnam_es/k2board/na/bbs_55547/ntt_1800845201/doc_0f03v2cbe=ebv1c=4dvf3=a8v28=e720v1118v2995_v634.pdf"
+    },
+    {
+      "title": "명지병원 소화기센터 - 노로바이러스(혈변 없음·입원 필요 경우)",
+      "url": "https://mjh.or.kr/digestion/health/class/norovirus-infection.do"
+    },
+    {
+      "title": "아시아경제 - 질병관리청 11월 12일 안내(11~4월 발생, 12~1월 집중, 레몬즙·술 살균 효과 없음)",
+      "url": "https://view.asiae.co.kr/article/2026111210524329911"
+    },
+    {
+      "title": "서울경제 - 2026년 42주차 노로바이러스 환자 전주 대비 38.1% 증가(질병관리청 표본감시)",
+      "url": "https://www.sedaily.com/article/20110057"
+    },
+    {
+      "title": "매일신문 - 노로바이러스 비외피 구조·락스 분무 금지 안내(질병관리청·화학물질안전원)",
+      "url": "https://www.imaeil.com/page/view/2026100916561947883"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 0,
+  "dead_links_removed": [
+    "https://busan.go.kr/bsi/legalinf/1632890"
+  ],
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-13T00:57+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-sonnet-5-5": {
+        "input_tokens": 4110,
+        "output_tokens": 2715,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0707
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 17171,
+        "output_tokens": 13449,
+        "web_searches": 6,
+        "calls": 2,
+        "usd": 0.3977
+      }
+    },
+    "images": {},
+    "usd": 0.4684,
+    "total_usd": 0.4684,
+    "total_krw": 660,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
