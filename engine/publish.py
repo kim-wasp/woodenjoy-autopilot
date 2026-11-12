@@ -262,6 +262,8 @@ def publish_wordpress(site, d, post, dry):
         m = wp.media(d / "hero.jpg", post["title"])
         hero_id, urls["hero"] = m["id"], m["source_url"]
     md = (d / "article.md").read_text(encoding="utf-8")
+    if hero_id and not site["blog"]["wordpress"].get("hero_in_body", False):
+        md = re.sub(r"^\s*\[\[hero\]\]\s*$\n?", "", md, flags=re.M)  # 대표 이미지가 글 위에 이미 보여서 본문에 또 넣지 않아요
     for key, (f, alt) in body_images(d, post, md).items():
         urls[key] = wp.media(f, alt)["source_url"]
     html = mdhtml.convert(md, lambda k: (urls.get(k), post["title"] if k == "hero" else ""))
@@ -269,7 +271,9 @@ def publish_wordpress(site, d, post, dry):
             "excerpt": post.get("meta_description", ""), "slug": d.name[11:]}
     if hero_id:
         body["featured_media"] = hero_id
-    cat = wp.category_id(site["blog"]["wordpress"].get("category"))
+    allowed = site["blog"].get("categories") or []
+    name = post.get("category") if post.get("category") in allowed else site["blog"]["wordpress"].get("category")
+    cat = wp.category_id(name)
     if cat:
         body["categories"] = [cat]
     res = wp.req("POST", "/posts", json=body)

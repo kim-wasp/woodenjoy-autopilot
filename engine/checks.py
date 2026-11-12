@@ -94,6 +94,10 @@ def ai_tell(text, genre="blog"):
         return None
 
 
+# 앞 글자가 한글이 아닐 때만(문제가, 경제가 같은 말은 빼려고)
+FIRST_PERSON = re.compile(r"(?<![가-힣])(저는|제가|저도|저희|제 경험|제 주변)|(해보니|써보니|먹어보니|겪어보니|마셔보니)")
+
+
 def plain(md):
     t = re.sub(r"\[\[[^\]]+\]\]", "", md)
     t = re.sub(r"^\|.*\|$", "", t, flags=re.M)
@@ -191,4 +195,8 @@ def check(site, post, article_md=None):
         for w in banned:
             if w in text:
                 issues.append(f"{label}: 금지어 '{w}'")
+        if rules.get("no_first_person"):
+            for m in FIRST_PERSON.finditer(text):
+                issues.append(f"{label}: 1인칭 체험담 표현 '{m.group(0)}' (편집팀이 자료를 정리한 글이라 경험담 금지)")
+                break
     return issues

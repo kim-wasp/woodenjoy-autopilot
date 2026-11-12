@@ -591,10 +591,55 @@ def usage_cost(prev=None):
     log(f"  비용 추정: Claude+사진 약 {c['total_krw']:,}원 (${total:.3f})")
     return c
 
+def season_candidates(site, n=8):
+    """계절 달력 + 구글 트렌드로 주제 후보를 만들고 네이버 월간 검색 수로 순위를 매겨요 (건강 블로그처럼 시기에 따라 검색이 바뀌는 사이트)."""
+    import trends
+    now = now_kst()
+    cal = load_json(SITES / site["id"] / "season.json", {})
+    nxt = (now.month % 12) + 1
+    hints = cal.get(str(now.month), []) + ([f"(다음 달) {x}" for x in cal.get(str(nxt), [])] if now.day >= 20 else [])
+    tr = trends.google_trends()
+    tr_txt = "\n".join(f"- {t['keyword']} (검색 {t['traffic_label']})" for t in tr[:25])
+    cats = (site.get("blog") or {}).get("categories") or []
+    prompt = "\n\n".join([
+        f"[사이트]\n{site_profile(site)}", f"[오늘] {now:%Y-%m-%d (%a)}",
+        "[이 시기 건강 주제 힌트 — 사실이 아니라 후보]\n" + "\n".join(f"- {h}" for h in hints),
+        "[구글 트렌드 한국 실시간 인기 검색어 — 건강과 관련 있는 것만 참고]\n" + (tr_txt or "(못 읽음)"),
+        "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site["id"])][-60:] or ["(없음)"]),
+        "[승인 대기 중인 글 주제]\n" + "\n".join(pending_topics(site["id"]) or ["(없음)"]),
+        f"이 블로그에 쓸 주제 후보 {n}개를 골라 주세요. 지금 시기에 사람들이 실제로 검색할 만한 것, 최근 제목과 겹치지 않는 것. "
+        f"카테고리는 {' / '.join(cats)} 중 하나이고 셋이 고르게 섞이게 해요. 계절 건강만 몰리지 않게 건강 루틴·증상 관리도 2개 이상. "
+        "keyword 는 네이버에서 사람들이 실제로 치는 검색어(띄어쓰기 없이 2~12자, 예: 독감예방접종, 수면부족증상). "
+        'JSON: {"ideas": [{"title": "제목안(핵심 키워드 앞쪽, 과장 없이 사실만)", "keyword": "네이버 검색어", "category": "카테고리", '
+        '"trend_keyword": "관련 있는 구글 트렌드 검색어(없으면 빈 문자열)", "angle": "이 글이 답할 질문 한 줄"}]}'])
+    res = llm.ask_json(SYSTEM, prompt, model="claude-sonnet-5-5", web_search=False, max_tokens=3000, mock_name=f"{site['id']}_ideas")
+    out = []
+    for x in (res.get("ideas") or [])[:n]:
+        nv = trends.naver_volume(x.get("keyword") or "")
+        t = next((t for t in tr if x.get("trend_keyword") and t["keyword"] == x["trend_keyword"]), None)
+        x["metrics"] = {"naver_month": nv, "trend": t["keyword"] if t else "", "trend_label": t["traffic_label"] if t else ""}
+        x["why"] = (f"네이버 월간 검색 {nv:,}회" if nv else "네이버 검색 수 확인 못 함") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "") + f", {now.month}월 시기 주제"
+        x["score"] = (nv or 0) + (t["traffic"] if t else 0)
+        out.append(x)
+    out.sort(key=lambda x: x["score"], reverse=True)
+    return out
+
+
+def pick_topic(site):
+    c = season_candidates(site)
+    if not c:
+        return None
+    x = c[0]
+    log(f"  주제 자동 선택: {x['title']} ({x['why']}) · 다른 후보: " + " | ".join(y["title"] for y in c[1:4]))
+    return (f"{x['title']}\n카테고리: {x.get('category', '')}\n이 글이 답할 질문: {x.get('angle', '')}\n"
+            f"고른 근거(why_this_topic 에 그대로 적기): {x['why']}")
+
 
 def generate(site_id, topic=None, notes=None, out=None, view=None):
     site = load_site(site_id)
     llm_cfg = site.get("llm", {})
+    if not topic and not out and site.get("topic_picker") == "season_trend" and not os.environ.get("MOCK_LLM"):
+        topic = pick_topic(site)
     log(f"[{site['name']}] 글 만들기 시작 · 주제: {topic or '자동 선택'}")
     res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes, view), model=llm_cfg.get("model"),
                        web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post")
@@ -661,6 +706,12 @@ def generate(site_id, topic=None, notes=None, out=None, view=None):
 
 def ideas(site_id):
     site = load_site(site_id)
+    if site.get("topic_picker") == "season_trend":
+        c = season_candidates(site, 10)
+        save_json(SITES / site_id / "ideas.json", {"ideas": c[:6], "updated": now_kst().isoformat(timespec="minutes"),
+                  "basis": "이달의 건강 주제 달력 + 구글 트렌드 한국 실시간 인기 검색어 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()})
+        log("글감 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in c[:6]))
+        return
     if site.get("opinion"):  # 정치처럼 사장님이 주제를 고르고 견해를 쓰는 사이트 → 숫자(검색 급증·기사 수)로 고르기
         import trends
         tr = trends.google_trends()

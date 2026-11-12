@@ -1,21 +1,26 @@
 {
   "id": "forsmartlife",
   "name": "건강 (forsmartlife.com)",
-  "enabled": false,
+  "enabled": true,
   "topic": "생활 건강·영양·운동·수면 정보. 진단·처방이 아닌 생활 관리 정보",
   "audience": "건강 관리에 관심 있는 30~60대",
   "tone": "신뢰감 있는 해요체, 결론 먼저, 근거와 출처를 분명히",
   "url": "https://forsmartlife.com",
-  "writing_guide": "애드센스 승인·유지를 위해 E-E-A-T를 지켜요: 사실 확인, 출처, 작성 기준, 업데이트 날짜. 얇은 글·짜깁기 금지. 의학 정보는 단정하지 말고 진료가 필요한 경계를 분명히 쓰고, 공신력 있는 기관(질병관리청·국가건강정보포털·학회) 출처를 우선합니다.",
+  "writing_guide": "WellnessNote(forsmartlife.com)는 생활 건강 정보 블로그예요. 애드센스 '가치 없는 콘텐츠' 거절 뒤 다시 만드는 중이라 아래를 반드시 지켜요. 1) 체험담 금지: '저는/제가/저도 해보니' 같은 1인칭 경험, 지어낸 사례·후기·주변 사람 이야기를 쓰지 않아요. 편집팀이 공식 자료를 정리한 글이에요. 2) 근거: 질병관리청, 국가건강정보포털(health.kdca.go.kr), 식품의약품안전처, 보건복지부, 대한의학회·각 학회, 국민건강보험공단 자료를 우선해요. 숫자·기준값·권장량은 출처에 있는 것만. 위키백과·블로그·쇼핑몰은 출처로 쓰지 않아요. 3) 단정 금지: '효과 본 사람이 많다', '확실히 좋아진다', '2주면 낫는다'처럼 근거 없는 효과·기간·일반화를 쓰지 않아요. 진단·처방하지 말고, 병원에 가야 하는 경계(위험 신호)를 꼭 한 칸에 따로 적어요. 4) 짧고 훑어보기 쉽게: 결론 먼저, 문장 짧게, 표·체크리스트 활용. 서술형 긴 문단 금지. 그래도 내용은 충분히: 2,500~3,500자. 5) 카테고리: 계절 건강 = 이 시기에 생기거나 늘어나는 문제(독감, 한파, 미세먼지, 폭염, 식중독 등) / 건강 루틴 = 수면·식사·운동·영양처럼 매일 하는 습관 / 증상 관리 = 특정 증상(두통, 소화불량, 불면, 근육통 등)이 있을 때 확인하고 대처하는 법. 6) 상품 추천·광고성 문구 금지. 이 단계에서는 쿠팡 링크를 넣지 않아요. 7) 날짜: 글은 승인 다음 날 아침에 올라가요. '오늘/내일/어제' 대신 날짜로 쓰고, 유행·발표 상황은 기준 날짜를 밝혀요.",
   "blog": {
     "platform": "wordpress",
     "url": "https://forsmartlife.com",
     "wordpress": {
       "user": "gracelyun28",
       "app_password_secret": "WP_FORSMARTLIFE_PASS",
-      "category": "",
+      "category": "계절 건강",
       "status": "publish"
-    }
+    },
+    "categories": [
+      "계절 건강",
+      "건강 루틴",
+      "증상 관리"
+    ]
   },
   "instagram": {
     "enabled": false,
@@ -30,9 +35,9 @@
   "schedule": {
     "generate": {
       "days": [
+        "sun",
         "tue",
-        "thu",
-        "sun"
+        "thu"
       ],
       "time": "21:00"
     },
@@ -44,22 +49,6 @@
           "fri"
         ],
         "time": "07:00"
-      },
-      "threads": {
-        "days": [
-          "mon",
-          "wed",
-          "fri"
-        ],
-        "time": "12:30"
-      },
-      "instagram": {
-        "days": [
-          "mon",
-          "wed",
-          "fri"
-        ],
-        "time": "21:00"
       }
     },
     "grace_hours": 3
@@ -75,10 +64,10 @@
       "model": "gpt-image-1",
       "quality": "high"
     },
-    "blog_inline": "mixed",
-    "photo_style": "Realistic documentary photo of Korean adults in everyday life, natural light, candid, no text",
-    "instagram": "photo_cards",
-    "photos": 3
+    "blog_inline": "photos",
+    "photo_style": "Realistic documentary photo of Korean adults in everyday life at home or outdoors in Korea, natural light, candid, no text, no medical gore, no pills or products as the main subject",
+    "instagram": "cards",
+    "photos": 2
   },
   "brand": {
     "cardLabel": "건강 (forsmartlife.com)",
@@ -91,17 +80,24 @@
     }
   },
   "rules": {
-    "min_chars": 3000,
-    "max_chars": 7000,
+    "min_chars": 2500,
+    "max_chars": 3500,
     "require_table": true,
     "require_sources": true,
-    "banned_words": []
+    "banned_words": [
+      "효과 본 분",
+      "확실히 좋아"
+    ],
+    "no_first_person": true
   },
   "seeds": [
+    "독감",
     "수면",
     "혈압",
     "혈당",
-    "영양제",
+    "소화",
+    "두통",
+    "미세먼지",
     "운동"
   ],
   "monetization": {
@@ -119,5 +115,6 @@
     "supabase_key_secret": "SUPABASE_SERVICE_KEY",
     "table": "cards",
     "count": 10
-  }
+  },
+  "topic_picker": "season_trend"
 }
