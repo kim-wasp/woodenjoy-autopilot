@@ -60,9 +60,9 @@
   },
   "images": {
     "hero": {
-      "provider": "openai",
-      "model": "gpt-image-1",
-      "quality": "high"
+      "provider": "gemini",
+      "model": "gemini-3-pro-image",
+      "realism": true
     },
     "blog_inline": "photos",
     "photo_style": "Realistic documentary photo of Korean adults in everyday life at home or outdoors in Korea, natural light, candid, no text, no medical gore, no pills or products as the main subject",

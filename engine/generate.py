@@ -380,9 +380,16 @@ def remake_thumb(site_id, dir_, text=None):
         (d / f).unlink(missing_ok=True)
     size = (1080, 1080) if ic["hero"].get("thumb_text") else (1200, 675)
     imagegen.generate(post["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
-    if text and (d / "hero.jpg").exists():
+    if text and ic["hero"].get("thumb_text") and (d / "hero.jpg").exists():
         make_thumb(d, text)
         post["thumb_text"] = text
+    for ph in post.get("photos", []):  # 빠진 본문 사진도 같이 (이미지 키가 없을 때 만든 글)
+        f = d / ph["file"]
+        if not f.exists():
+            try:
+                imagegen.generate((ph.get("prompt") or f"Photo of: {ph.get('alt', '')}") + (" " + ic["photo_style"] if ic["photo_style"] else ""), f, ic["hero"], size=(1200, 800))
+            except Exception as e:  # noqa: BLE001
+                log(f"  사진 {ph['file']} 실패: {e}")
     md = (d / "article.md").read_text(encoding="utf-8")
     if "[[hero]]" not in md:  # 대표사진 자리가 없으면 첫 문단 뒤에
         parts = md.split("\n\n", 2)
@@ -473,7 +480,7 @@ def write_post(site, res, d, topic):
         "category": res.get("category", ""), "summary": res.get("summary") or old.get("summary") or [],
         "conclusion": res.get("conclusion") or old.get("conclusion", ""),
         "opinion": old.get("opinion", ""),
-        "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", "")} for p in res.get("photo_prompts") or []],
+        "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", ""), "prompt": p.get("prompt", "")} for p in res.get("photo_prompts") or []],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
         "instagram": res.get("instagram") if "instagram" in platforms else None,
         "threads": res.get("threads") if "threads" in platforms else None,
