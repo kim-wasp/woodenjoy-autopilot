@@ -31,7 +31,7 @@ for p in ["/", "/robots.txt", "/ads.txt", "/sitemap_index.xml", "/feed/"]:
 # 글 목록: 날짜/카테고리/글자수/noindex
 posts, page = [], 1
 while True:
-    r = S.get(B + "/wp-json/wp/v2/posts", headers=A, params={"per_page": 100, "page": page, "context": "edit", "status": "publish"}, timeout=90)
+    r = S.get(B + "/wp-json/wp/v2/posts", headers=A, params={"per_page": 25, "page": page, "context": "edit", "status": "publish"}, timeout=90)
     if r.status_code != 200 or not r.json():
         out["posts_err"] = [r.status_code, r.text[:300]]; break
     for p in r.json():
