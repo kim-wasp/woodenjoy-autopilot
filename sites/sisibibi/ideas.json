@@ -1,121 +1,121 @@
 {
   "ideas": [
     {
-      "title": "개헌하면 지금 대통령도 또 출마? 조정식 의장 '현직 연임은 불가'",
-      "keyword": "조정식 연임 불가",
+      "title": "건보공단에 수사권? 특사경법 법사소위 통과에 의사들이 사흘째 국회 앞에 선 이유",
+      "keyword": "건보공단 특사경",
       "trend_keyword": "",
-      "facts": "조정식 국회의장이 개헌은 국회가 중심이 돼 추진하고, 현직 대통령 연임은 불가능하다고 밝혔어요. 이재명 대통령과 이 문제를 논의한 적이 없고, 논란을 빚어 국민께 송구하다는 말도 했어요.",
-      "sides": "조 의장 측: 현직 연임 불가를 원칙으로 못박고 개헌을 정쟁 대상으로 삼지 말자 / 문제 제기 측: 어떤 논란이 있었고 누가 무슨 근거로 비판했는지는 헤드라인에 없어 확인이 필요해요",
-      "question": "의장이 '현직 연임 불가'를 먼저 못박은 게 개헌 논의를 살릴까요, 아니면 논란을 수습한 정도로 보세요?",
+      "facts": "건강보험공단에 특별사법경찰(특사경, 일부 범죄를 직접 수사할 수 있는 권한)을 주는 법안이 국회 법사위 소위를 통과했어요. 의사협회는 국회 앞 1인 시위를 사흘째 이어 갔고 궐기대회도 열었으며, 병원협회도 '과도한 조치'라며 우려를 냈어요.",
+      "sides": "찬성 측: 법안을 소위에서 통과시킨 쪽의 이유는 위 헤드라인에 없어 확인이 필요해요 / 반대 측: 의사를 '동네북' 취급하는 과도한 권한이다",
+      "question": "건보공단이 직접 수사할 권한을 갖는 것, 필요한 장치라고 보세요, 지나치다고 보세요?",
       "metrics": {
-        "news_24h": 61,
-        "news_6h": 0,
-        "news_capped": false,
+        "news_24h": 100,
+        "news_6h": 55,
+        "news_capped": true,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
+        "naver_month": 230
+      },
+      "links": [
+        {
+          "title": "'건보공단 특사경 도입'에 의료계 반발 격화‥내일 법사위 심사 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5HdHpfMWZCVFpGbHZWeUJ6ckJRWk9QRVFMTE9lZ2JKcV8zUjZYSmtNeW5fU3lOS3FWVE4zRmFBN19IYUFuWXZOSzJuY0t4ZlFPdlZyb0l6bVAtYWJ0VTdaMS0wckNsMjN0Vnp5U3F1SkVqRzd5RHJv0gF3QVVfeXFMUER1bU1RV19aMzk0b0V1ODFRRE1DS3FoNWd3a0c1N3J5cjY4Vkl3b2dXTTNNZC0wNjc4UmhKRjhtUDdqUDgyZS1kVmxYNVJiTXFteWpGT1JEZjZWUEg4dFA1SmFwSWRvd1BhOTdxX1RRb3BSelc3Qnc?oc=5"
+        },
+        {
+          "title": "﻿병원계, 건보공단 특사경 권한 부여 반발 - 데일리메디",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1FRzgzOE4yQ3FFSU5vcUJPM3laWm0teVB3TngzaU9DT2FObWVYOEd4MEs2U0tOSjN6aEVSb2gtc05QRm40Y2FVY2xmbzAzd0JudENjZnZKbVMzQUtjMnAxclVTTWRmVXhl?oc=5"
+        },
+        {
+          "title": "\"의사가 동네북입니까\" 특사경법 반대 국회 앞에 선 의사들 - 의협신문",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1nS1pYbEJ5bU1oLVREQ2dCZGFfaG9wYzJvalN5dGVKT2xxTl93Y1ZNdVlMeEU5RWlIRnltZWJfMi1udTJ2bms4eERDRGFLTlY2OXpEaE4wNmpYVy1nRklLcTVhaGMxXy1kaDdyZ0ZmR193UQ?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 55건), 네이버 월간 검색 230회",
+      "score": 157.3
+    },
+    {
+      "title": "'북동영' 하자 '탈충권' 맞불, '당나라 군대'까지…국회 고성의 시작은 탈북민 호칭",
+      "keyword": "북동영 탈충권",
+      "trend_keyword": "정동영",
+      "facts": "국민의힘 박충권 의원이 정동영 통일부 장관을 '북동영'이라고 부르자 더불어민주당 쪽에서 '탈충권'으로 맞받으며 국회에서 고성이 오갔어요. 같은 시기 탈북단체는 통일부의 '북향민' 호칭이 탈북민 정체성을 부정한다고 반발했고, 나경원 의원의 '당나라 군대냐' 발언에는 국방부 장관이 취소를 요구했어요.",
+      "sides": "통일부 쪽: '북향민'이라는 새 호칭을 쓴다(이유는 확인 필요) / 탈북단체 쪽: '탈북민'이라는 정체성을 지우는 호칭이다",
+      "question": "'탈북민'과 '북향민', 호칭을 바꾸는 게 의미 있는 변화라고 보세요, 불필요한 논란이라고 보세요?",
+      "metrics": {
+        "news_24h": 27,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "정동영",
+        "trend_traffic": 500,
+        "trend_label": "500+",
         "naver_month": 10
       },
       "links": [
         {
-          "title": "조정식 \"현직 대통령 연임 불가\"…과거 발언에 \"국민께 송구\" | - 주간조선",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kMy16R3ZsaW91THhKM3hzNHVIOTc4Q1BqNDVaUlljN1hBdnJHT3RhaUYxTG02dXAtaklzZVpVNEVQWk5lS09rYWZSYklPZDdwVU9nSDVpeHRMbV9nWUhnY0R4U1cxeXFTWGI4Z2RB?oc=5"
+          "title": "정동영에 “북동영” 했다가…“탈충권” 역공 당한 박충권 [이런뉴스] - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KN2ViY1N3cWlBbW5lamhyamlxSS1GR215eXN0QVZVNlF2eFBJTExBSllDaWdHTGxpQkYtanBZTlNkdFc2NVRjUzZWMnpjVFN0ZDhRMmFEV0tIM2l4VVFGYXp4amNpQQ?oc=5"
         },
         {
-          "title": "조정식 “현직 대통령 연임은 불가, 논란 빚어 송구” - 중앙일보",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9pVmVZNi1Wd09iZS03RlZ0bV92REpIMDJCLUVzT3FIeXV1U0ZpNG9jOHRxc1hIVFhzV3RCOUlaQkpDay1CaG9xRVZhcmJwclF5RjQ1Nnl3?oc=5"
+          "title": "“북동영““탈충권“ 고성 충돌…’북향민’ 용어 대립 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1LajNDdFV5RGMybkRLbmk0Z1JvaUYzcWs1dlJJc2dvTG92dnkyRC0zNl9relhBYzJ6Ukx6T3pqcUNGVTRtVzVFSk9tNWx2NVJTTTh2WWJoc3A2ME9WRllWNDB3djZNRzA?oc=5"
         },
         {
-          "title": "조정식 \"현직 대통령 연임 불가‥논란 빚어 송구\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBwZ3E3cUMxbVQweko5YU9tc3JxSG91em12ZTdJaFhXYmdjb1dUVXNpbnYtdjZwbFVrdllLamE3UlZUZVhEWjFaelAtdWcxM3UxWkNQbVlyTm5kRHhUR0FqZE1SQllpVzF6R2dxOWE1N0xsM3paZ2xkTNIBeEFVX3lxTE5kTzJKVXZLQldsSmdJMjlMd1B0Q3dYN1pWdFR3TERnNU9Qd0RmdXA0UzI2V28wRVZjZXREdEtpeGVTQWxYM0Fpdkl0X2FUYzRlZGtvN1dJRDdCVy1hWmRIZFpQdGRwU1lQbFFiSUxvX3J1UGNndndWbw?oc=5"
+          "title": "박충권, 정동영 향해 \"북동영\" 부르자 與 \"탈충권\" 맞불 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrVnY0ankxX2xKbk5UQU1wZThMaHQ1alk5WXQydDU0Z3ZVWW5rNFctRi16OUN5eV9McDFzTU1fT1o5RFVJZ2tycTFYQlZUQV82RFlIV08xaURmUXJ1RDNvT0JVclh6WGZ6bmlTbzZhLVhTYzdfOVpiStIBeEFVX3lxTE5DLURPX0xtVEJTblZPcGhWeWgyY2t2RC05b1d4dFVfWHBpQVpYbFhEVTBGS2MtTUtPTVlvOHB3X3k1YmhtQ2RWbEVFb2d3eEFlNi1ObjZBSjNyaHhlZ3pWV0ptRFF6QkVHckJYdUFJY3l4S01EM1QyZQ?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 61건, 네이버 월간 검색 10회",
-      "score": 61.1
+      "why": "구글 뉴스 24시간 기사 27건, 구글 검색 급증 '정동영' 500+, 네이버 월간 검색 10회",
+      "score": 32.1
     },
     {
-      "title": "건보공단에 수사권? 특사경법 법사위 소위 통과…의사들이 '졸속'이라는 이유",
-      "keyword": "건보공단 특사경법",
-      "trend_keyword": "",
-      "facts": "건강보험공단에 특별사법경찰 권한, 쉽게 말해 수사권을 주는 법안이 국회 법사위 소위를 통과했어요. 서울시의사회는 '졸속 입법'이라며 국회 본회의 처리를 멈추라고 요구했어요.",
-      "sides": "추진 측: 국회 첫 관문을 넘기며 입법에 속도를 내고 있어요. 다만 추진 근거는 헤드라인에 없어 확인이 필요해요 / 의료계: 공단에 강제수사권을 주는 건 졸속이고 수사권이 남용될 수 있어요",
-      "question": "공단에 수사권을 주는 것, 단속에 필요한 장치로 보세요, 아니면 권한이 지나치다고 보세요?",
+      "title": "78일 만의 당청 만찬, '한마음' 외쳤는데 종부세는 왜 갈렸나",
+      "keyword": "종부세 당청 이견",
+      "trend_keyword": "부동산",
+      "facts": "이재명 대통령이 78일 만에 여당 지도부와 만찬을 하며 '당정이 한마음 한뜻으로 움직여야 한다'고 강조했어요. 그런데 당과 청와대가 한목소리를 내는 가운데서도 종합부동산세(종부세)를 두고는 이견이 있다는 보도가 나왔고, 국회 파행으로 주택공급 법안이 발이 묶였다는 보도도 있어요.",
+      "sides": "청와대 쪽 / 여당 쪽: 종부세를 두고 각자 어떤 방향인지는 위 헤드라인에 없어 글 쓰기 전에 확인이 필요해요",
+      "question": "부동산 대책에서 종부세 손질과 주택공급 법안 처리 중 무엇이 먼저라고 보세요?",
       "metrics": {
-        "news_24h": 25,
+        "news_24h": 10,
         "news_6h": 0,
         "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 15
+        "trend": "부동산",
+        "trend_traffic": 2000,
+        "trend_label": "2000+",
+        "naver_month": 10
       },
       "links": [
         {
-          "title": "특사경 '권한 남용' 우려에 복지부, 관리·감독 기구 추진 - 의협신문",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1valo0cGJhQWQ5N0R6NzJncThIUkd3dGlNaUJKQVB2Uy02VEdWLWRHNGhjT0s5SkpDNXlKR2Y5bTREQzJfa1pJWVIzeUUtYUFFYURzRWthdXRfcTNsSlNvd1JzN2g4ZTNiNEZUMTduMnBTUQ?oc=5"
+          "title": "당청 종부세 이견 봉합 시도…범여권 \"부자감세\" 파열음 - 신아일보",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1UVUdla0p0d2V5VXAzdGJjQ3ZQZk50aGpDT0tyR3U0OGtXaS1oOUlDaHRVWHk2S0VFbnNqTXNmR0FnVFZEQ0EwaHNYYWJvTTdWengtNzB2bUJiLXBOYjJDcXpsbzRoMVJ5Z3dCRUJaYVA?oc=5"
         },
         {
-          "title": "건보공단 특사경법 소위 통과…복지부 \"이중 통제장치로 권한 남용 원천 차단\" - 약업닷컴",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5RYTE2OTA4UFB6MEFibVRwdmFhcGswZWNYSEN6aFVTZnhxUjRGOHMydG5TZlU5Zk9nRVpBNnp2R3loMEQyczlhSTNsNDNsY1JRUlNua0hhZXU3ZmVaUkRHTFR3RlR6Q2Y1R0xiaEdGbw?oc=5"
+          "title": "당청 ’한목소리’에도 종부세 이견…金·鄭 ’대화중재’도 파열음 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10a0NWeUFUcjk2YUktYWxOTVJYeEN5dHdzWWNHaGl6RllCbkxtanByWHNNU1lTWUlGZklOa1MzZjFQOElTZG1SYUZlZ1Q2QktDaVRkZEJVTUtVQkRJeVlHd1BzckllTDQ?oc=5"
         },
         {
-          "title": "의료계 반대에도 건보공단 특사경법 법사위 1소위 통과 - MEDI:GATE NEWS",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1aaHRDRFJWTFRoM3pQS21neERVb05ydXJRcUM5eXhMMlhFRmJkdDYwMEp5VlpCeFhiVVN5OXlrYjNLZ2U5N3k0dF9WU0Jab3JSY28zdHZXMA?oc=5"
+          "title": "수그러든 與 '비거주자 종부세 완화론'...\"당청 이견 없고 정리됐다\" - 조세일보",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1UQnNLT0ZNMktLc2dJN2s5dkl2aERXZmJYbnZiQlFGLXVPbDNuam1PVnRfNlhySzg1TEpQWDFqblBLRi1rTGZZWENoLUpiSTBpOG05c2tydjRYQ1daVHNHNmt5NjNrX1UxcUhuVHVIZ2hXTlVD?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 25건, 네이버 월간 검색 15회",
-      "score": 25.15
-    },
-    {
-      "title": "여당 첫 차별금지법 발의…'형사처벌 뺐다'는데 뭐가 달라지나",
-      "keyword": "박주민 차별금지법",
-      "trend_keyword": "",
-      "facts": "박주민 의원이 22대 국회에서 여당 의원으로는 처음 차별금지법을 발의했어요. 형사처벌은 빼고, 차별 피해를 바로잡는 구제에 무게를 둔 법안이에요.",
-      "sides": "찬성 측: 국회가 차별금지법 입법을 더 미루면 안 돼요(한겨레 사설) / 반대 측: 헤드라인에 반대 논리가 없어 확인이 필요해요",
-      "question": "형사처벌을 뺀 차별금지법, 합의를 넓히는 현실적인 길로 보세요, 아니면 효과가 약해진다고 보세요?",
-      "metrics": {
-        "news_24h": 24,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 15
-      },
-      "links": [
-        {
-          "title": "박주민 의원, 평등법 발의…차별금지 입법, 20년의 벽 넘을까 - 더인디고",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fSGw0WV9Dem9aZkNSNlRCYnFLakhDRWdCWjNmNV9JcjNoZDFOU2ZJb2FCUE9PN3BEdjRfTzZBN2Q1WG9JWElkWExCOERIUTQ?oc=5"
-        },
-        {
-          "title": "박주민, 22대 국회 여당 첫 ‘차별금지법’ 발의…형사 처벌 빼고 구제에 무게 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIQUxpbVV4MTd5N3ptNmU0WnZ2WXI4YzBaeWN5N0Jkd2xfSkJ1Mlprck9uOWtuSmpmR09xMUlLR1JMdVpram9nSjBqR1ozTjRBU3p0NTJ0cmFhdS1WakcwRGNZcExjLXlzd2tLZlhpR2hCMmpZ?oc=5"
-        },
-        {
-          "title": "박주민, '모든 영역 차별' 막는 평등법 발의…22대 국회엔 입법될까 - 프레시안",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ObVdfNGxtcjVCVjVieERlWkM4MGZhUGYxMVctempBRzdybXlIZ0pOMEN1UHJiWERtSnUtaHF0RDc2ckxGUlhnNTFvUENKaXRDWDVtT0tpM3g2ZER5dTE4VTdRRkZtOXVvOUpJajlnU0tmdUszbzQwRnpvMA?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 24건, 네이버 월간 검색 15회",
-      "score": 24.15
+      "why": "구글 뉴스 24시간 기사 10건, 구글 검색 급증 '부동산' 2000+, 네이버 월간 검색 10회",
+      "score": 30.1
     }
   ],
-  "updated": "2026-11-12T08:21+09:00",
+  "updated": "2026-11-12T21:19+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10318,
-        "output_tokens": 4865,
+        "input_tokens": 10671,
+        "output_tokens": 4862,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1386
+        "usd": 0.1399
       }
     },
     "images": {},
-    "usd": 0.1386,
-    "total_usd": 0.1386,
-    "total_krw": 190,
+    "usd": 0.1399,
+    "total_usd": 0.1399,
+    "total_krw": 200,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
