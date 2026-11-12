@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T11:55+09:00",
+  "updated": "2026-11-12T12:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -342,15 +342,6 @@
       "url": null
     },
     {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-12-choi-min-hee-hyena-remark-apology-photo-journalist",
-      "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
-      "platform": "blog",
-      "at": "2026-11-12T12:00+09:00",
-      "state": "planned"
-    },
-    {
       "site": "forsmartlife",
       "site_name": "건강 (forsmartlife.com)",
       "dir": "content/forsmartlife/2026-11-12-flu-vaccine-november-2026-free-eligibility-timing",
@@ -366,6 +357,15 @@
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "blog",
       "at": "2026-11-13T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-12-choi-min-hee-hyena-remark-apology-photo-journalist",
+      "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
+      "platform": "blog",
+      "at": "2026-11-13T12:00+09:00",
       "state": "planned"
     },
     {
