@@ -31,13 +31,15 @@ for p in ["/", "/robots.txt", "/ads.txt", "/sitemap_index.xml", "/feed/"]:
 # 글 목록: 날짜/카테고리/글자수/noindex
 posts, page = [], 1
 while True:
-    r = S.get(B + "/wp-json/wp/v2/posts", headers=A, params={"per_page": 100, "page": page, "context": "edit", "status": "publish,future,draft"}, timeout=90)
-    if r.status_code != 200 or not r.json(): break
+    r = S.get(B + "/wp-json/wp/v2/posts", headers=A, params={"per_page": 100, "page": page, "context": "edit", "status": "publish"}, timeout=90)
+    if r.status_code != 200 or not r.json():
+        out["posts_err"] = [r.status_code, r.text[:300]]; break
     for p in r.json():
         t = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", p["content"]["raw"])))
         posts.append({"id": p["id"], "status": p["status"], "date": p["date"], "title": p["title"]["raw"], "link": p["link"], "cats": p["categories"],
                       "chars": len(t), "imgs": p["content"]["raw"].count("<img"), "featured": p["featured_media"], "comment": p["comment_status"],
                       "robots": (p.get("meta") or {}).get("rank_math_robots"),
+                      "fp": re.findall(r"[^.!?]{0,50}(?<![가-힣])(?:저는|제가|저도|저희|제 경험|제 주변)[^.!?]{0,50}|[^.!?]{0,50}(?:해보니|써보니|먹어보니)[^.!?]{0,30}", t)[:5],
                       "claims": re.findall(r"[^.!?]{0,60}(?:효과를 본|케이스가 많|사례가 많|확실히|무조건|반드시 낫|완치|100%|특효|기적)[^.!?]{0,40}", t)[:5]})
     if page >= int(r.headers.get("X-WP-TotalPages", 1)): break
     page += 1
