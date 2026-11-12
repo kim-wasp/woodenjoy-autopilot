@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T07:41+09:00",
+  "updated": "2026-11-13T08:11+09:00",
   "items": [
     {
       "site": "infobay",
@@ -377,8 +377,9 @@
       "dir": "content/woodenjoy/2026-11-10-door-hinge-screw-stripped-hole-fix",
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "blog",
-      "at": "2026-11-13T08:00+09:00",
-      "state": "planned"
+      "at": "2026-11-13T08:11:21+09:00",
+      "state": "done",
+      "url": "https://blog.naver.com/cafe_peanut/224475223062"
     },
     {
       "site": "sisibibi",
@@ -423,6 +424,15 @@
       "title": "문고리 교체 전 백셋부터 재세요, 60·70mm 틀리면 반품",
       "platform": "instagram",
       "at": "2026-11-13T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-13-norovirus-symptoms-prevention-disinfection",
+      "title": "노로바이러스 증상·예방법: 손소독제 말고 비누, 굴은 85℃에서 1분",
+      "platform": "blog",
+      "at": "2026-11-16T07:00+09:00",
       "state": "planned"
     },
     {
