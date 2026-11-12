@@ -65,11 +65,13 @@ def publish_naver(site, d, post, dry):
     imgs = body_images(d, post, md)
     if (d / "hero.jpg").exists():
         imgs["hero"] = (d / "hero.jpg", post["title"])
+    real = set(post.get("real_photos") or [])  # 사장님이 찍은 실제 사진은 'AI 활용' 표시를 하지 않아요
+    is_real = lambda f: f.name in real
     for key, (f, alt) in imgs.items():
-        media[key] = api.upload(f, alt)
+        media[key] = api.upload(f, alt, ai=not is_real(f))
     def rep(m):
         k = m.group(1)
-        return f"![{imgs[k][1]}](media:{media[k]}){{.ai}}" if k in media else ""
+        return (f"![{imgs[k][1]}](media:{media[k]})" + ("" if is_real(imgs[k][0]) else "{.ai}")) if k in media else ""
     text = re.sub(r"\[\[(hero|card:\d+|photo:\d+)\]\]", rep, md)
     # 쿠팡 대가성 문구: 공정위 지침대로 본문 첫 부분에, 본문보다 크고 눈에 띄는 색으로 (굵게 + 19 + 빨강)
     text = re.sub(r"^[*_ ]*(이 포스팅은 쿠팡 파트너스 활동의 일환으로[^\n]*?)[*_ ]*$",

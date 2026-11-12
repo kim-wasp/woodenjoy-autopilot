@@ -31,7 +31,7 @@ function renderLogin() {
 }
 
 // ---------- 틀 ----------
-const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['trends', '트렌드'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
+const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['trends', '트렌드·순위'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
 function shell(active, inner) {
   app.innerHTML = `<header class="top"><div class="in"><div class="logo">콘텐츠 스튜디오</div>
     <nav class="tabs">${NAV.map(([k, v]) => `<a href="#/${k}" class="${k === active ? 'on' : ''}">${v}</a>`).join('')}</nav>
@@ -123,8 +123,10 @@ async function viewCreate(pre = {}) {
   <div class="grid g2"><form class="card" id="cf">
     <label class="f"><span>사이트</span><select id="site">${st.map((s) => `<option value="${s.id}" ${pre.site === s.id ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
     <label class="f"><span>주제나 제목 (비우면 검색량·시기를 보고 자동으로 골라요)</span><input type="text" id="topic" value="${esc(pre.topic || '')}" placeholder="예: 축의금 얼마가 적당할까"></label>
+    <label class="f"><span>사진으로 글쓰기 (선택) · 현장/작업 사진을 올리면 사진 내용에 맞춰 글을 쓰고 본문에 그 사진을 넣어요. 최대 10장</span><input type="file" id="photos" accept="image/*" multiple></label>
+    <div id="pv" class="small muted" style="margin:-4px 0 10px"></div>
     <div id="viewbox"></div>
-    <label class="f"><span>추가 요청 (선택)</span><textarea id="cnotes" placeholder="예: 20대 사회초년생 눈높이로"></textarea></label>
+    <label class="f"><span id="cnlabel">추가 요청 (선택)</span><textarea id="cnotes" placeholder="예: 20대 사회초년생 눈높이로"></textarea></label>
     <button class="btn primary" ${st.length ? '' : 'disabled'}>만들기 시작</button>
     <p class="small muted" style="margin-top:10px">글 → 대표 사진 → 카드 → 인스타·스레드 → 점검까지 5~10분 걸려요. 끝나면 <a href="#/review">승인 대기</a>에 올라와요.</p>
   </form>
@@ -136,12 +138,42 @@ async function viewCreate(pre = {}) {
   };
   viewBox();
   $('#site').onchange = viewBox;
+  $('#photos').onchange = () => {
+    const n = $('#photos').files.length;
+    $('#pv').textContent = n ? `사진 ${Math.min(n, 10)}장 선택${n > 10 ? ' (앞의 10장만 써요)' : ''} · 사진에 없는 사실(언제, 어디서, 비용, 걸린 시간 등)은 아래 메모에 적어 주세요` : '';
+    $('#cnlabel').textContent = n ? '사진 메모 (무슨 작업인지, 언제/어디서, 비용, 어려웠던 점 등. 글에는 여기 적은 사실만 써요)' : '추가 요청 (선택)';
+  };
   $('#cf').onsubmit = async (e) => {
     e.preventDefault();
     const s = st.find((x) => x.id === $('#site').value) || {};
     if (s.opinion && !($('#view')?.value || '').trim() && !confirm('견해 없이 만들까요? (편집자 생각 칸 없이 사실 정리만 나와요)')) return;
-    try { await api('run', { method: 'POST', body: { site: $('#site').value, topic: $('#topic').value, notes: $('#cnotes').value, view: $('#view')?.value || '' } }); toast('만들기 시작! 5~10분 뒤 승인 대기를 확인하세요'); setTimeout(() => viewCreate(), 4000); } catch (e2) { if (e2.message !== 'login') toast(e2.message); }
+    try {
+      let photos = '';
+      const files = [...$('#photos').files].slice(0, 10);
+      if (files.length) {
+        const batch = `${new Date().toISOString().slice(0, 10)}-${Math.random().toString(36).slice(2, 8)}`;
+        for (let i = 0; i < files.length; i++) {
+          toast(`사진 올리는 중 ${i + 1}/${files.length}`);
+          const data = await shrink(files[i]);
+          const r = await api('run', { method: 'POST', body: { upload: { batch, name: String(i + 1).padStart(2, '0') + '.jpg', data } } });
+          photos = r.path;
+        }
+      }
+      await api('run', { method: 'POST', body: { site: $('#site').value, topic: $('#topic').value, notes: $('#cnotes').value, view: $('#view')?.value || '', photos } });
+      toast('만들기 시작! 5~10분 뒤 승인 대기를 확인하세요'); setTimeout(() => viewCreate(), 4000);
+    } catch (e2) { if (e2.message !== 'login') toast(e2.message); }
   };
+}
+
+// 사진을 긴 쪽 1600px JPEG로 줄여 base64로 (휴대폰 사진 회전 정보 반영)
+async function shrink(file) {
+  const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' });
+  const k = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas');
+  c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k);
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  const url = c.toDataURL('image/jpeg', 0.85);
+  return url.split(',')[1];
 }
 
 // ---------- 글감 ----------
@@ -173,7 +205,10 @@ async function viewTrends() {
   const autoHtml = a ? `<div class="card"><h2>자동 감지 (매일 아침 5시)</h2><p class="small muted">${fmt(a.updated)} 기준 · 네이버 검색광고 키워드 도구로 사이트별 분야 검색어의 최근 30일 검색 수를 매일 재서 7일 전보다 크게 는 것, 그리고 구글 실시간 인기 검색어예요. 글감 추천과 글쓰기에 자동으로 들어가요. 기록이 7일 쌓이기 전에는 쌓인 날짜끼리 비교해요.</p>
     ${Object.entries(a.sites || {}).map(([id, v]) => `<h3 style="margin-top:14px">${esc(name(id))}</h3><p class="small">${(v.rising || []).length ? v.rising.slice(0, 12).map((x) => `<b>${esc(x.keyword)}</b> ${x.before ? `${x.before.toLocaleString()}→${x.now.toLocaleString()} (+${Math.round(x.change * 100)}%)` : `${x.now.toLocaleString()} (새로 등장)`}`).join(' / ') : '<span class="muted">아직 급등 없음 (기록 ' + (v.days || 1) + '일째)</span>'}</p><p class="small muted">검색 많은 말: ${(v.top || []).slice(0, 10).map((x) => esc(x.keyword) + ' ' + x.now.toLocaleString()).join(', ')}</p>`).join('')}
     <h3 style="margin-top:14px">구글 실시간 인기 검색어</h3><p class="small">${(a.google || []).slice(0, 15).map((x) => `${esc(x.keyword)} <span class="muted">${esc(x.traffic)}</span>`).join(' / ') || '<span class="muted">못 읽음</span>'}</p></div>` : '<div class="card"><p class="small muted">자동 감지 결과가 아직 없어요. 매일 아침 5시에 만들어져요.</p></div>';
-  $('#main').innerHTML = `<div class="page-h"><h1>트렌드</h1></div>${autoHtml}
+  const rk = d.ranks;
+  const rankRows = rk ? Object.entries(rk.posts || {}).slice(-30).reverse().map(([url, p]) => { const c = p.checks || []; const last = c[c.length - 1] || {}; const best = Math.min(...c.filter((x) => x.rank).map((x) => x.rank), 99); return `<div class="item"><div class="t"><b><a href="${esc(url)}" target="_blank" rel="noopener">${esc(p.title)}</a></b><span class="small muted">${esc(name(p.site))} · 검색어 '${esc(p.keyword)}' · ${c.map((x) => `${x.day}일째 ${x.read === false ? '못 읽음' : x.rank ? x.rank + '위' : '10위 밖'}`).join(' / ')}</span></div><span class="chip ${best <= 5 ? 'ok' : best <= 10 ? '' : 'warn'}">${best < 99 ? '최고 ' + best + '위' : '노출 없음'}</span></div>`; }).join('') : '';
+  const rankHtml = `<div class="card"><h2>발행 글 네이버 순위</h2><p class="small muted">${rk ? fmt(rk.updated) + ' 확인 · ' : ''}매일 오후 2시 43분, 발행 1·3·7·14·30일째 글을 핵심 검색어로 네이버 통합검색에서 찾아요 (uplika 확장이 켜진 PC가 있어야 해요). 결과는 다음 글감 고르기에 참고해요. 구글 순위는 서치콘솔 연결이 필요해서 아직 없어요.${rk && rk.last_error ? `<br><span style="color:#b42318">최근 실패: ${esc(rk.last_error)}</span>` : ''}</p><div class="list">${rankRows || '<p class="muted small">아직 확인한 글이 없어요</p>'}</div></div>`;
+  $('#main').innerHTML = `<div class="page-h"><h1>트렌드 · 순위</h1></div>${autoHtml}${rankHtml}
   <div class="grid g2"><form class="card" id="tf"><h2>직접 추가 (선택)</h2>
     <p class="small muted">크리에이터 어드바이저에서 눈에 띄는 검색어가 있을 때만 붙여넣어 주세요. 자동 감지와 함께 참고해요. 한 줄에 하나, 순위 숫자는 있어도 괜찮아요. 최근 7일 안에 넣은 검색어를 모든 사이트의 글감 고르기와 글쓰기에 참고해요 (글과 관련 있을 때만 자연스럽게).</p>
     <label class="f"><span>어디서 본 검색어인지 (선택)</span><input type="text" id="tlabel" placeholder="예: 생활·건강 인기유입 / 급등"></label>

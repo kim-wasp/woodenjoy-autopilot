@@ -244,3 +244,28 @@ def naver_trends_block(site_id=None, days=7):
             "트렌드 쓰는 법: 1) 글감을 고를 때 이 사이트 주제와 맞는 급등 검색어가 있으면 우선 고려하고, 고른 근거(why_this_topic)에 그 숫자를 적어요. "
             "2) 글을 쓸 때 이 글과 직접 관련 있는 검색어가 있으면 제목·소제목·본문에 자연스럽게 1~2번 넣어요(같은 뜻의 말을 사람들이 실제로 치는 표현으로 바꾸는 정도). "
             "3) 관련 없는 검색어를 억지로 끼워 넣거나 나열하지 말아요. 검색어에 담긴 사실(사건·숫자)은 확인된 것만.")
+
+
+def ranks_block(site_id):
+    """tools/rank_check.py 결과: 이 사이트 최근 글이 네이버에서 몇 위였는지 → 잘 된 주제 방향 참고"""
+    import json
+    from pathlib import Path
+    f = Path(__file__).resolve().parent.parent / "status/ranks.json"
+    if not f.exists():
+        return ""
+    try:
+        posts = [p for p in json.loads(f.read_text(encoding="utf-8")).get("posts", {}).values() if p.get("site") == site_id and p.get("checks")]
+    except Exception:  # noqa: BLE001
+        return ""
+    if not posts:
+        return ""
+    lines = []
+    for p in posts[-20:]:
+        c = [x for x in p["checks"] if x.get("read", True)]
+        if not c:
+            continue
+        best = min([x["rank"] for x in c if x.get("rank")] or [None], key=lambda v: v or 99)
+        lines.append(f"- {p['title']} (검색어 '{p['keyword']}'): " + (f"네이버 {best}위까지" if best else "네이버 10위 안에 없음"))
+    if not lines:
+        return ""
+    return ("[이 사이트 최근 글의 네이버 순위 — 다음 글 방향 참고: 순위가 잘 나온 글의 검색어 크기·제목 방식은 살리고, 안 나온 주제는 검색어를 더 구체적으로]\n" + "\n".join(lines))

@@ -52,12 +52,12 @@ class Uplika:
             res = {**res, **res["data"]}   # {"data": {...}} 형태로 오는 응답 풀기
         return res
 
-    def upload(self, path, alt):
+    def upload(self, path, alt, ai=True):
         data = path.read_bytes()
         pre = self.call("POST", "/v1/media/presign", {"fileName": path.name, "contentType": "image/jpeg", "bytes": len(data),
                                                       "width": 1080, "height": 1350, "altText": alt,
                                                       # 카드는 Claude가 코드로 그린 이미지라 네이버 'AI 활용' 표시를 켜요
-                                                      "aiGenerated": True})
+                                                      "aiGenerated": ai})
         if not self.dry:
             put = requests.put(pre["uploadUrl"], data=data, headers={"content-type": pre.get("contentType", "image/jpeg")}, timeout=120)
             print(f"  이미지 전송 {path.name}: {put.status_code} {put.text[:200] if put.status_code >= 300 else ''}")

@@ -27,5 +27,6 @@ module.exports = guard(async (req, res) => {
     return send(res, 200, { ok: true });
   }
   data.auto = (await readJson('status/trends_auto.json')) || null;
+  data.ranks = (await readJson('status/ranks.json')) || null;
   send(res, 200, data);
 });

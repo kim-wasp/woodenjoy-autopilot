@@ -86,7 +86,7 @@ def _stream(body, headers):
     return 200, "", {"content": content, "stop_reason": stop}
 
 
-def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None, max_searches=6):
+def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None, max_searches=6, images=None):
     """프롬프트를 보내고 JSON 한 덩어리를 돌려받아요."""
     if os.environ.get("MOCK_LLM"):
         f = ROOT / "engine/mock" / f"{mock_name or 'post'}.json"
@@ -98,6 +98,13 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
         "system": system,
         "messages": [{"role": "user", "content": prompt}],
     }
+    if images:  # 사장님이 올린 실제 사진 (JPEG 경로 목록) → 순서대로 '사진 N' 표시와 함께 첨부
+        import base64
+        blocks = []
+        for i, f in enumerate(images, 1):
+            blocks += [{"type": "text", "text": f"[사진 {i}]"},
+                       {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(Path(f).read_bytes()).decode()}}]
+        body["messages"][0]["content"] = blocks + [{"type": "text", "text": prompt}]
     if web_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}]
     headers = {"x-api-key": secret("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",

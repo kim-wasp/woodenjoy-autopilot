@@ -148,10 +148,18 @@ def schema(site):
                   f'"article_md": "짧고 알아보기 쉬운 글 마크다운 {r.get("min_chars", 1500)}~{r.get("max_chars", 3000)}자. 서술형 긴 문단 금지, 문장은 짧게, 쉬운 말. 구조: '
                   '첫 줄 > 한 줄 결론(바쁜 사람은 여기까지만 읽어도 되게, 1~2문장) → [[hero]] → ## 질문형 소제목 3~5개, 각 2~4문장 또는 항목 나열 → '
                   '## 한눈에 정리 (표 또는 체크리스트로 자료 나열, 서술 금지) → ## 자주 묻는 질문 (Q 2~3개, 답은 1~2문장) → 마지막에 ## 참고 자료 (출처 링크 목록). '
-                  f'추가 이미지 자리: {inline}"']
+                  f'추가 이미지 자리: {inline if not site.get("_user_photos") else "사장님이 올린 사진 [[photo:1]]~[[photo:" + str(site["_user_photos"]) + "]]를 내용에 맞는 소제목 아래에 모두 넣기(사진 번호 그대로)"}"']
+    if site.get("_user_photos"):
+        n = site["_user_photos"]
+        need_photos = False
+        parts.append(f'"photo_alts": [{{"id": 사진 번호(1~{n}), "alt": "사진에 실제로 보이는 것을 설명하는 한국어 대체 텍스트"}}] 사진 {n}장 모두')
+        parts.append('"hero_photo": 대표 사진으로 쓸 사진 번호 (글 주제가 가장 잘 보이는 사진)')
     if need_photos:
         parts.append(f'"photo_prompts": [{{"id": 1, "prompt": "사진 묘사(영어). {ic["photo_style"] or "주제에 맞는 현실적인 장면"}", "alt": "한국어 대체 텍스트"}}] 최대 {ic["photos"]}개')
-    if ic["hero"].get("thumb_text"):
+    if site.get("_user_photos"):
+        if ic["hero"].get("thumb_text"):
+            parts.append('"thumb_text": "대표사진 위에 크게 넣을 후킹 문구. 2줄(줄바꿈 \\n), 줄마다 4~11자. 사실만, 제목과 똑같이 쓰지 말 것"')
+    elif ic["hero"].get("thumb_text"):
         parts += ['"hero_prompt": "대표 사진 묘사(영어). 홈피드 썸네일용: 이 글이 해결하는 문제 장면(고장·틈·실수 등 before 상태)을 한국 아파트 실내에서 '
                   '휴대폰으로 대충 찍은 듯한 현실적인 장면 하나. 물건 1~2개에 초점, 화면 가운데는 비교적 단순하게(글자가 올라감), 사진 속 글자 없음"',
                   '"thumb_text": "대표사진 위에 크게 넣을 후킹 문구. 2줄(줄바꿈 \\n), 줄마다 4~11자. 손해·실수·숫자로 궁금하게, 사실만, 제목과 똑같이 쓰지 말 것. 예: \"이렇게 붙이면\\n바람 그대로 들어와요\""']
@@ -267,6 +275,7 @@ def build_prompt(site, topic, notes, view=None):
         p.append("[네이버 월간 검색량 (검색광고 키워드 도구, 실제 조회값)]\n" + kd)
     import trends as _tr
     p.append(_tr.naver_trends_block(site["id"]))
+    p.append(_tr.ranks_block(site["id"]))
     if topic:
         p.append(f"[주제/제목 지정]\n{topic}\n(이 주제로 쓰되 제목은 검색 키워드와 후킹을 살려 다듬어도 됩니다)")
     else:
@@ -284,6 +293,15 @@ def build_prompt(site, topic, notes, view=None):
                  "2) '## 편집자 생각' 칸은 이 견해를 쉬운 말로 줄여 써요. 입장·주장 방향은 절대 바꾸거나 누그러뜨리지 말고, 짧은 문단 3개 이내(합쳐서 400자 안팎). "
                  "3) 견해 속 사실(숫자·날짜·사건)은 웹 검색으로 확인해 틀리면 바로잡고, 확인 안 되면 빼요. 특정인 비방·확인 안 된 의혹 단정은 빼요. "
                  "4) 견해의 문장을 그대로 길게 옮기지 말고 사장님 말투로 다시 써요.")
+    if site.get("_user_photos"):
+        p.append(f"[사장님이 직접 찍은 실제 사진 {site['_user_photos']}장 — 이 메시지 앞에 '사진 N' 순서로 붙어 있어요]\n"
+                 "이 글은 이 사진들이 중심이에요. 1) 사진에 실제로 보이는 것(작업 과정, 자재, 도구, 상태, 결과)을 정확히 읽어서 글의 소재로 써요. 보이지 않는 것은 추측해서 쓰지 말아요. "
+                 "2) 사진 속 상황에 대한 사실(언제, 어디서, 얼마나 걸렸는지, 비용 등)은 사장님 메모에 있는 것만 써요. 메모에 없으면 '사진처럼'처럼 사진 기준으로만 설명해요. "
+                 "3) 사이트 규칙이 1인칭 경험을 금지하지 않으면(예: 우드엔조이) 사진과 메모 범위 안에서 직접 한 작업으로 써도 돼요. 금지하면 '이런 경우'처럼 일반 설명으로. "
+                 "4) 정보(방법, 주의점, 기준)는 사진 내용과 이어지게, 확인된 사실만. 5) 사진은 [[photo:번호]]로 본문 흐름에 맞춰 모두 넣고, 대표 사진 번호를 hero_photo 로.")
+        if notes:
+            p.append(f"[사장님 메모 — 사진에 대한 설명, 사실은 여기 있는 것만]\n{notes}")
+            notes = None
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
     if blog_kind(site) == "naver":
@@ -482,7 +500,8 @@ def write_post(site, res, d, topic):
         "category": res.get("category", ""), "summary": res.get("summary") or old.get("summary") or [],
         "conclusion": res.get("conclusion") or old.get("conclusion", ""),
         "opinion": old.get("opinion", ""),
-        "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", ""), "prompt": p.get("prompt", "")} for p in res.get("photo_prompts") or []],
+        "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", ""), "prompt": p.get("prompt", ""), **({"real": True} if p.get("real") else {})} for p in res.get("photo_prompts") or []],
+        "real_photos": res.get("real_photos") or old.get("real_photos") or [],
         "sources": res.get("sources", []), "platforms": platforms, "blog_platform": blog_kind(site),
         "instagram": res.get("instagram") if "instagram" in platforms else None,
         "threads": res.get("threads") if "threads" in platforms else None,
@@ -645,15 +664,35 @@ def pick_topic(site):
             f"고른 근거(why_this_topic 에 그대로 적기): {x['why']}")
 
 
-def generate(site_id, topic=None, notes=None, out=None, view=None):
+def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
     site = load_site(site_id)
     llm_cfg = site.get("llm", {})
+    user_photos = sorted([f for f in (ROOT / photos).glob("*.jpg")])[:10] if photos else []
+    if out and not user_photos and load_json(ROOT / out / "post.json", {}).get("real_photos"):  # 사진으로 쓴 글을 다시 만들 때
+        user_photos = sorted((ROOT / out).glob("photo*.jpg"), key=lambda f: int(re.sub(r"\D", "", f.stem) or 0))
+    if user_photos:
+        site["_user_photos"] = len(user_photos)
+        log(f"  사장님 사진 {len(user_photos)}장으로 글쓰기")
     if not topic and not out and site.get("topic_picker") == "season_trend" and not os.environ.get("MOCK_LLM"):
         topic = pick_topic(site)
     log(f"[{site['name']}] 글 만들기 시작 · 주제: {topic or '자동 선택'}")
     res = llm.ask_json(SYSTEM, build_prompt(site, topic, notes, view), model=llm_cfg.get("model"),
-                       web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post")
+                       web_search=llm_cfg.get("web_search", True), mock_name=f"{site_id}_post", images=user_photos or None)
     d = (ROOT / out).resolve() if out else CONTENT / site_id / f"{now_kst():%Y-%m-%d}-{slugify(res.get('slug') or res['title'])}"
+    if user_photos:
+        import shutil
+        d.mkdir(parents=True, exist_ok=True)
+        alts = {int(x.get("id", 0)): x.get("alt", "") for x in res.get("photo_alts") or [] if str(x.get("id", "")).isdigit() or isinstance(x.get("id"), int)}
+        for i, f in enumerate(user_photos, 1):
+            if f.resolve() != (d / f"photo{i}.jpg").resolve():
+                shutil.copy(f, d / f"photo{i}.jpg")
+        res["photo_prompts"] = [{"id": i, "alt": alts.get(i, ""), "prompt": "", "real": True} for i in range(1, len(user_photos) + 1)]
+        h = res.get("hero_photo")
+        h = int(h) if str(h).isdigit() and 1 <= int(h) <= len(user_photos) else 1
+        shutil.copy(d / f"photo{h}.jpg", d / "hero.jpg")
+        if img_cfg(site)["hero"].get("thumb_text") and res.get("thumb_text"):
+            make_thumb(d, res["thumb_text"])
+        res["real_photos"] = [f"photo{i}.jpg" for i in range(1, len(user_photos) + 1)] + ["hero.jpg", "hero_raw.jpg"]
     prev_cost = load_json(d / "post.json", {}).get("cost") if out else None
     issues = []
     for attempt in range(3):
@@ -855,6 +894,7 @@ if __name__ == "__main__":
     ap.add_argument("--view", help="편집자 견해(사장님 의견) — 이 견해를 바탕으로 글을 써요")
     ap.add_argument("--out")
     ap.add_argument("--ideas", action="store_true")
+    ap.add_argument("--photos", help="사장님이 올린 사진 폴더 (uploads/...) — 사진으로 글쓰기")
     ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
     ap.add_argument("--thumb", help="이 글 폴더의 대표사진+홈피드 썸네일만 다시 만들기 (--notes = 썸네일 문구, 줄바꿈은 \\n)")
     ap.add_argument("--opinion", help="이 글 폴더에 편집자 생각(--notes)을 붙이기")
@@ -868,5 +908,5 @@ if __name__ == "__main__":
     elif a.ideas:
         ideas(a.site, a.topic)
     else:
-        _, iss = generate(a.site, a.topic, a.notes, a.out, a.view)
+        _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
         sys.exit(1 if iss else 0)
