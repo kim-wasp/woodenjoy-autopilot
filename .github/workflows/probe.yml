@@ -9,10 +9,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q requests && python3 tools/wp_adsense_fix.py
+      - run: pip install -q requests && python3 tools/wp_adsense_fix.py --apply
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 애드센스 점검 자료" && git pull -q --rebase && git push -q || true
+          git add status/audit && git commit -qm "forsmartlife 사이트 정리 반영" && git pull -q --rebase && git push -q || true
 # run 1794452754
 # run 1794452798
