@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          sleep 60
-          curl -s https://woodenjoy-autopilot-studio.vercel.app/app.js | grep -c "viewTrends" || true
-          curl -s -o /dev/null -w "%{http_code}\n" https://woodenjoy-autopilot-studio.vercel.app/api/trends
+          for p in /openapi.json /v1/openapi.json /docs /v1 "/v1/naver/visibility?blog=cafe_peanut" "/v1/research/naver/visibility?blog=cafe_peanut" "/v1/naver-visibility?blog=cafe_peanut" "/v1/visibility?blog=cafe_peanut" "/v1/naver/keywords/history?keyword=x"; do
+            c=$(curl -s -o b.txt -w "%{http_code}" -H "authorization: Bearer $K" "https://api.uplika.com$p"); echo "$c $p $(head -c 200 b.txt)"; done
+        env: { K: "${{ secrets.UPLIKA_API_KEY }}" }
