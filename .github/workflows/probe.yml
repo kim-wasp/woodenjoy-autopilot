@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in http://myinfobay.com/ http://www.myinfobay.com/ https://www.myinfobay.com/ https://myinfobay.com/ http://www.sisibibinote.kr/x https://www.sisibibinote.kr/x; do echo "== $u"; curl -sI -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE "^HTTP|^location|^cf-" ; done
-          curl -s https://myinfobay.com/ | grep -io '<link rel="canonical"[^>]*>'
-# 1794474036
+          for u in http://myinfobay.com/ http://www.myinfobay.com/ https://www.myinfobay.com/ https://myinfobay.com/ http://www.sisibibinote.kr/x https://www.sisibibinote.kr/x; do echo "== $u"; curl -sI --max-time 20 -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE "^HTTP|^location" || echo "연결 안 됨"; done
+          curl -s https://myinfobay.com/ | grep -io '<link rel="canonical"[^>]*>' || true
           dig +short www.myinfobay.com; dig +short www.sisibibinote.kr
