@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q requests && python3 tools/wp_site_review.py
+      - run: pip install -q requests && python3 tools/wp_pages_raw.py
         env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
