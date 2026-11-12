@@ -1,0 +1,3475 @@
+{
+ "me": [
+  200,
+  {
+   "id": 1,
+   "username": "gracelyun28",
+   "name": "WellnessNote 편집팀",
+   "first_name": "WellNote",
+   "last_name": "",
+   "email": "gracelyun28@gmail.com",
+   "url": "https://forsmartlife.com",
+   "description": "두 딸을 키우며 직장 생활을 병행하는 워킹맘입니다.\r\n\r\n아이들이 환절기마다 비염과 감기로 고생하는 걸 보면서 가족 건강을 제대로 챙기고 싶다는 마음으로 공부를 시작했어요. 16년간 육아를 하면서 직접 겪고, 직접 검증한 생활 건강 정보를 전달합니다.\r\n\r\n질병관리청·식품의약품안전처 등 신뢰할 수 있는 공식 출처를 기반으로, 바쁜 일상에서도 실천할 수 있는 건강 루틴과 계절별 건강 관리 정보를 씁니다.",
+   "link": "https://forsmartlife.com/author/gracelyun28/",
+   "locale": "ko_KR",
+   "nickname": "WellnessNote 편집팀",
+   "slug": "gracelyun28",
+   "roles": [
+    "administrator"
+   ],
+   "registered_date": "2025-08-11T08:59:47+00:00",
+   "capabilities": {
+    "switch_themes": true,
+    "edit_themes": true,
+    "activate_plugins": true,
+    "edit_plugins": true,
+    "edit_users": true,
+    "edit_files": true,
+    "manage_options": true,
+    "moderate_comments": true,
+    "manage_categories": true,
+    "manage_links": true,
+    "upload_files": true,
+    "import": true,
+    "unfiltered_html": true,
+    "edit_posts": true,
+    "edit_others_posts": true,
+    "edit_published_posts": true,
+    "publish_posts": true,
+    "edit_pages": true,
+    "read": true,
+    "level_10": true,
+    "level_9": true,
+    "level_8": true,
+    "level_7": true,
+    "level_6": true,
+    "level_5": true,
+    "level_4": true,
+    "level_3": true,
+    "level_2": true,
+    "level_1": true,
+    "level_0": true,
+    "edit_others_pages": true,
+    "edit_published_pages": true,
+    "publish_pages": true,
+    "delete_pages": true,
+    "delete_others_pages": true,
+    "delete_published_pages": true,
+    "delete_posts": true,
+    "delete_others_posts": true,
+    "delete_published_posts": true,
+    "delete_private_posts": true,
+    "edit_private_posts": true,
+    "read_private_posts": true,
+    "delete_private_pages": true,
+    "edit_private_pages": true,
+    "read_private_pages": true,
+    "delete_users": true,
+    "create_users": true,
+    "unfiltered_upload": true,
+    "edit_dashboard": true,
+    "update_plugins": true,
+    "delete_plugins": true,
+    "install_plugins": true,
+    "update_themes": true,
+    "install_themes": true,
+    "update_core": true,
+    "list_users": true,
+    "remove_users": true,
+    "promote_users": true,
+    "edit_theme_options": true,
+    "delete_themes": true,
+    "export": true,
+    "rank_math_edit_htaccess": true,
+    "rank_math_titles": true,
+    "rank_math_general": true,
+    "rank_math_sitemap": true,
+    "rank_math_404_monitor": true,
+    "rank_math_link_builder": true,
+    "rank_math_redirections": true,
+    "rank_math_role_manager": true,
+    "rank_math_analytics": true,
+    "rank_math_site_analysis": true,
+    "rank_math_onpage_analysis": true,
+    "rank_math_onpage_general": true,
+    "rank_math_onpage_advanced": true,
+    "rank_math_onpage_snippet": true,
+    "rank_math_onpage_social": true,
+    "rank_math_content_ai": true,
+    "rank_math_admin_bar": true,
+    "administrator": true
+   },
+   "extra_capabilities": {
+    "administrator": true
+   },
+   "avatar_urls": {
+    "24": "https://secure.gravatar.com/avatar/21193517bdf82ddd20ef3cae6f299f2bb04fd1f1546a9d70ab15f60a7a2209a1?s=24&d=mm&r=g",
+    "48": "https://secure.gravatar.com/avatar/21193517bdf82ddd20ef3cae6f299f2bb04fd1f1546a9d70ab15f60a7a2209a1?s=48&d=mm&r=g",
+    "96": "https://secure.gravatar.com/avatar/21193517bdf82ddd20ef3cae6f299f2bb04fd1f1546a9d70ab15f60a7a2209a1?s=96&d=mm&r=g"
+   },
+   "meta": {
+    "persisted_preferences": {
+     "core": {
+      "isComplementaryAreaVisible": true,
+      "openPanels": [
+       "post-status",
+       "taxonomy-panel-category"
+      ],
+      "editorMode": "visual"
+     },
+     "core/edit-post": {
+      "welcomeGuide": false,
+      "metaBoxesMainIsOpen": true,
+      "fullscreenMode": false
+     },
+     "_modified": "2026-05-14T14:05:27.293Z",
+     "core/customize-widgets": {
+      "welcomeGuide": false
+     },
+     "core/edit-widgets": {
+      "isComplementaryAreaVisible": true,
+      "welcomeGuide": false
+     }
+    },
+    "generateblocks_onboarding": []
+   },
+   "_links": {
+    "self": [
+     {
+      "href": "https://forsmartlife.com/wp-json/wp/v2/users/1",
+      "targetHints": {
+       "allow": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE"
+       ]
+      }
+     }
+    ],
+    "collection": [
+     {
+      "href": "https://forsmartlife.com/wp-json/wp/v2/users"
+     }
+    ]
+   }
+  }
+ ],
+ "settings": [
+  200,
+  {
+   "title": "WellnessNote",
+   "description": "",
+   "url": "https://forsmartlife.com",
+   "email": "gracelyun28@gmail.com",
+   "timezone": "",
+   "date_format": "Y년 m월 d일",
+   "time_format": "g:i a",
+   "start_of_week": 0,
+   "language": "ko_KR",
+   "use_smilies": true,
+   "default_category": 1,
+   "default_post_format": "0",
+   "posts_per_page": 10,
+   "show_on_front": "page",
+   "page_on_front": 717,
+   "page_for_posts": 0,
+   "default_ping_status": "open",
+   "default_comment_status": "open",
+   "site_logo": null,
+   "site_icon": 114
+  }
+ ],
+ "plugins": [
+  200,
+  [
+   {
+    "plugin": "auto-focus-keyword-for-seo/auto-focus-keyword-for-seo",
+    "status": "active",
+    "name": "Auto Focus Keyword for SEO",
+    "plugin_uri": "",
+    "author": "Pagup",
+    "author_uri": "https://pagup.com/",
+    "description": {
+     "raw": "This plugin will assign Focus Keywords to all your pages (on the backend) based on post titles, for websites using Yoast SEO, Rank Math, SEOPress, and All in One SEO.",
+     "rendered": "This plugin will assign Focus Keywords to all your pages (on the backend) based on post titles, for websites using Yoast SEO, Rank Math, SEOPress, and All in One SEO. <cite>By <a href=\"https://pagup.com/\">Pagup</a>.</cite>"
+    },
+    "version": "1.0.12",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "auto-focus-keyword-for-seo",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/auto-focus-keyword-for-seo/auto-focus-keyword-for-seo",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "bulk-image-alt-text-with-yoast/bulk-image-alt-text-with-yoast",
+    "status": "active",
+    "name": "BIALTY - Bulk Image Alt Text (Alt tag, Alt Attribute) with Yoast SEO + WooCommerce",
+    "plugin_uri": "https://better-robots.com/product/plugin-bialty-woocommerce-pro/",
+    "author": "Pagup",
+    "author_uri": "https://pagup.com/",
+    "description": {
+     "raw": "Auto-add Alt texts, also called Alt Tags or Alt Attributes, from YOAST SEO Focus Keyword field (or page/post/product title) with your page/post/product title, to all images contained on your pages, posts, products, portfolios for better Google Ranking on search engines – Fully compatible with Woocommerce",
+     "rendered": "Auto-add Alt texts, also called Alt Tags or Alt Attributes, from YOAST SEO Focus Keyword field (or page/post/product title) with your page/post/product title, to all images contained on your pages, posts, products, portfolios for better Google Ranking on search engines – Fully compatible with Woocommerce <cite>By <a href=\"https://pagup.com/\">Pagup</a>.</cite>"
+    },
+    "version": "2.2.10",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "bulk-image-alt-text-with-yoast",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/bulk-image-alt-text-with-yoast/bulk-image-alt-text-with-yoast",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "contact-form-7/wp-contact-form-7",
+    "status": "active",
+    "name": "Contact Form 7",
+    "plugin_uri": "https://contactform7.com/",
+    "author": "Rock Lobster Inc.",
+    "author_uri": "https://github.com/rocklobster-in/",
+    "description": {
+     "raw": "또 하나의 문의 양식 플러그인. 간단하지만 유연합니다.",
+     "rendered": "또 하나의 문의 양식 플러그인. 간단하지만 유연합니다. <cite>By <a href=\"https://github.com/rocklobster-in/\">Rock Lobster Inc.</a>.</cite>"
+    },
+    "version": "6.2.5",
+    "network_only": false,
+    "requires_wp": "7.1",
+    "requires_php": "8.3",
+    "textdomain": "contact-form-7",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/contact-form-7/wp-contact-form-7",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "disable-xml-rpc-api/disable-xml-rpc-api",
+    "status": "active",
+    "name": "Disable XML-RPC-API",
+    "plugin_uri": "https://neatma.com/dsxmlrpc-plugin/",
+    "author": "Neatma",
+    "author_uri": "https://neatma.com/",
+    "description": {
+     "raw": "Lightweight plugin to disable XML-RPC API and Pingbacks,Trackbacks for faster and more secure website.",
+     "rendered": "Lightweight plugin to disable XML-RPC API and Pingbacks,Trackbacks for faster and more secure website. <cite>By <a href=\"https://neatma.com/\">Neatma</a>.</cite>"
+    },
+    "version": "2.1.7",
+    "network_only": false,
+    "requires_wp": "5.0",
+    "requires_php": "",
+    "textdomain": "dsxmlrpc",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/disable-xml-rpc-api/disable-xml-rpc-api",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "generateblocks/plugin",
+    "status": "active",
+    "name": "GenerateBlocks",
+    "plugin_uri": "https://generateblocks.com",
+    "author": "Tom Usborne",
+    "author_uri": "https://tomusborne.com",
+    "description": {
+     "raw": "A small collection of lightweight WordPress blocks that can accomplish nearly anything.",
+     "rendered": "A small collection of lightweight WordPress blocks that can accomplish nearly anything. <cite>By <a href=\"https://tomusborne.com\">Tom Usborne</a>.</cite>"
+    },
+    "version": "2.5.1",
+    "network_only": false,
+    "requires_wp": "6.7",
+    "requires_php": "7.2",
+    "textdomain": "generateblocks",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/generateblocks/plugin",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "head-footer-code/head-footer-code",
+    "status": "active",
+    "name": "Head &amp; Footer Code",
+    "plugin_uri": "https://urosevic.net/wordpress/plugins/head-footer-code/",
+    "author": "Aleksandar Urošević",
+    "author_uri": "https://urosevic.net/",
+    "description": {
+     "raw": "Easy add site-wide, category or article specific custom code before the closing <strong>&lt;/head&gt;</strong> and <strong>&lt;/body&gt;</strong> or after opening <strong>&lt;body&gt;</strong> HTML tag.",
+     "rendered": "Easy add site-wide, category or article specific custom code before the closing <strong>&lt;/head&gt;</strong> and <strong>&lt;/body&gt;</strong> or after opening <strong>&lt;body&gt;</strong> HTML tag. <cite>By <a href=\"https://urosevic.net/\">Aleksandar Urošević</a>.</cite>"
+    },
+    "version": "1.5.9",
+    "network_only": false,
+    "requires_wp": "5.2",
+    "requires_php": "5.6",
+    "textdomain": "head-footer-code",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/head-footer-code/head-footer-code",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "fast-indexing-api/instant-indexing",
+    "status": "active",
+    "name": "Instant Indexing",
+    "plugin_uri": "https://rankmath.com/wordpress/plugin/instant-indexing/",
+    "author": "Rank Math",
+    "author_uri": "https://s.rankmath.com/home",
+    "description": {
+     "raw": "Get your website crawled immediately by Google using their NEW Indexing APIs.",
+     "rendered": "Get your website crawled immediately by Google using their NEW Indexing APIs. <cite>By <a href=\"https://s.rankmath.com/home\">Rank Math</a>.</cite>"
+    },
+    "version": "1.1.22",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "fast-indexing-api",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/fast-indexing-api/instant-indexing",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "login-lockdown/loginlockdown",
+    "status": "active",
+    "name": "Login Lockdown",
+    "plugin_uri": "https://wploginlockdown.com/",
+    "author": "WebFactory Ltd",
+    "author_uri": "https://www.webfactoryltd.com/",
+    "description": {
+     "raw": "Protect the login form by banning IPs after multiple failed login attempts.",
+     "rendered": "Protect the login form by banning IPs after multiple failed login attempts. <cite>By <a href=\"https://www.webfactoryltd.com/\">WebFactory Ltd</a>.</cite>"
+    },
+    "version": "2.19",
+    "network_only": false,
+    "requires_wp": "4.0",
+    "requires_php": "5.2",
+    "textdomain": "login-lockdown",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/login-lockdown/loginlockdown",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "seo-by-rank-math/rank-math",
+    "status": "active",
+    "name": "Rank Math SEO",
+    "plugin_uri": "https://rankmath.com/",
+    "author": "Rank Math SEO",
+    "author_uri": "https://rankmath.com/?utm_source=Plugin&#038;utm_medium=Readme%20Author%20URI&#038;utm_campaign=WP",
+    "description": {
+     "raw": "Rank Math SEO는 SEO 트래픽을 늘리는 데 도움이 되는 여러 SEO 및 AI SEO 도구의 기능을 단일 패키지에 담은 최고의 워드프레스 SEO 플러그인입니다.",
+     "rendered": "Rank Math SEO는 SEO 트래픽을 늘리는 데 도움이 되는 여러 SEO 및 AI SEO 도구의 기능을 단일 패키지에 담은 최고의 워드프레스 SEO 플러그인입니다. <cite>By <a href=\"https://rankmath.com/?utm_source=Plugin&#038;utm_medium=Readme%20Author%20URI&#038;utm_campaign=WP\">Rank Math SEO</a>.</cite>"
+    },
+    "version": "1.0.282",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "seo-by-rank-math",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/seo-by-rank-math/rank-math",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "simple-author-box/simple-author-box",
+    "status": "active",
+    "name": "단순 작성자 상자",
+    "plugin_uri": "https://wpauthorbox.com/",
+    "author": "웹팩토리",
+    "author_uri": "https://www.webfactoryltd.com/",
+    "description": {
+     "raw": "모든 글에 소셜 아이콘이 있는 반응형 작성자 상자를 추가합니다.",
+     "rendered": "모든 글에 소셜 아이콘이 있는 반응형 작성자 상자를 추가합니다. <cite>By <a href=\"https://www.webfactoryltd.com/\">웹팩토리</a>.</cite>"
+    },
+    "version": "2.61",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "5.6",
+    "textdomain": "simple-author-box",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/simple-author-box/simple-author-box",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "google-site-kit/google-site-kit",
+    "status": "active",
+    "name": "Site Kit by Google",
+    "plugin_uri": "https://sitekit.withgoogle.com",
+    "author": "Google",
+    "author_uri": "https://opensource.google.com",
+    "description": {
+     "raw": "Site Kit은 Google이 웹을 성공적으로 만들어 주는 모든 것을 이용하는 워드프레스 사용자용 종합 해법입니다.",
+     "rendered": "Site Kit은 Google이 웹을 성공적으로 만들어 주는 모든 것을 이용하는 워드프레스 사용자용 종합 해법입니다. <cite>By <a href=\"https://opensource.google.com\">Google</a>.</cite>"
+    },
+    "version": "1.191.0",
+    "network_only": false,
+    "requires_wp": "5.2",
+    "requires_php": "7.4",
+    "textdomain": "google-site-kit",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/google-site-kit/google-site-kit",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "wp-all-export/wp-all-export",
+    "status": "active",
+    "name": "WP All Export",
+    "plugin_uri": "http://www.wpallimport.com/upgrade-to-wp-all-export-pro/?utm_source=export-plugin-free&#038;utm_medium=wp-plugins-page&#038;utm_campaign=upgrade-to-pro",
+    "author": "Soflyy",
+    "author_uri": "",
+    "description": {
+     "raw": "Export any post type to a CSV or XML file. Edit the exported data, and then re-import it later using WP All Import.",
+     "rendered": "Export any post type to a CSV or XML file. Edit the exported data, and then re-import it later using WP All Import. <cite>By Soflyy.</cite>"
+    },
+    "version": "1.6.0",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "wp-all-export",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/wp-all-export/wp-all-export",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "plugin": "wp-super-cache/wp-cache",
+    "status": "active",
+    "name": "WP Super Cache",
+    "plugin_uri": "https://wordpress.org/plugins/wp-super-cache/",
+    "author": "Automattic",
+    "author_uri": "https://automattic.com/",
+    "description": {
+     "raw": "워드프레스용 매우 빠른 캐싱 플러그인.",
+     "rendered": "워드프레스용 매우 빠른 캐싱 플러그인. <cite>By <a href=\"https://automattic.com/\">Automattic</a>.</cite>"
+    },
+    "version": "3.1.5",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "wp-super-cache",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/plugins/wp-super-cache/wp-cache",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "themes": [
+  200,
+  [
+   {
+    "stylesheet": "generatepress",
+    "template": "generatepress",
+    "requires_php": "7.4",
+    "requires_wp": "6.5",
+    "textdomain": "generatepress",
+    "version": "3.6.1",
+    "screenshot": "https://forsmartlife.com/wp-content/themes/generatepress/screenshot.png",
+    "author": {
+     "raw": "Tom Usborne\" (톰 어스본)",
+     "rendered": "<a href=\"https://generatepress.com/about\">Tom Usborne\" (톰 어스본)</a>"
+    },
+    "author_uri": {
+     "raw": "https://generatepress.com/about",
+     "rendered": "https://generatepress.com/about"
+    },
+    "description": {
+     "raw": "GeneratePress는 속도와 유용성에 중점을 둔 경량 워드프레스 테마입니다. 성능은 우리에게 중요하므로 새로운 GeneratePress 설치가 페이지 크기에 10kb(gzipped) 미만을 추가합니다. 우리는 블록 편집기(Gutenberg)를 최대한 활용하여 콘텐츠 생성에 대한 더 많은 제어를 제공합니다. 페이지 빌더를 사용하는 경우 GeneratePress가 적합한 테마입니다. Beaver Builder 및 Elementor를 포함한 모든 주요 페이지 빌더와 완벽하게 호환됩니다. WordPress 코딩 표준에 대한 강조 덕분에 우커머스를 포함하여 잘 코딩된 모든 플러그인과의 완벽한 호환성을 자랑할 수 있습니다. GeneratePress는 완벽하게 반응하고 유효한 HTML/CSS를 사용하며 놀라운 사용자 커뮤니티를 통해 25개 이상의 언어로 번역됩니다. 많은 기능 중 일부에는 60개 이상의 색상 컨트롤, 강력한 동적 타이포그래피, 5개의 탐색 위치, 5개의 사이드바 레이아웃, 드롭다운 메뉴(클릭 또는 가리키기) 및 9개의 위젯 영역이 포함됩니다. 자세한 내용을 알아보고 https://generatepress.com에서 강력한 프리미엄 버전을 확인하십시오.",
+     "rendered": "GeneratePress는 속도와 유용성에 중점을 둔 경량 워드프레스 테마입니다. 성능은 우리에게 중요하므로 새로운 GeneratePress 설치가 페이지 크기에 10kb(gzipped) 미만을 추가합니다. 우리는 블록 편집기(Gutenberg)를 최대한 활용하여 콘텐츠 생성에 대한 더 많은 제어를 제공합니다. 페이지 빌더를 사용하는 경우 GeneratePress가 적합한 테마입니다. Beaver Builder 및 Elementor를 포함한 모든 주요 페이지 빌더와 완벽하게 호환됩니다. WordPress 코딩 표준에 대한 강조 덕분에 우커머스를 포함하여 잘 코딩된 모든 플러그인과의 완벽한 호환성을 자랑할 수 있습니다. GeneratePress는 완벽하게 반응하고 유효한 HTML/CSS를 사용하며 놀라운 사용자 커뮤니티를 통해 25개 이상의 언어로 번역됩니다. 많은 기능 중 일부에는 60개 이상의 색상 컨트롤, 강력한 동적 타이포그래피, 5개의 탐색 위치, 5개의 사이드바 레이아웃, 드롭다운 메뉴(클릭 또는 가리키기) 및 9개의 위젯 영역이 포함됩니다. 자세한 내용을 알아보고 https://generatepress.com에서 강력한 프리미엄 버전을 확인하십시오."
+    },
+    "name": {
+     "raw": "GeneratePress",
+     "rendered": "GeneratePress"
+    },
+    "tags": {
+     "raw": [
+      "two-columns",
+      "three-columns",
+      "one-column",
+      "right-sidebar",
+      "left-sidebar",
+      "footer-widgets",
+      "blog",
+      "e-commerce",
+      "flexible-header",
+      "full-width-template",
+      "buddypress",
+      "custom-header",
+      "custom-background",
+      "custom-menu",
+      "custom-colors",
+      "sticky-post",
+      "threaded-comments",
+      "translation-ready",
+      "rtl-language-support",
+      "featured-images",
+      "theme-options"
+     ],
+     "rendered": "two-columns, three-columns, one-column, right-sidebar, left-sidebar, footer-widgets, blog, e-commerce, flexible-header, full-width-template, buddypress, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, rtl-language-support, featured-images, theme-options"
+    },
+    "theme_uri": {
+     "raw": "https://generatepress.com",
+     "rendered": "https://generatepress.com"
+    },
+    "status": "active",
+    "theme_supports": {
+     "align-wide": true,
+     "automatic-feed-links": true,
+     "block-templates": false,
+     "block-template-parts": false,
+     "custom-background": false,
+     "custom-header": false,
+     "custom-logo": {
+      "width": 350,
+      "height": 70,
+      "flex-width": true,
+      "flex-height": true,
+      "header-text": [],
+      "unlink-homepage-logo": false
+     },
+     "customize-selective-refresh-widgets": true,
+     "dark-editor-style": false,
+     "disable-custom-colors": false,
+     "disable-custom-font-sizes": false,
+     "disable-custom-gradients": false,
+     "disable-layout-styles": false,
+     "editor-color-palette": [
+      {
+       "name": "대조",
+       "slug": "contrast",
+       "color": "var(--contrast)"
+      },
+      {
+       "name": "대비 2",
+       "slug": "contrast-2",
+       "color": "var(--contrast-2)"
+      },
+      {
+       "name": "대비 3",
+       "slug": "contrast-3",
+       "color": "var(--contrast-3)"
+      },
+      {
+       "name": "기본",
+       "slug": "base",
+       "color": "var(--base)"
+      },
+      {
+       "name": "기본 2",
+       "slug": "base-2",
+       "color": "var(--base-2)"
+      },
+      {
+       "name": "기본 3",
+       "slug": "base-3",
+       "color": "var(--base-3)"
+      },
+      {
+       "name": "억양",
+       "slug": "accent",
+       "color": "var(--accent)"
+      }
+     ],
+     "editor-font-sizes": false,
+     "editor-gradient-presets": false,
+     "editor-spacing-sizes": false,
+     "editor-styles": true,
+     "html5": [
+      "search-form",
+      "comment-form",
+      "comment-list",
+      "gallery",
+      "caption",
+      "script",
+      "style"
+     ],
+     "formats": [
+      "standard",
+      "aside",
+      "image",
+      "video",
+      "quote",
+      "link",
+      "status"
+     ],
+     "post-thumbnails": true,
+     "responsive-embeds": true,
+     "title-tag": true,
+     "wp-block-styles": false
+    },
+    "is_block_theme": false,
+    "stylesheet_uri": "https://forsmartlife.com/wp-content/themes/generatepress",
+    "template_uri": "https://forsmartlife.com/wp-content/themes/generatepress",
+    "default_template_types": [
+     {
+      "title": "색인",
+      "description": "보다 구체적인 템플릿이 정의되지 않은 경우 모든 페이지에 대한 대체 템플릿으로 사용됩니다.",
+      "slug": "index"
+     },
+     {
+      "title": "블로그 홈",
+      "description": "최신 글을 사이트 홈페이지 또는 읽기 설정에서 정의한 대로 \"글 페이지\"로 표시합니다. 이 템플릿이 있는 경우 홈페이지에 글이 표시될 때 첫 페이지 템플릿이 이 템플릿을 재정의합니다.",
+      "slug": "home"
+     },
+     {
+      "title": "전면 페이지",
+      "description": "최신 글 또는 정적 페이지를 표시하도록 설정된 사이트의 홈페이지를 표시합니다. 프론트 페이지 템플릿은 모든 템플릿보다 우선합니다.",
+      "slug": "front-page"
+     },
+     {
+      "title": "단일 입력 내용",
+      "description": "글 또는 페이지와 같은 단일 항목을 표시합니다. 이 템플릿은 보다 구체적인 템플릿(예: 단일 글, 페이지 또는 첨부파일)을 찾을 수 없는 경우 대체 템플릿으로 사용됩니다.",
+      "slug": "singular"
+     },
+     {
+      "title": "단일 글",
+      "description": "해당 글에 사용자 정의 템플릿이 적용되지 않았거나 전용 템플릿이 없는 경우 웹사이트에 단일 글을 표시합니다.",
+      "slug": "single"
+     },
+     {
+      "title": "페이지",
+      "description": "사용자 정의 템플릿이 적용되지 않았거나 전용 템플릿이 없는 경우 정적 페이지를 표시합니다.",
+      "slug": "page"
+     },
+     {
+      "title": "모든 보관함",
+      "description": "단일 작성자, 카테고리, 태그, 택소노미, 사용자 정의 글 유형 및 날짜를 포함한 모든 글 보관함을 표시합니다. 이 템플릿은 더 구체적인 템플릿(예: 카테고리 또는 태그)을 찾을 수 없는 경우 대체 템플릿으로 사용됩니다.",
+      "slug": "archive"
+     },
+     {
+      "title": "작성자 보관함",
+      "description": "단일 작성자의 글 보관함을 표시합니다. 이 템플릿은 보다 구체적인 템플릿(예: 작성자: 관리자)을 찾을 수 없는 경우 대체 템플릿으로 사용됩니다.",
+      "slug": "author"
+     },
+     {
+      "title": "글 카테고리 보관함",
+      "description": "글 카테고리 보관함을 표시합니다. 이 템플릿은 더 구체적인 템플릿(예: 카테고리: 레시피)을 찾을 수 없는 경우 대체 템플릿으로 사용됩니다.",
+      "slug": "category"
+     },
+     {
+      "title": "택소노미",
+      "description": "사용자 정의 택소노미 보관함을 표시합니다. 카테고리 및 태그와 마찬가지로 택소노미에는 사물을 분류하는 데 사용하는 용어가 있습니다. 예를 들어 \"미술\"이라는 택소노미에는 \"현대\", \"18세기\"와 같은 여러 용어가 있을 수 있습니다. 이 템플릿은 보다 구체적인 템플릿(예: 택소노미: 미술)을 찾을 수 없을 때 대체용으로 사용됩니다.",
+      "slug": "taxonomy"
+     },
+     {
+      "title": "날짜 보관함",
+      "description": "특정 날짜를 방문하면 글 보관함을 표시합니다(예: example.com/2023/).",
+      "slug": "date"
+     },
+     {
+      "title": "태그 아카이브",
+      "description": "글 태그 보관함을 표시합니다. 이 템플릿은 더 구체적인 템플릿(예: 태그: 피자)을 찾을 수 없는 경우 대체 템플릿으로 사용됩니다.",
+      "slug": "tag"
+     },
+     {
+      "title": "첨부파일 페이지",
+      "description": "방문자가 모든 미디어 첨부파일에 대해 존재하는 전용 페이지를 볼 때 표시됩니다.",
+      "slug": "attachment"
+     },
+     {
+      "title": "검색 결과",
+      "description": "방문자가 웹사이트에서 검색을 수행할 때 표시됩니다.",
+      "slug": "search"
+     },
+     {
+      "title": "개인정보 처리방침",
+      "description": "사이트의 개인정보 보호정책 페이지를 표시합니다.",
+      "slug": "privacy-policy"
+     },
+     {
+      "title": "페이지: 404",
+      "description": "방문자가 죽은 링크 또는 잘못 입력된 URL과 같이 존재하지 않는 페이지를 볼 때 표시됩니다.",
+      "slug": "404"
+     },
+     {
+      "title": "글 형식: 표준",
+      "description": "표준 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-standard"
+     },
+     {
+      "title": "글 형식: 추가정보",
+      "description": "추가정보 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-aside"
+     },
+     {
+      "title": "글 형식: 채팅",
+      "description": "채팅 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-chat"
+     },
+     {
+      "title": "글 형식: 갤러리",
+      "description": "갤러리 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-gallery"
+     },
+     {
+      "title": "글 형식: 링크",
+      "description": "링크 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-link"
+     },
+     {
+      "title": "글 형식: 이미지",
+      "description": "이미지 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-image"
+     },
+     {
+      "title": "글 형식: 인용",
+      "description": "인용 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-quote"
+     },
+     {
+      "title": "글 형식: 상태",
+      "description": "상태 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-status"
+     },
+     {
+      "title": "글 형식: 동영상",
+      "description": "동영상 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-video"
+     },
+     {
+      "title": "글 형식: 오디오",
+      "description": "오디오 글 형식의 보관함을 표시합니다.",
+      "slug": "taxonomy-post_format-post-format-audio"
+     }
+    ],
+    "default_template_part_areas": [
+     {
+      "area": "uncategorized",
+      "label": "일반",
+      "description": "일반 템플릿은 글 콘텐츠를 표시하는 것과 간이 특정 역할을 수행하며 특정 영역과 묶여있지 않습니다.",
+      "icon": "layout",
+      "area_tag": "div"
+     },
+     {
+      "area": "header",
+      "label": "헤더",
+      "description": "헤더 템플릿은 사이트 제목, 로고, 주 메뉴를 포함하는 페이지 영역을 정의합니다.",
+      "icon": "header",
+      "area_tag": "header"
+     },
+     {
+      "area": "footer",
+      "label": "푸터",
+      "description": "푸터 템플릿은 사이트 크레딧, 소셜 링크 또는 다른 블록과의 조합을 포함하는 페이지 영역을 정의합니다.",
+      "icon": "footer",
+      "area_tag": "footer"
+     },
+     {
+      "area": "navigation-overlay",
+      "label": "내비게이션 오버레이",
+      "description": "‘네비게이션 오버레이’ 템플릿은 일반적으로 네비게이션 링크가 포함된 오버레이 영역을 정의하며, 이 영역은 열기 및 닫기를 전환할 수 있습니다.",
+      "icon": "navigation-overlay",
+      "area_tag": "div"
+     }
+    ],
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/themes/generatepress",
+       "targetHints": {
+        "allow": [
+         "GET"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/themes"
+      }
+     ],
+     "wp:user-global-styles": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/global-styles/1283"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "menus": [
+  200,
+  [
+   {
+    "id": 2,
+    "description": "",
+    "name": "메뉴 1",
+    "slug": "%eb%a9%94%eb%89%b4-1",
+    "meta": [],
+    "locations": [
+     "primary"
+    ],
+    "auto_add": true,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus/2",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/taxonomies/nav_menu"
+      }
+     ],
+     "wp:post_type": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items?menus=2"
+      }
+     ],
+     "wp:menu-location": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-locations/primary"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 5,
+    "description": "",
+    "name": "하단 메뉴",
+    "slug": "%ed%95%98%eb%8b%a8-%eb%a9%94%eb%89%b4",
+    "meta": [],
+    "locations": [],
+    "auto_add": false,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus/5",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/taxonomies/nav_menu"
+      }
+     ],
+     "wp:post_type": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items?menus=5"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "menu_items": [
+  200,
+  [
+   {
+    "id": 710,
+    "title": {
+     "rendered": "소개"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/about/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 18,
+    "parent": 0,
+    "menu_order": 1,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/710",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=710"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/18"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 718,
+    "title": {
+     "rendered": "홈"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 717,
+    "parent": 0,
+    "menu_order": 1,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 2,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/718",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=718"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/717"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 25,
+    "title": {
+     "rendered": "계절 건강"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/category/season-health-tips/",
+    "attr_title": "",
+    "description": "",
+    "type": "taxonomy",
+    "type_label": "카테고리",
+    "object": "category",
+    "object_id": 1,
+    "parent": 0,
+    "menu_order": 2,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 2,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/25",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=25"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "taxonomy": "category",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/categories/1"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 708,
+    "title": {
+     "rendered": "문의"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/contact/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 16,
+    "parent": 0,
+    "menu_order": 2,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/708",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=708"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/16"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 149,
+    "title": {
+     "rendered": "건강 루틴"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/category/health-routine/",
+    "attr_title": "",
+    "description": "",
+    "type": "taxonomy",
+    "type_label": "카테고리",
+    "object": "category",
+    "object_id": 3,
+    "parent": 0,
+    "menu_order": 3,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 2,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/149",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=149"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "taxonomy": "category",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/categories/3"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 707,
+    "title": {
+     "rendered": "개인정보처리방침"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/privacy-policy/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 3,
+    "parent": 0,
+    "menu_order": 3,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/707",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=707"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/3"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 150,
+    "title": {
+     "rendered": "증상 관리"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/category/symptom-management/",
+    "attr_title": "",
+    "description": "",
+    "type": "taxonomy",
+    "type_label": "카테고리",
+    "object": "category",
+    "object_id": 4,
+    "parent": 0,
+    "menu_order": 4,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 2,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/150",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=150"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "taxonomy": "category",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/categories/4"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 810,
+    "title": {
+     "rendered": "편집 원칙"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/editorial-policy/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 807,
+    "parent": 0,
+    "menu_order": 4,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/810",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=810"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/807"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 814,
+    "title": {
+     "rendered": "의료 정보 고지"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/medical-disclaimer/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 811,
+    "parent": 0,
+    "menu_order": 5,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/814",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=814"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/811"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": 709,
+    "title": {
+     "rendered": "이용약관"
+    },
+    "status": "publish",
+    "url": "https://forsmartlife.com/terms-of-service/",
+    "attr_title": "",
+    "description": "",
+    "type": "post_type",
+    "type_label": "페이지",
+    "object": "page",
+    "object_id": 11,
+    "parent": 0,
+    "menu_order": 6,
+    "target": "",
+    "classes": [
+     ""
+    ],
+    "xfn": [
+     ""
+    ],
+    "invalid": false,
+    "meta": [],
+    "menus": 5,
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items/709",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menu-items"
+      }
+     ],
+     "about": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/types/nav_menu_item"
+      }
+     ],
+     "wp:term": [
+      {
+       "taxonomy": "nav_menu",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/menus?post=709"
+      }
+     ],
+     "wp:menu-item-object": [
+      {
+       "post_type": "page",
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/pages/11"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "sidebars": [
+  200,
+  [
+   {
+    "id": "wp_inactive_widgets",
+    "name": "비활성 위젯",
+    "description": "",
+    "class": "",
+    "before_widget": "",
+    "after_widget": "",
+    "before_title": "",
+    "after_title": "",
+    "status": "inactive",
+    "widgets": [
+     "block-34",
+     "block-36",
+     "block-10",
+     "block-12",
+     "block-13",
+     "block-15",
+     "block-18",
+     "block-19",
+     "block-20",
+     "block-25",
+     "block-26",
+     "block-28",
+     "block-16"
+    ],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=wp_inactive_widgets"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "sidebar-1",
+    "name": "우측 사이드바",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [
+     "block-2",
+     "block-3",
+     "block-4",
+     "block-8"
+    ],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-1",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=sidebar-1"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "sidebar-2",
+    "name": "좌측 사이드바",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [
+     "block-5",
+     "block-6"
+    ],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-2",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=sidebar-2"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "header",
+    "name": "헤더",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/header",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=header"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-1",
+    "name": "푸터 위젯 1",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-1",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-1"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-2",
+    "name": "푸터 위젯 2",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-2",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-2"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-3",
+    "name": "푸터 위젯 3",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-3",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-3"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-4",
+    "name": "푸터 위젯 4",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-4",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-4"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-5",
+    "name": "푸터 위젯 5",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-5",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-5"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "footer-bar",
+    "name": "하단 막대",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [
+     "nav_menu-2",
+     "block-35",
+     "block-37",
+     "block-32"
+    ],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-bar",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=footer-bar"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "top-bar",
+    "name": "상단 막대",
+    "description": "",
+    "class": "",
+    "before_widget": "<aside id=\"%1$s\" class=\"widget inner-padding %2$s\">",
+    "after_widget": "</aside>",
+    "before_title": "<h2 class=\"widget-title\">",
+    "after_title": "</h2>",
+    "status": "active",
+    "widgets": [],
+    "_links": {
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars"
+      }
+     ],
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/top-bar",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH"
+        ]
+       }
+      }
+     ],
+     "wp:widget": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets?sidebar=top-bar"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "widgets": [
+  200,
+  [
+   {
+    "id": "block-34",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-34",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-36",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-36",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-10",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-10",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-12",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-12",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-13",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-13",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-15",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-15",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-18",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-18",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-19",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-19",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-20",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-20",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-25",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-25",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-26",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-26",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-28",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-28",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-16",
+    "id_base": "block",
+    "sidebar": "wp_inactive_widgets",
+    "rendered": "",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-16",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/wp_inactive_widgets/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-2",
+    "id_base": "block",
+    "sidebar": "sidebar-1",
+    "rendered": "<aside id=\"block-2\" class=\"widget inner-padding widget_block widget_search\"><form role=\"search\" method=\"get\" action=\"https://forsmartlife.com/\" class=\"wp-block-search__button-outside wp-block-search__text-button wp-block-search\" ><label class=\"wp-block-search__label\" for=\"wp-block-search__input-1\" >검색</label><div class=\"wp-block-search__inside-wrapper\" ><input class=\"wp-block-search__input\" id=\"wp-block-search__input-1\" placeholder=\"\" value=\"\" type=\"search\" name=\"s\" required /><button aria-label=\"검색\" class=\"wp-block-search__button wp-element-button\" type=\"submit\" >검색</button></div></form></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-2",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-1/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-3",
+    "id_base": "block",
+    "sidebar": "sidebar-1",
+    "rendered": "<aside id=\"block-3\" class=\"widget inner-padding widget_block\"><div class=\"wp-block-group\"><div class=\"wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow\"><h2 class=\"wp-block-heading\">Recent Posts</h2><ul class=\"wp-block-latest-posts__list wp-block-latest-posts is-layout-flow wp-block-latest-posts-is-layout-flow\"><li><a class=\"wp-block-latest-posts__post-title\" href=\"https://forsmartlife.com/pneumococcal-vaccine-history-check/\">폐렴구균 예방접종 예약 전 접종 이력을 확인해야 헛걸음을 줄인다</a></li>\n<li><a class=\"wp-block-latest-posts__post-title\" href=\"https://forsmartlife.com/atopic-eczema-moisturize-shower/\">아토피 피부염 보습은 샤워 직후에 챙기는 사람이 많은 까닭</a></li>\n<li><a class=\"wp-block-latest-posts__post-title\" href=\"https://forsmartlife.com/migraine-aura-before-headache-changes/\">편두통 전조증상은 두통이 오기 전 어떤 변화로 시작될까</a></li>\n<li><a class=\"wp-block-latest-posts__post-title\" href=\"https://forsmartlife.com/bone-density-metal-jewelry-prep/\">골밀도 검사 전 금속 장신구를 그대로 착용하면 놓칠 수 있는 부분</a></li>\n<li><a class=\"wp-block-latest-posts__post-title\" href=\"https://forsmartlife.com/sleep-apnea-test-home-vs-clinic/\">수면무호흡 검사에서 많이 헷갈리는 지점은 집에서 하는 검사와 병원 검사다</a></li>\n</ul></div></div></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-3",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-1/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-4",
+    "id_base": "block",
+    "sidebar": "sidebar-1",
+    "rendered": "<aside id=\"block-4\" class=\"widget inner-padding widget_block\"><div class=\"wp-block-group\"><div class=\"wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow\"><h2 class=\"wp-block-heading\">Recent Comments</h2><div class=\"no-comments wp-block-latest-comments\">보여줄 댓글이 없습니다.</div></div></div></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-4",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-1/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-8",
+    "id_base": "block",
+    "sidebar": "sidebar-1",
+    "rendered": "<aside id=\"block-8\" class=\"widget inner-padding widget_block\"><ul class=\"wp-block-page-list\"><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/privacy-policy/\">개인정보처리방침</a></li><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/contact/\">문의</a></li><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/about/\">소개</a></li><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/medical-disclaimer/\">의료 정보 고지</a></li><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/terms-of-service/\">이용약관</a></li><li class=\"wp-block-pages-list__item\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/editorial-policy/\">편집 원칙</a></li><li class=\"wp-block-pages-list__item menu-item-home\"><a class=\"wp-block-pages-list__item__link\" href=\"https://forsmartlife.com/\">홈</a></li></ul></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-8",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-1/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-5",
+    "id_base": "block",
+    "sidebar": "sidebar-2",
+    "rendered": "<aside id=\"block-5\" class=\"widget inner-padding widget_block\"><div class=\"wp-block-group\"><div class=\"wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow\"><h2 class=\"wp-block-heading\">Archives</h2><ul class=\"wp-block-archives-list wp-block-archives\">\t<li><a href='https://forsmartlife.com/2026/11/'>2026년 11월</a></li>\n\t<li><a href='https://forsmartlife.com/2026/10/'>2026년 10월</a></li>\n\t<li><a href='https://forsmartlife.com/2026/05/'>2026년 5월</a></li>\n\t<li><a href='https://forsmartlife.com/2026/04/'>2026년 4월</a></li>\n\t<li><a href='https://forsmartlife.com/2026/03/'>2026년 3월</a></li>\n</ul></div></div></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-5",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-2/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-6",
+    "id_base": "block",
+    "sidebar": "sidebar-2",
+    "rendered": "<aside id=\"block-6\" class=\"widget inner-padding widget_block\"><div class=\"wp-block-group\"><div class=\"wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow\"><h2 class=\"wp-block-heading\">Categories</h2><ul class=\"wp-block-categories-list wp-block-categories-taxonomy-category wp-block-categories\">\t<li class=\"cat-item cat-item-3\"><a href=\"https://forsmartlife.com/category/health-routine/\">건강 루틴</a>\n</li>\n\t<li class=\"cat-item cat-item-1\"><a href=\"https://forsmartlife.com/category/season-health-tips/\">계절 건강</a>\n</li>\n\t<li class=\"cat-item cat-item-4\"><a href=\"https://forsmartlife.com/category/symptom-management/\">증상 관리</a>\n</li>\n</ul></div></div></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-6",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/sidebar-2/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "nav_menu-2",
+    "id_base": "nav_menu",
+    "sidebar": "footer-bar",
+    "rendered": "<aside id=\"nav_menu-2\" class=\"widget inner-padding widget_nav_menu\"><div class=\"menu-%ed%95%98%eb%8b%a8-%eb%a9%94%eb%89%b4-container\"><ul id=\"menu-%ed%95%98%eb%8b%a8-%eb%a9%94%eb%89%b4\" class=\"menu\"><li id=\"menu-item-710\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-710\"><a href=\"https://forsmartlife.com/about/\">소개</a></li>\n<li id=\"menu-item-708\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-708\"><a href=\"https://forsmartlife.com/contact/\">문의</a></li>\n<li id=\"menu-item-707\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-707\"><a rel=\"privacy-policy\" href=\"https://forsmartlife.com/privacy-policy/\">개인정보처리방침</a></li>\n<li id=\"menu-item-810\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-810\"><a href=\"https://forsmartlife.com/editorial-policy/\">편집 원칙</a></li>\n<li id=\"menu-item-814\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-814\"><a href=\"https://forsmartlife.com/medical-disclaimer/\">의료 정보 고지</a></li>\n<li id=\"menu-item-709\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-709\"><a href=\"https://forsmartlife.com/terms-of-service/\">이용약관</a></li>\n</ul></div></aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/nav_menu-2",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/nav_menu"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-bar/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-35",
+    "id_base": "block",
+    "sidebar": "footer-bar",
+    "rendered": "<aside id=\"block-35\" class=\"widget inner-padding widget_block\">\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n</aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-35",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-bar/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-37",
+    "id_base": "block",
+    "sidebar": "footer-bar",
+    "rendered": "<aside id=\"block-37\" class=\"widget inner-padding widget_block\">\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n</aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-37",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-bar/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "block-32",
+    "id_base": "block",
+    "sidebar": "footer-bar",
+    "rendered": "<aside id=\"block-32\" class=\"widget inner-padding widget_block\">\n<p class=\"gb-text gb-text-db0af941\">본 블로그는 건강 정보 제공에 불과하며, 정보 사용에 따른 결과에 대해 일체의 책임을 지지 않습니다. 개별적인 건강 상태와 관련된 문제는 반드시 전문 의료진과 상담하시기 바랍니다.</p>\n</aside>",
+    "_links": {
+     "self": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets/block-32",
+       "targetHints": {
+        "allow": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ]
+       }
+      }
+     ],
+     "collection": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widgets"
+      }
+     ],
+     "about": [
+      {
+       "embeddable": true,
+       "href": "https://forsmartlife.com/wp-json/wp/v2/widget-types/block"
+      }
+     ],
+     "wp:sidebar": [
+      {
+       "href": "https://forsmartlife.com/wp-json/wp/v2/sidebars/footer-bar/"
+      }
+     ],
+     "curies": [
+      {
+       "name": "wp",
+       "href": "https://api.w.org/{rel}",
+       "templated": true
+      }
+     ]
+    }
+   }
+  ]
+ ],
+ "pages": [
+  {
+   "id": 811,
+   "status": "publish",
+   "slug": "medical-disclaimer",
+   "link": "https://forsmartlife.com/medical-disclaimer/",
+   "title": "의료 정보 고지",
+   "text": " Medical Disclaimer 최종 업데이트: 2026년 5월 이 페이지는 무엇인가요? WellnessNote(forsmartlife.com)에 게시된 모든 건강 정보의 한계와 이용 범위를 안내하는 페이지입니다. 의료 조언이 아닙니다 본 사이트의 모든 콘텐츠는 일반적인 건강 정보 제공 을 목적으로 작성되었으며, 아래 사항에 해당하지 않습니다. 의학적 진단 의학적 치료 처방 특정 질환의 치료·완치·예방 보장 의사·약사·영양사 등 전문가의 상담 대체 건강에 이상이 있거나 특정 증상이 지속될 경우, 반드시 의사 또는 전문 의료기관을 방문하여 진료를 받으시기 바랍니다. 정보의 정확성과 최신성 본 사이트는 질병관리청, 식품의약품안전처, 세계보건기구(WHO), 미국 국립보건원(NIH) 등 신뢰할 수 있는 공공기관 자료와 학술 연구를 바탕으로 정보를 작성합니다. 그러나 의학 가이드라인은 지속적으로 개정되므로, 본 사이트의 정보가 현재 최신 가이드라인과 다를 수 있습니다. 중요한 건강 결정을 내리기 전 반드시 최신 전문가 자료를 직접 확인하시기 바랍니다. 개인차 및 책임 동일한 건강 정보라도 개인의 건강 상태, 복용 중인 약물, 과거 병력, 생활습관에 따라 결과가 달라질 수 있습니다. 본 사이트의 정보를 활용함으로써 발생하는 결과에 대한 책임은 이용자 본인에게 있으며, 운영자는 이로 인한 직·간접적 손해에 대해 법적 책임을 지지 않습니다. 응급 상황 안내 생명을 위협하는 응급 상황에서는 즉시 119 에 신고하거나 가까운 응급실을 방문하세요. 본 사이트의 정보는 응급 처치 지침을 대체하지 않습니다. 문의 이 페이지와 관련된 문의사항은 아래로 연락 주세요. 이메일: gracelyun28@gmail.com "
+  },
+  {
+   "id": 807,
+   "status": "publish",
+   "slug": "editorial-policy",
+   "link": "https://forsmartlife.com/editorial-policy/",
+   "title": "편집 원칙",
+   "text": " WellnessNote 편집 원칙 최종 업데이트: 2026년 5월 WellnessNote(forsmartlife.com) 는 건강 정보를 다루는 블로그로서, 독자에게 정확하고 신뢰할 수 있는 정보를 제공하기 위해 아래의 편집 원칙을 따릅니다. 1. 근거 기반 작성 모든 건강 정보는 아래 출처를 우선적으로 확인한 뒤 작성합니다. 질병관리청(kdca.go.kr) 식품의약품안전처(mfds.go.kr) 국가건강정보포털(health.kdca.go.kr) 국립암센터(ncc.re.kr) 세계보건기구(who.int) 미국 국립보건원(nih.gov) PubMed 등재 학술 논문 출처가 불분명한 정보, 과학적으로 검증되지 않은 속설은 다루지 않으며, 근거가 부족한 경우 \"근거 부족\"이라고 명시합니다. 2. 과장 표현 금지 \"즉시 효과\", \"완치\", \"100% 효과\" 등 단정적이거나 과장된 표현을 사용하지 않습니다. 연구 결과를 인용할 때는 연구의 한계도 함께 안내합니다. 3. 콘텐츠 업데이트 및 정정 건강 가이드라인은 지속적으로 개정됩니다. WellnessNote는 주요 가이드라인 변경 시 해당 글을 업데이트하고, 최종 수정일을 글에 명시합니다. 오류가 확인되면 즉시 수정합니다. 오류 제보: gracelyun28@gmail.com 4. 광고 및 제휴 고지 본 블로그는 Google AdSense 등 제3자 광고 서비스를 운영할 수 있습니다. 광고는 콘텐츠 작성에 영향을 주지 않으며, 제휴 링크가 포함될 경우 해당 글에 명시합니다. 5. 의학적 면책 본 블로그의 모든 콘텐츠는 일반적인 건강 정보 제공을 목적으로 하며, 의학적 진단이나 치료를 대체하지 않습니다. 건강 이상이 있을 경우 반드시 의사나 전문가와 상담하세요. 자세한 내용은 Medical Disclaimer 페이지를 확인하세요. "
+  },
+  {
+   "id": 717,
+   "status": "publish",
+   "slug": "%ed%99%88",
+   "link": "https://forsmartlife.com/",
+   "title": "홈",
+   "text": " {{post_title link:post}} {{post_date}} {{post_excerpt length:20}} Previous Next No results found. "
+  },
+  {
+   "id": 18,
+   "status": "publish",
+   "slug": "about",
+   "link": "https://forsmartlife.com/about/",
+   "title": "소개",
+   "text": " WellnessNote를 찾아주셔서 감사합니다. 저는 두 딸을 키우며 직장을 병행하는 워킹맘입니다. 이 블로그를 시작하게 된 건 거창한 이유가 아니었어요. 아이들이 환절기마다 비염과 감기로 고생하는 모습을 지켜보면서, 그때마다 인터넷을 검색하면 출처도 불분명하고 서로 다른 말들이 너무 많아 무엇을 믿어야 할지 막막했어요. 16년간 두 아이를 키우면서 직접 겪고, 직접 확인하고, 직접 실천해본 것들을 정리하고 싶었습니다. 그게 WellnessNote의 시작이에요. 📌 이 블로그에서 다루는 것들 계절별 건강 관리 — 환절기·봄·여름·가을·겨울마다 달라지는 몸의 변화와 대응법 증상 관리 — 비염, 탈모, 불면증, 피부 건조 등 생활에서 자주 마주치는 증상 중심 건강 루틴 — 바쁜 일상에서 실제로 실천할 수 있는 식습관·생활습관 정보 근거 기반 정보 — 효과가 없는 것은 없다고 솔직하게 씁니다 📌 이 블로그의 기준 공식 출처를 기반으로 씁니다. 질병관리청, 식품의약품안전처, 국가건강정보포털 등 신뢰할 수 있는 공공기관 자료와 학술 연구를 바탕으로 내용을 작성합니다. 출처가 불분명한 정보는 다루지 않습니다. \"효과 있다\"는 말을 함부로 하지 않습니다. 직접 실천해보고, 근거를 확인한 내용만 씁니다. 과학적으로 입증되지 않은 속설은 \"근거 부족\"이라고 명확하게 표시합니다. 바쁜 분들을 위해 씁니다. 육아와 직장을 병행하면서 느낀 건 하나예요. 아무리 좋은 정보도 실천할 수 없으면 의미가 없다는 것. 모든 정보는 일상에서 바로 써먹을 수 있는 형태로 정리합니다. 📌 건강 정보 이용 안내 본 블로그의 모든 콘텐츠는 일반적인 건강 정보 제공을 목적 으로 작성되었으며, 의학적 진단이나 치료를 대체하지 않습니다. 개인의 건강 상태에 따라 필요한 조치가 다를 수 있으니, 특정 증상이 있는 경우 반드시 전문의와 상담하시기 바랍니다. 📌 운영자 WellNote 두 딸을 키우며 직장 생활을 병행하는 워킹맘입니다. 아이들의 건강 문제를 계기로 공부를 시작해 16년간 직접 겪고 검증한 생활 건강 정보를 씁니다. 질병관리청·식품의약품안전처 등 공식 출처를 기반으로, 실천 가능한 건강 루틴을 전달합니다. 궁금한 점이나 다뤄주셨으면 하는 건강 주제가 있다면 편하게 연락 주세요. 📩 이메일: gracelyun28@gmail.com "
+  },
+  {
+   "id": 16,
+   "status": "publish",
+   "slug": "contact",
+   "link": "https://forsmartlife.com/contact/",
+   "title": "문의",
+   "text": " [contact-form-7 id=\"1926606\" title=\"문의 양식(kr)\"] "
+  },
+  {
+   "id": 11,
+   "status": "publish",
+   "slug": "terms-of-service",
+   "link": "https://forsmartlife.com/terms-of-service/",
+   "title": "이용약관",
+   "text": " 이용약관 및 의료 면책 고지문 WellnessNote(forsmartlife.com) 는 30~50대를 위한 근거 중심 생활 건강 정보 블로그입니다. 질병관리청·식품의약품안전처·국가건강정보포털 등 신뢰할 수 있는 공공 기관 자료와 학술 문헌을 바탕으로 정확하고 실천 가능한 건강 정보를 제공하기 위해 최선을 다합니다. 그럼에도 불구하고 정보의 완전성·적용 가능성·시의성을 보장하지 않으며, 개별 상황에 따라 내용의 해석과 결과는 달라질 수 있습니다. 시행일: 2026년 4월 20일 의료 행위·의료 조언이 아님 본 사이트의 모든 정보는 일반적인 교육 및 정보 제공 목적이며, 의료 조언이 아니고 「의료법」상 의료 행위에 해당하지 않습니다. WellnessNote는 질병을 진단·치료·치유·예방하기 위한 서비스를 제공하지 않으며, 특정 식품·성분·방법의 효능을 단정하지 않습니다. 본 사이트의 정보는 의사·간호사·약사·영양사 등 자격 있는 의료 전문가의 진료, 진단, 치료, 처방을 대체할 수 없습니다. 특정 건강 상태나 증상이 있는 경우 반드시 전문가와 상담하세요. 개인차·위험 및 책임 건강 상태, 복용 약물, 과거 병력, 생활습관에 따라 동일한 정보라도 결과가 상이할 수 있습니다. 본 사이트의 정보를 식단·영양제·운동·생활습관 변경 등에 적용하기 전에는 반드시 주치의 또는 약사와 상담하시기 바랍니다. 본 사이트의 정보를 사용·해석·적용함으로써 발생하는 모든 결과와 책임은 전적으로 이용자 본인에게 있으며, 운영자는 직접적·간접적 손해에 대한 법적 책임을 지지 않습니다. 근거 수준의 한계 본문에서 인용하는 연구·가이드라인은 연구 설계(무작위대조시험, 관찰연구, 메타분석 등), 표본 규모, 출판 시기, 잠재적 이해상충 등에 따라 근거 수준이 다릅니다. 인용 문헌을 직접 확인하시고, 본인의 검사 수치·증상·복용 약물과의 상호작용 위험을 반드시 전문가와 함께 검토하시기 바랍니다. 식품·건강기능식품 관련 안내 본 사이트의 식품·건강기능식품 관련 정보는 식품의약품안전처(MFDS)의 공식 평가를 받은 효능 주장이 아닐 수 있습니다. 건강기능식품은 의약품이 아니며, 질병의 진단·치료·치유·예방을 목적으로 하지 않습니다. 섭취 전 제품의 표시 사항을 확인하고, 기저 질환자·임산부·수유 중이거나 약을 복용 중인 경우 반드시 전문가와 상의하십시오. 광고·제휴 고지 WellnessNote 의 모든 콘텐츠는 사실 확인과 근거 제시를 원칙으로 작성합니다. 광고·협찬·제휴 링크가 포함되는 경우 해당 글 상단 또는 하단에 명확히 고지합니다. 제휴 여부와 관계없이 콘텐츠의 편집 원칙(과장 배제·근거 우선)은 동일하게 적용됩니다. 저작권 본 사이트의 모든 콘텐츠(텍스트, 이미지, 그래픽 등)는 WellnessNote 운영자에게 저작권이 있으며, 사전 서면 동의 없는 무단 복제·배포·상업적 이용을 금합니다. 본 페이지를 포함한 법적 고지·행정 페이지 역시 WellnessNote 의 자산이며 무단 복제를 금지합니다. 인용 시에는 출처(WellnessNote, forsmartlife.com) 와 원문 링크를 반드시 표기해 주세요. 외부 링크 본 사이트는 참고 목적으로 외부 사이트(정부 기관, 학술 자료 등)로 연결되는 링크를 포함할 수 있습니다. 외부 사이트의 콘텐츠, 정확성, 개인정보 처리 방식에 대해 운영자는 책임지지 않습니다. 개인정보 처리 이용자의 개인정보 수집 및 처리에 관한 사항은 개인정보처리방침 페이지를 참고해 주세요. 약관 변경 본 약관 및 면책 고지문은 수시로 업데이트될 수 있습니다. 중요 변경 사항은 본 페이지 상단의 시행일과 함께 고지하며, 별도 개별 통지는 생략될 수 있으므로 정기적인 확인을 권장합니다. 문의·의견·우려 사항 약관 및 면책 고지와 관련한 문의는 아래로 연락해 주세요. 의학 정보의 한계와 이용 범위에 대한 자세한 내용은 Medical Disclaimer 페이지를 확인하세요. 이메일: gracelyun28@gmail.com WellnessNote(forsmartlife.com) "
+  },
+  {
+   "id": 3,
+   "status": "publish",
+   "slug": "privacy-policy",
+   "link": "https://forsmartlife.com/privacy-policy/",
+   "title": "개인정보처리방침",
+   "text": " WellnessNote 개인정보처리방침 시행일: 2026년 4월 8일 최종 수정일: 2026년 4월 21일 WellnessNote(이하 \"본 사이트\")는 이용자의 개인정보를 소중히 여기며, 「개인정보 보호법」 및 관련 법령을 준수합니다. 본 방침은 본 사이트가 어떤 정보를 수집하고, 어떻게 사용하는지 명확하게 안내합니다. 1. 수집하는 정보 본 사이트는 다음과 같은 경우에 개인정보를 수집할 수 있습니다. 댓글 작성 시: 닉네임, 이메일 주소 (이메일은 공개되지 않습니다) 이메일 문의 시: 이름, 이메일 주소, 문의 내용 방문 기록 (자동 수집): IP 주소, 브라우저 종류, 방문 페이지, 방문 시간 등 (Google Analytics를 통해 익명으로 수집) 비밀번호, 주민등록번호, 금융정보 등 민감한 개인정보는 수집하지 않습니다. 2. 수집한 정보의 이용 목적 수집된 정보는 아래 목적으로만 사용됩니다. 댓글 및 문의에 대한 응답 스팸 및 악성 댓글 방지 사이트 이용 통계 분석 및 콘텐츠 개선 수집된 개인정보는 제3자에게 판매하거나 무단으로 제공하지 않습니다. 3. 쿠키(Cookie) 사용 본 사이트는 쿠키를 사용합니다. 쿠키는 사이트 이용 편의를 위해 브라우저에 저장되는 작은 텍스트 파일입니다. WordPress 기본 쿠키: 로그인 상태 유지, 댓글 작성자 정보 저장 Google Analytics 쿠키: 방문자 통계 분석 (익명 처리) Google AdSense 쿠키: 관심 기반 광고 제공 (해당되는 경우) 브라우저 설정에서 쿠키를 비활성화할 수 있으나, 일부 기능이 제한될 수 있습니다. 4. 제3자 서비스 본 사이트는 아래 제3자 서비스를 사용하며, 각 서비스의 개인정보처리방침이 별도로 적용됩니다. Google Analytics: 방문자 통계 분석 ( 정책 보기 ) Google AdSense: 광고 서비스 ( 정책 보기 ) Akismet: 스팸 댓글 방지 ( 정책 보기 ) 5. 개인정보의 보관 및 파기 댓글: 이용자가 삭제 요청 시 또는 운영상 불필요하다고 판단될 때 삭제 문의 이메일: 문의 처리 완료 후 1년 이내 삭제 Google Analytics 데이터: 익명 처리되어 26개월간 보관 후 자동 삭제 6. 이용자의 권리 이용자는 언제든지 아래 권리를 행사할 수 있습니다. 본인 개인정보 열람 요청 개인정보 수정 또는 삭제 요청 개인정보 처리 정지 요청 요청은 아래 이메일로 문의해 주세요. 지체 없이 처리하겠습니다. 7. 광고 및 제휴 안내 본 사이트는 Google AdSense를 통해 광고를 게재할 수 있습니다. Google은 이용자의 관심사에 맞는 광고를 보여주기 위해 쿠키를 활용할 수 있습니다. 광고 맞춤 설정은 Google 광고 설정 에서 변경할 수 있습니다. 8. 건강 정보 면책 안내 본 사이트에서 제공하는 모든 건강 관련 콘텐츠는 일반적인 정보 제공을 목적 으로 하며, 의학적 진단·처방·치료를 대체하지 않습니다. 개인의 건강 상태에 따라 필요한 조치가 다를 수 있으므로, 특정 증상이나 질환이 있는 경우 반드시 의사 또는 전문 의료인과 상담하시기 바랍니다. 본 사이트는 콘텐츠 내용으로 인해 발생하는 직·간접적 손해에 대해 법적 책임을 지지 않습니다. 9. 개인정보처리방침 변경 본 방침은 법령 변경 또는 서비스 변경에 따라 업데이트될 수 있습니다. 변경 시 본 페이지 상단의 시행일 및 최종 수정일을 함께 업데이트합니다. 문의 📩 이메일: gracelyun28@gmail.com "
+  }
+ ],
+ "categories": [
+  {
+   "id": 3,
+   "name": "건강 루틴",
+   "count": 51,
+   "slug": "health-routine",
+   "desc": ""
+  },
+  {
+   "id": 1,
+   "name": "계절 건강",
+   "count": 42,
+   "slug": "season-health-tips",
+   "desc": ""
+  },
+  {
+   "id": 4,
+   "name": "증상 관리",
+   "count": 50,
+   "slug": "symptom-management",
+   "desc": ""
+  }
+ ],
+ "tags_count": 67,
+ "public/": {
+  "status": 200,
+  "len": 78867,
+  "head": ""
+ },
+ "public/robots.txt": {
+  "status": 200,
+  "len": 207,
+  "head": "User-agent: *\nDisallow: /wp-admin/\nDisallow: /*/feed/\nAllow: /wp-admin/admin-ajax.php\n\nUser-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: Yeti\nAllow:/\n\nSitemap: https://forsmartlife.com/sitemap_index.xml"
+ },
+ "public/ads.txt": {
+  "status": 200,
+  "len": 58,
+  "head": "google.com, pub-5200246837055912, DIRECT, f08c47fec0942fa0"
+ },
+ "public/sitemap_index.xml": {
+  "status": 200,
+  "len": 661,
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"//forsmartlife.com/main-sitemap.xsl\"?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n\t<sitemap>\n\t\t<loc>https://forsmartlife.com/post-sitemap.xml</loc>\n\t\t<lastmod>2026-05-20T03:15:47+00:00</lastmod>\n\t</sitemap>\n\t<sitemap>\n\t\t<loc>https://forsmartlife.com/page-sitemap.xml</loc>\n\t\t<lastmod>2026-05-01T06:38:39+00:00</lastmod>\n\t</sitemap>\n\t<sitemap>\n\t\t<loc>https://forsmartlife.com/category-sitemap.xml</loc>\n\t\t<lastmod>2026-05-20T03:15:47+00:00</lastmod>\n\t</sitemap>\n</sitemapindex>\n<!-- XML Sitemap generated by Rank Math SEO Plugin (c) Rank Math - rankmath.com -->"
+ },
+ "public/feed/": {
+  "status": 200,
+  "len": 9889,
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"\n\txmlns:content=\"http://purl.org/rss/1.0/modules/content/\"\n\txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"\n\txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n\txmlns:atom=\"http://www.w3.org/2005/Atom\"\n\txmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\"\n\txmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"\n\t>\n\n<channel>\n\t<title>WellnessNote</title>\n\t<atom:link href=\"https://forsmartlife.com/feed/\" rel=\"self\" type=\"application/rss+xml\" />\n\t<link>https://forsmartlife.com</link>\n\t<description></description>\n\t<lastBuildDate>Wed, 11 Nov 2026 13:46:57 +0000</lastBuildDate>\n\t<language>ko-KR</language>\n\t<sy:updatePeriod>\n\thourly\t</sy:updatePeriod>\n\t<sy:updateFrequency>\n\t1\t</sy:updateFrequency>\n\t<generator>https://wordpress.org/?v=7.1.4</generator>\n\n<image>\n\t<url>https://forsmartlife.com/wp-content/uploads/2026/03/forsmartlife_favicon-150x150.jpg</url>\n\t<title>WellnessNote</title>\n\t<link>https://forsmartlife.com</link>\n\t<width>32</width>\n\t<height>32</height>\n</image> \n\t<item>\n\t\t<title>폐렴구균 예방접종 예약 전 접종 이력을 확인해야 헛걸음을 줄인다</title>\n\t\t<link>https://forsmartlife.com/pneumococcal-vaccine-history-check/</link>\n\t\t\t\t\t<comments>https://forsmartlife.com/pneumococcal-vaccine-history-check/#respond</comments>\n\t\t\n\t\t<dc:creator><![CDATA[WellnessNote 편집팀]]></dc:creator>\n\t\t<pubDate>Wed, 11 Nov 2026 12:33:23 +0000</pubDate>\n\t\t\t\t<category><![CDATA[계절 건강]]></category>\n\t\t<category><![CDATA[예방접종]]></category>\n\t\t<category><![CDATA[접종이력]]></category>\n\t\t<category><![CDATA[폐렴구균]]></category>\n\t\t<guid isPermaLink=\"false\">https://forsmartlife.com/pneumococcal-vaccine-history-check/</guid>\n\n\t\t\t\t\t<description><![CDATA[폐렴구균 예방접종 예약 전, 접종 이력만 정확히 확인해 헛걸음을 줄이는 방법을 정리합니다. 준비물·확인 항목·문의 포인트를 체크리스트로 제공합니다.]]></description>\n\t\t\n\t\t\t\t\t<wfw:commentRss>https://forsmartlife.com/pneumococcal-vaccine-history-check/feed/</wfw:commentRss>\n\t\t\t<slash:comments>0</slash:comments>\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>아토피 피부염 보습은 샤워 직후에 챙기는 사람이 많은 까닭</title>\n\t\t<link>https://forsmartlife.com/atopic-eczema-moisturize-shower/</link>\n\t\t\t\t\t<comments>https://forsmartlife.com/atopic-eczema-moisturize-shower/#respond</comments>\n\t\t\n\t\t<dc:creator><![CDATA[WellnessNote 편집팀]]></dc:creator>\n\t\t<pubDate>Mon, 09 Nov 2026 13:04:24 +0000</pubDate>\n\t\t\t\t<category><![CDATA[증상 관리]]></category>\n\t\t<category><![CDATA[보습]]></category>\n\t\t<category><![CDATA[샤워 직후]]></category>\n\t\t<category><![CDATA[아토피 피부염]]></category>\n\t\t<guid isPermaLink=\"false\">https://forsmartlife.com/atopic-eczema-moisturize-shower/</guid>\n\n\t\t\t\t\t<description><![CDATA[아토피 피부염 보습은 샤워 직후가 중요한 이유와 순서, 피해야 할 습관까지 정리했습니다. 보습 타이밍 체크리스트로 오늘부터 시작해보세요.]]></description>\n\t\t\n\t\t\t\t\t<wfw:commentRss>https://forsmartlife.com/atopic-eczema-moisturize-shower/feed/</wfw:commentRss>\n\t\t\t<slash:comments>0</slash:comments>\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>편두통 전조증상은 두통이 오기 전 어떤 변화로 시작될까</title>\n\t\t<link>https://forsmartlife.com/migraine-aura-before-headache-changes/</link>\n\t\t\t\t\t<comments>https://forsmartlife.com/migraine-aura-before-headac"
+ },
+ "posts": []
+}
