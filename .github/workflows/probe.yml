@@ -1,16 +1,9 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install -q requests && python3 tools/wp_fix_selflinks.py
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - run: |
-          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 자기 링크 정리" && git pull -q --rebase && git push -q || true
+          for u in http://sisibibinote.kr/ http://www.sisibibinote.kr/ https://www.sisibibinote.kr/ https://sisibibinote.kr/; do echo "== $u"; curl -sI -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE "^HTTP|^location|^cf-" ; done
+          curl -s https://sisibibinote.kr/ | grep -io '<link rel="canonical"[^>]*>'
