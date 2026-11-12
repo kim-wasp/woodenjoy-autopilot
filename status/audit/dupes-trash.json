@@ -1,0 +1,86 @@
+{
+ "map": {
+  "125": 127,
+  "31": 74,
+  "29": 39
+ },
+ "urls": {
+  "125": "https://forsmartlife.com/theanine-brain-fatigue/",
+  "31": "https://forsmartlife.com/spring-fatigue-cause/",
+  "29": "https://forsmartlife.com/spring-fine-dust-health/",
+  "127": "https://forsmartlife.com/spring-blood-pressure-care/",
+  "74": "https://forsmartlife.com/spring-fatigue-causes/",
+  "39": "https://forsmartlife.com/fine-dust-health-tips/"
+ },
+ "relinked": [
+  [
+   801,
+   200
+  ],
+  [
+   758,
+   200
+  ],
+  [
+   749,
+   200
+  ],
+  [
+   504,
+   200
+  ],
+  [
+   474,
+   200
+  ],
+  [
+   439,
+   200
+  ],
+  [
+   387,
+   200
+  ],
+  [
+   354,
+   200
+  ],
+  [
+   87,
+   200
+  ],
+  [
+   78,
+   200
+  ],
+  [
+   76,
+   200
+  ],
+  [
+   74,
+   200
+  ],
+  [
+   39,
+   200
+  ]
+ ],
+ "trashed": [
+  [
+   125,
+   200,
+   "trash"
+  ],
+  [
+   31,
+   200,
+   "trash"
+  ],
+  [
+   29,
+   200,
+   "trash"
+  ]
+ ]
+}
