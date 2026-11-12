@@ -1,0 +1,171 @@
+{
+  "id": "infobay/2026-11-12-bad-service-review-star-rating-law-2026",
+  "site": "infobay",
+  "title": "별점 1점 리뷰 고소당할까? 불친절은 의견, 거짓은 최대 7년",
+  "status": "ready",
+  "created_at": "2026-11-12T20:12+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "별점 1점 리뷰 고소",
+    "sub": [
+      "불친절 리뷰 명예훼손",
+      "배달앱 리뷰 업무방해",
+      "악성 리뷰 처벌",
+      "리뷰 블라인드 30일",
+      "별점 테러",
+      "허위 리뷰 처벌"
+    ]
+  },
+  "brief": {
+    "reader": "맛은 괜찮았는데 응대가 불친절했던 가게에 별점을 낮게 줄지 고민하는 20~40대, 또는 사장님한테 '명예훼손' 답글을 받은 사람",
+    "question": "불친절하다고 별점 1점을 주면 고소당하나요?",
+    "answer": "직접 겪은 불친절을 평가하는 건 의견 표현이라 처벌로 이어지기 어렵다는 게 법률 칼럼들의 설명이에요. 거짓 사실, 남의 사진, 반복적인 비방은 실제로 처벌받은 판결이 있어요.",
+    "out_of_scope": "개별 사건의 유불리 판단, 사장님 쪽 고소 절차 안내, 플랫폼별 신고 메뉴 사용법",
+    "next_action": "리뷰를 올리기 전에 체크리스트 6개를 확인하고, 커먼센스 앱에서 '불친절하면 별점 깎아도 된다' 카드에 투표하기"
+  },
+  "why_this_topic": "검색량 수치 자료는 확인하지 못했어요. 대신 시기 근거가 셋 있어요. ① 2026년 9월 11일 중기부가 네이버·카카오·배민·쿠팡 등 6개 플랫폼과 '별점제 상생 간담회'를 열어 별점 테러와 보복성 리뷰가 크게 보도됐어요. ② 2021~2025년 배달앱 리뷰 정책 상담이 972건이라는 국회 자료가 2026년 8월에 나왔어요. ③ 2026년 7월 7일 개정 정보통신망법이 시행되면서 허위사실 명예훼손 벌금 상한이 7천만원으로 올랐고, 11월 초에도 허위 리뷰 명예훼손 칼럼이 새로 나왔어요. 앱에 새로 들어간 카드 '음식이 맛있어도 사장 응대가 불친절하면 별점을 깎아도 된다'와 바로 이어지고, 최근 글(축의금·조의금·면접·암표·송년회·층간소음)과 승인 대기 주제(축의금 5 vs 10)와도 겹치지 않아요.",
+  "meta_description": "불친절해서 별점 1점 주면 고소당할까? 겪은 일을 평가하는 건 의견이고, 거짓 사실·남의 사진·반복 비방은 처벌된 판결이 있어요. 2026년 개정 정보통신망법 형량과 리뷰 올리기 전 체크리스트를 정리했어요.",
+  "hero_prompt": "Over-the-shoulder realistic photo of a person at a small Korean restaurant table holding a smartphone, hesitating before rating the meal, half-finished dishes and banchan on the table, staff counter softly blurred in the background, warm natural light, candid, no faces in close-up, no text, no readable screen",
+  "thumb_text": "",
+  "category": "공공·매너",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "식당 테이블에서 휴대폰을 들고 리뷰를 쓰려는 손님의 손",
+      "prompt": "Realistic photo inside a casual Korean restaurant, a customer's hands holding a smartphone above a table with several small banchan side dishes and a stew pot, server walking away blurred in background, natural window light, candid, faces not in close-up, no text, no readable screen"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "배달 음식을 받아 놓고 휴대폰을 보는 사람",
+      "prompt": "Realistic photo of a delivery food container opened on a Korean apartment coffee table, a person sitting on the floor looking at their phone, evening warm light, candid, face not visible, no text, no readable screen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "국가법령정보센터, 정보통신망법 제70조(벌칙) 조문 (2026.1.6 개정)",
+      "url": "https://www.law.go.kr/LSW//lsLawLinkInfo.do?lsJoLnkSeq=1000089656&chrClsCd=010202"
+    },
+    {
+      "title": "찾기쉬운 생활법령정보, 인터넷 명예훼손의 처벌 등",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=293&ccfNo=1&cciNo=1&cnpClsNo=2"
+    },
+    {
+      "title": "법무법인 칼럼, 허위조작정보 근절법(개정 정보통신망법) 2026.7.7 시행 내용",
+      "url": "https://bh-law.kr/ko/news/column/disinformation-eradication-act-guide"
+    },
+    {
+      "title": "CaseNote, 정보통신망법 제44조의2(정보의 삭제요청 등) 임시조치 30일 이내",
+      "url": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%A7%9D_%EC%9D%B4%EC%9A%A9%EC%B4%89%EC%A7%84_%EB%B0%8F_%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8_%EB%93%B1%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0/%EC%A0%9C44%EC%A1%B0%EC%9D%982"
+    },
+    {
+      "title": "헌법재판소 결정례, 정보통신망법 제44조의2 제2항 위헌확인(임시조치·재게시청구)",
+      "url": "https://www.law.go.kr/detcInfoP.do?mode=1&detcSeq=19778"
+    },
+    {
+      "title": "네이트뉴스(연합뉴스), '허위 리뷰·별점 테러에 소상공인 피해'…중기부 상생 간담회 (2026.9.11)",
+      "url": "https://news.nate.com/view/20260911n18612"
+    },
+    {
+      "title": "네이트뉴스, 중기부 온라인플랫폼 별점제 관련 소상공인 애로 청취 (30일 블라인드·별점 산정 제외)",
+      "url": "https://news.nate.com/view/20260911n18620"
+    },
+    {
+      "title": "이투데이, 중기부 플랫폼 별점제 개선 논의…악성리뷰 대응 강화",
+      "url": "https://www.etoday.co.kr/news/view/2624494"
+    },
+    {
+      "title": "스마트비즈, '별점 1점 줬다가 고소?' 악성리뷰 어디부터 처벌될까",
+      "url": "https://www.smartbizn.com/news/articleView.html?idxno=153713"
+    },
+    {
+      "title": "네이트뉴스 [이법저법], 음식 맛이 별로였다는 배달앱 리뷰…법적으로 문제가 되나요?",
+      "url": "https://m.news.nate.com/view/20260117n02382"
+    },
+    {
+      "title": "한국경제, '손님 등쳐먹는 식당' 거짓 후기에 벌금·위자료 판결",
+      "url": "https://www.hankyung.com/article/202511292936i"
+    },
+    {
+      "title": "대전일보 법률칼럼, 불친절하다는 고객 후기 명예훼손일까?",
+      "url": "https://www.daejonilbo.com/news/articleView.html?idxno=2205056"
+    },
+    {
+      "title": "경상일보, 허위리뷰 명예훼손 가게 평판을 떨어뜨렸다면 처벌될 수 있어",
+      "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1071556"
+    },
+    {
+      "title": "인하프레스 [법률 톡톡], 솔직한 리뷰가 명예훼손일까? (산후조리원 9차례 게시 벌금 50만원)",
+      "url": "http://www.inhapress.com/news/articleView.html?idxno=8871"
+    },
+    {
+      "title": "한국소비자원 소비자시대, 배달 플랫폼 3사 별점 기반 리뷰시스템 개선 필요",
+      "url": "https://www.kca.go.kr/webzine/board/view?menuId=MENU00307&linkId=732&div=kca_2409"
+    },
+    {
+      "title": "디지털데일리, 배달플랫폼 리뷰 참여 소비자 98% 만족도보다 별점 더 좋게 평가",
+      "url": "https://www.ddaily.co.kr/m/page/view/2024072313572368748"
+    },
+    {
+      "title": "천지일보, 배달앱 리뷰 갈등 늘었다… 5년간 소비자 상담 972건",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3425552"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "논쟁형",
+    "cover_hooks": [
+      "별점 1점 줬다가 고소당할까?",
+      "별점보다 위험한 건 남의 사진 한 장",
+      "거짓 리뷰 한 줄, 최대 징역 7년"
+    ],
+    "caption": "'불친절하다' 후기에 고소장, 경찰 결론은 불송치였어요\n\n법률 칼럼들은 겪은 일을 평가한 리뷰를 의견으로 봐요.\n남의 탄 만두 사진을 붙인 리뷰는 업무방해가 인정됐어요.\n비방 목적 거짓 글은 2026년 7월부터 벌금 상한이 7천만원이에요.\n\n리뷰 쓰기 전에 망설이는 친구에게 보내 주세요. 판결 정리는 프로필 링크 글에 있어요.\n\n#생활상식 #배달앱리뷰 #별점테러 #악성리뷰 #명예훼손"
+  },
+  "threads": {
+    "hooks": [
+      "반찬 접시 던지듯 놓는 맛집",
+      "불친절하면 별점 1점, 너무해?",
+      "별점보다 위험한 건 남의 사진"
+    ],
+    "posts": [
+      "불친절하면 별점 1점, 너무해?\n\n맛은 괜찮은데 반찬 접시를 던지듯 내려놓는 집이면 어떡할래.\n사장 쪽은 저평점 몇 개에 평균 별점이 확 떨어진다고 정부 간담회까지 가서 하소연했더라.\n법이 실제로 선 긋는 데는 따로 있어서 댓글에 적어둘게.",
+      "1. '불친절했다'처럼 직접 겪은 걸 평가한 건 의견이라 처벌로 가기 어렵다는 게 법률 칼럼들 설명이야. 카페 불친절 후기로 고소당한 손님도 불송치 나왔어.\n2. 남이 올린 탄 만두 사진을 내가 받은 척 올린 리뷰는 업무방해 유죄였어.\n3. 비방 목적 거짓 리뷰는 최대 징역 7년이고, 벌금 상한은 올해 7월부터 7천만원이야.\n4. 사장이 신고하면 리뷰는 최대 30일까지 블라인드될 수 있어.",
+      "판결 4건이랑 올리기 전 체크리스트는 여기 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "생활상식"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-12T20:12+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 42276,
+        "output_tokens": 29840,
+        "web_searches": 6,
+        "calls": 5,
+        "usd": 0.8259
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.2279,
+    "total_usd": 1.2279,
+    "total_krw": 1720,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
