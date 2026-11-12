@@ -6,8 +6,8 @@ jobs:
     steps:
       - run: |
           A="https://api.uplika.com"
-          g(){ c=$(curl -s -o b.txt -w "%{http_code}" -H "authorization: Bearer $K" "$A$1"); echo "GET $c $1 $(head -c 160 b.txt)"; }
-          p(){ c=$(curl -s -o b.txt -w "%{http_code}" -X POST -H "authorization: Bearer $K" -H "content-type: application/json" -d "$2" "$A$1"); echo "POST $c $1 $(head -c 160 b.txt)"; }
-          for x in /v1/naver/visibility "/v1/naver/visibility?blog=cafe_peanut" /v1/naver/visibility/check /v1/naver/visibility/runs /v1/naver/keywords /v1/naver/keywords/reports /v1/naver/blog/diagnose /v1/naver/search; do g "$x"; done
-          for x in /v1/naver/visibility /v1/naver/visibility/check /v1/naver/visibility/checks /v1/naver/check /v1/naver/keywords/check /v1/naver/search/check; do p "$x" '{"keywords":["싱크대 경첩"],"blog":"cafe_peanut"}'; done
+          g(){ c=$(curl -s -o b.txt -w "%{http_code}" -H "authorization: Bearer $K" "$A$1"); echo "GET $c $1 $(cat b.txt)"; }
+          p(){ c=$(curl -s -o b.txt -w "%{http_code}" -X POST -H "authorization: Bearer $K" -H "content-type: application/json" -d "$2" "$A$1"); echo "POST $c $1 $(cat b.txt)"; }
+          true
+          p /v1/naver/visibility/checks '{"keywords":["싱크대 경첩"],"blog":"cafe_peanut"}'
         env: { K: "${{ secrets.UPLIKA_API_KEY }}" }
