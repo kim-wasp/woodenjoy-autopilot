@@ -5,8 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for p in /v1/naver/visibility/blog/cafe_peanut "/v1/naver/report?blog=cafe_peanut" "/v1/naver/report-card?blog=cafe_peanut" "/v1/naver/blog/cafe_peanut/visibility" "/v1/naver/visibility/cafe_peanut"; do
-            c=$(curl -s -o b.txt -w "%{http_code}" -H "authorization: Bearer $K" "https://api.uplika.com$p"); echo "$c $p $(head -c 150 b.txt)"; done
-          for u in https://api.uplika.com/mcp https://uplika.com/mcp https://mcp.uplika.com/mcp https://api.uplika.com/v1/mcp; do
-            c=$(curl -s -o b.txt -w "%{http_code}" -X POST -H "authorization: Bearer $K" -H "content-type: application/json" -H "accept: application/json, text/event-stream" -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' "$u"); echo "$c $u $(head -c 300 b.txt | tr '\n' ' ')"; done
+          U=https://api.uplika.com/mcp
+          H='-H content-type:application/json -H accept:application/json,text/event-stream'
+          echo "== init"; curl -s -D h.txt $H -H "authorization: Bearer $K" -d '{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"studio","version":"1"}}}' $U | head -c 300; echo; grep -i "mcp-session\|www-auth" h.txt
+          S=$(grep -i mcp-session-id h.txt | awk '{print $2}' | tr -d '\r')
+          echo "== call with session"; curl -s $H -H "authorization: Bearer $K" ${S:+-H "mcp-session-id: $S"} -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' $U | head -c 300; echo
+          echo "== x-api-key"; curl -s $H -H "x-api-key: $K" -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' $U | head -c 300; echo
+          echo "== query"; curl -s $H -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' "$U?api_key=$K" | head -c 300; echo
+          curl -s https://api.uplika.com/.well-known/oauth-protected-resource | head -c 400; echo
         env: { K: "${{ secrets.UPLIKA_API_KEY }}" }
