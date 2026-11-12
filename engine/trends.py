@@ -225,11 +225,11 @@ def naver_trends_block(site_id=None, days=7):
     a = auto_trends(site_id) if site_id else {}
     r = (a.get("site") or {}).get("rising") or []
     if r:
-        parts.append("[이 사이트 분야 급등 검색어 — 네이버 검색광고 키워드 도구, 최근 30일 검색 수를 매일 재서 7일 전과 비교 (" + a["updated"][:10] + ")]\n"
+        parts.append("[이 사이트 씨앗 검색어의 연관 검색어 중 급등한 것 — 네이버 검색광고 키워드 도구, 최근 30일 검색 수를 매일 재서 7일 전과 비교. 주제와 상관없는 말도 섞여 있으니 이 사이트 주제에 맞는 것만 (" + a["updated"][:10] + ")]\n"
                      + "\n".join(f"- {x['keyword']}: 월 {x['now']:,}회" + (f" (7일 전 {x['before']:,}회, +{int(x['change'] * 100)}%)" if x.get("before") else " (새로 등장)") for x in r[:20]))
     top = (a.get("site") or {}).get("top") or []
     if top:
-        parts.append("[이 사이트 분야 검색 많은 말 — 같은 자료]\n" + ", ".join(f"{x['keyword']}({x['now']:,})" for x in top[:15]))
+        parts.append("[같은 자료의 검색 많은 연관 검색어 — 주제와 상관없는 말은 무시]\n" + ", ".join(f"{x['keyword']}({x['now']:,})" for x in top[:15]))
     g = a.get("google") or []
     if g:
         parts.append("[구글 트렌드 한국 실시간 인기 검색어 — 사회적으로 갑자기 뜬 이슈. 이 사이트 주제와 관련 있는 것만 참고]\n"
