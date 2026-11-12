@@ -23,24 +23,24 @@ MAX_KEYWORDS = 40
 OUT = ROOT / "status/ranks.json"
 
 
-def mcp(name, args):
-    r = requests.post("https://api.uplika.com/mcp", timeout=120,
-                      headers={"authorization": f"Bearer {os.environ['UPLIKA_API_KEY']}", "content-type": "application/json",
-                               "accept": "application/json, text/event-stream"},
-                      json={"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": name, "arguments": args}})
-    t = r.text
-    if t.startswith("event:") or "\ndata:" in t or t.startswith("data:"):
-        t = [ln[5:].strip() for ln in t.splitlines() if ln.startswith("data:")][-1]
-    j = json.loads(t)
-    if "error" in j:
-        raise RuntimeError(str(j["error"])[:300])
-    res = j.get("result") or {}
-    for c in res.get("content") or []:
-        if c.get("type") == "text":
-            try:
-                return json.loads(c["text"])
-            except ValueError:
-                raise RuntimeError(c["text"][:300])
+def check(args):
+    """uplika REST: 네이버 통합검색 확인 (사장님 계정 전체 범위 키 필요 → UPLIKA_RESEARCH_KEY)"""
+    import time
+    key = os.environ.get("UPLIKA_RESEARCH_KEY") or os.environ.get("UPLIKA_API_KEY")
+    h = {"authorization": f"Bearer {key}", "content-type": "application/json"}
+    r = requests.post("https://api.uplika.com/v1/naver/visibility/checks", json=args, headers=h, timeout=120)
+    if r.status_code >= 400:
+        raise RuntimeError(f"uplika {r.status_code}: {r.text[:300]}")
+    res = r.json()
+    res = res.get("data", res) if isinstance(res, dict) else res
+    for _ in range(6):  # 확장이 아직 읽는 중이면 잠시 뒤 결과 다시 받기
+        if not (res.get("partial") and res.get("pending") and res.get("runId")):
+            break
+        time.sleep(30)
+        g = requests.get(f"https://api.uplika.com/v1/naver/visibility/runs/{res['runId']}", headers=h, timeout=60)
+        if g.status_code >= 400:
+            break
+        res = g.json().get("data", g.json())
     return res
 
 
@@ -66,6 +66,8 @@ def targets(data):
 
 def main():
     data = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"posts": {}}
+    if not (os.environ.get("UPLIKA_RESEARCH_KEY") or os.environ.get("UPLIKA_API_KEY")):
+        print("uplika 키가 없어서 건너뜀"); return
     todo = targets(data)
     print(f"확인할 글 {len(todo)}개")
     for i in range(0, len(todo), 10):
@@ -76,7 +78,7 @@ def main():
         if blog:
             args["blog"] = blog
         try:
-            res = mcp("check_naver_visibility", args)
+            res = check(args)
         except Exception as e:  # noqa: BLE001
             print("순위 확인 실패:", e)
             data["last_error"] = str(e)[:300]
