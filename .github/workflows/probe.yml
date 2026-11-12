@@ -7,3 +7,4 @@ jobs:
       - run: |
           for u in http://sisibibinote.kr/ http://www.sisibibinote.kr/ https://www.sisibibinote.kr/ https://sisibibinote.kr/; do echo "== $u"; curl -sI -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE "^HTTP|^location|^cf-" ; done
           curl -s https://sisibibinote.kr/ | grep -io '<link rel="canonical"[^>]*>'
+# 1794474036
