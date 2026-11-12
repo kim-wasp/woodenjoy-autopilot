@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T21:09+09:00",
+  "updated": "2026-11-12T21:16+09:00",
   "items": [
     {
       "site": "infobay",
@@ -408,6 +408,15 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
+      "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
+      "platform": "blog",
+      "at": "2026-11-16T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-10-door-hinge-screw-stripped-hole-fix",
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "threads",
@@ -421,6 +430,24 @@
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "instagram",
       "at": "2026-11-16T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
+      "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
+      "platform": "threads",
+      "at": "2026-11-18T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
+      "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
+      "platform": "instagram",
+      "at": "2026-11-18T21:00+09:00",
       "state": "planned"
     }
   ]
