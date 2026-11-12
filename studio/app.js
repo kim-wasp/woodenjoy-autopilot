@@ -31,7 +31,7 @@ function renderLogin() {
 }
 
 // ---------- 틀 ----------
-const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
+const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['trends', '트렌드'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
 function shell(active, inner) {
   app.innerHTML = `<header class="top"><div class="in"><div class="logo">콘텐츠 스튜디오</div>
     <nav class="tabs">${NAV.map(([k, v]) => `<a href="#/${k}" class="${k === active ? 'on' : ''}">${v}</a>`).join('')}</nav>
@@ -154,10 +154,29 @@ async function viewIdeas(siteId) {
   $('#main').innerHTML = `<div class="page-h"><h1>글감</h1><button class="btn" id="more">새로 추천받기</button></div>
   <div class="seg">${st.map((s) => `<button class="${s.id === siteId ? 'on' : ''}" data-id="${s.id}">${esc(s.name)}</button>`).join('')}</div>
   <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? `${esc(one._ideas.basis || '최근 보도')} 기준으로 골랐어요${one._ideas.cost ? ` (비용 약 ${Number(one._ideas.cost.total_krw || 0).toLocaleString()}원)` : ''}. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요` : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
-  <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span>${x.facts ? `<span class="small" style="margin-top:4px">${esc(x.facts)}</span><span class="small muted">${esc(x.sides || '')}</span>` : ''}${(x.links || []).length ? `<span class="small">${x.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a>`).join('<br>')}</span>` : ''}</div><button class="btn" data-i="${i}">${one?.opinion ? '고르고 견해 쓰기' : '이걸로 만들기'}</button></div>`).join('')}</div></div>`;
+  ${one?.opinion ? `<form class="card" id="myf" style="margin-bottom:12px"><label class="f"><span>내 글감으로 조사받기 (주제나 이슈를 한 줄로 적으면 관련 기사와 근거를 찾아 아래 목록 맨 위에 넣어요, 2~4분)</span><input type="text" id="mytopic" placeholder="예: 의대 정원 다시 늘린다는데 이번엔 뭐가 다른가"></label><button class="btn primary">근거 찾아오기</button></form>` : ''}
+  <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${x.mine ? '<span class="chip ok">내 글감</span> ' : ''}${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span>${x.facts ? `<span class="small" style="margin-top:4px">${esc(x.facts)}</span><span class="small muted">${esc(x.sides || '')}</span>` : ''}${(x.links || []).length ? `<span class="small">${x.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a>`).join('<br>')}</span>` : ''}</div><button class="btn" data-i="${i}">${one?.opinion ? '고르고 견해 쓰기' : '이걸로 만들기'}</button></div>`).join('')}</div></div>`;
   $('.seg').onclick = (e) => { const b = e.target.closest('button'); if (b) viewIdeas(b.dataset.id); };
   $('#main').querySelectorAll('[data-i]').forEach((b) => { b.onclick = () => viewCreate({ site: siteId, topic: ideas[b.dataset.i].title, idea: ideas[b.dataset.i] }); });
+  if ($('#myf')) $('#myf').onsubmit = async (e) => { e.preventDefault(); const t = $('#mytopic').value.trim(); if (!t) return; try { await api('run', { method: 'POST', body: { site: siteId, mode: 'ideas', topic: t } }); toast('근거 찾는 중이에요. 2~4분 뒤 새로고침하세요'); $('#mytopic').value = ''; } catch (e2) { if (e2.message !== 'login') toast(e2.message); } };
   $('#more').onclick = async () => { try { await api('run', { method: 'POST', body: { site: siteId, mode: 'ideas' } }); toast('추천 받는 중이에요. 2~3분 뒤 새로고침하세요'); } catch (e) { if (e.message !== 'login') toast(e.message); } };
+}
+
+// ---------- 트렌드 메모 (네이버 크리에이터 어드바이저) ----------
+async function viewTrends() {
+  shell('trends', loading());
+  const d = await api('trends');
+  const fresh = (e) => (Date.now() - new Date(e.at)) / 864e5 <= 7;
+  $('#main').innerHTML = `<div class="page-h"><h1>트렌드</h1></div>
+  <div class="grid g2"><form class="card" id="tf">
+    <p class="small muted">네이버 크리에이터 어드바이저 트렌드 화면에서 보이는 인기·급등 검색어를 복사해서 붙여넣어 주세요. 한 줄에 하나, 순위 숫자는 있어도 괜찮아요. 최근 7일 안에 넣은 검색어를 모든 사이트의 글감 고르기와 글쓰기에 참고해요 (글과 관련 있을 때만 자연스럽게).</p>
+    <label class="f"><span>어디서 본 검색어인지 (선택)</span><input type="text" id="tlabel" placeholder="예: 생활·건강 인기유입 / 급등"></label>
+    <label class="f"><span>검색어</span><textarea id="ttext" rows="10" placeholder="1 독감 예방접종\n2 수능 도시락\n3 김장 김치"></textarea></label>
+    <button class="btn primary">저장</button>
+  </form>
+  <div class="card"><h2>저장된 검색어</h2><div class="list">${(d.entries || []).map((e) => `<div class="item"><div class="t"><b>${fmt(e.at)}${e.label ? ' · ' + esc(e.label) : ''}</b><span class="small ${fresh(e) ? '' : 'muted'}">${e.keywords.map(esc).join(', ')}</span>${fresh(e) ? '' : '<span class="small muted">7일 지나서 이제 참고하지 않아요</span>'}</div><button class="btn" data-at="${esc(e.at)}">지우기</button></div>`).join('') || '<p class="muted small">아직 없어요</p>'}</div></div></div>`;
+  $('#tf').onsubmit = async (e) => { e.preventDefault(); try { const r = await api('trends', { method: 'POST', body: { text: $('#ttext').value, label: $('#tlabel').value } }); toast(`검색어 ${r.count}개 저장했어요`); viewTrends(); } catch (e2) { if (e2.message !== 'login') toast(e2.message); } };
+  $('#main').querySelectorAll('[data-at]').forEach((b) => { b.onclick = async () => { try { await api('trends', { method: 'DELETE', body: { at: b.dataset.at } }); viewTrends(); } catch (e2) { if (e2.message !== 'login') toast(e2.message); } }; });
 }
 
 // ---------- 일정 ----------
@@ -378,6 +397,7 @@ async function route() {
     if (page === 'review') return arg ? viewReview(arg) : viewReviewList();
     if (page === 'create') return viewCreate();
     if (page === 'ideas') return viewIdeas(arg || undefined);
+    if (page === 'trends') return viewTrends();
     if (page === 'schedule') return viewSchedule();
     if (page === 'cards') return viewCards(arg);
     if (page === 'coupang') return viewCoupang();

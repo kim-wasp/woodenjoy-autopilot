@@ -129,7 +129,7 @@ jobs:
               continue
             fi
             if [ "$MODE" = "ideas" ]; then
-              python3 engine/generate.py "$site" --ideas
+              python3 engine/generate.py "$site" --ideas --topic "$TOPIC"
               git add sites && git commit -qm "글감 추천: $site" && git pull -q --rebase && git push -q || true
               continue
             fi

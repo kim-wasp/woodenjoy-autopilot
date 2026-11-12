@@ -171,3 +171,41 @@ def naver_volume(keyword):
     except Exception as e:  # noqa: BLE001
         log(f"  네이버 검색량 실패 '{keyword}': {e}")
         return None
+
+
+def naver_creator_trends(days=7):
+    """사장님이 관리화면 '트렌드'에 붙여넣은 네이버 크리에이터 어드바이저 인기·급등 검색어 (최근 days일).
+    크리에이터 어드바이저는 공개 API가 없어 자동 수집하지 않고, 사장님이 직접 본 것만 써요."""
+    import json
+    from pathlib import Path
+    f = Path(__file__).resolve().parent.parent / "status/naver_trends.json"
+    if not f.exists():
+        return []
+    try:
+        entries = json.loads(f.read_text(encoding="utf-8")).get("entries", [])
+    except Exception:  # noqa: BLE001
+        return []
+    out, seen = [], set()
+    for e in entries:
+        try:
+            at = datetime.fromisoformat(e["at"].replace("Z", "+00:00"))
+        except Exception:  # noqa: BLE001
+            continue
+        if (now_kst() - at).days > days:
+            continue
+        for k in e.get("keywords", []):
+            if k not in seen:
+                seen.add(k)
+                out.append({"keyword": k, "label": e.get("label", ""), "date": at.astimezone(now_kst().tzinfo).strftime("%m-%d")})
+    return out
+
+
+def naver_trends_block(days=7):
+    t = naver_creator_trends(days)
+    if not t:
+        return ""
+    lines = "\n".join(f"- {x['keyword']}" + (f" ({x['label']}, {x['date']})" if x["label"] else f" ({x['date']})") for x in t[:50])
+    return ("[네이버 크리에이터 어드바이저 인기·급등 검색어 — 사장님이 최근 직접 확인한 것]\n" + lines + "\n"
+            "쓰는 법: 1) 글감을 고를 때 이 사이트 주제와 맞는 검색어가 있으면 우선 고려해요. "
+            "2) 글을 쓸 때 이 글과 직접 관련 있는 검색어가 있으면 제목·소제목·본문에 자연스럽게 1~2번 넣어요(같은 뜻의 말을 사람들이 실제로 치는 표현으로 바꾸는 정도). "
+            "3) 관련 없는 검색어를 억지로 끼워 넣거나 나열하지 말아요. 관련 없으면 안 써도 돼요. 검색어에 담긴 사실(사건·숫자)은 확인된 것만.")
