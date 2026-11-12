@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T09:59+09:00",
+  "updated": "2026-11-12T11:55+09:00",
   "items": [
     {
       "site": "infobay",
@@ -348,6 +348,15 @@
       "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
       "platform": "blog",
       "at": "2026-11-12T12:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-12-flu-vaccine-november-2026-free-eligibility-timing",
+      "title": "독감예방접종 11월에 맞아도 될까? 무료 대상·시기 2026 정리",
+      "platform": "blog",
+      "at": "2026-11-13T07:00+09:00",
       "state": "planned"
     },
     {
