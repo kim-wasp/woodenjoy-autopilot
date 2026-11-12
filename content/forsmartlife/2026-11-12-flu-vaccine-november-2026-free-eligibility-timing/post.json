@@ -1,0 +1,126 @@
+{
+  "id": "forsmartlife/2026-11-12-flu-vaccine-november-2026-free-eligibility-timing",
+  "site": "forsmartlife",
+  "title": "독감예방접종 11월에 맞아도 될까? 무료 대상·시기 2026 정리",
+  "status": "ready",
+  "created_at": "2026-11-12T10:46+09:00",
+  "requested_topic": "독감예방접종 대상과 시기, 2026년 11월에 맞아도 되는지 확인해요\n카테고리: 계절 건강\n이 글이 답할 질문: 11월 중순에 독감 예방접종을 아직 안 맞았다면 지금 맞아도 되는지, 무료 접종 대상은 누구인지\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 332,500회, 11월 시기 주제",
+  "keywords": {
+    "main": "독감예방접종",
+    "sub": [
+      "독감 무료접종 대상",
+      "독감예방접종 시기",
+      "독감 예방접종 11월",
+      "독감 무료접종 기간",
+      "인플루엔자 국가예방접종 2026",
+      "독감 2회 접종 간격",
+      "독감 유행주의보 2026"
+    ]
+  },
+  "brief": {
+    "reader": "11월 중순까지 독감 예방접종을 못 맞은 30~60대 본인과, 부모님·아이 접종을 챙기는 가족",
+    "question": "11월 중순에 독감 예방접종을 맞아도 늦지 않은지, 무료 접종 대상은 누구인지",
+    "answer": "11월 중순에 맞아도 늦지 않으며, 생후 6개월~14세 어린이·임신부·65세 이상은 2027년 4월 30일까지 지정의료기관에서 무료로 맞을 수 있어요.",
+    "out_of_scope": "백신 제품별 비교·유료 접종 가격, 코로나19 접종 세부 일정, 독감 치료제 처방 기준의 세부 내용",
+    "next_action": "출생연도로 무료 대상인지 확인 → 예방접종도우미에서 가까운 지정의료기관 찾기 → 컨디션 좋은 날 신분증 챙겨 접종"
+  },
+  "why_this_topic": "네이버 월간 검색 332,500회, 11월 시기 주제",
+  "meta_description": "2026년 11월 중순에 독감 예방접종을 맞아도 될까요? 질병관리청 기준 무료 대상(14세까지 확대), 연령별 시작일, 접종 마감일, 2회 접종 간격, 병원에 바로 가야 하는 신호를 표로 정리했어요.",
+  "hero_prompt": "Realistic documentary photo of a Korean family of three generations, grandparent, parent and teenage child, putting on warm coats at the front door of an apartment in Korea on a chilly November morning, natural light, candid, no text in the image, no needles or medical gore",
+  "thumb_text": "",
+  "category": "계절 건강",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "늦가을 아침 집 주방에서 손을 씻는 40대 한국인"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "늦가을 동네 길을 함께 걷는 한국인 어머니와 딸"
+    }
+  ],
+  "sources": [
+    {
+      "title": "질병관리청 예방접종도우미 - 인플루엔자 국가예방접종(2026-2027절기)",
+      "url": "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&amp=&menuCd=134"
+    },
+    {
+      "title": "한국병원협회 공지 - 2026-2027절기 인플루엔자 국가예방접종사업 계획(질병관리청 예방접종관리과-3203)",
+      "url": "https://walking.kha.or.kr/kha_home/notice_list.do?mode=view&articleNo=47404"
+    },
+    {
+      "title": "의약일보 - 2026~2027절기 독감 예방접종, 14세까지 무료 접종 확대",
+      "url": "https://www.medicaldaily.co.kr/post/22538"
+    },
+    {
+      "title": "정책브리핑 - 어르신 독감 예방접종 6일부터…코로나19 접종은 12일 시작",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148972954"
+    },
+    {
+      "title": "질병관리청 보도자료 - 2026-2027절기 인플루엔자 유행주의보 발령(9.11.)",
+      "url": "https://www.kdca.go.kr/bbs/kdca/42/312593/artclView.do?layout=unknown"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 - 인플루엔자",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5232"
+    },
+    {
+      "title": "서울시 미디어허브 - 벌써 독감 유행 '무료 예방접종' 21일부터…지원 대상 확대",
+      "url": "https://mediahub.seoul.go.kr/archives/2019389"
+    },
+    {
+      "title": "이투데이 - 독감 환자 다시 증가, 어린이·어르신 접종 서둘러야(44주차 질병관리청 발표)",
+      "url": "https://www.etoday.co.kr/news/view/2645096"
+    },
+    {
+      "title": "약사공론 - 인플루엔자 재확산, 44주차 의심환자 22.8명",
+      "url": "https://www.kpanews.co.kr/news/articleView.html?idxno=548294"
+    },
+    {
+      "title": "관악구 - 인플루엔자 예방접종 주의사항",
+      "url": "https://www.gwanak.go.kr/site/enews/news/news_view.do?mvid=1052&aid=7906"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 0,
+  "dead_links_removed": [
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=134",
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=114"
+  ],
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-12T10:46+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-sonnet-5-5": {
+        "input_tokens": 2562,
+        "output_tokens": 1024,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0307
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 15149,
+        "output_tokens": 13021,
+        "web_searches": 6,
+        "calls": 2,
+        "usd": 0.381
+      }
+    },
+    "images": {},
+    "usd": 0.4117,
+    "total_usd": 0.4117,
+    "total_krw": 580,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
