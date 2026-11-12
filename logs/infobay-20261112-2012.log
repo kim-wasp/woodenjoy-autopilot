@@ -1,0 +1,21 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 글 만들기 시작 · 주제: 자동 선택
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  카드 점검 실패:
+  - 1장: 계정명 자리 침범: "커먼센스 투표 주제"
+  - 1장: 본문이 계정명 자리까지 내려옴
+  - 2장: 아래 빈 공간 큼 (321px)
+  점검에 걸림 → 고치기:
+   - 카드: 1장: 계정명 자리 침범: "커먼센스 투표 주제"
+   - 카드: 1장: 본문이 계정명 자리까지 내려옴
+   - 카드: 2장: 아래 빈 공간 큼 (321px)
+  카드 점검 실패:
+  - 2장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+  카드 6장 점검 통과 → content/infobay/2026-11-12-bad-service-review-star-rating-law-2026/cards
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 1,720원 ($1.228)
+완료: content/infobay/2026-11-12-bad-service-review-star-rating-law-2026 · 점검 통과
+::set-output-dir::content/infobay/2026-11-12-bad-service-review-star-rating-law-2026
