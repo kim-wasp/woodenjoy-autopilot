@@ -1,5 +1,5 @@
 {
  "posts": {},
- "last_error": "{'code': -32001, 'message': 'Authorization required.'}",
- "updated": "2026-11-13T08:27+09:00"
+ "last_error": "uplika 403: {\"error\":{\"code\":\"forbidden_scope\",\"message\":\"Naver search checks belong to the person, not a workspace. This key is limited to some workspaces; use a key that covers all of them.\",\"scope\":\"all_workspaces\"}}",
+ "updated": "2026-11-13T08:46+09:00"
 }
