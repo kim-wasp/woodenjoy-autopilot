@@ -1,0 +1,217 @@
+{
+  "created": "2026-11-12T14:18+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "오랜만에 만난 선배에게 반말 섞인 말투(반존대)를 써도 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "한 배우가 오랜만에 만난 대선배에게 반말을 섞어 말한 장면을 두고 예의 논란이 벌어짐",
+      "source": {
+        "title": "이요원, 선배 김영란에 '반존대' 말투로 논란...갑론을박",
+        "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1018949"
+      },
+      "why": "친근함의 표현이라는 쪽과 위아래 존댓말은 지켜야 한다는 쪽으로 나뉘고, 세대마다 받아들이는 정도도 다름",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "아파서 일을 쉬는 중엔 SNS에 노는 모습을 올리지 않는다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "한 강사가 수능 3주 전에 건강을 이유로 강의를 멈춘 뒤 예능 출연과 유튜브 홍보를 해 비판을 받음",
+      "source": {
+        "title": "“무책임했습니다” 수능 앞두고 강의 중단→예능 출연 스타 강사 “변명 여지 없어”",
+        "url": "https://www.seoul.co.kr/news/life/pop-culture/2026/11/10/20261110500310"
+      },
+      "why": "쉬는 동안의 사생활은 자유라는 쪽과, 기다리는 동료·고객에게 오해를 사니 조심해야 한다는 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "건강 때문에 일을 그만뒀어도 다른 일을 새로 시작하는 건 본인 자유다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "건강 문제로 강의를 멈춘 강사가 다른 활동을 시작하자, 개인의 선택이라는 의견과 책임을 다하지 않았다는 의견이 갈림",
+      "source": {
+        "title": "이투스는 사과했는데 이도는?…강의 중단·유튜브 홍보에 갑론을박[Oh!쎈 이슈]",
+        "url": "https://www.osen.co.kr/article/G1112907466"
+      },
+      "why": "진로를 바꾸는 건 개인의 권리라는 시각과, 하던 약속을 먼저 마무리해야 한다는 책임론이 부딪힘",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "강의가 중간에 끊기면 남은 수강료는 돌려받는 게 맞다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "인강 커리큘럼이 시험 직전에 중단되자 업체가 사과하고 문의는 개별 응대로 돌림",
+      "source": {
+        "title": "“학생 미래 달렸는데” 수능 코앞 ‘강의 중단→예능 출연’ 이도, 끝내 침묵…이투스 “강사 사정” 대신 사과",
+        "url": "https://www.seoul.co.kr/news/life/2026/11/10/20261110500016"
+      },
+      "why": "못 들은 만큼 환불이 당연하다는 쪽과, 이미 들은 강의·교재 값과 대체 강의로 충분하다는 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "돌아가신 가족을 AI 영상으로 되살려 SNS에 올려도 된다",
+        "track": "NORM",
+        "category": "관혼상제",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "세상을 떠난 인플루언서를 AI로 재현한 영상이 올라와 추모냐 고인 활용이냐로 논란",
+      "source": {
+        "title": "\"AI로 되살아난 힙스터 할아버지\"…中 팬들 갑론을박",
+        "url": "https://view.asiae.co.kr/article/2026110915493721282"
+      },
+      "why": "그리움을 달래는 새로운 추모 방식이라는 쪽과, 고인의 동의 없이 되살리는 건 선을 넘는다는 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "아이 훈육 때 '귀신 온다'처럼 겁주는 말을 써도 된다",
+        "track": "NORM",
+        "category": "가정/가족",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "테마파크에서 귀신 분장 배우가 아이에게 겁을 주는 '귀신 훈육' 공연을 두고 정서적 학대인지 가벼운 이벤트인지 의견이 엇갈림",
+      "source": {
+        "title": "민속촌 '귀신 훈육'에 '아동학대' 고소…용인시, 현장 조사 착수",
+        "url": "https://m.news.nate.com/view/20261110n36991"
+      },
+      "why": "예전부터 흔히 쓰던 훈육법이라는 세대와, 공포로 말을 듣게 하는 건 정서적으로 해롭다는 세대의 생각이 다름",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "빼빼로데이엔 팀 동료들에게 과자를 돌린다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "빼빼로데이가 연인뿐 아니라 친구·가족·직장 동료끼리 주고받는 날로 자리 잡으면서 판매 경쟁도 뜨거움",
+      "source": {
+        "title": "'1년 장사 절반' 빼빼로데이 특수 경쟁 뜨겁다",
+        "url": "https://zdnet.co.kr/view/?no=20261110160949"
+      },
+      "why": "가볍게 분위기를 띄우는 좋은 문화라는 쪽과, 안 하면 눈치 보이는 부담스러운 의무라는 쪽으로 나뉨",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "연인끼리 빼빼로데이는 상술이니 안 챙겨도 된다",
+        "track": "NORM",
+        "category": "연애",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "'요즘 누가 빼빼로 주나'는 말이 나올 만큼 막대과자 대신 디저트·캐릭터 굿즈로 선물 풍경이 바뀜",
+      "source": {
+        "title": "\"요즘 누가 빼빼로 주나요\"…'품절 대란' 난리 난 디저트 [권용훈의 트렌드워치]",
+        "url": "https://www.hankyung.com/article/202611108683i"
+      },
+      "why": "기업 마케팅에 끌려갈 필요 없다는 쪽과, 작은 기념일이라도 챙기면 서로 기분 좋다는 쪽이 갈림",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "축의금이 식대보다 적어도 하객에게 서운한 티를 내면 안 된다",
+        "track": "NORM",
+        "category": "관혼상제",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "'하객이 왜 식대를 신경 써야 하냐'는 글이 퍼지며 호텔 예식 축의금 기준 논쟁이 다시 붙음",
+      "source": {
+        "title": "“누가 5성급 호텔에서 결혼식 하래?”…축의금 액수 놓고 갑론을박",
+        "url": "https://www.insight.co.kr/news/580110"
+      },
+      "why": "예식장은 신랑·신부가 고른 것이니 와준 것만으로 고마워해야 한다는 쪽과, 서로 돕는 상부상조인 만큼 식대 정도는 생각해야 한다는 쪽이 맞섬",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "이웃 생활소음은 아파트 게시판 공지로 자제를 요청해도 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "밤 10시 이후 샤워·세탁기 사용을 자제해 달라는 입주민 공지문에 '배려 요청'과 '지나친 요구'로 반응이 갈림",
+      "source": {
+        "title": "밤 10시 이후 '이것'도 하지 말라고?… 입주민 공지문에 누리꾼 갑론을박",
+        "url": "https://view.asiae.co.kr/article/2026110908580986219"
+      },
+      "why": "얼굴 붉히지 않고 알릴 수 있는 방법이라는 쪽과, 모두가 보는 공지로 생활 습관을 지적하는 건 압박이라는 쪽으로 나뉨",
+      "status": "pending"
+    }
+  ]
+}
