@@ -120,5 +120,15 @@
     "table": "cards",
     "count": 10
   },
-  "topic_picker": "season_trend"
+  "topic_picker": "season_trend",
+  "trend_seeds": [
+    "독감",
+    "수면",
+    "혈압",
+    "혈당",
+    "소화",
+    "두통",
+    "미세먼지",
+    "운동"
+  ]
 }

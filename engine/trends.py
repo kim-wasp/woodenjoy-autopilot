@@ -200,12 +200,47 @@ def naver_creator_trends(days=7):
     return out
 
 
-def naver_trends_block(days=7):
+def auto_trends(site_id):
+    """tools/trend_watch.py 가 매일 만든 급등 검색어 (네이버 검색광고 키워드 도구 + 구글 트렌드)"""
+    import json
+    from pathlib import Path
+    f = Path(__file__).resolve().parent.parent / "status/trends_auto.json"
+    if not f.exists():
+        return {}
+    try:
+        d = json.loads(f.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+    upd = d.get("updated", "")
+    try:
+        if (now_kst() - datetime.fromisoformat(upd)).days > 3:
+            return {}
+    except Exception:  # noqa: BLE001
+        return {}
+    return {"updated": upd, "site": (d.get("sites") or {}).get(site_id) or {}, "google": d.get("google") or []}
+
+
+def naver_trends_block(site_id=None, days=7):
+    parts = []
+    a = auto_trends(site_id) if site_id else {}
+    r = (a.get("site") or {}).get("rising") or []
+    if r:
+        parts.append("[이 사이트 분야 급등 검색어 — 네이버 검색광고 키워드 도구, 최근 30일 검색 수를 매일 재서 7일 전과 비교 (" + a["updated"][:10] + ")]\n"
+                     + "\n".join(f"- {x['keyword']}: 월 {x['now']:,}회" + (f" (7일 전 {x['before']:,}회, +{int(x['change'] * 100)}%)" if x.get("before") else " (새로 등장)") for x in r[:20]))
+    top = (a.get("site") or {}).get("top") or []
+    if top:
+        parts.append("[이 사이트 분야 검색 많은 말 — 같은 자료]\n" + ", ".join(f"{x['keyword']}({x['now']:,})" for x in top[:15]))
+    g = a.get("google") or []
+    if g:
+        parts.append("[구글 트렌드 한국 실시간 인기 검색어 — 사회적으로 갑자기 뜬 이슈. 이 사이트 주제와 관련 있는 것만 참고]\n"
+                     + "\n".join(f"- {x['keyword']} ({x['traffic']})" + (": " + " / ".join(x["news"]) if x.get("news") else "") for x in g[:15]))
     t = naver_creator_trends(days)
-    if not t:
+    if t:
+        parts.append("[네이버 크리에이터 어드바이저 인기·급등 검색어 — 사장님이 직접 확인해 붙여넣은 것]\n"
+                     + "\n".join(f"- {x['keyword']}" + (f" ({x['label']}, {x['date']})" if x["label"] else f" ({x['date']})") for x in t[:40]))
+    if not parts:
         return ""
-    lines = "\n".join(f"- {x['keyword']}" + (f" ({x['label']}, {x['date']})" if x["label"] else f" ({x['date']})") for x in t[:50])
-    return ("[네이버 크리에이터 어드바이저 인기·급등 검색어 — 사장님이 최근 직접 확인한 것]\n" + lines + "\n"
-            "쓰는 법: 1) 글감을 고를 때 이 사이트 주제와 맞는 검색어가 있으면 우선 고려해요. "
+    return ("\n\n".join(parts) + "\n"
+            "트렌드 쓰는 법: 1) 글감을 고를 때 이 사이트 주제와 맞는 급등 검색어가 있으면 우선 고려하고, 고른 근거(why_this_topic)에 그 숫자를 적어요. "
             "2) 글을 쓸 때 이 글과 직접 관련 있는 검색어가 있으면 제목·소제목·본문에 자연스럽게 1~2번 넣어요(같은 뜻의 말을 사람들이 실제로 치는 표현으로 바꾸는 정도). "
-            "3) 관련 없는 검색어를 억지로 끼워 넣거나 나열하지 말아요. 관련 없으면 안 써도 돼요. 검색어에 담긴 사실(사건·숫자)은 확인된 것만.")
+            "3) 관련 없는 검색어를 억지로 끼워 넣거나 나열하지 말아요. 검색어에 담긴 사실(사건·숫자)은 확인된 것만.")

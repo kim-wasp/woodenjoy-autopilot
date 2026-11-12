@@ -133,5 +133,17 @@
     "supabase_key_secret": "SUPABASE_SERVICE_KEY",
     "table": "cards",
     "count": 10
-  }
+  },
+  "trend_seeds": [
+    "셀프인테리어",
+    "싱크대경첩",
+    "문고리교체",
+    "방풍비닐",
+    "단열필름",
+    "곰팡이제거",
+    "실리콘셀프",
+    "방문수리",
+    "방충망교체",
+    "결로"
+  ]
 }

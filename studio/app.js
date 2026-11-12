@@ -167,9 +167,15 @@ async function viewTrends() {
   shell('trends', loading());
   const d = await api('trends');
   const fresh = (e) => (Date.now() - new Date(e.at)) / 864e5 <= 7;
-  $('#main').innerHTML = `<div class="page-h"><h1>트렌드</h1></div>
-  <div class="grid g2"><form class="card" id="tf">
-    <p class="small muted">네이버 크리에이터 어드바이저 트렌드 화면에서 보이는 인기·급등 검색어를 복사해서 붙여넣어 주세요. 한 줄에 하나, 순위 숫자는 있어도 괜찮아요. 최근 7일 안에 넣은 검색어를 모든 사이트의 글감 고르기와 글쓰기에 참고해요 (글과 관련 있을 때만 자연스럽게).</p>
+  const st = await sites();
+  const name = (id) => (st.find((x) => x.id === id) || {}).name || id;
+  const a = d.auto;
+  const autoHtml = a ? `<div class="card"><h2>자동 감지 (매일 아침 5시)</h2><p class="small muted">${fmt(a.updated)} 기준 · 네이버 검색광고 키워드 도구로 사이트별 분야 검색어의 최근 30일 검색 수를 매일 재서 7일 전보다 크게 는 것, 그리고 구글 실시간 인기 검색어예요. 글감 추천과 글쓰기에 자동으로 들어가요. 기록이 7일 쌓이기 전에는 쌓인 날짜끼리 비교해요.</p>
+    ${Object.entries(a.sites || {}).map(([id, v]) => `<h3 style="margin-top:14px">${esc(name(id))}</h3><p class="small">${(v.rising || []).length ? v.rising.slice(0, 12).map((x) => `<b>${esc(x.keyword)}</b> ${x.before ? `${x.before.toLocaleString()}→${x.now.toLocaleString()} (+${Math.round(x.change * 100)}%)` : `${x.now.toLocaleString()} (새로 등장)`}`).join(' / ') : '<span class="muted">아직 급등 없음 (기록 ' + (v.days || 1) + '일째)</span>'}</p><p class="small muted">검색 많은 말: ${(v.top || []).slice(0, 10).map((x) => esc(x.keyword) + ' ' + x.now.toLocaleString()).join(', ')}</p>`).join('')}
+    <h3 style="margin-top:14px">구글 실시간 인기 검색어</h3><p class="small">${(a.google || []).slice(0, 15).map((x) => `${esc(x.keyword)} <span class="muted">${esc(x.traffic)}</span>`).join(' / ') || '<span class="muted">못 읽음</span>'}</p></div>` : '<div class="card"><p class="small muted">자동 감지 결과가 아직 없어요. 매일 아침 5시에 만들어져요.</p></div>';
+  $('#main').innerHTML = `<div class="page-h"><h1>트렌드</h1></div>${autoHtml}
+  <div class="grid g2"><form class="card" id="tf"><h2>직접 추가 (선택)</h2>
+    <p class="small muted">크리에이터 어드바이저에서 눈에 띄는 검색어가 있을 때만 붙여넣어 주세요. 자동 감지와 함께 참고해요. 한 줄에 하나, 순위 숫자는 있어도 괜찮아요. 최근 7일 안에 넣은 검색어를 모든 사이트의 글감 고르기와 글쓰기에 참고해요 (글과 관련 있을 때만 자연스럽게).</p>
     <label class="f"><span>어디서 본 검색어인지 (선택)</span><input type="text" id="tlabel" placeholder="예: 생활·건강 인기유입 / 급등"></label>
     <label class="f"><span>검색어</span><textarea id="ttext" rows="10" placeholder="1 독감 예방접종\n2 수능 도시락\n3 김장 김치"></textarea></label>
     <button class="btn primary">저장</button>

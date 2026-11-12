@@ -26,5 +26,6 @@ module.exports = guard(async (req, res) => {
     await writeFile(FILE, JSON.stringify(data, null, 1), '트렌드 메모 지우기');
     return send(res, 200, { ok: true });
   }
+  data.auto = (await readJson('status/trends_auto.json')) || null;
   send(res, 200, data);
 });

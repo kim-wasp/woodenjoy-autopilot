@@ -1,0 +1,25 @@
+# 매일 아침 사이트별 급등 검색어 자동 감지 (네이버 검색광고 키워드 도구 + 구글 트렌드). 결과는 글감·글쓰기에 들어가요.
+name: 트렌드 감지
+on:
+  schedule:
+    - cron: "17 20 * * *"   # 한국 05:17
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: trend-watch
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q requests
+      - run: python3 tools/trend_watch.py
+        env:
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+      - run: |
+          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
+          for i in 1 2 3; do git add status/trends_auto.json status/kwtrend && git commit -qm "트렌드 감지 $(date +%F)" || break; git pull -q --rebase && git push -q && break; sleep 5; done

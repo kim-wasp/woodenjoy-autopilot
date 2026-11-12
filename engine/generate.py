@@ -266,7 +266,7 @@ def build_prompt(site, topic, notes, view=None):
     if kd:
         p.append("[네이버 월간 검색량 (검색광고 키워드 도구, 실제 조회값)]\n" + kd)
     import trends as _tr
-    p.append(_tr.naver_trends_block())
+    p.append(_tr.naver_trends_block(site["id"]))
     if topic:
         p.append(f"[주제/제목 지정]\n{topic}\n(이 주제로 쓰되 제목은 검색 키워드와 후킹을 살려 다듬어도 됩니다)")
     else:
@@ -614,7 +614,7 @@ def season_candidates(site, n=8):
         f"[사이트]\n{site_profile(site)}", f"[오늘] {now:%Y-%m-%d (%a)}",
         "[이 시기 건강 주제 힌트 — 사실이 아니라 후보]\n" + "\n".join(f"- {h}" for h in hints),
         "[구글 트렌드 한국 실시간 인기 검색어 — 건강과 관련 있는 것만 참고]\n" + (tr_txt or "(못 읽음)"),
-        trends.naver_trends_block(),
+        trends.naver_trends_block(site["id"]),
         "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site["id"])][-60:] or ["(없음)"]),
         "[승인 대기 중인 글 주제]\n" + "\n".join(pending_topics(site["id"]) or ["(없음)"]),
         f"이 블로그에 쓸 주제 후보 {n}개를 골라 주세요. 지금 시기에 사람들이 실제로 검색할 만한 것, 최근 제목과 겹치지 않는 것. "
@@ -721,7 +721,7 @@ def research_topic(site, topic):
     prompt = "\n\n".join([
         f"[사이트]\n{site_profile(site)}", f"[지금] {now_kst():%Y-%m-%d %H:%M}",
         f"[사장님이 정한 글감]\n{topic}",
-        trends.naver_trends_block(),
+        trends.naver_trends_block(site["id"]),
         "웹 검색으로 이 글감과 관련된 최근 보도와 공식 자료(국회 의안정보, 정부 보도자료, 법령, 통계)를 찾아 정리해 주세요. "
         "사실은 찾은 자료에 있는 것만 쓰고 지어내지 마세요. 보도마다 다른 숫자는 '~에 따르면'으로. 한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이. "
         "글감이 너무 넓으면 지금 가장 많이 보도되는 쟁점 하나로 좁혀 주세요. 관련 보도를 찾지 못하면 facts 에 그렇게 적어요. "
@@ -768,7 +768,7 @@ def ideas(site_id, topic=None):
             "[최근 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
             "[구글 트렌드 한국 실시간 인기 검색어]\n" + (tr_txt or "(못 읽음)"),
             f"[{trends.source_name()} 최근 24시간 정치 헤드라인]\n" + (pool_txt or "(못 읽음)"),
-            trends.naver_trends_block(),
+            trends.naver_trends_block(site["id"]),
             "위 자료만 보고(웹 검색 없이) 지금 사람들이 가장 많이 보는 정치 이슈 후보 6개를 골라 주세요. 연예·스포츠·사건사고는 정치와 직접 관련 없으면 빼요. "
             "헤드라인이 여러 개 겹치는 이슈일수록 좋아요. 사실은 위 헤드라인에 있는 것만 쓰고 지어내지 마세요. "
             "한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이 써요. "
@@ -799,7 +799,7 @@ def ideas(site_id, topic=None):
         f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d}",
         "[최근 제목]\n" + "\n".join([x["title"] for x in published_posts(site_id)][-30:] or ["(없음)"]),
         "[검색량]\n" + (keyword_data(site) or "(자료 없음)"),
-        __import__("trends").naver_trends_block(),
+        __import__("trends").naver_trends_block(site_id),
         "웹 검색으로 지금 시기에 검색 수요가 있고 수익(애드센스·애드포스트 단가, 제휴)에도 유리한 주제를 확인해 글감 10개를 추천하세요. 최근 제목과 겹치지 않게. "
         'JSON: {"ideas": [{"title": "후킹 있는 제목안", "keyword": "핵심 키워드", "why": "근거(검색량/시기/이슈/수익성)", "angle": "다른 글과 다른 점"}]}'])
     res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas")
