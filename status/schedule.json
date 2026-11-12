@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T21:17+09:00",
+  "updated": "2026-11-12T21:39+09:00",
   "items": [
     {
       "site": "infobay",
@@ -376,6 +376,15 @@
       "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
       "platform": "blog",
       "at": "2026-11-13T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-12-nhis-special-judicial-police-act-subcommittee-doct",
+      "title": "건보공단에 수사권? 특사경법 소위 통과…‘11.9개월’ vs ‘4.9%’ 쟁점",
+      "platform": "blog",
+      "at": "2026-11-13T12:00+09:00",
       "state": "planned"
     },
     {
