@@ -5,12 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          U=https://api.uplika.com/mcp
-          H='-H content-type:application/json -H accept:application/json,text/event-stream'
-          echo "== init"; curl -s -D h.txt $H -H "authorization: Bearer $K" -d '{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"studio","version":"1"}}}' $U | head -c 300; echo; grep -i "mcp-session\|www-auth" h.txt
-          S=$(grep -i mcp-session-id h.txt | awk '{print $2}' | tr -d '\r')
-          echo "== call with session"; curl -s $H -H "authorization: Bearer $K" ${S:+-H "mcp-session-id: $S"} -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' $U | head -c 300; echo
-          echo "== x-api-key"; curl -s $H -H "x-api-key: $K" -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' $U | head -c 300; echo
-          echo "== query"; curl -s $H -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_naver_keyword_history","arguments":{"keyword":"싱크대경첩","limit":1}}}' "$U?api_key=$K" | head -c 300; echo
-          curl -s https://api.uplika.com/.well-known/oauth-protected-resource | head -c 400; echo
+          A="https://api.uplika.com"
+          g(){ c=$(curl -s -o b.txt -w "%{http_code}" -H "authorization: Bearer $K" "$A$1"); echo "GET $c $1 $(head -c 160 b.txt)"; }
+          p(){ c=$(curl -s -o b.txt -w "%{http_code}" -X POST -H "authorization: Bearer $K" -H "content-type: application/json" -d "$2" "$A$1"); echo "POST $c $1 $(head -c 160 b.txt)"; }
+          for x in /v1/naver/visibility "/v1/naver/visibility?blog=cafe_peanut" /v1/naver/visibility/check /v1/naver/visibility/runs /v1/naver/keywords /v1/naver/keywords/reports /v1/naver/blog/diagnose /v1/naver/search; do g "$x"; done
+          for x in /v1/naver/visibility /v1/naver/visibility/check /v1/naver/visibility/checks /v1/naver/check /v1/naver/keywords/check /v1/naver/search/check; do p "$x" '{"keywords":["싱크대 경첩"],"blog":"cafe_peanut"}'; done
         env: { K: "${{ secrets.UPLIKA_API_KEY }}" }
