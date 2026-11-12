@@ -1,0 +1,135 @@
+{
+  "id": "sisibibi/2026-11-12-nhis-special-judicial-police-act-subcommittee-doct",
+  "site": "sisibibi",
+  "title": "건보공단에 수사권? 특사경법 소위 통과…‘11.9개월’ vs ‘4.9%’ 쟁점",
+  "status": "ready",
+  "created_at": "2026-11-12T21:35+09:00",
+  "requested_topic": "건보공단에 수사권? 특사경법 법사소위 통과에 의사들이 사흘째 국회 앞에 선 이유",
+  "keywords": {
+    "main": "건보공단 특사경법",
+    "sub": [
+      "건보공단 특사경",
+      "특사경법 법사위 소위 통과",
+      "사무장병원 수사권",
+      "의협 국회 앞 시위",
+      "사법경찰직무법 개정안",
+      "면허대여약국",
+      "법사위 전체회의 특사경"
+    ]
+  },
+  "brief": {
+    "reader": "건보공단 특사경 뉴스를 보고 의사들이 왜 반대하는지, 공단은 왜 수사권이 필요하다는지 한 번에 알고 싶은 사람",
+    "question": "건보공단에 수사권을 주는 법이 국회 소위를 통과했는데, 왜 이렇게 크게 싸우나요?",
+    "answer": "공단은 사무장병원 수사가 평균 11.9개월씩 걸려 그사이 돈을 못 돌려받는다고 말하고, 의사협회는 진료비를 주는 공단이 직접 수사까지 하면 공정하지 않고 권한 남용 위험이 있다고 맞서요.",
+    "out_of_scope": "13일 법사위 전체회의와 본회의의 최종 결과 예측, 개별 의료기관 수사 사례, 의료소송 법률 상담",
+    "next_action": "13일 법사위 전체회의에서 공단이 낸 권한 남용 방지책이 실제로 법 조문에 들어갔는지 확인하기"
+  },
+  "why_this_topic": "11일 법사위 법안심사제1소위 통과 후 의협이 10~12일 사흘 연속 국회 앞 1인시위를 했고 12일 궐기대회까지 열면서 의료계 매체와 종합지 보도가 몰렸어요. 13일 법사위 전체회의를 앞둔 시점이라 ‘건보공단 특사경’, ‘특사경법’ 검색이 늘 때예요. 그런데 보도 대부분이 의료계 매체(반대 논리)나 공단 자료(찬성 논리) 한쪽만 다뤄서, 양쪽 숫자를 나란히 놓은 정리 글이 비어 있어요.",
+  "meta_description": "건보공단 특사경법이 11일 법사위 소위를 통과했어요. 공단은 ‘수사 11.9개월·징수율 13%’, 의협은 ‘송치율 4.9%·이해충돌’을 근거로 내세워요. 13일 전체회의 전에 쟁점을 숫자로 정리했어요.",
+  "hero_prompt": "An empty Korean parliamentary committee meeting room in soft daylight, long wooden desks with microphones, neat stacks of legal documents and a stethoscope resting on top of a bill folder in the foreground, calm and neutral mood, no people, no text, no logos, no party colors, photorealistic",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "summary": [],
+  "conclusion": "건보공단에 사무장병원 수사권을 주는 법이 11일 소위를 통과했어요. 공단은 수사가 너무 느리다고 하고, 의사들은 돈 주는 쪽이 수사하면 공정하지 않다고 맞서요.",
+  "opinion": "이번에도 또 '특별'이다...\n제발 기준이라는걸 먼저 생각하고 만들었으면 좋겠다.\n유교적 정치사상이지만 세계의 몇몇 나라들 빼고는 민본주의가 기본 아닌가?\n그 '민'부터 생각을 하면 정치인들, 행정가들이 저런 생각, 저런 행동을 하지 않을텐데 그저 눈앞에 보이는 이익과 내 지역구 혹은 탁상 행정으로부터 비롯된 것들이 아닌가 싶다.\n왜 건보공단에 수사까지 맡겨야하는 상황까지 된건지를 깊이 잘 고민해서 의료계와 공단, 그리고 수사기관 등이 잘 협의하면 되지 않을까?\n각계는 일을 좀 미루지 말고, 그만큼 일을 했으면 보상도 섭섭치 않게 해주고, 인력이 부족하면 그만큼 충원하고...기업들에게만 인력충원 푸쉬하지 말고 국가가 그럴때에도 필요한 것이라는 점을 망각하지 말길.",
+  "photos": [],
+  "sources": [
+    {
+      "title": "건보공단 특사경법, 법사위 소위 통과 - 파이낸셜뉴스",
+      "url": "https://www.fnnews.com/news/202611111824184543"
+    },
+    {
+      "title": "사무장 병원 잡기 위한 건보공단 특사경 도입 가시화··· 의료계 반발 이유는 - 경향신문",
+      "url": "https://www.khan.co.kr/article/202611121410001/"
+    },
+    {
+      "title": "의협 \"건보공단 특사경법 법사위 소위 통과 강력 규탄\" - 의협신문",
+      "url": "https://www.doctorsnews.co.kr/news/articleView.html?idxno=167257"
+    },
+    {
+      "title": "의협, 건보공단 특사경 '저지 총력전' 국회 앞 1인시위 사흘째 - 의협신문",
+      "url": "https://www.doctorsnews.co.kr/news/articleView.html?idxno=167281"
+    },
+    {
+      "title": "김택우 회장, 건보공단 특사경법 저지 총력…국회 찾아 반대 의견 전달 - 의협신문",
+      "url": "https://www.doctorsnews.co.kr/news/articleView.html?idxno=167237"
+    },
+    {
+      "title": "법사위 소위 넘은 특사경…국회 앞 의사들의 '경고장' - 메디파나뉴스",
+      "url": "https://www.medipana.com/news/articleView.html?idxno=421676"
+    },
+    {
+      "title": "의협, '건보공단 특사경' 반대 1인 시위⋯법안은 국회 소위 통과 - 코메디닷컴",
+      "url": "https://kormedi.com/2903365/"
+    },
+    {
+      "title": "건보공단 특사경법, 국회 법사위 소위 통과 - 치의신보",
+      "url": "https://www.dailydental.co.kr/news/article.html?no=139651"
+    },
+    {
+      "title": "사무장병원 수사 평균 11.9개월…부당이득 징수율 10%대 - 메디파나뉴스",
+      "url": "https://www.medipana.com/news/articleView.html?idxno=418314"
+    },
+    {
+      "title": "사무장병원 수사 평균 11.9개월… 재산 빼돌리며 건보 징수율 10%대 - 매일일보",
+      "url": "https://www.m-i.kr/news/articleView.html?idxno=1418059"
+    },
+    {
+      "title": "사무장병원·면대약국 수사에 평균 1년…부당이득금 징수는 ‘지지부진’ - 헬스경향",
+      "url": "https://www.k-health.com/news/articleView.html?idxno=101365"
+    },
+    {
+      "title": "사무장병원·면대약국 수사 평균 11.9개월…건보 환수율 10%대 - 아이뉴스24",
+      "url": "https://m.inews24.com/v/2009087"
+    },
+    {
+      "title": "\"공단 특사경 권한 남용 제어책 수립…복지부가 총괄 감독\" - 데일리팜",
+      "url": "https://dailypharm.com/user/news/344456"
+    },
+    {
+      "title": "보건복지부, 공단 특사경 관리·감독 조직 신설 추진 - 병원신문",
+      "url": "http://www.khanews.com/news/articleView.html?idxno=252573"
+    },
+    {
+      "title": "강청희 건보 이사장, 특사경 수사권 남용 우려 일축...내·외부 통제장치 강화 - 의학신문",
+      "url": "https://www.bosa.co.kr/news/articleView.html?idxno=3011791"
+    },
+    {
+      "title": "건보공단 특사경 법안에 의료계 반발 \"권한 남용 커\" - 뉴스토마토",
+      "url": "https://www.newstomato.com/ReadNews.aspx?no=1320267"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 0,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-12T21:36+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 16798,
+        "output_tokens": 11653,
+        "web_searches": 4,
+        "calls": 2,
+        "usd": 0.3403
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.4743,
+    "total_usd": 0.4743,
+    "total_krw": 660,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
