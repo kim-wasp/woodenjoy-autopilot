@@ -1,80 +1,80 @@
 {
   "ideas": [
     {
-      "title": "건보공단에 수사권? 특사경법 법사소위 통과에 의사들이 사흘째 국회 앞에 선 이유",
-      "keyword": "건보공단 특사경",
+      "title": "162조 미래대응기금, 여당서도 '지역구 쌈짓돈' 우려 나온 이유",
+      "keyword": "미래대응기금",
       "trend_keyword": "",
-      "facts": "건강보험공단에 특별사법경찰(특사경, 일부 범죄를 직접 수사할 수 있는 권한)을 주는 법안이 국회 법사위 소위를 통과했어요. 의사협회는 국회 앞 1인 시위를 사흘째 이어 갔고 궐기대회도 열었으며, 병원협회도 '과도한 조치'라며 우려를 냈어요.",
-      "sides": "찬성 측: 법안을 소위에서 통과시킨 쪽의 이유는 위 헤드라인에 없어 확인이 필요해요 / 반대 측: 의사를 '동네북' 취급하는 과도한 권한이다",
-      "question": "건보공단이 직접 수사할 권한을 갖는 것, 필요한 장치라고 보세요, 지나치다고 보세요?",
+      "facts": "162조 원 규모의 미래대응기금을 두고 '지역구 쌈짓돈'이 될 수 있다는 논란이 있고, 여당 안에서도 지방은 여전히 재정난이라는 우려가 나왔어요. 조국혁신당은 국회의 통제권을 강화하는 '더 좋은 미래대응기금법'을 발의했어요.",
+      "sides": "찬성 측: 기금을 성장 지원과 양극화 해소에 집중하면 필요한 돈이다(한겨레 사설) / 반대 측: 쓰임이 분명하지 않으면 지역구 나눠먹기가 될 수 있고 국회 통제가 약하다",
+      "question": "이렇게 큰 기금을 만드는 것 자체가 문제라고 보시나요, 아니면 국회가 어떻게 통제하느냐가 핵심이라고 보시나요?",
       "metrics": {
-        "news_24h": 100,
-        "news_6h": 55,
-        "news_capped": true,
+        "news_24h": 53,
+        "news_6h": 0,
+        "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 230
+        "naver_month": 10
       },
       "links": [
         {
-          "title": "'건보공단 특사경 도입'에 의료계 반발 격화‥내일 법사위 심사 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5HdHpfMWZCVFpGbHZWeUJ6ckJRWk9QRVFMTE9lZ2JKcV8zUjZYSmtNeW5fU3lOS3FWVE4zRmFBN19IYUFuWXZOSzJuY0t4ZlFPdlZyb0l6bVAtYWJ0VTdaMS0wckNsMjN0Vnp5U3F1SkVqRzd5RHJv0gF3QVVfeXFMUER1bU1RV19aMzk0b0V1ODFRRE1DS3FoNWd3a0c1N3J5cjY4Vkl3b2dXTTNNZC0wNjc4UmhKRjhtUDdqUDgyZS1kVmxYNVJiTXFteWpGT1JEZjZWUEg4dFA1SmFwSWRvd1BhOTdxX1RRb3BSelc3Qnc?oc=5"
+          "title": "[김태일의 좋은 정부 만들기]성명서: 미래대응기금의 성공을 위한 수정을 촉구합니다 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9kNDZKcm9qOG1kOWxZQ19QcTVPUHdONkN0ZXN3VWZxMUNxdDFmMi14SlhsU0JRN2ZnWnpuelRhRXFxZDFzVndBZE9DdWtTckZ1UXp0eWwxYW1iQdIBX0FVX3lxTE1oYnY5VXFzNjRtajNNVTM0R3BpTzl2MjFtby1DMjJodzg2emQxZzVteng4Q19JX1VxRXdLSUZmYlZyTDlEeWo2NVhlQW5KNEpDSklFZXFwd0ZRVHlwXzNB?oc=5"
         },
         {
-          "title": "﻿병원계, 건보공단 특사경 권한 부여 반발 - 데일리메디",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1FRzgzOE4yQ3FFSU5vcUJPM3laWm0teVB3TngzaU9DT2FObWVYOEd4MEs2U0tOSjN6aEVSb2gtc05QRm40Y2FVY2xmbzAzd0JudENjZnZKbVMzQUtjMnAxclVTTWRmVXhl?oc=5"
+          "title": "(보도설명) 미래대응기금은 국민연금기금으로부터 예수를 검토한 바 없습니다. - 대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaWhtNmF4Mm1xeWxteDY0aUFKamNQODhCRmg5bE03UmgwZWxzMG8tZVU0MDB5bnpVUTh6LXpyLS1XOVhOTzZzczMzY3dCSk9icENibG0xVUZzMG5jcEJsSnFzcmN3Um5VUGp2MVViWkRaNUphTC1TV3p2MjhzM1VWeFRfYjhfN014LW5iaA?oc=5"
         },
         {
-          "title": "\"의사가 동네북입니까\" 특사경법 반대 국회 앞에 선 의사들 - 의협신문",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1nS1pYbEJ5bU1oLVREQ2dCZGFfaG9wYzJvalN5dGVKT2xxTl93Y1ZNdVlMeEU5RWlIRnltZWJfMi1udTJ2bms4eERDRGFLTlY2OXpEaE4wNmpYVy1nRklLcTVhaGMxXy1kaDdyZ0ZmR193UQ?oc=5"
+          "title": "[사설] 미래대응기금, 성장지원·양극화해소에 집중하길 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DeEduS2dBb2c0bXhZOVNmN0dXakpLUjhsTE9rM0xNTjk1Mm1vRWRCUi1nOEZVOEZvVnRudmZnTkQtclRfUExTS1dDdFFvM1RzMkRBemdzTlJwbTdoWllhQVUzNlJVMVZwQ0E?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 55건), 네이버 월간 검색 230회",
-      "score": 157.3
+      "why": "구글 뉴스 24시간 기사 53건, 네이버 월간 검색 10회",
+      "score": 53.1
     },
     {
-      "title": "'북동영' 하자 '탈충권' 맞불, '당나라 군대'까지…국회 고성의 시작은 탈북민 호칭",
-      "keyword": "북동영 탈충권",
-      "trend_keyword": "정동영",
-      "facts": "국민의힘 박충권 의원이 정동영 통일부 장관을 '북동영'이라고 부르자 더불어민주당 쪽에서 '탈충권'으로 맞받으며 국회에서 고성이 오갔어요. 같은 시기 탈북단체는 통일부의 '북향민' 호칭이 탈북민 정체성을 부정한다고 반발했고, 나경원 의원의 '당나라 군대냐' 발언에는 국방부 장관이 취소를 요구했어요.",
-      "sides": "통일부 쪽: '북향민'이라는 새 호칭을 쓴다(이유는 확인 필요) / 탈북단체 쪽: '탈북민'이라는 정체성을 지우는 호칭이다",
-      "question": "'탈북민'과 '북향민', 호칭을 바꾸는 게 의미 있는 변화라고 보세요, 불필요한 논란이라고 보세요?",
+      "title": "\"한덕수 석방되면 조희대 탄핵\"? 법원행정처장이 '부적절'이라 한 이유",
+      "keyword": "한덕수 석방 조희대",
+      "trend_keyword": "조희대",
+      "facts": "법원행정처장은 '한덕수 석방 시 조희대 대법원장 탄핵'이라는 주장에 대해 국회에서 \"부적절\"하다고 답했어요. 이와 별도로 \"한덕수 석방 땐 재판 차질 우려\"라는 의견서가 이진관 재판부에 제출됐다는 단독 보도도 나왔어요.",
+      "sides": "탄핵 주장 측: 헤드라인에는 구체적 근거가 없어요. 누가 어떤 이유로 말했는지 확인이 필요해요 / 법원 측: 재판 결과를 이유로 대법원장 탄핵을 거론하는 것은 부적절하다",
+      "question": "정치권이 진행 중인 재판의 결과를 두고 사법부 수장 탄핵을 거론하는 것을 어디까지 허용되는 정치적 발언이라고 보시나요?",
       "metrics": {
-        "news_24h": 27,
+        "news_24h": 48,
         "news_6h": 0,
         "news_capped": false,
-        "trend": "정동영",
+        "trend": "조희대",
         "trend_traffic": 500,
         "trend_label": "500+",
         "naver_month": 10
       },
       "links": [
         {
-          "title": "정동영에 “북동영” 했다가…“탈충권” 역공 당한 박충권 [이런뉴스] - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KN2ViY1N3cWlBbW5lamhyamlxSS1GR215eXN0QVZVNlF2eFBJTExBSllDaWdHTGxpQkYtanBZTlNkdFc2NVRjUzZWMnpjVFN0ZDhRMmFEV0tIM2l4VVFGYXp4amNpQQ?oc=5"
+          "title": "법원행정처장, '한덕수 석방시 조희대 탄핵' 주장에 \"부적절\" - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1tU2ZrMnFLZEljWF91bENQVEo3dE9uRWJKTGUzeXN2QU5NQ3U5d1hQZXR2OTRsZldRa0VzOG9zMWM4Q2VuU244MHlnZG1nOWMtdzZqSUhzbE9pa3hTVWp3dHkwUHgtMlFBY1B2Slk3cUVZQjV1b3lzdtIBeEFVX3lxTE13Wkc2WkRSdllaUkFYUzZrcG9ySVVRN3lhTHlLR0JZRGk2WFNsZHUycFAtNFBNRzVHS1BxY3N0S3prbmQ5R0c2SDlWYktOSE94ZjdoVDdPV3I5X0Y2SWh1a1Z6OXNzVmRTd0lKYzg4QjRTWUZrdUZxMw?oc=5"
         },
         {
-          "title": "“북동영““탈충권“ 고성 충돌…’북향민’ 용어 대립 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1LajNDdFV5RGMybkRLbmk0Z1JvaUYzcWs1dlJJc2dvTG92dnkyRC0zNl9relhBYzJ6Ukx6T3pqcUNGVTRtVzVFSk9tNWx2NVJTTTh2WWJoc3A2ME9WRllWNDB3djZNRzA?oc=5"
+          "title": "한덕수 석방 가능성에…민주 일부, ‘조희대 탄핵’ 재추진 목소리 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QX1ZqaVRvM1NnUWZ5VXVqajM3c3hlNklTYUVON21UZmNMTldSWDI0aFRHQ1BkQ3lTU05YOGExMjBQVXdqV3d0Y3REdjZKWDd3WTVnZk02ZzZQU2RlUV9HRkZfNk5lanUtZVZHRjlaVGlfVTBZ?oc=5"
         },
         {
-          "title": "박충권, 정동영 향해 \"북동영\" 부르자 與 \"탈충권\" 맞불 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrVnY0ankxX2xKbk5UQU1wZThMaHQ1alk5WXQydDU0Z3ZVWW5rNFctRi16OUN5eV9McDFzTU1fT1o5RFVJZ2tycTFYQlZUQV82RFlIV08xaURmUXJ1RDNvT0JVclh6WGZ6bmlTbzZhLVhTYzdfOVpiStIBeEFVX3lxTE5DLURPX0xtVEJTblZPcGhWeWgyY2t2RC05b1d4dFVfWHBpQVpYbFhEVTBGS2MtTUtPTVlvOHB3X3k1YmhtQ2RWbEVFb2d3eEFlNi1ObjZBSjNyaHhlZ3pWV0ptRFF6QkVHckJYdUFJY3l4S01EM1QyZQ?oc=5"
+          "title": "법원행정처장, ‘한덕수 석방시 조희대 탄핵’ 與 주장에 “부적절” - 동아일보",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Cd0Y4MXhLX01Md09lX05ycUVqZjlhempTUkVIWTVUTm9zMDQ2SVNsdklCeVdZblJBdks4OG11MEZHbXhidHU5T05YeVZrUzUzeUlVejI3SUYwNlJLWE1CcUpzWkhuYVozNTVnemgtVkI3cWZxWGfSAWZBVV95cUxQbTBUYUg0YUR6eHhRVHowenp2UHB4aE5VNE4zczJsY1Y4TnRrc0h5UGQ0VXoxM0gyaG5LYW1rc1piUFJtT19YeVZidWlhZ1ByVHZqb3hlZE4xVmFFc19sdGRTcFVwWGc?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 27건, 구글 검색 급증 '정동영' 500+, 네이버 월간 검색 10회",
-      "score": 32.1
+      "why": "구글 뉴스 24시간 기사 48건, 구글 검색 급증 '조희대' 500+, 네이버 월간 검색 10회",
+      "score": 53.1
     },
     {
-      "title": "78일 만의 당청 만찬, '한마음' 외쳤는데 종부세는 왜 갈렸나",
-      "keyword": "종부세 당청 이견",
+      "title": "종부세 '당정 엇박자' 논란, 78일 만의 만찬 뒤에도 남은 이견",
+      "keyword": "종부세 엇박자",
       "trend_keyword": "부동산",
-      "facts": "이재명 대통령이 78일 만에 여당 지도부와 만찬을 하며 '당정이 한마음 한뜻으로 움직여야 한다'고 강조했어요. 그런데 당과 청와대가 한목소리를 내는 가운데서도 종합부동산세(종부세)를 두고는 이견이 있다는 보도가 나왔고, 국회 파행으로 주택공급 법안이 발이 묶였다는 보도도 있어요.",
-      "sides": "청와대 쪽 / 여당 쪽: 종부세를 두고 각자 어떤 방향인지는 위 헤드라인에 없어 글 쓰기 전에 확인이 필요해요",
-      "question": "부동산 대책에서 종부세 손질과 주택공급 법안 처리 중 무엇이 먼저라고 보세요?",
+      "facts": "이재명 대통령이 78일 만에 여당 지도부와 만찬을 하며 '당정 한마음'을 강조했어요. 김민석 총리는 \"부동산 정책은 일관된다\"며 종부세 엇박자 논란을 진화하려 했지만, 언론은 '이견이 여전하다'고 보도했어요.",
+      "sides": "정부 측: 부동산 정책은 흔들림 없이 일관된다 / 엇박자를 지적하는 측: 종부세를 두고 당과 정부의 말이 다르다. 다만 구체적으로 어떤 발언이 엇갈렸는지는 헤드라인에 없어 확인이 필요해요",
+      "question": "종부세를 두고 당과 정부의 말이 다르게 들리는 것이 실제 정책 차이라고 보시나요, 아니면 메시지 관리 문제라고 보시나요?",
       "metrics": {
-        "news_24h": 10,
+        "news_24h": 20,
         "news_6h": 0,
         "news_capped": false,
         "trend": "부동산",
@@ -84,37 +84,37 @@
       },
       "links": [
         {
-          "title": "당청 종부세 이견 봉합 시도…범여권 \"부자감세\" 파열음 - 신아일보",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1UVUdla0p0d2V5VXAzdGJjQ3ZQZk50aGpDT0tyR3U0OGtXaS1oOUlDaHRVWHk2S0VFbnNqTXNmR0FnVFZEQ0EwaHNYYWJvTTdWengtNzB2bUJiLXBOYjJDcXpsbzRoMVJ5Z3dCRUJaYVA?oc=5"
+          "title": "김민석·\"부동산 정책 일관\" 종부세 엇박자 불식 주력, 정청래 갈등엔 \"만나서 대화\" - 국제신문",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQT0hTbEc5azY3enB1MjM0VkJLaUgtdEFMTmYzVUM3SlJpcV9jNlo1UVhzWW02R1hhN1V1NThFanN0bGxsSy1RZ2NzZUxINThha0lObGtad290ajR4aXFtcDJNcFdtT2VPNERaWXRBdUR2LVpTS3ZjbDdJN3BQNUtkbzlQVld6bzRyUV9nZFVB?oc=5"
         },
         {
-          "title": "당청 ’한목소리’에도 종부세 이견…金·鄭 ’대화중재’도 파열음 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10a0NWeUFUcjk2YUktYWxOTVJYeEN5dHdzWWNHaGl6RllCbkxtanByWHNNU1lTWUlGZklOa1MzZjFQOElTZG1SYUZlZ1Q2QktDaVRkZEJVTUtVQkRJeVlHd1BzckllTDQ?oc=5"
+          "title": "조국혁신당 \"종부세 엇박자 대통령에 부담\"·靑 \"입장 후퇴 없어\" - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5nRjlQN2xGaE1XeVd3UHo3S2gwRnVtaW5ndmtMQzRiWkplQU1hTFVkZWo3Y2JjSmxKWEVfam13Y2lNcktqWl9XdXRKb2RteHJYdGFtZzNBYWYwNlUzOVlScWV4MEgyd3c?oc=5"
         },
         {
-          "title": "수그러든 與 '비거주자 종부세 완화론'...\"당청 이견 없고 정리됐다\" - 조세일보",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1UQnNLT0ZNMktLc2dJN2s5dkl2aERXZmJYbnZiQlFGLXVPbDNuam1PVnRfNlhySzg1TEpQWDFqblBLRi1rTGZZWENoLUpiSTBpOG05c2tydjRYQ1daVHNHNmt5NjNrX1UxcUhuVHVIZ2hXTlVD?oc=5"
+          "title": "여당, 종부세 유지 가닥…전월세 등 부동산 민심 악화에 고심 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9hUnlCS0tWSTBIQ1FXcW83T21NOVZaemlsMFlxUTlkLTdRWm9uV0NwbmpxUWZiMnJSY2ZFWXdKakZkVzBVNGZSVW44RFMwU0FTOS1sUU1KYlhmWWNTSmw3ZHpMcExNeW1STmVXWE1WTENnc1FW?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 10건, 구글 검색 급증 '부동산' 2000+, 네이버 월간 검색 10회",
-      "score": 30.1
+      "why": "구글 뉴스 24시간 기사 20건, 구글 검색 급증 '부동산' 2000+, 네이버 월간 검색 10회",
+      "score": 40.1
     }
   ],
-  "updated": "2026-11-12T21:19+09:00",
+  "updated": "2026-11-12T21:40+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 10671,
-        "output_tokens": 4862,
+        "input_tokens": 10588,
+        "output_tokens": 4977,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1399
+        "usd": 0.1419
       }
     },
     "images": {},
-    "usd": 0.1399,
-    "total_usd": 0.1399,
+    "usd": 0.1419,
+    "total_usd": 0.1419,
     "total_krw": 200,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
