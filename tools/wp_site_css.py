@@ -20,6 +20,13 @@ if mine:
     r = requests.put(f"{B}/widgets/{mine[0]['id']}", headers=A, json=body, timeout=60); print("바꾸기", mine[0]["id"], r.status_code, r.text[:200] if r.status_code >= 300 else "")
 else:
     r = requests.post(f"{B}/widgets", headers=A, json=body, timeout=60); print("새로 넣기", r.status_code, r.json().get("id") if r.ok else r.text[:300])
+# 위젯이 비활성 칸에 들어가는 경우가 있어서, footer-bar 칸 목록에 직접 넣어요
+ws = requests.get(f"{B}/widgets", headers=A, params={"per_page": 100, "context": "edit"}, timeout=60).json()
+wid = next(w["id"] for w in ws if "wn-site-style" in json.dumps(w.get("instance") or {}, ensure_ascii=False))
+sb = requests.get(f"{B}/sidebars/footer-bar", headers=A, timeout=60).json()
+if wid not in sb.get("widgets", []):
+    r = requests.post(f"{B}/sidebars/footer-bar", headers=A, json={"widgets": sb["widgets"] + [wid]}, timeout=60)
+    print("footer-bar 칸에 넣기", wid, r.status_code, r.text[:200] if r.status_code >= 300 else "")
 # 대표 이미지가 숨겨진 사이트라, 본문에 대표 사진이 없는 스튜디오 글에 넣어요
 for i in [int(x) for x in os.environ.get("HERO_FIX", "").split(",") if x]:
     p = requests.get(f"{B}/posts/{i}", headers=A, params={"context": "edit"}, timeout=60).json()
