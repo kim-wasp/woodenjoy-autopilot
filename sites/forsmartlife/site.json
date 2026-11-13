@@ -14,7 +14,8 @@
       "user": "gracelyun28",
       "app_password_secret": "WP_FORSMARTLIFE_PASS",
       "category": "계절 건강",
-      "status": "publish"
+      "status": "publish",
+      "hero_in_body": true
     },
     "categories": [
       "계절 건강",

@@ -4,7 +4,7 @@ B = "https://forsmartlife.com"
 out = {}
 with sync_playwright() as p:
     b = p.chromium.launch()
-    for name, path, w, h in [("home-pc", "/", 1280, 1400), ("home-mobile", "/", 390, 1600), ("about", "/about/", 1280, 2600), ("editorial", "/editorial-policy/", 1280, 3200), ("cat", "/category/symptom-management/", 1280, 1200)]:
+    for name, path, w, h in [("home-pc", "/", 1280, 1500), ("home-mobile", "/", 390, 1700), ("post-pc", "/flu-vaccine-november-2026-free-eligibility-timing/", 1280, 4200), ("post-mobile", "/flu-vaccine-november-2026-free-eligibility-timing/", 390, 5000), ("wf-pc", "/pneumococcal-vaccine-history-check/", 1280, 4200)]:
         pg = b.new_page(viewport={"width": w, "height": h})
         pg.goto(B + path + f"?v={int(time.time())}", wait_until="networkidle", timeout=90000)
         pg.screenshot(path=f"status/audit/shots/{name}.png")

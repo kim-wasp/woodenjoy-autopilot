@@ -1,0 +1,107 @@
+/* hallmark-floor: tokens at :root, no transition-all, focus-visible on links, reduced-motion fallback. Not a full Hallmark run: restyle of an existing GeneratePress site in its own system. */
+/* critique: 글은 여백과 표·상자가 읽기를 이끌게, 장식은 로고의 초록→청록 한 가지 결만 */
+/* WellnessNote(forsmartlife.com) 사이트 전체 스타일. 콘텐츠 스튜디오가 footer-bar 위젯으로 넣어요 (tools/wp_site_css.py) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+:root{
+  --wn-leaf:#99dc72; --wn-green:#2f8f6b; --wn-green-ink:#1d6a4f; --wn-teal:#2b8ea6; --wn-sky:#54a0d2;
+  --wn-ink:#1f2d2a; --wn-text:#2c3a36; --wn-muted:#5b6b66; --wn-line:#d9e9e1; --wn-line-2:#e8f1ec;
+  --wn-bg:#f5faf7; --wn-paper:#ffffff; --wn-mint:#eef8f2; --wn-sky-bg:#ebf5fb; --wn-head:#e3f3ea;
+  --wn-warn:#a8520c; --wn-warn-bg:#fff5e8; --wn-warn-line:#f3d3a9; --wn-red:#b42318; --wn-red-bg:#fdf0ee;
+  --wn-radius:16px; --wn-radius-s:10px; --wn-shadow:0 1px 2px rgb(31 45 42 / .06),0 6px 20px rgb(31 45 42 / .06);
+  --wn-font:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --contrast:var(--wn-ink); --contrast-2:var(--wn-muted); --base-2:var(--wn-bg); --accent:var(--wn-green);
+}
+html,body{overflow-x:clip}
+body{background:var(--wn-bg);color:var(--wn-text);font-family:var(--wn-font);word-break:keep-all}
+a{color:var(--wn-green-ink)}
+a:hover{color:var(--wn-teal)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--wn-sky);outline-offset:3px;border-radius:4px}
+#block-wnstyle,.widget:has(> style#wn-site-style){display:none}
+
+/* 머리글: 흰 바탕, 로고 결의 얇은 띠 */
+.site-header{background:var(--wn-paper);border-bottom:1px solid var(--wn-line);position:relative}
+.site-header::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--wn-leaf),var(--wn-teal) 60%,var(--wn-sky))}
+.main-title a,.main-title a:hover{color:var(--wn-ink);font-weight:800;letter-spacing:-.02em;text-decoration:none}
+.main-navigation .main-nav ul li a{color:var(--wn-text);font-weight:600}
+.main-navigation .main-nav ul li.current-menu-item>a,.main-navigation .main-nav ul li a:hover{color:var(--wn-green)}
+
+/* 글 본문: 넉넉한 줄 간격과 문단·소제목 사이 여백 */
+.single .inside-article,.page .inside-article{background:var(--wn-paper);border-radius:var(--wn-radius);box-shadow:var(--wn-shadow)}
+.single .entry-title,.page .entry-title{color:var(--wn-ink);font-weight:800;letter-spacing:-.03em;line-height:1.35;overflow-wrap:break-word;min-width:0}
+.entry-meta{color:var(--wn-muted)}
+.entry-content{font-size:18px;line-height:1.9;color:var(--wn-text)}
+.entry-content>*+*{margin-top:0}
+.entry-content p{margin:0 0 1.5em}
+.entry-content h2{position:relative;margin:2.8em 0 1em;padding:.15em 0 .15em .9em;font-size:1.5em;line-height:1.4;font-weight:800;color:var(--wn-ink);letter-spacing:-.02em;border-left:6px solid var(--wn-green)}
+.entry-content h3{margin:2.2em 0 .8em;font-size:1.22em;line-height:1.45;font-weight:800;color:var(--wn-green-ink)}
+.entry-content ul,.entry-content ol{margin:0 0 1.6em;padding-left:1.4em}
+.entry-content li{margin:.45em 0}
+.entry-content li::marker{color:var(--wn-green)}
+.entry-content strong{color:var(--wn-ink)}
+.entry-content hr{border:0;height:1px;background:var(--wn-line);margin:2.6em 0}
+.entry-content img{border-radius:var(--wn-radius);height:auto}
+.entry-content figure{margin:2em 0}
+.entry-content figcaption{color:var(--wn-muted);font-size:.85em;text-align:center;margin-top:.6em}
+
+/* 한 줄 결론·인용 상자 */
+.entry-content blockquote{margin:1.8em 0 2em;padding:1.2em 1.4em;background:var(--wn-mint);border:1px solid var(--wn-line);border-left:6px solid var(--wn-green);border-radius:var(--wn-radius);font-style:normal;color:var(--wn-ink)}
+.entry-content blockquote p{margin:0 0 .6em}
+.entry-content blockquote p:last-child{margin-bottom:0}
+.entry-content blockquote ul{margin:.4em 0 0}
+
+/* 표: 로고 색 머리줄, 둥근 모서리, 줄무늬, 작은 화면에서는 옆으로 밀기 */
+.entry-content figure.wp-block-table,.entry-content .wn-table{margin:2em 0;overflow-x:auto}
+.entry-content table{width:100%;border-collapse:separate;border-spacing:0;margin:2em 0;font-size:.92em;line-height:1.65;background:var(--wn-paper);border:1px solid var(--wn-line);border-radius:var(--wn-radius);overflow:hidden}
+.entry-content figure.wp-block-table table{margin:0}
+.entry-content thead th,.entry-content table tr:first-child th{background:var(--wn-green);color:var(--wn-paper);font-weight:700;text-align:left}
+.entry-content th,.entry-content td{padding:.85em 1em;border:0;border-bottom:1px solid var(--wn-line-2);vertical-align:top}
+.entry-content tbody tr:nth-child(even) td{background:var(--wn-mint)}
+.entry-content tbody tr:last-child td{border-bottom:0}
+.entry-content td:first-child{font-weight:700;color:var(--wn-ink)}
+@media (max-width:640px){.entry-content table{display:block;overflow-x:auto;white-space:normal}.entry-content th,.entry-content td{min-width:7.5em}}
+
+/* wpflow 글의 상자들 (wf-*) */
+.wpflow-content .wf-point{background:linear-gradient(transparent 58%,var(--wn-head) 58%)}
+.wf-keypoints,.wf-summary,.wf-tip,.wf-warn,.wf-related,.wf-faq{margin:2em 0;padding:1.3em 1.5em;border-radius:var(--wn-radius);border:1px solid var(--wn-line)}
+.wf-keypoints>strong,.wf-summary>strong,.wf-tip>strong,.wf-warn>strong,.wf-related>strong,.wf-faq>strong{display:block;margin-bottom:.5em;font-size:1.05em;color:var(--wn-green-ink)}
+.wf-keypoints ul,.wf-summary ul,.wf-related ul,.wf-tip ul,.wf-warn ul{margin:0;padding-left:1.2em}
+.wf-keypoints{background:var(--wn-mint);border-left:6px solid var(--wn-green)}
+.wf-summary{background:var(--wn-sky-bg);border-left:6px solid var(--wn-sky)}
+.wf-summary>strong{color:var(--wn-teal)}
+.wf-tip{background:var(--wn-mint)}
+.wf-warn{background:var(--wn-warn-bg);border-color:var(--wn-warn-line);border-left:6px solid var(--wn-warn)}
+.wf-warn>strong{color:var(--wn-warn)}
+.wf-related{background:var(--wn-paper)}
+.wf-numcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;margin:2em 0;counter-reset:wn}
+.wf-numcard{position:relative;padding:1.2em 1.2em 1.1em;background:var(--wn-paper);border:1px solid var(--wn-line);border-radius:var(--wn-radius);counter-increment:wn}
+.wf-numcard::before{content:counter(wn);display:inline-grid;place-items:center;width:2em;height:2em;margin-bottom:.5em;border-radius:50%;background:var(--wn-green);color:var(--wn-paper);font-weight:800;font-size:.9em}
+.wf-numcard>strong{display:block;color:var(--wn-ink);margin-bottom:.3em}
+.wf-numcard p{margin:0;font-size:.92em;line-height:1.7;color:var(--wn-muted)}
+.wf-faq details{border-bottom:1px solid var(--wn-line-2);padding:.6em 0}
+.wf-faq details:last-child{border-bottom:0}
+.wf-faq summary{cursor:pointer;font-weight:700;color:var(--wn-ink)}
+.wf-faq details p{margin:.6em 0 0}
+.entry-content .wf-quote{background:var(--wn-paper);border-left-color:var(--wn-teal)}
+
+/* 글 아래 작성자 상자, 이전·다음 글 */
+.saboxplugin-wrap{border:1px solid var(--wn-line)!important;border-radius:var(--wn-radius);background:var(--wn-mint)!important;overflow:hidden}
+.post-navigation{margin-top:2em}
+
+/* 홈·목록: 흰 카드, 둥근 모서리, 살짝 떠오르기 */
+.home-intro h1{color:var(--wn-ink);font-weight:800;letter-spacing:-.03em;overflow-wrap:break-word;min-width:0}
+.home-intro p{color:var(--wn-muted)}
+.gb-loop-item{background:var(--wn-paper)!important;border:1px solid var(--wn-line);border-radius:var(--wn-radius);overflow:hidden;box-shadow:var(--wn-shadow);transition:transform .2s ease,box-shadow .2s ease}
+.gb-loop-item:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgb(31 45 42 / .06),0 12px 28px rgb(31 45 42 / .1)}
+.gb-loop-item img{border-radius:calc(var(--wn-radius) - 6px);aspect-ratio:16/10;object-fit:cover;width:100%}
+.gb-loop-item h2 a{color:var(--wn-ink);text-decoration:none}
+.gb-loop-item h2 a:hover{color:var(--wn-green)}
+.gb-query-loop-pagination a,.gb-query-loop-pagination .page-numbers{border-radius:var(--wn-radius-s)!important;border-color:var(--wn-line)!important}
+.archive .inside-article,.blog .inside-article{background:var(--wn-paper);border:1px solid var(--wn-line);border-radius:var(--wn-radius)}
+.archive .page-header{background:var(--wn-mint);border-radius:var(--wn-radius);padding:1.4em 1.6em}
+
+/* 바닥글 */
+.site-footer .footer-bar{color:var(--wn-muted)}
+.site-info{background:var(--wn-paper);border-top:1px solid var(--wn-line);color:var(--wn-muted)}
+
+@media (max-width:768px){.entry-content{font-size:17px}.entry-content h2{font-size:1.35em;margin-top:2.4em}}
+@media (prefers-reduced-motion:reduce){.gb-loop-item{transition:none}.gb-loop-item:hover{transform:none}}

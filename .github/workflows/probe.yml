@@ -6,9 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q requests playwright && python -m playwright install --with-deps chromium >/dev/null
+      - run: python3 tools/wp_site_css.py forsmartlife
+        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", HERO_FIX: "1447" }
+      - run: sleep 20 && python3 tools/site_shots.py
       - run: |
-          mkdir -p status/audit/fsl && curl -s -o status/audit/fsl/favicon.jpg https://forsmartlife.com/wp-content/uploads/2026/03/forsmartlife_favicon-300x300.jpg
-          curl -s "https://forsmartlife.com/flu-vaccine-november-2026-free-eligibility-timing/?v=2" -o status/audit/fsl/post.html
-          curl -s "https://forsmartlife.com/pneumococcal-vaccine-history-check/?v=2" -o status/audit/fsl/wfpost.html || true
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 파비콘·글 화면" && git pull -q --rebase && git push -q || true
+          git add status/audit && git commit -qm "forsmartlife 디자인 적용 화면" && git pull -q --rebase && git push -q || true
