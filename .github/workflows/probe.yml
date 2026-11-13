@@ -4,8 +4,9 @@ jobs:
   p:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests && python3 tools/wp_touch.py 717
+        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
-          set +e
-          for u in https://forsmartlife.com/ https://forsmartlife.com/category/season-health-tips/ https://forsmartlife.com/about/; do
-            echo "$u $(curl -s "$u" | grep -c wn-site-style) $(curl -sI "$u" | grep -i 'cache\|age:' | tr '\r\n' '  ')"; done
-          curl -s https://forsmartlife.com/ | grep -o 'Cached page generated[^>]*' | head -2
+          set +e; sleep 5
+          echo "home $(curl -s https://forsmartlife.com/ | grep -c wn-site-style)"; curl -s https://forsmartlife.com/ | grep -o 'Cached page generated[^>]*' | head -1
