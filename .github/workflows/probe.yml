@@ -6,8 +6,6 @@ jobs:
     steps:
       - run: |
           set +e
-          for u in https://forsmartlife.com/ads.txt http://forsmartlife.com/ads.txt https://www.forsmartlife.com/ads.txt http://www.forsmartlife.com/ads.txt; do
-            echo "== $u"; curl -s -o b.txt -w "%{http_code} %{content_type} %{url_effective} redirects=%{num_redirects}\n" -L -A "Mediapartners-Google" "$u"; head -c 200 b.txt; echo; done
-          echo "== pub ids on home"; curl -s https://forsmartlife.com/ | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
-          echo "== robots"; curl -s https://forsmartlife.com/robots.txt
-          dig +short forsmartlife.com; dig +short www.forsmartlife.com
+          curl -s https://forsmartlife.com/ > h.html
+          grep -o '.\{220\}ca-pub-[0-9]*.\{120\}' h.html
+          for d in itinfobay.com itinfobay.co.kr myinfobay.com sisibibinote.kr; do echo "== $d $(curl -sL https://$d/ads.txt | head -c 120 | tr '\n' ' ') | pubs: $(curl -sL https://$d/ | grep -o 'ca-pub-[0-9]*' | sort -u | tr '\n' ' ')"; done
