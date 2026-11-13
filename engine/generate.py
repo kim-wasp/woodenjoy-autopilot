@@ -179,6 +179,8 @@ def schema(site):
     if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
         parts.append('"coupang_wish": [{"name": "이 글 독자가 실제로 살 만한 상품(쇼핑몰에서 쓰는 이름)", "search": "쿠팡 검색어", '
                      '"after": "본문에서 이 상품을 넣을 문단의 문장 일부(그대로 복사, 15~30자)"}] 0~2개. 아래 등록된 쿠팡 링크에 없는 상품만')
+    if site.get("topic_mix"):
+        parts.append('"kind": "글 종류 — ' + " / ".join(list(site["topic_mix"]) + ["main"]) + ' 중 하나 (' + ", ".join(f"{k}={v.get('label', k)}" for k, v in site["topic_mix"].items()) + ', main=그 밖의 일반 글)"')
     parts.append('"sources": [{"title": "출처 제목", "url": "https://..."}]')
     return "{\n  " + ",\n  ".join(parts) + "\n}"
 
@@ -279,6 +281,8 @@ def build_prompt(site, topic, notes, view=None):
     if topic:
         p.append(f"[주제/제목 지정]\n{topic}\n(이 주제로 쓰되 제목은 검색 키워드와 후킹을 살려 다듬어도 됩니다)")
     else:
+        if site.get("_mix_turn"):
+            p.append("[이번 글 종류]\n" + site["topic_mix"][site["_mix_turn"]]["guide"])
         p.append("[주제 고르기]\n사이트 주제 안에서, 지금 시기에 검색이 많고 최근 글과 겹치지 않는 주제를 웹 검색으로 확인해 하나 고르세요. "
                  "검색량 자료가 있으면 우선 참고하고 근거를 why_this_topic 에 적으세요.\n후보 키워드: " + ", ".join(site.get("seeds", [])))
     extra = []
@@ -497,7 +501,7 @@ def write_post(site, res, d, topic):
         "created_at": now_kst().isoformat(timespec="minutes"), "requested_topic": topic or "",
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
         "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""), "thumb_text": res.get("thumb_text", ""),
-        "category": res.get("category", ""), "summary": res.get("summary") or old.get("summary") or [],
+        "category": res.get("category", ""), "kind": res.get("kind", ""), "summary": res.get("summary") or old.get("summary") or [],
         "conclusion": res.get("conclusion") or old.get("conclusion", ""),
         "opinion": old.get("opinion", ""),
         "photos": [{"file": f"photo{p['id']}.jpg", "alt": p.get("alt", ""), "prompt": p.get("prompt", ""), **({"real": True} if p.get("real") else {})} for p in res.get("photo_prompts") or []],
@@ -673,6 +677,24 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
     if user_photos:
         site["_user_photos"] = len(user_photos)
         log(f"  사장님 사진 {len(user_photos)}장으로 글쓰기")
+    if topic and not out:  # 글감 화면의 사장님 글감으로 바로 만든 경우 → 정기 글에서 또 쓰지 않게
+        cur = load_json(SITES / site_id / "ideas.json", {}) or {}
+        for x in cur.get("ideas", []):
+            if x.get("mine") and not x.get("used_at") and x.get("title") == topic.split("\n")[0].strip():
+                print(f"::used-topic::{site_id}::{x.get('request') or x['title']}", flush=True)
+    if not topic and not out and not user_photos:
+        q = next_user_topic(site_id)  # 사장님이 글감 화면에 넣어 둔 글감이 있으면 정기 글에 먼저 써요
+        if q:
+            topic = q["title"] + (f"\n이 글이 답할 질문: {q['angle']}" if q.get("angle") else "") + (f"\n사장님 원래 요청: {q['request']}" if q.get("request") else "") + \
+                    ("\n조사해 둔 자료: " + "; ".join(f"{l['title']} {l['url']}" for l in q.get("links", [])[:6]) if q.get("links") else "")
+            log(f"  사장님 글감으로 만들기: {q['title']}")
+    if not topic and not out and site.get("topic_mix"):
+        recent = [load_json(d / "post.json", {}).get("kind", "") for d in post_dirs(site_id)][-10:]
+        for k, v in site["topic_mix"].items():
+            if k not in recent[-(int(v.get("every", 3)) - 1):]:
+                site["_mix_turn"] = k
+                log(f"  이번 글은 '{v.get('label', k)}' 차례")
+                break
     if not topic and not out and site.get("topic_picker") == "season_trend" and not os.environ.get("MOCK_LLM"):
         topic = pick_topic(site)
     log(f"[{site['name']}] 글 만들기 시작 · 주제: {topic or '자동 선택'}")
@@ -753,6 +775,40 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
     return d, issues
 
 
+def next_user_topic(site_id, mark=True):
+    """글감 화면에서 사장님이 넣은 '내 글감' 중 아직 안 쓴 것 (오래된 것부터). 정치 블로그는 견해가 필요해서 자동으로 쓰지 않아요"""
+    site = load_site(site_id)
+    if site.get("opinion"):
+        return None
+    f = SITES / site_id / "ideas.json"
+    cur = load_json(f, {}) or {}
+    mine = [x for x in cur.get("ideas", []) if x.get("mine") and not x.get("used_at") and x.get("queued", True)]
+    if not mine:
+        return None
+    x = mine[-1]
+    if mark and not os.environ.get("MOCK_LLM"):
+        print(f"::used-topic::{site_id}::{x.get('request') or x['title']}", flush=True)
+    return x
+
+
+def mark_used(site_id, key):
+    """워크플로가 main 에서 부르는 것: 정기 글에 쓴 사장님 글감 표시"""
+    f = SITES / site_id / "ideas.json"
+    cur = load_json(f, {}) or {}
+    for x in cur.get("ideas", []):
+        if x.get("mine") and (x.get("request") or x.get("title")) == key:
+            x["used_at"] = now_kst().isoformat(timespec="minutes")
+    save_json(f, cur)
+
+
+def keep_mine(site_id, out):
+    """새 추천 목록 앞에 아직 안 쓴 사장님 글감을 남겨요"""
+    cur = load_json(SITES / site_id / "ideas.json", {}) or {}
+    mine = [x for x in cur.get("ideas", []) if x.get("mine") and not x.get("used_at")]
+    out["ideas"] = mine + [x for x in out.get("ideas", []) if not x.get("mine")]
+    return out
+
+
 def research_topic(site, topic):
     """사장님이 던진 글감을 웹 검색으로 조사해 글감 카드 하나로 만들어요 (정치 블로그: 다음 단계는 견해 쓰기)."""
     import sources
@@ -761,19 +817,23 @@ def research_topic(site, topic):
         f"[사이트]\n{site_profile(site)}", f"[지금] {now_kst():%Y-%m-%d %H:%M}",
         f"[사장님이 정한 글감]\n{topic}",
         trends.naver_trends_block(site["id"]),
-        "웹 검색으로 이 글감과 관련된 최근 보도와 공식 자료(국회 의안정보, 정부 보도자료, 법령, 통계)를 찾아 정리해 주세요. "
-        "사실은 찾은 자료에 있는 것만 쓰고 지어내지 마세요. 보도마다 다른 숫자는 '~에 따르면'으로. 한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이. "
-        "글감이 너무 넓으면 지금 가장 많이 보도되는 쟁점 하나로 좁혀 주세요. 관련 보도를 찾지 못하면 facts 에 그렇게 적어요. "
-        "자료는 최근 3개월 안의 것을 우선하고, 그보다 오래된 자료는 꼭 필요할 때만 쓰고 title 앞에 [2024]처럼 연도를 붙여요. "
-        'JSON: {"title": "후킹 있는 제목안(사실만)", "keyword": "사람들이 실제로 치는 검색어(2~4단어)", "facts": "핵심 사실 3문장 이내(쉬운 말, 날짜 포함, 300자 이내)", '
-        '"sides": "찬성/한쪽 입장 한 줄 / 반대/다른 쪽 입장 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉽게)", '
-        '"links": [{"title": "기사·자료 제목(매체명 포함)", "url": "https://..."}] 3~6개}'])
+        ("웹 검색으로 이 글감과 관련된 최근 보도와 공식 자료(국회 의안정보, 정부 보도자료, 법령, 통계)를 찾아 정리해 주세요. "
+         "사실은 찾은 자료에 있는 것만 쓰고 지어내지 마세요. 보도마다 다른 숫자는 '~에 따르면'으로. 한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이. "
+         "글감이 너무 넓으면 지금 가장 많이 보도되는 쟁점 하나로 좁혀 주세요. 관련 보도를 찾지 못하면 facts 에 그렇게 적어요. "
+         "자료는 최근 3개월 안의 것을 우선하고, 그보다 오래된 자료는 꼭 필요할 때만 쓰고 title 앞에 [2024]처럼 연도를 붙여요. "
+         'JSON: {"title": "후킹 있는 제목안(사실만)", "keyword": "사람들이 실제로 치는 검색어(2~4단어)", "facts": "핵심 사실 3문장 이내(쉬운 말, 날짜 포함, 300자 이내)", '
+         '"sides": "찬성/한쪽 입장 한 줄 / 반대/다른 쪽 입장 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉽게)", '
+         '"links": [{"title": "기사·자료 제목(매체명 포함)", "url": "https://..."}] 3~6개}') if site.get("opinion") else
+        ("웹 검색으로 이 사이트 독자가 이 글감으로 실제로 검색할 말과 궁금해할 질문을 찾고, 글에 쓸 만한 공식 자료·제조사 자료·믿을 만한 기사를 찾아요. "
+         "사실은 찾은 자료에 있는 것만 쓰고 지어내지 마세요. 글감이 너무 넓으면 검색이 많은 구체적인 질문 하나로 좁혀요. "
+         'JSON: {"title": "제목안(핵심 검색어 앞쪽, 후킹은 사실만)", "keyword": "사람들이 실제로 치는 검색어(2~4단어)", "angle": "이 글이 답할 질문 한 줄", '
+         '"facts": "글에 쓸 핵심 정보 3문장 이내(300자 이내)", "links": [{"title": "자료 제목(기관·매체명 포함)", "url": "https://..."}] 3~6개}')])
     x = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, max_tokens=4000, mock_name=f"{site['id']}_ideas")
     x["links"] = [l for l in (x.get("links") or []) if l.get("url") and sources.alive(l["url"])][:6]
-    n, _ = trends.count_24h(x.get("keyword") or topic)
+    n, _ = trends.count_24h(x.get("keyword") or topic) if site.get("opinion") else (0, [])
     nv = trends.naver_volume(x.get("keyword") or "")
     x["metrics"] = {"news_24h": n, "naver_month": nv}
-    x["why"] = f"사장님 글감 · {trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f", 네이버 월간 검색 {nv:,}회" if nv else "")
+    x["why"] = f"사장님 글감 · " + (f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" if site.get("opinion") else "조사 완료") + (f", 네이버 월간 검색 {nv:,}회" if nv else "")
     x["mine"], x["request"] = True, topic
     return x
 
@@ -791,8 +851,8 @@ def ideas(site_id, topic=None):
         return
     if site.get("topic_picker") == "season_trend":
         c = season_candidates(site, 10)
-        save_json(SITES / site_id / "ideas.json", {"ideas": c[:6], "updated": now_kst().isoformat(timespec="minutes"),
-                  "basis": "이달의 건강 주제 달력 + 구글 트렌드 한국 실시간 인기 검색어 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()})
+        save_json(SITES / site_id / "ideas.json", keep_mine(site_id, {"ideas": c[:6], "updated": now_kst().isoformat(timespec="minutes"),
+                  "basis": "이달의 건강 주제 달력 + 구글 트렌드 한국 실시간 인기 검색어 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()}))
         log("글감 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in c[:6]))
         return
     if site.get("opinion"):  # 정치처럼 사장님이 주제를 고르고 견해를 쓰는 사이트 → 숫자(검색 급증·기사 수)로 고르기
@@ -831,7 +891,7 @@ def ideas(site_id, topic=None):
         ranked.sort(key=lambda x: x["score"], reverse=True)
         out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),
                "basis": f"구글 트렌드 한국 실시간 인기 검색어 + {trends.source_name()} 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()}
-        save_json(SITES / site_id / "ideas.json", out)
+        save_json(SITES / site_id / "ideas.json", keep_mine(site_id, out))
         log("이슈 후보 3개 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in out["ideas"]))
         return
     prompt = "\n\n".join([
@@ -843,7 +903,7 @@ def ideas(site_id, topic=None):
         'JSON: {"ideas": [{"title": "후킹 있는 제목안", "keyword": "핵심 키워드", "why": "근거(검색량/시기/이슈/수익성)", "angle": "다른 글과 다른 점"}]}'])
     res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas")
     res["updated"] = now_kst().isoformat(timespec="minutes")
-    save_json(SITES / site_id / "ideas.json", res)
+    save_json(SITES / site_id / "ideas.json", keep_mine(site_id, res))
     log(f"글감 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
 
 
@@ -894,12 +954,15 @@ if __name__ == "__main__":
     ap.add_argument("--view", help="편집자 견해(사장님 의견) — 이 견해를 바탕으로 글을 써요")
     ap.add_argument("--out")
     ap.add_argument("--ideas", action="store_true")
+    ap.add_argument("--mark-used", help="정기 글에 쓴 사장님 글감 표시 (워크플로용)")
     ap.add_argument("--photos", help="사장님이 올린 사진 폴더 (uploads/...) — 사진으로 글쓰기")
     ap.add_argument("--threads", help="이 글 폴더의 스레드 문구만 다시 쓰기")
     ap.add_argument("--thumb", help="이 글 폴더의 대표사진+홈피드 썸네일만 다시 만들기 (--notes = 썸네일 문구, 줄바꿈은 \\n)")
     ap.add_argument("--opinion", help="이 글 폴더에 편집자 생각(--notes)을 붙이기")
     a = ap.parse_args()
-    if a.opinion:
+    if a.mark_used:
+        mark_used(a.site, a.mark_used)
+    elif a.opinion:
         add_opinion(a.site, a.opinion, a.notes)
     elif a.thumb:
         remake_thumb(a.site, a.thumb, a.notes)

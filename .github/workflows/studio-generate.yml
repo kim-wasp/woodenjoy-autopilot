@@ -188,6 +188,8 @@ jobs:
               python3 engine/scheduler.py mark-generated "$site"
               python3 engine/merge_wish.py /tmp/coupang_links.json topics/coupang_links.json
               case "$PHOTOS" in uploads/*) git rm -rq "$PHOTOS" 2>/dev/null || true ;; esac  # 올린 사진은 글 폴더로 옮겼으니 정리
+              used=$(grep -o '::used-topic::.*' gen.log | tail -1 | sed "s/::used-topic::$site:://")
+              [ -n "$used" ] && python3 engine/generate.py "$site" --mark-used "$used" && git add "sites/$site/ideas.json"
               git add status/generated.json topics/coupang_links.json && git commit -qm "글 만들기 기록: $site" && git push -q origin HEAD:main && break
               sleep 5
             done
