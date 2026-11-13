@@ -1,19 +1,11 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install -q requests
-      - run: python3 tools/wp_site_css.py forsmartlife
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
-          set +e; sleep 10; curl -s "https://forsmartlife.com/flu-vaccine-november-2026-free-eligibility-timing/?nocache=$RANDOM" | grep -c "wn-site-style"
-      - run: |
-          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 디자인 적용 화면" && git pull -q --rebase && git push -q || true
-# 1794553615
+          set +e
+          for u in https://forsmartlife.com/ https://forsmartlife.com/category/season-health-tips/ https://forsmartlife.com/about/; do
+            echo "$u $(curl -s "$u" | grep -c wn-site-style) $(curl -sI "$u" | grep -i 'cache\|age:' | tr '\r\n' '  ')"; done
+          curl -s https://forsmartlife.com/ | grep -o 'Cached page generated[^>]*' | head -2
