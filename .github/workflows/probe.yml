@@ -6,6 +6,5 @@ jobs:
     steps:
       - run: |
           set +e
-          curl -s https://forsmartlife.com/ > h.html
-          grep -o '.\{0,260\}ca-pub-[0-9]*.\{0,160\}' h.html
-          for d in; do echo "== $d $(curl -sL https://$d/ads.txt | head -c 120 | tr '\n' ' ') | pubs: $(curl -sL https://$d/ | grep -o 'ca-pub-[0-9]*' | sort -u | tr '\n' ' ')"; done
+          curl -s "https://forsmartlife.com/?v=$RANDOM" | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
+          curl -s "https://forsmartlife.com/" | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
