@@ -1,11 +1,16 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
+permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q requests && python3 tools/wp_grade.py
+        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - run: |
-          set +e
-          curl -s "https://forsmartlife.com/?v=$RANDOM" | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
-          curl -s "https://forsmartlife.com/" | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
-# 1794557975
+          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
+          git add status/audit && git commit -qm "forsmartlife 글 등급" && git pull -q --rebase && git push -q || true
