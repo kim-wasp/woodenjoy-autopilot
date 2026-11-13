@@ -1,0 +1,36 @@
+{
+ "usage": {
+  "claude-opus-5-5": {
+   "input_tokens": 14805,
+   "output_tokens": 17282,
+   "web_searches": 9,
+   "calls": 2
+  }
+ },
+ "items": [
+  {
+   "id": 1038,
+   "status": 200,
+   "old_title": "폐렴구균 예방접종 예약 전 접종 이력 확인 방법 정리",
+   "new_title": "폐렴구균 예방접종 이력 조회 방법과 2026년 무료접종 기준",
+   "chars": 2585,
+   "dead_removed": [
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=1106",
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=151",
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=114",
+    "https://nip.kdca.go.kr/irhp/mngm/goVcntMngm.do?menuLv=3&menuCd=341",
+    "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuLv=1&menuCd=135"
+   ],
+   "notes": "원문은 '남은 차수'를 확인하라고 했지만, 65세 이상 국가접종은 23가 백신 1회이고 65세 이후에 맞았다면 추가 접종이 필요 없다는 기준으로 고쳤습니다. 또 이상반응 중 '발진·고열이면 접종 보류'처럼 모호하던 부분을, 이전 접종 뒤 아나필락시스가 있었을 때만 금기이고 아나필락시스가 아닌 알레르기는 금기가 아니라는 질병관리청 기준으로 바꿨습니다. 2027년 단백결합 백신 전환 계획은 아직 확정되지 않아 기준 날짜를 밝혀 적었습니다."
+  },
+  {
+   "id": 1028,
+   "status": 200,
+   "old_title": "골밀도 검사 전 금속 장신구 빼야 하는 이유와 체크리스트",
+   "new_title": "골밀도 검사 전 금속 제거 체크리스트: 벨트·지퍼부터 조영제 검사 순서까지",
+   "chars": 2330,
+   "dead_removed": [],
+   "notes": "원문은 귀걸이·목걸이·안경 같은 상체 장신구에 무게를 뒀습니다. 하지만 DXA는 주로 허리뼈와 대퇴골을 측정하므로 벨트·지퍼·주머니 속 물건을 먼저 확인하도록 고쳤고, 근거가 불분명한 '반사 흔적' 설명은 뺐습니다. 원문에 없던 조영제 검사 순서, 임신, 척추 수술 이력, T-값 기준, 국가검진 대상(54·60·66세 여성)을 추가했습니다."
+  }
+ ]
+}
