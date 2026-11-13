@@ -31,7 +31,9 @@
         "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1018949"
       },
       "why": "친근함의 표현이라는 쪽과 위아래 존댓말은 지켜야 한다는 쪽으로 나뉘고, 세대마다 받아들이는 정도도 다름",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-59",
+      "inserted_at": "2026-11-13T23:08+09:00"
     },
     {
       "row": {
@@ -51,7 +53,9 @@
         "url": "https://www.seoul.co.kr/news/life/pop-culture/2026/11/10/20261110500310"
       },
       "why": "쉬는 동안의 사생활은 자유라는 쪽과, 기다리는 동료·고객에게 오해를 사니 조심해야 한다는 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-55",
+      "inserted_at": "2026-11-13T23:08+09:00"
     },
     {
       "row": {
@@ -71,7 +75,9 @@
         "url": "https://www.osen.co.kr/article/G1112907466"
       },
       "why": "진로를 바꾸는 건 개인의 권리라는 시각과, 하던 약속을 먼저 마무리해야 한다는 책임론이 부딪힘",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-56",
+      "inserted_at": "2026-11-13T23:08+09:00"
     },
     {
       "row": {
@@ -91,7 +97,9 @@
         "url": "https://www.seoul.co.kr/news/life/2026/11/10/20261110500016"
       },
       "why": "못 들은 만큼 환불이 당연하다는 쪽과, 이미 들은 강의·교재 값과 대체 강의로 충분하다는 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "MON-16",
+      "inserted_at": "2026-11-13T23:08+09:00"
     },
     {
       "row": {
@@ -111,7 +119,9 @@
         "url": "https://view.asiae.co.kr/article/2026110915493721282"
       },
       "why": "그리움을 달래는 새로운 추모 방식이라는 쪽과, 고인의 동의 없이 되살리는 건 선을 넘는다는 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "CER-39",
+      "inserted_at": "2026-11-13T23:09+09:00"
     },
     {
       "row": {
@@ -131,7 +141,9 @@
         "url": "https://m.news.nate.com/view/20261110n36991"
       },
       "why": "예전부터 흔히 쓰던 훈육법이라는 세대와, 공포로 말을 듣게 하는 건 정서적으로 해롭다는 세대의 생각이 다름",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "FAM-50",
+      "inserted_at": "2026-11-13T23:09+09:00"
     },
     {
       "row": {
@@ -151,7 +163,9 @@
         "url": "https://zdnet.co.kr/view/?no=20261110160949"
       },
       "why": "가볍게 분위기를 띄우는 좋은 문화라는 쪽과, 안 하면 눈치 보이는 부담스러운 의무라는 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "WRK-57",
+      "inserted_at": "2026-11-13T23:09+09:00"
     },
     {
       "row": {
@@ -171,7 +185,9 @@
         "url": "https://www.hankyung.com/article/202611108683i"
       },
       "why": "기업 마케팅에 끌려갈 필요 없다는 쪽과, 작은 기념일이라도 챙기면 서로 기분 좋다는 쪽이 갈림",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "LOV-16",
+      "inserted_at": "2026-11-13T23:09+09:00"
     },
     {
       "row": {
@@ -191,7 +207,9 @@
         "url": "https://www.insight.co.kr/news/580110"
       },
       "why": "예식장은 신랑·신부가 고른 것이니 와준 것만으로 고마워해야 한다는 쪽과, 서로 돕는 상부상조인 만큼 식대 정도는 생각해야 한다는 쪽이 맞섬",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "CER-40",
+      "inserted_at": "2026-11-13T23:09+09:00"
     },
     {
       "row": {
@@ -211,7 +229,9 @@
         "url": "https://view.asiae.co.kr/article/2026110908580986219"
       },
       "why": "얼굴 붉히지 않고 알릴 수 있는 방법이라는 쪽과, 모두가 보는 공지로 생활 습관을 지적하는 건 압박이라는 쪽으로 나뉨",
-      "status": "approved"
+      "status": "inserted",
+      "inserted_id": "PUB-60",
+      "inserted_at": "2026-11-13T23:09+09:00"
     }
   ]
 }
