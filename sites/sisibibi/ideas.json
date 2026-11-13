@@ -1,14 +1,14 @@
 {
   "ideas": [
     {
-      "title": "'의무공개매수' 즉석 투표까지…대통령이 꺼낸 자본시장 개혁 TF, 핵심은?",
+      "title": "\"욕먹더라도 파이 키우자\"…이 대통령이 즉석 투표 붙인 '의무공개매수' 뭐길래",
       "keyword": "의무공개매수 대통령",
       "trend_keyword": "",
-      "facts": "이재명 대통령이 자본시장 정책 간담회에서 개혁을 위한 고위급 TF를 만들라고 지시하고, 주가조작 등을 엄하게 단속하겠다고 했어요. 의무공개매수를 두고는 즉석 투표를 하며 '욕을 먹더라도 파이를 키우는 쪽으로'라고 말했어요.",
-      "sides": "추진 측: 자본시장을 정상화해 투자자 몫을 키워야 한다 / 신중 측: 기업 부담 등 반대 논리는 헤드라인에 없어 확인 필요",
-      "question": "회사 경영권이 넘어갈 때 소액주주 주식도 사 주게 하는 제도, 투자자 보호가 먼저일까요, 기업 부담이 먼저일까요?",
+      "facts": "이재명 대통령이 자본시장 정책 간담회에서 의무공개매수를 놓고 즉석 투표를 하고 \"욕을 먹더라도 파이를 키우는 쪽으로\"라고 말했어요. 자본시장 개혁 고위급 TF를 꾸리라고 지시했고, 주가조작 같은 불공정 거래도 엄정하게 단속하겠다고 했어요.",
+      "sides": "추진 측: 공정하고 투명한 규칙이 있어야 시장 신뢰가 생기고 시장이 커짐(대통령 발언) / 신중 측: 기업 부담 같은 반대 논리는 기사로 확인 필요",
+      "question": "의무공개매수를 개미 투자자 보호 장치로 볼까요, 기업 인수를 어렵게 만드는 규제로 볼까요?",
       "metrics": {
-        "news_24h": 65,
+        "news_24h": 66,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -30,57 +30,24 @@
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE91MHdlQUVWZ0xZNkdoN3lKNGEtN2ZfRVp3Ukc2ZXRNQlZGQm9felNSYkpUUGMyVnVjR015eGVKdFM3UVVVTnQ0SEtVTnJuRXFLSTRub3hYbC1TSWMwYzBwY2g3MkQ4bFpLV2xJ?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 65건, 네이버 월간 검색 10회",
-      "score": 65.1
+      "why": "구글 뉴스 24시간 기사 66건, 네이버 월간 검색 10회",
+      "score": 66.1
     },
     {
-      "title": "대통령 지지율 39%, 민주 39%·국힘 26%…'오차 밖' 2주째, 무슨 뜻일까",
-      "keyword": "한국갤럽 지지율",
-      "trend_keyword": "여론조사",
-      "facts": "한국갤럽 조사에서 이재명 대통령 지지율은 39%였어요. 정당 지지도는 민주당 39%, 국민의힘 26%로 두 당 차이가 2주 연속 오차범위 밖이었어요(조사 기간·표본은 원자료 확인 필요).",
-      "sides": "여당 측: 지지 우위가 이어진다는 신호 / 야당 측: 대통령 지지율이 40%를 밑돈다는 점을 짚을 수 있음(각 당 공식 반응은 확인 필요)",
-      "question": "여론조사 숫자를 볼 때 독자가 가장 먼저 확인해야 할 건 뭐라고 보세요?",
-      "metrics": {
-        "news_24h": 51,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 240
-      },
-      "links": [
-        {
-          "title": "이 대통령 지지율 39%…민주 39%·국민의힘 26% [한국갤럽] - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9NeXFwS3NNTHRKdWN1cGxpaWFmamhsanJ1SzhOLTN3MURyVU9sNDUtVl9ZT3d2cTBaM0tyUTZVdjJUY2JzcEpvMjgyRURyTjdTLUxrWnJYVGVRLUpzeTYwRmZ1LU91c1E?oc=5"
-        },
-        {
-          "title": "李대통령 국정 지지율 39%…지난 조사 대비 2%p 하락 [한국갤럽] - 경기일보",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE41UW45eWl1X3J3dVdIeThhWEpzcXBLM2h3MkQxQlhkZW00RlppYU1EOTB0WnZsR01yYzlCU3N1Ykh0ZE9iczlUU3BWM3libk1UOHJoemlfamM4LWs?oc=5"
-        },
-        {
-          "title": "李대통령 국정지지율, 2%p 하락 39%…민주 39%·국힘 26% [갤럽] - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNFNCaXJNWFNFVTd5ZVpRTEFVajJqbWRGM3UySE9DZW90b1pfbW0xVXFHQUhFc21SWTZsMnVHRGp0N0N5V3VWUzUtaEdISmNqWWhoNGVLemVOQm9oZmc4MGxKdTdTV1RZbjVjVFVCTkFNdXozdVl3Mm5tMUtLUUgyZEhtRXB0QVM1X2N4YmpvRDk?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 51건, 네이버 월간 검색 240회",
-      "score": 53.4
-    },
-    {
-      "title": "26조 체코 원전, 시공사 왜 바뀌나…한수원·대우건설 갈등, 결국 청문회까지",
-      "keyword": "체코 원전 청문회",
+      "title": "26조 체코 원전, 한수원·대우건설 '원팀' 왜 깨졌나…여야 모두 '청문회' 꺼냈다",
+      "keyword": "체코 원전 시공사",
       "trend_keyword": "",
-      "facts": "26조 원 규모 체코 원전 사업에서 한수원과 대우건설의 '원팀'이 깨지고 시공사 교체 논란이 생겼어요. 국회에서는 여야 모두 청문회를 열어야 한다는 말이 나왔어요.",
-      "sides": "청문회 추진 측: 국가 대형 수출 사업이니 교체 과정을 국회가 따져봐야 한다 / 한수원 쪽 교체 이유와 반론: 헤드라인에 없어 확인 필요",
-      "question": "해외 원전 수출 같은 사업에서 국회 청문회는 감시에 꼭 필요한 일일까요, 수주에 부담만 줄까요?",
+      "facts": "한수원과 대우건설의 체코 원전 '원팀'이 결렬되면서 시공사 교체 논란이 커졌어요. 여야 모두 국회 청문회를 열어야 한다는 목소리를 냈어요(시사포커스·Chosunbiz 보도 기준).",
+      "sides": "청문회 추진 측: 26조 규모 사업의 시공사 교체 경위를 국회가 따져야 함 / 한수원 측: 교체 이유와 입장은 기사로 확인 필요",
+      "question": "이 논란을 '국익 손실' 문제로 볼까요, 기업 간 계약 문제로 볼까요?",
       "metrics": {
-        "news_24h": 24,
+        "news_24h": 44,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 10
+        "naver_month": 290
       },
       "links": [
         {
@@ -92,30 +59,63 @@
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNXpfMGIwNHF3UzhsUGF3aTgtMjdiMVljMURNbE5Xd1pLMjFWZVNSYTZ6WVJ1b3FTTno0a3hfZGh5QXRnWWJNX0JiRnRmVE5weW9IU2NlLXlyekZUZ1FPLXJqeXNBanExVC1BRXl4SlVFdGJhVmhqc2VMUDZrRW1jVGlBMzIyTmUycUs3MlFYX3UxMU1Kb0NSNtIBrAFBVV95cUxOQkViTWFyQk1uLUxMTUgxQ2pocW9uVjBWM2xPanNJZEQ0TXR1OGRBamtaMDNtYWg5TGJSNWJyX0dVeENxQ1FBNzY1Z1pHcWJnelpHdk1RemMyM1VwNDlyTVdjVnFQRnBiU09Hd0dXWHNnMXAxRkxJUDMzM0o1ZXByYWdQRUJHYjBHMnV2NW1WLVpaYS1UT2NOalo1M2Rqb0RWTmZZNkUzR0VYQzRO?oc=5"
         },
         {
-          "title": "체코 원전 시공사 교체 논란 격화… 여야, 진상 규명 청문회 추진 By EBN - Investing.com 한국어",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uSHRqNGZvRGpkWHg1UVctYU9wWDVDQnBtaEJJdTlVUjZpMko3NWV5cGpYdUtUSklkUTM2NzZIdmRaeHVkTVgweUJuTldCR1p5SGJZTFVHanp5Yy15NW9ZNjFUQXpqV3EyeTQ2U2pJRHg?oc=5"
+          "title": "체코 원전 시공사 교체 논란에 ’현대건설 유력설’ 급부상…국회 청문회서 한수원 진상 규명 By 알파경제 alphabiz - Investing.com 한국어",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9IV3pGNU9hZ3FCb2owZ0FMTERRb3ZVd3pQeXJ5Zjk1RnczYWdpdEJHdGFIYjFOTlNMM1g0TVdQV2dBelhnOG90cjFIWDBVS2Z1aTlTU2RvTzItVFVmUHJjNWh2dGotaFlHNUNsZXZORXM?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 24건, 네이버 월간 검색 10회",
-      "score": 24.1
+      "why": "구글 뉴스 24시간 기사 44건, 네이버 월간 검색 290회",
+      "score": 46.9
+    },
+    {
+      "title": "등기부 떼는 값 700원→1100원? 공인중개사들이 국회에서 '철회' 외친 이유",
+      "keyword": "등기부 열람료 인상",
+      "trend_keyword": "",
+      "facts": "등기부 열람 수수료를 700원에서 1100원으로 올리는 안을 두고 공인중개사들이 국회에서 철회를 요구했어요. 공인중개사협회는 국회에서 수수료 인상 철회를 촉구했다고 보도됐어요.",
+      "sides": "철회 측: 등기부를 자주 떼는 중개업계와 거래 당사자의 부담이 커짐 / 인상 측: 인상 이유와 근거는 기사·정부 자료로 확인 필요",
+      "question": "등기부 열람료 인상을 '수수료 현실화'로 볼까요, 서민 거래 비용 부담으로 볼까요?",
+      "metrics": {
+        "news_24h": 12,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 1135
+      },
+      "links": [
+        {
+          "title": "등기부 열람료 700원→1100원… 공인 중개사들 국회서 “철회하라” - Chosunbiz",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVjFndGpfRGdYd014VFlROHFIM0ZycDd1Z2VRazVNSncxb2ctd1Zvck5mTXFkTXd3VHVlVnNueS1IdmlET2FmMTFySVdldWhwNEJUVVlQNDZOaXgzeXhNOW01TGRkTjc1bkZxTEhLSERFcURmUm53YzhZMGdTUk0yM0tFR1d5NHJ2SnU2UGJCQkdzd1E5a29sdtIBrAFBVV95cUxNMS1OdURpZWZMck5aX1VJOWpKbVpFSTN6SkxGZG4tdHBSX3pHcE14cHB1bnJ5LW5SWkF6VUVBN0NfeEJxMHNqLS1UNWxzRVRydF9DUHZ3ZFI3eVpSTXpoclY0QzY2cWp3YTQwSzJuSkhIbUtHSmloNnh1Q3JUbjI0R0VkcVJRXy1EeVNnVjh3RXZOWGQ3NThzdzExamwzSUg4cm1CbHpCcWdmQTV1?oc=5"
+        },
+        {
+          "title": "등기부 열람료 700→1100원…공인중개사 500명 국회서 인상 철회 - 아주경제",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1iQzYyNVU3R0ZwWTBUMHNvaS0ydjdYYnFpVU5sdlQ2TEp0dEtIazlVcnlBRzFISVRqXzRCTzk4X2JyenQ4V2k1ZFFpZnZOc29SZzlkT1dZWXDSAVhBVV95cUxNYkM2MjVVN0dGcFkwVDBzb2ktMnY3WGJxaVVObHZUNkxKdHRLSGs5VXJ5QUcxSElUal80Qk85OF9icnp0OFdpNWRRaWZ2TnNvUmc5ZE9XWVlw?oc=5"
+        },
+        {
+          "title": "\"등기부 열람 무료화해야\"…공인중개사 500여명 국회 앞 결집 - 뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1LX0lZeFczbjdMLS13Y09pWVhiX3ZES2Z5MXV1aHJSb1doV25ZMGgwSzZGOFpQaU5VVUIzUHN5cDdLcm5aS0kwM3JGSnZCVTlUXzBmdS1Zdk1tZ0x1VGN4ejNGS0dKVGtKdjlrT1hJQUNxY3FPc2NTOdIBeEFVX3lxTE1LX0lZeFczbjdMLS13Y09pWVhiX3ZES2Z5MXV1aHJSb1doV25ZMGgwSzZGOFpQaU5VVUIzUHN5cDdLcm5aS0kwM3JGSnZCVTlUXzBmdS1Zdk1tZ0x1VGN4ejNGS0dKVGtKdjlrT1hJQUNxY3FPc2NTOQ?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 12건, 네이버 월간 검색 1,135회",
+      "score": 23.35
     }
   ],
-  "updated": "2026-11-13T22:11+09:00",
+  "updated": "2026-11-13T23:09+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 11737,
-        "output_tokens": 4077,
+        "input_tokens": 25425,
+        "output_tokens": 7668,
         "web_searches": 0,
-        "calls": 1,
-        "usd": 0.1285
+        "calls": 2,
+        "usd": 0.2551
       }
     },
     "images": {},
-    "usd": 0.1285,
-    "total_usd": 0.1285,
-    "total_krw": 180,
+    "usd": 0.2551,
+    "total_usd": 0.2551,
+    "total_krw": 360,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
