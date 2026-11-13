@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          set +e
           curl -s "https://forsmartlife.com/flu-vaccine-november-2026-free-eligibility-timing/?nocache=$RANDOM" > p.html
           grep -c "wn-site-style" p.html; grep -o 'id="block-38"[^<]*<[^>]*>.\{0,300\}' p.html | head -3
           grep -o '<div class="footer-bar">.\{0,600\}' p.html | head -2
