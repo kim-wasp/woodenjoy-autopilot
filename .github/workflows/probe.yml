@@ -4,9 +4,10 @@ jobs:
   p:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: pip install -q requests && python3 tools/wp_touch.py 717
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
-          set +e; sleep 5
-          echo "home $(curl -s https://forsmartlife.com/ | grep -c wn-site-style)"; curl -s https://forsmartlife.com/ | grep -o 'Cached page generated[^>]*' | head -1
+          set +e
+          for u in https://forsmartlife.com/ads.txt http://forsmartlife.com/ads.txt https://www.forsmartlife.com/ads.txt http://www.forsmartlife.com/ads.txt; do
+            echo "== $u"; curl -s -o b.txt -w "%{http_code} %{content_type} %{url_effective} redirects=%{num_redirects}\n" -L -A "Mediapartners-Google" "$u"; head -c 200 b.txt; echo; done
+          echo "== pub ids on home"; curl -s https://forsmartlife.com/ | grep -o 'ca-pub-[0-9]*' | sort | uniq -c
+          echo "== robots"; curl -s https://forsmartlife.com/robots.txt
+          dig +short forsmartlife.com; dig +short www.forsmartlife.com
