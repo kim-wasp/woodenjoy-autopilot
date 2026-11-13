@@ -7,5 +7,5 @@ jobs:
       - run: |
           set +e
           curl -s https://forsmartlife.com/ > h.html
-          grep -o '.\{220\}ca-pub-[0-9]*.\{120\}' h.html
-          for d in itinfobay.com itinfobay.co.kr myinfobay.com sisibibinote.kr; do echo "== $d $(curl -sL https://$d/ads.txt | head -c 120 | tr '\n' ' ') | pubs: $(curl -sL https://$d/ | grep -o 'ca-pub-[0-9]*' | sort -u | tr '\n' ' ')"; done
+          grep -o '.\{0,260\}ca-pub-[0-9]*.\{0,160\}' h.html
+          for d in; do echo "== $d $(curl -sL https://$d/ads.txt | head -c 120 | tr '\n' ' ') | pubs: $(curl -sL https://$d/ | grep -o 'ca-pub-[0-9]*' | sort -u | tr '\n' ' ')"; done
