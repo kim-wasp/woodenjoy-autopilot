@@ -1,0 +1,23 @@
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: 대통령 지지율 39%, 민주 39%·국힘 26%…'오차 밖' 2주째, 무슨 뜻일까
+  대표 이미지 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  점검에 걸림 → 고치기:
+   - 블로그: 핵심 부분이 1352자 (짧고 쉽게 1200자 이내로)
+  대표 이미지 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 630원 ($0.450)
+완료: content/sisibibi/2026-11-13-president-approval-39-gallup-party-gap-margin-of-e · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-13-president-approval-39-gallup-party-gap-margin-of-e
