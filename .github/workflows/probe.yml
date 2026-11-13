@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q requests && python3 tools/wp_peek.py
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
+          mkdir -p status/audit/fsl && curl -s -o status/audit/fsl/favicon.jpg https://forsmartlife.com/wp-content/uploads/2026/03/forsmartlife_favicon-300x300.jpg
+          curl -s "https://forsmartlife.com/flu-vaccine-november-2026-free-eligibility-timing/?v=2" -o status/audit/fsl/post.html
+          curl -s "https://forsmartlife.com/pneumococcal-vaccine-history-check/?v=2" -o status/audit/fsl/wfpost.html || true
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 디자인 확인" && git pull -q --rebase && git push -q || true
+          git add status/audit && git commit -qm "forsmartlife 파비콘·글 화면" && git pull -q --rebase && git push -q || true
