@@ -1,0 +1,48 @@
+{
+  "ideas": [
+    {
+      "title": "타카핀 규격 모르고 사면 손해: 422·F30·630, 총 이름에 답이 있다",
+      "keyword": "타카핀 규격",
+      "angle": "타카를 처음 사는 사람이 422, F30, 630 중 어떤 핀을 골라야 하고 핀 길이는 몇 mm로 사야 하는지",
+      "facts": "타카 모델명이 그 타카에 맞는 핀 규격을 알려 줍니다. 422는 폭 4mm의 ㄷ자 핀(410~422)을 쓰고, F30은 일자 핀(F10~F30)을 쓰며, 630은 얇은 마감용 핀을 30mm까지만 씁니다. 실타카 핀은 618~640까지 나오지만 이 범위 안에서만 맞습니다. 목수 현장에서는 핀 길이를 보통 자재 두께에 10mm쯤 더해서 고릅니다(예: 28mm 각재에는 38mm 핀).",
+      "links": [
+        {
+          "title": "청강메이커스랩 – 에어타카의 종류와 사용법(422J·1022J·F30·630·CT64)",
+          "url": "https://ckmakers.com/81/?bmode=view&idx=3964630"
+        },
+        {
+          "title": "셀프위키 – 인테리어 목수가 쓰는 에어타카 6종 핵심정리(핀 길이 고르는 법)",
+          "url": "http://self-wiki.com/45/?bmode=view&idx=16463072"
+        },
+        {
+          "title": "툴앤샵 – 제일타카(JIT) F30용 타카핀 규격·가격표",
+          "url": "https://www.toolnshop.kr/view/?goods=9990&gs%5B%5D=35159"
+        }
+      ],
+      "metrics": {
+        "news_24h": 0,
+        "naver_month": 30
+      },
+      "why": "사장님 글감 · 조사 완료, 네이버 월간 검색 30회",
+      "mine": true,
+      "request": "타카 처음 살 때 핀 규격 고르는 법"
+    }
+  ],
+  "updated": "2026-11-13T09:28+09:00",
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 5988,
+        "output_tokens": 1473,
+        "web_searches": 4,
+        "calls": 1,
+        "usd": 0.0934
+      }
+    },
+    "images": {},
+    "usd": 0.0934,
+    "total_usd": 0.0934,
+    "total_krw": 130,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
