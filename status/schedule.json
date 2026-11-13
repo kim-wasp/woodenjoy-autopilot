@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T08:11+09:00",
+  "updated": "2026-11-13T12:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -387,8 +387,9 @@
       "dir": "content/sisibibi/2026-11-12-nhis-special-judicial-police-act-subcommittee-doct",
       "title": "건보공단에 수사권? 특사경법 소위 통과…‘11.9개월’ vs ‘4.9%’ 쟁점",
       "platform": "blog",
-      "at": "2026-11-13T12:00+09:00",
-      "state": "planned"
+      "at": "2026-11-13T12:01:51+09:00",
+      "state": "done",
+      "url": "https://sisibibinote.kr/posts/nhis-special-judicial-police-act-subcommittee-doct/"
     },
     {
       "site": "infobay",
