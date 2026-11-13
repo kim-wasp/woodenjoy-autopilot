@@ -93,6 +93,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .gb-loop-item{background:var(--wn-paper)!important;border:1px solid var(--wn-line);border-radius:var(--wn-radius);overflow:hidden;box-shadow:var(--wn-shadow);transition:transform .2s ease,box-shadow .2s ease}
 .gb-loop-item:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgb(31 45 42 / .06),0 12px 28px rgb(31 45 42 / .1)}
 .gb-loop-item img{border-radius:calc(var(--wn-radius) - 6px);aspect-ratio:16/10;object-fit:cover;width:100%}
+.entry-content .gb-loop-item h2{border:0;padding:0;margin:.9em 0 .35em;font-size:1.12em;line-height:1.45}
+.entry-content .gb-loop-item p{margin:0 0 .6em;font-size:.92em;line-height:1.7;color:var(--wn-muted)}
 .gb-loop-item h2 a{color:var(--wn-ink);text-decoration:none}
 .gb-loop-item h2 a:hover{color:var(--wn-green)}
 .gb-query-loop-pagination a,.gb-query-loop-pagination .page-numbers{border-radius:var(--wn-radius-s)!important;border-color:var(--wn-line)!important}
