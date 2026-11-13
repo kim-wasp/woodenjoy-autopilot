@@ -1,10 +1,17 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
+permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
       - run: |
-          echo "research key set: ${R:+yes} len ${#R}; api key len ${#K}; same: $([ "$R" = "$K" ] && echo yes || echo no)"
-          curl -s -H "authorization: Bearer $R" https://api.uplika.com/v1/accounts | head -c 300; echo
-        env: { R: "${{ secrets.UPLIKA_RESEARCH_KEY }}", K: "${{ secrets.UPLIKA_API_KEY }}" }
+          curl -s -o status/audit/fsl/favicon.jpg https://forsmartlife.com/wp-content/uploads/2026/03/forsmartlife_favicon-300x300.jpg
+          python3 tools/fsl_shot.py
+      - run: |
+          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
+          git add status/audit && git commit -qm "forsmartlife 글 화면" && git pull -q --rebase && git push -q || true
