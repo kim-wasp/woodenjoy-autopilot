@@ -1,0 +1,13 @@
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: 종부세 '당정 엇박자' 논란, 78일 만의 만찬 뒤에도 남은 이견
+  대표 이미지 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 480원 ($0.346)
+완료: content/sisibibi/2026-11-13-jongbuse-14eok-party-cheongwadae-rift-after-dinner · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-13-jongbuse-14eok-party-cheongwadae-rift-after-dinner
