@@ -1,0 +1,131 @@
+{
+  "id": "sisibibi/2026-11-13-president-approval-39-gallup-party-gap-margin-of-e",
+  "site": "sisibibi",
+  "title": "대통령 지지율 39%, 민주 39%·국힘 26%…'오차 밖' 13%p 진짜 뜻",
+  "status": "ready",
+  "created_at": "2026-11-13T23:03+09:00",
+  "requested_topic": "대통령 지지율 39%, 민주 39%·국힘 26%…'오차 밖' 2주째, 무슨 뜻일까",
+  "keywords": {
+    "main": "대통령 지지율",
+    "sub": [
+      "이재명 지지율",
+      "한국갤럽 여론조사",
+      "정당 지지도",
+      "오차범위 밖",
+      "민주당 국민의힘 지지율",
+      "여론조사 보는 법"
+    ]
+  },
+  "brief": {
+    "reader": "'대통령 지지율 39%' 뉴스는 봤는데 민주당은 오르고 '오차 밖'은 무슨 말인지 헷갈리는 20~50대",
+    "question": "대통령은 떨어졌는데 민주당은 오른 이번 갤럽 결과에서 '오차범위 밖'은 무슨 뜻일까?",
+    "answer": "양당 차이 13%p는 오차 기준(6.2%p)을 2주 연속 넘은 뚜렷한 차이예요. 대통령 지지율이 2%p 내린 건 한 주 사이에 흔히 생기는 흔들림 안에 들어가요.",
+    "out_of_scope": "다음 선거 결과 예측, 개별 정책의 옳고 그름 판단",
+    "next_action": "다음 여론조사 기사를 볼 때 조사기관·기간·표본오차를 먼저 확인하고 같은 기관의 결과끼리만 비교하기"
+  },
+  "why_this_topic": "11월 13일 한국갤럽 발표가 주요 언론 속보로 일제히 보도됐고, 연관 검색어 '여론조사'(27,200)와 '특검'(14,320)의 검색량이 많아요. 갤럽이 부정 평가 증가를 조작기소 특검법 통과와 연결한 만큼 기존 특검법 글과 이어지면서도 주제가 겹치지 않아요. 다른 기사들은 숫자만 전하고 '오차 밖'의 뜻이나 같은 주 다른 조사와의 차이는 설명하지 않아서 이 글만의 해설 가치가 있어요.",
+  "meta_description": "한국갤럽 11월 2주 조사에서 대통령 지지율은 39%, 민주 39%·국힘 26%였어요. '오차 밖 2주째'가 무슨 뜻인지, 왜 다른 조사와 숫자가 다른지 쉽게 정리했어요.",
+  "hero_prompt": "A wide, quiet photograph of a clear ballot box and scattered blank survey answer sheets on a plain wooden table, soft natural daylight, a simple bar chart printout without any text or numbers lying beside them, neutral gray and white tones, no people, no faces, no party colors, no logos, no readable text",
+  "thumb_text": "",
+  "category": "국내정치",
+  "kind": "",
+  "summary": [],
+  "conclusion": "갤럽 조사에서 대통령 지지율은 39%로 2%p 내렸어요. 민주 39%·국힘 26%의 13%p 차이는 2주 연속 오차 기준(6.2%p)을 넘었어요.",
+  "opinion": "부동산 정책부터 일자리, 주식 민생 경제에 반하는 정책들을 펼치고 있으니 당연한 결과다.\n1년 반 정도만에 거대여당을 등에 업고도 이정도로 밖에 못한다는건 주변에 조언을 해줄사람이 없거나 첨언하는 사람만 남았거나 주변에서 조언을 해도 안듣는거다. 증권거래소에서 했던 얘기처럼 어느쪽으로 해도 욕을 먹으니 알아서 한다는 식의 생각은 정말로 잘못된, 위험한 생각이다.\n임기 중반에 들기도 전에 이렇게 지지율이 떨어지면 중반이 넘어가며 레임덕을 걱정해야 할 시기가 오면 정말로 정권이 또 넘어가는 걱정을 해야할거다. 말은 정권이 넘어가더라도 자기 할거 한다고 하지만 진짜로 자기 하고 싶은대로 한다면 그 끝은 불보듯 뻔한 결과가 될것이 아닌가...",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "李대통령 지지율 39%, 민주 39%·국힘 26%…조작기소특검 贊 44%·反 37%(종합) - 뉴스1",
+      "url": "https://www.news1.kr/politics/president/6353048"
+    },
+    {
+      "title": "李대통령 지지율 2%P↓ 39%…부정평가 이유에 '부동산·경제' - 프레시안",
+      "url": "https://pressian.com/pages/articles/2026111311260882489"
+    },
+    {
+      "title": "[속보] 李대통령 지지율 다시 30%대로…민주 39%·국힘 26%, 2주 연속 오차 밖 [한국갤럽] - 헤럴드경제",
+      "url": "https://biz.heraldcorp.com/article/10935993"
+    },
+    {
+      "title": "李대통령 지지율 39%, 다시 30%대로…민주당은 39%로 올라 [한국갤럽] - 파이낸셜뉴스",
+      "url": "https://www.fnnews.com/news/202611131027418514"
+    },
+    {
+      "title": "이 대통령, 지지율 39%…한 주 만에 '다시 하락' - 뉴스토마토",
+      "url": "http://www.newstomato.com/ReadNews.aspx?no=1320354"
+    },
+    {
+      "title": "[한국갤럽] 李대통령 국정 지지율 39%…전주보다 2%p 하락 - 청년일보",
+      "url": "https://www.youthdaily.co.kr/news/article.html?no=229806"
+    },
+    {
+      "title": "李대통령 국정 지지율 39%....전주 대비 2%p 하락 - 중앙이코노미뉴스",
+      "url": "https://www.joongangenews.com/news/articleView.html?idxno=563623"
+    },
+    {
+      "title": "국민 1002명에게 '이 대통령 지지율' 물었더니 민심은? - 위키트리",
+      "url": "https://www.wikitree.co.kr/articles/1174300"
+    },
+    {
+      "title": "李대통령 국정 지지율 44%...민주당 35%·국민의힘 25% - M이코노미뉴스",
+      "url": "https://www.m-economynews.com/news/article.html?no=72930"
+    },
+    {
+      "title": "'李 부정 평가' 62.8%, 30대선 76.3% 달해 … 민주당 지지율은 '올 최저' - 뉴데일리",
+      "url": "https://www.newdaily.co.kr/site/data/html/2026/11/11/2026111100064.html"
+    },
+    {
+      "title": "국민 1006명이 응답한 '이재명 대통령 지지율' - 위키트리",
+      "url": "https://www.wikitree.co.kr/articles/1173585"
+    },
+    {
+      "title": "'이 대통령 매우 잘하고 있다' 20.4% 기록(KSOI) - 위키트리",
+      "url": "https://www.wikitree.co.kr/articles/1173756"
+    },
+    {
+      "title": "이 대통령 \"욕먹더라도 M&A 활성화해야\" - 경향신문",
+      "url": "https://www.khan.co.kr/article/202611131557001/"
+    },
+    {
+      "title": "李대통령 \"의무공개매수제, 욕 먹더라도 파이 키우자는 쪽…결단의 문제\" - 서플(머니투데이)",
+      "url": "https://supple.kr/news/cmwedps9eonzial9pmhz4cwd5"
+    },
+    {
+      "title": "(속보) '오차범위 밖' 주장 확인해 보니 - 의령인터넷뉴스",
+      "url": "http://www.urinnews.com/news/articleView.html?idxno=4017"
+    },
+    {
+      "title": "여론조사 보도 바르게 읽는 법 - 시민언론 민들레",
+      "url": "https://www.mindlenews.com/news/articleView.html?idxno=7820"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-13T23:03+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 21800,
+        "output_tokens": 15637,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.4499
+      }
+    },
+    "images": {},
+    "usd": 0.4499,
+    "total_usd": 0.4499,
+    "total_krw": 630,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
