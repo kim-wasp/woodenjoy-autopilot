@@ -333,7 +333,7 @@ def brand_file(site):
 
 
 def render_cards(site, d):
-    env = {**os.environ, "BRAND_FILE": brand_file(site)}
+    env = {**os.environ, "BRAND_FILE": brand_file(site), "CARD_THEME": str(design_no(d) // 9)}
     tf = SITES / site["id"] / "terms.json"
     if tf.exists():
         env["TERMS_FILE"] = str(tf)
@@ -382,13 +382,19 @@ def review_cards(site, d, res):
     return issues
 
 
-def make_thumb(d, text):
+def design_no(d, salt=0):
+    """글마다 다른 디자인 번호: 같은 사이트의 글 순서대로 돌려서 연달아 같은 모양이 나오지 않게 (다시 만들면 salt로 바꿔요)"""
+    n = len([x for x in d.parent.glob("*") if x.is_dir()])
+    return n * 9 + salt  # 썸네일 8가지 모양 × 색 6가지가 글마다 함께 바뀌어요
+
+
+def make_thumb(d, text, salt=0):
     """대표사진(hero.jpg) 위에 후킹 문구를 크게 얹어 네이버 홈피드 썸네일로 만들어요. 원본은 hero_raw.jpg"""
     import shutil
     raw = d / "hero_raw.jpg"
     if not raw.exists():
         shutil.copy(d / "hero.jpg", raw)
-    r = subprocess.run(["node", str(ROOT / "tools/render_thumb.js"), str(raw), str(d / "hero.jpg"), text],
+    r = subprocess.run(["node", str(ROOT / "tools/render_thumb.js"), str(raw), str(d / "hero.jpg"), text, str(design_no(d, salt))],
                        capture_output=True, text=True)
     log("  " + (r.stdout.strip() or r.stderr.strip()[:300]))
 
@@ -405,7 +411,8 @@ def remake_thumb(site_id, dir_, text=None):
     size = (1080, 1080) if ic["hero"].get("thumb_text") else (1200, 675)
     imagegen.generate(post["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
     if text and ic["hero"].get("thumb_text") and (d / "hero.jpg").exists():
-        make_thumb(d, text)
+        import random
+        make_thumb(d, text, salt=random.randint(1, 47))
         post["thumb_text"] = text
     for ph in post.get("photos", []):  # 빠진 본문 사진도 같이 (이미지 키가 없을 때 만든 글)
         f = d / ph["file"]
@@ -458,13 +465,24 @@ def add_opinion(site_id, dir_, notes):
     preview_html(site, post, d)
 
 
+# AI 사진이 매번 같은 구도로 나오지 않게 글마다 돌려 써요
+SHOTS = ["Composition: close-up of hands working on the part, shallow framing.",
+         "Composition: overhead top-down view looking straight down.",
+         "Composition: wide shot showing the whole corner of the room, subject small in frame.",
+         "Composition: low angle from floor level.",
+         "Composition: side view at eye level, subject off-center to the left.",
+         "Composition: extreme detail of the problem area (scratch, gap, loose screw), slightly out-of-focus background.",
+         "Composition: shot through a doorway, partly blocked foreground.",
+         "Composition: evening warm indoor light, subject on the right third."]
+
+
 def make_images(site, res, d):
     d.mkdir(parents=True, exist_ok=True)
     ic = img_cfg(site)
     if ic["hero"].get("provider") != "none" and not (d / "hero.jpg").exists() and res.get("hero_prompt"):
         try:
             size = (1080, 1080) if ic["hero"].get("thumb_text") else (1200, 675)
-            imagegen.generate(res["hero_prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
+            imagegen.generate(res["hero_prompt"] + " " + SHOTS[design_no(d) // 9 % len(SHOTS)] + (" " + ic["photo_style"] if ic["photo_style"] else ""), d / "hero.jpg", ic["hero"], size=size)
             if ic["hero"].get("thumb_text") and res.get("thumb_text") and (d / "hero.jpg").exists():
                 make_thumb(d, res["thumb_text"])
         except Exception as e:  # noqa: BLE001
@@ -475,7 +493,7 @@ def make_images(site, res, d):
             continue
         size = (1080, 1350) if ic["instagram"] == "photo_cards" else (1200, 800)
         try:
-            imagegen.generate(ph["prompt"] + (" " + ic["photo_style"] if ic["photo_style"] else ""), f, ic["hero"], size=size)
+            imagegen.generate(ph["prompt"] + " " + SHOTS[(design_no(d) // 9 + int(ph["id"])) % len(SHOTS)] + (" " + ic["photo_style"] if ic["photo_style"] else ""), f, ic["hero"], size=size)
         except Exception as e:  # noqa: BLE001
             log(f"  사진 {ph['id']} 실패: {e}")
     # 없는 사진을 가리키는 카드는 정리해요

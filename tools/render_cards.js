@@ -119,6 +119,20 @@ const QA = () => {
   return res;
 };
 
+// 글마다 바뀌는 카드 디자인 (CARD_THEME 번호). 글자 크기·배치는 그대로라 자동 점검 기준은 같아요
+const THEMES = [
+  { vars: '', css: '' },
+  { vars: '--bg:#F7F1E6;--pine:#C2552E;--deep:#3B2A1E;--amber:#FFF6E6;--amber2:#F3D7A6;--amberInk:#8A4B14;--line:#E6D8C3',
+    css: '.slide:not(.photo){background-image:linear-gradient(#0000 31px,#3b2a1e10 32px),linear-gradient(90deg,#0000 31px,#3b2a1e10 32px);background-size:32px 32px}.num{border-radius:22px}' },
+  { vars: '--bg:#EAF0F8;--pine:#2B5BA8;--deep:#14284A;--amber:#FFF8DD;--amber2:#FFE08A;--amberInk:#7A5A00;--line:#C9D6EA',
+    css: '.slide:not(.photo):before{content:"";position:absolute;left:0;right:0;top:0;height:18px;background:var(--pine)}.title{letter-spacing:-3px}' },
+  { vars: '--bg:#1E2326;--pine:#F2C14E;--deep:#FFFFFF;--ink:#F2F2F2;--muted:#A9B1B5;--white:#2B3236;--amber:#3A3424;--amber2:#F2C14E;--amberInk:#2A2000;--line:#3A4247',
+    css: '.num{color:#1E2326}.c0{background:#3A4247;color:#fff}.c1{background:#2F4A3F;color:#E9FFF4}.tip{color:#F8E7B0}' },
+  { vars: '--bg:#F2F2F0;--pine:#E8590C;--deep:#222222;--amber:#FFF1E6;--amber2:#FFD8BA;--amberInk:#8A3A00;--line:#DDDDD8',
+    css: '.slide:not(.photo){background-image:radial-gradient(#22222214 2px,transparent 2px);background-size:28px 28px}.num{border-radius:14px;transform:rotate(-4deg)}' },
+  { vars: '--bg:#F1EEF8;--pine:#6B4FB3;--deep:#2E2160;--amber:#FFF8E1;--amber2:#FCE7A8;--amberInk:#6E5300;--line:#DCD3EF',
+    css: '.slide:not(.photo):before{content:"";position:absolute;right:-180px;top:-180px;width:460px;height:460px;border-radius:50%;background:#6B4FB31A}' },
+];
 let CUR_DIR = '.';
 (async () => {
   const dir = path.resolve(process.argv[2]);
@@ -127,8 +141,9 @@ let CUR_DIR = '.';
   const slides = spec.slides;
   if (slides.length < 2 || slides.length > 10) throw new Error('카드는 2~10장이어야 해요 (인스타 캐러셀 제한)');
   const css = fs.readFileSync(path.join(__dirname, 'card.css'), 'utf8');
-  const vars = Object.entries(brand.colors || {}).filter(([k]) => COLOR_VARS[k]).map(([k, v]) => `${COLOR_VARS[k]}:${v}`).join(';');
-  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>${css}${vars ? `:root{${vars}}` : ''}</style></head><body>${slides.map((s, i) => slideHtml(s, i, slides.length)).join('\n')}</body></html>`;
+  const vars = Object.entries(brand.colors || {}).filter(([k, v]) => COLOR_VARS[k] && v).map(([k, v]) => `${COLOR_VARS[k]}:${v}`).join(';');
+  const th = THEMES[(parseInt(process.env.CARD_THEME || '0', 10) || 0) % THEMES.length];
+  const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>${css}${th.vars ? `:root{${th.vars}}` : ''}${vars ? `:root{${vars}}` : ''}${th.css}</style></head><body>${slides.map((s, i) => slideHtml(s, i, slides.length)).join('\n')}</body></html>`;
   const outDir = path.join(dir, 'cards');
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'preview.html'), html);
