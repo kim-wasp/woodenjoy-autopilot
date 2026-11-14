@@ -716,7 +716,11 @@ def keyword_pool(site, n_seeds=15, keep=12):
             vol = kt.to_int(it.get("monthlyPcQcCnt", 0)) + kt.to_int(it.get("monthlyMobileQcCnt", 0))
             pool.setdefault(k, {"kw": k, "vol": vol, "seed": k in chunk})
         time.sleep(0.5)
-    band = [x for x in pool.values() if 150 <= x["vol"] <= 30000]
+    seed_norm = [kt.norm(w) for w in seeds]
+    grams = {w[i:i + 2] for w in seed_norm for i in range(len(w) - 1)}
+    def related(k):  # 연관 검색어는 후보 검색어와 두 글자 이상 겹칠 때만 (엉뚱한 연관어 빼기)
+        return any(k[i:i + 2] in grams for i in range(len(k) - 1))
+    band = [x for x in pool.values() if 150 <= x["vol"] <= 30000 and (x["seed"] or related(x["kw"]))]
     band.sort(key=lambda x: (not x["seed"], -x["vol"]))
     band = band[:40]
     for x in band:
@@ -728,8 +732,9 @@ def keyword_pool(site, n_seeds=15, keep=12):
         d = x.get("docs")
         x["ratio"] = round(x["vol"] / d, 2) if d else None
         # 글 수를 알면 '검색 ÷ 글 수'가 핵심, 모르면 검색 수가 적당한(300~5천) 것을 앞으로
-        x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None
-                      else math.log10(x["vol"]) - (1 if x["vol"] > 8000 else 0))
+        # 글 수를 모르면 300~3천 회(새 블로그가 노려 볼 만한 크기)를 앞으로, 후보 검색어 자체에 가산
+        mid = 1 - abs(math.log10(x["vol"]) - 3.0)
+        x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None else mid) + (0.3 if x["seed"] else 0)
     band.sort(key=lambda x: -x["score"])
     out = band[:keep]
     log("  키워드 후보: " + ", ".join(f"{x['kw']}({x['vol']}" + (f"/{x['docs']}" if x.get("docs") else "") + ")" for x in out))
