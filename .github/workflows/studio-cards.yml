@@ -39,6 +39,7 @@ jobs:
           WP_ITINFOBAY_PASS: ${{ secrets.WP_ITINFOBAY_PASS }}
           IG_TOKEN_MYINFOBAY: ${{ secrets.IG_TOKEN_MYINFOBAY }}
           THREADS_TOKEN_MYINFOBAY: ${{ secrets.THREADS_TOKEN_MYINFOBAY }}
+          THREADS_TOKEN_SISIBIBI: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
           WP_MYINFOBAY_PASS: ${{ secrets.WP_MYINFOBAY_PASS }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}

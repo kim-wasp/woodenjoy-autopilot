@@ -43,9 +43,10 @@ jobs:
           THREADS_TOKEN_ITINFOBAY: ${{ secrets.THREADS_TOKEN_ITINFOBAY }}
           IG_TOKEN_MYINFOBAY: ${{ secrets.IG_TOKEN_MYINFOBAY }}
           THREADS_TOKEN_MYINFOBAY: ${{ secrets.THREADS_TOKEN_MYINFOBAY }}
+          THREADS_TOKEN_SISIBIBI: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
         run: |
           fail=0
-          for name in IG_TOKEN_INFOBAY THREADS_TOKEN_INFOBAY IG_TOKEN_FORSMARTLIFE THREADS_TOKEN_FORSMARTLIFE IG_TOKEN_ITINFOBAY THREADS_TOKEN_ITINFOBAY IG_TOKEN_MYINFOBAY THREADS_TOKEN_MYINFOBAY; do
+          for name in IG_TOKEN_INFOBAY THREADS_TOKEN_INFOBAY IG_TOKEN_FORSMARTLIFE THREADS_TOKEN_FORSMARTLIFE IG_TOKEN_ITINFOBAY THREADS_TOKEN_ITINFOBAY IG_TOKEN_MYINFOBAY THREADS_TOKEN_MYINFOBAY THREADS_TOKEN_SISIBIBI; do
             old="${!name}"; [ -n "$old" ] || continue
             case "$name" in
               IG_*) url="https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$old" ;;

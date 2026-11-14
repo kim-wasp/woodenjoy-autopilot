@@ -32,9 +32,9 @@
     "token_secret": ""
   },
   "threads": {
-    "enabled": false,
-    "handle": "",
-    "token_secret": ""
+    "enabled": true,
+    "handle": "sisibibi.note",
+    "token_secret": "THREADS_TOKEN_SISIBIBI"
   },
   "schedule": {
     "slots": {
@@ -49,9 +49,24 @@
           "sun"
         ],
         "time": "12:00"
+      },
+      "threads": {
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat",
+          "sun"
+        ],
+        "time": "19:30"
       }
     },
-    "grace_hours": 9
+    "grace_hours": 9,
+    "start_from": {
+      "threads": "2026-11-16"
+    }
   },
   "approval": true,
   "llm": {

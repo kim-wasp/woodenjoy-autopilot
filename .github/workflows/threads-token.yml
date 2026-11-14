@@ -11,7 +11,7 @@ on:
         description: "주소창의 code= 뒤 값 (끝의 #_ 는 빼고)"
         required: true
       target:
-        description: "저장할 비밀키 이름 (우드엔조이 THREADS_TOKEN / 상식 THREADS_TOKEN_INFOBAY)"
+        description: "저장할 비밀키 이름 (우드엔조이 THREADS_TOKEN / 상식 THREADS_TOKEN_INFOBAY / 시시비비 THREADS_TOKEN_SISIBIBI)"
         required: false
         default: "THREADS_TOKEN"
 jobs:
