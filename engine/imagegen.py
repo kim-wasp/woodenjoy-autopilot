@@ -12,6 +12,7 @@ import base64
 import io
 import os
 
+import re
 import requests
 from PIL import Image, ImageDraw
 
@@ -24,18 +25,36 @@ NO_TEXT = (" Looks like a real unretouched photo taken by an ordinary person (no
 
 
 def _realism(im):
-    """AI 사진 특유의 매끈함을 줄여요: 휴대폰 사진 같은 약한 노이즈·살짝 낮은 선명도"""
+    """AI 사진 특유의 매끈함·완벽한 수평·균일한 선명도를 줄여요 (휴대폰으로 대충 찍은 사진 쪽으로).
+    매번 값이 조금씩 달라서 같은 보정 자국이 반복되지 않아요."""
     import random
-    from PIL import ImageFilter
-    im = im.filter(ImageFilter.GaussianBlur(0.4))
-    noise = Image.effect_noise(im.size, 18).convert("RGB")
-    im = Image.blend(im, noise, 0.035)
-    # 색을 아주 조금 따뜻하게/차갑게 (매번 다르게)
+    from PIL import ImageFilter, ImageEnhance, ImageChops
+    w, h = im.size
+    # 1) 손으로 든 폰처럼 아주 살짝 기울이고 가장자리 잘라내기
+    ang = random.uniform(0.4, 1.3) * random.choice((-1, 1))
+    big = im.rotate(ang, resample=Image.BICUBIC, expand=False)
+    m = int(max(w, h) * 0.025)
+    im = big.crop((m, m, w - m, h - m)).resize((w, h), Image.LANCZOS)
+    # 2) AI 특유의 과한 선명도·채도·대비 살짝 낮추기
+    im = im.filter(ImageFilter.GaussianBlur(random.uniform(0.35, 0.6)))
+    im = ImageEnhance.Color(im).enhance(random.uniform(0.88, 0.96))
+    im = ImageEnhance.Contrast(im).enhance(random.uniform(0.92, 0.98))
+    # 3) 폰 센서 노이즈 (밝기 + 약한 색 노이즈)
+    lum = Image.effect_noise((w, h), random.uniform(14, 22)).convert("RGB")
+    im = Image.blend(im, lum, random.uniform(0.03, 0.05))
+    # 4) 렌즈 주변부가 살짝 어두운 비네팅
+    vig = Image.radial_gradient("L").resize((w, h)).point(lambda v: 255 - int(v * random.uniform(0.18, 0.28)))
+    im = ImageChops.multiply(im, Image.merge("RGB", (vig, vig, vig)))
+    # 5) 화이트밸런스를 매번 조금 다르게 (실내 형광등/전구색 느낌)
     r, g, b = im.split()
-    k = random.uniform(-6, 6)
+    k = random.uniform(-7, 7)
     r = r.point(lambda v: max(0, min(255, int(v + k))))
     b = b.point(lambda v: max(0, min(255, int(v - k))))
-    return Image.merge("RGB", (r, g, b))
+    im = Image.merge("RGB", (r, g, b))
+    # 6) 메신저·앱을 한 번 거친 것처럼 JPEG 한 번 더 압축
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=random.randint(80, 88))
+    return Image.open(io.BytesIO(buf.getvalue())).convert("RGB")
 
 
 def _save(img_bytes, out, size, realism=False):
@@ -59,6 +78,8 @@ def generate(prompt, out, cfg, size=(1200, 675)):
     provider = (cfg or {}).get("provider", "openai")
     if provider == "none":
         return None
+    # 'AI 화보' 쪽으로 끌고 가는 말은 빼요
+    prompt = re.sub(r"(?i)\b(stunning|beautiful|gorgeous|cinematic|epic|8k|4k|ultra[- ]?detailed|hyper[- ]?realistic|photorealistic|professional photo(graphy)?|award[- ]winning|masterpiece|dramatic lighting|bokeh)\b,?\s*", "", prompt)
     full = prompt.strip() + NO_TEXT
     keyname = {"openai": "OPENAI_API_KEY", "gemini": "GEMINI_API_KEY"}.get(provider)
     if keyname and not os.environ.get("MOCK_IMAGE") and not secret(keyname, required=False):

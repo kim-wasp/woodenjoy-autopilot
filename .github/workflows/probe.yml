@@ -4,24 +4,21 @@ permissions: { contents: read }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
-      - env:
-          APP_ID: ${{ secrets.THREADS_APP_ID }}
-          APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-          V: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
-        run: |
-          echo "형태: 길이 ${#V}, 앞 4자 ${V:0:4}, code= 포함 $(echo "$V" | grep -c code=)"
-          me=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$V")
-          if echo "$me" | jq -e .username >/dev/null; then echo "완료: 이미 토큰 @$(echo "$me" | jq -r .username)"; exit 0; fi
-          echo "$V" | grep -q code= || { echo "실패: 토큰도 코드 주소도 아님"; exit 0; }
-          CODE="${V%%#*}"; CODE="$(echo "$CODE" | sed 's/^.*code=//; s/&.*$//')"; echo "::add-mask::$CODE"
-          short=$(curl -s -X POST https://graph.threads.net/oauth/access_token -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code -F redirect_uri="https://example.com/" -F code="$CODE")
-          st=$(echo "$short" | jq -r '.access_token // empty'); [ -n "$st" ] || { echo "1단계 실패: $(echo "$short" | jq -c 'del(.access_token)')"; exit 0; }
-          echo "::add-mask::$st"
-          lt=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st" | jq -r '.access_token // empty')
-          [ -n "$lt" ] || { echo "2단계 실패"; exit 0; }
-          echo "::add-mask::$lt"
-          who=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
-          gh secret set THREADS_TOKEN_SISIBIBI --body "$lt" --repo ${{ github.repository }} && echo "완료: 교환 후 저장 @$who"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q -r requirements.txt
+      - run: |
+          mkdir -p out && cd engine && python3 -c "
+          import imagegen, json, shutil
+          s=json.load(open('../sites/woodenjoy/site.json'))['images']
+          p='A Korean apartment interior door whose hinge screw is loose, the door sagging and scraping the laminate floor. Composition: extreme detail of the problem area, slightly out-of-focus background. '+s['photo_style']
+          imagegen.generate(p,'../out/woodenjoy_after.jpg',{'provider':'gemini','realism':True},size=(1200,800))
+          s2=json.load(open('../sites/infobay/site.json'))['images']
+          imagegen.generate('Guests lining up at the reception desk of a Korean wedding hall handing over envelopes. '+s2['photo_style'],'../out/infobay_after.jpg',{'provider':'gemini','realism':True},size=(1200,800))
+          "
+        env: { GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}" }
+      - uses: actions/upload-artifact@v4
+        with: { name: samples, path: out }
