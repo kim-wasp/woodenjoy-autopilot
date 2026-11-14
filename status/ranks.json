@@ -1,5 +1,165 @@
 {
- "posts": {},
- "updated": "2026-11-14T11:38+09:00",
- "last_error": "uplika 429: {\"error\":{\"code\":\"naver_search_busy\",\"message\":\"A Naver search check is already running for this person (0 of 10 read). Only one runs at a time. Its results come back from get_naver_visibility with runId nsr_3ceded14976a633a.\",\"reason\":\"running\",\"runId\":\"nsr_3ceded14976a633a\",\"retryAfter"
+ "posts": {
+  "https://forsmartlife.com/flu-vaccine-november-2026-free-eligibility-timing/": {
+   "title": "독감예방접종 11월에 맞아도 될까? 무료 대상·시기 2026 정리",
+   "keyword": "독감예방접종",
+   "site": "forsmartlife",
+   "checks": [
+    {
+     "day": 1,
+     "at": "2026-11-14T02:38:07.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://commonsense-one.vercel.app/blog/wedding-gift-money-how-much-2026": {
+   "title": "축의금 얼마? 평균 11만7천원인데 제일 많이 낸 금액은 5만원",
+   "keyword": "축의금 얼마",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:39.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://commonsense-one.vercel.app/blog/interview-marriage-childbirth-question-law": {
+   "title": "면접 결혼 계획 질문, 과태료 500만원? 서류와 면접은 달라요",
+   "keyword": "면접 결혼 계획 질문",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:10.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://commonsense-one.vercel.app/blog/condolence-money-how-much-2026": {
+   "title": "조의금 5만원 vs 10만원? 설문 1위와 성균관 권고가 다른 이유",
+   "keyword": "조의금 얼마",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:36.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://myinfobay.com/blog/ticket-resale-face-value-law-2026": {
+   "title": "티켓 양도 정가면 괜찮을까? 암표법 기준, 1장 웃돈도 걸리는 경우",
+   "keyword": "티켓 양도 암표 처벌",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:42.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://myinfobay.com/blog/year-end-party-skip-company-dinner-2026": {
+   "title": "송년회 빠져도 될까? 회식 반복 권유는 괴롭힘 아니라는 노동부 사례",
+   "keyword": "송년회 불참",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:38:30.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://myinfobay.com/blog/night-shower-washing-machine-noise-rule-2026": {
+   "title": "밤 10시 샤워·세탁기 층간소음일까? 법은 제외, 규약은 '자제'",
+   "keyword": "밤 샤워 층간소음",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:38:19.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://myinfobay.com/blog/bad-service-review-star-rating-law-2026": {
+   "title": "별점 1점 리뷰 고소당할까? 불친절은 의견, 거짓은 최대 7년",
+   "keyword": "별점 1점 리뷰 고소",
+   "site": "infobay",
+   "checks": [
+    {
+     "day": 1,
+     "at": "2026-11-14T02:38:27.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/us-midterm-korea/": {
+   "title": "트럼프가 졌다고 한국이 편해질까? 아니요",
+   "keyword": "미국 중간선거",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:16.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/yoon-election-law-appeal-397-refund-timeline/": {
+   "title": "윤석열 2심도 당선무효형…국힘 397억 반환, 빠르면 언제?",
+   "keyword": "윤석열 선거법 2심",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:38:33.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  }
+ },
+ "updated": "2026-11-14T11:38+09:00"
 }
