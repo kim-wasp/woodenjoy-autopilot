@@ -84,10 +84,11 @@
   "images": {
     "hero": {
       "provider": "gemini",
-      "model": "gemini-3-pro-image"
+      "model": "gemini-3-pro-image",
+      "realism": true
     },
     "blog_inline": "mixed",
-    "photo_style": "Realistic photo of everyday situations in Korea (offices, weddings, subways, family gatherings), natural light, candid, faces not in close-up, no text",
+    "photo_style": "Candid smartphone snapshot of an everyday situation in Korea (offices, wedding halls, subways, family gatherings, apartment hallways), taken casually by an ordinary person; slightly off-center framing, mixed real lighting, ordinary clutter, faces not in close-up, not a stock photo, no glossy CGI look, no text",
     "instagram": "cards",
     "photos": 3
   },

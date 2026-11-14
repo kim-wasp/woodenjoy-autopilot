@@ -19,7 +19,7 @@ from common import log, secret
 
 IMAGES = {}  # 이번 실행에서 만든 사진 수 (모델별)
 
-NO_TEXT = (" Photorealistic, natural light, no text, no letters, no logos, no watermarks, "
+NO_TEXT = (" Looks like a real unretouched photo taken by an ordinary person (not a stock photo, not CGI), natural light, imperfect everyday details, no text, no letters, no logos, no watermarks, "
            "no people's faces in close-up; never blur or pixelate faces — instead show people from behind, from the side, or naturally out of focus in the background; realistic proportions.")
 
 
