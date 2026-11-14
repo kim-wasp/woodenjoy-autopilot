@@ -159,7 +159,151 @@
      "cited": false
     }
    ]
+  },
+  "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-filibuster-n/": {
+   "title": "조작기소 특검법 필리버스터, 표결은 빨라도 언제? ‘24시간 규칙’",
+   "keyword": "조작기소 특검법 필리버스터",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 7,
+     "at": "2026-11-14T02:39:06.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-bill-vote-in/": {
+   "title": "조작기소 특검법 오늘 표결…공소취소 뺐는데 왜 또 싸우나",
+   "keyword": "조작기소 특검법",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:39:00.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-passed-next-/": {
+   "title": "조작기소 특검법 통과, 남은 건 국무회의…7번째 특검 수사대상 12개",
+   "keyword": "조작기소 특검법 통과",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:39:03.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/ppp-rally-impeachment-after-special-counsel-bill/": {
+   "title": "국민의힘 ‘이재명 탄핵’ 외쳤지만 필요한 건 200표…왜 거리로?",
+   "keyword": "국민의힘 장외집회 탄핵",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:38:46.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/space-aerospace-city-special-act-sacheon-goheung-r/": {
+   "title": "우주항공 특별법 11개월째 계류…사천·고흥 500명이 국회 간 이유",
+   "keyword": "우주항공복합도시 특별법",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:38:57.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/super-regional-special-zone-act-kefe-vs-civil-soci/": {
+   "title": "초광역특구법, 경총은 '빨리' 시민단체는 '재벌 특혜'…갈린 이유 3가지",
+   "keyword": "초광역특구법",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 1,
+     "at": "2026-11-14T02:39:09.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
+  },
+  "https://sisibibinote.kr/posts/choi-min-hee-hyena-remark-apology-photo-journalist/": {
+   "title": "최민희 ‘하이에나 떼들’ 엿새 만에 사과…500명 단톡방이 비공개?",
+   "keyword": "최민희 하이에나",
+   "site": "sisibibi",
+   "checks": [
+    {
+     "day": 1,
+     "at": "2026-11-14T02:39:12.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://blog.naver.com/cafe_peanut/224472533940": {
+   "title": "문고리 교체 전 백셋부터 재세요, 60·70mm 틀리면 반품",
+   "keyword": "문고리 교체",
+   "site": "woodenjoy",
+   "checks": [
+    {
+     "day": 3,
+     "at": "2026-11-14T02:38:49.000Z",
+     "rank": null,
+     "area": null,
+     "read": true,
+     "briefing": false,
+     "cited": false
+    }
+   ]
+  },
+  "https://blog.naver.com/cafe_peanut/224475223062": {
+   "title": "방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요",
+   "keyword": "방문경첩 나사 헛돌 때",
+   "site": "woodenjoy",
+   "checks": [
+    {
+     "day": 1,
+     "at": "2026-11-14T02:38:52.000Z",
+     "rank": 2,
+     "area": "review",
+     "read": true,
+     "briefing": true,
+     "cited": false
+    }
+   ]
   }
  },
- "updated": "2026-11-14T11:38+09:00"
+ "updated": "2026-11-14T11:39+09:00"
 }
