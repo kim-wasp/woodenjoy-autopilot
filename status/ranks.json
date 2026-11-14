@@ -1,5 +1,5 @@
 {
  "posts": {},
- "last_error": "uplika 503: {\"error\":{\"code\":\"bridge_offline\",\"message\":\"The uplika browser extension is not connected, so nothing was searched. Naver search pages are read in the person's own browser. Ask the person to open the browser with the uplika extension, then call again. If you have a shell on that compute",
- "updated": "2026-11-14T11:36+09:00"
+ "updated": "2026-11-14T11:38+09:00",
+ "last_error": "uplika 429: {\"error\":{\"code\":\"naver_search_busy\",\"message\":\"A Naver search check is already running for this person (0 of 10 read). Only one runs at a time. Its results come back from get_naver_visibility with runId nsr_3ceded14976a633a.\",\"reason\":\"running\",\"runId\":\"nsr_3ceded14976a633a\",\"retryAfter"
 }
