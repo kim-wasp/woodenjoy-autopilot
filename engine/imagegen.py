@@ -43,7 +43,9 @@ def _realism(im):
     lum = Image.effect_noise((w, h), random.uniform(14, 22)).convert("RGB")
     im = Image.blend(im, lum, random.uniform(0.03, 0.05))
     # 4) 렌즈 주변부가 살짝 어두운 비네팅
-    vig = Image.radial_gradient("L").resize((w, h)).point(lambda v: 255 - int(v * random.uniform(0.18, 0.28)))
+    k_v = random.uniform(0.10, 0.18)
+    vig = Image.radial_gradient("L").resize((w, h), Image.BICUBIC).point(lambda v: 255 - int(v * k_v))
+    vig = vig.filter(ImageFilter.GaussianBlur(max(w, h) // 25))  # 계단 무늬 없이 부드럽게
     im = ImageChops.multiply(im, Image.merge("RGB", (vig, vig, vig)))
     # 5) 화이트밸런스를 매번 조금 다르게 (실내 형광등/전구색 느낌)
     r, g, b = im.split()
