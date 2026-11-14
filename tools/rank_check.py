@@ -66,8 +66,8 @@ def targets(data):
         if age > 31:
             continue
         rec = data["posts"].get(url) or {}
-        done = {c["day"] for c in rec.get("checks", [])}
-        due = [d for d in CHECK_DAYS if d <= max(age, 0) and d not in done]
+        last = max([c["day"] for c in rec.get("checks", [])] or [0])  # 늦게 확인한 날 이전 차수는 건너뜀
+        due = [d for d in CHECK_DAYS if last < d <= max(age, 0)]
         if age >= 1 and due:
             out.append({"url": url, "keyword": kw, "title": p.get("title", ""), "site": p.get("site") or f.parts[-3], "age": age, "day": due[-1]})
     return out[:MAX_KEYWORDS]
@@ -101,6 +101,9 @@ def main():
         if res.get("partial") and res.get("pending"):
             print("확장이 아직 읽는 중인 검색어:", res["pending"])
         by_kw = {r["keyword"]: r for r in res.get("results") or []}
+        missing = [t["keyword"] for t in batch if t["keyword"] not in by_kw or by_kw[t["keyword"]].get("error")]
+        if missing:
+            print("  결과 없음:", missing, {k: by_kw[k].get("error") for k in missing if k in by_kw})
         for t in batch:
             r = by_kw.get(t["keyword"])
             if not r or r.get("error"):
