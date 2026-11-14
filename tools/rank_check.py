@@ -28,12 +28,21 @@ def check(args):
     import time
     key = os.environ.get("UPLIKA_RESEARCH_KEY") or os.environ.get("UPLIKA_API_KEY")
     h = {"authorization": f"Bearer {key}", "content-type": "application/json"}
-    r = requests.post("https://api.uplika.com/v1/naver/visibility/checks", json=args, headers=h, timeout=120)
+    for _ in range(12):  # 다른 확인이 돌고 있으면(429 naver_search_busy) 기다렸다 다시
+        r = requests.post("https://api.uplika.com/v1/naver/visibility/checks", json=args, headers=h, timeout=120)
+        if r.status_code != 429:
+            break
+        try:
+            wait = int(r.json()["error"].get("retryAfterSeconds") or 40)
+        except Exception:  # noqa: BLE001
+            wait = 40
+        print(f"  다른 확인이 진행 중이라 {wait}초 뒤 다시")
+        time.sleep(min(wait, 90))
     if r.status_code >= 400:
         raise RuntimeError(f"uplika {r.status_code}: {r.text[:300]}")
     res = r.json()
     res = res.get("data", res) if isinstance(res, dict) else res
-    for _ in range(6):  # 확장이 아직 읽는 중이면 잠시 뒤 결과 다시 받기
+    for _ in range(12):  # 확장이 아직 읽는 중이면 잠시 뒤 결과 다시 받기
         if not (res.get("partial") and res.get("pending") and res.get("runId")):
             break
         time.sleep(30)
