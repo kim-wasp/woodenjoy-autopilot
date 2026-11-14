@@ -6,9 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: |
-          if [ -z "$T" ]; then echo "THREADS_TOKEN_SISIBIBI 없음"; exit 0; fi
-          echo "길이 ${#T}, 앞 4자 ${T:0:4}"
-          curl -s "https://graph.threads.net/v1.0/me?fields=id,username&access_token=$T"; echo
-          curl -s "https://graph.threads.net/v1.0/me/threads_publishing_limit?fields=quota_usage,config&access_token=$T" | head -c 300; echo
-        env: { T: "${{ secrets.THREADS_TOKEN_SISIBIBI }}" }
+      - env:
+          APP_ID: ${{ secrets.THREADS_APP_ID }}
+          APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          CODE: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
+        run: |
+          CODE="${CODE%%#*}"; CODE="$(echo "$CODE" | sed 's/^.*code=//; s/&.*$//')"
+          echo "::add-mask::$CODE"
+          short=$(curl -s -X POST https://graph.threads.net/oauth/access_token -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code -F redirect_uri="https://example.com/" -F code="$CODE")
+          st=$(echo "$short" | jq -r '.access_token // empty')
+          [ -n "$st" ] || { echo "1단계 실패: $(echo "$short" | jq -c 'del(.access_token)')"; exit 1; }
+          echo "::add-mask::$st"
+          long=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st")
+          lt=$(echo "$long" | jq -r '.access_token // empty')
+          [ -n "$lt" ] || { echo "2단계 실패: $(echo "$long" | jq -c 'del(.access_token)')"; exit 1; }
+          echo "::add-mask::$lt"
+          who=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
+          gh secret set THREADS_TOKEN_SISIBIBI --body "$lt" --repo ${{ github.repository }}
+          echo "완료: THREADS_TOKEN_SISIBIBI @$who"
