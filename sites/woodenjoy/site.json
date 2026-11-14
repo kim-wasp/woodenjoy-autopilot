@@ -36,9 +36,11 @@
   "schedule": {
     "generate": {
       "days": [
+        "sun",
+        "mon",
         "tue",
-        "thu",
-        "sun"
+        "wed",
+        "thu"
       ],
       "time": "20:00"
     },
@@ -46,7 +48,9 @@
       "blog": {
         "days": [
           "mon",
+          "tue",
           "wed",
+          "thu",
           "fri"
         ],
         "time": "08:00"
@@ -54,7 +58,9 @@
       "threads": {
         "days": [
           "mon",
+          "tue",
           "wed",
+          "thu",
           "fri"
         ],
         "time": "12:30"
@@ -62,7 +68,9 @@
       "instagram": {
         "days": [
           "mon",
+          "tue",
           "wed",
+          "thu",
           "fri"
         ],
         "time": "21:00"

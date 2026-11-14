@@ -60,7 +60,7 @@ THREADS_GUIDE = """스레드 규칙 (사장님 지시):
   첫 줄은 15자 안팎 한 줄. 아래 패턴 중 이 글에 가장 센 것으로, 반드시 구체적 사실·숫자·물건·장면으로 채워요:
   반전(다들 믿는 상식 뒤집기) / 실수 장면(흔히 하는 실수) / 숫자(돈·시간·개수) / 장면(바로 그려지는 상황) / 진짜 궁금한 질문 / 둘 중 뭐가 나은지 비교.
   먼저 첫 줄 후보 3개를 서로 다른 패턴으로 만들어 hooks 에 넣고, 그중 가장 센 것을 본문 첫 줄로 써요.
-  에피소드 2~4줄에는 숫자나 구체적인 물건 하나를 꼭 넣어요. 마지막 줄은 정보가 댓글에 있다는 걸 자연스럽게 알려요(매번 같은 문장 말고).
+  에피소드 2~4줄에는 숫자나 구체적인 물건 하나를 꼭 넣어요. 마지막 줄은 이번 형식에 맞게 댓글을 열어 보고 싶게 끝내요('댓글에 적어둘게' 같은 고정 문장 금지, 최근 글 끝 줄과 다른 말).
   줄바꿈은 숨 쉴 자리에서만. 한 문장 한 줄씩 끝까지 늘어놓지 말아요.
 - posts[1] 댓글(본문에 다는 첫 댓글): 반말, 바로 써먹을 핵심 정보 2~4줄. 순서가 있으면 번호. 수치·규격·방법은 확인된 사실만.
 - posts[2] 대댓글: 반말 1~2줄 + {LINK} (더 자세한 건 여기).
@@ -85,7 +85,7 @@ CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
 - 숫자·단계·비교처럼 정확해야 하는 정보는 카드 글자로 씁니다.
 - 숫자만 덩그러니 두지 마세요. 무엇의 수치인지 같은 칸에 적어요(✕ "2023년 2.95%" → ○ "100만원 이상 송금 2.95%→3.17%").
 - 표지·마지막 장 제목은 읽다 멈추게: 반전(평균은 A인데 1위는 B), 손해·오해 지적(이거 모르면 ○○), 질문형 도발. 단, 사실 그대로.
-- 구성(instagram-kr 스킬): 내용에 맞는 하나를 골라 instagram.framework 에 적어요.
+- 구성(instagram-kr 스킬): 아래 'SNS 글 다양성'에서 정해 준 이번 구성을 우선으로 따르고 instagram.framework 에 적어요. 참고용 구성 설명:
   모음형(목록: 표지에 정확한 개수와 얻는 것, 한 장에 하나) / 실수 바로잡기형(표지 반전 → 왜 틀렸는지 → 방법마다 이름 붙여 ✕/○ 한 장씩 → 한 줄 정리) /
   순서형(표지에 완성 결과 → 문제 → 전체 단계 수·시간 먼저 → 단계마다 한 장 → 결과) / 비교형(표지 질문 → 기준마다 한 장 → '이런 집은 A, 이런 집은 B' 결론) /
   논쟁형(사회 통념: 표지 논쟁 질문 → 양쪽 입장 → 확인된 데이터 → 투표 안내, 한쪽 조롱 금지).
@@ -93,7 +93,7 @@ CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
   표지 후보 3개를 서로 다른 패턴(반전/실수/숫자/장면/질문/비교)으로 instagram.cover_hooks 에 넣고 가장 센 것을 표지 title 로 써요.
 - 크기는 1080x1350(4:5, Meta 게시 API가 받는 가장 긴 세로). 프로필 그리드는 표지를 3:4로 좌우 조금 잘라 보여주니 표지 핵심 글자는 가운데에.
 - 표지에 개수를 약속했으면 안쪽 장에서 정확히 그 개수만큼 채워요(부풀리려고 빈 장 넣기 금지).
-- 마지막 장은 행동 하나만: 저장(쓸 때 꺼내보기) 또는 보내기(이 고민 있는 친구에게) 또는 프로필 링크. 셋을 한꺼번에 요구하지 않아요."""
+- 마지막 장은 행동 하나만(이번 마무리 지시를 따라요). 여러 행동을 한꺼번에 요구하지 않아요."""
 
 PHOTO_CARD_GUIDE = """[인스타 사진 카드 모드] 카드 중 2~4장은 사진 배경 카드로 만드세요: {"title":"…","sub":"…","photo":"photo1.jpg"} (body 없이, 흰 글자가 사진 위에 올라가요).
 표지는 반드시 사진 배경 카드(photo1.jpg). 사진 파일 이름은 photo_prompts 의 번호와 맞추세요(photo1.jpg = id 1)."""
@@ -171,11 +171,11 @@ def schema(site):
     if needs_cards(site):
         parts.append('"cards": {"slides": [...]}')
     if site.get("instagram", {}).get("enabled"):
-        parts.append('"instagram": {"framework": "모음형|실수 바로잡기형|순서형|비교형|논쟁형 중 하나", "cover_hooks": ["표지 후보1", "후보2", "후보3"], '
-                     '"caption": "짧고 간결하게. 첫 줄 40자 이내 후킹+핵심어(표지 문구 그대로 반복 말고 다른 각도) → 핵심 2~3줄(한 줄에 한 가지, 짧은 문장, 카드를 안 넘겨도 얻는 요점) '
-                     '→ 행동 안내 한 줄(저장 또는 보내기 중 하나, 자세한 글은 프로필 링크) → 맨 끝 해시태그 3~5개(넓은 것 1 + 구체적인 것 2~4). 링크·반응 낚시·대시 금지, 이모지 3개 이하"}')
+        parts.append('"instagram": {"framework": "이번 카드 구성 지시 그대로", "ending": "이번 캡션 마무리 지시 그대로", "cover_hooks": ["표지 후보1", "후보2", "후보3"], '
+                     '"caption": "짧고 간결하게. 첫 줄 40자 이내 후킹+핵심어(표지 문구 반복 말고 다른 각도, 최근 캡션 첫 줄과 다른 모양: 장면/질문/숫자/혼잣말 중) → 핵심 2~3줄(카드를 안 넘겨도 얻는 요점, 매번 같은 3줄 나열 말고 내용에 맞게) '
+                     '→ 이번 마무리 지시대로 한 줄(최근 캡션 끝 문장과 다른 말) → 맨 끝 해시태그 3~5개(넓은 것 1 + 구체적인 것 2~4). 링크·반응 낚시·대시 금지, 이모지 3개 이하"}')
     if site.get("threads", {}).get("enabled"):
-        parts.append('"threads": {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"], "topic_tag": "주제 태그 1개"}')
+        parts.append('"threads": {"style": "이번 스레드 형식 이름 그대로", "hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"], "topic_tag": "주제 태그 1개"}')
     m = site.get("monetization") or {}
     if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
         parts.append('"coupang_wish": [{"name": "이 글 독자가 실제로 살 만한 상품(쇼핑몰에서 쓰는 이름)", "search": "쿠팡 검색어", '
@@ -311,6 +311,7 @@ def build_prompt(site, topic, notes, view=None):
             notes = None
     if notes:
         p.append(f"[사장님이 고쳐 달라고 한 점 — 반드시 반영]\n{notes}")
+    p.append(sns_style_block(site, site.get("_sns") or pick_sns_styles(site)))
     if blog_kind(site) == "naver":
         p.append(skills.block("naver-woodenjoy-post"))
     if needs_cards(site):
@@ -677,6 +678,80 @@ def season_candidates(site, n=8):
         out.append(x)
     out.sort(key=lambda x: x["score"], reverse=True)
     return out
+
+
+# SNS 글이 매번 같은 틀로 나오지 않게, 글마다 다른 형식·감정·마무리를 돌려 써요 (최근 글에 쓴 것은 피함)
+THREADS_STYLES = {
+    "퀴즈": "첫 줄이 맞히고 싶어지는 문제(OX, 둘 중 하나, 숫자 맞히기). 본문은 보기만 주고 답은 댓글에서 공개. 읽는 사람이 속으로 답을 고르고 확인하러 댓글을 열게.",
+    "손해 경고": "돈·시간·하자를 날리는 아주 구체적인 한 장면(얼마, 몇 번, 무엇이 망가지는지). 겁주기가 아니라 '어 나도 저거 하려고 했는데' 싶은 순간을 잡아요.",
+    "상식 뒤집기": "다들 맞다고 믿는 말 하나를 꺼내고 사실은 다르다는 걸 근거 하나로 툭 던져요. 왜 그런지는 댓글.",
+    "공감 투덜": "이 문제를 겪는 사람이 속으로 하는 짜증이나 민망함을 그대로 한 줄로(예: 문 닫을 때마다 끼익). 가볍게 웃기게, 같은 편이 돼 주는 말투. 해결은 댓글.",
+    "편 가르기": "A파 vs B파 하나만 골라 보라고 던지는 글. 양쪽 다 그럴듯하게, 실제로 사람들 의견이 갈리는 기준으로. 확인된 정답이 있으면 댓글에서.",
+    "숫자 한 방": "놀라거나 '진짜?' 싶은 확인된 숫자 하나로 시작(값, 시간, 비율, 규격). 그 숫자가 나한테 왜 중요한지 한 줄.",
+    "썰 한 장면": "기사·커뮤니티에서 실제로 화제가 된 사연이나 흔히 벌어지는 상황을 짧은 장면으로(누가, 어디서, 무엇을). 지어낸 경험담 금지. 결말이나 교훈은 댓글.",
+    "자가 진단": "'이거 2개 이상이면 ○○' 식으로 스스로 체크해 보게 만드는 글. 항목은 본문에 짧게 2~3개, 해당되면 어떻게 하는지는 댓글.",
+    "혼잣말 팁": "친구한테 지나가듯 툭 알려주는 꿀팁 한 줄 + 왜 아무도 안 알려줬나 싶은 이유. 힘 빼고 짧게.",
+}
+CARD_STYLES = {
+    "퀴즈형": "표지는 문제, 다음 장들에서 보기·정답·이유. 마지막 장은 정답 맞힌 사람/틀린 사람 한마디.",
+    "실수 바로잡기형": "표지 반전 → 왜 틀렸는지 → 방법마다 ✕/○ 한 장씩 → 한 줄 정리.",
+    "모음형": "표지에 정확한 개수와 얻는 것 → 한 장에 하나.",
+    "순서형": "표지에 완성 결과 → 전체 단계 수·시간 → 단계마다 한 장 → 결과.",
+    "비교형": "표지 질문(A vs B) → 기준마다 한 장 → '이런 집은 A, 이런 집은 B'.",
+    "자가진단형": "표지 '이거 해당되면' → 체크 항목 장 → 개수별 처방 → 행동 하나.",
+    "오해와 진실형": "표지에 흔한 오해 한 줄 → 오해마다 진실 한 장씩 → 정리.",
+}
+ENDINGS = {
+    "저장": "다음에 쓸 때 꺼내 보라고 저장을 권하는 마무리",
+    "보내기": "이 고민 있는 친구·가족에게 보내 주라는 마무리(누구에게인지 구체적으로)",
+    "의견": "사람들이 진짜 한마디 하고 싶어지는 구체적 질문으로 끝(반응 낚시 문구 금지)",
+    "링크": "더 자세한 표·사진이 있는 곳으로 가 보게 하는 마무리(무엇이 더 있는지 구체적으로)",
+    "한 줄 결론": "외워 둘 핵심 한 줄로 끝",
+}
+
+
+def _recent_sns(site_id, n=8):
+    rows = []
+    for d in post_dirs(site_id)[-n:]:
+        p = load_json(d / "post.json", {})
+        t, ig = p.get("threads") or {}, p.get("instagram") or {}
+        rows.append({"style": t.get("style", ""), "framework": ig.get("framework", ""), "ending": (ig.get("ending") or ""),
+                     "first": ((t.get("posts") or [""])[0].split("\n") or [""])[0][:60],
+                     "close": ((t.get("posts") or [""])[0].strip().split("\n") or [""])[-1][:60],
+                     "cap_first": (ig.get("caption") or "").split("\n")[0][:60],
+                     "cap_close": [l for l in (ig.get("caption") or "").split("\n") if l.strip() and not l.startswith("#")][-1:]})
+    return rows
+
+
+def pick_sns_styles(site):
+    import hashlib
+    rec = _recent_sns(site["id"])
+    seed = int(hashlib.md5(f"{site['id']}{now_kst():%Y%m%d%H}".encode()).hexdigest(), 16)
+    def pick(options, used):
+        free = [k for k in options if k not in used] or list(options)
+        return free[seed % len(free)]
+    return {"threads": pick(THREADS_STYLES, [r["style"] for r in rec[-4:]]),
+            "cards": pick(CARD_STYLES, [r["framework"] for r in rec[-3:]]),
+            "ending": pick(ENDINGS, [r["ending"] or ("링크" if "링크" in "".join(r["cap_close"]) else "저장" if "저장" in "".join(r["cap_close"]) else "")
+                                     for r in rec[-3:]]), "recent": rec}
+
+
+def sns_style_block(site, st):
+    rec = st["recent"]
+    lines = []
+    if site.get("threads", {}).get("enabled"):
+        lines.append(f"스레드 이번 형식: {st['threads']} — {THREADS_STYLES[st['threads']]}\n(threads.style 에 '{st['threads']}' 를 그대로 적어요)")
+    if needs_cards(site):
+        lines.append(f"인스타 카드 이번 구성: {st['cards']} — {CARD_STYLES[st['cards']]}\n(instagram.framework 에 '{st['cards']}')")
+        lines.append(f"인스타 캡션 마무리: {ENDINGS[st['ending']]} (instagram.ending 에 '{st['ending']}'). 캡션 첫 줄과 마무리는 아래 최근 캡션과 다른 말로.")
+    if not lines:
+        return ""
+    old = "\n".join(f"- 스레드 첫 줄 「{r['first']}」 / 끝 줄 「{r['close']}」 / 캡션 첫 줄 「{r['cap_first']}」 / 캡션 끝 「{(r['cap_close'] or [''])[0][:50]}」" for r in rec if r["first"] or r["cap_first"])
+    return ("[SNS 글 다양성 — 사장님 지시: 매번 같은 틀이면 AI 글로 보여요]\n" + "\n".join(lines) + "\n"
+            "공통: 읽는 사람이 지금 느끼는 감정(짜증, 민망함, 돈 아까움, 뿌듯함, 불안, 궁금함) 하나를 정해 그 마음에서 말을 걸어요. 정보 정리보다 '어 이거 내 얘기네'가 먼저. "
+            "사람이 쓴 것처럼 문장 길이를 들쭉날쭉하게, 가끔 말줄임이나 짧은 감탄 한 마디(ㅋㅋ, 아 진짜, 헐)도 괜찮아요(과하지 않게, 사이트 말투 안에서). "
+            "아래 최근 글의 첫 줄·끝 줄·마무리 문장과 구조가 겹치면 안 돼요. 특히 '댓글에 적어둘게/정리해 둘게', '저장해 두세요', '자세한 건 프로필 링크' 같은 말을 습관처럼 반복하지 말고, 이번 형식에 맞는 새 말로.\n"
+            "[최근 SNS 글 — 이것과 다르게]\n" + (old or "(없음)"))
 
 
 def keyword_pool(site, n_seeds=15, keep=12):
