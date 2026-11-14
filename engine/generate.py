@@ -19,6 +19,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -283,6 +284,8 @@ def build_prompt(site, topic, notes, view=None):
     else:
         if site.get("_mix_turn"):
             p.append("[이번 글 종류]\n" + site["topic_mix"][site["_mix_turn"]]["guide"])
+        if site.get("keyword_gate"):
+            p.append(keyword_pool_block(keyword_pool(site)))
         p.append("[주제 고르기]\n사이트 주제 안에서, 지금 시기에 검색이 많고 최근 글과 겹치지 않는 주제를 웹 검색으로 확인해 하나 고르세요. "
                  "검색량 자료가 있으면 우선 참고하고 근거를 why_this_topic 에 적으세요.\n후보 키워드: " + ", ".join(site.get("seeds", [])))
     extra = []
@@ -674,6 +677,74 @@ def season_candidates(site, n=8):
         out.append(x)
     out.sort(key=lambda x: x["score"], reverse=True)
     return out
+
+
+def keyword_pool(site, n_seeds=15, keep=12):
+    """네이버 블로그 유입용 키워드 후보: 검색은 있는데(월 150회 이상) 글은 아직 적은 검색어를 골라요.
+    1) 사이트 주제 안에서 사람들이 칠 만한 검색어 후보를 뽑고 2) 검색광고 키워드 도구로 실제 월간 검색 수와 연관 검색어를 받고
+    3) 네이버 개발자센터 검색 API 키가 있으면 블로그 글 수까지 재서 '검색 수 ÷ 글 수'가 높은 것부터 줄 세워요."""
+    import math
+    import trends
+    sys.path.insert(0, str(ROOT / "tools"))
+    import keywords as kt
+    if not os.environ.get("NAVER_AD_API_KEY") or os.environ.get("MOCK_LLM"):
+        return []
+    turn = (site.get("topic_mix") or {}).get(site.get("_mix_turn") or "", {}).get("guide", "")
+    prompt = "\n\n".join(x for x in [
+        f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d (%a)}",
+        ("[이번 글 종류]\n" + turn) if turn else "",
+        trends.naver_trends_block(site["id"]),
+        "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site["id"])][-40:] or ["(없음)"]),
+        f"이 블로그 독자가 네이버에서 실제로 칠 만한 검색어 {n_seeds}개를 주세요. 지금 시기에 맞고 최근 제목과 겹치지 않게. "
+        "너무 넓은 말(예: 인테리어, 집수리)도, 아무도 안 칠 긴 문장도 말고 2~3단어 짜리 구체적인 검색어로. 제품 이름, 문제 상황(예: 방문 안닫힘), 방법(예: 실리콘 쏘는법)을 섞어서. "
+        'JSON: {"seeds": ["검색어", ...]}'] if x)
+    try:
+        seeds = [w for w in (llm.ask_json(SYSTEM, prompt, model="claude-sonnet-5-5", web_search=False, max_tokens=1500).get("seeds") or []) if w][:n_seeds]
+    except Exception as e:  # noqa: BLE001
+        log(f"  키워드 후보 만들기 실패: {e}")
+        return []
+    pool = {}
+    for i in range(0, len(seeds), kt.BATCH):
+        chunk = [kt.norm(w) for w in seeds[i:i + kt.BATCH]]
+        try:
+            items = kt.ad_request(chunk, False)
+        except Exception as e:  # noqa: BLE001
+            log(f"  키워드 도구 실패: {e}")
+            continue
+        for it in items:
+            k = kt.norm(it.get("relKeyword", ""))
+            vol = kt.to_int(it.get("monthlyPcQcCnt", 0)) + kt.to_int(it.get("monthlyMobileQcCnt", 0))
+            pool.setdefault(k, {"kw": k, "vol": vol, "seed": k in chunk})
+        time.sleep(0.5)
+    band = [x for x in pool.values() if 150 <= x["vol"] <= 30000]
+    band.sort(key=lambda x: (not x["seed"], -x["vol"]))
+    band = band[:40]
+    for x in band:
+        try:
+            x["docs"] = kt.blog_total(x["kw"], False)
+        except Exception:  # noqa: BLE001
+            x["docs"] = None
+    for x in band:
+        d = x.get("docs")
+        x["ratio"] = round(x["vol"] / d, 2) if d else None
+        # 글 수를 알면 '검색 ÷ 글 수'가 핵심, 모르면 검색 수가 적당한(300~5천) 것을 앞으로
+        x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None
+                      else math.log10(x["vol"]) - (1 if x["vol"] > 8000 else 0))
+    band.sort(key=lambda x: -x["score"])
+    out = band[:keep]
+    log("  키워드 후보: " + ", ".join(f"{x['kw']}({x['vol']}" + (f"/{x['docs']}" if x.get("docs") else "") + ")" for x in out))
+    return out
+
+
+def keyword_pool_block(pool):
+    if not pool:
+        return ""
+    rows = "\n".join(f"- {x['kw']}: 월 검색 {x['vol']:,}회" + (f", 블로그 글 {x['docs']:,}개 (검색÷글 {x['ratio']})" if x.get("docs") else "") for x in pool)
+    return ("[이번 글 메인 키워드 후보 — 네이버 검색광고 키워드 도구 실제 값, 위에서부터 유리한 순]\n" + rows + "\n"
+            "규칙: 이 중 하나를 keywords.main 으로 정하고 그 검색어로 찾는 사람의 궁금증에 답하는 글을 쓰세요. "
+            "사이트 주제와 안 맞거나 최근 글과 겹치면 다음 후보로. 제목 앞쪽에 메인 키워드를 그대로(띄어쓰기는 자연스럽게). "
+            "같은 목록의 관련 검색어 2~4개는 소제목에 하나씩 녹여 keywords.sub 에. 월 검색 100회 밑의 검색어는 메인으로 쓰지 마세요. "
+            "why_this_topic 에 고른 키워드의 검색 수(와 글 수)를 그대로 적으세요.")
 
 
 def pick_topic(site):
