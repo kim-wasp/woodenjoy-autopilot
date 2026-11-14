@@ -12,16 +12,17 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
           CODE: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
         run: |
+          echo "형태: 길이 ${#CODE}, code= 포함 $(echo "$CODE" | grep -c code=)"
           CODE="${CODE%%#*}"; CODE="$(echo "$CODE" | sed 's/^.*code=//; s/&.*$//')"
           echo "::add-mask::$CODE"
-          short=$(curl -s -X POST https://graph.threads.net/oauth/access_token -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code -F redirect_uri="https://example.com/" -F code="$CODE")
+          short=$(curl -s -X POST https://graph.threads.com/oauth/access_token -F client_id="$APP_ID" -F client_secret="$APP_SECRET" -F grant_type=authorization_code -F redirect_uri="https://example.com/" -F code="$CODE")
           st=$(echo "$short" | jq -r '.access_token // empty')
           [ -n "$st" ] || { echo "1단계 실패: $(echo "$short" | jq -c 'del(.access_token)')"; exit 1; }
           echo "::add-mask::$st"
-          long=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st")
+          long=$(curl -s "https://graph.threads.com/access_token?grant_type=th_exchange_token&client_secret=$APP_SECRET&access_token=$st")
           lt=$(echo "$long" | jq -r '.access_token // empty')
           [ -n "$lt" ] || { echo "2단계 실패: $(echo "$long" | jq -c 'del(.access_token)')"; exit 1; }
           echo "::add-mask::$lt"
-          who=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
+          who=$(curl -s "https://graph.threads.com/v1.0/me?fields=username&access_token=$lt" | jq -r '.username // "?"')
           gh secret set THREADS_TOKEN_SISIBIBI --body "$lt" --repo ${{ github.repository }}
           echo "완료: THREADS_TOKEN_SISIBIBI @$who"
