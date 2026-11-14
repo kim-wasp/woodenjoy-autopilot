@@ -1,5 +1,5 @@
 {
  "posts": {},
- "last_error": "uplika 403: {\"error\":{\"code\":\"forbidden_scope\",\"message\":\"Naver search checks belong to the person, not a workspace. This key is limited to some workspaces; use a key that covers all of them.\",\"scope\":\"all_workspaces\"}}",
- "updated": "2026-11-13T22:26+09:00"
+ "last_error": "uplika 503: {\"error\":{\"code\":\"bridge_offline\",\"message\":\"The uplika browser extension is not connected, so nothing was searched. Naver search pages are read in the person's own browser. Ask the person to open the browser with the uplika extension, then call again. If you have a shell on that compute",
+ "updated": "2026-11-14T11:36+09:00"
 }
