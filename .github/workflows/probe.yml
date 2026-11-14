@@ -1,21 +1,15 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: write }
+permissions: { contents: read }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install -q requests
-      - run: python3 tools/wp_prune.py
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", IDS: "1006,1003,992,947,937,880,770,688,634,608,597,592,484,479,416,387,289,138,136,132,115,103,99,91,89,87,83,76,66,64,53,49,45,35,9" }
-      - run: python3 tools/wp_improve.py
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}", ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}", IDS: "1038,1028" }
-      - run: python3 tools/wp_touch.py 717
-        env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
       - run: |
-          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit && git commit -qm "forsmartlife 약한 글 35개 비공개, 2개 보강" && git pull -q --rebase && git push -q || true
+          echo "naver open api: ${NCID:+set}"
+          for path in naver/keywords/research naver/keywords naver/keyword-research research/naver/keywords; do
+            echo "== $path"; curl -s -X POST "https://api.uplika.com/v1/$path" -H "authorization: Bearer $K" -H 'content-type: application/json' -d '{"keywords":["타카총","나비경첩"]}' | head -c 600; echo
+          done
+          if [ -n "$NCID" ]; then curl -s "https://openapi.naver.com/v1/search/blog.json?query=%EB%82%98%EB%B9%84%EA%B2%BD%EC%B2%A9&display=1" -H "X-Naver-Client-Id: $NCID" -H "X-Naver-Client-Secret: $NCS" | head -c 200; fi
+        env: { K: "${{ secrets.UPLIKA_RESEARCH_KEY }}", NCID: "${{ secrets.NAVER_CLIENT_ID }}", NCS: "${{ secrets.NAVER_CLIENT_SECRET }}" }
