@@ -70,6 +70,9 @@ def main():
         print("uplika 키가 없어서 건너뜀"); return
     todo = targets(data)
     print(f"확인할 글 {len(todo)}개")
+    if not todo:
+        return
+    data.pop("last_error", None)
     for i in range(0, len(todo), 10):
         batch = todo[i:i + 10]
         naver = [t for t in batch if "blog.naver.com" in t["url"]]
@@ -80,8 +83,11 @@ def main():
         try:
             res = check(args)
         except Exception as e:  # noqa: BLE001
-            print("순위 확인 실패:", e)
-            data["last_error"] = str(e)[:300]
+            msg = str(e)
+            if "bridge_offline" in msg:
+                msg = "uplika 확장이 켜진 브라우저가 없어서 다음 시간에 다시 시도"
+            print("순위 확인 실패:", msg)
+            data["last_error"] = msg[:300]
             break
         if res.get("partial") and res.get("pending"):
             print("확장이 아직 읽는 중인 검색어:", res["pending"])
