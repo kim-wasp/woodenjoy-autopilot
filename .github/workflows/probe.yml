@@ -7,9 +7,5 @@ jobs:
     timeout-minutes: 10
     steps:
       - run: |
-          echo "naver open api: ${NCID:+set}"
-          for path in naver/keywords/research naver/keywords naver/keyword-research research/naver/keywords; do
-            echo "== $path"; curl -s -X POST "https://api.uplika.com/v1/$path" -H "authorization: Bearer $K" -H 'content-type: application/json' -d '{"keywords":["타카총","나비경첩"]}' | head -c 600; echo
-          done
-          if [ -n "$NCID" ]; then curl -s "https://openapi.naver.com/v1/search/blog.json?query=%EB%82%98%EB%B9%84%EA%B2%BD%EC%B2%A9&display=1" -H "X-Naver-Client-Id: $NCID" -H "X-Naver-Client-Secret: $NCS" | head -c 200; fi
+          for u in v1 v1/openapi.json openapi.json v1/docs docs/api; do echo "== $u"; curl -s "https://api.uplika.com/$u" -H "authorization: Bearer $K" | tr ',' '\n' | grep -i "naver\|keyword\|error" | head -40; done
         env: { K: "${{ secrets.UPLIKA_RESEARCH_KEY }}", NCID: "${{ secrets.NAVER_CLIENT_ID }}", NCS: "${{ secrets.NAVER_CLIENT_SECRET }}" }
