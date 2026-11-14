@@ -4,24 +4,11 @@ permissions: { contents: read }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install -q -r requirements.txt || pip install -q requests pillow
       - run: |
-          cd engine && python3 -c "
-          import generate as g, json
-          for sid in ['woodenjoy','infobay']:
-              s=g.load_site(sid); s['_mix_turn']=None
-              pool=g.keyword_pool(s)
-              print('##',sid); print(g.keyword_pool_block(pool))
-          "
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
-          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
-          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          if [ -z "$T" ]; then echo "THREADS_TOKEN_SISIBIBI 없음"; exit 0; fi
+          echo "길이 ${#T}, 앞 4자 ${T:0:4}"
+          curl -s "https://graph.threads.net/v1.0/me?fields=id,username&access_token=$T"; echo
+          curl -s "https://graph.threads.net/v1.0/me/threads_publishing_limit?fields=quota_usage,config&access_token=$T" | head -c 300; echo
+        env: { T: "${{ secrets.THREADS_TOKEN_SISIBIBI }}" }
