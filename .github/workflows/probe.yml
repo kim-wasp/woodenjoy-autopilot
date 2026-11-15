@@ -4,21 +4,15 @@ permissions: { contents: read }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install -q -r requirements.txt
       - run: |
-          mkdir -p out && cd engine && python3 -c "
-          import imagegen, json, shutil
-          s=json.load(open('../sites/woodenjoy/site.json'))['images']
-          p='A Korean apartment interior door whose hinge screw is loose, the door sagging and scraping the laminate floor. Composition: extreme detail of the problem area, slightly out-of-focus background. '+s['photo_style']
-          imagegen.generate(p,'../out/woodenjoy_after.jpg',{'provider':'gemini','realism':True},size=(1200,800))
-          s2=json.load(open('../sites/infobay/site.json'))['images']
-          imagegen.generate('Guests lining up at the reception desk of a Korean wedding hall handing over envelopes. '+s2['photo_style'],'../out/infobay_after.jpg',{'provider':'gemini','realism':True},size=(1200,800))
-          "
-        env: { GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}" }
-      - uses: actions/upload-artifact@v4
-        with: { name: samples, path: out }
+          sleep 120
+          for host in sisibibinote.kr myinfobay.com; do
+            got=$(curl -s "https://$host/905b55fda81b25808ca9cbeb09d6cd87.txt"); echo "$host 키 파일: $([ "$got" = "905b55fda81b25808ca9cbeb09d6cd87" ] && echo 확인 || echo "없음($(echo $got | head -c 40))")"
+            sm=$(curl -s "https://$host/sitemap.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<[^>]*>//g' | head -500)
+            n=$(echo "$sm" | grep -c http)
+            body=$(jq -n --arg h "$host" --arg k "905b55fda81b25808ca9cbeb09d6cd87" --arg u "$sm" '{host:$h,key:$k,keyLocation:("https://"+$h+"/"+$k+".txt"),urlList:($u|split("\n")|map(select(length>0)))}')
+            code=$(curl -s -o /tmp/r -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'content-type: application/json' -d "$body")
+            echo "$host 주소 $n개 제출: $code $(head -c 200 /tmp/r)"
+          done
