@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T06:43+09:00",
+  "updated": "2026-11-16T07:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -457,8 +457,9 @@
       "dir": "content/forsmartlife/2026-11-13-norovirus-symptoms-prevention-disinfection",
       "title": "노로바이러스 증상·예방법: 손소독제 말고 비누, 굴은 85℃에서 1분",
       "platform": "blog",
-      "at": "2026-11-16T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-16T07:01:41+09:00",
+      "state": "done",
+      "url": "https://forsmartlife.com/norovirus-symptoms-prevention-disinfection/"
     },
     {
       "site": "infobay",
@@ -466,8 +467,9 @@
       "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
       "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
       "platform": "blog",
-      "at": "2026-11-16T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-16T07:01:46+09:00",
+      "state": "done",
+      "url": "https://myinfobay.com/blog/funeral-condolence-etiquette-mistakes-2026"
     },
     {
       "site": "woodenjoy",
