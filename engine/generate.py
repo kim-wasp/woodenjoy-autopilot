@@ -251,6 +251,18 @@ def experiences(site):
     return "\n\n".join(ok)[:4000]
 
 
+# 검색에서 '팔리는' 글 구조 (네이버 검색 콘텐츠 작성 가이드 2026-05·06, 업리카가 잰 AI 브리핑 인용 문장, 구글 디스커버 정책)
+SEARCH_GUIDE = """[검색에서 클릭되고 인용되는 글 구조 — 모든 블로그 글]
+1. 첫 문단: 누가, 어떤 상황에서, 왜 이 글을 찾는지 한 줄 + 바로 답 한 문장. 인사말·배경 설명으로 시작하지 않아요.
+2. 소제목마다 첫 문장은 그 소제목의 답이나 정의(「X는 ~하는 Y예요」). 근거와 설명은 그다음에.
+3. 따라 하는 내용은 번호 목록, 둘 이상을 비교하면 표. 고려할 다른 선택지와 고르는 기준도 한 번.
+4. 값이 바뀌는 정보(가격, 법, 제도, 메뉴 경로)에는 「2026년 ○월 기준」을 붙이고, 메뉴 경로·설정값은 한 문장에 그대로(설정 → 계정 → 보안).
+5. 숫자와 근거는 출처가 있는 것만. 아쉬운 점, 주의할 점, 이런 경우엔 안 맞는다는 한계도 한 번 써요(신뢰가 클릭보다 오래 갑니다).
+6. 제목: 메인 키워드를 앞에, 30~40자, 본문이 실제로 답하는 내용만 약속. 본문과 다른 낚시, 과장, 분노·공포 자극은 금지(네이버·구글 모두 노출을 줄여요).
+7. meta_description: 검색 결과에서 눌러 볼 이유를 80~120자로(이 글에서만 얻는 숫자, 기준, 결론). 제목 반복 금지.
+8. 끝: 결산 문장 대신, 독자가 다음에 할 행동 하나와 이어 읽을 관련 글 하나."""
+
+
 def build_prompt(site, topic, notes, view=None):
     blog = blog_kind(site) != "none"
     m = site.get("monetization") or {}
@@ -261,6 +273,7 @@ def build_prompt(site, topic, notes, view=None):
          "[승인 대기 중인 글 주제(영문 요약) — 이 주제들과도 겹치지 않게, 다른 주제로]\n" + "\n".join(pending_topics(site["id"]) or ["(없음)"])]
     if blog:
         p.append(STAGE_GUIDE.get(m.get("stage", "pre_adsense" if blog_kind(site) == "wordpress" else "adpost"), ""))
+        p.append(SEARCH_GUIDE)
         links = [x for x in posts if x["url"]][-40:]
         if m.get("internal_links", True) and links:
             p.append("[내부 링크 후보 — 관련 있는 글만 본문에 2~3개 자연스럽게 [제목](주소)로]\n" + "\n".join(f"- {x['title']}: {x['url']}" for x in links))

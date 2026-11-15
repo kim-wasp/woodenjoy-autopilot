@@ -407,10 +407,29 @@ def publish(d, platform, dry=False):
         return
     pub.update(res)
     pub[f"{platform}_at"] = now_kst().isoformat(timespec="seconds")
+    if platform == "blog" and res.get("blog_url"):
+        indexnow(site, [res["blog_url"]])
     if all(pub.get(p) for p in post["platforms"]):
         post["status"] = "published"
     save_json(d / "post.json", post)
     log(f"완료: {res}")
+
+
+def indexnow(site, urls):
+    """새 글 주소를 IndexNow로 알려요 (네이버, 빙 등 참여 검색엔진이 함께 받음. 구글은 참여 안 함).
+    사이트 설정 indexnow_key 가 있고, 사이트 루트에 <키>.txt 파일이 올라가 있어야 해요."""
+    key = site.get("indexnow_key")
+    if not key or not urls:
+        return
+    from urllib.parse import urlparse
+    host = urlparse(urls[0]).netloc
+    try:
+        import requests
+        r = requests.post("https://api.indexnow.org/indexnow", timeout=30,
+                          json={"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls})
+        log(f"  IndexNow 알림 {len(urls)}건: {r.status_code}")
+    except Exception as e:  # noqa: BLE001
+        log(f"  IndexNow 알림 실패(글 발행에는 영향 없음): {e}")
 
 
 TEST = "--test" in sys.argv  # 네이버 비공개 시험: 제목 앞 [시험], 기록 안 남김
