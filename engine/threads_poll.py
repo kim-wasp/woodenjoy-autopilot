@@ -68,7 +68,7 @@ def make_queue(site, n=7):
               f"위 카드 중에서 스레드에서 의견이 가장 팽팽하게 갈리고 댓글이 붙을 만한 것 {n}개를 골라(연애·돈 분류가 있으면 절반 이상은 거기서, 나머지는 분류가 겹치지 않게), 규칙대로 써 주세요. "
               '출력 JSON: {"polls": [{"card_id": "카드 id 그대로", "text": "본문", "option_a": "인정 (…)", "option_b": "아닌데 (…)", "reply": "대댓글 + {LINK}"}]}')
     res = llm.ask_json("당신은 한국 스레드에서 반응을 잘 끌어내는 카피라이터예요. 사실만, 규칙을 지켜요. 출력은 JSON 한 덩어리.",
-                       prompt, model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=4000, mock_name="threads_polls")
+                       prompt, model=(site.get("llm") or {}).get("helper_model", "claude-sonnet-5-5"), web_search=False, max_tokens=4000, mock_name="threads_polls")
     ids = {str(c["id"]) for c in cards}
     polls = []
     for p in res.get("polls") or []:

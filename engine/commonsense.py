@@ -90,7 +90,7 @@ def collect(site_id):
         "- 기존 카드와 같은 말투·길이로. 카테고리는 위 목록에서만.\n"
         'JSON: {"items": [{"row": {칸: 값}, "issue": "바탕이 된 이슈 한 줄", "source": {"title": "기사 제목", "url": "https://..."}, "why": "의견이 갈리는 이유"}]}'])
     res = llm.ask_json("당신은 생활 상식 투표 앱의 카드 편집자입니다. 사실에 근거한 이슈만 쓰고, 출력은 JSON 한 덩어리입니다.",
-                       prompt, model=(site.get("llm") or {}).get("model"), web_search=True, mock_name=f"{site_id}_cards")
+                       prompt, model=(site.get("llm") or {}).get("helper_model", "claude-sonnet-5-5"), web_search=True, mock_name=f"{site_id}_cards")
     items = []
     for it in res.get("items", []):
         row = {k: v for k, v in (it.get("row") or {}).items() if k in fields}
@@ -130,7 +130,7 @@ def spicy(site_id, n=30):
         f"카드 {n}개를 만드세요. category 는 {names} 중 하나(반반 정도), track 은 'NORM', status 는 'draft', source·correct_answer 는 null, is_event 는 false, region_scope 'KR', locale 'ko-KR'.\n"
         'JSON: {"items": [{"row": {칸: 값}, "why": "어떻게 갈릴지 한 줄"}]}'])
     res = llm.ask_json("당신은 생활 상식 투표 앱의 카드 편집자예요. 출력은 JSON 한 덩어리.", prompt,
-                       model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=8000, mock_name=f"{site_id}_cards")
+                       model=(site.get("llm") or {}).get("helper_model", "claude-sonnet-5-5"), web_search=False, max_tokens=8000, mock_name=f"{site_id}_cards")
     items = []
     for it in res.get("items", []):
         row = {k: v for k, v in (it.get("row") or {}).items() if k in fields}

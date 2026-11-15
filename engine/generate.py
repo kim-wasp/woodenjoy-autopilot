@@ -389,7 +389,7 @@ def review_cards(site, d, res):
     blocks.append({"type": "text", "text": CARD_REVIEW + "\n\n" + skills.block("card-image-check") + "\n\n[글·캡션]\n" + json.dumps(ctx, ensure_ascii=False)})
     try:
         out = llm.ask_json("당신은 꼼꼼한 카드뉴스 검수자입니다. 출력은 설명 없이 JSON 한 덩어리입니다.", blocks,
-                           model=(site.get("llm") or {}).get("model"), web_search=False, max_tokens=2000, mock_name="card_review")
+                           model=helper_model(site), web_search=False, max_tokens=2000, mock_name="card_review")
     except Exception as e:  # noqa: BLE001  눈 검사가 실패해도 글 만들기는 계속
         log(f"  카드 눈 검사 건너뜀: {str(e)[:120]}")
         return []
@@ -606,6 +606,11 @@ def preview_html(site, post, d):
 
 
 # ---------- AI 티 다듬기 (im-not-ai 규칙) ----------
+def helper_model(site):
+    """글 본문 말고 보조 작업(윤문, 카드 검수, 스레드 고치기)에 쓰는 모델: 본문 모델의 절반 값"""
+    return (site.get("llm") or {}).get("helper_model", "claude-sonnet-5-5")
+
+
 def humanize(site, md):
     if not md or not (site.get("monetization") or {}).get("humanize", True) or os.environ.get("MOCK_LLM"):
         return md
@@ -615,7 +620,7 @@ def humanize(site, md):
         "아래 규칙으로 블로그 글에서 AI 티가 나는 문장만 찾아 고쳐 주세요. 고칠 게 없으면 빈 목록. 후킹(첫 문단의 강한 말)은 살리세요.\n"
         "비용 절약을 위해 전체 글을 다시 쓰지 말고, 바꿀 문장만 원문 그대로(from)와 고친 문장(to)으로 주세요. 최대 25개.\n\n[규칙]\n" + rules
         + '\n\n[글]\n' + md + '\n\n출력: {"edits": [{"from": "원문 문장 그대로", "to": "고친 문장"}]}',
-        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="humanize")
+        model=helper_model(site), web_search=False, mock_name="humanize")
     new = md
     if res.get("article_md"):
         new = res["article_md"]
@@ -680,7 +685,7 @@ def season_candidates(site, n=8):
         "keyword 는 네이버에서 사람들이 실제로 치는 검색어(띄어쓰기 없이 2~12자, 예: 독감예방접종, 수면부족증상). "
         'JSON: {"ideas": [{"title": "제목안(핵심 키워드 앞쪽, 과장 없이 사실만)", "keyword": "네이버 검색어", "category": "카테고리", '
         '"trend_keyword": "관련 있는 구글 트렌드 검색어(없으면 빈 문자열)", "angle": "이 글이 답할 질문 한 줄"}]}'])
-    res = llm.ask_json(SYSTEM, prompt, model="claude-sonnet-5-5", web_search=False, max_tokens=3000, mock_name=f"{site['id']}_ideas")
+    res = llm.ask_json(SYSTEM, prompt, model="claude-haiku-5-5", web_search=False, max_tokens=3000, mock_name=f"{site['id']}_ideas")
     out = []
     for x in (res.get("ideas") or [])[:n]:
         nv = trends.naver_volume(x.get("keyword") or "")
@@ -787,7 +792,7 @@ def keyword_pool(site, n_seeds=15, keep=12):
         "너무 넓은 말(예: 인테리어, 집수리)도, 아무도 안 칠 긴 문장도 말고 2~3단어 짜리 구체적인 검색어로. 제품 이름, 문제 상황(예: 방문 안닫힘), 방법(예: 실리콘 쏘는법)을 섞어서. "
         'JSON: {"seeds": ["검색어", ...]}'] if x)
     try:
-        seeds = [w for w in (llm.ask_json(SYSTEM, prompt, model="claude-sonnet-5-5", web_search=False, max_tokens=1500).get("seeds") or []) if w][:n_seeds]
+        seeds = [w for w in (llm.ask_json(SYSTEM, prompt, model="claude-haiku-5-5", web_search=False, max_tokens=1500).get("seeds") or []) if w][:n_seeds]
     except Exception as e:  # noqa: BLE001
         log(f"  키워드 후보 만들기 실패: {e}")
         return []
@@ -1115,7 +1120,7 @@ def rewrite_threads(site_id, dir_):
     bad = th_problems(posts, tag)
     if bad:
         res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n아래 스레드 글을 고쳐 주세요: " + " / ".join(bad) + "\n\n" + json.dumps({"posts": posts, "topic_tag": tag}, ensure_ascii=False)
-                           + '\n\n출력: {"posts": [...], "topic_tag": "..."}', model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
+                           + '\n\n출력: {"posts": [...], "topic_tag": "..."}', model=helper_model(site), web_search=False, mock_name="threads")
         posts = [x for x in (res.get("posts") or []) if x] or posts
         tag = res.get("topic_tag") or tag
     if len(posts) < 2:
