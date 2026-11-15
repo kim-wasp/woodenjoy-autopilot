@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T08:11+09:00",
+  "updated": "2026-11-16T08:12+09:00",
   "items": [
     {
       "site": "infobay",
@@ -569,6 +569,15 @@
       "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
       "platform": "instagram",
       "at": "2026-11-17T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-16-postmeal-bloating-indigestion-eating-habits-warnin",
+      "title": "식후 더부룩함·소화불량, 먼저 바꿀 식사 습관 5가지와 병원 갈 신호",
+      "platform": "blog",
+      "at": "2026-11-18T07:00+09:00",
       "state": "planned"
     },
     {
