@@ -1,0 +1,188 @@
+{
+  "id": "infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+  "site": "infobay",
+  "title": "장례식 조문 예절, 절은 영정 2번·상주 1번? 흔한 실수 6가지",
+  "status": "draft",
+  "created_at": "2026-11-15T20:11+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "장례식 조문 예절",
+    "sub": [
+      "조문 순서",
+      "조문 인사말",
+      "장례식장 복장",
+      "헌화 방향"
+    ]
+  },
+  "brief": {
+    "reader": "부고를 받고 처음으로, 또는 오랜만에 빈소에 가는 20~40대 직장인",
+    "question": "빈소에서 무엇을 어떤 순서로 하고, 무엇을 하면 실례인가?",
+    "answer": "조객록 서명 → 분향·헌화 → 영정에 두 번 절(또는 묵념) → 상주와 맞절 한 번 → 짧은 인사 순서로 하면 되고, 헷갈리는 부분은 앞사람과 상주 측 안내를 따르면 돼요.",
+    "out_of_scope": "조의금 액수(별도 글), 상주 입장의 장례 절차, 종교 의식 진행 순서",
+    "next_action": "부고 문자를 받으면 빈소 종교(분향인지 헌화인지)와 조문 시간부터 확인하기"
+  },
+  "why_this_topic": "네이버 검색광고 키워드 도구 기준 '장례식조문예절' 월 검색 2,200회(글 수 자료는 받지 못함). 최근 글 '조의금 5만원 vs 10만원'이 금액을 다뤘으니 이번엔 빈소 안 절차와 실수로 겹치지 않게 잡았어요. 상위 글은 '총정리' 나열형이 많고, 반절·향 개수·헌화 방향처럼 출처마다 갈리는 부분을 비교한 글은 찾지 못했어요. 이번 구글 트렌드 급상승어 중엔 이 주제와 관련된 검색어가 없어 반영하지 않았어요.",
+  "title_candidates": [
+    {
+      "title": "장례식 조문 예절, 아무 말 없이 나와도 실례 아닌 이유",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "장례식 조문 예절, 절은 영정 2번·상주 1번? 흔한 실수 6가지",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "장례식 조문 예절, 향불 입으로 끄면 실례? 빈소 실수 6가지",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "처음 가는 장례식 조문 예절, 개신교 빈소에선 절 대신 묵념",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "장례식 조문 예절 분향 vs 헌화, 꽃 방향은 앞사람 따라",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "상위 제목은 '총정리·완벽 가이드' 뒤에 복장·절하는 법을 나열한 형태가 대부분이에요 / 우리는 출처마다 갈리는 3가지(반절, 향 개수, 헌화 방향)를 표로 비교하고 실수 6가지를 ✕/○로 바로잡아요",
+  "meta_description": "영정엔 두 번, 상주에겐 한 번 절해요. 반절·향 개수·헌화 방향처럼 출처마다 다른 3가지와 빈소에서 흔한 실수 6가지를 ✕/○ 표로 정리했어요. 검은 정장이 없을 때 기준도 함께 담았어요.",
+  "hero_prompt": "Candid smartphone photo of a Korean funeral altar with white chrysanthemums arranged in rows, a small incense burner with a thin line of smoke and two candles, a framed portrait shape blurred out of focus in the background, soft mixed lighting, quiet atmosphere, no people's faces, no text",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "장례식장 빈소 앞 복도에 검은 정장 차림 조문객들이 조용히 서 있는 모습",
+      "prompt": "Candid smartphone snapshot of a Korean funeral hall corridor, a few people in dark suits standing quietly near the mourning room entrance, seen from behind, slightly off-center framing, mixed fluorescent lighting, ordinary clutter like a coat rack and shoe shelf, faces not in close-up, not a stock photo, no glossy CGI look, no text"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "장례식장 접수대 위에 펼쳐진 조객록과 흰 부의 봉투",
+      "prompt": "Candid smartphone snapshot of a reception desk at a Korean funeral hall with an open guestbook, a pen and a plain white envelope, slightly off-center framing, mixed real lighting, ordinary clutter, no faces, not a stock photo, no glossy CGI look, no readable text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "충남대학교병원 장례식장 조문예절",
+      "url": "https://www.cnuh.co.kr/funeral/sub05_03.do"
+    },
+    {
+      "title": "교원예움 장례식장 조문예절",
+      "url": "https://www.kyowonyeum.co.kr/Board/Courtesy"
+    },
+    {
+      "title": "조문 예절 (funeralinfo.kr)",
+      "url": "https://funeralinfo.kr/guides/condolence-etiquette"
+    },
+    {
+      "title": "고이 장례 가이드북 꼭 지켜야할 종교별 장례예절",
+      "url": "https://www.goifuneral.co.kr/guidebook/tip/ongoing/13/"
+    },
+    {
+      "title": "삼육오라이프 기독교 장례식 조문 예절 총정리",
+      "url": "https://samgolife.co.kr/magazine/blog/f-guide/%EA%B8%B0%EB%8F%85%EA%B5%90-%EC%A1%B0%EB%AC%B8-%EC%98%88%EC%A0%88-%EC%95%8C%EA%B3%A0-%EB%B0%A9%EB%AC%B8%ED%95%98%EC%84%B8%EC%9A%94"
+    },
+    {
+      "title": "삼육오라이프 장례식장 조문 절차 정리",
+      "url": "https://samgolife.co.kr/magazine/blog/f-guide/%EC%9E%A5%EB%A1%80%EC%8B%9D%EC%9E%A5-%EC%A1%B0%EB%AC%B8-%EC%A0%88%EC%B0%A8-%ED%97%88%EB%91%A5%EB%8C%80%EC%A7%80-%EC%95%8A%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%A0%95%EB%A6%AC"
+    },
+    {
+      "title": "삼육오라이프 장례식 조문 예절 가이드(봉투 작성)",
+      "url": "https://samgolife.co.kr/magazine/blog/f-guide/246"
+    },
+    {
+      "title": "씽유 슬기로운 대학생활 조문 순서",
+      "url": "https://thinkyou.co.kr/mobile/wise/6150/"
+    },
+    {
+      "title": "KOCW 언어 예절 강의 자료(문상)",
+      "url": "http://contents2.kocw.or.kr/KOCW/data/document/2020/seowon/choiyungon0805/13.pdf"
+    },
+    {
+      "title": "N상조 조문예절(복장·봉투)",
+      "url": "https://n-sangjo.co.kr/funeralmanners/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "실수 바로잡기형",
+    "ending": "보내기",
+    "cover_hooks": [
+      "향불 후~ 불면 조문 실례예요",
+      "영정엔 두 번, 상주엔 한 번 절해요",
+      "빈소에서 '어쩌다 돌아가셨어요?' 묻나요?"
+    ],
+    "caption": "빈소 앞에서 순서가 하얘진 적 있나요?\n\n영정에 두 번 절하고, 상주와 한 번 맞절하면 기본은 끝이에요.\n상주에게 할 말이 안 떠오르면 조용히 목례만 해도 실례가 아니에요.\n검은 정장이 없으면 감색이나 회색 정장도 괜찮아요. 셔츠는 흰색, 넥타이·양말은 검은색으로 맞춰요.\n\n이번 주 처음 빈소에 가는 회사 동기한테 보내 주세요.\n\n#장례식예절 #조문예절 #장례식장복장 #조문인사말"
+  },
+  "threads": {
+    "style": "손해 경고",
+    "hooks": [
+      "조문 가려고 검은 정장 새로 사지 마",
+      "빈소에서 향불 후~ 불면 어떡할래?",
+      "상주한테 어쩌다 그러셨냐고 물을 거야?"
+    ],
+    "posts": [
+      "조문 가려고 검은 정장 새로 사지 마.\n부고 뜬 퇴근길에 검은 양복 없다고 매장부터 들르려던 거 나만 아니지?\n감색이나 회색 정장이어도 실례 아니래. 정장값 그대로 굳는 거야.\n빈소에서 진짜 눈에 띄는 건 향불 끄는 손이더라.\n너는 향불 끌 때 손으로 흔들어, 입으로 불어?",
+      "1. 옷: 검은 정장이 원칙인데 없으면 감색·회색도 괜찮아. 셔츠는 흰색, 넥타이·양말·구두는 검은색.\n2. 향불: 입으로 불지 말고 손으로 흔들어서 꺼.\n3. 절: 영정에 두 번, 상주랑 맞절 한 번. 개신교 빈소는 보통 헌화하고 묵념만 해.\n4. 인사: 사망 경위는 묻지 마. 말없이 목례만 하고 나와도 실례 아니야.",
+      "반절 하냐 마냐, 꽃 방향 같은 거 출처마다 다른 데까지 표로 비교해 놨어 {LINK}"
+    ],
+    "topic_tag": "생활상식"
+  },
+  "revision": 2,
+  "dead_links_removed": [
+    "https://www.boram.com/Funeral/Info/tab/3"
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 5장: 계정명 자리 침범: \"실수 3\"",
+      "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-15T20:12+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 3636,
+        "output_tokens": 1294,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.001
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 29176,
+        "output_tokens": 23032,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.6173
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 11325,
+        "output_tokens": 1815,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0408
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.0612,
+    "total_usd": 1.0612,
+    "total_krw": 1490,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
