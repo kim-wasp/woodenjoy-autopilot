@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T20:02+09:00",
+  "updated": "2026-11-15T20:23+09:00",
   "items": [
     {
       "site": "infobay",
@@ -517,6 +517,15 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
+      "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
+      "platform": "blog",
+      "at": "2026-11-17T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
       "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
       "platform": "threads",
@@ -530,6 +539,24 @@
       "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
       "platform": "instagram",
       "at": "2026-11-17T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
+      "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
+      "platform": "threads",
+      "at": "2026-11-18T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
+      "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
+      "platform": "instagram",
+      "at": "2026-11-18T21:00+09:00",
       "state": "planned"
     }
   ]
