@@ -1,0 +1,16 @@
+  JSON 형식 오류 (stop=max_tokens, 글자수 957): {"ideas": [{"title": "미세먼지 심한 날 마스크, KF80과 KF94 어떻게 고를까", "keyword": "미세먼지마스크", "category": "계절 건강", "trend_keyword": "", "why_this_topic": "연관 검색어 '미세먼지'(556,800)와 '공기청정기'(87,600)가 이 시기 검색량이 높음", "angle": "미세먼지 날 마스크 등급은 어떻게 구분하고, 쓸 때 주의할 점은 무엇인가?"}, {"title": "겨울 실내 건조할 때 생기는 증상과 적정 습도 관리법", "keyw
+  주제 자동 선택: 식후 더부룩함과 소화불량, 생활에서 먼저 바꿔볼 습관 (네이버 월간 검색 2,300회, 11월 시기 주제) · 다른 후보: 겨울 실내가 건조할 때 생기는 증상과 적정 습도 관리법 | 미세먼지 마스크, KF80과 KF94 차이와 고르는 기준 | 수능 뒤 수면 리듬이 무너졌을 때 되찾는 생활 루틴
+[건강 (forsmartlife.com)] 글 만들기 시작 · 주제: 식후 더부룩함과 소화불량, 생활에서 먼저 바꿔볼 습관
+카테고리: 증상 관리
+이 글이 답할 질문: 소화불량이 있을 때 식사 방식에서 확인할 것은 무엇이고, 병원 진료가 필요한 위험 신호는 무엇인가?
+고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 2,300회, 11월 시기 주제
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 3699자 (기준 2,500~3,500자)
+  열리지 않는 출처·링크 1개 뺌: https://www.ksgm.org/down/lecture_12_02_02.pdf
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 1,270원 ($0.910)
+완료: content/forsmartlife/2026-11-16-postmeal-bloating-indigestion-eating-habits-warnin · 점검 통과
+::set-output-dir::content/forsmartlife/2026-11-16-postmeal-bloating-indigestion-eating-habits-warnin
