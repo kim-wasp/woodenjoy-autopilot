@@ -1,121 +1,121 @@
 {
   "ideas": [
     {
-      "title": "\"욕먹더라도 파이 키우자\"…이 대통령이 즉석 투표 붙인 '의무공개매수' 뭐길래",
-      "keyword": "의무공개매수 대통령",
-      "trend_keyword": "",
-      "facts": "이재명 대통령이 자본시장 정책 간담회에서 의무공개매수를 놓고 즉석 투표를 하고 \"욕을 먹더라도 파이를 키우는 쪽으로\"라고 말했어요. 자본시장 개혁 고위급 TF를 꾸리라고 지시했고, 주가조작 같은 불공정 거래도 엄정하게 단속하겠다고 했어요.",
-      "sides": "추진 측: 공정하고 투명한 규칙이 있어야 시장 신뢰가 생기고 시장이 커짐(대통령 발언) / 신중 측: 기업 부담 같은 반대 논리는 기사로 확인 필요",
-      "question": "의무공개매수를 개미 투자자 보호 장치로 볼까요, 기업 인수를 어렵게 만드는 규제로 볼까요?",
+      "title": "조작기소 특검법(국힘 '탈옥법') 다음 주 국무회의로…부산 이어 21일 대구 장외집회",
+      "keyword": "특검법 장외집회 부산",
+      "trend_keyword": "진중권",
+      "facts": "국민의힘이 부산역에서 '조작기소 특검법' 규탄 장외집회를 열고 거부권 행사를 요구했어요. 21일에는 대구 집회를 예고했고, 법안 공포 여부를 다룰 다음 주 국무회의가 다음 고비예요.",
+      "sides": "국민의힘(장동혁 대표): '이재명 탈옥법', '죽은 법에 근거한 특검'이니 거부권을 써야 한다 / 민주당: '예산국회 팽개치고 대통령 조롱', 특검법을 정쟁으로만 몬다",
+      "question": "예산 심사 기간의 장외집회, 정당의 정당한 수단으로 보세요, 국회 일을 미루는 걸로 보세요?",
       "metrics": {
-        "news_24h": 66,
+        "news_24h": 43,
         "news_6h": 0,
         "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
+        "trend": "진중권",
+        "trend_traffic": 200,
+        "trend_label": "200+",
         "naver_month": 10
       },
       "links": [
         {
-          "title": "이 대통령 “욕먹더라도 M&A 활성화해야”…의무공개매수 100%보단 일부 허용에 무게 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BOFhDbVRoU0JpTUdnSHh2QVMzNVdhcnk5LXhxSVhiazRNbHl3eDNWaGNzMW55Wm9FbGNJMS1QR3hVUi1qUmFfSno4NEFYd1VjRFNVR0lhVG1iQdIBX0FVX3lxTFBLdi1ZXzVnRWxpaXpfZ2ZrMHo2UTRXeFhBNnM0QkFubjVmaDFyOU5aWjRodVM1bDE2YzRSdjJGemhwOUVWM2xSdnJJbmRpV2hqd25KdDZDSUhfamFvWFRR?oc=5"
+          "title": "국힘, 부산서 조작기소 특검 규탄 집회...\"거부권 행사해야\" - YTN",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jcV92YVNzU0JtOG1fenp0U2VxSS1YTlkxZTNYU1BXWUNBeFBTUHJpcmlfSEpaM2RELWxvUGtmUm8ybk1pVmtEbEJhZ2VzS01fUkhuOFBFZTd3a1d3Q2d2c3lueU1FVXZSRVktbTZzN3ZERzNtc3c?oc=5"
         },
         {
-          "title": "이 대통령 “M&A 활성화해야…의무공개매수 결정 너무 지연 안 됐으면” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1JWHN4MElZc01SYkZDbVZ6VU1tdWlaNF9NbEtJZTN5YXo0bjFDM2xfTFJMRnZPTmhCbl92NkNpNzhUcHhtTTlJbUlONVRVckRuUkNCaVdYcVFWOVE?oc=5"
+          "title": "국힘, 부산서 특검법 규탄 집회 개최 - 경북신문",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1jcVk1cVVHUlp3UHNTdFFDR2VvSGdFbGNlYlRSMVZDTmNWZHVyYXp2cXZPNnhIZ2QxSC1MMjgyRGhQWUpfYllMdnB0WEdrU2VtY2hLWXAzTFk?oc=5"
         },
         {
-          "title": "이 대통령 “적대적 M&A 활성화”…의무공개매수 비율은 “결단의 문제” - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE91MHdlQUVWZ0xZNkdoN3lKNGEtN2ZfRVp3Ukc2ZXRNQlZGQm9felNSYkpUUGMyVnVjR015eGVKdFM3UVVVTnQ0SEtVTnJuRXFLSTRub3hYbC1TSWMwYzBwY2g3MkQ4bFpLV2xJ?oc=5"
+          "title": "국힘, 부산역서 ‘이재명 탈옥법’ 규탄…“죽은 법에 근거한 특검” - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oajBkTDJSQ2hSY2VoMUFuT1VQeF93ek5ZSU9mYTlOaE9VRExsdjh6bTBTejE1Z3lMVEkxLUNaZVJpS2lfSXAzSC1rZWo0QWxaMFNhMVJwOUx2TFZEYjFHbGRxUk1rM2h3Z3luVjNZRkU3c0U1?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 66건, 네이버 월간 검색 10회",
-      "score": 66.1
+      "why": "구글 뉴스 24시간 기사 43건, 구글 검색 급증 '진중권' 200+, 네이버 월간 검색 10회",
+      "score": 45.1
     },
     {
-      "title": "26조 체코 원전, 한수원·대우건설 '원팀' 왜 깨졌나…여야 모두 '청문회' 꺼냈다",
-      "keyword": "체코 원전 시공사",
+      "title": "820조 예산 심사 16일 시작…162조 '미래대응기금'에 여야가 정면충돌한 이유",
+      "keyword": "미래대응기금 예산",
       "trend_keyword": "",
-      "facts": "한수원과 대우건설의 체코 원전 '원팀'이 결렬되면서 시공사 교체 논란이 커졌어요. 여야 모두 국회 청문회를 열어야 한다는 목소리를 냈어요(시사포커스·Chosunbiz 보도 기준).",
-      "sides": "청문회 추진 측: 26조 규모 사업의 시공사 교체 경위를 국회가 따져야 함 / 한수원 측: 교체 이유와 입장은 기사로 확인 필요",
-      "question": "이 논란을 '국익 손실' 문제로 볼까요, 기업 간 계약 문제로 볼까요?",
+      "facts": "사상 최대인 820조 원 규모 내년 예산안을 국회 예결위 예산안조정소위가 16일부터 심사해요. 처리 시한이 2주여 남은 가운데 162조 원 규모로 새로 만드는 '미래대응기금'이 가장 큰 쟁점이에요.",
+      "sides": "국민의힘: '정부의 쌈짓돈', '미래 대응 아닌 약탈 기금'이라며 전면 삭감 요구(과방위원들은 표결 거부) / 민주당: '앞에선 삭감, 뒤로는 지역 예산 증액 요구'라며 앞뒤가 다르다고 반박",
+      "question": "미래대응기금처럼 큰돈을 기금으로 묶어 두는 방식, 국회가 어디까지 따져야 한다고 보세요?",
       "metrics": {
-        "news_24h": 44,
+        "news_24h": 41,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 290
+        "naver_month": 20
       },
       "links": [
         {
-          "title": "’체코 원전 시공사 교체 논란’ 국회 청문회 요구 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FdjJHR2hhS0hrME9IS0VUc2N5X3ZpTVRudzZnTTV3bGhtV1JoUTM4NUNEUGZieDdIZndtNTViU0RBdnp3MDlRc2k3aVJvcjI1MG1hQnhfd2JHMTRQVDhvTHlNVkNNcWs?oc=5"
+          "title": "사상 최대 820조 예산 심사 내일 돌입…162조 '미래대응기금' 신설 정면충돌 - 글로벌이코노믹",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ0NvWmdvQ1JTbEJxMEx5QjAzWkpvcVRJSHJKTjZoalAwNXhQOEV2YzlHcmplUFlKOC1VX1dtemkxMlRaVnhQSmw0MzQyNnVSMkktb2k2WktxZ29PWDVBZndXUnFsX1MxemZ1TUs4amR0SnQ3U0VETWg0NEFQa3Y5X3pDeEJ4Z0thS0xj?oc=5"
         },
         {
-          "title": "한수원 ‘체코 원전 시공사 교체’ 논란에…국회, 청문회 추진 - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNXpfMGIwNHF3UzhsUGF3aTgtMjdiMVljMURNbE5Xd1pLMjFWZVNSYTZ6WVJ1b3FTTno0a3hfZGh5QXRnWWJNX0JiRnRmVE5weW9IU2NlLXlyekZUZ1FPLXJqeXNBanExVC1BRXl4SlVFdGJhVmhqc2VMUDZrRW1jVGlBMzIyTmUycUs3MlFYX3UxMU1Kb0NSNtIBrAFBVV95cUxOQkViTWFyQk1uLUxMTUgxQ2pocW9uVjBWM2xPanNJZEQ0TXR1OGRBamtaMDNtYWg5TGJSNWJyX0dVeENxQ1FBNzY1Z1pHcWJnelpHdk1RemMyM1VwNDlyTVdjVnFQRnBiU09Hd0dXWHNnMXAxRkxJUDMzM0o1ZXByYWdQRUJHYjBHMnV2NW1WLVpaYS1UT2NOalo1M2Rqb0RWTmZZNkUzR0VYQzRO?oc=5"
+          "title": "\"전면 백지화\"vs\"뒤로는 증액 요구\"…미래대응기금 설전 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ad29Rc3BIcWgtay1IU2V0OHV6SXBKajFFc3ZOMGFEelhuQTZRZUJRb1NwVnBXMUlZZjVKeFlIeXgtVDdVbWJISUk2ZVY2Y1ZkN1lpbTRFWW1Pb2xablRtcVcxUVVGZkE?oc=5"
         },
         {
-          "title": "체코 원전 시공사 교체 논란에 ’현대건설 유력설’ 급부상…국회 청문회서 한수원 진상 규명 By 알파경제 alphabiz - Investing.com 한국어",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9IV3pGNU9hZ3FCb2owZ0FMTERRb3ZVd3pQeXJ5Zjk1RnczYWdpdEJHdGFIYjFOTlNMM1g0TVdQV2dBelhnOG90cjFIWDBVS2Z1aTlTU2RvTzItVFVmUHJjNWh2dGotaFlHNUNsZXZORXM?oc=5"
+          "title": "예산안 처리시한 2주여 앞으로…여야, 예결소위서 본격대결 돌입 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkMTRVUFg1UmwxRHE4TkFQMFBsUldiOHFONjZFOXAxSXEzSEQwM3NYN0ZXbjhUTTlPdm45VWJTbTRwRDVoUFA0dVdnWS1CUVk2cHIwbGtRM0drTnlMdmZkcdIBYEFVX3lxTFBkMTRVUFg1UmwxRHE4TkFQMFBsUldiOHFONjZFOXAxSXEzSEQwM3NYN0ZXbjhUTTlPdm45VWJTbTRwRDVoUFA0dVdnWS1CUVk2cHIwbGtRM0drTnlMdmZkcQ?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 44건, 네이버 월간 검색 290회",
-      "score": 46.9
+      "why": "구글 뉴스 24시간 기사 41건, 네이버 월간 검색 20회",
+      "score": 41.2
     },
     {
-      "title": "등기부 떼는 값 700원→1100원? 공인중개사들이 국회에서 '철회' 외친 이유",
-      "keyword": "등기부 열람료 인상",
-      "trend_keyword": "",
-      "facts": "등기부 열람 수수료를 700원에서 1100원으로 올리는 안을 두고 공인중개사들이 국회에서 철회를 요구했어요. 공인중개사협회는 국회에서 수수료 인상 철회를 촉구했다고 보도됐어요.",
-      "sides": "철회 측: 등기부를 자주 떼는 중개업계와 거래 당사자의 부담이 커짐 / 인상 측: 인상 이유와 근거는 기사·정부 자료로 확인 필요",
-      "question": "등기부 열람료 인상을 '수수료 현실화'로 볼까요, 서민 거래 비용 부담으로 볼까요?",
+      "title": "\"돈바스 넘기면 나토 가입\"…젤렌스키가 공개한 美 제안, 한국엔 무슨 의미?",
+      "keyword": "젤렌스키 돈바스 나토",
+      "trend_keyword": "볼로디미르 젤렌스키",
+      "facts": "젤렌스키 우크라이나 대통령이 미국이 나토 가입을 대가로 돈바스 지역을 넘기는 안을 물어 왔다고 밝혔어요. 미국이 이런 '영토-나토 맞교환'을 타진한 건 처음이라는 보도가 나왔어요.",
+      "sides": "제안을 보는 쪽: 나토 가입이라는 안전보장으로 전쟁을 끝낼 길이 될 수 있다 / 우려하는 쪽: 영토를 내주는 방식은 침공의 결과를 인정하는 셈이다",
+      "question": "이 협상 방식이 한반도 안보 논의에 주는 신호, 어떻게 읽으세요?",
       "metrics": {
-        "news_24h": 12,
+        "news_24h": 24,
         "news_6h": 0,
         "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 1135
+        "trend": "볼로디미르 젤렌스키",
+        "trend_traffic": 1000,
+        "trend_label": "1000+",
+        "naver_month": 10
       },
       "links": [
         {
-          "title": "등기부 열람료 700원→1100원… 공인 중개사들 국회서 “철회하라” - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVjFndGpfRGdYd014VFlROHFIM0ZycDd1Z2VRazVNSncxb2ctd1Zvck5mTXFkTXd3VHVlVnNueS1IdmlET2FmMTFySVdldWhwNEJUVVlQNDZOaXgzeXhNOW01TGRkTjc1bkZxTEhLSERFcURmUm53YzhZMGdTUk0yM0tFR1d5NHJ2SnU2UGJCQkdzd1E5a29sdtIBrAFBVV95cUxNMS1OdURpZWZMck5aX1VJOWpKbVpFSTN6SkxGZG4tdHBSX3pHcE14cHB1bnJ5LW5SWkF6VUVBN0NfeEJxMHNqLS1UNWxzRVRydF9DUHZ3ZFI3eVpSTXpoclY0QzY2cWp3YTQwSzJuSkhIbUtHSmloNnh1Q3JUbjI0R0VkcVJRXy1EeVNnVjh3RXZOWGQ3NThzdzExamwzSUg4cm1CbHpCcWdmQTV1?oc=5"
+          "title": "젤렌스키 \"미국이 나토 가입 대가로 돈바스 양도안 제시\" - YTN",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fS3RBeE1OUUNmNExZVEVHOXZJaFZocGJ4UWN6SnpxUTU5ZFNtdk04WGJUbWtBcWI4V0gzNU9ud0pKWmlOV3IyVDhQbHgxVXViamtwMm54TzFIRlNLS3h3ZEg4dV9YcFRfcExqZE9IRQ?oc=5"
         },
         {
-          "title": "등기부 열람료 700→1100원…공인중개사 500명 국회서 인상 철회 - 아주경제",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1iQzYyNVU3R0ZwWTBUMHNvaS0ydjdYYnFpVU5sdlQ2TEp0dEtIazlVcnlBRzFISVRqXzRCTzk4X2JyenQ4V2k1ZFFpZnZOc29SZzlkT1dZWXDSAVhBVV95cUxNYkM2MjVVN0dGcFkwVDBzb2ktMnY3WGJxaVVObHZUNkxKdHRLSGs5VXJ5QUcxSElUal80Qk85OF9icnp0OFdpNWRRaWZ2TnNvUmc5ZE9XWVlw?oc=5"
+          "title": "젤렌스키, “미국, 우크라이나에 나토 가입 대가로 돈바스 양도안 제안” - VOA 한국어 홈페이지",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9GSldicmNkQnBXN2NvOTRyeS1uWC12bHlKRmZNYmFidzBVc0xXdjVOcFRaakdSanZHdkZNTUZsaHg2dnFucFUzRUV4TnVQTzVVNzY00gFTQVVfeXFMT0ZKV2JyY2RCcFc3Y285NHJ5LW5YLXZseUpGZk1iYWJ3MFVzTFd2NU5wVFpqR1Jqdkd2Rk1NRmxoeDZ2cW5wVTNFRXhOdVBPNVU3NjQ?oc=5"
         },
         {
-          "title": "\"등기부 열람 무료화해야\"…공인중개사 500여명 국회 앞 결집 - 뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1LX0lZeFczbjdMLS13Y09pWVhiX3ZES2Z5MXV1aHJSb1doV25ZMGgwSzZGOFpQaU5VVUIzUHN5cDdLcm5aS0kwM3JGSnZCVTlUXzBmdS1Zdk1tZ0x1VGN4ejNGS0dKVGtKdjlrT1hJQUNxY3FPc2NTOdIBeEFVX3lxTE1LX0lZeFczbjdMLS13Y09pWVhiX3ZES2Z5MXV1aHJSb1doV25ZMGgwSzZGOFpQaU5VVUIzUHN5cDdLcm5aS0kwM3JGSnZCVTlUXzBmdS1Zdk1tZ0x1VGN4ejNGS0dKVGtKdjlrT1hJQUNxY3FPc2NTOQ?oc=5"
+          "title": "젤렌스키 “미, ’우크라 나토 가입 대가’ 돈바스 양도안 질의“ - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0wMUVHeVJEcDRWckdFcm5ONEJ6UEdrYU5qWHF1SVZQTmZjM1dpbXdSdVAzdncxMVFkZUR5YUtlUVNwNHNMQ3d3alhrZkMxMFNLMHZxMzU3RllXb3g0VmQ4aElDd1A0aTg?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 12건, 네이버 월간 검색 1,135회",
-      "score": 23.35
+      "why": "구글 뉴스 24시간 기사 24건, 구글 검색 급증 '볼로디미르 젤렌스키' 1000+, 네이버 월간 검색 10회",
+      "score": 34.1
     }
   ],
-  "updated": "2026-11-13T23:09+09:00",
+  "updated": "2026-11-15T09:36+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 25425,
-        "output_tokens": 7668,
+        "input_tokens": 12499,
+        "output_tokens": 4199,
         "web_searches": 0,
-        "calls": 2,
-        "usd": 0.2551
+        "calls": 1,
+        "usd": 0.134
       }
     },
     "images": {},
-    "usd": 0.2551,
-    "total_usd": 0.2551,
-    "total_krw": 360,
+    "usd": 0.134,
+    "total_usd": 0.134,
+    "total_krw": 190,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
