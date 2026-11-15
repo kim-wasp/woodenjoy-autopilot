@@ -1,0 +1,179 @@
+{
+  "id": "woodenjoy/2026-11-15-silicone-caulking-how-to-types",
+  "site": "woodenjoy",
+  "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
+  "status": "draft",
+  "created_at": "2026-11-15T20:17+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "실리콘 쏘는법",
+    "sub": [
+      "실리콘건 사용법",
+      "바이오 실리콘",
+      "초산 비초산 차이",
+      "실리콘 경화시간"
+    ]
+  },
+  "brief": {
+    "reader": "욕실·주방·창틀 실리콘을 처음 직접 다시 쏴 보려는 사람",
+    "question": "어떤 실리콘을 사서 실리콘건으로 어떻게 쏘고, 언제부터 물이 닿아도 되나요?",
+    "answer": "욕실·주방은 바이오 실리콘(비초산), 위에 칠할 틈은 수성 실리콘을 고르고, 헌 실리콘을 다 걷어낸 마른 면에 노즐을 45도로 잘라 한 번에 쏴요. 겉은 20분 안에 굳어도 속까지 다 굳는 건 7~14일 걸려요(노루씰 바이오 기준).",
+    "out_of_scope": "외벽·고층 창 바깥 실리콘, 누수 원인 찾기, 줄눈 시멘트 시공",
+    "next_action": "포장의 용도·시공 온도 칸을 확인하고 체크리스트대로 준비하기"
+  },
+  "why_this_topic": "이번 차례인 공구 사용법(실리콘건)에 가장 잘 맞는 후보가 '실리콘쏘는법'(네이버 월 검색 470회)이에요. 최근 글 10개와 주제가 겹치지 않고, 겨울을 앞두고 창틀 틈·욕실 결로 곰팡이로 실리콘을 다시 쏘는 사람이 많은 시기예요. 상위 글은 쏘는 법만 다루고 종류 고르기와 제조사 경화시간은 비어 있어서 비교표 형식(타카핀 글에서 반응이 좋았던 형식)을 쓸 수 있어요.",
+  "title_candidates": [
+    {
+      "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "실리콘 쏘는법, 겉은 20분이면 굳어도 속은 7~14일 걸려요",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "실리콘 쏘는법, 욕실은 바이오·도배할 틈은 수성이 답이에요",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "실리콘 쏘는법, 욕조 줄눈 처음 다시 쏘는 사람이 볼 7단계",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "실리콘 쏘는법, 초산 vs 비초산 거울·샷시엔 뭘 써야 할까",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "검색 상위 글은 '깔끔하게 쏘는 법', '쏘는 법·마르는 시간·실리콘건 사용법'처럼 쏘는 방법만 길게 늘어놓아요. 종류 고르는 기준과 제조사 자료에 적힌 경화시간 숫자는 빠져 있어서, 우리는 종류 비교표 하나와 제조사 숫자로 차별화해요",
+  "meta_description": "초산·비초산·바이오·수성 실리콘을 표 하나로 비교했어요. 실리콘건 7단계, 제조사 자료에 나온 경화시간(표면 20분 이내, 완전 7~14일)과 시공 온도 5℃까지 정리했어요.",
+  "hero_prompt": "Casual smartphone photo inside a typical Korean apartment bathroom: close-up of an old, yellowed silicone caulk bead along the edge where a white bathtub meets wall tiles, with black mold spots and a section peeling away from the tile. A cheap metal caulking gun with a cartridge lies on the tub rim at the edge of the frame. Slightly tilted framing, mixed warm ceiling light and cool daylight, small water droplets and a shampoo bottle partly visible at the edge, center of frame relatively plain tile. Realistic, unpolished, no text, no people, no HDR, no showroom look.",
+  "thumb_text": "헌 실리콘 위에\n덧쏘면 들떠요",
+  "category": "",
+  "kind": "tool",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "다나와 DPG, [구매가이드] 용도에 적합한 실리콘 종류 알아보기",
+      "url": "https://dpg.danawa.com/news/view?boardSeq=63&listSeq=4719583&past=Y"
+    },
+    {
+      "title": "누리켐 자주하는 질문, 초산형과 비초산형의 차이",
+      "url": "http://nuric.webmoa21.co.kr/mobile/sub/customer/qna.asp?mode=view&bid=5&s_type=&s_keyword=&s_cate=&idx=152&page=1"
+    },
+    {
+      "title": "다우실리콘 자료실, 초산이랑 무초산이랑 차이점",
+      "url": "http://www.dawoosilicon.co.kr/bbs/board.php?bo_table=data&wr_id=308&sst=wr_hit&sod=asc&sop=and&page=2"
+    },
+    {
+      "title": "한국 씨카, 내곰팡이성 욕실용 실리콘 씨카실 바이오 (시공 정보)",
+      "url": "https://kor.sika.com/ko/46012/46884/46895/sikasil-bio.html"
+    },
+    {
+      "title": "한국 씨카, 씨카실 바이오 (용도·장점·제외 재질)",
+      "url": "https://kor.sika.com/ko/d-i-y/49526/49538/sikasil-bio.html"
+    },
+    {
+      "title": "노루페인트, 노루씰 바이오 기술자료",
+      "url": "https://www.noroopaint.com/inc/filedown2.asp?fileloc=%2Ffile%2Fprod_file%2F&filenm=%EA%B8%B0%EC%88%A0%EC%9E%90%EB%A3%8C%EC%A7%91+-+%EB%85%B8%EB%A3%A8%EC%94%B0+%EB%B0%94%EC%9D%B4%EC%98%A4.pdf&savefilenm=%EB%85%B8%EB%A3%A8%EC%94%B0+%EB%B0%94%EC%9D%B4%EC%98%A4_%EA%B8%B0%EC%88%A0%EC%9E%90%EB%A3%8C1.pdf"
+    },
+    {
+      "title": "실리콘 실란트 종류 및 시공 시 주의사항",
+      "url": "https://dontarjetasdecredito.com/silicone-molding-properties-types-applications-installation/"
+    },
+    {
+      "title": "실리콘(코킹) 깔끔하게 쏘는 법 — 주방·욕실 마감 셀프 가이드",
+      "url": "https://homeupgradeai.com/post/silicone-caulking-clean-application/"
+    },
+    {
+      "title": "노아종합설비, 실리콘 쏘는 법 & 마르는 시간 & 실리콘건 사용법",
+      "url": "https://www.xn--od1by81axwcpqfbqej0h.com/24/?bmode=view&idx=171259538"
+    },
+    {
+      "title": "다나와, 신에츠 바이오 실리콘 BK 270ml 상세 스펙",
+      "url": "https://prod.danawa.com/info/?pcode=4535924"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "비교형",
+    "ending": "의견",
+    "cover_hooks": [
+      "실리콘 살 때 초산? 비초산?",
+      "헌 실리콘 위에 덧쏘면 들떠요",
+      "겉은 20분, 속은 7~14일"
+    ],
+    "caption": "욕실 실리콘 사러 갔다가 진열대 앞에서 한참 서 있었다면.\n\n물 닿는 욕실·주방은 바이오 실리콘이에요. 위에 페인트 칠할 틈은 수성 실리콘을 쓰고, 거울이나 구리 옆에는 초산을 피하세요.\n겉은 20분 안에 굳어도 속까지 굳으려면 7~14일 걸려요(노루씰 바이오 기술자료 기준).\n\n욕실 실리콘에 곰팡이가 피면 바로 다시 쏘는 편이에요, 아니면 이사 갈 때까지 버티는 편이에요?\n\n#셀프인테리어 #실리콘쏘는법 #바이오실리콘 #실리콘건"
+  },
+  "threads": {
+    "style": "썰 한 장면",
+    "hooks": [
+      "실리콘 덧쏘면 금방 들떠",
+      "욕조 곰팡이 위에 또 쏜다고?",
+      "실리콘 270ml 한 통, 어디에 쏴?"
+    ],
+    "posts": [
+      "욕조 곰팡이 위에 또 쏜다고?\n\n주말에 욕조 둘레 까만 실리콘 보기 싫어서\n270ml 바이오 한 통 사다가 그 위에 그대로 덧쏘는 집 진짜 많아.\n그러고 몇 주 지나면 가장자리부터 들뜨더라.\n\n너넨 헌 실리콘 다 긁어내고 쏴, 아니면 그냥 위에 쏴?",
+      "1. 헌 실리콘은 커터칼이랑 헤라로 끝까지 걷어내고 물기 완전히 말려\n2. 욕실·주방은 바이오 실리콘, 위에 칠할 틈은 수성이야. 거울·구리 옆엔 초산 쓰지 마\n3. 양옆에 마스킹테이프 붙이고 노즐은 45도로 작게 잘라서 한 번에 쭉 쏴\n4. 겉은 20분 안에 굳어도 속까지는 7~14일 걸려 (노루씰 바이오 자료 기준)",
+      "종류별 비교표랑 쏘는 순서 7단계는 여기 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "바이오 실리콘 270ml (욕실용)",
+      "search": "바이오 실리콘 270ml",
+      "after": "욕실용 바이오 실리콘은 270ml 카트리지로 많이 나와요"
+    },
+    {
+      "name": "실리콘건 (코킹건)",
+      "search": "실리콘건",
+      "after": "카트리지를 끼우고 방아쇠를 당겨 실리콘을 밀어내는 도구예요"
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 2장: 계정명 자리 침범: \"기준 1 굳는 속도\"",
+      "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-15T20:17+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 4201,
+        "output_tokens": 1263,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0011
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 44335,
+        "output_tokens": 30472,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.8368
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.9718,
+    "total_usd": 0.9718,
+    "total_krw": 1360,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
