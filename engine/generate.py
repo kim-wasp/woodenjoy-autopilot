@@ -125,7 +125,7 @@ def schema(site):
     blog = blog_kind(site) != "none"
     ic = img_cfg(site)
     need_photos = (blog and ic["blog_inline"] in ("photos", "mixed")) or ic["instagram"] == "photo_cards"
-    parts = ['"title": "제목 (핵심 키워드를 앞쪽에, 45자 이내)"',
+    parts = ['"title": "제목 (제목 정하기 기준으로 고른 것)"', '"title_research": "상위 제목 공통점 / 우리가 다르게 갈 점 한 줄"', '"title_candidates": [{"title": "후보", "pattern": "결론 먼저|숫자·기준|실수·손해|대상·상황|비교"}]',
              '"slug": "영문-소문자-하이픈"',
              '"keywords": {"main": "핵심 키워드", "sub": ["연관 키워드"...]}',
              '"brief": {"reader": "누가 어떤 상황에서", "question": "답할 질문 1개", "answer": "핵심 답 한 문장", "out_of_scope": "다루지 않을 것", "next_action": "읽고 할 행동"}',
@@ -251,6 +251,22 @@ def experiences(site):
     return "\n\n".join(ok)[:4000]
 
 
+# 제목: 상위 글 확인 → 서로 다른 패턴 후보 5개 → 기준으로 고르기
+# 근거: 구글 '제목 링크' 권장(설명적·간결·키워드 나열 금지·페이지마다 고유), Backlinko 400만 검색결과 CTR 분석(40~60자·긍정 프레이밍이 약간 높음, 질문형 차이 없음),
+#       네이버 검색 작성 가이드(메인 키워드 앞, 날짜·회차 라벨 금지), 구글 디스커버 정책(과장·낚시 금지)
+TITLE_GUIDE = """[제목 정하기 — 본문만큼 중요해요]
+1. 먼저 메인 키워드로 웹 검색해서 지금 상위에 있는 글 제목 3~5개를 보고, 그 제목들이 빠뜨린 것(구체적 숫자, 기준, 대상, 상황, 결론)을 찾아요. title_research 에 '상위 제목들의 공통점 / 우리가 다르게 갈 점'을 한 줄로.
+2. 서로 다른 패턴으로 후보 5개: 결론 먼저(답을 제목에), 숫자·기준(금액, 개수, mm, 기간), 실수·손해 피하기, 대상·상황 특정(이런 집, 이런 사람), 비교(A vs B).
+3. 고르는 기준(모두 만족하는 것 중 가장 누르고 싶은 것):
+   - 메인 키워드가 제목 앞쪽 15자 안에, 원형 그대로
+   - 이 글만의 구체적 정보 하나(숫자, 기준, 결론)가 제목에 있음
+   - 본문이 실제로 답하는 것만 약속 (과장, 낚시, 분노·공포 자극, 「충격」「역대급」 같은 말 금지)
+   - 길이: 네이버 블로그 30~40자, 웹사이트 글 25~45자(검색 결과에서 잘리지 않게). 날짜·회차 라벨과 사이트 이름은 넣지 않음
+   - 같은 뜻이면 해결·이득 쪽으로(「망치지 않는 법」보다 「한 번에 맞추는 법」), 단 손해를 피하는 정보가 핵심이면 손해 쪽 그대로
+   - 최근에 쓴 제목들과 첫 단어, 구조가 겹치지 않음
+4. 고른 제목을 title 에, 후보 5개를 title_candidates 에."""
+
+
 # 검색에서 '팔리는' 글 구조 (네이버 검색 콘텐츠 작성 가이드 2026-05·06, 업리카가 잰 AI 브리핑 인용 문장, 구글 디스커버 정책)
 SEARCH_GUIDE = """[검색에서 클릭되고 인용되는 글 구조 — 모든 블로그 글]
 1. 첫 문단: 누가, 어떤 상황에서, 왜 이 글을 찾는지 한 줄 + 바로 답 한 문장. 인사말·배경 설명으로 시작하지 않아요.
@@ -274,6 +290,7 @@ def build_prompt(site, topic, notes, view=None):
     if blog:
         p.append(STAGE_GUIDE.get(m.get("stage", "pre_adsense" if blog_kind(site) == "wordpress" else "adpost"), ""))
         p.append(SEARCH_GUIDE)
+        p.append(TITLE_GUIDE)
         links = [x for x in posts if x["url"]][-40:]
         if m.get("internal_links", True) and links:
             p.append("[내부 링크 후보 — 관련 있는 글만 본문에 2~3개 자연스럽게 [제목](주소)로]\n" + "\n".join(f"- {x['title']}: {x['url']}" for x in links))
@@ -535,6 +552,7 @@ def write_post(site, res, d, topic):
         "id": f"{site['id']}/{d.name}", "site": site["id"], "title": res["title"], "status": "draft",
         "created_at": now_kst().isoformat(timespec="minutes"), "requested_topic": topic or "",
         "keywords": res.get("keywords", {}), "brief": res.get("brief", {}), "why_this_topic": res.get("why_this_topic", ""),
+        "title_candidates": res.get("title_candidates") or old.get("title_candidates") or [], "title_research": res.get("title_research") or old.get("title_research", ""),
         "meta_description": res.get("meta_description", ""), "hero_prompt": res.get("hero_prompt", ""), "thumb_text": res.get("thumb_text", ""),
         "category": res.get("category", ""), "kind": res.get("kind", ""), "summary": res.get("summary") or old.get("summary") or [],
         "conclusion": res.get("conclusion") or old.get("conclusion", ""),
