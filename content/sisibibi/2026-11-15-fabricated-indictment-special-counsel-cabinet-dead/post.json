@@ -1,0 +1,126 @@
+{
+  "id": "sisibibi/2026-11-15-fabricated-indictment-special-counsel-cabinet-dead",
+  "site": "sisibibi",
+  "title": "조작기소 특검법 17일 국무회의 유력…21일 대구 집회 날이 거부권 마감",
+  "status": "draft",
+  "created_at": "2026-11-15T09:44+09:00",
+  "requested_topic": "조작기소 특검법(국힘 '탈옥법') 다음 주 국무회의로…부산 이어 21일 대구 장외집회",
+  "keywords": {
+    "main": "조작기소 특검법 국무회의",
+    "sub": [
+      "탈옥법",
+      "특검법 거부권",
+      "국민의힘 대구 집회",
+      "국민의힘 부산역 집회",
+      "재의요구권 15일",
+      "특검"
+    ]
+  },
+  "brief": {
+    "reader": "특검법이 국회를 통과한 건 아는데, 이제 언제 어떻게 정해지는지 궁금한 정치 뉴스 독자",
+    "question": "조작기소 특검법은 언제, 누구 손에서 최종 결정되고 국민의힘 장외집회는 어디까지 이어지나?",
+    "answer": "17일 한성숙 총리 주재 국무회의 상정이 유력하고, 공포하려면 순방 중인 대통령 재가가 필요하며, 거부권 마감으로 거론되는 21일에 국민의힘은 대구에서 집회를 열어요.",
+    "out_of_scope": "특검 수사대상 12개 사건 하나하나 설명, 탄핵 정족수(지난 글에서 다룸), 각 사건 유무죄 판단",
+    "next_action": "17일 국무회의 결과와 21일 마감 전 대통령 재가 여부를 날짜 기준으로 확인하기"
+  },
+  "why_this_topic": "지정 주제. 연관 검색어 '특검'(13,530)과 '형사소송법'(12,840)의 검색 수요가 있어요. 14일 부산역 집회와 17일 국무회의 상정 보도가 15일에 몰렸어요. 지난 글들은 '조작기소 특검법' 같은 넓은 검색어로 네이버 10위 안에 못 들었어요. 그래서 이번에는 '국무회의', '거부권 마감', '대구 집회'처럼 더 구체적인 검색어를 노리고, 다른 글에 잘 없는 '21일 마감 = 대구 집회 날'이라는 겹침을 앞세웠어요.",
+  "meta_description": "조작기소 특검법(국민의힘 표현 '탈옥법')은 17일 총리 주재 국무회의 상정이 유력해요. 헌법상 거부권 마감은 21일로, 같은 날 국민의힘은 대구에서 집회를 열어요. 부산 집회 인원은 당 측과 경찰 집계가 10배 차이 나요.",
+  "hero_prompt": "Wide shot of an empty government cabinet meeting room with a long polished wooden table, rows of empty leather chairs, neatly stacked blank documents and a closed folder at the center, soft natural daylight through tall windows, calm and formal atmosphere, no people, no text, no flags, no logos",
+  "thumb_text": "",
+  "category": "국내정치",
+  "kind": "",
+  "summary": [],
+  "conclusion": "조작기소 특검법은 17일 총리 주재 국무회의 상정이 유력하고, 거부권 마감은 21일이에요. 같은 날 국민의힘은 대구에서 집회를 열어요.",
+  "opinion": "이재명 대통령은 자신의 죄를 덮으려는 부분이 있으면 거부권을 행사하면 되고 그렇지 않으면 밀고나가면 될일이다.\n국민의힘의 집회를 왜 부산역이겠는가\n그나마 사람들 좀 모이고 자기들이 어떤 헛소리를 해도 그나마 좀 들어줄 사람들이 있는 곳으로 선정한거 아니겠는가, 대구에서 하기엔 인구가 적고...\n그것부터 이미 법적으로는 아무런 문제가 없음을 보여주는 것이라고 생각된다.\n제발 야당이면 야당답게 반대다운 반대를 했으면 좋겠다. 개떼처럼 몰려다니며 선동질은 그만하고",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "대한민국헌법 제53조 (국가법령정보센터)",
+      "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?lsJoLnkSeq=1000979897&chrClsCd=010202"
+    },
+    {
+      "title": "'조작기소 특검법', 10일 국무회의 안건서 제외…靑 \"다음주 상정\" (네이트뉴스·연합뉴스)",
+      "url": "https://m.news.nate.com/view/20261109n34675"
+    },
+    {
+      "title": "'李이해충돌' 논란 조작기소 특검법, 韓총리 손에 처리되나 (뉴시스·네이트뉴스)",
+      "url": "https://m.news.nate.com/view/20261115n02026"
+    },
+    {
+      "title": "조작기소 특검법 다시 충돌…다음 주 국무회의 주목 (OBS경인TV)",
+      "url": "https://www.obsnews.co.kr/news/articleView.html?idxno=1543780"
+    },
+    {
+      "title": "국힘, 부산서 특검법 반대 집회…21일 대구로 이어간다 (경북매일)",
+      "url": "https://www.kbmaeil.com/article/20261114500212"
+    },
+    {
+      "title": "국힘, 부산서 '조작기소 특검법' 규탄 장외집회…\"'李탈옥법' 거부권 행사하라\" (파이낸셜뉴스·뉴시스)",
+      "url": "https://www.fnnews.com/news/202611140600390898"
+    },
+    {
+      "title": "국민의힘 부산서 장외집회…\"이재명 탈옥법 철회하라\" (재경일보)",
+      "url": "https://news.jkn.co.kr/post/1093670"
+    },
+    {
+      "title": "국민의힘, 부산역서 '조작기소 특검법' 규탄 집회…전국 순회 투쟁 시작 (국제뉴스)",
+      "url": "https://www.gukjenews.com/news/articleView.html?idxno=3751784"
+    },
+    {
+      "title": "조작기소 특검법 후폭풍…野 \"李 탈옥법\" 與 \"정치 선동\" (노컷뉴스)",
+      "url": "https://www.nocutnews.co.kr/news/6604294"
+    },
+    {
+      "title": "국힘, '조작기소 특검법' 청와대 앞 최고위…\"李 대통령 탈옥법\" (신아일보)",
+      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081118"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "상식 뒤집기",
+    "hooks": [
+      "대통령이 버티면 법도 끝?",
+      "1만 명 vs 1000명, 누구 말이 맞아?",
+      "빗속 부산역에서 외친 '거부권'"
+    ],
+    "posts": [
+      "대통령이 버티면 법도 끝?\n특검법 거부권 쓰라고 부산역에서 우비 입고 집회까지 했잖아.\n근데 대통령이 사인 안 하고 15일 그냥 넘기면 오히려 법이 돼버려 ㅋㅋ\n그럼 마감 날인 21일에 열리는 대구 집회는 누구한테 하는 말일까",
+      "1. 헌법 53조: 정부로 넘어온 법은 15일 안에 공포하든지 국회로 돌려보내든지 해야 돼\n2. 둘 다 안 하면 그대로 법으로 확정돼. 버티기로 막는 방법은 없어\n3. 이 특검법은 6일 오후에 정부로 넘어와서 21일이 마감으로 거론돼\n4. 17일 총리 주재 국무회의 상정이 유력하고, 공포하려면 순방 중인 대통령 재가가 있어야 해",
+      "국힘 주장이랑 민주당 반박, 날짜별 일정표는 여기 나란히 놓아 뒀어 {LINK}"
+    ],
+    "topic_tag": "정치"
+  },
+  "revision": 0,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-15T09:44+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 25019,
+        "output_tokens": 12016,
+        "web_searches": 3,
+        "calls": 2,
+        "usd": 0.3704
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.5044,
+    "total_usd": 0.5044,
+    "total_krw": 710,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
