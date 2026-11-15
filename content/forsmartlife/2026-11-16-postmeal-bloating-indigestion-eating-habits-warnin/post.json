@@ -1,0 +1,155 @@
+{
+  "id": "forsmartlife/2026-11-16-postmeal-bloating-indigestion-eating-habits-warnin",
+  "site": "forsmartlife",
+  "title": "식후 더부룩함·소화불량, 먼저 바꿀 식사 습관 5가지와 병원 갈 신호",
+  "status": "ready",
+  "created_at": "2026-11-16T02:01+09:00",
+  "requested_topic": "식후 더부룩함과 소화불량, 생활에서 먼저 바꿔볼 습관\n카테고리: 증상 관리\n이 글이 답할 질문: 소화불량이 있을 때 식사 방식에서 확인할 것은 무엇이고, 병원 진료가 필요한 위험 신호는 무엇인가?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 2,300회, 11월 시기 주제",
+  "keywords": {
+    "main": "식후 더부룩함",
+    "sub": [
+      "소화불량",
+      "기능성 소화불량",
+      "소화불량 식사법",
+      "소화불량 위내시경",
+      "소화불량 병원",
+      "내과"
+    ]
+  },
+  "brief": {
+    "reader": "밥 먹고 나면 배가 빵빵하고 명치가 답답한 일이 잦아 습관부터 고쳐 볼지 병원에 가야 할지 고민하는 30~60대",
+    "question": "소화불량이 있을 때 식사 방식에서 확인할 것은 무엇이고, 병원 진료가 필요한 위험 신호는 무엇인가?",
+    "answer": "한 끼 양·먹는 속도·식사 시간·기름진 음식·커피와 술부터 점검하되, 40세 이상에서 처음 생겼거나 체중 감소·반복 구토·삼킴 곤란·검은 변이 있으면 습관 조절보다 진료가 먼저예요.",
+    "out_of_scope": "약 이름·복용법 추천, 특정 건강식품·한약 효과, 위식도역류질환·과민성장증후군의 자세한 치료",
+    "next_action": "다음 끼니부터 먹은 시각·메뉴·양·증상을 기록해 나에게 맞지 않는 음식과 습관 찾기"
+  },
+  "why_this_topic": "네이버 월간 검색 2,300회, 11월 시기 주제. 상위 글 대부분이 습관 하나만 내세우고 출처와 병원 갈 기준이 약해, 공식 자료 기반의 식사 점검표와 위험 신호 구분으로 차별화할 수 있음",
+  "title_candidates": [
+    {
+      "title": "식후 더부룩함·소화불량, 먼저 바꿀 식사 습관 5가지와 병원 갈 신호",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "식후 더부룩함, 굶거나 흰죽만 먹으면 오히려 손해인 이유",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "소화불량 식사법 결론: 한 끼 양 줄이고 하루 4~5회로 나누기",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "40세 넘어 처음 생긴 소화불량, 습관 조절보다 내시경이 먼저",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "식후 더부룩함, 습관으로 관리할 때 vs 병원 갈 때 구분법",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "상위 제목들(「이 습관 하나로 확 줄어든다」「50대 이후 식후 습관 3가지」「내시경은 정상인데 더부룩?」)은 습관 하나를 강하게 내세우지만 출처와 병원 갈 기준이 빠져 있음 / 우리는 공식 자료에 있는 식사 기준(하루 4~5회로 나눠 먹기, 고지방 줄이기)과 40세 내시경 기준, 위험 신호를 한 글에 함께 정리함",
+  "meta_description": "식후 더부룩함이 잦다면 한 끼 양, 먹는 속도, 기름진 음식부터 점검하세요. 굶기·흰죽만 먹기가 오히려 손해인 이유와 40세 내시경 기준, 바로 진료받아야 할 위험 신호를 공식 자료로 정리했어요.",
+  "hero_prompt": "Candid smartphone photo of a Korean adult in their 40s sitting at a home dining table after a meal, one hand resting lightly on the upper stomach, half-finished everyday Korean dishes on the table, warm natural evening light in a lived-in apartment kitchen, slightly off-center framing, face not in close-up, no text in the image, not a stock photo",
+  "thumb_text": "",
+  "category": "증상 관리",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "작은 그릇에 나눠 담은 집밥을 천천히 먹는 중년 부부",
+      "prompt": "Candid smartphone snapshot of a Korean middle-aged couple eating a modest home meal slowly at a small kitchen table in a Korean apartment, small portions of rice, soup and steamed vegetables in everyday bowls, taken casually by a family member; natural uneven light from a window, slightly off-center framing, real lived-in surroundings, not a stock photo, no glossy CGI look, faces not in close-up, no text, no medical gore, no pills or products as the main subject"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "식사 기록 수첩을 들고 내과 대기실에서 진료를 기다리는 50대",
+      "prompt": "Candid smartphone snapshot of a Korean adult in their 50s sitting in an internal medicine clinic waiting room in Korea, holding a phone with a short handwritten-style meal notebook on lap, other patients blurred in background, taken casually by a family member; natural uneven fluorescent light, slightly off-center framing, real lived-in surroundings, not a stock photo, no glossy CGI look, faces not in close-up, no readable text, no medical gore, no pills or products as the main subject"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "질병관리청 국가건강정보포털 – 소화불량(요약·비약물 치료·자주하는 질문)",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6887"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 – 소화불량(진단 및 검사·치료·자주하는 질문)",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6263"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 – 소화불량(개요)",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5319"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 – 급성 심근경색증",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6770"
+    },
+    {
+      "title": "서울대학교병원 의학정보 – 소화불량",
+      "url": "https://www.snuh.org/health/nMedInfo/nView.do?medid=AC000070"
+    },
+    {
+      "title": "서울아산병원 식사요법 – 소화불량식",
+      "url": "https://m.amc.seoul.kr/asan/mobile/healthinfo/mealtherapy/mealTherapyDetail.do?mtId=68"
+    },
+    {
+      "title": "세브란스 건강정보 – 기능성 소화불량증, 좋은 생활습관을 가져라",
+      "url": "https://sev-heart.severance.healthcare/health/lifecare/life/healthlife.do?mode=view&articleNo=68341"
+    },
+    {
+      "title": "대한내과학회지 제90권 제2호(2016) – 기능성 소화불량증과 음식",
+      "url": "https://www.ekjm.org/upload/kjm-90-2-98.pdf"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 1,
+  "dead_links_removed": [
+    "https://www.ksgm.org/down/lecture_12_02_02.pdf"
+  ],
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-16T02:01+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9288,
+        "output_tokens": 4896,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0034
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 14744,
+        "output_tokens": 17906,
+        "web_searches": 5,
+        "calls": 2,
+        "usd": 0.4671
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 9586,
+        "output_tokens": 1789,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0371
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 0.9095,
+    "total_usd": 0.9095,
+    "total_krw": 1270,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
