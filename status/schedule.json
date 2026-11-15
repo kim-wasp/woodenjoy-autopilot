@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T20:23+09:00",
+  "updated": "2026-11-15T20:37+09:00",
   "items": [
     {
       "site": "infobay",
@@ -461,6 +461,15 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+      "platform": "blog",
+      "at": "2026-11-16T07:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
@@ -542,12 +551,30 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+      "platform": "threads",
+      "at": "2026-11-18T12:30+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
       "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
       "platform": "threads",
       "at": "2026-11-18T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+      "platform": "instagram",
+      "at": "2026-11-18T21:00+09:00",
       "state": "planned"
     },
     {
