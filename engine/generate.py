@@ -848,19 +848,46 @@ def keyword_pool(site, n_seeds=15, keep=12):
         x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None else mid) + (0.3 if x["seed"] else 0)
     band.sort(key=lambda x: -x["score"])
     out = band[:keep]
+    for x in out:
+        x["intent"] = keyword_intent(x["kw"])
+    for x in out[:3]:  # 상위 후보 3개는 지금 네이버 상위 글 제목까지 (제목 정하기에 씀)
+        try:
+            r = kt.blog_search(x["kw"], display=10)
+        except Exception:  # noqa: BLE001
+            r = None
+        if r:
+            x["top_titles"] = r["titles"][:10]
     log("  키워드 후보: " + ", ".join(f"{x['kw']}({x['vol']}" + (f"/{x['docs']}" if x.get("docs") else "") + ")" for x in out))
     return out
+
+
+REGIONS = ("서울 부산 대구 인천 광주 대전 울산 세종 경기 강원 충북 충남 전북 전남 경북 경남 제주 "
+           "수원 성남 고양 용인 부천 안산 안양 남양주 화성 평택 의정부 시흥 파주 김포 광명 광주 군포 하남 오산 이천 양주 구리 안성 포천 의왕 여주 동두천 과천 "
+           "일산 분당 판교 동탄 송도 청라 위례 강남 강동 강서 강북 관악 광진 구로 금천 노원 도봉 동대문 동작 마포 서대문 서초 성동 성북 송파 양천 영등포 용산 은평 종로 중랑 "
+           "창원 천안 청주 전주 포항 김해 원주 춘천 아산 구미 진주 여수 순천 목포 경주 거제 양산 세종").split()
+
+
+def keyword_intent(kw):
+    """검색어 의도: 지역형(동네) / 구매형(바로 살 사람) / 정보형(사기 전·문제 해결)"""
+    if any(kw.startswith(r) or (r + "역") in kw for r in REGIONS):
+        return "지역형"
+    if re.search(r"(추천|가격|구매|구입|최저가|배달|싼곳|파는곳|브랜드|후기|순위|비교|가성비|세트|할인|다이소|이케아|쿠팡)", kw):
+        return "구매형"
+    return "정보형"
 
 
 def keyword_pool_block(pool):
     if not pool:
         return ""
-    rows = "\n".join(f"- {x['kw']}: 월 검색 {x['vol']:,}회" + (f", 블로그 글 {x['docs']:,}개 (검색÷글 {x['ratio']})" if x.get("docs") else "") for x in pool)
+    rows = "\n".join(f"- {x['kw']} [{x.get('intent', '')}]: 월 검색 {x['vol']:,}회" + (f", 블로그 글 {x['docs']:,}개 (검색÷글 {x['ratio']})" if x.get("docs") else "")
+                      + (("\n  지금 네이버 상위 글 제목: " + " | ".join(x["top_titles"][:8])) if x.get("top_titles") else "") for x in pool)
     return ("[이번 글 메인 키워드 후보 — 네이버 검색광고 키워드 도구 실제 값, 위에서부터 유리한 순]\n" + rows + "\n"
             "규칙: 이 중 하나를 keywords.main 으로 정하고 그 검색어로 찾는 사람의 궁금증에 답하는 글을 쓰세요. "
             "사이트 주제와 안 맞거나 최근 글과 겹치면 다음 후보로. 제목 앞쪽에 메인 키워드를 그대로(띄어쓰기는 자연스럽게). "
             "같은 목록의 관련 검색어 2~4개는 소제목에 하나씩 녹여 keywords.sub 에. 월 검색 100회 밑의 검색어는 메인으로 쓰지 마세요. "
-            "why_this_topic 에 고른 키워드의 검색 수(와 글 수)를 그대로 적으세요.")
+            "why_this_topic 에 고른 키워드의 검색 수(와 글 수)를 그대로 적으세요. "
+            "[구매형]은 바로 살 사람의 검색어(쿠팡 링크가 자연스러운 글), [정보형]은 사기 전·문제 해결 검색어(검색 유입·애드포스트용), [지역형]은 동네 검색어예요. 사이트 수익 구조에 맞는 쪽을 고르고, 최근 글이 한쪽으로 몰리지 않게 섞어요. "
+            "네이버 상위 글 제목이 있으면 제목 정하기 1단계는 웹 검색 대신 그 제목들로 해요(문장은 베끼지 말고 패턴과 빠진 점만).")
 
 
 def pick_topic(site):

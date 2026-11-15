@@ -72,14 +72,34 @@ def ad_request(words, dry):
     raise RuntimeError("요청이 너무 많다고 해요(429). 잠시 뒤 다시 실행하세요")
 
 
-def blog_total(word, dry):
+def blog_search(word, display=10):
+    """네이버 블로그 검색 공식 API: 전체 글 수(total)와 정확도순 상위 글 제목.
+    키: 개발자센터 NAVER_CLIENT_ID/SECRET 또는 NAVER API HUB 의 NAVER_HUB_ID/KEY (하루 25,000회)"""
+    import os, re, requests
     cid, sec = os.environ.get("NAVER_CLIENT_ID"), os.environ.get("NAVER_CLIENT_SECRET")
-    if dry or not (cid and sec):
+    hid, hkey = os.environ.get("NAVER_HUB_ID"), os.environ.get("NAVER_HUB_KEY")
+    params = {"query": word, "display": display, "sort": "sim"}
+    if cid and sec:
+        r = requests.get("https://openapi.naver.com/v1/search/blog.json", params=params,
+                         headers={"X-Naver-Client-Id": cid, "X-Naver-Client-Secret": sec}, timeout=20)
+    elif hid and hkey:
+        r = requests.get("https://naverapihub.apigw.ntruss.com/search/v1/blog", params=params,
+                         headers={"X-NCP-APIGW-API-KEY-ID": hid, "X-NCP-APIGW-API-KEY": hkey}, timeout=20)
+    else:
         return None
-    import requests
-    r = requests.get("https://openapi.naver.com/v1/search/blog.json", params={"query": word, "display": 1},
-                     headers={"X-Naver-Client-Id": cid, "X-Naver-Client-Secret": sec}, timeout=20)
-    return r.json().get("total") if r.ok else None
+    if not r.ok:
+        return None
+    j = r.json()
+    clean = lambda t: re.sub(r"<[^>]+>", "", t or "").replace("&quot;", "\"").replace("&amp;", "&")
+    return {"total": j.get("total"), "titles": [clean(i.get("title")) for i in j.get("items", [])],
+            "dates": [i.get("postdate") for i in j.get("items", [])]}
+
+
+def blog_total(word, dry):
+    if dry:
+        return None
+    res = blog_search(word, display=1)
+    return res.get("total") if res else None
 
 
 def row(item):
