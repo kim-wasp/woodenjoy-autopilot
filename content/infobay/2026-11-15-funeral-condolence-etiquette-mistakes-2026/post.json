@@ -1,0 +1,179 @@
+{
+  "id": "infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+  "site": "infobay",
+  "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+  "status": "ready",
+  "created_at": "2026-11-15T20:28+09:00",
+  "requested_topic": "장례식 조문 예절, 절은 영정 2번·상주 1번? 흔한 실수 6가지",
+  "keywords": {
+    "main": "장례식 조문 예절",
+    "sub": [
+      "장례식장 절하는 법",
+      "조문 절 횟수",
+      "헌화 꽃 방향",
+      "향 끄는 법",
+      "부의금 봉투 언제",
+      "조문 실수",
+      "상주 인사말"
+    ]
+  },
+  "brief": {
+    "reader": "부고를 받고 처음, 또는 오랜만에 빈소에 가는 20~30대 직장인",
+    "question": "빈소에서 절은 몇 번 하고, 어떤 실수를 피해야 하나요?",
+    "answer": "영정 앞에서 두 번 절하고 상주와 맞절 한 번 해요. 향불은 손으로 끄고, 국화는 꽃봉오리를 영정 쪽으로, 봉투는 나올 때 부의함에 넣으면 돼요.",
+    "out_of_scope": "조의금 금액 기준(별도 글), 상주 쪽 장례 절차, 종교 의식 세부 절차",
+    "next_action": "출발 전 체크리스트를 휴대폰에 캡처해 두고 빈소에 가기"
+  },
+  "why_this_topic": "지정 주제를 다시 쓰는 글이고, 사장님이 지적한 사진 방향 문제를 고쳤어요(헌화 사진에서 꽃봉오리가 영정 쪽을 향하도록, 사진은 가로·수평으로). 최근 8~10일 사이에도 '조문 실수' 기사가 여러 건 나와 관심이 계속 이어지고 있어요. 2026년 5월 한국일보 칼럼에서 다룬 헌화 방향 논쟁은 상위 글들이 거의 다루지 않는 부분이에요. 앞서 '조의금 얼마'처럼 넓은 검색어로는 네이버 10위에 들지 못했기 때문에, 이번에는 '장례식 조문 예절 실수'와 '절 횟수'처럼 더 구체적인 검색어를 노려요. 지금 뜨는 검색어 중에는 이 주제와 맞는 것이 없어요.",
+  "title_candidates": [
+    {
+      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "조문 예절 6가지, 향불·국화 방향·봉투 타이밍 기준",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "조문 갈 때 향불을 입으로 끄면 결례? 빈소 실수 6가지",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "처음 조문 가는 사회초년생, 빈소에서 순서대로 할 6가지",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "헌화 꽃봉오리 영정 쪽 vs 내 쪽? 조문 예절 실수 6가지",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "상위 제목은 '실수 3가지·1위·완벽정리'처럼 개수만 약속하고, 국화 꽃봉오리 방향 논쟁과 봉투 내는 시점은 거의 다루지 않아요 / 우리는 절 횟수 정답을 제목에 바로 쓰고, 꽃 방향 논쟁과 종교별 비교표까지 넣어요",
+  "meta_description": "영정 앞 두 번, 상주와 맞절 한 번. 향불은 손으로 끄고 국화 꽃봉오리는 영정 쪽으로 놓아요. 장례식장 공식 안내로 확인한 조문 실수 6가지와 종교별 인사법, 출발 전 체크리스트를 담았어요.",
+  "hero_prompt": "Candid smartphone photo of a quiet Korean funeral hall memorial room seen from the mourner's side, horizontal landscape orientation, camera upright and level with no rotation. A mourner in a black suit stands with head bowed, seen from behind at a distance, facing the altar. White chrysanthemums on the altar have their blossom heads pointing toward the blurred framed portrait with a black ribbon, stems toward the viewer. Soft mixed lighting, a thin line of incense smoke, slightly off-center framing, faces not visible, not a stock photo, no text",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "장례식장 제단 위 국화들, 꽃봉오리가 영정 쪽을 향해 놓여 있는 모습",
+      "prompt": "Candid smartphone snapshot inside a Korean funeral hall memorial room, horizontal landscape orientation, camera held upright and level (not rotated, not tilted), taken from the mourner's standing position looking toward the altar. Several single white chrysanthemums lie on the altar table with their flower heads pointing away from the camera toward the framed memorial portrait at the back, and their stems pointing toward the camera. The portrait is out of focus with a black ribbon, face not recognizable. Slightly off-center framing, mixed fluorescent and warm lighting, ordinary details like a candle and incense holder, not a stock photo, no glossy CGI look, no text"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "장례식장 입구의 방명록과 부의함, 봉투를 넣으려는 조문객의 손",
+      "prompt": "Candid smartphone snapshot at the entrance of a Korean funeral hall room, horizontal landscape orientation, upright and level framing. An open guest book with a pen on a small table next to a wooden condolence money box, a person in a black suit seen only from the shoulder down holding a white envelope near the box. Slightly off-center framing, mixed real lighting, ordinary clutter like a tissue box, faces not shown, not a stock photo, no glossy CGI look, no readable text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "분당차병원 장례식장 장례상식(조문방법·절하는 법)",
+      "url": "https://m.chamc.co.kr/bundang/funeral/ProcInfo/commonSense.aspx"
+    },
+    {
+      "title": "교원예움 장례식장 조문예절",
+      "url": "https://www.kyowonyeum.co.kr/Board/Courtesy"
+    },
+    {
+      "title": "funeralinfo 조문 예절",
+      "url": "https://funeralinfo.kr/guides/condolence-etiquette"
+    },
+    {
+      "title": "보아스매거진 장례식장예절 조문 순서 한 장 정리",
+      "url": "https://magazine.lboas.com/%EC%9E%A5%EB%A1%80%EC%8B%9D%EC%9E%A5%EC%98%88%EC%A0%88-%EC%A1%B0%EB%AC%B8-%EC%88%9C%EC%84%9C/"
+    },
+    {
+      "title": "한국일보 '영정 등진 꽃송이' 조문 헌화 예절 칼럼(2026.5.20)",
+      "url": "https://v.daum.net/v/20260520043159448"
+    },
+    {
+      "title": "마이스터 【장례의 품격】 ⑪ 조문 예절",
+      "url": "http://www.meister.or.kr/news/articleView.html?idxno=649"
+    },
+    {
+      "title": "조문예절(분향·헌화·봉투 표기)",
+      "url": "https://n-sangjo.co.kr/funeralmanners/"
+    },
+    {
+      "title": "삼고라이프 장례식장 조문 절차 정리",
+      "url": "https://samgolife.co.kr/magazine/blog/f-guide/%EC%9E%A5%EB%A1%80%EC%8B%9D%EC%9E%A5-%EC%A1%B0%EB%AC%B8-%EC%A0%88%EC%B0%A8-%ED%97%88%EB%91%A5%EB%8C%80%EC%A7%80-%EC%95%8A%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%A0%95%EB%A6%AC"
+    },
+    {
+      "title": "고이 장례 가이드북 조문객 예절",
+      "url": "https://www.goifuneral.co.kr/guidebook/tip/ongoing2/0/"
+    },
+    {
+      "title": "장례식장에서 이것만은 절대 하지 마세요, 조문 실수 세 가지",
+      "url": "https://v.daum.net/v/GodGhQztOv"
+    },
+    {
+      "title": "조문객이 빈소에서 절대 하지 말아야 할 실수 1위",
+      "url": "https://feed.viewus.co.kr/ai/article/357887/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "모음형",
+    "ending": "의견",
+    "cover_hooks": [
+      "빈소 실수 6가지, 절 횟수부터 헷갈려",
+      "향에 불 붙이고 '후' 불면 결례예요",
+      "국화 꽃봉오리, 영정 쪽 vs 내 쪽?"
+    ],
+    "caption": "향 붙이고 '후' 불려던 순간, 거기서 멈춰요\n\n영정 앞 두 번, 상주와 맞절 한 번이 가장 널리 쓰이는 방식이에요.\n향불은 손으로 흔들어 끄고, 부의금 봉투는 나올 때 부의함에 넣어요.\n국화 꽃봉오리는 영정 쪽이 많이 안내되지만, 반대 의견도 있어서 헷갈리면 앞사람을 따르면 돼요.\n\n여러분이 가 본 빈소에서는 국화 꽃봉오리가 어느 쪽을 보고 있었나요?\n\n#장례식예절 #조문예절 #장례식장절하는법 #조문실수"
+  },
+  "threads": {
+    "style": "썰 한 장면",
+    "hooks": [
+      "국화 한 송이로 빈소에서 논쟁 붙음",
+      "헌화할 때 꽃봉오리 어느 쪽이야?",
+      "영정 쪽 꽃봉오리, 반대파도 있더라"
+    ],
+    "posts": [
+      "국화 한 송이로 빈소에서 논쟁 붙음\n\n향은 안 피우고 헌화만 하겠다는 조문객이 있었는데\n꽃봉오리를 영정 쪽에 두냐, 조문객 쪽에 두냐로 말이 갈린 거야.\n한국일보 칼럼에 30대 장례지도사가 보낸 사연이더라.\n그 자리에서 장례지도사가 낸 답이 은근 현실적이었어.",
+      "장례지도사는 앞사람이 놓은 방향대로 따르라고 안내했대.\n1. 많이 쓰이는 안내는 꽃봉오리가 영정 쪽이야. 칼럼에선 성균관도 이렇게 정리했다고 해.\n2. 반대 의견도 오래 있었으니까 헷갈리면 앞사람 따라 하면 돼.\n3. 하는 김에 하나 더. 절은 영정에 두 번, 상주랑 맞절 한 번이야.",
+      "향불 끄는 법이랑 봉투 내는 타이밍까지, 실수 6가지는 여기서 봐 {LINK}"
+    ],
+    "topic_tag": "장례식예절"
+  },
+  "revision": 5,
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-15T20:30+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 29413,
+        "output_tokens": 21863,
+        "web_searches": 3,
+        "calls": 3,
+        "usd": 0.5849
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 77968,
+        "output_tokens": 12676,
+        "web_searches": 0,
+        "calls": 7,
+        "usd": 0.2827
+      }
+    },
+    "images": {},
+    "usd": 0.8676,
+    "previous_usd": 1.0612,
+    "total_usd": 1.9288,
+    "total_krw": 2700,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  },
+  "approve_note": "사진 방향을 확인하고 업데이트해야됨"
+}
