@@ -1,80 +1,14 @@
 {
   "ideas": [
     {
-      "title": "조작기소 특검법(국힘 '탈옥법') 다음 주 국무회의로…부산 이어 21일 대구 장외집회",
-      "keyword": "특검법 장외집회 부산",
-      "trend_keyword": "진중권",
-      "facts": "국민의힘이 부산역에서 '조작기소 특검법' 규탄 장외집회를 열고 거부권 행사를 요구했어요. 21일에는 대구 집회를 예고했고, 법안 공포 여부를 다룰 다음 주 국무회의가 다음 고비예요.",
-      "sides": "국민의힘(장동혁 대표): '이재명 탈옥법', '죽은 법에 근거한 특검'이니 거부권을 써야 한다 / 민주당: '예산국회 팽개치고 대통령 조롱', 특검법을 정쟁으로만 몬다",
-      "question": "예산 심사 기간의 장외집회, 정당의 정당한 수단으로 보세요, 국회 일을 미루는 걸로 보세요?",
-      "metrics": {
-        "news_24h": 43,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "진중권",
-        "trend_traffic": 200,
-        "trend_label": "200+",
-        "naver_month": 10
-      },
-      "links": [
-        {
-          "title": "국힘, 부산서 조작기소 특검 규탄 집회...\"거부권 행사해야\" - YTN",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jcV92YVNzU0JtOG1fenp0U2VxSS1YTlkxZTNYU1BXWUNBeFBTUHJpcmlfSEpaM2RELWxvUGtmUm8ybk1pVmtEbEJhZ2VzS01fUkhuOFBFZTd3a1d3Q2d2c3lueU1FVXZSRVktbTZzN3ZERzNtc3c?oc=5"
-        },
-        {
-          "title": "국힘, 부산서 특검법 규탄 집회 개최 - 경북신문",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1jcVk1cVVHUlp3UHNTdFFDR2VvSGdFbGNlYlRSMVZDTmNWZHVyYXp2cXZPNnhIZ2QxSC1MMjgyRGhQWUpfYllMdnB0WEdrU2VtY2hLWXAzTFk?oc=5"
-        },
-        {
-          "title": "국힘, 부산역서 ‘이재명 탈옥법’ 규탄…“죽은 법에 근거한 특검” - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oajBkTDJSQ2hSY2VoMUFuT1VQeF93ek5ZSU9mYTlOaE9VRExsdjh6bTBTejE1Z3lMVEkxLUNaZVJpS2lfSXAzSC1rZWo0QWxaMFNhMVJwOUx2TFZEYjFHbGRxUk1rM2h3Z3luVjNZRkU3c0U1?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 43건, 구글 검색 급증 '진중권' 200+, 네이버 월간 검색 10회",
-      "score": 45.1
-    },
-    {
-      "title": "820조 예산 심사 16일 시작…162조 '미래대응기금'에 여야가 정면충돌한 이유",
-      "keyword": "미래대응기금 예산",
-      "trend_keyword": "",
-      "facts": "사상 최대인 820조 원 규모 내년 예산안을 국회 예결위 예산안조정소위가 16일부터 심사해요. 처리 시한이 2주여 남은 가운데 162조 원 규모로 새로 만드는 '미래대응기금'이 가장 큰 쟁점이에요.",
-      "sides": "국민의힘: '정부의 쌈짓돈', '미래 대응 아닌 약탈 기금'이라며 전면 삭감 요구(과방위원들은 표결 거부) / 민주당: '앞에선 삭감, 뒤로는 지역 예산 증액 요구'라며 앞뒤가 다르다고 반박",
-      "question": "미래대응기금처럼 큰돈을 기금으로 묶어 두는 방식, 국회가 어디까지 따져야 한다고 보세요?",
-      "metrics": {
-        "news_24h": 41,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 20
-      },
-      "links": [
-        {
-          "title": "사상 최대 820조 예산 심사 내일 돌입…162조 '미래대응기금' 신설 정면충돌 - 글로벌이코노믹",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ0NvWmdvQ1JTbEJxMEx5QjAzWkpvcVRJSHJKTjZoalAwNXhQOEV2YzlHcmplUFlKOC1VX1dtemkxMlRaVnhQSmw0MzQyNnVSMkktb2k2WktxZ29PWDVBZndXUnFsX1MxemZ1TUs4amR0SnQ3U0VETWg0NEFQa3Y5X3pDeEJ4Z0thS0xj?oc=5"
-        },
-        {
-          "title": "\"전면 백지화\"vs\"뒤로는 증액 요구\"…미래대응기금 설전 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ad29Rc3BIcWgtay1IU2V0OHV6SXBKajFFc3ZOMGFEelhuQTZRZUJRb1NwVnBXMUlZZjVKeFlIeXgtVDdVbWJISUk2ZVY2Y1ZkN1lpbTRFWW1Pb2xablRtcVcxUVVGZkE?oc=5"
-        },
-        {
-          "title": "예산안 처리시한 2주여 앞으로…여야, 예결소위서 본격대결 돌입 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkMTRVUFg1UmwxRHE4TkFQMFBsUldiOHFONjZFOXAxSXEzSEQwM3NYN0ZXbjhUTTlPdm45VWJTbTRwRDVoUFA0dVdnWS1CUVk2cHIwbGtRM0drTnlMdmZkcdIBYEFVX3lxTFBkMTRVUFg1UmwxRHE4TkFQMFBsUldiOHFONjZFOXAxSXEzSEQwM3NYN0ZXbjhUTTlPdm45VWJTbTRwRDVoUFA0dVdnWS1CUVk2cHIwbGtRM0drTnlMdmZkcQ?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 41건, 네이버 월간 검색 20회",
-      "score": 41.2
-    },
-    {
-      "title": "\"돈바스 넘기면 나토 가입\"…젤렌스키가 공개한 美 제안, 한국엔 무슨 의미?",
-      "keyword": "젤렌스키 돈바스 나토",
+      "title": "돈바스 주면 나토 가입? 美가 우크라이나에 처음 꺼낸 ‘맞교환안’",
+      "keyword": "돈바스 나토 맞교환",
       "trend_keyword": "볼로디미르 젤렌스키",
-      "facts": "젤렌스키 우크라이나 대통령이 미국이 나토 가입을 대가로 돈바스 지역을 넘기는 안을 물어 왔다고 밝혔어요. 미국이 이런 '영토-나토 맞교환'을 타진한 건 처음이라는 보도가 나왔어요.",
-      "sides": "제안을 보는 쪽: 나토 가입이라는 안전보장으로 전쟁을 끝낼 길이 될 수 있다 / 우려하는 쪽: 영토를 내주는 방식은 침공의 결과를 인정하는 셈이다",
-      "question": "이 협상 방식이 한반도 안보 논의에 주는 신호, 어떻게 읽으세요?",
+      "facts": "젤렌스키 우크라이나 대통령은 미국이 ‘나토 가입을 해 주는 대신 돈바스 영토를 넘기는 안’을 물어왔다고 밝혔어요. 언론은 미국이 이런 맞교환을 우크라이나에 처음 타진했다고 보도했어요.",
+      "sides": "전쟁을 끝낼 현실적인 협상 카드라는 시각 / 무력으로 빼앗긴 땅을 인정해 주는 셈이라는 시각 (각 측 실제 발언과 근거는 검색으로 확인 필요)",
+      "question": "‘영토와 안보 보장 맞교환’ 방식, 한국이 눈여겨봐야 할 대목은 뭐라고 보세요?",
       "metrics": {
-        "news_24h": 24,
+        "news_24h": 6,
         "news_6h": 0,
         "news_capped": false,
         "trend": "볼로디미르 젤렌스키",
@@ -84,38 +18,104 @@
       },
       "links": [
         {
-          "title": "젤렌스키 \"미국이 나토 가입 대가로 돈바스 양도안 제시\" - YTN",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fS3RBeE1OUUNmNExZVEVHOXZJaFZocGJ4UWN6SnpxUTU5ZFNtdk04WGJUbWtBcWI4V0gzNU9ud0pKWmlOV3IyVDhQbHgxVXViamtwMm54TzFIRlNLS3h3ZEg4dV9YcFRfcExqZE9IRQ?oc=5"
+          "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진 - 이데일리",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMm1xczBHelFnNW1mMUczeTN5eUxDMHZUbW5MNEM2bjhXcFVKTlU2am44YnNQQWJDcTFIRU91akRpR3lCeUl2X28tdGtrcENFcDdBTXNJTnFCQU5OelJRMFpWWmxIcGR2bkQwb3V4eDFJbG9GdzRDNHVYYWpBc3JPbg?oc=5"
         },
         {
-          "title": "젤렌스키, “미국, 우크라이나에 나토 가입 대가로 돈바스 양도안 제안” - VOA 한국어 홈페이지",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9GSldicmNkQnBXN2NvOTRyeS1uWC12bHlKRmZNYmFidzBVc0xXdjVOcFRaakdSanZHdkZNTUZsaHg2dnFucFUzRUV4TnVQTzVVNzY00gFTQVVfeXFMT0ZKV2JyY2RCcFc3Y285NHJ5LW5YLXZseUpGZk1iYWJ3MFVzTFd2NU5wVFpqR1Jqdkd2Rk1NRmxoeDZ2cW5wVTNFRXhOdVBPNVU3NjQ?oc=5"
+          "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\" - 월간조선",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBJTVdJWER4SWJ4TklTZlU1a2pQLTlyaHdObnVseHVWRzBoMlNBbVRRVXpYTXoxWDBmT2R0T1ltcjE2MngtTFluUXZkLXdTdWIzQ0JIRFVTWURFX29FNlZnbU9yQzRzaWhSVHVXRw?oc=5"
         },
         {
-          "title": "젤렌스키 “미, ’우크라 나토 가입 대가’ 돈바스 양도안 질의“ - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0wMUVHeVJEcDRWckdFcm5ONEJ6UEdrYU5qWHF1SVZQTmZjM1dpbXdSdVAzdncxMVFkZUR5YUtlUVNwNHNMQ3d3alhrZkMxMFNLMHZxMzU3RllXb3g0VmQ4aElDd1A0aTg?oc=5"
+          "title": "美, 우크라에 ‘돈바스 철수·나토 가입’ 맞교환 타진…종전 협상 새 변수 - 쿠키뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1LdDJpY00tbkdhU0VBRWoyV0JBakM1YThSTjRqWFRtZ2dWSUJMdEJmNjJwWHItQmNSQnJtSVN4R2oxYzZuNEtLelhNb1A5bWtUek80Z2Npd1RLbXVpeXhidVBfSQ?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 24건, 구글 검색 급증 '볼로디미르 젤렌스키' 1000+, 네이버 월간 검색 10회",
-      "score": 34.1
+      "why": "구글 뉴스 24시간 기사 6건, 구글 검색 급증 '볼로디미르 젤렌스키' 1000+, 네이버 월간 검색 10회",
+      "score": 16.1
+    },
+    {
+      "title": "세무사 수석 ‘AI 안경’ 의혹에 국회 청원…시험장 규칙 바뀔까",
+      "keyword": "AI 안경 국회 청원",
+      "trend_keyword": "",
+      "facts": "세무사 시험 수석 합격자를 둘러싸고 ‘AI 안경’ 부정행위 의혹이 나왔어요. 이후 AI 안경의 시험장 반입·소지 기준을 정비하고 시험 감독을 강화해 달라는 국회 청원이 올라왔어요.",
+      "sides": "청원 측: AI 안경 반입·소지 기준과 감독 규칙을 서둘러 정비해야 한다는 입장 / 의혹은 아직 확인되지 않았으니 사실 확인이 먼저라는 시각 (실제 반론 발언은 검색으로 확인 필요)",
+      "question": "AI 기기 부정행위, 시험장 규칙을 법으로 정해야 할 문제로 보세요, 아니면 시험 기관이 알아서 정할 문제로 보세요?",
+      "metrics": {
+        "news_24h": 15,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 10
+      },
+      "links": [
+        {
+          "title": "세무사 수석 'AI 안경' 의혹에 국회 청원 등장…\"관련 제도 정비해야\" - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0zWkRTNkxuck1XUUw3LUdvZzNuQ3VFeXdZSDdPQVgxTXRwNUwtS1Z4cFZyWVF6Ynk4cFhGUFVHMExoSWhsMFZJb3pkdE01cWo0Z2VNS2h4c0NaTVRRLXB5Rkw3WWdROTdObjZhaE5FWGzSAXBBVV95cUxNM1pEUzZMbnJNV1FMNy1Hb2czbkN1RXl3WUg3T0FYMU10cDVMLUtWeHBWcllRemJ5OHBYRlBVRzBMaElobDBWSW96ZHRNNXFqNGdlTUtoeHNDWk1UUS1weUZMN1lnUTk3Tm42YWhORVhs?oc=5"
+        },
+        {
+          "title": "\"AI 안경 부정행위 막아달라\"…시험 감독 강화 요구 국회 청원 - 뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE54WXJnUVh1LVdvT0JWa1lFQmxFNVRMMzUzR19sM2lIbmZ5LXFaX0pRX2M2dFNYQ0JBbzloaHpxUjhseDhpa2NkVXR2WUZ4eFNSWmdQQ29oMm9NNVdfdFd0Z9IBeEFVX3lxTE1iOUplS3AyeGtuV3FZT1R2MV9QU3JSR0NXZXdXMk4tVnlKYWQ4aFM2NHNxZldpckc4Q1hQalQ4UGZFejQ2b0M0aW0zQVpaTVU4a3JnUkg5b19GRnJ3VFF5QThnWDdROXVZUVRzTzhUYkYzWC00M01iNg?oc=5"
+        },
+        {
+          "title": "\"AI안경 시험장 반입·소지 기준 정비해야\"…국회 청원 등장 - 파이낸셜뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1UdW9MTlNmTlNhZTNYbnBTbGV1NklPVWVpaWpmSVpVOVNwcDZxa0RTOTA5SVNXR3lKb01kMFRuMm5JeGd4bDRLZW9uVVI2bHI0eHY1Mk1RMzZQdw?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 15건, 네이버 월간 검색 10회",
+      "score": 15.1
+    },
+    {
+      "title": "육사 없어지고 ‘국군사관학교’? 국방부 “확정 아냐”…생도 설문부터 시작",
+      "keyword": "국군사관학교 설문",
+      "trend_keyword": "육군사관학교",
+      "facts": "국방부가 육군·해군·공군 사관생도를 대상으로 ‘국군사관학교’ 설문을 시작했어요. 국방부는 보도정정을 내고 창설 기본계획 수정안은 확정된 게 없으며 각 군 총장을 비롯해 여러 계층의 의견을 듣고 있다고 밝혔어요.",
+      "sides": "사관학교 체계를 바꿔야 한다는 쪽 / 각 군 사관학교 체제를 지켜야 한다는 쪽 (양측 근거는 검색으로 확인 필요, 후반기 장성 인사 ‘육사 배제’ 여부는 언론이 물음표로 다루는 단계)",
+      "question": "사관학교를 하나로 묶는 방안, 군 운영 효율과 각 군 전문성 중 어느 쪽을 더 무겁게 보세요?",
+      "metrics": {
+        "news_24h": 3,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "육군사관학교",
+        "trend_traffic": 1000,
+        "trend_label": "1000+",
+        "naver_month": 10
+      },
+      "links": [
+        {
+          "title": "\"육·해·공사 생도 설문은 국군사관학교 출범을 전제\" - OBS경인TV",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBRYUJubW9RTXRvdG0xTVBnbjFpaTBZbWhPMDBOZlBsLXNxOTNvVGo1WEF0SXRLaXVTV3ctOE5nUEpPSnNtS0l2bjFjd2JsVFF5OWJiS3JDLTlRTFhUbUhvSkdCTDIwdkVPeEFZdmt3?oc=5"
+        },
+        {
+          "title": "국군사관학교 통합안 넉 달 만에 번복…\"캠퍼스 쪼개기\" 논란 - 동행일보",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1PRlAzOW5uRFBqWDJMRERDdUcxcjFOYlYzNmw5TXZjckQxcWgtX1c4emZfUV8xSGRIbjRVRGZlMS0xUWdrMklXRXFELUQzZXBDeGdLRndIWnRLTkVaMjZYQlBsdzAwcTIz?oc=5"
+        },
+        {
+          "title": "‘육사만 지방으로’ 국군사관학교 안에 총동창회 반발…“청와대·국회서 궐기대회” - 헤럴드경제",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9taVN2VDZSSUpiQVZJWnc2c2wtRURGOUt3LWhKZ3J1T2otajNTMHNOVEUyU3Z5THJDbWxHRVY5SjJ2UTg1WlI0WGxaM2gwYTk1ZWQ1VmxR?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 3건, 구글 검색 급증 '육군사관학교' 1000+, 네이버 월간 검색 10회",
+      "score": 13.1
     }
   ],
-  "updated": "2026-11-15T09:36+09:00",
+  "updated": "2026-11-15T09:54+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 12499,
-        "output_tokens": 4199,
+        "input_tokens": 27232,
+        "output_tokens": 8026,
         "web_searches": 0,
-        "calls": 1,
-        "usd": 0.134
+        "calls": 2,
+        "usd": 0.2694
       }
     },
     "images": {},
-    "usd": 0.134,
-    "total_usd": 0.134,
-    "total_krw": 190,
+    "usd": 0.2694,
+    "total_usd": 0.2694,
+    "total_krw": 380,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
