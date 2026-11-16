@@ -24,9 +24,9 @@ jobs:
               return bad
           urls=sm_urls(); bad=private_in_sitemap(urls); print("전:", len(urls), "문제", len(bad))
           for u in bad[:40]: print("  ", u)
-          for st in ["off","on"]:
-              r=requests.post(f"{B}/wp-json/rankmath/v1/saveModule",headers=A,json={"module":"sitemap","state":st},timeout=60); print("module", st, r.status_code, r.text[:150]); time.sleep(4)
-          t=requests.get(f"{B}/post-sitemap.xml",headers=U,timeout=30).text
-          print("새 글 포함:", "norovirus" in t, "비공개 포함:", "olive-oil" in t, "주소 수:", len(re.findall("<loc>",t)))
-          urls=sm_urls(); bad=private_in_sitemap(urls); print("모듈 재시작 후:", len(urls), "문제", len(bad))
+          for path in ["post-sitemap.xml","sitemap_index.xml","page-sitemap.xml","robots.txt"]:
+              r=requests.get(f"{B}/{path}",headers=U,timeout=30)
+              print("hdr", path, r.status_code, dict(r.headers))
+          t=requests.get(f"{B}/sitemap_index.xml",headers=U,timeout=30).text
+          print("index:", re.sub(r"\s+"," ",t)[-700:])
           PY
