@@ -1,24 +1,20 @@
+# 점검용: tools/probe.sh 를 바꿔 올리면 실행돼요 (이 워크플로 파일은 고치지 않아요 → 글 만들기와 충돌 없음)
 name: probe
-on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: read }
+on: { push: { branches: [main], paths: ["tools/probe.sh"] } }
+permissions: { contents: write }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q -r requirements.txt
-      - run: |
-          cd engine && python3 -c "
-          import commonsense, json, requests
-          v=commonsense.vote_stats('infobay'); print('투표결과', len(v)); print('\n'.join(v[:8]))
-          db=commonsense.DB(commonsense.load_site('infobay')['app']); c=db.get('cards',{'select':'id','order':'id.desc','limit':1})[0]
-          print('샘플 rpc', requests.post(db.url+'/rpc/card_results',headers=db.h,json={'p_card_id':c['id']}).text[:600])
-          "
-          for h in sisibibinote.kr myinfobay.com; do echo "$h ads.txt: $(curl -s https://$h/ads.txt | head -c 80)"; echo "$h adsense code: $(curl -s https://$h/ | grep -c pagead2)"; done
-          echo "election noindex: $(curl -s https://sisibibinote.kr/category/election/ | grep -c noindex)"
+      - run: pip install -q -r requirements.txt beautifulsoup4
+      - run: bash tools/probe.sh
         env:
+          ALL_SECRETS: ${{ toJSON(secrets) }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          WP: ${{ secrets.WP_FORSMARTLIFE_PASS }}
+          GH_TOKEN: ${{ github.token }}
