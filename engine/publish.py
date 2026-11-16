@@ -279,7 +279,26 @@ def publish_wordpress(site, d, post, dry):
     if cat:
         body["categories"] = [cat]
     res = wp.req("POST", "/posts", json=body)
+    rank_math_meta(wp, site, res.get("id"), post)
     return {"blog": res.get("id"), "blog_url": res.get("link")}
+
+
+def rank_math_meta(wp, site, pid, post):
+    """Rank Math 'SEO 키워드(초점 키워드)'와 검색 설명 채우기. 구글 순위 신호는 아니고(구글은 키워드 메타를 안 씀),
+    Rank Math 점검 점수와 검색 결과 설명 문구에 쓰여요. 실패해도 글 발행에는 영향 없어요."""
+    if wp.dry or not pid:
+        return
+    kw = post.get("keywords") or {}
+    focus = ",".join(dict.fromkeys(k for k in [kw.get("main", "")] + kw.get("sub", [])[:4] if k))
+    meta = {k: v for k, v in {"rank_math_focus_keyword": focus, "rank_math_description": post.get("meta_description", "")}.items() if v}
+    if not meta:
+        return
+    try:
+        url = site["blog"]["url"].rstrip("/") + "/wp-json/rankmath/v1/updateMeta"
+        r = requests.post(url, headers=wp.h, json={"objectType": "post", "objectID": pid, "meta": meta}, timeout=60)
+        log(f"  Rank Math SEO 키워드·설명: {r.status_code}")
+    except Exception as e:  # noqa: BLE001
+        log(f"  Rank Math 설정 건너뜀: {e}")
 
 
 # ---------- 인스타 · 스레드 ----------
