@@ -133,6 +133,6 @@
     "ids": [
       "18110907572218549"
     ],
-    "error": "업로드 실패 403: {\"error\":{\"message\":\"Application does not have permission for this action\",\"type\":\"THApiException\",\"code\":10,\"fbtrace_id\":\"AoIUovToN-PL8Ib-1ZvB5m1\"}}"
+    "error": "업로드 실패 403: {\"error\":{\"message\":\"Application does not have permission for this action\",\"type\":\"THApiException\",\"code\":10,\"fbtrace_id\":\"AoiGE9GePYxN7BezUJFtQJC\"}}"
   }
 }
