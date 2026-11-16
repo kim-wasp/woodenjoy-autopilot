@@ -6,13 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - run: |
-          sleep 120
-          for host in sisibibinote.kr myinfobay.com; do
-            got=$(curl -s "https://$host/905b55fda81b25808ca9cbeb09d6cd87.txt"); echo "$host 키 파일: $([ "$got" = "905b55fda81b25808ca9cbeb09d6cd87" ] && echo 확인 || echo "없음($(echo $got | head -c 40))")"
-            sm=$(curl -s "https://$host/sitemap.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<[^>]*>//g' | head -500)
-            n=$(echo "$sm" | grep -c http)
-            body=$(jq -n --arg h "$host" --arg k "905b55fda81b25808ca9cbeb09d6cd87" --arg u "$sm" '{host:$h,key:$k,keyLocation:("https://"+$h+"/"+$k+".txt"),urlList:($u|split("\n")|map(select(length>0)))}')
-            code=$(curl -s -o /tmp/r -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'content-type: application/json' -d "$body")
-            echo "$host 주소 $n개 제출: $code $(head -c 200 /tmp/r)"
-          done
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q -r requirements.txt
+      - run: FORCE=1 python3 engine/publish.py content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026 blog
+        env:
+          ALL_SECRETS: ${{ toJSON(secrets) }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
