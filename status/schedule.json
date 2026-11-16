@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T22:09+09:00",
+  "updated": "2026-11-16T22:50+09:00",
   "items": [
     {
       "site": "infobay",
@@ -541,6 +541,15 @@
       "state": "planned"
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
+      "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
+      "platform": "blog",
+      "at": "2026-11-17T12:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
@@ -637,6 +646,15 @@
       "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
       "platform": "threads",
       "at": "2026-11-19T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
+      "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
+      "platform": "threads",
+      "at": "2026-11-19T19:30+09:00",
       "state": "planned"
     },
     {
