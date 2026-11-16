@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T21:09+09:00",
+  "updated": "2026-11-16T22:09+09:00",
   "items": [
     {
       "site": "infobay",
@@ -577,6 +577,15 @@
       "state": "planned"
     },
     {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
+      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+      "platform": "blog",
+      "at": "2026-11-18T08:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
@@ -619,6 +628,24 @@
       "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
       "platform": "instagram",
       "at": "2026-11-18T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
+      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+      "platform": "threads",
+      "at": "2026-11-19T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
+      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+      "platform": "instagram",
+      "at": "2026-11-19T21:00+09:00",
       "state": "planned"
     }
   ]
