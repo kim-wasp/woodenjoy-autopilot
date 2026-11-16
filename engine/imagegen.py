@@ -14,6 +14,7 @@ import os
 
 import re
 import requests
+from pathlib import Path
 from PIL import Image, ImageDraw
 
 from common import log, secret
@@ -76,7 +77,7 @@ def _save(img_bytes, out, size, realism=False):
     im.save(out, "JPEG", quality=86 if realism else 90)
 
 
-def generate(prompt, out, cfg, size=(1200, 675)):
+def generate(prompt, out, cfg, size=(1200, 675), _retry=False):
     provider = (cfg or {}).get("provider", "openai")
     if provider == "none":
         return None
@@ -130,4 +131,52 @@ def generate(prompt, out, cfg, size=(1200, 675)):
         raise SystemExit(f"알 수 없는 이미지 제공자: {provider}")
     _save(raw, out, size, realism=bool((cfg or {}).get("realism")))
     log(f"  대표 이미지 생성 ({provider})")
+    turn = orientation(out)
+    if turn:
+        if not _retry:  # 옆으로·거꾸로 그려졌으면 한 번 다시 만들어요
+            log(f"  사진이 {turn}도 돌아가 있어서 다시 만들어요")
+            return generate(prompt + " The photo must be upright: floor at the bottom, ceiling at the top, people standing vertically.", out, cfg, size, _retry=True)
+        fix_rotation(out, turn, size)
     return out
+
+
+def orientation(path):
+    """사진 방향 점검: 똑바로면 0, 아니면 똑바로 세우려고 시계 방향으로 돌려야 하는 각도(90/180/270). 점검 실패는 0."""
+    if os.environ.get("MOCK_IMAGE") or os.environ.get("MOCK_LLM"):
+        return 0
+    try:
+        import tempfile
+        import llm
+        im = Image.open(path).convert("RGB")
+        im.thumbnail((512, 512))
+        tmp = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
+        im.save(tmp, "JPEG", quality=80)
+        res = llm.ask_json("당신은 사진 방향 검수자예요. 출력은 JSON 한 덩어리.",
+                           "이 사진이 똑바로 서 있는지 봐요. 바닥, 천장, 서 있는 사람, 글자, 액자, 가구의 위아래로 판단해요. "
+                           "똑바로면 0, 옆으로 눕거나 거꾸로면 똑바로 세우기 위해 시계 방향으로 돌려야 하는 각도(90, 180, 270)를 적어요. "
+                           "위에서 내려다본 사진(탁자 위 물건 등)처럼 위아래가 원래 애매하면 0. 확실할 때만 0이 아닌 값. "
+                           '출력: {"rotate_cw": 0, "reason": "한 줄"}',
+                           model="claude-sonnet-5-5", web_search=False, max_tokens=300, images=[Path(tmp)])
+        turn = int(res.get("rotate_cw") or 0)
+        if turn in (90, 180, 270):
+            log(f"  방향 점검: {turn}도 돌아감 ({res.get('reason', '')})")
+            return turn
+    except Exception as e:  # noqa: BLE001  점검이 실패해도 글 만들기는 계속
+        log(f"  방향 점검 건너뜀: {str(e)[:100]}")
+    return 0
+
+
+def fix_rotation(path, turn, size):
+    """다시 만들어도 돌아가 있으면 직접 돌려서 원래 크기 비율로 가운데를 잘라요"""
+    im = Image.open(path).convert("RGB")
+    im = im.transpose({90: Image.ROTATE_270, 180: Image.ROTATE_180, 270: Image.ROTATE_90}[turn])
+    w, h = size
+    r = w / h
+    if im.width / im.height > r:
+        nw = int(im.height * r)
+        im = im.crop(((im.width - nw) // 2, 0, (im.width - nw) // 2 + nw, im.height))
+    else:
+        nh = int(im.width / r)
+        im = im.crop((0, (im.height - nh) // 2, im.width, (im.height - nh) // 2 + nh))
+    im.resize((w, h), Image.LANCZOS).save(path, "JPEG", quality=88)
+    log(f"  사진을 {turn}도 돌려서 바로잡았어요")
