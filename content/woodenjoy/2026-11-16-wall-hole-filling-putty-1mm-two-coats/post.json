@@ -1,0 +1,180 @@
+{
+  "id": "woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
+  "site": "woodenjoy",
+  "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+  "status": "ready",
+  "created_at": "2026-11-16T20:11+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "벽구멍 메우기",
+    "sub": [
+      "벽 보수 퍼티",
+      "월패치",
+      "석고보드 구멍",
+      "핸디코트"
+    ]
+  },
+  "brief": {
+    "reader": "액자·선반을 떼고 남은 못자국이나 석고보드 구멍을 직접 메우려는 사람",
+    "question": "벽구멍은 무엇으로, 몇 번에 나눠, 얼마나 말려 가며 메워야 하나?",
+    "answer": "작은 구멍은 퍼티, 큰 구멍은 월패치를 먼저 붙이고, 퍼티는 한 번에 1mm 이하로 얇게 바른 뒤 완전히 말려서 한 번 더 발라요(핸디코트 제조사 기준).",
+    "out_of_scope": "벽지 새로 바르기, 콘크리트 벽 구조 균열 보수, 전기 배선 작업",
+    "next_action": "구멍 크기를 재고 체크리스트대로 재료를 사기"
+  },
+  "why_this_topic": "벽구멍메우기 키워드는 네이버 월 검색 760회(정보형)로 후보 중 가장 유리해요. 최근 글(경첩·문고리·외풍·실리콘)과 겹치지 않아요. 11월이라 난방하지 않는 베란다·빈방에서 작업하면 제조사가 정한 최저 작업 온도(5℃)에 걸리는 시기이기도 해요. 웹 검색 상위 글에는 두께·건조·온도 기준이 빠져 있어서 이 부분으로 차별화했어요.",
+  "title_candidates": [
+    {
+      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "벽구멍 메우기는 얇게 두 번, 1회 1mm 넘기지 마세요",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "벽구멍 메우기 크기별 재료, 못자국은 퍼티 등구멍은 월패치",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "벽구멍 메우기, 겨울 베란다 벽은 5℃ 밑이면 미루세요",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "벽구멍 메우기 퍼티 vs 월패치, 구멍 크기로 고르세요",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "상위 글 제목에는 '수리비 10만 원', '이제 걱정 끝', 'A to Z'처럼 비용을 앞세우거나 다 풀어 준다는 약속이 많고, 한 번에 바르는 두께·건조시간·작업 온도 같은 제조사 기준은 거의 없어요. 우리 글은 '1회 1mm 이하, 2번', '24시간', '5℃ 이상'을 제목과 본문에 숫자로 넣어요.",
+  "meta_description": "못자국부터 주먹 크기 구멍까지 크기별로 퍼티·월패치·메쉬 중 무엇을 쓸지, 1회 1mm·건조 24시간·작업 온도 5℃ 이상 같은 제조사 기준과 사포 번호까지 표와 체크리스트로 정리했어요.",
+  "hero_prompt": "A casual, slightly tilted smartphone photo of a white wallpapered wall inside a Korean apartment living room. Near the center there is a rough, palm-sized broken hole in the gypsum board where a wall anchor was pulled out, with crumbled white gypsum dust and a torn wallpaper edge, and two small screw holes beside it. A picture frame leans against the wall on the floor at the bottom edge, and a plastic putty knife lies on the floor. Mixed warm ceiling light and cool daylight, slight dust and scuffs, no showroom styling, no HDR, no people, no text in the image, center area of the frame fairly plain.",
+  "thumb_text": "퍼티 한 번에\n듬뿍 바르면 금 가요",
+  "category": "",
+  "kind": "main",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "핸디코트 라이트 - Terraco Korea (건조 6~7시간, 물 5% 이내, #200 이상)",
+      "url": "https://terraco.co.kr/%ED%95%B8%EB%94%94%EC%BD%94%ED%8A%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8/"
+    },
+    {
+      "title": "핸디코트 워셔블 - Terraco Korea (건조 부족 시 얼룩, 5℃ 이하 주의)",
+      "url": "https://terraco.co.kr/%ED%95%B8%EB%94%94%EC%BD%94%ED%8A%B8-%EC%9B%8C%EC%85%94%EB%B8%94/"
+    },
+    {
+      "title": "친환경 경량퍼티 핸디코트라이트 - 맥스포인트 (두껍게 바르면 크랙)",
+      "url": "http://maxpoint.co.kr/product/친환경-경량퍼티-핸디코트라이트18kg내부용가벼움백색/863/"
+    },
+    {
+      "title": "핸디코트 퍼티 사용법, 외부용과 내부용의 차이 - interiorhub",
+      "url": "https://interiorhub.kr/%ED%95%B8%EB%94%94%EC%BD%94%ED%8A%B8-%ED%8D%BC%ED%8B%B0-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%99%B8%EB%B6%80%EC%9A%A9%EA%B3%BC-%EB%82%B4%EB%B6%80%EC%9A%A9%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%8A%94/"
+    },
+    {
+      "title": "벽 구멍 보수 패치 세트 15x15cm - GN디스트 (작업 순서)",
+      "url": "https://gndist.kr/product/%EB%B2%BD-%EA%B5%AC%EB%A9%8D-%EB%B3%B4%EC%88%98-%ED%8C%A8%EC%B9%98-%EC%84%B8%ED%8A%B8-15x15cm-%EB%B2%BD%EB%A9%94%EA%BE%B8%EB%AF%B8-%EC%84%B8%ED%8A%B8/224/display/2/"
+    },
+    {
+      "title": "보수용 퍼티 내부용 400g / 월패치 - 신성상사 (가격, 패치 크기)",
+      "url": "https://tjlee10051.cafe24.com/category/%EC%9B%94%ED%8C%A8%EC%B9%98/48/"
+    },
+    {
+      "title": "퍼티 빠데 500g 못자국 크랙 벽 구멍 보수 메꾸미 - 11번가 (월패치 10cm 1,450원)",
+      "url": "https://www.11st.co.kr/products/3318209212"
+    },
+    {
+      "title": "벽에 구멍 셀프 보수 - magi-post (주먹 크기 이상은 메쉬 테이프)",
+      "url": "https://magi-post.com/how-to-fix-hole-in-wall/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "퀴즈형",
+    "ending": "한 줄 결론",
+    "cover_hooks": [
+      "벽구멍 퍼티, 한 번에 될까?",
+      "퍼티 듬뿍 채웠는데 다음 날 금이 갔다",
+      "퍼티 1회 두께, 몇 mm까지일까?"
+    ],
+    "caption": "못자국 메운 자리에 하루 만에 금이 갔다면 두께부터 의심해 보세요.\n\n핸디코트 제조사 자료에는 1회 두께를 1mm 이하로 하고, 두꺼우면 여러 번에 나눠 바르라고 나와 있어요.\n핸디코트는 24시간 말리고, 작업하는 방은 5℃ 이상이어야 해요.\n손바닥만 한 석고보드 구멍은 월패치를 먼저 붙여요.\n\n퍼티는 두껍게 한 번보다 얇게 두 번 바르세요.\n\n#셀프인테리어 #벽구멍메우기 #퍼티 #석고보드보수 #월패치"
+  },
+  "threads": {
+    "style": "상식 뒤집기",
+    "hooks": [
+      "구멍은 꽉 채워야 안 꺼진다고?",
+      "퍼티 듬뿍 채운 다음 날 금 간 벽",
+      "못자국 하나 메우는 데 하루 넘게 걸리는 게 맞아?"
+    ],
+    "posts": [
+      "구멍은 꽉 채워야 안 꺼진다고?\n핸디코트 만드는 회사 자료 보면 한 번에 1mm 넘게 바르지 말래.\n두껍게 바르면 마르면서 금이 갈 수 있대.\n못자국 하나에 하루가 더 걸리는데, 그게 오히려 덜 망하는 길이더라. 너넨 퍼티 한 번에 끝내는 편이야?",
+      "1. 1차는 구멍 안쪽까지 눌러 채우고 얇게 펴\n2. 완전히 말려. 핸디코트는 24시간, 핸디코트 라이트는 6~7시간이야\n3. 마르면서 꺼진 자리만 얇게 2차\n4. 마르면 #220 고운 사포로 마감해. 방이 5℃ 밑이면 그날은 미뤄",
+      "구멍 크기별로 퍼티, 월패치 고르는 표는 여기 정리해 놨어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "월패치 석고보드 보수 패치",
+      "search": "월패치 석고보드 보수",
+      "after": "월패치 10cm가 1,450원 정도예요"
+    },
+    {
+      "name": "벽 보수 퍼티 내부용 (헤라 포함)",
+      "search": "벽 보수 퍼티 메꾸미",
+      "after": "헤라와 고운 사포(#200 이상)를 챙겼다"
+    }
+  ],
+  "dead_links_removed": [
+    "https://najinsc.com/product/%ED%95%B8%EB%94%94%EC%BD%94%ED%8A%B8/287"
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 7장: 아래 네 칸의 '맞힘: 2차', '틀림: 1mm'가 제목 '틀렸다면 1mm부터'와 맞지 않고 무슨 뜻인지 알기 어려움. 3장 정답(1mm 이하로 나눠 바르기 = 2차)과도 이어지지 않아 '틀림: 1mm'가 오답처럼 읽힘"
+    ],
+    "at": "2026-11-16T20:11+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 3867,
+        "output_tokens": 1117,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0009
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 40601,
+        "output_tokens": 22964,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.6617
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 32184,
+        "output_tokens": 5612,
+        "web_searches": 0,
+        "calls": 4,
+        "usd": 0.1205
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.9171,
+    "total_usd": 0.9171,
+    "total_krw": 1280,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
