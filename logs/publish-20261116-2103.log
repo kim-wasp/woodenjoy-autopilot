@@ -1,0 +1,24 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 별점 1점 리뷰 고소당할까? 불친절은 의견, 거짓은 최대 7년 → instagram
+완료: {'instagram': '17907652077354206'}
+[정치 (시시비비노트)] 조작기소 특검법 17일 국무회의 유력…21일 대구 집회 날이 거부권 마감 → threads
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 368, in publish_threads
+    c = _post(dry, f"{TH}/me/threads", data)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 314, in _post
+    raise RuntimeError(f"업로드 실패 {r.status_code}: {r.text[:300]}")
+RuntimeError: 업로드 실패 403: {"error":{"message":"Application does not have permission for this action","type":"THApiException","code":10,"fbtrace_id":"A5H6KZgNF0b9GTFy5NvsoRw"}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 457, in <module>
+    publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 418, in publish
+    res = publish_threads(site, d, post, dry)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 383, in publish_threads
+    raise RuntimeError(f"스레드 본문은 올라갔는데 댓글 권한이 없어요(토큰을 댓글 권한까지 넣어 다시 받아야 해요): {e}")
+RuntimeError: 스레드 본문은 올라갔는데 댓글 권한이 없어요(토큰을 댓글 권한까지 넣어 다시 받아야 해요): 업로드 실패 403: {"error":{"message":"Application does not have permission for this action","type":"THApiException","code":10,"fbtrace_id":"A5H6KZgNF0b9GTFy5NvsoRw"}}
+[가구·인테리어 (우드엔조이)] 방문경첩 나사 헛돌 때, 구멍 꽉 채우고 본드 굳히면 안 들어가요 → instagram
+완료: {'instagram': '18139060774656784'}
