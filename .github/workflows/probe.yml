@@ -6,29 +6,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install -q requests
       - env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
         run: |
           python3 - <<'PY'
-          import requests, re, base64, os
+          import requests, re, base64, os, time
           A={"Authorization":"Basic "+base64.b64encode(f"gracelyun28:{os.environ['WP']}".encode()).decode(),"User-Agent":"Mozilla/5.0"}
-          B="https://forsmartlife.com"
-          for sm in ["post-sitemap.xml","page-sitemap.xml","category-sitemap.xml"]:
-              r=requests.get(f"{B}/{sm}",headers={"User-Agent":"Mozilla/5.0"},timeout=30)
-              print(sm, r.status_code, r.headers.get("x-cache") or r.headers.get("cf-cache-status"), len(re.findall("<loc>",r.text)), "| cache hdr:", {k:v for k,v in r.headers.items() if 'cache' in k.lower() or 'age'==k.lower()})
-          # 비공개 글이 사이트맵에 남은 이유 확인: 404 주소 하나의 상태
-          r=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"slug":"olive-oil-health-benefits","status":"any","context":"edit","_fields":"id,status,slug"},timeout=30)
-          print("olive:", r.status_code, r.text[:200])
-          # 분류 페이지 내용
-          r=requests.get(f"{B}/category/health-routine/",headers={"User-Agent":"Mozilla/5.0"},timeout=30)
-          t=re.sub(r"<script.*?</script>|<style.*?</style>","",r.text,flags=re.S); t=re.sub(r"<[^>]+>"," ",t); t=re.sub(r"\s+"," ",t)
-          print("category page:", r.status_code, t[:900])
-          # 중복 제목 글
-          r=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"search":"봄철 피곤한 이유","status":"any","context":"edit","_fields":"id,status,slug,link"},timeout=30)
-          print("dup:", r.text[:600])
-          r=requests.get(f"{B}/spring-fatigue-cause/",headers={"User-Agent":"Mozilla/5.0"},allow_redirects=False,timeout=30)
-          print("redirect:", r.status_code, r.headers.get("location"))
+          B="https://forsmartlife.com"; U={"User-Agent":"Mozilla/5.0"}
+          def sm_urls():
+              return re.findall(r"<loc>([^<]+)</loc>", requests.get(f"{B}/post-sitemap.xml",headers=U,timeout=30).text)
+          def private_in_sitemap(urls):
+              bad=[]
+              for u in urls:
+                  if requests.head(u,headers=U,timeout=20,allow_redirects=False).status_code!=200: bad.append(u)
+              return bad
+          urls=sm_urls(); bad=private_in_sitemap(urls); print("전:", len(urls), "문제", len(bad))
+          for u in bad[:40]: print("  ", u)
+          # 옛 주소(리디렉션) 글 찾기
+          for slug in ["spring-fatigue-cause"]:
+              r=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"slug":slug,"status":"any","context":"edit","_fields":"id,status,slug,title"},timeout=30).json()
+              print("old:", r)
+          # 공개 글 하나 다시 저장 → Rank Math 사이트맵 캐시 무효화
+          pub=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"per_page":1,"context":"edit","_fields":"id,content"},timeout=30).json()[0]
+          print("touch", pub["id"], requests.post(f"{B}/wp-json/wp/v2/posts/{pub['id']}",headers=A,json={"content":pub["content"]["raw"]},timeout=60).status_code)
+          time.sleep(5)
+          urls=sm_urls(); bad=private_in_sitemap(urls); print("후:", len(urls), "문제", len(bad))
           PY
