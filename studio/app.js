@@ -106,7 +106,11 @@ async function viewReview(n) {
       toast(msg); location.hash = '#/review';
     } catch (e) { if (e.message !== 'login') toast(e.message); }
   };
-  $('#ok').onclick = () => { if (p.checks && !p.checks.ok && !confirm('점검에 실패한 글이에요. 그래도 승인할까요?')) return; act('approve', '승인했어요. 정해진 시간에 올라가요'); };
+  $('#ok').onclick = () => {
+    if ($('#notes').value.trim() && !confirm('고칠 점이 적혀 있어요. 승인하면 고치지 않고 지금 글 그대로 올라가요.\n고친 뒤 올리려면 [취소]를 누르고 [다시 만들기]를 눌러 주세요.\n그래도 그대로 승인할까요?')) return;
+    if (p.checks && !p.checks.ok && !confirm('점검에 실패한 글이에요. 그래도 승인할까요?')) return;
+    act('approve', '승인했어요. 정해진 시간에 올라가요');
+  };
   if ($('#op')) $('#op').onclick = async () => {
     try { await api('reviews', { method: 'POST', body: { n: d.pr ? d.pr.n : n, action: 'opinion', notes: $('#opinion').value, topic: p.title } }); toast('의견을 넣는 중이에요. 2~3분 뒤 블로그 탭 맨 아래에서 볼 수 있어요'); location.hash = '#/review'; } catch (e) { if (e.message !== 'login') toast(e.message); }
   };
