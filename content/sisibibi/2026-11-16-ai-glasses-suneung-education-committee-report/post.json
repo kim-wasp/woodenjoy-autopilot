@@ -1,0 +1,183 @@
+{
+  "id": "sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
+  "site": "sisibibi",
+  "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
+  "status": "draft",
+  "created_at": "2026-11-16T22:48+09:00",
+  "requested_topic": "AI 안경으로 시험 커닝 의혹…16일 국회 교육위 긴급 보고, 수능은 괜찮을까",
+  "keywords": {
+    "main": "AI 안경 수능",
+    "sub": [
+      "수능 AI 부정행위",
+      "스마트안경 수능",
+      "국회 교육위 현안보고",
+      "최교진 교육부 장관",
+      "수능 응시 제한",
+      "수능 전파 차단",
+      "초소형 카메라 부정행위"
+    ]
+  },
+  "brief": {
+    "reader": "수능을 사흘 앞두고 AI 안경 뉴스를 보고 수능날 뭐가 달라지는지, 국회에서 뭐가 나왔는지 궁금한 수험생·학부모와 정치 뉴스 독자",
+    "question": "16일 국회 교육위 보고 뒤 이번 수능에 실제로 적용되는 AI 부정행위 대책은 무엇인가?",
+    "answer": "수능은 19일 예정대로 열리고 매 교시 모든 안경을 점검하지만, 전파 차단과 응시 제한 3년 확대는 이번 수능에 적용되기 어려워요.",
+    "out_of_scope": "세무사 수석 합격자 수사 결과 예측, 스마트안경 제품 추천, 교육부 예산안 공방",
+    "next_action": "17일 교육부가 발표한 추가 대책 보도자료를 확인하고, 의료기기를 쓰는 수험생은 관할 교육청에 미리 문의하기"
+  },
+  "why_this_topic": "사장님이 주제를 지정했고, 구글 트렌드 '수능날(200+)'이 급상승 중이에요. 16일 교육위 현안보고와 17일 추가 대책 발표가 이어지는 시점이에요. 지난 글(1312곳 전담인력)의 후속으로, 국회에서 새로 나온 쟁점과 이번 수능 적용 여부를 나눠서 정리해요.",
+  "title_candidates": [
+    {
+      "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
+      "pattern": "결론 먼저"
+    },
+    {
+      "title": "AI 안경 커닝 걸리면 응시 제한 1년, 3년 추진은 이번 수능엔 적용 안 돼",
+      "pattern": "숫자·기준"
+    },
+    {
+      "title": "AI 안경, 수능날 쓰기만 해도 무효…수험생이 헷갈리는 4가지",
+      "pattern": "실수·손해"
+    },
+    {
+      "title": "AI 안경 수능 3일 전, 보청기 쓰는 수험생은 뭘 확인해야 하나",
+      "pattern": "대상·상황"
+    },
+    {
+      "title": "AI 안경 처벌 ‘10년 제한’ vs ‘형평성’…16일 교육위에서 갈린 지점",
+      "pattern": "비교"
+    }
+  ],
+  "title_research": "상위 제목들은 'D-3 비상', '국회 교육위 현안보고', '장관 100% 못 잡아'처럼 일정이나 발언 한 줄만 담고 있어요. 우리는 이번 수능에 실제로 적용되는 것(매 교시 점검, 착용만 해도 무효)과 안 되는 것(전파 차단, 응시 제한 3년)을 나눠서 정리해요.",
+  "meta_description": "16일 국회 교육위 보고 정리. 매 교시 안경 전수 점검, 착용만 해도 무효예요. 응시 제한 1년→3년은 법을 바꿔야 해서 이번 수능엔 적용되지 않아요. 여야 쟁점과 수험생 체크리스트까지 담았어요.",
+  "hero_prompt": "An empty Korean high school exam classroom in soft morning light, rows of wooden desks with blank answer sheets, a single pair of ordinary eyeglasses resting on one desk in the foreground, calm and tense atmosphere, documentary photo style, no people, no text, no logos",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "kind": "",
+  "summary": [],
+  "conclusion": "수능은 19일 예정대로 열려요. 안경은 매 교시 점검하지만, 초소형 카메라는 장관도 100% 적발은 어렵다고 했어요.",
+  "opinion": "비단 수능이나 몇몇 자격증 시험에 문제가 아닐것이다.\n사회 전반에 퍼진 공부, 학습에 대한 인식이 이렇게까지 바뀌었다는 것에 교육계, 교육자, 교육학자들은 위기감을 가져야할 것이다.\n기술이 이만큼 발전하는 동안 교육은 그만큼 아무것도 하지 않았다는 것...\n요즘 시대에 아무것도 하지 않았다는 것은 가만히 있었던게 아니고 그만큼 퇴보했다는 얘기다.\n우리가 수학 한문제에 아이들을 몰아가고 사지로 몰아넣는 동안 무엇을 했느냐\n그저 어려운 문제, 킬러 문항들만 만들어내느라 골머리를 썪혔지, 사회가 어떻게 바뀌어 가고 있는지에 대해서는 외면하고 있었던 결과 아니겠는가.\n우선 당장 며칠 앞으로 다가온 수능은......어쩔수 없다. 누구의 책임이냐고 한다면 누구에게도 책임은 없지만 모두의 책임이라고 봐야지...사회를 이렇게 만들어온 어른들의...\n.\n정치적인 얘기를 한마디 덧붙인다면 교육부 장관의 수준이 지금 이 정권의 수준이라고 본다. 무슨 얘기를 하는지도 모르고 알려고도 하지 않고 어쩔수 없다는 식의 태도는 그사람을 뽑아놓은 이재명의 태도와도 어딘가 비슷하다고 느끼는건 나뿐인건가?",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "이투데이 - 수능 D-3일 ‘AI안경 부정행위’ 비상...국회 교육위, 오늘 현안보고",
+      "url": "https://www.etoday.co.kr/news/view/2648350"
+    },
+    {
+      "title": "네이트뉴스 - 국회 교육위, 16일 '수능 AI 안경 부정행위 대책' 긴급 현안보고 받는다",
+      "url": "https://news.nate.com/view/20261115n10956"
+    },
+    {
+      "title": "이투데이 - AI 안경 금지만으론 못 막는다…국내 시험장도 ‘판별 역량’ 시험대",
+      "url": "https://www.etoday.co.kr/news/view/2648628"
+    },
+    {
+      "title": "파이낸셜뉴스(뉴스1) - 신종 커닝 수법에 수능 '초비상'인데…교육부는 AI 안경 대응만",
+      "url": "https://www.fnnews.com/news/202611161107364828"
+    },
+    {
+      "title": "데일리안 - 교육장관, '수능 AI 부정행위' 우려에 매 교시 모든 안경 전수 점검",
+      "url": "https://www.dailian.co.kr/news/view/1715505/%EA%B5%90%EC%9C%A1%EC%9E%A5%EA%B4%80-%EC%88%98%EB%8A%A5-AI-%EB%B6%80%EC%A0%95%ED%96%89%EC%9C%84-%EC%9A%B0%EB%A0%A4-%EB%A7%A4-2026"
+    },
+    {
+      "title": "서울경제 - “수능 연기 없다” 못 박은 교육부…AI 부정행위 추가 대책 검토",
+      "url": "https://m.sedaily.com/article/20114848"
+    },
+    {
+      "title": "서울경제 - 교육장관 “AI 커닝 100% 잡을 자신 없다”",
+      "url": "https://m.sedaily.com/article/20115139"
+    },
+    {
+      "title": "서울경제 - “시험장 전파 차단”…수능 사흘 남기고 늑장 대응",
+      "url": "https://m.sedaily.com/article/20115047"
+    },
+    {
+      "title": "울산신문 - 여야, 교육위서 'AI 수능 부정' 한목소리 우려",
+      "url": "https://www.ulsanpress.net/news/articleView.html?idxno=586923"
+    },
+    {
+      "title": "TV서울 - 여야, 교육위서 'AI수능커닝' 한목소리 우려…육안식별 되겠나",
+      "url": "https://www.tvseoul.kr/news/article.html?no=80078"
+    },
+    {
+      "title": "에듀프레스 - 박정훈 “AI 커닝 막을수 있나?” 최교진 “아니요”",
+      "url": "https://www.edupress.kr/news/articleView.html?idxno=30631"
+    },
+    {
+      "title": "MTN - 수능 사흘 앞 'AI 부정행위' 비상…현장 혼선·제도적 한계 도마 위",
+      "url": "https://news.mtn.co.kr/article/2026111615160393824"
+    },
+    {
+      "title": "데일리안 - 수능 시험장 전파 차단 안 한다…교육부 법적·기술적 한계",
+      "url": "https://www.dailian.co.kr/news/view/1715795/%EC%88%98%EB%8A%A5-%EC%8B%9C%ED%97%98%EC%9E%A5-%EC%A0%84%ED%8C%8C-%EC%B0%A8%EB%8B%A8-%EC%95%88-%ED%95%9C%EB%8B%A4%EA%B5%90%EC%9C%A1%EB%B6%80-2026"
+    },
+    {
+      "title": "한국일보 - 수능날 '전파 차단' 검토... 교육부 장관 과기부와 협의해 17일 발표",
+      "url": "https://www.hankookilbo.com/news/article/A2026111611500003978"
+    },
+    {
+      "title": "뉴스핌 - 차지호 의원 AI 안경은 포스트 학력사회 신호",
+      "url": "https://www.newspim.com/news/view/20261116001087"
+    },
+    {
+      "title": "M이코노미뉴스 - 수능 D-3, 여야 AI 안경 부정행위 대책 질타",
+      "url": "https://www.m-economynews.com/news/article.html?no=73115"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "편 가르기",
+    "hooks": [
+      "AI 커닝 걸리면 몇 년 막을래?",
+      "지금은 걸려도 1년 지나면 또 봐",
+      "안경테 만지는 애, 바로 잡을래?"
+    ],
+    "posts": [
+      "AI 커닝 걸리면 몇 년 막을래?\n지금 수능은 부정행위 걸려도 다음 해 한 번만 못 보는 거더라.\n16일 국회에서 이걸로 갈렸어. 10년은 막아야 한다는 쪽이랑, 수능 한 번을 인생 걸린 시험으로 더 만들면 안 된다는 쪽.\n넌 3년파야, 10년파야?",
+      "16일 국회 교육위 기준으로 정리해 봤어\n1. 지금은 수능 부정행위면 그 시험 무효에 다음 해 응시만 막혀. 스마트안경은 쓰고만 있어도 쓴 걸로 쳐\n2. 교육부는 법을 바꿔서 3년 이상으로 늘리겠대. 근데 법을 고쳐야 하는 거라 이번 수능엔 적용 안 돼\n3. 민주당 쪽 일부는 5~10년, 개혁신당 이주영 의원은 다른 시험이랑 형평성 문제가 생긴다고 반대했어",
+      "수능날 안경 검사는 어떻게 하는지, 이번에 되는 거랑 안 되는 거 표로 정리해 놨어 {LINK}"
+    ],
+    "topic_tag": "수능"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "제목: 근거 없는 과장 표현 '100%'"
+    ],
+    "at": "2026-11-16T22:48+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 27255,
+        "output_tokens": 23866,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.6263
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 481,
+        "output_tokens": 78,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0017
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.7621,
+    "total_usd": 0.7621,
+    "total_krw": 1070,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
