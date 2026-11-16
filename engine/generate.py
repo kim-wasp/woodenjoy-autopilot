@@ -75,6 +75,8 @@ CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
 - slides 6~8장. 1장째는 표지(가장 강한 후킹, "big": true), 마지막 장은 저장·유입 안내.
 - 장마다 새 정보 하나. 같은 문장 반복 금지.
 - 한 장에 들어가는 양이 정해져 있어요: 제목 3줄이면 sub 1줄 + 항목 2개까지, 제목 2줄이면 sub 2줄 + 항목 3개까지. 넘치면 계정명 자리를 침범해 점검에서 떨어져요.
+  가장 많이 걸리는 실수(지금까지 30번 넘게): 본문이 계정명 자리까지 내려오는 것. 장마다 제목 줄 수 + sub 줄 수 + 항목 수 합계를 6 이하로, 항목의 d·s 는 정해진 글자 수 안에서 한 줄로, tip 은 꼭 필요할 때만.
+  badge 는 8자 이내 한 단어(예: 실수 1)로만, 표지와 마지막 장에는 badge 를 쓰지 않아요(계정명 자리와 겹쳐요).
 - title: 2~3줄(\\n), 한 줄 10자 이내, 강조할 말은 *별표*로. sub: 1~2줄, 한 줄 18자 이내. badge(선택): 16자 이내.
 - body 종류(다른 종류를 섞어 쓰세요):
   {"kind":"steps","items":[{"d":"한 줄 14자 이내","s":"보충 20자 이내(선택)"}] 2~4개,"tip":"선택, 40자 이내"}
@@ -143,7 +145,7 @@ def schema(site):
             parts += ['"meta_description": "검색 결과 설명 80~150자"',
                       '"article_md": "짧고 쉬운 글 마크다운. 구조: ## 소제목(질문형, 아주 짧게) 3~4개, 각 2~4문장(쉬운 말, 중학생도 알게, 문장 짧게) → '
                       '(편집자 견해가 주어졌을 때만) ## 편집자 생각 → ## 더 자세히. 더 자세히는 서술형 문단 없이 자료 나열식으로 1,000~1,600자: 표 1~2개(숫자 비교·쟁점 비교), ### 작은 제목 아래 짧은 항목 목록(핵심 사실, 쟁점별 양쪽 근거, 관련 법·제도, 일정, 용어 풀이 중 이슈에 맞는 것), 항목마다 한 줄. '
-                      '## 더 자세히 위쪽(핵심) 합계 600~1000자. 첫 소제목 앞 도입 문단 없이 바로 시작. 대표 사진은 프로그램이 넣으니 [[hero]] 쓰지 말 것. 참고 자료 목록은 쓰지 말고 sources 에만"']
+                      '## 더 자세히 위쪽(핵심) 합계 600~1000자 (1,200자를 넘으면 점검 실패 — 자주 넘쳐요. 쓰고 나서 세어 보고, 넘치면 숫자·표·배경은 더 자세히로 옮기세요). 첫 소제목 앞 도입 문단 없이 바로 시작. 대표 사진은 프로그램이 넣으니 [[hero]] 쓰지 말 것. 참고 자료 목록은 쓰지 말고 sources 에만"']
         else:
             parts += ['"meta_description": "검색 결과 설명 80~150자"',
                   f'"article_md": "짧고 알아보기 쉬운 글 마크다운 {r.get("min_chars", 1500)}~{r.get("max_chars", 3000)}자. 서술형 긴 문단 금지, 문장은 짧게, 쉬운 말. 구조: '
@@ -279,6 +281,38 @@ SEARCH_GUIDE = """[검색에서 클릭되고 인용되는 글 구조 — 모든 
 8. 끝: 결산 문장 대신, 독자가 다음에 할 행동 하나와 이어 읽을 관련 글 하나."""
 
 
+# ---------- 점검 실패 기록 → 다음 글에서 처음부터 피하기 ----------
+# 글마다 post.json 의 check_history 에 남겨요 (여러 승인 요청이 같은 파일을 고쳐 충돌하지 않게)
+_CHECK_HIST = []
+
+
+def _issue_kind(issue):
+    """'블로그: 핵심 부분이 1293자 (…)' → '블로그: 핵심 부분이 N자 (…)' 처럼 숫자를 지워 같은 종류로 묶어요"""
+    return re.sub(r"\d[\d,]*", "N", issue)[:120]
+
+
+def record_check_failures(site_id, issues):
+    now = now_kst().isoformat(timespec="minutes")
+    _CHECK_HIST.extend({"at": now, "kind": _issue_kind(i), "text": i[:200]} for i in issues)
+
+
+def check_lessons(site_id, days=45, top=8):
+    """최근 이 사이트 글들에서 자주 걸린 점검 항목 (2번 이상) → 글쓰기 지시에 넣어요"""
+    from collections import Counter
+    from datetime import timedelta
+    since = (now_kst() - timedelta(days=days)).isoformat()
+    cnt = Counter()
+    for d in post_dirs(site_id):
+        for r in load_json(d / "post.json", {}).get("check_history") or []:
+            if r.get("at", "") >= since:
+                cnt[r["kind"]] += 1
+    common = [(k, n) for k, n in cnt.most_common(top) if n >= 2]
+    if not common:
+        return ""
+    return ("[최근 점검에서 자주 걸린 실수 — 이번에는 처음부터 피해서 쓰세요 (고치는 데 토큰이 또 들어요)]\n"
+            + "\n".join(f"- {k} (최근 {n}번)" for k, n in common))
+
+
 def build_prompt(site, topic, notes, view=None):
     blog = blog_kind(site) != "none"
     m = site.get("monetization") or {}
@@ -309,6 +343,7 @@ def build_prompt(site, topic, notes, view=None):
     import trends as _tr
     p.append(_tr.naver_trends_block(site["id"]))
     p.append(_tr.ranks_block(site["id"]))
+    p.append(check_lessons(site["id"]))
     if topic:
         p.append(f"[주제/제목 지정]\n{topic}\n(이 주제로 쓰되 제목은 검색 키워드와 후킹을 살려 다듬어도 됩니다)")
     else:
@@ -970,6 +1005,7 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
         if not issues:
             break
         log("  점검에 걸림 → 고치기:\n   - " + "\n   - ".join(issues))
+        record_check_failures(site["id"], issues)
         if attempt == 2 or os.environ.get("MOCK_LLM"):
             break
         # 비용 절약: 걸린 항목(최상위 키)만 다시 받아서 합쳐요 (전체를 다시 쓰지 않음)
@@ -1004,6 +1040,9 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
             (d / "article.md").write_text(new, encoding="utf-8")
     post = load_json(d / "post.json")
     post["checks"] = {"ok": not issues, "issues": issues, "at": now_kst().isoformat(timespec="minutes")}
+    if _CHECK_HIST:
+        post["check_history"] = (post.get("check_history") or []) + _CHECK_HIST[:]
+        _CHECK_HIST.clear()
     if view:
         post["opinion"] = view
     post["cost"] = usage_cost(prev_cost)

@@ -132,5 +132,12 @@
     "blog": "posts/2026-11-12-choi-min-hee-hyena-remark-apology-photo-journalist",
     "blog_url": "https://sisibibinote.kr/posts/choi-min-hee-hyena-remark-apology-photo-journalist/",
     "blog_at": "2026-11-12T12:54:57+09:00"
-  }
+  },
+  "check_history": [
+    {
+      "at": "2026-11-12T08:13+09:00",
+      "kind": "블로그: 핵심 부분이 N자 (짧고 쉽게 N자 이내로)",
+      "text": "블로그: 핵심 부분이 1310자 (짧고 쉽게 1200자 이내로)"
+    }
+  ]
 }

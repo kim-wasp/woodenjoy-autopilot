@@ -128,5 +128,12 @@
     "blog": "posts/2026-11-09-ppp-rally-impeachment-after-special-counsel-bill",
     "blog_url": "https://sisibibinote.kr/posts/ppp-rally-impeachment-after-special-counsel-bill/",
     "blog_at": "2026-11-09T12:01:51+09:00"
-  }
+  },
+  "check_history": [
+    {
+      "at": "2026-11-08T11:14+09:00",
+      "kind": "블로그: 핵심 부분이 N자 (짧고 쉽게 N자 이내로)",
+      "text": "블로그: 핵심 부분이 1220자 (짧고 쉽게 1200자 이내로)"
+    }
+  ]
 }

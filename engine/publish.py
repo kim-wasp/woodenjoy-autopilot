@@ -454,4 +454,11 @@ def indexnow(site, urls):
 TEST = "--test" in sys.argv  # 네이버 비공개 시험: 제목 앞 [시험], 기록 안 남김
 
 if __name__ == "__main__":
-    publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+    try:
+        publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+    except RuntimeError as e:
+        # 토큰 권한 문제는 사장님이 토큰을 다시 받아야 풀려요. 30분마다 실패 메일이 가지 않게 경고만 남기고 넘어가요
+        if "댓글 권한" in str(e):
+            print(f"::warning::{e}")
+            sys.exit(0)
+        raise

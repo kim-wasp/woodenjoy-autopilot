@@ -133,5 +133,12 @@
     "blog": "posts/2026-11-14-president-approval-39-gallup-party-gap-margin-of-e",
     "blog_url": "https://sisibibinote.kr/posts/president-approval-39-gallup-party-gap-margin-of-e/",
     "blog_at": "2026-11-14T12:01:50+09:00"
-  }
+  },
+  "check_history": [
+    {
+      "at": "2026-11-13T23:03+09:00",
+      "kind": "블로그: 핵심 부분이 N자 (짧고 쉽게 N자 이내로)",
+      "text": "블로그: 핵심 부분이 1352자 (짧고 쉽게 1200자 이내로)"
+    }
+  ]
 }
