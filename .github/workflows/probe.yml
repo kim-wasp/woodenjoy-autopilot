@@ -13,7 +13,10 @@ jobs:
       - run: pip install -q -r requirements.txt beautifulsoup4
       - run: bash tools/probe.sh
         env:
-          ALL_SECRETS: ${{ toJSON(secrets) }}
+          THREADS_TOKEN_SISIBIBI: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
+          THREADS_APP_ID: ${{ secrets.THREADS_APP_ID }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          GH_PAT: ${{ secrets.GH_PAT }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           WP: ${{ secrets.WP_FORSMARTLIFE_PASS }}

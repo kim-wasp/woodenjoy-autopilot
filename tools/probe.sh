@@ -1,8 +1,7 @@
 #!/bin/bash
 # 시시비비 스레드: 비밀키에 넣은 주소(code)를 장기 토큰으로 바꿔 저장하고 권한 확인
-V=$(echo "$ALL_SECRETS" | jq -r '.THREADS_TOKEN_SISIBIBI // empty')
-APP_ID=$(echo "$ALL_SECRETS" | jq -r '.THREADS_APP_ID // empty'); APP_SECRET=$(echo "$ALL_SECRETS" | jq -r '.THREADS_APP_SECRET // empty')
-export GH_TOKEN=$(echo "$ALL_SECRETS" | jq -r '.GH_PAT // empty')
+V="$THREADS_TOKEN_SISIBIBI"; APP_ID="$THREADS_APP_ID"; APP_SECRET="$THREADS_APP_SECRET"
+export GH_TOKEN="$GH_PAT"
 echo "::add-mask::$V"
 echo "형태: 길이 ${#V}, code= 포함 $(echo "$V" | grep -c code=)"
 if echo "$V" | grep -q code=; then
