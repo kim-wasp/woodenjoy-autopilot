@@ -24,11 +24,11 @@ jobs:
               return bad
           urls=sm_urls(); bad=private_in_sitemap(urls); print("전:", len(urls), "문제", len(bad))
           for u in bad[:40]: print("  ", u)
-          for q in ["", "?x=1"]:
-              r=requests.get(f"{B}/post-sitemap.xml{q}",headers=U,timeout=30)
-              print("sm", q, r.status_code, len(re.findall("<loc>",r.text)), "olive" in r.text, r.headers.get("last-modified"), r.text[-200:].replace("\n"," "))
-          r=requests.get(f"{B}/wp-json/wp-super-cache/v1/settings",headers=A,timeout=30); print("wpsc settings", r.status_code, r.text[:300])
-          r=requests.post(f"{B}/wp-json/wp-super-cache/v1/cache",headers=A,json={"wp_delete_cache":True},timeout=60); print("wpsc delete", r.status_code, r.text[:200])
-          time.sleep(3)
-          urls=sm_urls(); bad=private_in_sitemap(urls); print("캐시삭제 후:", len(urls), "문제", len(bad))
+          t=requests.get(f"{B}/post-sitemap.xml",headers=U,timeout=30).text
+          for m in re.finditer(r"<url>(.*?)</url>", t, re.S):
+              if "olive-oil" in m.group(1) or "iron" in m.group(1): print("entry:", re.sub(r"\s+"," ",m.group(1))[:300])
+          r=requests.get(f"{B}/wp-json/wp/v2/posts/1520",headers=A,params={"context":"edit","_fields":"id,slug,modified"},timeout=30).json(); print("1520", r)
+          print("1520 in sitemap:", r["slug"] in t, re.search(r[ "slug"]+r"/</loc>\s*<lastmod>([^<]+)", t).group(1) if r["slug"] in t else "")
+          r=requests.get(f"{B}/wp-json/wp/v2/posts/880",headers=A,params={"context":"edit","_fields":"id,status,modified,date"},timeout=30).json(); print("880", r)
+          r=requests.get(f"{B}/wp-json/rankmath/v1/getHead",headers=A,params={"url":f"{B}/olive-oil-health-benefits/"},timeout=30); print("head", r.status_code, r.text[:200])
           PY
