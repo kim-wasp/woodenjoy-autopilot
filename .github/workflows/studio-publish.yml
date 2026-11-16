@@ -11,6 +11,7 @@ on:
       branch: { description: "(수동 올리기) 글이 있는 가지. 비우면 예약 확인만", required: false }
       platform: { description: "(수동 올리기) blog / instagram / threads", required: false, default: "blog" }
       test: { description: "(시험) yes 면 네이버 비공개·기록 안 함", required: false, default: "" }
+      force: { description: "(다시 올리기) 1 이면 이미 올라간 글도 다시 올려요 (사진 교체 등)", required: false, default: "" }
 permissions:
   contents: write
 concurrency: publish
@@ -48,6 +49,7 @@ jobs:
         if: steps.due.outputs.any == 'yes'
         env:
           # 새 사이트 비밀키를 추가하면 여기에도 한 줄 추가해요
+          FORCE: ${{ github.event.inputs.force }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
