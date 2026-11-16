@@ -1,16 +1,34 @@
 name: probe
 on: { push: { branches: [main], paths: [".github/workflows/probe.yml"] } }
-permissions: { contents: write }
+permissions: { contents: read }
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q requests beautifulsoup4
-      - run: python3 tools/site_audit.py sisibibinote.kr myinfobay.com forsmartlife.com
-      - run: |
-          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
-          git add status/audit/site_audit.json && git commit -qm "사이트 전체 점검" && git pull -q --rebase && git push -q || true
+      - run: pip install -q requests
+      - env: { WP: "${{ secrets.WP_FORSMARTLIFE_PASS }}" }
+        run: |
+          python3 - <<'PY'
+          import requests, re, base64, os
+          A={"Authorization":"Basic "+base64.b64encode(f"gracelyun28:{os.environ['WP']}".encode()).decode(),"User-Agent":"Mozilla/5.0"}
+          B="https://forsmartlife.com"
+          for sm in ["post-sitemap.xml","page-sitemap.xml","category-sitemap.xml"]:
+              r=requests.get(f"{B}/{sm}",headers={"User-Agent":"Mozilla/5.0"},timeout=30)
+              print(sm, r.status_code, r.headers.get("x-cache") or r.headers.get("cf-cache-status"), len(re.findall("<loc>",r.text)), "| cache hdr:", {k:v for k,v in r.headers.items() if 'cache' in k.lower() or 'age'==k.lower()})
+          # 비공개 글이 사이트맵에 남은 이유 확인: 404 주소 하나의 상태
+          r=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"slug":"olive-oil-health-benefits","status":"any","context":"edit","_fields":"id,status,slug"},timeout=30)
+          print("olive:", r.status_code, r.text[:200])
+          # 분류 페이지 내용
+          r=requests.get(f"{B}/category/health-routine/",headers={"User-Agent":"Mozilla/5.0"},timeout=30)
+          t=re.sub(r"<script.*?</script>|<style.*?</style>","",r.text,flags=re.S); t=re.sub(r"<[^>]+>"," ",t); t=re.sub(r"\s+"," ",t)
+          print("category page:", r.status_code, t[:900])
+          # 중복 제목 글
+          r=requests.get(f"{B}/wp-json/wp/v2/posts",headers=A,params={"search":"봄철 피곤한 이유","status":"any","context":"edit","_fields":"id,status,slug,link"},timeout=30)
+          print("dup:", r.text[:600])
+          r=requests.get(f"{B}/spring-fatigue-cause/",headers={"User-Agent":"Mozilla/5.0"},allow_redirects=False,timeout=30)
+          print("redirect:", r.status_code, r.headers.get("location"))
+          PY
