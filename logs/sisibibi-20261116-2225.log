@@ -1,0 +1,12 @@
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: AI 안경으로 시험 커닝 의혹…16일 국회 교육위 긴급 보고, 수능은 괜찮을까
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 핵심 부분이 1293자 (짧고 쉽게 1200자 이내로)
+   - 블로그: 근거 없는 과장 표현 '100%'
+   - 스레드: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 핵심 부분이 1272자 (짧고 쉽게 1200자 이내로)
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정: Claude+사진 약 1,130원 ($0.804)
+완료: content/sisibibi/2026-11-16-ai-glasses-cheating-education-committee-report-sun · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-16-ai-glasses-cheating-education-committee-report-sun
