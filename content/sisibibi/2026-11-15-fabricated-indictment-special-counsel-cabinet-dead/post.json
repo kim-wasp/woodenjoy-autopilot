@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-15-fabricated-indictment-special-counsel-cabinet-dead",
   "site": "sisibibi",
   "title": "조작기소 특검법 17일 국무회의 유력…21일 대구 집회 날이 거부권 마감",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-15T09:44+09:00",
   "requested_topic": "조작기소 특검법(국힘 '탈옥법') 다음 주 국무회의로…부산 이어 21일 대구 장외집회",
   "keywords": {
@@ -127,12 +127,12 @@
   "published": {
     "blog": "posts/2026-11-15-fabricated-indictment-special-counsel-cabinet-dead",
     "blog_url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-cabinet-dead/",
-    "blog_at": "2026-11-15T12:01:52+09:00"
-  },
-  "threads_progress": {
-    "ids": [
-      "18110907572218549"
+    "blog_at": "2026-11-15T12:01:52+09:00",
+    "threads": [
+      "18110907572218549",
+      "18128172653012298",
+      "18112490861350179"
     ],
-    "error": "업로드 실패 403: {\"error\":{\"message\":\"Application does not have permission for this action\",\"type\":\"THApiException\",\"code\":10,\"fbtrace_id\":\"AoiGE9GePYxN7BezUJFtQJC\"}}"
+    "threads_at": "2026-11-16T23:34:29+09:00"
   }
 }
