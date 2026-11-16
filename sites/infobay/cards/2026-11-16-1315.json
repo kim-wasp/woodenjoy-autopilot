@@ -1,0 +1,117 @@
+{
+  "created": "2026-11-16T13:15+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "주차장 빈자리에 물건을 놓아 자리를 맡아두면 안 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "주차 공간에 쇼핑백을 놓아 자리를 맡는 행동이 온라인에 공개돼 논란이 됐다. 이달 2일에는 고3 아들을 데리러 간다며 상자로 자리를 맡아둔 사례도 SNS에 올라와 비난을 받았다.",
+      "source": {
+        "title": "사람 서 있으면 박제되니까...이젠 쇼핑백으로 주차 자리 맡는 신종 빌런들",
+        "url": "https://www.insight.co.kr/news/582090"
+      },
+      "why": "댓글에는 신고하라는 반응과 상식 밖이라는 반응이 많았습니다. 다만 '가족을 태우러 가는 중'처럼 사정이 있으면 어떠냐는 쪽도 있을 수 있어, 사정 여부로 나뉘는지 투표로 볼 만합니다. 이 부분은 편집자 추정입니다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "부정행위 우려가 크면 시험 일정을 미뤄서라도 대책을 세워야 한다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "수능을 앞두고 평가원 게시판에 AI 부정행위 방지 대책을 촉구하는 수험생·학부모의 글이 다수 올라왔다. 연기를 직접 요구하는 제목의 글도 등장했다.",
+      "source": {
+        "title": "\"제발 수능 연기해 주세요\"…AI 부정 논란에 수험생도 발칵",
+        "url": "https://view.asiae.co.kr/article/2026111608201324219"
+      },
+      "why": "시험 공정성에 대한 불안이 연기 요구로 이어졌다는 해석이 있습니다. 반면 연기만으로는 근본 해결책이 될 수 없다는 반론도 나옵니다. 연기 여부를 정하는 권한은 교육부에 있습니다. 정치권 공방이 아니라 '불안 vs 일정 안정성'만 묻도록 문장을 일반화했습니다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "상사와 단둘이 식사할 땐 이어폰을 빼는 게 맞다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "한 신입이 사무실에서 상사와 밥을 먹으면서도 양쪽 귀에 이어폰을 꽂고 개인 영상을 봤다. 이 신입은 입사 한 달 만에 퇴사했고, 사연이 온라인에서 화제가 됐다.",
+      "source": {
+        "title": "\"일만 잘하면 그만\"이라는 신입...상사와 단둘이 식사에 이어폰 끼고 영상 시청 [어떻게 생각하세요]",
+        "url": "https://fnnews.com/news/202611111528225995"
+      },
+      "why": "다수 누리꾼은 업무 능력과 별개로 기본적인 배려가 부족하다고 봤습니다. 한편 이 신입은 지각 없이 일찍 출근했고 업무 성과도 상위권이었습니다. 그래서 '일만 잘하면 식사 태도는 개인 영역'이라는 입장과 맞섭니다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "비싼 값을 냈다면 서비스에 더 높은 기준을 요구해도 된다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "항공 일등석에서 해물짬뽕을 주문했는데 면과 국물 위주로 나왔다는 후기가 퍼졌다. 글쓴이는 기내식 품질과 승객 응대에 대한 고객의견(VOC)을 접수했다. 비교 사진은 최초 게시처와 촬영 항공편이 확인되지 않았습니다.",
+      "source": {
+        "title": "‘퍼스트 분식집?’ 대한항공 일등석 짬뽕 사진에 누리꾼 갑론을박",
+        "url": "https://newsfield.net/%ED%8D%BC%EC%8A%A4%ED%8A%B8-%EB%B6%84%EC%8B%9D%EC%A7%91-%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5-%EC%9D%BC%EB%93%B1%EC%84%9D-%EC%A7%AC%EB%BD%95-%EC%82%AC%EC%A7%84%EC%97%90-%EB%88%84/"
+      },
+      "why": "일등석 가격에 걸맞은 서비스를 기대할 만하다는 의견이 나왔습니다. 그 자리에서 바로 말했어야 한다는 의견에는, 다른 승객이 보는 곳에서 문제 제기하기 부담스럽다는 답이 달렸습니다. 인사와 음식 문제를 따로 봐야 한다는 의견도 있었습니다. 가격이 곧 기준이 되는지가 쟁점입니다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "기념일 선물은 모바일 선물하기로 보내도 성의 없는 게 아니다",
+        "track": "NORM",
+        "category": "돈",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "빼빼로데이인 11일, 카카오톡 선물하기 프로모션 페이지에 접속 대기자가 한때 35만 명을 넘었다. 지난해 전체 이용은 약 1억 9000만 건이었고, 빼빼로데이가 연중 모바일 선물 교환이 가장 활발했던 날이었다.",
+      "source": {
+        "title": "빼빼로가 뭐길래…카카오톡 선물하기, 한때 35만명 대기",
+        "url": "https://www.hankyung.com/article/2026111112867"
+      },
+      "why": "기사는 접속 지연을 다룬 트렌드 기사이고, 모바일 선물의 예의 논쟁을 직접 다루지는 않습니다. '편하고 부담 적다'와 '직접 건네야 정성'으로 세대·관계별 차이가 날 수 있다는 건 편집자 추정입니다.",
+      "status": "pending"
+    }
+  ]
+}
