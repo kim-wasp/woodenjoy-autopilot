@@ -185,9 +185,11 @@ def check(site, post, article_md=None):
         issues += [f"스레드: {x}" for x in threads_style(th, (post.get("threads") or {}).get("topic_tag"))]
         texts["스레드"] = "\n".join(th)
 
+    # 출처(기사 제목 등)에 그대로 있는 말이면 인용이라 과장으로 보지 않아요 (예: 장관 발언 '100% 못 잡아')
+    cited = " ".join(str(x.get("title", "")) for x in post.get("sources") or [] if isinstance(x, dict)).lower()
     for label, text in texts.items():
         for w in HYPE:
-            if w.lower() in text.lower():
+            if w.lower() in text.lower() and w.lower() not in cited:
                 issues.append(f"{label}: 근거 없는 과장 표현 '{w}'")
         for w in MEMO:
             if w in text and not (w == "{LINK}" and label == "스레드"):
