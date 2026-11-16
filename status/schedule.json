@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T10:57+09:00",
+  "updated": "2026-11-16T12:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -462,16 +462,6 @@
       "url": "https://forsmartlife.com/norovirus-symptoms-prevention-disinfection/"
     },
     {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
-      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
-      "platform": "blog",
-      "at": "2026-11-16T07:01:46+09:00",
-      "state": "done",
-      "url": "https://myinfobay.com/blog/funeral-condolence-etiquette-mistakes-2026"
-    },
-    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
@@ -482,13 +472,24 @@
       "url": null
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
+      "title": "장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번",
+      "platform": "blog",
+      "at": "2026-11-16T11:53:32+09:00",
+      "state": "done",
+      "url": "https://myinfobay.com/blog/funeral-condolence-etiquette-mistakes-2026"
+    },
+    {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-15-suneung-ai-glasses-cheating-1312-sites-tax-account",
       "title": "수능 AI 안경 부정행위, 1312곳 눈으로 본다…세무사 수석은 카메라",
       "platform": "blog",
-      "at": "2026-11-16T12:00+09:00",
-      "state": "planned"
+      "at": "2026-11-16T12:01:51+09:00",
+      "state": "done",
+      "url": "https://sisibibinote.kr/posts/suneung-ai-glasses-cheating-1312-sites-tax-account/"
     },
     {
       "site": "infobay",
