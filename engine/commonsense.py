@@ -209,6 +209,38 @@ def insert(site_id):
     log(f"앱에 카드 {n}개 추가")
 
 
+def vote_stats(site_id, n=40, min_votes=20):
+    """우리 앱에만 있는 실제 투표 결과 (블로그 글의 독자적인 근거로 써요). 참여가 적은 카드는 빼요."""
+    site = load_site(site_id)
+    cfg = site.get("app") or {}
+    if os.environ.get("MOCK_LLM"):
+        return []
+    try:
+        db = DB(cfg)
+        cards = db.get(cfg.get("table", "cards"), {"select": "id,statement", "order": "id.desc", "limit": n})
+    except Exception as e:  # noqa: BLE001
+        log(f"  투표 결과 읽기 건너뜀: {e}")
+        return []
+    out = []
+    for c in cards:
+        try:
+            r = requests.post(f"{db.url}/rpc/card_results", headers=db.h, json={"p_card_id": c["id"]}, timeout=30)
+            a = r.json() if r.ok else {}
+        except Exception:  # noqa: BLE001
+            continue
+        if isinstance(a, list):
+            a = a[0] if a else {}
+        if (a or {}).get("overall_n", 0) >= min_votes:
+            gaps = ""
+            dec = [d for d in (a.get("decades") or []) if isinstance(d, dict) and d.get("pct") is not None]
+            if len(dec) >= 2:
+                hi = max(dec, key=lambda d: d["pct"]); lo = min(dec, key=lambda d: d["pct"])
+                gaps = f", 세대 차이 {hi.get('label', hi.get('decade', ''))} {hi['pct']}% vs {lo.get('label', lo.get('decade', ''))} {lo['pct']}%"
+            link = (site.get("threads_poll") or {}).get("link", "https://myinfobay.com/vote/{id}").replace("{id}", str(c["id"]))
+            out.append(f"{c.get('statement', '')}: {a['overall_n']}명 참여, 동의 {a.get('overall_pct')}%{gaps} (투표 페이지 {link})")
+    return out
+
+
 def recent_inserted(site_id, n=10):
     """최근에 앱에 들어간 카드 문장 (SNS 글감으로 써요)"""
     out = []

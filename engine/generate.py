@@ -324,6 +324,13 @@ def build_prompt(site, topic, notes, view=None):
         extra = commonsense.recent_inserted(site["id"])
     if extra:
         p.append("[앱에 새로 들어간 카드 — 주제로 쓰기 좋아요]\n" + "\n".join(extra[-10:]))
+    if (site.get("app") or {}).get("kind") == "commonsense" and blog_kind(site) != "none":
+        import commonsense
+        vs = commonsense.vote_stats(site["id"])
+        if vs:
+            p.append("[커먼센스 실제 투표 결과 — 우리만 가진 데이터, 검색엔진과 AI 요약이 따라 할 수 없는 근거]\n" + "\n".join(vs[:25]) + "\n"
+                     "주제와 관련된 카드가 있으면 본문에 「커먼센스 투표(○명 참여, " + f"{now_kst():%Y년 %m월}" + " 기준)」처럼 출처를 밝혀 숫자 그대로 인용하고, 투표 페이지로 가서 직접 투표해 보라고 한 줄 안내해요. "
+                     "참여 수가 적으면 '참고용'이라고 밝혀요. 관련 카드가 없으면 쓰지 않아요. 숫자를 바꾸거나 지어내지 않아요.")
     if view:
         p.append("[편집자 견해 — 사장님이 직접 쓴 원문. 글의 관점과 '## 편집자 생각' 칸의 바탕]\n" + view + "\n\n"
                  "규칙: 1) 본문(사실 정리)은 견해와 상관없이 사실과 양쪽 입장을 공정하게 써요. "
