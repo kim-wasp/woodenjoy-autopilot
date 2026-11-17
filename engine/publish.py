@@ -160,6 +160,9 @@ def publish_static(site, d, post, dry):
     cfg = site["blog"].get("static", {})
     slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", d.name)
     today = now_kst().date().isoformat()
+    prev = re.match(r".*?(\d{4}-\d{2}-\d{2})-", str((post.get("published") or {}).get("blog") or ""))
+    if prev and os.environ.get("FORCE"):
+        today = prev.group(1)  # 다시 올리기: 처음 올린 날짜 그대로
     md = (d / "article.md").read_text(encoding="utf-8")
     md = re.sub(r"^\s*\[\[hero\]\]\s*$", "", md, flags=re.M)  # 대표 사진은 블로그 틀이 제목 아래에 넣어요
     imgs = body_images(d, post, md)
@@ -537,8 +540,12 @@ def publish(d, platform, dry=False):
     if TEST:
         log(f"시험 업로드 끝 (기록하지 않음): {res}")
         return
+    first_at = pub.get(f"{platform}_at")
     pub.update(res)
-    pub[f"{platform}_at"] = now_kst().isoformat(timespec="seconds")
+    if first_at and os.environ.get("FORCE"):  # 다시 올리기: 처음 올린 날짜는 그대로 두고 고친 시각만 따로
+        pub[f"{platform}_updated_at"] = now_kst().isoformat(timespec="seconds")
+    else:
+        pub[f"{platform}_at"] = now_kst().isoformat(timespec="seconds")
     if platform == "blog" and res.get("blog_url"):
         indexnow(site, [res["blog_url"]])
     if all(pub.get(p) for p in post["platforms"]):
