@@ -71,23 +71,59 @@ def redirect(src_post, to_url):
 
 
 def merge_text(target, sources):
+    """대표 글 본문은 한 글자도 다시 쓰지 않고, 빠진 정보만 소제목 아래에 끼워 넣어요"""
     import llm
+    tr = target["content"]["raw"]
+    heads = re.findall(r"<h[23][^>]*>(.*?)</h[23]>", tr)
     prompt = "\n\n".join([
-        "건강 블로그의 비슷한 글 여러 개를 대표 글 하나로 합쳐요. 출력은 대표 글의 새 본문(HTML) 하나.",
-        "규칙: 1) 대표 글의 구조·말투(해요체)·이미지 태그·표·링크·참고 자료는 그대로 둬요. 2) 합칠 글에서 대표 글에 없는 쓸모 있는 정보만 알맞은 소제목 아래에 녹여 넣어요(복붙 금지, 중복 빼기). "
-        "3) 원문들에 없는 사실·숫자는 절대 새로 쓰지 않아요. 4) 합칠 글의 참고 자료 링크는 대표 글 참고 자료 목록에 합쳐요(중복 제거). "
-        "5) 과장 표현(충격, 완벽, 필독, 폭발, 비법)과 줄표(—, –)는 쓰지 않아요. 6) 글 끝의 AI 이미지 안내 문단(class=\"ai-image-note\")은 맨 끝에 하나만.",
-        f"[대표 글 제목] {target['title']['raw']}\n[대표 글 본문]\n{target['content']['raw'][:14000]}",
-        *[f"[합칠 글 제목] {s['title']['raw']}\n[합칠 글 본문]\n{s['content']['raw'][:9000]}" for s in sources],
-        'JSON: {"html": "새 본문 HTML", "added": "대표 글에 새로 들어간 정보 한 줄 요약"}'])
-    x = llm.ask_json("당신은 건강 정보 편집자예요. JSON만 답해요.", prompt, model="claude-sonnet-5-5", max_tokens=24000)
-    html = x.get("html") or ""
+        "건강 블로그의 비슷한 글을 대표 글 하나로 합쳐요. 대표 글은 그대로 두고, 합칠 글에만 있는 쓸모 있는 정보를 끼워 넣을 조각으로 주세요.",
+        "규칙: 1) 대표 글에 이미 있는 내용은 빼요. 2) 원문들에 없는 사실·숫자는 절대 새로 쓰지 않아요. 3) 해요체, 과장 표현(충격, 완벽, 필독, 폭발, 비법)과 줄표(—, –) 금지. "
+        "4) 조각은 워드프레스 블록 HTML(<!-- wp:paragraph --><p>…</p><!-- /wp:paragraph -->, 목록은 wp:list)로. 조각마다 2~6문장 또는 목록. 새 소제목이 필요하면 <!-- wp:heading --><h2>…</h2><!-- /wp:heading --> 포함. "
+        "5) after 는 아래 대표 글 소제목 중 하나를 그대로(그 소제목 섹션 끝에 들어가요). 6) 합칠 글의 참고 자료 링크 중 대표 글에 없는 것은 links 에.",
+        "[대표 글 소제목]\n" + "\n".join(f"- {re.sub(r'<[^>]+>', '', h)}" for h in heads),
+        f"[대표 글 제목] {target['title']['raw']}\n[대표 글 본문]\n{re.sub(r'<!--.*?-->', '', tr)[:30000]}",
+        *[f"[합칠 글 제목] {s['title']['raw']}\n[합칠 글 본문]\n{re.sub(r'<!--.*?-->', '', s['content']['raw'])[:15000]}" for s in sources],
+        'JSON: {"inserts": [{"after": "대표 글 소제목 그대로", "html": "끼워 넣을 HTML"}], "links": [{"title": "기관명, 자료 제목", "url": "https://..."}], "added": "새로 들어간 정보 한 줄 요약"}'])
+    x = llm.ask_json("당신은 건강 정보 편집자예요. JSON만 답해요.", prompt, model="claude-sonnet-5-5", max_tokens=8000)
     nums = lambda t: set(re.findall(r"\d+(?:[.,]\d+)?", re.sub(r"<[^>]+>|https?://\S+", " ", t)))  # noqa: E731
-    src_nums = nums(target["content"]["raw"]).union(*[nums(s["content"]["raw"]) for s in sources])
-    new_nums = nums(html) - src_nums
-    if len(html) < len(target["content"]["raw"]) * 0.8 or len(new_nums) > 3:
-        raise RuntimeError(f"합친 글 점검 실패: 길이 {len(html)} / 원문에 없던 숫자 {sorted(new_nums)[:10]}")
-    return html, x.get("added", "")
+    src_nums = nums(tr).union(*[nums(s["content"]["raw"]) for s in sources])
+    plain_heads = [(m, re.sub(r"<[^>]+>", "", m.group(1)).strip()) for m in re.finditer(r"<h[23][^>]*>(.*?)</h[23]>", tr)]
+    ref = tr.find("참고 자료</h2>")
+    tail = tr.rfind("<!-- wp:heading", 0, ref) if ref > 0 else (tr.find('<p class="ai-image-note"') if 'ai-image-note' in tr else len(tr))
+    tail = tail if tail > 0 else len(tr)
+    spots = []
+    for ins in x.get("inserts") or []:
+        frag = ins.get("html") or ""
+        if not frag or nums(frag) - src_nums or "—" in frag or "–" in frag:
+            print(f"  조각 버림(새 숫자·줄표): {frag[:60]}")
+            continue
+        hit = [i for i, (m, h) in enumerate(plain_heads) if h == (ins.get("after") or "").strip()]
+        if not hit:
+            continue
+        i = hit[0]
+        if i + 1 < len(plain_heads):
+            pos = tr.rfind("<!-- wp:heading", plain_heads[i][0].end(), plain_heads[i + 1][0].start())
+            pos = pos if pos > 0 else plain_heads[i + 1][0].start()
+        else:
+            pos = tail
+        pos = min(pos, tail) if pos > plain_heads[i][0].end() else tail
+        spots.append((pos, frag))
+    html, last = "", 0
+    for pos, frag in sorted(spots, key=lambda z: z[0]):
+        html += tr[last:pos].rstrip() + "\n\n" + frag + "\n\n"
+        last = pos
+    html += tr[last:]
+    done = len(spots)
+    import sources as srcmod
+    links = [l for l in (x.get("links") or []) if l.get("url") and l["url"] not in html and srcmod.alive(l["url"])]
+    if links:
+        li = "".join(f'<li><a href="{l["url"]}" target="_blank" rel="noopener">{l["title"]}</a></li>' for l in links)
+        if "참고 자료</h2>" in html and "</ul>" in html[html.index("참고 자료</h2>"):]:
+            k = html.index("</ul>", html.index("참고 자료</h2>"))
+            html = html[:k] + li + html[k:]
+    if done == 0 and not links:
+        raise RuntimeError("끼워 넣을 정보가 없어요")
+    return html, f"조각 {done}개, 링크 {len(links)}개: " + (x.get("added") or "")
 
 
 def relink(old_new):
