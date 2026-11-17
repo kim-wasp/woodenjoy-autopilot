@@ -1,0 +1,214 @@
+{
+  "id": "sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
+  "site": "sisibibi",
+  "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+  "status": "draft",
+  "created_at": "2026-11-17T18:48+09:00",
+  "requested_topic": "AI로 수능 부정하면 10년 못 본다? 국회에 올라온 ‘응시 제한 10년’ 법안",
+  "keywords": {
+    "main": "수능 응시제한 10년",
+    "sub": [
+      "수능 부정행위 응시제한",
+      "AI 커닝 처벌",
+      "고등교육법 개정안",
+      "수능 소급 적용 위헌",
+      "국가시험 부정행위 처벌 특별법"
+    ]
+  },
+  "brief": {
+    "reader": "11월 17일 '수능 AI 부정행위 10년 제한' 뉴스를 보고 이게 벌써 정해진 건지, 19일 수능부터 적용되는지 궁금한 수험생 가족과 정치 뉴스 독자",
+    "question": "수능 부정행위 응시제한 10년은 지금 법인가요, 그리고 19일 수능에서 걸린 사람에게도 적용되나요?",
+    "answer": "10년은 아직 정부와 여야가 밝힌 계획이에요. 17일까지 발의된 법안은 3년·5년짜리이고, 19일 수능에 소급할 수 있을지는 위헌 논란이 남아 있어요.",
+    "out_of_scope": "수능 당일 감독 절차의 세부 내용, 세무사 시험 부정행위 수사, 총리·장관 해임건의안을 둘러싼 정쟁",
+    "next_action": "국회 의안정보시스템에서 '고등교육법 일부개정법률안' 심사가 어디까지 왔는지 직접 확인하기"
+  },
+  "why_this_topic": "수능(11월 19일)을 이틀 앞둔 11월 17일에 국무총리 담화, 김민석 민주당 대표 발언, 국민의힘 특별법 발표가 한꺼번에 나오면서 '10년' 보도가 쏟아졌어요. 그런데 실제로 발의된 법안은 3~5년이라 독자가 헷갈리기 쉬워요. 연관 검색어 '인공지능(10,020)', '특검(13,300)', '형사소송법(12,710)'처럼 처벌·법안에 관심이 높고, 이미 쓴 AI 안경 감독 대책 글과도 이어져요. 네이버 순위가 안 나온 넓은 검색어 대신 '수능 응시제한 10년'처럼 구체적인 검색어로 잡았어요.",
+  "title_candidates": [
+    {
+      "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "수능 응시제한 10년, 19일 수능에서 걸리면 바로 적용될까",
+      "pattern": "대상·상황",
+      "score": 8
+    },
+    {
+      "title": "수능 부정행위 법안 4건, 10년짜리는 아직 0건인 이유",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "AI 커닝 10년 제한, 정부안·민주당·국힘 특별법 뭐가 달라",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "수능 응시제한 10년 소급, 위헌 논란 피할 수 있을까",
+      "pattern": "결론 먼저",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목들은 대부분 '10년간 못 본다', '10년 응시 제한 추진'처럼 10년을 이미 정해진 일처럼 내세워요. / 우리는 실제로 발의된 법안 4건이 3~5년이고 지금 법은 1년이라는 차이, 그리고 19일 수능에 소급 적용할 수 있는지를 제목과 본문에서 답해요.",
+  "meta_description": "수능 부정행위 응시제한 10년, 실제 발의된 법안 4건은 3년·5년이에요. 정부안과 민주당·국민의힘 특별법이 어떻게 다른지, 19일 수능에 소급 적용하기 어려운 이유를 표로 정리했어요.",
+  "hero_prompt": "An empty Korean high school exam classroom in soft morning light, rows of wooden desks each with a blank answer sheet and a pencil, a closed exam envelope on the teacher's desk, a stack of thick law books in the foreground, no people, no faces, no readable text, calm documentary photo style",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "kind": "",
+  "summary": [],
+  "conclusion": "수능 응시제한 10년은 아직 계획이에요. 17일까지 발의된 법안은 3~5년이고, 19일 수능에 소급할 수 있을지는 위헌 논란이 남아 있어요.",
+  "opinion": "올해 수능은 너무 코앞이니 어쩔수 없는 부분이 있다고 이해해주자...\n단발성 해법(?)으로는 어느정도 막아지겠지...\n제발 교육이라는것도 근본부터 고민하자 \n1년안에 뭔가 크게 바뀌긴 힘들겠지만\n교육이라고 하는 목표를 제발 자기들 국회의원하는 동안 훼손하지 말고 똥싸듯이 싸질러놓고 가지말길",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "파이낸셜뉴스 - 정치권 덮친 'AI 부정행위'...김민석 \"올해 수능부터 강력 처벌\"",
+      "url": "https://www.fnnews.com/news/202611171531360753"
+    },
+    {
+      "title": "한국일보 - 김민석 \"수능 AI 부정행위 적발 땐 '10년 응시 제한' 입법 추진\"",
+      "url": "https://www.hankookilbo.com/news/article/A2026111709530002653"
+    },
+    {
+      "title": "시사저널 - 'AI 커닝' 적발되면 수능 10년간 못 본다?…민주당 특별법 추진",
+      "url": "https://www.sisajournal.com/news/articleView.html?idxno=394340"
+    },
+    {
+      "title": "뉴스저널리즘 - 수능 부정행위 제재 강화 법안 발의 잇따라",
+      "url": "https://www.ngetnews.com/news/articleView.html?idxno=555992"
+    },
+    {
+      "title": "교수신문 - 고민정 의원, 수능 부정행위자 응시정지 5년 법안 발의",
+      "url": "https://www.kyosu.net/news/articleView.html?idxno=212555"
+    },
+    {
+      "title": "교수신문 - 김희정 교육위원장, 수능 부정행위에 응시 정지기간 '5년으로' 확대 법안 발의",
+      "url": "https://www.kyosu.net/news/articleView.html?idxno=212590"
+    },
+    {
+      "title": "시사매거진 - 수능 부정행위 응시자격 정지, 1년에서 5년으로 늘리는 법안 발의",
+      "url": "https://www.sisamagazine.co.kr/article/1000000000880"
+    },
+    {
+      "title": "메트로신문 - 국민의힘, 국가시험 부정행위 특별법 추진…\"벌금 없이 징역형\"",
+      "url": "https://www.metroseoul.co.kr/article/20261117500529"
+    },
+    {
+      "title": "연합뉴스(코리안센터) - 국힘 \"한성숙·최교진 해임 건의…미수용시 탄핵 절차 돌입\"",
+      "url": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1440851"
+    },
+    {
+      "title": "비즈니스포스트 - 총리 한성숙 \"수능 부정행위 응시제한 10년 추진, 감독인력 8400명 추가 배치\"",
+      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=452230"
+    },
+    {
+      "title": "이투데이 - \"옷 단추마다 스티커\"…수능 부정행위 응시 제한 10년 추진",
+      "url": "https://www.etoday.co.kr/news/view/2649322"
+    },
+    {
+      "title": "서플(이투데이) - 韓총리 \"수능 옷 단추마다 스티커…부정행위 응시 제한 10년으로\"",
+      "url": "https://supple.kr/news/cmwkcrdxrl87rjkunnhl7co4t"
+    },
+    {
+      "title": "뉴스핌 - [수능 AI커닝 비상] 정부, '10년 응시 제한' 올해부터 추진 검토",
+      "url": "https://www.newspim.com/news/view/20261117001046"
+    },
+    {
+      "title": "국민일보 - 김민석 \"AI 부정행위 수능 응시제한 1년→10년 확대 추진\"",
+      "url": "https://www.kmib.co.kr/article/20261117500803"
+    },
+    {
+      "title": "한국경제 - 매 교시 안경 전수검사…빅테크와 AI 커닝 사후 추적한다",
+      "url": "https://www.hankyung.com/article/2026111727711"
+    },
+    {
+      "title": "뉴스후플러스 - 수능 AI 부정행위 처벌 강화…최대 10년 응시 제한 추진",
+      "url": "https://www.newswhoplus.com/news/articleView.html?idxno=74573"
+    },
+    {
+      "title": "한강타임즈 - 고민정 의원, '수능 부정행위자 5년 응시 제안' 법안 발의",
+      "url": "https://www.hg-times.com/news/articleView.html?idxno=307080"
+    },
+    {
+      "title": "전북미래교육신문 - 가방은 복도에, 단추엔 스티커, 시험 직전 재난문자…정부, 수능 부정행위 차단 총력",
+      "url": "https://edujb.com/news/articleView.html?idxno=9900"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "자가 진단",
+    "hooks": [
+      "수능 법안 4개 중 10년짜리 0개",
+      "수능 단추마다 스티커 붙인대",
+      "AI 커닝 10년? 지금 법은 1년"
+    ],
+    "posts": [
+      "수능 법안 4개 중 10년짜리 0개\n뉴스마다 걸리면 10년 못 본다던데 ㅋㅋ 아래 중에 2개 이상 맞으면 너도 헷갈린 거야\n1) 19일에 걸리면 바로 10년이다\n2) 10년 법안이 이미 국회에 있다\n3) 안경으로 커닝해도 시험 무효면 끝이다\n넌 몇 개 해당돼?",
+      "1. 19일 수능에서 걸려도 10년이 바로 적용되는 건 아냐. 법 생기기 전 일에 소급하는 건 위헌 논란이 있거든\n2. 17일까지 발의된 법안은 3년짜리 1개, 5년짜리 3개야. 10년은 정부랑 민주당, 국힘이 추진하겠다고 말한 단계임\n3. 지금 법은 시험 무효에 다음 해 1년 정지야. 근데 스마트기기 쓰다 걸리면 지금도 고발될 수 있어 (최대 징역 5년 혐의)",
+      "법안 4개랑 정부안, 여야 특별법이 어떻게 다른지 표로 비교해 놨어 {LINK}"
+    ],
+    "topic_tag": "수능"
+  },
+  "revision": 1,
+  "korean_check": {
+    "blog": {
+      "grade": "A",
+      "score": 9.5,
+      "left": [
+        "관용구·결말 공식: '중대한'",
+        "AI 상투: 4"
+      ]
+    },
+    "sns": {
+      "스레드1": "A",
+      "스레드2": "A",
+      "스레드3": "A"
+    }
+  },
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-17T18:48+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-17T18:48+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 26371,
+        "output_tokens": 17526,
+        "web_searches": 5,
+        "calls": 2,
+        "usd": 0.506
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 11815,
+        "output_tokens": 852,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0321
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.6722,
+    "total_usd": 0.6722,
+    "total_krw": 940,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
