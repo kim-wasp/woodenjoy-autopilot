@@ -208,7 +208,7 @@ def notify(dir_, pr):
     post = load_json(ROOT / dir_ / "post.json", {})
     body = (post.get("threads") or {}).get("posts", [""])[0][:200]
     why = (post.get("issue") or {}).get("why", "")
-    url = f"{STUDIO}/#review/{pr}"
+    url = f"{STUDIO}/#/review/{pr}"
     r = requests.post("https://ntfy.sh/", timeout=20, data=json.dumps({
         "topic": topic, "title": post.get("title", "속보 승인 대기")[:80], "message": f"{body}\n\n{why}",
         "click": url, "tags": ["zap"], "priority": 4,

@@ -102,5 +102,13 @@
       "links_file": "sites/_template/coupang.json"
     }
   },
-  "app": {}
+  "app": {},
+  "issue_track": {
+    "enabled": false,
+    "queries": [],
+    "max_per_day": 2,
+    "min_score": 7,
+    "stance": "both",
+    "gap_hours": 3
+  }
 }
