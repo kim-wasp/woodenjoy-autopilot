@@ -22,7 +22,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import KST, ROOT, load_json, load_site, log, now_kst, post_dirs, save_json, site_ids  # noqa: E402
+from common import KST, ROOT, load_json, load_site, log, now_kst, post_dirs, save_json, secret, site_ids  # noqa: E402
 import llm  # noqa: E402
 import skills  # noqa: E402
 import trends  # noqa: E402
@@ -201,7 +201,7 @@ def watch(only=None):
 
 def notify(dir_, pr):
     """ntfy 앱으로 알림 (비밀키 NTFY_TOPIC). 알림을 누르면 관리화면 승인 대기로 가요."""
-    topic = os.environ.get("NTFY_TOPIC", "").strip()
+    topic = (secret("NTFY_TOPIC", required=False) or "").strip()
     if not topic:
         log("NTFY_TOPIC 비밀키가 없어서 알림을 못 보내요")
         return
