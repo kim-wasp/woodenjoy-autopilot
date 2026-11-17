@@ -1,13 +1,9 @@
 #!/bin/bash
-for s in daily-water-intake flu-isolation-return-work migraine-aura-before-headache-changes spring-immunity-symptoms; do
- echo "== $s"; curl -s -A "Mozilla/5.0" "https://forsmartlife.com/$s/?v=$RANDOM" | python3 -c "
-import sys,re
-from bs4 import BeautifulSoup
-s=BeautifulSoup(sys.stdin.read(),'html.parser')
-print(s.title.get_text())
-h=[x for x in s.find_all('h2') if '참고 자료' in x.get_text()]
-if h:
-  for a in h[0].find_next('ul').find_all('a'): print(' ', a.get_text()[:60], a['href'][:90])
-n=s.find(class_='ai-image-note'); print(' AI안내:', bool(n)); print(' 별표 남음:', '**' in s.get_text())"
-done
-curl -s "https://forsmartlife.com/contact/?v=$RANDOM" | grep -o "오류 제보[^<]*" | head -2
+python3 - <<'PY'
+import sys, re, requests
+sys.path.insert(0,'tools'); sys.path.insert(0,'engine')
+import fsl_fix as f
+for pid in (1031, 968):
+    r=f.req("GET", f"/posts/{pid}?context=edit&_fields=content").json()["content"]["raw"]
+    print(pid, len(r), r.count("<img"), re.findall(r"<(?:img|figure|!-- wp:image)[^>]{0,120}", r)[:3], "AI로" in r)
+PY
