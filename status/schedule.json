@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T11:53+09:00",
+  "updated": "2026-11-17T12:02+09:00",
   "items": [
     {
       "site": "infobay",
@@ -547,8 +547,9 @@
       "dir": "content/sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
       "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
       "platform": "blog",
-      "at": "2026-11-17T12:00+09:00",
-      "state": "planned"
+      "at": "2026-11-17T12:02:04+09:00",
+      "state": "done",
+      "url": "https://sisibibinote.kr/posts/ai-glasses-suneung-education-committee-report/"
     },
     {
       "site": "woodenjoy",
