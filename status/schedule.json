@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T20:20+09:00",
+  "updated": "2026-11-17T20:21+09:00",
   "items": [
     {
       "site": "infobay",
@@ -628,6 +628,15 @@
       "state": "planned"
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
+      "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+      "platform": "blog",
+      "at": "2026-11-18T12:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-15-funeral-condolence-etiquette-mistakes-2026",
@@ -688,6 +697,15 @@
       "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
       "platform": "threads",
       "at": "2026-11-19T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
+      "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+      "platform": "threads",
+      "at": "2026-11-19T19:30+09:00",
       "state": "planned"
     },
     {

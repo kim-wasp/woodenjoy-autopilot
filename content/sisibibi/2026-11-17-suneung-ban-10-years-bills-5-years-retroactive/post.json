@@ -210,5 +210,6 @@
     "total_usd": 0.6722,
     "total_krw": 940,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
-  }
+  },
+  "approved_at": "2026-11-17T20:21+09:00"
 }
