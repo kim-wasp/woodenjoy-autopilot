@@ -29,7 +29,7 @@ def rules(limit=9000):
     return skills.text("korean-natural", limit)
 
 
-def scan(text):
+def scan(text, choppy=True):
     """{'grade','score','fatal','spots':[...]} — spots 는 고칠 자리 설명"""
     if not text or not text.strip():
         return {"grade": "A", "score": 10, "fatal": 0, "spots": []}
@@ -50,9 +50,28 @@ def scan(text):
     for bad, good in SPELL:
         for m in re.finditer(bad, text):
             spots.append(f"맞춤법: '{text[max(0, m.start() - 8):m.end() + 6]}' ({m.group(0)} → {good})")
-    spell = sum(1 for s in spots if s.startswith("맞춤법"))
+    for run in (choppy_runs(text) if choppy else []):
+        spots.append(f"끊기는 문장 {len(run)}개 연달아 → 이어지는 생각은 ~고/~는데/~라서로 묶기: '{' '.join(run)[:90]}'")
+    spell = sum(1 for s in spots if s.startswith("맞춤법") or s.startswith("끊기는"))
     return {"grade": j.get("grade", "?"), "score": j.get("score"), "fatal": (j.get("L3") or 0) + (j.get("emdash") or 0) + spell,
             "warn": j.get("L2") or 0, "spots": spots[:20]}
+
+
+def choppy_runs(text, short=32, n=4):
+    """문단 안에서 짧은 문장(공백 빼고 short자 미만)이 n개 넘게 연달아 나오는 곳. 목록·표·제목·HTML 줄은 빼요"""
+    out = []
+    for para in re.split(r"\n\s*\n", text or ""):
+        lines = [l for l in para.split("\n") if l.strip() and not re.match(r"\s*([-*#>|<]|\d+[.)]|\[\[)", l)]
+        sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", " ".join(lines)) if x.strip()]
+        run = []
+        for x in sents + [""]:
+            if x and len(re.sub(r"\s", "", x)) < short:
+                run.append(x)
+                continue
+            if len(run) >= n:
+                out.append(run)
+            run = []
+    return out[:3]
 
 
 def needs_fix(s):
@@ -103,14 +122,14 @@ def polish_sns(site, post, model, check=None):
     texts, spots, report = {}, {}, {}
     th = post.get("threads") or {}
     for i, t in enumerate(th.get("posts") or []):
-        s = scan(t.replace("{LINK}", ""))
+        s = scan(t.replace("{LINK}", ""), choppy=False)
         report[f"스레드{i + 1}"] = s["grade"]
         if needs_fix(s):
             texts[f"스레드{i + 1}"], spots[f"스레드{i + 1}"] = t, s["spots"]
     cap = (post.get("instagram") or {}).get("caption")
     if cap:
         body = "\n".join(l for l in cap.split("\n") if not l.strip().startswith("#"))
-        s = scan(body)
+        s = scan(body, choppy=False)
         report["인스타"] = s["grade"]
         if needs_fix(s):
             texts["인스타"], spots["인스타"] = cap, s["spots"]
