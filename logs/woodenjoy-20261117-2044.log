@@ -1,0 +1,25 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 170): {"seeds": ["충전 해머드릴", "전동드릴 비트", "샷시 로라", "도어락 건전지", "도어락 설치", "방한커튼 설치", "방풍커튼 설치", "결로 곰팡이 제거", "붙박이장 문 처짐", "중문 레일", "방문손잡이 교체", "현관문 틈막이", "외풍 차단 방법", "쇼파 다리", "장판 들뜸
+  키워드 후보: 도어락건전지교체(980), 도어락설치방법(1610), 결로곰팡이제거(350), 장판들뜸보수(250), 현관문틈막이(250), 중문레일교체(200), 현관문문풍지(5760), 방문틈새막이(5810), 우풍차단(5820), 번호키도어락(5970), 결로(6030), 밀레도어락(6160)
+  대표 이미지 생성 (gemini)
+  JSON 형식 오류 (stop=max_tokens, 글자수 85): {"rotate_cw": 0, "reason": "문 아래쪽 문턱과 바닥, 슬리퍼, 우산이 아래에 있고 도어락이 세로로 서 있어 위아래가 맞는 사진이며,
+  홈피드 썸네일 완성 (스타일 1, 색 4) 갈았는데 왜 / 또 삑삑대지?
+  카드 점검 실패:
+  - 4장: 계정명 자리 침범: "2단계"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  - 6장: 계정명 자리 침범: "4단계"
+  - 6장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 4장: 계정명 자리 침범: "2단계"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+   - 카드: 6장: 계정명 자리 침범: "4단계"
+   - 카드: 6장: 본문이 계정명 자리까지 내려옴
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-17-doorlock-battery-replacement-beeping-again/cards
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1289, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1050, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
