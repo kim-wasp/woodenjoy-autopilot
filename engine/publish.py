@@ -31,7 +31,7 @@ def raw_url(d, name):
 
 
 def link_for(site, post):
-    return (post.get("published") or {}).get("blog_url") or site.get("url", "")
+    return (post.get("published") or {}).get("blog_url") or post.get("link") or site.get("url", "")
 
 
 def body_images(d, post, md):
@@ -333,8 +333,86 @@ def card_urls(d):
     return [raw_url(d, f"cards/{f}") for f in qa.get("files", [])]
 
 
+def make_reel(d, sec=2.8):
+    """카드 이미지 → 세로 영상(1080x1920, 흐린 배경 위에 카드, 무음 트랙). 2026-11-17 분석: 캐러셀 도달 1~19명, 릴스 1개 124명."""
+    import subprocess
+    files = [d / "cards" / f for f in load_json(d / "cards/qa.json", {}).get("files", [])]
+    files = [f for f in files if f.exists()]
+    if not files:
+        raise RuntimeError("카드 이미지가 없어요")
+    out = d / "cards" / "reel.mp4"
+    args = ["ffmpeg", "-y", "-loglevel", "error"]
+    for i, f in enumerate(files):
+        args += ["-loop", "1", "-t", str(sec + (0.7 if i == 0 else 0)), "-i", str(f)]
+    args += ["-f", "lavfi", "-t", str(sec * len(files) + 0.7), "-i", "anullsrc=r=44100:cl=stereo"]
+    parts = []
+    for i in range(len(files)):
+        parts.append(f"[{i}:v]split[a{i}][b{i}];[a{i}]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:3,eq=brightness=-0.08[bg{i}];"
+                     f"[b{i}]scale=1080:-2[fg{i}];[bg{i}][fg{i}]overlay=(W-w)/2:(H-h)/2,fps=30,format=yuv420p,setsar=1[v{i}]")
+    fc = ";".join(parts) + ";" + "".join(f"[v{i}]" for i in range(len(files))) + f"concat=n={len(files)}:v=1:a=0[v]"
+    args += ["-filter_complex", fc, "-map", "[v]", "-map", f"{len(files)}:a", "-c:v", "libx264", "-preset", "medium", "-crf", "23",
+             "-c:a", "aac", "-b:a", "64k", "-shortest", "-movflags", "+faststart", str(out)]
+    subprocess.run(args, check=True)
+    return out
+
+
+def media_url(path):
+    """영상은 저장소 main 을 무겁게 하지 않게 'media' 가지에 올리고 그 공개 주소를 써요"""
+    import shutil
+    import subprocess
+    rel = path.relative_to(ROOT).as_posix()
+    wt = Path("/tmp/mediawt")
+    sh = lambda *a, **k: subprocess.run(list(a), check=True, cwd=k.get("cwd", ROOT), capture_output=True)  # noqa: E731
+    shutil.rmtree(wt, ignore_errors=True)
+    subprocess.run(["git", "worktree", "prune"], cwd=ROOT)
+    if subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "media"], cwd=ROOT).returncode == 0:
+        sh("git", "worktree", "add", "-q", "-f", str(wt), "FETCH_HEAD")
+        sh("git", "checkout", "-q", "-B", "media", cwd=wt)
+    else:
+        sh("git", "worktree", "add", "-q", "-f", "--detach", str(wt))
+        sh("git", "checkout", "-q", "--orphan", "media", cwd=wt)
+        sh("git", "rm", "-rqf", ".", cwd=wt)
+    (wt / rel).parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(path, wt / rel)
+    sh("git", "add", rel, cwd=wt)
+    sh("git", "-c", "user.name=studio-bot", "-c", "user.email=bot@users.noreply.github.com", "commit", "-qm", f"영상: {rel}", cwd=wt)
+    sh("git", "push", "-q", "origin", "HEAD:media", cwd=wt)
+    subprocess.run(["git", "worktree", "remove", "-f", str(wt)], cwd=ROOT)
+    url = f"https://raw.githubusercontent.com/{REPO}/media/{rel}"
+    for _ in range(10):  # 공개 주소가 열릴 때까지
+        if requests.head(url, timeout=20).status_code == 200:
+            break
+        time.sleep(3)
+    return url
+
+
+def publish_reel(site, d, post, tok, dry):
+    if dry:
+        log("  [미리보기] 릴스 영상 만들기 → media 가지 → REELS")
+        return {"instagram": "DRY", "instagram_format": "reels"}
+    url = media_url(make_reel(d))
+    cover = (card_urls(d) or [None])[0]
+    data = {"media_type": "REELS", "video_url": url, "caption": post["instagram"]["caption"], "share_to_feed": "true", "access_token": tok}
+    if cover:
+        data["cover_url"] = cover
+    c = _post(dry, f"{IG}/me/media", data)
+    for _ in range(4):  # 영상 처리는 오래 걸려요 (최대 약 10분)
+        try:
+            _wait(dry, IG, c["id"], tok, "status_code")
+            break
+        except RuntimeError as e:
+            if "오래" not in str(e):
+                raise
+    return {"instagram": _post(dry, f"{IG}/me/media_publish", {"creation_id": c["id"], "access_token": tok})["id"], "instagram_format": "reels"}
+
+
 def publish_instagram(site, d, post, dry):
     tok = "DRY" if dry else secret(site["instagram"]["token_secret"])
+    if (site.get("instagram") or {}).get("format", "reels") == "reels":
+        try:
+            return publish_reel(site, d, post, tok, dry)
+        except Exception as e:  # noqa: BLE001
+            log(f"  릴스 실패 → 카드뉴스로 올려요: {str(e)[:300]}")
     urls = card_urls(d)
     kids = []
     for u in urls:

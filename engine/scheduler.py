@@ -39,7 +39,10 @@ def due_time(slot, approved, now, grace):
 def recently(site_id, platform, now, hours=20):
     ats = []
     for d in post_dirs(site_id):
-        ats.append((load_json(d / "post.json", {}).get("published") or {}).get(f"{platform}_at"))
+        pj = load_json(d / "post.json", {})
+        if pj.get("rush"):
+            continue  # 속보 글은 하루 한 편 계산에서 빼요
+        ats.append((pj.get("published") or {}).get(f"{platform}_at"))
     # 예전 방식(posts/)으로 같은 계정에 올린 것도 같이 봐요 (하루 한 편 지키기)
     legacy_dir = (load_site(site_id).get("legacy_posts_dir") or "")
     if legacy_dir:
@@ -83,6 +86,12 @@ def cmd_due():
                 save_json(d / "post.json", post)
             pub = post.get("published") or {}
             start = (site.get("schedule") or {}).get("start_from")
+            if post.get("rush"):  # 속보: 승인되면 시간표를 기다리지 않고 바로
+                for p in post.get("platforms", []):
+                    if not pub.get(p) and p not in taken and p not in (post.get("hold") or []):
+                        taken.add(p)
+                        print(d.relative_to(ROOT).as_posix(), p)
+                continue
             for p, t in plan(site, post, now).items():
                 st = start.get(p) if isinstance(start, dict) else start  # 플랫폼별 시작일도 가능
                 if st and now.strftime("%Y-%m-%d") < st:
@@ -170,6 +179,11 @@ def cmd_board():
             pub = post.get("published") or {}
             base = {"site": sid, "site_name": site.get("name"), "dir": d.relative_to(ROOT).as_posix(), "title": post.get("title")}
             blog_t = None
+            if post.get("rush"):
+                for p in post.get("platforms", []):
+                    if not pub.get(p):
+                        items.append({**base, "platform": p, "at": now.isoformat(timespec="minutes"), "state": "planned"})
+                continue
             for p, t in plan(site, post, now).items():
                 if pub.get(p):
                     continue

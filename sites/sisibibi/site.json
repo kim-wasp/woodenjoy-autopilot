@@ -118,5 +118,20 @@
     "외교",
     "관세"
   ],
-  "indexnow_key": "905b55fda81b25808ca9cbeb09d6cd87"
+  "indexnow_key": "905b55fda81b25808ca9cbeb09d6cd87",
+  "issue_track": {
+    "enabled": true,
+    "queries": [
+      "국회 본회의",
+      "대통령실",
+      "더불어민주당",
+      "국민의힘",
+      "특검",
+      "정부 발표"
+    ],
+    "max_per_day": 2,
+    "min_score": 7,
+    "stance": "both",
+    "gap_hours": 3
+  }
 }

@@ -166,5 +166,20 @@
     "카톡 예절"
   ],
   "keyword_gate": true,
-  "indexnow_key": "905b55fda81b25808ca9cbeb09d6cd87"
+  "indexnow_key": "905b55fda81b25808ca9cbeb09d6cd87",
+  "issue_track": {
+    "enabled": true,
+    "queries": [
+      "갑론을박",
+      "누리꾼 논란",
+      "비매너 논란",
+      "직장인 논란",
+      "층간소음",
+      "축의금"
+    ],
+    "max_per_day": 2,
+    "min_score": 7,
+    "stance": "mine",
+    "gap_hours": 3
+  }
 }

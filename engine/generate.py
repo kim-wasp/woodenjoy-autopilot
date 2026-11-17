@@ -71,6 +71,19 @@ THREADS_GUIDE = """스레드 규칙 (사장님 지시):
   이모지는 쓰더라도 1~2개, 가족·피부색 조합 이모지 금지.
 """
 
+# 2026-11-17 성과 분석: 우드엔조이 스레드 10개 중 조회 230을 찍은 1개만 첫 줄이 '겪어 본 짜증 장면'(서랍레일 새로 달았는데 끝까지 안 닫혀?),
+# 나머지 정보형 첫 줄은 15~52. 다른 사람 답글은 거의 0. → 본문은 정보가 아니라 '한마디 하고 싶어지는 장면·입장'으로.
+THREADS_REACT = """[스레드 반응 받는 법 — 성과 분석 결과, 위 규칙보다 우선]
+- 본문은 정보를 주는 글이 아니라 사람이 멈추고 한마디 하고 싶어지는 글이에요. 정보·방법·정답은 전부 댓글로.
+- 첫 줄은 둘 중 하나:
+  1) 겪어 본 사람이 '어 나 이거' 하는 짜증·민망·억울 장면 한 줄 (예: 새로 산 서랍레일 달았는데 끝까지 안 닫혀?)
+  2) 오늘 기사·커뮤니티에서 실제로 터진 일의 가장 센 한 줄 (누가, 무엇을, 얼마)
+  설명형 첫 줄(○○ 고르는 법, ○○ 알아두면 좋아) 금지.
+- 둘째~셋째 줄: 사람들이 갈리는 지점이나 흔한 착각을 찔러요. 한쪽 편을 가볍게 들어도 돼요(정치 계정은 양쪽 가장 센 말만).
+- 마지막 줄: 답하기 쉬운 질문 하나. 둘 중 하나 고르기, 숫자 하나, 겪은 일 한 줄로 답할 수 있게. 넓은 질문(어떻게 생각해?) 금지.
+- 가정 상황(~하면 어떡할래?)보다 실제로 있었던 일에 붙이는 게 반응이 커요. 최근 기사·화제가 있으면 그걸로 시작.
+- 반응 낚시 문구(댓글 달아줘, 공감하면 좋아요) 금지는 그대로."""
+
 CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
 - slides 6~8장. 1장째는 표지(가장 강한 후킹, "big": true), 마지막 장은 저장·유입 안내.
 - 장마다 새 정보 하나. 같은 문장 반복 금지.
@@ -391,6 +404,7 @@ def build_prompt(site, topic, notes, view=None):
         p.append(skills.block("instagram-kr"))
     if site.get("threads", {}).get("enabled"):
         p.append(THREADS_GUIDE)
+        p.append(THREADS_REACT)
         p.append(skills.block("threads-kr"))
     if img_cfg(site)["instagram"] == "photo_cards":
         p.append(PHOTO_CARD_GUIDE)
@@ -1203,7 +1217,7 @@ def rewrite_threads(site_id, dir_):
     post = load_json(d / "post.json")
     md = (d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else ""
     exp = experiences(site) if "experiences" in globals() else ""
-    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n" + skills.block("threads-kr") + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
+    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n" + THREADS_REACT + "\n" + skills.block("threads-kr") + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
                        + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문", "댓글", "대댓글 + {LINK}"], "topic_tag": "주제 태그 1개"}',
                        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
     posts = [x for x in (res.get("posts") or []) if x]
