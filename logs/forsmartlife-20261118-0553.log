@@ -1,0 +1,25 @@
+  JSON 형식 오류 (stop=max_tokens, 글자수 1188): {"ideas": [{"title": "서울 초미세먼지 심한 날, 마스크 고르는 법과 실내 관리 기준", "keyword": "미세먼지마스크", "category": "계절 건강", "trend_keyword": "", "angle": "미세먼지가 나쁜 날 어떤 마스크를 써야 하고 집 안에서는 무엇을 관리해야 하나?", "why_this_topic": "네이버 연관 검색어 '서울초미세먼지' 월 51,280회, 7일 전 대비 +33%. 미세먼지 연관 검색도 월 592,000회로 많다."}, {"title": "겨울 실내 건조할 때 적
+  JSON 형식 오류 (stop=max_tokens, 글자수 1940): {"ideas": [{"title": "서울 초미세먼지 심한 날, 마스크는 어떤 걸 써야 할까", "keyword": "미세먼지마스크", "category": "계절 건강", "trend_keyword": "", "angle": "미세먼지가 나쁜 날 어떤 마스크를 골라야 하고, 외출 뒤 무엇을 관리해야 하나?", "why_this_topic": "연관 검색어 '서울초미세먼지' 월 51,280회, 7일 전 대비 +33%. '미세먼지' 연관 검색도 월 592,000회로 많다."}, {"title": "겨울 실내 건조할 때 적정 습도와 
+  주제 자동 선택: 김장 뒤 손목이 시큰할 때 쉬는 법과 병원 갈 기준 (네이버 월간 검색 12,430회, 11월 시기 주제) · 다른 후보: 두통이 반복될 때 확인할 것과 병원 가야 할 신호 | 건강검진 주기, 나이별로 언제 받으면 될까 | 서울 초미세먼지 심한 날, 마스크는 어떤 걸 써야 할까
+[건강 (forsmartlife.com)] 글 만들기 시작 · 주제: 김장 뒤 손목이 시큰할 때 쉬는 법과 병원 갈 기준
+카테고리: 증상 관리
+이 글이 답할 질문: 김장처럼 손목을 많이 쓴 뒤 통증이 생기면 어떻게 관리하고, 언제 진료를 받아야 하나?
+고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 12,430회, 11월 시기 주제
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 3697자 (기준 2,500~3,500자)
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1303, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1064, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
