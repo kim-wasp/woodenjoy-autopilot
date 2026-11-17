@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install -q -r requirements.txt beautifulsoup4
+      - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - run: bash tools/probe.sh
         env:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}

@@ -45,6 +45,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q -r requirements.txt
+      - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: 올리기
         if: steps.due.outputs.any == 'yes'
         env:
