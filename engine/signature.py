@@ -50,8 +50,8 @@ def myth_html(rows, checked=""):
     return (f'<div class="sig-myth" style="margin:28px 0;border:1px solid {t["line"]};border-radius:10px;overflow:hidden;background:{t["paper"]}">'
             f'<p style="margin:0;padding:14px 14px 10px;font-weight:700;color:{t["ink"]}">흔히 듣는 말과 공식 기준</p>'
             f'<table style="width:100%;border-collapse:collapse;margin:0;font-size:15px;line-height:1.6;background:#fff">'
-            f'<thead><tr><th style="text-align:left;padding:8px 14px;font-size:13px;color:{t["muted"]};font-weight:600">흔히 듣는 말</th>'
-            f'<th style="text-align:left;padding:8px 14px;font-size:13px;color:{t["muted"]};font-weight:600">공식 기준</th></tr></thead><tbody>{tr}</tbody></table>'
+            f'<thead><tr><th style="text-align:left;padding:8px 14px;font-size:13px;color:{t["muted"]};font-weight:600;background:#fff;border:0">흔히 듣는 말</th>'
+            f'<th style="text-align:left;padding:8px 14px;font-size:13px;color:{t["muted"]};font-weight:600;background:#fff;border:0">공식 기준</th></tr></thead><tbody>{tr}</tbody></table>'
             + (f'<p style="margin:0;padding:8px 14px 12px;font-size:13px;color:{t["muted"]}">확인: {E(checked)}</p>' if checked else "")
             + "</div>")
 

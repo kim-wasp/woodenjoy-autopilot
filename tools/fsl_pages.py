@@ -80,7 +80,7 @@ if(isNaN(a)){o.textContent='만 나이를 넣어 주세요.';return}var r=[];if(
 var ok=r.filter(function(x){return x.indexOf('전에는')<0});o.textContent=ok.length?'국가예방접종 대상이에요 ('+ok.join(', ')+'). 지정 의료기관에서 접종할 수 있어요.':(r.length?r.join(' '):'국가예방접종 대상은 아니에요. 고위험군이면 의료기관에 상담해 보세요.')}
 </script>"""
     content = "<!-- wp:html -->\n" + c + "\n<!-- /wp:html -->"
-    upsert_page("health-calculators", "건강 계산기: BMI·허리둘레, 독감 무료접종 대상 확인", content,
+    upsert_page("health-calculators", "건강 계산기", content,
                 "키·몸무게·허리둘레로 대한비만학회 기준 BMI 단계를 바로 계산하고, 나이로 2026-2027절기 독감 국가예방접종 대상인지 확인해요.")
 
 
@@ -163,7 +163,7 @@ def weekly():
 <ul>{''.join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(u)}</a></li>' for u in srcs)}</ul>
 <p class="note">마지막 갱신: {E(d.get('updated', '')[:10])}</p>
 </div>"""
-    upsert_page("flu-weekly", "이번 주 독감 수치: 질병관리청 의사환자분율 주별 그래프", "<!-- wp:html -->\n" + c + "\n<!-- /wp:html -->",
+    upsert_page("flu-weekly", "이번 주 독감 수치", "<!-- wp:html -->\n" + c + "\n<!-- /wp:html -->",
                 f"질병관리청이 발표한 인플루엔자 의사환자분율을 주별로 모아 그린 그래프. 최근 {last['week'].split('-W')[1]}주 {last['value']}명(1,000명당).")
 
 
