@@ -133,5 +133,6 @@
     "min_score": 7,
     "stance": "both",
     "gap_hours": 3
-  }
+  },
+  "signature": "verdict"
 }

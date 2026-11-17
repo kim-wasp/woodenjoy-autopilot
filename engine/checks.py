@@ -100,6 +100,7 @@ FIRST_PERSON = re.compile(r"(?<![가-힣])(저는|제가|저도|저희|제 경�
 
 def plain(md):
     t = re.sub(r"\[\[[^\]]+\]\]", "", md)
+    t = re.sub(r'^<div class="sig-[^\n]*$', "", t, flags=re.M)  # 고정 형식 블록은 글자 수에서 빼요
     t = re.sub(r"^\|.*\|$", "", t, flags=re.M)
     return re.sub(r"[#>*\-|]", "", t)
 

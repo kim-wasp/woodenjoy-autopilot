@@ -197,6 +197,8 @@ def schema(site):
                      '"after": "본문에서 이 상품을 넣을 문단의 문장 일부(그대로 복사, 15~30자)"}] 0~2개. 아래 등록된 쿠팡 링크에 없는 상품만')
     if site.get("topic_mix"):
         parts.append('"kind": "글 종류 — ' + " / ".join(list(site["topic_mix"]) + ["main"]) + ' 중 하나 (' + ", ".join(f"{k}={v.get('label', k)}" for k, v in site["topic_mix"].items()) + ', main=그 밖의 일반 글)"')
+    import signature
+    parts += signature.schema_parts(site)
     parts.append('"sources": [{"title": "출처 제목", "url": "https://..."}]')
     return "{\n  " + ",\n  ".join(parts) + "\n}"
 
@@ -634,6 +636,18 @@ def write_post(site, res, d, topic):
         if cp and "link.coupang.com" in md and disclosure not in md:
             md = disclosure + "\n\n" + md
             post["coupang"] = True
+        import signature
+        b = res.get("bill") or {}
+        if b.get("url"):
+            import sources as _src
+            if not _src.alive(b["url"]):
+                b["url"] = ""
+        blk = signature.block(site, res, f"{now_kst():%Y년 %-m월}")
+        if blk:  # 사이트 고정 형식(대조표·판정표·법안 단계)
+            md = signature.insert(md, blk)
+            post["signature"] = {k: res.get(k) for k in ("myth_check", "verdict", "bill") if res.get(k)}
+        elif site.get("signature"):
+            log(f"  고정 형식({site['signature']})이 비어서 빠졌어요")
         (d / "article.md").write_text(md, encoding="utf-8")
         res["article_md"] = md
     wish = [w for w in (res.get("coupang_wish") or []) if w.get("name")]

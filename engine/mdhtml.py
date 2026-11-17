@@ -33,6 +33,10 @@ def convert(md, image_url=None):
                     out.append(f'<figure><img src="{url}" alt="{html.escape(alt or "")}" loading="lazy"/></figure>')
             i += 1
             continue
+        if s.startswith('<div class="sig-'):  # 사이트 고정 형식 블록(signature.py)은 그대로
+            out.append(s)
+            i += 1
+            continue
         if s.startswith("### "):
             out.append(f"<h3>{_inline(s[4:])}</h3>")
         elif s.startswith("## "):
