@@ -1,7 +1,7 @@
 {
   "site": "sisibibi",
   "title": "⚡ 추경호 계엄 해제 표결 방해 1심 선고 전 쟁점 정리",
-  "status": "ready",
+  "status": "published",
   "rush": true,
   "platforms": [
     "threads"
@@ -50,5 +50,14 @@
   "checks": {
     "ok": true,
     "issues": []
+  },
+  "approved_at": "2026-11-17T12:44+09:00",
+  "published": {
+    "threads": [
+      "18121771525971895",
+      "17953417080350936",
+      "18098170415152201"
+    ],
+    "threads_at": "2026-11-17T12:45:47+09:00"
   }
 }
