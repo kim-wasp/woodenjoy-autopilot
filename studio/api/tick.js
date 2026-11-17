@@ -13,5 +13,6 @@ module.exports = async (req, res) => {
   };
   if (what === 'generate' || what === 'both') await run('studio-generate.yml');
   if (what === 'publish' || what === 'both') { await run('studio-publish.yml'); await run('publish.yml'); } // publish.yml: 예전 방식 남은 글
+  if (what === 'publish' || what === 'both') await run('issue-watch.yml'); // 속보 감지: 안 돌고 있으면 시작 (6시간 동안 1시간마다)
   send(res, 200, out);
 };
