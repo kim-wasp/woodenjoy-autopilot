@@ -110,7 +110,7 @@ def main():
     log = json.loads(LOG.read_text()) if LOG.exists() else {}
     test = "redirect-test" in sys.argv
     moved = {}
-    for tslug, sslugs in (GROUPS[:1] if test else GROUPS):
+    for tslug, sslugs in (GROUPS[:1] if (test or "--first" in sys.argv) else GROUPS):
         if tslug in log and log[tslug].get("done"):
             moved.update({s: log[tslug]["to"] for s in sslugs})
             continue
