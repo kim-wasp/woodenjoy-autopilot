@@ -64,7 +64,8 @@ def check_redirect(src_link, to_url):
 def redirect(src_post, to_url):
     """Rank Math 301 만들기 (모듈 켜져 있어야 해요)"""
     r = requests.post(f"{SITE}/wp-json/rankmath/v1/updateRedirection", headers=H, timeout=60, json={
-        "objectID": src_post["id"], "objectType": "post", "hasRedirect": True, "redirectionID": "", "redirectionUrl": to_url, "redirectionType": "301"})
+        "objectID": src_post["id"], "objectType": "post", "hasRedirect": True, "redirectionID": "", "redirectionUrl": to_url, "redirectionType": "301",
+        "redirectionSources": src_post["link"].replace(SITE + "/", "")})  # 출발 주소가 비면 저장이 안 돼요
     ok = r.status_code == 200 and '"new"' in r.text or "update" in r.text
     print(f"  이동 설정 {r.status_code} {json.loads(r.text).get('message', '')[:40] if r.text.startswith('{') else r.text[:80]}")
     return ok
