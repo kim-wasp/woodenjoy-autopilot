@@ -69,7 +69,7 @@ def req(m, path, **kw):
 def all_posts():
     out, page = [], 1
     while True:
-        r = req("GET", f"/posts?status=publish&per_page=20&page={page}&context=edit&_fields=id,slug,title,content,link")
+        r = req("GET", f"/posts?status=publish&per_page=20&page={page}&context=edit&_fields=id,slug,title,content,link,featured_media")
         out += r.json()
         if page >= int(r.headers.get("X-WP-TotalPages", 1)):
             return out
@@ -106,7 +106,7 @@ def main():
         if new2 != new:
             n_b += 1
             new = new2
-        has_img = bool(re.search(r"<img\b", new))
+        has_img = bool(re.search(r"<img\b", new)) or bool(p.get("featured_media"))
         if has_img and "ai-image-note" not in new and "AI로 만든" not in new:
             new = new.rstrip() + "\n\n" + AI_NOTE
             n_ai += 1
