@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T20:03+09:00",
+  "updated": "2026-11-17T20:20+09:00",
   "items": [
     {
       "site": "infobay",
@@ -610,6 +610,15 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
+      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
+      "platform": "blog",
+      "at": "2026-11-18T07:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
@@ -688,6 +697,24 @@
       "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
       "platform": "instagram",
       "at": "2026-11-19T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
+      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
+      "platform": "threads",
+      "at": "2026-11-20T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
+      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
+      "platform": "instagram",
+      "at": "2026-11-20T21:00+09:00",
       "state": "planned"
     }
   ]
