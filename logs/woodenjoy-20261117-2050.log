@@ -1,0 +1,44 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  키워드 후보: 도어락건전지교체(980), 현관문도어락설치(540), 콘크리트벽못박기(500), 목문용도어락(1730), 현관방화문(1760), 현관문잠금장치(1820), 도어록(1890), 도어락교체(1980), 에버넷도어락(1990), 도어락수리(2120), 락프로도어락(2220), SYNC도어락(2340)
+  대표 이미지 생성 (gemini)
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 24): {"rotate_cw": 0, "reason
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  방향 점검 건너뜀: JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  홈피드 썸네일 완성 (스타일 1, 색 4) 충전지 4개 넣으면 / 1.2V 모자라요
+  카드 점검 실패:
+  - 2장: 계정명 자리 침범: "원인"
+  - 2장: 본문이 계정명 자리까지 내려옴
+  - 5장: 계정명 자리 침범: "2단계"
+  - 5장: 본문이 계정명 자리까지 내려옴
+  - 8장: 아래 빈 공간 큼 (612px)
+  점검에 걸림 → 고치기:
+   - 카드: 2장: 계정명 자리 침범: "원인"
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+   - 카드: 5장: 계정명 자리 침범: "2단계"
+   - 카드: 5장: 본문이 계정명 자리까지 내려옴
+   - 카드: 8장: 아래 빈 공간 큼 (612px)
+  카드 점검 실패:
+  - 8장: 계정명 자리 침범: "4"
+  - 8장: 계정명 자리 침범: "안·밖에서 둘 다 열어 보기"
+  - 8장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 8장: 계정명 자리 침범: "4"
+   - 카드: 8장: 계정명 자리 침범: "안·밖에서 둘 다 열어 보기"
+   - 카드: 8장: 본문이 계정명 자리까지 내려옴
+  카드 8장 점검 통과 → content/woodenjoy/2026-11-17-doorlock-battery-replace-alarm-again/cards
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1289, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1050, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
