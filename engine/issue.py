@@ -15,6 +15,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -50,6 +51,7 @@ def candidates(site, trend_list):
         rows.append({"id": f"t{len(rows)}", "kind": "급상승 검색어", "text": f"{t['keyword']} (검색 {t.get('traffic_label') or t.get('traffic')}) {heads}",
                      "key": t["keyword"], "traffic": t.get("traffic", 0), "links": [n["url"] for n in t.get("news", [])[:3]]})
     for q in cfg.get("queries", [])[:8]:
+        time.sleep(2)  # 구글 뉴스가 연달아 부르면 429로 막아요
         try:
             items = trends._gnews(q, "6h")[:12]
         except requests.RequestException as e:
@@ -126,6 +128,10 @@ def write(site, chosen, rows):
         '"link": "https://... 또는 빈칸", "sources": [{"title": "매체명 기사 제목", "url": "https://..."}]}'])
     x = llm.ask_json("당신은 한국어 스레드 계정 운영자예요. 사실만 쓰고 JSON만 답해요.", prompt, model=WRITE_MODEL,
                      web_search=True, max_searches=4, max_tokens=4000, mock_name="issue_write")
+    posts = [t for t in (x.get("posts") or []) if isinstance(t, str) and len(t.strip()) > 15][:3]
+    if posts and "{LINK}" not in posts[-1]:
+        posts[-1] = posts[-1].rstrip() + " {LINK}"
+    x["posts"] = posts
     x["problems"] = th_problems(x.get("posts") or [], x.get("topic_tag")) if x.get("posts") else ["글이 비었어요"]
     return x
 
