@@ -13,6 +13,7 @@ jobs:
       - run: pip install -q -r requirements.txt beautifulsoup4
       - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - run: bash tools/probe.sh
+        continue-on-error: true  # 점검용이라 실패해도 실패 메일을 보내지 않아요 (결과는 기록에서 봐요)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           WP_FORSMARTLIFE_PASS: ${{ secrets.WP_FORSMARTLIFE_PASS }}

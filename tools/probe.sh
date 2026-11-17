@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 tools/fsl_fix.py --apply
+# 점검용 (필요할 때 바꿔 써요)
+echo ok
