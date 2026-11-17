@@ -50,6 +50,11 @@ def by_slug(slug, status="publish,private"):
     return j[0] if j else None
 
 
+def clear_cache():
+    r = requests.post(f"{SITE}/wp-json/wp-super-cache/v1/cache", headers=H, json={"wp_delete_cache": True}, timeout=60)
+    return r.status_code
+
+
 def check_redirect(src_link, to_url):
     chk = requests.get(src_link, allow_redirects=False, timeout=30, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache"})
     loc = chk.headers.get("location", "")
@@ -116,7 +121,7 @@ def main():
             continue
         print(f"[{t['title']['raw']}] ← {', '.join(s['title']['raw'] for s in srcs)}")
         if test:
-            print("  301 시험:", redirect(srcs[0], t["link"]), check_redirect(srcs[0]["link"], t["link"]))
+            print("  301 시험:", redirect(srcs[0], t["link"]), "캐시", clear_cache(), check_redirect(srcs[0]["link"], t["link"]))
             return
         try:
             html, added = merge_text(t, srcs)
@@ -128,6 +133,7 @@ def main():
         for s in srcs:
             req("POST", f"/posts/{s['id']}", json={"status": "private"})
             moved[s["slug"]] = t["link"]
+        clear_cache()
         checks = [check_redirect(s["link"], t["link"]) for s in srcs]
         ok = ok and all(c[0] for c in checks)
         print("  이동 확인:", [c[1] for c in checks])
