@@ -69,7 +69,7 @@ def req(m, path, **kw):
 def all_posts():
     out, page = [], 1
     while True:
-        r = req("GET", f"/posts?status=publish&per_page=100&page={page}&context=edit&_fields=id,slug,title,content,link")
+        r = req("GET", f"/posts?status=publish&per_page=20&page={page}&context=edit&_fields=id,slug,title,content,link")
         out += r.json()
         if page >= int(r.headers.get("X-WP-TotalPages", 1)):
             return out
