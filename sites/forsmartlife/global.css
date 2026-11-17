@@ -1,0 +1,60 @@
+/* Hallmark · WellnessNote(forsmartlife.com) 글 틀 · genre: editorial · signature: 흔히 듣는 말과 공식 기준 대조표 · 2026-11-17
+ * critique: 기본 테마 파랑을 걷고 대조표의 초록 하나로 통일, 본문 폭·표·옛 wpflow 상자(wf-*)를 같은 재료로
+ * 붙이는 곳: 워드프레스 관리자 > 외모 > 사용자 정의하기 > 추가 CSS (원래 있던 4줄 아래에 그대로 붙여 넣기) */
+:root {
+  --wn-ink: #1f2a2e; --wn-ink-2: #34444a; --wn-muted: #5b6b70; --wn-line: #d9e2e1; --wn-paper: #f6f9f8; --wn-white: #fbfdfc;
+  --wn-accent: #1f6b57; --wn-accent-2: #17543f; --wn-myth: #9a3b2f; --wn-warn-bg: #fbf3e4; --wn-warn: #8a5a12;
+  --wn-radius: 10px; --wn-measure: 42rem;
+  --wn-font: "Pretendard Variable", "Pretendard", system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+html, body { overflow-x: clip; }
+body { color: var(--wn-ink); font-family: var(--wn-font); }
+a { color: var(--wn-accent); }
+a:hover, a:active { color: var(--wn-accent-2); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--wn-accent); outline-offset: 2px; }
+.main-title a, .main-title a:hover { color: var(--wn-ink); }
+.main-navigation .main-nav ul li a { color: var(--wn-ink-2); }
+.main-navigation .main-nav ul li[class*="current-menu-"] > a, .main-navigation .main-nav ul li a:hover { color: var(--wn-accent); }
+
+/* 본문 */
+.single-post .entry-content { max-width: var(--wn-measure); margin-left: auto; margin-right: auto; font-size: 17px; line-height: 1.8; }
+.single-post .entry-header { max-width: var(--wn-measure); margin-left: auto; margin-right: auto; }
+.single-post .entry-title { text-wrap: balance; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.3; letter-spacing: -0.01em; overflow-wrap: break-word; min-width: 0; }
+.entry-content h2 { text-wrap: balance; font-size: 23px; line-height: 1.4; margin: 2.2em 0 0.7em; padding-top: 0.9em; border-top: 1px solid var(--wn-line); }
+.entry-content h3 { font-size: 19px; margin: 1.6em 0 0.5em; }
+.entry-content img { border-radius: var(--wn-radius); }
+.entry-meta, .entry-meta a { color: var(--wn-muted); }
+
+/* 표 */
+.entry-content table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--wn-line); border-radius: var(--wn-radius); overflow: hidden; font-size: 15px; }
+.entry-content th { background: var(--wn-paper); color: var(--wn-ink); font-weight: 600; text-align: left; }
+.entry-content th, .entry-content td { padding: 8px 12px; border: 0; border-top: 1px solid var(--wn-line); vertical-align: top; }
+.entry-content thead tr:first-child th { border-top: 0; }
+.entry-content .wp-block-table { overflow-x: auto; }
+
+/* 고정 형식: 흔히 듣는 말과 공식 기준 (글 안의 인라인 스타일과 같은 값) */
+.sig-myth { border-color: var(--wn-line); }
+.ai-image-note { color: var(--wn-muted); }
+
+/* 예전 글 상자(wpflow wf-*): 같은 재료로 */
+.wf-summary, .wf-keypoints, .wf-point, .wf-tip, .wf-faq, .wf-related, .wf-numcards {
+  margin: 1.6em 0; padding: 16px 20px; border: 1px solid var(--wn-line); border-radius: var(--wn-radius); background: var(--wn-paper);
+}
+.wf-summary { border-top: 3px solid var(--wn-accent); }
+.wf-keypoints, .wf-point { background: var(--wn-white); }
+.wf-tip { background: transparent; border-style: dashed; }
+.wf-faq { background: transparent; border-width: 0 0 1px; border-radius: 0; padding: 12px 0; }
+.wf-related { background: transparent; }
+.wf-warn { margin: 1.6em 0; padding: 16px 20px; border-radius: var(--wn-radius); background: var(--wn-warn-bg); color: var(--wn-ink); border: 1px solid var(--wn-warn); }
+.wf-quote { margin: 1.6em 0; padding: 16px 20px; border-top: 1px solid var(--wn-line); border-bottom: 1px solid var(--wn-line); color: var(--wn-ink-2); font-size: 18px; }
+.wf-numcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; background: transparent; border: 0; padding: 0; }
+.wf-numcard { padding: 12px 16px; border: 1px solid var(--wn-line); border-radius: var(--wn-radius); background: var(--wn-white); min-width: 0; }
+.wf-faq + .wf-faq { margin-top: -0.6em; }
+.wf-summary > :first-child, .wf-keypoints > :first-child, .wf-tip > :first-child, .wf-warn > :first-child, .wf-faq > :first-child { margin-top: 0; }
+.wf-summary > :last-child, .wf-keypoints > :last-child, .wf-tip > :last-child, .wf-warn > :last-child, .wf-faq > :last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .single-post .entry-content { font-size: 16px; }
+  .entry-content th, .entry-content td { padding: 8px 8px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }

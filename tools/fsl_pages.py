@@ -167,5 +167,70 @@ def weekly():
                 f"질병관리청이 발표한 인플루엔자 의사환자분율을 주별로 모아 그린 그래프. 최근 {last['week'].split('-W')[1]}주 {last['value']}명(1,000명당).")
 
 
+HOME_STYLE = """<style>
+.wnh{--ink:#1f2a2e;--muted:#5b6b70;--line:#d9e2e1;--paper:#f6f9f8;--accent:#1f6b57;--accent-ink:#ffffff;--myth:#9a3b2f;
+--font:inherit;color:var(--ink);font-size:17px;line-height:1.7;overflow-wrap:break-word}
+.wnh *{box-sizing:border-box}.wnh h1,.wnh h2,.wnh h3{min-width:0;overflow-wrap:break-word;color:var(--ink)}
+.wnh .hero{padding:48px 0 40px;border-bottom:1px solid var(--line)}
+.wnh .hero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.25;margin:0 0 14px;font-weight:700;letter-spacing:-0.01em}
+.wnh .hero p{margin:0 0 22px;color:var(--muted);font-size:18px;max-width:34em}
+.wnh .act{display:flex;flex-wrap:wrap;gap:12px}
+.wnh .btn{display:inline-block;padding:11px 20px;border-radius:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600}
+.wnh .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.wnh a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wnh .myth{margin:40px 0 8px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.wnh .myth div{padding:18px 20px}.wnh .myth .m{background:var(--paper);color:var(--myth)}.wnh .myth .f{background:#fff}
+.wnh .myth small{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.wnh .cap{font-size:14px;color:var(--muted);margin:0 0 40px}
+.wnh h2{font-size:24px;margin:44px 0 14px}
+.wnh .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.wnh .tri li{border-top:2px solid var(--ink);padding-top:12px}.wnh .tri a{color:var(--ink);font-weight:700;text-decoration:none}
+.wnh .tri p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.wnh .wp-block-latest-posts{list-style:none;padding:0;margin:0}.wnh .wp-block-latest-posts li{padding:14px 0;border-top:1px solid var(--line)}
+.wnh .wp-block-latest-posts a{color:var(--ink);font-weight:600;text-decoration:none}.wnh .wp-block-latest-posts__post-date{display:block;font-size:13px;color:var(--muted)}
+.wnh .wp-block-latest-posts__post-excerpt{margin:4px 0 0;font-size:15px;color:var(--muted)}
+@media (max-width:640px){.wnh .myth,.wnh .tri{grid-template-columns:minmax(0,1fr)}.wnh .hero{padding:32px 0 28px}}
+</style>"""
+
+
+def home():
+    c = HOME_STYLE + """
+<div class="wnh">
+<section class="hero">
+<h1>건강 속설, 공식 기준으로 다시 봐요</h1>
+<p>흔히 듣는 말 옆에 질병관리청·학회 기준을 나란히 놓고, 출처를 글마다 남겨요.</p>
+<div class="act"><a class="btn" href="/flu-weekly/">이번 주 독감 수치</a><a class="btn ghost" href="/health-calculators/">건강 계산기</a></div>
+</section>
+<div class="myth"><div class="m"><small>흔히 듣는 말</small>물은 누구나 하루 2리터</div><div class="f"><small>공식 기준</small>필요한 양은 나이·성별·활동량마다 달라요. 음식으로 먹는 물도 포함해서 봐요.</div></div>
+<p class="cap">모든 글은 이렇게 시작해요. <a href="/daily-water-intake/">이 예시 글 읽기</a></p>
+<h2>새 글</h2>
+<!-- wp:latest-posts {"postsToShow":6,"displayPostDate":true,"displayPostContent":true,"excerptLength":28} /-->
+<h2>주제별로 보기</h2>
+<ul class="tri">
+<li><a href="/category/season-health-tips/">계절 건강</a><p>환절기·한파·폭염에 달라지는 몸 관리</p></li>
+<li><a href="/category/health-routine/">건강 루틴</a><p>먹고 자고 움직이는 매일의 기준</p></li>
+<li><a href="/category/symptom-management/">증상 관리</a><p>병원에 가야 할 신호와 집에서 할 일</p></li>
+</ul>
+<h2>이렇게 써요</h2>
+<ul class="tri">
+<li><a href="/editorial-policy/">공식 자료만</a><p>질병관리청, 학회, 대학병원 자료로 확인한 내용만 써요.</p></li>
+<li><a href="/medical-disclaimer/">진단은 병원에서</a><p>글은 참고 정보예요. 증상이 있으면 진료를 먼저 받으세요.</p></li>
+<li><a href="/contact/">틀리면 고쳐요</a><p>오류를 알려 주시면 확인하고 고친 날짜를 남겨요.</p></li>
+</ul>
+</div>"""
+    found = req("GET", "/pages?slug=%ed%99%88&_fields=id,content&context=edit").json()
+    if not found:
+        print("홈 페이지를 못 찾았어요")
+        return
+    import shutil  # noqa: F401
+    old = found[0]["content"]["raw"]
+    bk = ROOT / "status" / "fsl_home_backup.html"
+    if not bk.exists():
+        bk.write_text(old, encoding="utf-8")  # 되돌릴 수 있게 처음 것 보관
+    req("POST", f"/pages/{found[0]['id']}", json={"content": "<!-- wp:html -->\n" + c.split("<!-- wp:latest-posts")[0] + "\n<!-- /wp:html -->\n"
+        + "<!-- wp:latest-posts" + c.split("<!-- wp:latest-posts")[1].split("/-->")[0] + "/-->\n<!-- wp:html -->\n" + c.split("/-->", 1)[1] + "\n<!-- /wp:html -->"})
+    print("홈 페이지 고침")
+
+
 if __name__ == "__main__":
-    {"calculators": calculators, "weekly": weekly}[sys.argv[1]]()
+    {"calculators": calculators, "weekly": weekly, "home": home}[sys.argv[1]]()
