@@ -66,14 +66,14 @@ def verdict_html(v, checked=""):
     rows = ""
     for r in v["rows"][:5]:
         c = t[STATUS.get(r.get("status"), "s_open")]
-        rows += (f'<div style="padding:12px 14px;border-top:1px solid {t["line"]};background:#fff">'
-                 f'<p style="margin:0 0 4px;font-size:13px;color:{t["muted"]}">{E(r.get("who"))}</p>'
-                 f'<p style="margin:0 0 6px;color:{t["ink"]}">{E(r.get("claim"))}</p>'
-                 f'<p style="margin:0;font-size:14px;color:{t["ink"]}"><span style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid {c};border-radius:999px;color:{c};font-size:13px">{E(r.get("status") or "확인 중")}</span>{E(r.get("check"))}</p></div>')
-    unk = f'<p style="margin:0;padding:10px 14px 12px;font-size:14px;color:{t["muted"]}">아직 모르는 것: {E(v.get("unknown"))}</p>' if v.get("unknown") else ""
+        rows += (f'<div class="sig-row" style="padding:12px 14px;border-top:1px solid {t["line"]};background:#fff">'
+                 f'<p class="sig-who" style="margin:0 0 4px;font-size:13px;color:{t["muted"]}">{E(r.get("who"))}</p>'
+                 f'<p class="sig-claim" style="margin:0 0 6px;color:{t["ink"]}">{E(r.get("claim"))}</p>'
+                 f'<p class="sig-check" style="margin:0;font-size:14px;color:{t["ink"]}"><span class="sig-status sig-{STATUS.get(r.get("status"), "s_open")}" style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid {c};border-radius:999px;color:{c};font-size:13px">{E(r.get("status") or "확인 중")}</span>{E(r.get("check"))}</p></div>')
+    unk = f'<p class="sig-note" style="margin:0;padding:10px 14px 12px;font-size:14px;color:{t["muted"]}">아직 모르는 것: {E(v.get("unknown"))}</p>' if v.get("unknown") else ""
     return (f'<div class="sig-verdict" style="margin:28px 0;border:1px solid {t["line"]};border-radius:10px;overflow:hidden;background:{t["paper"]}">'
-            f'<p style="margin:0;padding:14px;font-weight:700;color:{t["ink"]}">시시비비 판정표: {E(v.get("issue"))}</p>{rows}{unk}'
-            + (f'<p style="margin:0;padding:0 14px 12px;font-size:13px;color:{t["muted"]}">확인: {E(checked)}</p>' if checked else "") + "</div>")
+            f'<p class="sig-title" style="margin:0;padding:14px;font-weight:700;color:{t["ink"]}">시시비비 판정표: {E(v.get("issue"))}</p>{rows}{unk}'
+            + (f'<p class="sig-note" style="margin:0;padding:0 14px 12px;font-size:13px;color:{t["muted"]}">확인: {E(checked)}</p>' if checked else "") + "</div>")
 
 
 def bill_html(b):
@@ -82,15 +82,15 @@ def bill_html(b):
     t = TOK
     cur = STAGES.index(b["stage"]) if b["stage"] in STAGES else -1
     steps = "".join(
-        f'<li style="flex:1;min-width:0;padding:8px 4px;text-align:center;font-size:13px;border-top:3px solid {t["fact"] if i <= cur else t["line"]};'
+        f'<li class="sig-step{" is-done" if i <= cur else ""}{" is-now" if i == cur else ""}" style="flex:1;min-width:0;padding:8px 4px;text-align:center;font-size:13px;border-top:3px solid {t["fact"] if i <= cur else t["line"]};'
         f'color:{t["ink"] if i == cur else t["muted"]};font-weight:{700 if i == cur else 400}">{E(s)}</li>' for i, s in enumerate(STAGES))
     num = f' (의안번호 {E(b["number"])})' if b.get("number") else ""
     link = f' <a href="{E(b["url"])}" target="_blank" rel="noopener">의안정보시스템에서 보기</a>' if str(b.get("url", "")).startswith("http") else ""
     dead = f'<p style="margin:8px 0 0;color:{t["s_false"]};font-size:14px">이 법안은 폐기됐어요.</p>' if b["stage"] == "폐기" else ""
     return (f'<div class="sig-bill" style="margin:28px 0;padding:14px;border:1px solid {t["line"]};border-radius:10px;background:{t["paper"]}">'
-            f'<p style="margin:0 0 8px;font-weight:700;color:{t["ink"]}">법안 지금 어디까지 왔나: {E(b["name"])}{num}</p>'
-            f'<ol style="display:flex;gap:4px;list-style:none;margin:0;padding:0">{steps}</ol>{dead}'
-            f'<p style="margin:8px 0 0;font-size:13px;color:{t["muted"]}">{E(b.get("as_of"))} 기준.{link}</p></div>')
+            f'<p class="sig-title" style="margin:0 0 8px;font-weight:700;color:{t["ink"]}">법안 지금 어디까지 왔나: {E(b["name"])}{num}</p>'
+            f'<ol class="sig-steps" style="display:flex;gap:4px;list-style:none;margin:0;padding:0">{steps}</ol>{dead}'
+            f'<p class="sig-note" style="margin:8px 0 0;font-size:13px;color:{t["muted"]}">{E(b.get("as_of"))} 기준.{link}</p></div>')
 
 
 def block(site, res, checked=""):
