@@ -1,80 +1,80 @@
 {
   "ideas": [
     {
-      "title": "이 대통령 3박4일 아세안·APEC 순방, 17일 다카이치 회담…'교역 3000억달러' 뭘 노리나",
-      "keyword": "아세안 APEC 순방",
-      "trend_keyword": "",
-      "facts": "이 대통령이 필리핀 마닐라 한-아세안 정상회의와 중국 선전 APEC에 가는 3박4일 순방을 시작했어요. '한-아세안 교역 3000억달러 시대'와 한-아세안 FTA 개선을 제안했고, 17일 마닐라에서 다카이치 일본 총리와 정상회담이 잡혔어요(안동 회담 이후 6개월 만).",
-      "sides": "높아진 위상에 맞게 실용외교로 시장과 협력을 넓힐 기회라는 시각 / 미·중·러 정상과 같은 무대에 서는 만큼 '시험대'이고 성과는 지켜봐야 한다는 시각",
-      "question": "이번 순방에서 독자에게 가장 중요한 건 일본 회담, 아세안 FTA, 미·중 사이 균형 중 어느 쪽이라고 보세요?",
+      "title": "AI로 수능 부정하면 10년 못 본다? 국회에 올라온 ‘응시 제한 10년’ 법안",
+      "keyword": "AI 부정행위 응시제한",
+      "trend_keyword": "이재명 수능",
+      "facts": "김희정 국회 교육위원장이 대학 시험 AI 부정행위 19건을 확인했다며 수능 제재 기간을 늘리는 법안을 냈고, 여당도 AI 수능 부정행위 때 10년 응시 제한을 추진해요. 이 대통령은 필리핀에서 수능 AI 부정 대책 회의를 화상으로 주재했어요.",
+      "sides": "찬성 측: 기기가 너무 작아져 잡기 어려우니 처벌을 세게 해야 막을 수 있다 / 신중 측: 처벌 수위가 지나치거나 단속 방법이 사생활을 침해하지 않는지 따져 봐야 한다는 시각이 있어요(구체적 반론은 기사로 확인 필요)",
+      "question": "부정행위 막는 데 ‘처벌 강화’와 ‘검사 강화’ 중 무엇이 더 효과 있다고 보세요?",
       "metrics": {
-        "news_24h": 83,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
+        "news_24h": 100,
+        "news_6h": 100,
+        "news_capped": true,
+        "trend": "이재명 수능",
+        "trend_traffic": 200,
+        "trend_label": "200+",
         "naver_month": 10
       },
       "links": [
         {
-          "title": "[현장 화보]마닐라에서 시작된 정상외교…이재명 대통령, 아세안·APEC 순방 돌입 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHVnJHYWpsa1pKUWJLYVdYYWlHdklSdW5aWVc1UldiOTZiV004V0d4MmRxVkFzek9zYTgwZWY3bk1aWFdzcTRaVjlWR1F4cG53OS13OW5mVnFkUdIBX0FVX3lxTE1KWU1nM243S0lJeEZYU3lhcDdRaFZyYUlRanc0dDRxaW0tVzFTTzZrWVFPZEJIUE0wT0xWc1g1SVJBemNpWU9GQnpKN2RLdms2M3dMQkVGdFZMQWwtaUpB?oc=5"
+          "title": "“AI 부정행위 적발 땐 인생 바뀔 수도…수능 ‘응시제한 10년’” - 교수신문",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ybWYwbnhtMUFzemJDbnA0UVQxSE1ELUlvZWFCajZxN1I1eEtJblhDOWQyRGNKaWJNQ3ZUMUkyemEwS0NNa0tBdnVmVzMtNGZsNDV1UldYUW9pbkxQcVAtdE1oY212VjA?oc=5"
         },
         {
-          "title": "李, 아세안·APEC 순방…경제·안보 실용외교 주목 - 매일일보",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9rejFoZmNqR2xiOHN2dWFmcmozNGQ0QlpkdlJYci1BV2xXbEdyM0hzdGg0WVBCTm9BWno4elBFVWpDZ0Vwd2l4SzQzZXk0czlLazJDSElQZnRma2l6WmhRZk5Ic1c?oc=5"
+          "title": "與, AI 수능 부정행위 땐 10년 응시 제한 추진 - 매일일보",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pXzRsaWpJZHF0ZnBPX0pWRU9LS1hJcTdWdHg2N0t5dW9kSE1XV2l6Nm91WmFJaVZ2Z05kYWpxYWxtOHd2RjEtU0dIWl81QWdRMVdxMGNrSnVESFk3cWdfRnNwTmI?oc=5"
         },
         {
-          "title": "이 대통령, 오늘부터 필리핀·중국 순방…ASEAN·APEC 참석 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRSFhOSEFkZ0h2aU5SakdJbjJlZmlmalk3RHJzZG9iYXhXM1JMN29sUTc3UFlucldMYm9HSFAwNWJtTjVNaTNfcHBwOTUzYVBYdnF2bG9tLVdfQVE?oc=5"
+          "title": "정부, AI 부정행위와 전면전…수능 시험장 8천400명 투입·10년 응시 제한 - 경기일보",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBWQnlEVUxtNEdqMTlORWVXdnVBajhZc1NiUV9KdXlvMVBZenEyVDZ1YWwwaXFYM1lPWXZiYVI5M0stRmVPMV9Od29QblA0YldiLWRiN2dUTjVJZVE?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 83건, 네이버 월간 검색 10회",
-      "score": 83.1
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 구글 검색 급증 '이재명 수능' 200+, 네이버 월간 검색 10회",
+      "score": 202.1
     },
     {
-      "title": "대통령 지지율 36.4%, 국힘 43.0%·민주 34.6%…리얼미터 숫자 제대로 읽는 법",
-      "keyword": "리얼미터 지지율 36.4",
-      "trend_keyword": "여론조사",
-      "facts": "리얼미터 조사에서 이 대통령 지지율은 36.4%, 정당 지지율은 국민의힘 43.0%, 민주당 34.6%로 보도됐어요. 조사 기간·방식·표본오차는 헤드라인에 없어서 원자료로 확인해야 해요.",
-      "sides": "정부·여당에 보내는 경고 신호라는 해석 / 조사 하나만으로 흐름을 단정하기는 이르고, 다른 조사기관 결과와 같이 봐야 한다는 시각",
-      "question": "지난번 글의 다른 조사와 숫자가 꽤 다른데, 독자에게 '조사기관별 차이'를 어디까지 설명하면 좋을까요?",
-      "metrics": {
-        "news_24h": 52,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 10
-      },
-      "links": [
-        {
-          "title": "이 대통령 지지율 36.4%…국민의힘 43%·민주당 34.6%[리얼미터] - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rQTFNVUdJTm5rc3NpSWxScTBibGo5bDNqcEQ5WEJOV0FrNE9yRDBUbjVoUTE5OEl2SlZJSHVJTl95ZllBaGdpcWdscXloekhQS0EzYXBGQnlsZ9IBX0FVX3lxTE9rUFB5bWJSb0w2aHRzdXZCdnJJOTlVd0xBSllMaUJOdE1keFNvdkt2emVIc2MxUUgtakZkRk9QN2NHRDVrZ3NDdVpaTHg4LXRxLTlyNF84OXllZXB2ZE1V?oc=5"
-        },
-        {
-          "title": "李 지지율 36.4%…국힘 43%, 민주 34.6% 오차 밖 [리얼미터] - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZDV0VU1VLVlsQ0hDckxoUTdRQ29KeFFTd1UtY2kwTE1pY18wNWF2R19PbUp3akIyLUpPNWZnS2QwVnZXV2lNOFUwUncwSXlnWTJLeE1Id1h5RVFZMEZrTXJDT1dHc3dJbFZuM29Xa2w5b1Ezd1UxeDNKNG9SQ2I5b3dWNzl5VExDUUE2dl9kZ3I?oc=5"
-        },
-        {
-          "title": "리얼미터 \"이 대통령 국정 지지도 36.4%…0.5%p 상승\" - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE14LXEwQy10Ql9WbUdvRmM2NUM2YS1YNmlfZVlxVUlFTVdyTFlDVFo2VE9UOHVicE04RWNLZW45Q3U0RXVuWUVwbFBDSFltemNfZlR5X0hSMmdXd0VESlg2eFZWYlA3Z2c?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 52건, 네이버 월간 검색 10회",
-      "score": 52.1
-    },
-    {
-      "title": "조정식 의장 '내년이 개헌 적기'…국민의힘은 '이번 정부서 개헌 없다', 무엇이 갈렸나",
-      "keyword": "조정식 개헌 자문위",
+      "title": "‘조작기소’ 특검법 국무회의 통과, 공포 다음 싸움터는 예산국회",
+      "keyword": "특검법 국무회의 의결",
       "trend_keyword": "특검",
-      "facts": "조정식 국회의장이 개헌 원칙 세 가지를 내놓고 헌법개정자문위원회를 꾸렸어요. 공동위원장은 김형오·정세균 전 국회의장이고, 현직 대통령 연임은 빼고 추진한다는 보도가 나왔어요.",
-      "sides": "의장·찬성 측: 내년이 개헌 적기이고, 세종시는 '행정수도'를 헌법에 넣자며 환영해요 / 국민의힘: 국면 전환용이자 '대국민 사기'라며 이번 정부에서 개헌은 없다고 해요(특검 이슈 시선 돌리기라는 비판 보도도 있어요)",
-      "question": "국회의장이 띄운 '2027년 개헌' 시간표, 현실성 있다고 보세요, 아니면 시기가 안 맞는다고 보세요?",
+      "facts": "‘조작기소 특검법’ 공포안이 17일 한 총리가 주재한 국무회의에서 의결됐어요. 여야가 맞서면서 내년 예산을 심사하는 국회 일정에도 영향이 갈 거라는 보도가 나와요.",
+      "sides": "찬성 측: 국회가 통과시킨 법이라 정부가 절차대로 공포하는 게 맞다 / 반대 측: 진행 중인 재판을 흔드는 특검이라 받아들일 수 없다(국민의힘은 장관 해임건의·탄핵 절차로 맞서는 중)",
+      "question": "특검법 갈등이 예산 심사까지 막는 상황을 독자에게 어떤 기준으로 보라고 말하고 싶으세요?",
       "metrics": {
-        "news_24h": 42,
+        "news_24h": 100,
+        "news_6h": 100,
+        "news_capped": true,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 10
+      },
+      "links": [
+        {
+          "title": "조작기소 특검법 국무회의 의결...\"최대 200일 활동\" - YTN",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBXQXVPUWNvcERjS29xNEZTOVIwZzRrckVZVkhTX25lelZHbHh6dFBVcjdGdDhzc3lzR0Rab0U5MUZJaTYwWkxBaGRFSFVYVzhFa1g0ekVyOVVXWDFBT0RiNFdBa0o2ajJDX004YktuYzA2TzJHX0E?oc=5"
+        },
+        {
+          "title": "‘조작기소 특검법’ 국무회의 의결⋯대통령 순방 중 총리가 주재 - 조선일보",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQX2pSRkRicWVuMzk0WTd2LVdKb09vM0p2a1l3R0JZclo2eFFZWDdBTmJDa2ozcHR2S1prZlBaOFpHT0dzWHN4VENST2FhVHN5d0JybTRjSFJYTHhmQl9CSDdERW5oUW1kY2ZUeURMa3o1S0NXYTlTcE1Hc3l3empOcEpadHhMdk4xRU12UFN6QW8?oc=5"
+        },
+        {
+          "title": "대통령 순방중 ‘조작기소 특검법’ 공포안, 국무회의 의결 - 법률신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE92cDBjM1hxS2ZqaUFEU0pvYkJhaFVkcjUwMklwNXNDbGpnLWhsTW1JYkptMUR6dzF1S3BEaklLQTZLUmhIbDZuNGo3Qm9UVFRqeHhBeFVUZXdEVWVlN1dHVUtNWGdCRFFXZWRJRXBR0gFyQVVfeXFMUHlHeHB0dEI4RHloXzA5TUlGT1NFRk5lQ2ZHV0FoZ2N2dm5QOU55V05TYnZGcnBOcWNkTWJRa0RkOGVtNEhIWml3Sk9ucGM2WmR0bC1UTVVJNVFIODNpbWNvYUV6NjM5MTRCV0w0T21RZmZR?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 네이버 월간 검색 10회",
+      "score": 200.1
+    },
+    {
+      "title": "교육감들이 국회 앞 1인 시위…‘교육재정’ 줄면 작은 학교부터?",
+      "keyword": "지방교육재정 1인 시위",
+      "trend_keyword": "",
+      "facts": "권순기 경남교육감, 천호성 전북교육감 등이 국회 앞에서 1인 시위를 하며 ‘지방교육재정 상생안’ 입법을 요구했어요. 권 교육감은 ‘내국세 연동이 깨지면 작은 학교부터 무너진다’고 말했어요.",
+      "sides": "교육감 측: 세금 수입에 맞춰 자동으로 나오는 교육 예산 구조를 지켜야 한다 / 개편 측: 학생 수가 줄어 교육재정 구조를 손봐야 한다는 주장이 있어요(정부 측 논리는 기사로 확인 필요)",
+      "question": "학생 수는 줄고 교육 예산은 고정된 구조, 바꿔야 한다고 보세요?",
+      "metrics": {
+        "news_24h": 36,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -84,38 +84,38 @@
       },
       "links": [
         {
-          "title": "조정식, 개헌 논의 재시동…자문위원장에 김형오·정세균 - BBS불교방송",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIVXRXUmJqeVVXSHVGZE1aTTBRRlpTMEptM2UyY0JtdlFiTndjTEFiYWljWkVPVU9WMTRPUURZeXZ1QVdtTmpLUnRVVktEYWN4bV9WazVSbkRXU3Jqa1FPazBEMFRwZzhUQmpB?oc=5"
+          "title": "권순기 교육감, 지방교육재정 상생안 입법 촉구…국회 앞 1인 시위 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBleGhuWm5fSHM3QnIxdU4zSGR3Z09xU3FtekVqQlNRVUVRYzc3dTZjYzc1dnBleWUwUUtueFU1U0I4OVltakxGZFp5QWRxaUM1YzhWQ2tEcXBKbDhM?oc=5"
         },
         {
-          "title": "조정식 \"국회 개헌 자문위 공동위원장에 김형오·정세균\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBSZ3dmcGQxakVhaHRHU0IydGxnOTNYUXQ0WnpxTmtXOE4yZjUybkxuR3RSSUJXX0FDb2s5ZDMtOE8yT0szeXN5d2h0WFBvemRDRmZZQ0JkRTlrVE5GTmpCZThSdGwyQjBmcXJKc1ZVZ1RYZzZlUkQ1X9IBeEFVX3lxTE9kZkZWVTNreWR6Y0pUTFNvZnZLQkQtWE9zWnlsRWNCMlh0TVo4bDlsVmg2UnhFVktDcDJIZ1N5VXk4dFo5cXlReTcyLUx2X2lpWEZOeDJNVEpYUld3Yk5QbzFRTTFoMDNxX01rWFRvbzg0dDRiREtHZg?oc=5"
+          "title": "“교육재정 안정성 지켜야” 권순기 경남교육감 국회 앞 1인 시위 - 서울신문",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeXRkLUduSThiUFlodm41NnV5WWNBeTBQNHQtd3VrUDNrclU5cDFtMFZ4U1B3TElQLU5JdXdZUElkRS1YM0ZxOEttLTFvc0xURXNWdVN2U3B5N1pHa2l3Q3JydzdXWDZ4VXpxaFlmMm1jQlZfdEpqMVJNbmZRUl9ETDFrVQ?oc=5"
         },
         {
-          "title": "조정식 “개헌은 국회가 주도…현직 대통령 연임 논의 대상 아냐” - 채널A",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBXUXMwMEktV182QXVyNExGd1FBVUtJS0VrREF0M0VuMklpbnFVZXFXM1pFU20tZnhvbUlOeVNCMFg3REZkQXZYQVB6OGotNnNiZnVyQ2o0aGhXUlFkemfSAWNBVV95cUxNb19LRjctbTJaQXE2MUk0YkFpU3hGVHdqVkpmV0NSTW9DQnJFT1FPTkRYZXdfRG4wQlhXYnJsenVtLXdsQklUeUVoYzJiUUREV2k4emZWVllqOHEyZTR2ZGpOSWs?oc=5"
+          "title": "권순기 경남교육감, 국회 앞 1인 시위…교육재정 상생안 입법 촉구 - 경남미디어",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5YRWVpYW94Um1BQy01NkptdzUxTTBQdlRrYUxhMVA2NjBwS2xacmRscFNEZGx3V2xMdVdVc25hV3ItNkREOGprQjZNSVMzczM2LXhiMVh2MWd1Vk4wb20wUkQ2UmNoMV92WkNr?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 42건, 네이버 월간 검색 10회",
-      "score": 42.1
+      "why": "구글 뉴스 24시간 기사 36건, 네이버 월간 검색 10회",
+      "score": 36.1
     }
   ],
-  "updated": "2026-11-16T22:13+09:00",
+  "updated": "2026-11-17T18:41+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 12159,
-        "output_tokens": 4728,
+        "input_tokens": 12369,
+        "output_tokens": 3889,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1432
+        "usd": 0.1273
       }
     },
     "images": {},
-    "usd": 0.1432,
-    "total_usd": 0.1432,
-    "total_krw": 200,
+    "usd": 0.1273,
+    "total_usd": 0.1273,
+    "total_krw": 180,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
