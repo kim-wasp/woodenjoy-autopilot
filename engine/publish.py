@@ -278,7 +278,12 @@ def publish_wordpress(site, d, post, dry):
     cat = wp.category_id(name)
     if cat:
         body["categories"] = [cat]
-    res = wp.req("POST", "/posts", json=body)
+    old_id = (post.get("published") or {}).get("blog")
+    if isinstance(old_id, int) and os.environ.get("FORCE"):  # 다시 올리기: 새 글을 만들지 않고 그 글을 고쳐요
+        body.pop("slug", None)
+        res = wp.req("POST", f"/posts/{old_id}", json=body)
+    else:
+        res = wp.req("POST", "/posts", json=body)
     rank_math_meta(wp, site, res.get("id"), post)
     return {"blog": res.get("id"), "blog_url": res.get("link")}
 
@@ -469,6 +474,34 @@ def publish_threads(site, d, post, dry):
     return {"threads": ids}
 
 
+def missing_images(site, d, post, md=None):
+    """글에 들어가야 하는데 파일이 없는 이미지 (대표사진, [[photo:N]])"""
+    md = md if md is not None else ((d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else "")
+    out = []
+    if post.get("hero_prompt") and not (d / "hero.jpg").exists() and ((site.get("images") or {}).get("hero") or {}).get("provider", "gemini") != "none":
+        out.append("대표사진")
+    for n in sorted(set(re.findall(r"\[\[photo:(\d+)\]\]", md))):
+        if not (d / f"photo{n}.jpg").exists():
+            out.append(f"사진 {n}")
+    return out
+
+
+def fill_missing_images(site, d, post):
+    """만들 때 이미지가 실패한 글(예: 이미지 크레딧 소진)은 올리기 직전에 한 번 더 만들어요"""
+    miss = missing_images(site, d, post)
+    if not miss:
+        return
+    log(f"  빠진 이미지 {', '.join(miss)} → 지금 다시 만들어요")
+    import generate
+    res = {"hero_prompt": post.get("hero_prompt"), "thumb_text": post.get("thumb_text"),
+           "photo_prompts": [{"id": int(re.sub(r"\D", "", p["file"]) or 0), "prompt": p.get("prompt", ""), "alt": p.get("alt", "")}
+                             for p in post.get("photos") or [] if p.get("prompt")]}
+    generate.make_images(site, res, d)
+    left = missing_images(site, d, post)
+    if left:
+        log(f"  ::warning::이미지 {', '.join(left)} 를 끝내 못 만들었어요 (글은 이미지 없이 올라가요)")
+
+
 def publish(d, platform, dry=False):
     d = Path(d).resolve()
     post = load_json(d / "post.json")
@@ -478,6 +511,8 @@ def publish(d, platform, dry=False):
         log("이미 올라갔어요")
         return
     log(f"[{site['name']}] {post['title']} → {platform}")
+    if platform == "blog" and not dry:
+        fill_missing_images(site, d, post)
     if platform == "blog":
         kind = site["blog"]["platform"]
         if kind == "wordpress":

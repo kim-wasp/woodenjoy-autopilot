@@ -1046,6 +1046,14 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
                            model=llm_cfg.get("model"), web_search=False, mock_name=f"{site_id}_post")
         res = {**res, **{k: v for k, v in fix.items() if k in part and v}}
     if res.get("article_md") and not os.environ.get("MOCK_LLM"):
+        import publish as _pub
+        miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+        if miss:  # 한 번 더 만들어 보고, 그래도 없으면 점검 실패로 (이미지 없는 글이 승인되지 않게)
+            make_images(site, res, d)
+            miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+            if miss:
+                issues.append(f"이미지: {', '.join(miss)} 를 못 만들었어요 (이미지 크레딧·오류 확인. 올릴 때 한 번 더 만들어요)")
+    if res.get("article_md") and not os.environ.get("MOCK_LLM"):
         import sources
         md2, dead = sources.verify_article((d / "article.md").read_text(encoding="utf-8"))
         if dead:
