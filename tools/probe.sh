@@ -1,25 +1,18 @@
 #!/bin/bash
+pip install -q playwright >/dev/null 2>&1 && python3 -m playwright install --with-deps chromium >/dev/null 2>&1
+mkdir -p status/shots
 python3 - <<'PY'
-import sys, requests
-sys.path.insert(0,'tools'); sys.path.insert(0,'engine')
-from fsl_fix import req, H
-old = 'font-size:13px;color:#5b6b70;font-weight:600">'
-new = 'font-size:13px;color:#5b6b70;font-weight:600;background:#fff;border:0">'
-page, n = 1, 0
-while True:
-    r = req("GET", f"/posts?status=publish&per_page=20&page={page}&context=edit&_fields=id,content")
-    for p in r.json():
-        raw = p["content"]["raw"]
-        if "sig-myth" in raw and old in raw:
-            req("POST", f"/posts/{p['id']}", json={"content": raw.replace(old, new)}); n += 1
-    if page >= int(r.headers.get("X-WP-TotalPages", 1)): break
-    page += 1
-print("표 머리 고침", n)
-for slug, title, seo in (("health-calculators", "건강 계산기", "건강 계산기: BMI·허리둘레, 독감 무료접종 대상 확인 %sep% %sitename%"),
-                         ("flu-weekly", "이번 주 독감 수치", "이번 주 독감 수치: 질병관리청 의사환자분율 주별 그래프 %sep% %sitename%")):
-    pid = req("GET", f"/pages?slug={slug}&_fields=id").json()[0]["id"]
-    req("POST", f"/pages/{pid}", json={"title": title})
-    print(slug, requests.post("https://forsmartlife.com/wp-json/rankmath/v1/updateMeta", headers=H, json={"objectType": "post", "objectID": pid, "meta": {"rank_math_title": seo}}).status_code)
-import fsl_merge as m; print("캐시", m.clear_cache())
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    b = p.chromium.launch()
+    pg = b.new_page(viewport={"width": 1280, "height": 700}); pg.goto("https://forsmartlife.com/?v=2", wait_until="networkidle"); pg.screenshot(path="status/shots/v_home.png"); pg.close()
+    pg = b.new_page(viewport={"width": 390, "height": 900}); pg.goto("https://forsmartlife.com/flu-weekly/?v=2", wait_until="networkidle")
+    pg.locator(".cm").screenshot(path="status/shots/v_flu_m.png"); pg.close()
+    pg = b.new_page(viewport={"width": 1280, "height": 900}); pg.goto("https://forsmartlife.com/norovirus-symptoms-prevention-disinfection/?v=2", wait_until="networkidle")
+    pg.locator(".sig-myth").screenshot(path="status/shots/v_myth.png"); pg.close()
+    pg = b.new_page(viewport={"width": 1280, "height": 900}); pg.goto("https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-cabinet-dead/?v=2", wait_until="networkidle")
+    pg.locator(".sig-verdict").screenshot(path="status/shots/v_verdict.png")
+    if pg.locator(".sig-bill").count(): pg.locator(".sig-bill").screenshot(path="status/shots/v_bill.png")
+    pg.close(); b.close()
 PY
-python3 tools/fsl_pages.py weekly
+git config user.name studio-bot; git config user.email bot@users.noreply.github.com; git add status && git commit -qm "확인 화면" && git pull -q --rebase && git push -q
