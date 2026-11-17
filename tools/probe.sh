@@ -22,3 +22,4 @@ for slug, title, seo in (("health-calculators", "건강 계산기", "건강 계�
     print(slug, requests.post("https://forsmartlife.com/wp-json/rankmath/v1/updateMeta", headers=H, json={"objectType": "post", "objectID": pid, "meta": {"rank_math_title": seo}}).status_code)
 import fsl_merge as m; print("캐시", m.clear_cache())
 PY
+python3 tools/fsl_pages.py weekly

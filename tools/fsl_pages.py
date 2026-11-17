@@ -28,7 +28,7 @@ STYLE = """<style>
 .wn button:focus-visible,.wn input:focus-visible,.wn select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wn .out{margin-top:14px;padding:12px 14px;border-radius:8px;background:#fff;border:1px solid var(--line);min-height:24px}
 .wn .note{font-size:13px;color:var(--muted)}.wn table{width:100%;border-collapse:collapse;font-size:15px}.wn th,.wn td{padding:8px 10px;border-top:1px solid var(--line);text-align:left}
-.wn th{font-size:13px;color:var(--muted);font-weight:600}.wn .big{font-size:28px;font-weight:700;color:var(--accent)}
+.wn th{font-size:13px;color:var(--muted);font-weight:600}.wn .cm{display:none}@media (max-width:600px){.wn .cd{display:none}.wn .cm{display:block}}.wn .big{font-size:28px;font-weight:700;color:var(--accent)}
 </style>"""
 
 
@@ -84,8 +84,8 @@ var ok=r.filter(function(x){return x.indexOf('전에는')<0});o.textContent=ok.l
                 "키·몸무게·허리둘레로 대한비만학회 기준 BMI 단계를 바로 계산하고, 나이로 2026-2027절기 독감 국가예방접종 대상인지 확인해요.")
 
 
-def svg_chart(rows, threshold=None):
-    W, Hh, L, R, T, B = 680, 260, 44, 16, 16, 34
+def svg_chart(rows, threshold=None, W=680, Hh=260, fs=11):
+    L, R, T, B = int(fs * 4), 16, 16, int(fs * 3)
     vals = [r["value"] for r in rows]
     import math
     top = max(5, math.ceil(max(vals + ([threshold] if threshold else [])) * 1.15 / 5) * 5)
@@ -93,13 +93,13 @@ def svg_chart(rows, threshold=None):
     y = lambda v: T + (Hh - T - B) * (1 - v / top)  # noqa: E731
     pts = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(vals))
     g = "".join(f'<line x1="{L}" x2="{W - R}" y1="{y(top * k / 4):.1f}" y2="{y(top * k / 4):.1f}" stroke="#e6ecec"/>'
-                f'<text x="{L - 6}" y="{y(top * k / 4) + 4:.1f}" font-size="11" text-anchor="end" fill="#5b6b70">{top * k / 4:.0f}</text>' for k in range(5))
-    lab = "".join(f'<text x="{x(i):.1f}" y="{Hh - 12}" font-size="11" text-anchor="middle" fill="#5b6b70">{E(r["week"].split("-W")[-1])}주</text>'
-                  for i, r in enumerate(rows) if len(rows) <= 12 or i % 2 == 0 or i == len(rows) - 1)
+                f'<text x="{L - 6}" y="{y(top * k / 4) + 4:.1f}" font-size="{fs}" text-anchor="end" fill="#5b6b70">{top * k / 4:.0f}</text>' for k in range(5))
+    lab = "".join(f'<text x="{x(i):.1f}" y="{Hh - fs}" font-size="{fs}" text-anchor="middle" fill="#5b6b70">{E(r["week"].split("-W")[-1])}주</text>'
+                  for i, r in enumerate(rows) if len(rows) <= (12 if W > 500 else 6) or i % (2 if W > 500 else 3) == 0 or i == len(rows) - 1)
     th = (f'<line x1="{L}" x2="{W - R}" y1="{y(threshold):.1f}" y2="{y(threshold):.1f}" stroke="#9a3b2f" stroke-dasharray="5 4"/>'
-          f'<text x="{W - R}" y="{y(threshold) - 6:.1f}" font-size="12" text-anchor="end" fill="#9a3b2f">유행기준 {threshold}</text>') if threshold else ""
+          f'<text x="{W - R}" y="{y(threshold) - 6:.1f}" font-size="{fs + 1}" text-anchor="end" fill="#9a3b2f">유행기준 {threshold}</text>') if threshold else ""
     dots = "".join(f'<circle cx="{x(i):.1f}" cy="{y(v):.1f}" r="3.5" fill="#1f6b57"/>' for i, v in enumerate(vals))
-    last = f'<text x="{x(len(vals) - 1) - 6:.1f}" y="{y(vals[-1]) - 10:.1f}" font-size="13" font-weight="700" text-anchor="end" fill="#1f6b57">{vals[-1]}</text>'
+    last = f'<text x="{x(len(vals) - 1) - 6:.1f}" y="{y(vals[-1]) - 10:.1f}" font-size="{fs + 2}" font-weight="700" text-anchor="end" fill="#1f6b57">{vals[-1]}</text>'
     return (f'<svg viewBox="0 0 {W} {Hh}" role="img" aria-label="주별 인플루엔자 의사환자분율 그래프" style="width:100%;height:auto;display:block">'
             f'{g}{th}<polyline points="{pts}" fill="none" stroke="#1f6b57" stroke-width="2.5"/>{dots}{last}{lab}</svg>')
 
@@ -153,7 +153,7 @@ def weekly():
 <p style="margin:6px 0 0">{move}.{vs}</p>
 </div>
 <h2>주별 흐름</h2>
-<div class="card" style="background:#fff">{svg_chart(rows[-16:], th)}</div>
+<div class="card" style="background:#fff"><div class="cd">{svg_chart(rows[-16:], th)}</div><div class="cm">{svg_chart(rows[-10:], th, W=360, Hh=240, fs=13)}</div></div>
 <h2>최근 10주 수치</h2>
 <table><thead><tr><th>주차</th><th>1,000명당</th><th>근거</th></tr></thead><tbody>{table}</tbody></table>
 <h2>이 숫자를 볼 때</h2>
