@@ -50,22 +50,19 @@ def by_slug(slug, status="publish,private"):
     return j[0] if j else None
 
 
+def check_redirect(src_link, to_url):
+    chk = requests.get(src_link, allow_redirects=False, timeout=30, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache"})
+    loc = chk.headers.get("location", "")
+    return chk.status_code in (301, 308) and to_url.rstrip("/") in loc.rstrip("/"), f"{chk.status_code} {loc}"
+
+
 def redirect(src_post, to_url):
-    """Rank Math 301. 모양이 버전마다 달라서 두 가지로 시도하고 실제 이동을 확인해요"""
-    url = f"{SITE}/wp-json/rankmath/v1/updateRedirection"
-    tries = [
-        {"objectID": src_post["id"], "objectType": "post", "hasRedirect": True, "redirectionID": "", "redirectionUrl": to_url, "redirectionType": "301"},
-        {"objectID": src_post["id"], "objectType": "post", "hasRedirect": True,
-         "redirection": {"id": "", "url_to": to_url, "header_code": "301", "has_redirect": True}},
-    ]
-    for body in tries:
-        r = requests.post(url, headers=H, json=body, timeout=60)
-        chk = requests.get(src_post["link"] + f"?nocache={src_post['id']}", allow_redirects=False, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
-        loc = chk.headers.get("location", "")
-        print(f"  이동 설정 {r.status_code} {r.text[:120]} → 확인 {chk.status_code} {loc}")
-        if chk.status_code in (301, 308) and to_url.rstrip("/") in loc.rstrip("/"):
-            return True
-    return False
+    """Rank Math 301 만들기 (모듈 켜져 있어야 해요)"""
+    r = requests.post(f"{SITE}/wp-json/rankmath/v1/updateRedirection", headers=H, timeout=60, json={
+        "objectID": src_post["id"], "objectType": "post", "hasRedirect": True, "redirectionID": "", "redirectionUrl": to_url, "redirectionType": "301"})
+    ok = r.status_code == 200 and '"new"' in r.text or "update" in r.text
+    print(f"  이동 설정 {r.status_code} {json.loads(r.text).get('message', '')[:40] if r.text.startswith('{') else r.text[:80]}")
+    return ok
 
 
 def merge_text(target, sources):
@@ -119,7 +116,7 @@ def main():
             continue
         print(f"[{t['title']['raw']}] ← {', '.join(s['title']['raw'] for s in srcs)}")
         if test:
-            print("  301 시험:", redirect(srcs[0], t["link"]))
+            print("  301 시험:", redirect(srcs[0], t["link"]), check_redirect(srcs[0]["link"], t["link"]))
             return
         try:
             html, added = merge_text(t, srcs)
@@ -131,6 +128,9 @@ def main():
         for s in srcs:
             req("POST", f"/posts/{s['id']}", json={"status": "private"})
             moved[s["slug"]] = t["link"]
+        checks = [check_redirect(s["link"], t["link"]) for s in srcs]
+        ok = ok and all(c[0] for c in checks)
+        print("  이동 확인:", [c[1] for c in checks])
         log[tslug] = {"to": t["link"], "merged": sslugs, "added": added, "redirect_ok": ok, "done": True}
         LOG.write_text(json.dumps(log, ensure_ascii=False, indent=1))
         print(f"  완료 (301 {'정상' if ok else '확인 필요'}): {added}")
