@@ -2,7 +2,8 @@
   "git": {
     "deploymentEnabled": {
       "studio/**": false,
-      "studio-logs": false
+      "studio-logs": false,
+      "media": false
     }
   },
   "functions": {

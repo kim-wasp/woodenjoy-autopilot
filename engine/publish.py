@@ -382,7 +382,11 @@ def media_url(path):
         sh("git", "rm", "-rqf", ".", cwd=wt)
     (wt / rel).parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(path, wt / rel)
-    sh("git", "add", rel, cwd=wt)
+    vj = wt / "studio" / "vercel.json"  # 이 가지는 Vercel 미리보기 배포를 하지 않게 (실패 메일 방지)
+    if not vj.exists():
+        vj.parent.mkdir(exist_ok=True)
+        vj.write_text('{\n  "git": { "deploymentEnabled": false }\n}\n')
+    sh("git", "add", rel, "studio/vercel.json", cwd=wt)
     sh("git", "-c", "user.name=studio-bot", "-c", "user.email=bot@users.noreply.github.com", "commit", "-qm", f"영상: {rel}", cwd=wt)
     sh("git", "push", "-q", "origin", "HEAD:media", cwd=wt)
     subprocess.run(["git", "worktree", "remove", "-f", str(wt)], cwd=ROOT)
