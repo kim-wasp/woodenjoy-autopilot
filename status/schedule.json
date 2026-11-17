@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T15:21+09:00",
+  "updated": "2026-11-17T15:23+09:00",
   "items": [
     {
       "site": "infobay",
@@ -452,6 +452,16 @@
       "url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-cabinet-dead/"
     },
     {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-13-norovirus-symptoms-prevention-disinfection",
+      "title": "노로바이러스 증상·예방법: 손소독제 말고 비누, 굴은 85℃에서 1분",
+      "platform": "blog",
+      "at": "2026-11-16T07:01:41+09:00",
+      "state": "done",
+      "url": "https://forsmartlife.com/norovirus-symptoms-prevention-disinfection/"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
@@ -570,16 +580,6 @@
       "at": "2026-11-17T12:47:18+09:00",
       "state": "done",
       "url": null
-    },
-    {
-      "site": "forsmartlife",
-      "site_name": "건강 (forsmartlife.com)",
-      "dir": "content/forsmartlife/2026-11-13-norovirus-symptoms-prevention-disinfection",
-      "title": "노로바이러스 증상·예방법: 손소독제 말고 비누, 굴은 85℃에서 1분",
-      "platform": "blog",
-      "at": "2026-11-17T15:18:06+09:00",
-      "state": "done",
-      "url": "https://forsmartlife.com/norovirus-symptoms-prevention-disinfection/"
     },
     {
       "site": "woodenjoy",
