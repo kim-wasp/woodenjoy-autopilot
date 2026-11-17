@@ -1,0 +1,25 @@
+# forsmartlife '이번 주 독감 수치' 페이지: 질병관리청 주간 발표를 모아 그래프 갱신 (매주 토요일 오전, 한국 시간)
+name: 건강 주간 수치
+on:
+  schedule:
+    - cron: "13 1 * * 6"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: fsl-weekly
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q -r requirements.txt
+      - run: python3 tools/fsl_pages.py weekly --update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WP_FORSMARTLIFE_PASS: ${{ secrets.WP_FORSMARTLIFE_PASS }}
+      - run: |
+          git config user.name studio-bot; git config user.email bot@users.noreply.github.com
+          for i in 1 2 3; do git add status/fsl_weekly.json && git commit -qm "건강 주간 수치 $(date +%F)" || break; git pull -q --rebase && git push -q && break; sleep 5; done
