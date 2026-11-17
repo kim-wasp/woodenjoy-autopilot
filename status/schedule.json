@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T12:02+09:00",
+  "updated": "2026-11-17T12:32+09:00",
   "items": [
     {
       "site": "infobay",
@@ -557,8 +557,9 @@
       "dir": "content/woodenjoy/2026-11-12-door-hinge-easy-hinge-replacement-check",
       "title": "방문경첩 교체, 이지경첩 거꾸로 달면 나사 자국 드러나요",
       "platform": "threads",
-      "at": "2026-11-17T12:30+09:00",
-      "state": "planned"
+      "at": "2026-11-17T12:32:47+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
