@@ -1,0 +1,256 @@
+{
+  "id": "infobay/2026-11-17-buzo-envelope-how-to-write-2026",
+  "site": "infobay",
+  "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
+  "status": "ready",
+  "created_at": "2026-11-17T20:11+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "부조봉투 쓰는법",
+    "sub": [
+      "축의금 봉투 이름 위치",
+      "조의금 봉투 쓰는법",
+      "축결혼 축화혼 차이",
+      "단자 쓰는법"
+    ]
+  },
+  "brief": {
+    "reader": "결혼식 접수대나 빈소 앞에서 봉투를 들고 무엇을 어디에 써야 할지 헷갈리는 20~40대 직장인",
+    "question": "부조봉투 앞면·뒷면에 무엇을 어디에 써야 하고, 흔히 틀리는 건 뭘까?",
+    "answer": "앞면엔 축결혼·부의 같은 두세 글자만 쓰고 이름은 뒷면 왼쪽 아래에 세로로 써요. '삼가 고인의 명복을 빕니다' 같은 문장은 봉투 대신 속지(단자)에 써요.",
+    "out_of_scope": "축의금·조의금 금액 기준(별도 글), 하객 복장, 조문 절차",
+    "next_action": "다음 경조사 전에 한눈에 정리 체크리스트를 휴대폰에 저장해 두기"
+  },
+  "why_this_topic": "네이버 키워드 도구 기준 '부조봉투쓰는법' 월 검색 3,670회. 정보형 후보 가운데 검색 수가 가장 많고 관혼상제 예절이라는 사이트 주제에 정확히 맞음. 다른 후보(하객룩·하객원피스 등)는 패션 쇼핑 검색어라 주제에서 벗어남. 최근 글은 축의금·조의금 '금액'과 조문 '절차'를 다뤘고 승인 대기 글도 금액 비교라서 봉투 '쓰는 법'과는 겹치지 않음. 상위 글이 대부분 축의 또는 조의 한쪽만 다루는 점도 확인함",
+  "title_candidates": [
+    {
+      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "부조봉투 쓰는법, 접수대 앞에서 이름 자리 몰라 멈칫했다면",
+      "pattern": "짜증 장면",
+      "score": 8
+    },
+    {
+      "title": "부조봉투 쓰는법 실수 5가지, '일금 5만원정'도 틀린 표기",
+      "pattern": "실수·손해",
+      "score": 8
+    },
+    {
+      "title": "부조봉투 쓰는법: 앞면은 두 글자, 이름은 뒷면 왼쪽 아래",
+      "pattern": "결론 먼저",
+      "score": 7
+    },
+    {
+      "title": "부조봉투 축의 vs 조의, 앞면 문구와 이름 자리 비교",
+      "pattern": "비교",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 제목들의 공통점: '총정리·10초 정리·실수 없는 가이드'처럼 이름 위치와 한자를 묶어 정리함. 축의·조의 중 한쪽만 다루고 출처가 거의 없음 / 우리가 다르게 갈 점: 국립국어원 답변 하나(봉투에 문장 쓰지 않기)를 반전으로 제목에 걸고, 결혼식·장례식·1주기 제사를 표 하나로 비교함",
+  "meta_description": "앞면은 부의·축결혼 두세 글자만, 이름은 뒷면 왼쪽 아래에 써요. 국립국어원이 봉투에 쓰지 말라고 한 문장, 1주기 제사 문구, '일금 ○원정' 같은 실수 5가지를 표로 정리했어요.",
+  "hero_prompt": "Candid smartphone photo of a person's hand holding a plain white envelope and a black pen, hesitating over a reception table at a Korean wedding hall lobby, blurred guests in the background, warm indoor mixed lighting, slightly off-center, natural and everyday, no faces in close-up, no text in the photo",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "빈소 접수 테이블에서 흰 속지에 글을 쓰는 손과 흰 봉투",
+      "prompt": "Candid smartphone snapshot of a hand writing on a small folded white paper slip next to a plain white envelope on a funeral hall reception table in Korea, ballpoint pen, a box of blank envelopes nearby, fluorescent lighting, slightly off-center framing, ordinary clutter, no faces, not a stock photo, no glossy CGI look, no text visible"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "결혼식장 축의금 접수대에 쌓인 흰 봉투와 방명록",
+      "prompt": "Candid smartphone snapshot of a wedding hall reception desk in Korea with a stack of white gift envelopes and a guest book, guests' hands and sleeves partially visible, warm mixed indoor lighting, slightly tilted framing, ordinary clutter, faces not in close-up, not a stock photo, no glossy CGI look, no readable text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "국립국어원 새국어생활: 국어에 관한 궁금증(조의금 봉투와 단자)",
+      "url": "https://www.korean.go.kr/nkview/nklife/2008_3/2008_0313.pdf"
+    },
+    {
+      "title": "국어에 관한 궁금증을 풀어 드립니다(국립국어원 글 미러)",
+      "url": "https://mirror.puzzlet.org/korean.go.kr/nkview/nklife/2008_3/18_13.html"
+    },
+    {
+      "title": "한국경제 생글생글: 부조 봉투엔 '단자'를 써야 제격이죠",
+      "url": "https://sgsg.hankyung.com/article/2021081322001"
+    },
+    {
+      "title": "예스24 사락: 문상 때 봉투 쓰는 법",
+      "url": "https://sarak.yes24.com/blog/udal2008/post-view/1868157"
+    },
+    {
+      "title": "보아스매거진: 조의금 봉투 쓰는법",
+      "url": "https://magazine.lboas.com/%EC%A1%B0%EC%9D%98%EA%B8%88-%EB%B4%89%ED%88%AC-%EC%93%B0%EB%8A%94%EB%B2%95/"
+    },
+    {
+      "title": "고이 장례 가이드북: 장례식 부조금 봉투 쓰는법",
+      "url": "https://www.goifuneral.co.kr/guidebook/tip/ongoing/1/"
+    },
+    {
+      "title": "장례 정보 블로그: 부조 부의 조의 차이와 봉투 표기법",
+      "url": "https://www.funeralhallinfo.com/post/%EB%B6%80%EC%A1%B0-%EB%B6%80%EC%9D%98-%EC%A1%B0%EC%9D%98-%EC%9A%A9%EC%96%B4-%EC%B0%A8%EC%9D%B4%EC%99%80-%EC%98%AC%EB%B0%94%EB%A5%B8-%EC%82%AC%EC%9A%A9%EB%B2%95/"
+    },
+    {
+      "title": "축의금 봉투 이름 어디에? 뒷면 왼쪽 위치·한자·접는법",
+      "url": "https://www.make2t.kr/2026/10/wedding-envelope-name-position_031197491.html"
+    },
+    {
+      "title": "축의금 봉투 이름 어디에? 뒷면 왼쪽 위치·세로쓰기",
+      "url": "https://www.make2t.kr/2026/10/wedding-envelope-name-position.html"
+    },
+    {
+      "title": "축의금 봉투 이름 위치(자주 하는 실수)",
+      "url": "https://me2best.com/%EC%B6%95%EC%9D%98%EA%B8%88-%EB%B4%89%ED%88%AC-%EC%9D%B4%EB%A6%84-%EC%9C%84%EC%B9%98-%EB%82%98%EB%A7%8C-%ED%8B%80%EB%A0%B8%EB%8D%98-%EA%B1%B0-%EB%A7%9E%EC%8A%B5%EB%8B%88%EB%8B%A4/"
+    },
+    {
+      "title": "부조금 봉투 쓰는 법 총정리(조의금, 다음 블로그)",
+      "url": "https://v.daum.net/v/ffCdKlrRYK"
+    },
+    {
+      "title": "다이렉트결혼준비: 축의금 봉투 쓰는 법",
+      "url": "https://www.directwedding.co.kr/blog/money-envelope"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "오해와 진실형",
+    "ending": "한 줄 결론",
+    "cover_hooks": [
+      "명복 문구, 봉투엔 안 써요",
+      "'일금 5만원정' 뭐가 틀렸게?",
+      "축의금 봉투 이름, 앞면에 썼다면"
+    ],
+    "caption": "접수대 앞에서 펜 들고 멈칫한 적 있죠?\n\n부조봉투 앞면엔 결혼식이면 축결혼, 장례식이면 부의처럼 두세 글자만 써요.\n'삼가 고인의 명복을 빕니다' 같은 문장은 속지(단자)에 적어요. 국립국어원 답변 기준이에요.\n1주기 제사 때는 부의 대신 전의나 향촉대를 써요.\n\n앞면엔 두 글자, 이름은 뒷면 왼쪽 아래.\n\n#경조사 #부조봉투 #축의금봉투 #조의금봉투"
+  },
+  "threads": {
+    "style": "숫자 한 방",
+    "hooks": [
+      "'일금 50,000원 정' 이거 틀린 표기래",
+      "봉투 앞면엔 딱 두 글자면 돼",
+      "축의금 봉투 이름 앞면에 썼어?"
+    ],
+    "posts": [
+      "'일금 50,000원 정' 이거 틀린 표기래.\n영수증 쓰는 말투라 부조할 땐 안 쓴다더라. 봉투 앞면에 '삼가 고인의 명복을 빕니다'를 문장으로 꽉 채워 쓰는 것도 어색하대.\n근데 이름 자리는 은근 다들 갈리더라. 너는 봉투에 이름 앞면에 써, 뒷면에 써?",
+      "국립국어원 답변이랑 관례 기준으로 정리했어.\n1. 앞면: 결혼식은 축결혼, 장례식은 부의나 근조, 1·2주기 제사는 전의나 향촉대\n2. 이름: 뒷면 왼쪽 아래에 세로로, 소속은 이름 오른쪽 위에 작게\n3. 인사말 문장은 봉투 말고 안에 넣는 속지(단자)에\n4. 단자 금액은 '금 50,000원'으로",
+      "앞면 문구표랑 실수 5가지 비교표는 여기 있어 {LINK}"
+    ],
+    "topic_tag": "생활상식"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 6장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없어요",
+      "카드: 6장: 제목은 '앞면 두 글자'인데 아래 항목은 '두세 글자만'이라 서로 달라요(축결혼은 세 글자). 4장 축결혼과도 맞지 않아요",
+      "카드: 2장: 제목이 '명복 문구는 단자에'인데 '단자'가 속지(봉투 안에 넣는 종이)라는 설명이 카드 어디에도 없어요. 카드만 보면 뜻을 알 수 없어요"
+    ],
+    "at": "2026-11-17T20:11+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "인스타: 'X가 아니라 Y예요' 대구 대신 Y를 바로 말하기",
+      "text": "인스타: 'X가 아니라 Y예요' 대구 대신 Y를 바로 말하기"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"오해 N\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"오해 1\""
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"오해 N\"",
+      "text": "카드: 4장: 계정명 자리 침범: \"오해 3\""
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 6장: 아래 빈 공간 큼 (568px)"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"명복 문구도 여기에\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"명복 문구도 여기에\""
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없어요",
+      "text": "카드: 6장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없어요"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 제목은 '앞면 두 글자'인데 아래 항목은 '두세 글자만'이라 서로 달라요(축결혼은 세 글자). N장 축결혼과도 맞지 않아요",
+      "text": "카드: 6장: 제목은 '앞면 두 글자'인데 아래 항목은 '두세 글자만'이라 서로 달라요(축결혼은 세 글자). 4장 축결혼과도 맞지 않아요"
+    },
+    {
+      "at": "2026-11-17T20:11+09:00",
+      "kind": "카드: N장: 제목이 '명복 문구는 단자에'인데 '단자'가 속지(봉투 안에 넣는 종이)라는 설명이 카드 어디에도 없어요. 카드만 보면 뜻을 알 수 없어요",
+      "text": "카드: 2장: 제목이 '명복 문구는 단자에'인데 '단자'가 속지(봉투 안에 넣는 종이)라는 설명이 카드 어디에도 없어요. 카드만 보면 뜻을 알 수 없어요"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 7524,
+        "output_tokens": 2764,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0021
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 34068,
+        "output_tokens": 20812,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.5925
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 11693,
+        "output_tokens": 2260,
+        "web_searches": 0,
+        "calls": 4,
+        "usd": 0.046
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.0426,
+    "total_usd": 1.0426,
+    "total_krw": 1460,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
