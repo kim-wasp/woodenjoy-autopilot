@@ -1,0 +1,53 @@
+{
+ "ili": {
+  "2026-W36": {
+   "period": "08.30~09.05",
+   "value": 25.3,
+   "source": "https://www.kdca.go.kr/kdca/2847/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQxJTJGMzEyNTkzJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmZpbmRPcG53cmQlM0QlMjZmaW5kV29yZCUzRCUyNnJnc0VuZGRlU3RyJTNEJTI2ZmluZFR5cGUlM0QlMjZmaW5kQ2xTZXE"
+  },
+  "2026-W37": {
+   "period": "09.06~09.12",
+   "value": 31.0,
+   "source": "https://www.goe.go.kr/resource/goe/na/bbs_1931/2026/09/e9f5deb4-0f3c-4597-9676-83307e596094.pdf"
+  },
+  "2026-W39": {
+   "period": "09.20~09.26",
+   "value": 33.0,
+   "source": "https://www.medifonews.com/news/article.html?no=217084"
+  },
+  "2026-W40": {
+   "period": "09.27~10.03",
+   "value": 23.6,
+   "source": "https://m.news.nate.com/view/20261012n21404"
+  },
+  "2026-W41": {
+   "period": "10.04~10.10",
+   "value": 21.6,
+   "source": "https://www.medifonews.com/news/article.html?no=217084"
+  },
+  "2026-W42": {
+   "period": "10.11~10.17",
+   "value": 17.7,
+   "source": "https://www.kpanews.co.kr/news/articleView.html?idxno=548294"
+  },
+  "2026-W43": {
+   "period": "10.18~10.24",
+   "value": 19.2,
+   "source": "http://www.mediadale.com/news/articleView.html?idxno=294586"
+  },
+  "2026-W44": {
+   "period": "10.25~10.31",
+   "value": 22.8,
+   "source": "https://www.kpanews.co.kr/news/articleView.html?idxno=548294"
+  },
+  "2026-W45": {
+   "period": "11.01~11.07",
+   "value": 28.9,
+   "source": "https://www.medifonews.com/news/article.html?no=218804"
+  }
+ },
+ "threshold": 12.9,
+ "season": "2026-2027",
+ "threshold_source": "https://www.kdca.go.kr/kdca/2847/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQxJTJGMzEyNTkzJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmZpbmRPcG53cmQlM0QlMjZmaW5kV29yZCUzRCUyNmZpbmRDbFNlcQ",
+ "updated": "2026-11-17T21:43+09:00"
+}
