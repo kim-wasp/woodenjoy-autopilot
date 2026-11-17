@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T12:45+09:00",
+  "updated": "2026-11-17T12:47+09:00",
   "items": [
     {
       "site": "infobay",
@@ -568,6 +568,16 @@
       "title": "⚡ 추경호 계엄 해제 표결 방해 1심 선고 전 쟁점 정리",
       "platform": "threads",
       "at": "2026-11-17T12:45:47+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-17-issue-1229",
+      "title": "⚡ 임현주 아나 육휴 후 MBC 퇴사 논란, 권리 vs 민폐",
+      "platform": "threads",
+      "at": "2026-11-17T12:47:18+09:00",
       "state": "done",
       "url": null
     },
