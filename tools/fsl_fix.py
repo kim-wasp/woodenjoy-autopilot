@@ -134,8 +134,18 @@ def main():
     print(f"제목 {n_t} / 굵은글씨 표시 {n_b} / AI 안내 {n_ai} / 출처 없음 {n_s}")
     pages = req("GET", "/pages?per_page=50&context=edit&_fields=id,slug,content").json()
     c = next((x for x in pages if x["slug"] == "contact"), None)
-    if c:
-        print("문의 페이지:\n" + c["content"]["raw"][:1500])
+    if c and "오류 제보" not in c["content"]["raw"]:
+        intro = ("<!-- wp:paragraph --><p>WellnessNote(forsmartlife.com)에 대한 문의는 아래 양식으로 보내 주세요.</p><!-- /wp:paragraph -->\n"
+                 "<!-- wp:list --><ul><li>글 내용의 오류 제보, 출처 확인 요청</li><li>광고·제휴 문의</li><li>개인정보 열람·삭제 요청</li></ul><!-- /wp:list -->\n"
+                 "<!-- wp:paragraph --><p>보내 주신 내용은 운영자가 직접 확인하고, 답변은 입력하신 이메일로 드려요. 오류 제보는 확인한 뒤 글을 고치고 수정한 날짜를 함께 적어요.</p><!-- /wp:paragraph -->\n"
+                 "<!-- wp:paragraph --><p>개인 건강 상태에 대한 진단이나 처방 상담은 하지 않아요. 증상이 있으면 가까운 의료기관에 문의해 주세요.</p><!-- /wp:paragraph -->\n\n")
+        print("문의 페이지: 안내 문구 추가")
+        if APPLY:
+            req("POST", f"/pages/{c['id']}", json={"content": intro + c["content"]["raw"]})
+            r = requests.post("https://forsmartlife.com/wp-json/rankmath/v1/updateMeta", headers=H, timeout=60, json={
+                "objectType": "post", "objectID": c["id"],
+                "meta": {"rank_math_description": "WellnessNote 문의 페이지. 글 오류 제보, 출처 확인 요청, 광고·제휴, 개인정보 요청을 양식으로 보내 주세요."}})
+            print("문의 페이지 설명", r.status_code)
 
 
 if __name__ == "__main__":

@@ -60,7 +60,7 @@ def publish_naver(site, d, post, dry):
         os.environ["UPLIKA_API_KEY"] = secret("UPLIKA_API_KEY")
     from publish_naver import Uplika  # tools/publish_naver.py (크롬 확장으로 올려요)
     api = Uplika(dry)
-    md = (d / "article.md").read_text(encoding="utf-8")
+    md = with_ai_note(d, post, (d / "article.md").read_text(encoding="utf-8"))
     media = {}
     imgs = body_images(d, post, md)
     if (d / "hero.jpg").exists():
@@ -126,7 +126,7 @@ def publish_appblog(site, d, post, dry):
             if r.status_code >= 400:
                 raise RuntimeError(f"사진 올리기 실패 {r.status_code}: {r.text[:200]}")
         return f"{base}/storage/v1/object/public/{bucket}/{path}"
-    md = (d / "article.md").read_text(encoding="utf-8")
+    md = with_ai_note(d, post, (d / "article.md").read_text(encoding="utf-8"))
     urls = {}
     if (d / "hero.jpg").exists():
         urls["hero"] = upload(d / "hero.jpg")
@@ -163,7 +163,7 @@ def publish_static(site, d, post, dry):
     prev = re.match(r".*?(\d{4}-\d{2}-\d{2})-", str((post.get("published") or {}).get("blog") or ""))
     if prev and os.environ.get("FORCE"):
         today = prev.group(1)  # 다시 올리기: 처음 올린 날짜 그대로
-    md = (d / "article.md").read_text(encoding="utf-8")
+    md = with_ai_note(d, post, (d / "article.md").read_text(encoding="utf-8"))
     md = re.sub(r"^\s*\[\[hero\]\]\s*$", "", md, flags=re.M)  # 대표 사진은 블로그 틀이 제목 아래에 넣어요
     imgs = body_images(d, post, md)
     files = []
@@ -266,7 +266,7 @@ def publish_wordpress(site, d, post, dry):
     if (d / "hero.jpg").exists():
         m = wp.media(d / "hero.jpg", post["title"])
         hero_id, urls["hero"] = m["id"], m["source_url"]
-    md = (d / "article.md").read_text(encoding="utf-8")
+    md = with_ai_note(d, post, (d / "article.md").read_text(encoding="utf-8"))
     if hero_id and not site["blog"]["wordpress"].get("hero_in_body", False):
         md = re.sub(r"^\s*\[\[hero\]\]\s*$\n?", "", md, flags=re.M)  # 대표 이미지가 글 위에 이미 보여서 본문에 또 넣지 않아요
     for key, (f, alt) in body_images(d, post, md).items():
@@ -414,8 +414,22 @@ def publish_reel(site, d, post, tok, dry):
     return {"instagram": _post(dry, f"{IG}/me/media_publish", {"creation_id": c["id"], "access_token": tok})["id"], "instagram_format": "reels"}
 
 
+def ig_caption(d, post):
+    cap = post["instagram"]["caption"]
+    slides = (load_json(d / "cards.json") or {}).get("slides", [])
+    real = set(post.get("real_photos") or [])
+    pics = [s.get("photo") or ((s.get("body") or {}).get("src") if (s.get("body") or {}).get("kind") == "image" else None) for s in slides]
+    if any(p and p not in real for p in pics) and "AI" not in cap:
+        lines = cap.rstrip().split("\n")
+        tags = [l for l in lines if l.strip().startswith("#")]
+        body = [l for l in lines if not l.strip().startswith("#")]
+        cap = "\n".join(body).rstrip() + "\n\n(사진은 AI로 만든 이미지예요)" + ("\n\n" + "\n".join(tags) if tags else "")
+    return cap
+
+
 def publish_instagram(site, d, post, dry):
     tok = "DRY" if dry else secret(site["instagram"]["token_secret"])
+    post = {**post, "instagram": {**post["instagram"], "caption": ig_caption(d, post)}}
     if (site.get("instagram") or {}).get("format", "reels") == "reels":
         try:
             return publish_reel(site, d, post, tok, dry)
@@ -475,6 +489,18 @@ def publish_threads(site, d, post, dry):
             save_json(d / "post.json", post)
     post.pop("threads_progress", None)
     return {"threads": ids}
+
+
+AI_NOTE = "※ 이 글의 사진은 이해를 돕기 위해 AI로 만든 이미지예요. 실제 인물·장소가 아니에요."
+
+
+def with_ai_note(d, post, md):
+    """AI로 만든 사진이 한 장이라도 들어가면 글 끝에 안내 한 줄 (사장님 원칙: AI 이미지는 고지)"""
+    real = set(post.get("real_photos") or [])
+    used = [f for f in ["hero.jpg"] + [f"photo{n}.jpg" for n in re.findall(r"\[\[photo:(\d+)\]\]", md)] if (d / f).exists() and f not in real]
+    if not used or "AI로 만든" in md:
+        return md
+    return md.rstrip() + "\n\n" + AI_NOTE + "\n"
 
 
 def missing_images(site, d, post, md=None):

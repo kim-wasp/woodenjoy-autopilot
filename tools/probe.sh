@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 tools/fsl_fix.py
+python3 tools/fsl_fix.py --apply
