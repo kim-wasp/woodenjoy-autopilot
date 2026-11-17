@@ -2,7 +2,7 @@
   "id": "forsmartlife/2026-11-16-postmeal-bloating-indigestion-eating-habits-warnin",
   "site": "forsmartlife",
   "title": "식후 더부룩함·소화불량, 먼저 바꿀 식사 습관 5가지와 병원 갈 신호",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-16T02:01+09:00",
   "requested_topic": "식후 더부룩함과 소화불량, 생활에서 먼저 바꿔볼 습관\n카테고리: 증상 관리\n이 글이 답할 질문: 소화불량이 있을 때 식사 방식에서 확인할 것은 무엇이고, 병원 진료가 필요한 위험 신호는 무엇인가?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 2,300회, 11월 시기 주제",
   "keywords": {
@@ -159,5 +159,10 @@
       "kind": "블로그: 글자 수 N자 (기준 N~N자)",
       "text": "블로그: 글자 수 3699자 (기준 2,500~3,500자)"
     }
-  ]
+  ],
+  "published": {
+    "blog": 1887,
+    "blog_url": "https://forsmartlife.com/postmeal-bloating-indigestion-eating-habits-warnin/",
+    "blog_at": "2026-11-18T07:02:23+09:00"
+  }
 }
