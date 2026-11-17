@@ -411,6 +411,7 @@ def build_prompt(site, topic, notes, view=None):
         p.append(skills.block("threads-kr"))
     if img_cfg(site)["instagram"] == "photo_cards":
         p.append(PHOTO_CARD_GUIDE)
+    p.append("[한국어 AI 티 줄이기 — 블로그·카드·캡션·스레드 모두]\n" + skills.text("korean-natural", 4500))
     p.append("[출력 JSON 형식]\n" + schema(site))
     return "\n\n".join(x for x in p if x)
 
@@ -691,7 +692,8 @@ def helper_model(site):
 def humanize(site, md):
     if not md or not (site.get("monetization") or {}).get("humanize", True) or os.environ.get("MOCK_LLM"):
         return md
-    rules = skills.text("humanize-korean", 14000) or (ROOT / "tools/humanize/quick-rules.md").read_text(encoding="utf-8")[:14000]
+    import korean
+    rules = (korean.rules(9000) + "\n\n" + (skills.text("humanize-korean", 7000) or "")).strip() or (ROOT / "tools/humanize/quick-rules.md").read_text(encoding="utf-8")[:14000]
     res = llm.ask_json(
         "당신은 한국어 윤문가입니다. 사실·숫자·고유명사·링크·[[...]] 표시·표·제목 구조는 그대로 두고 AI 티가 나는 문장만 고칩니다. 출력은 JSON 한 덩어리.",
         "아래 규칙으로 블로그 글에서 AI 티가 나는 문장만 찾아 고쳐 주세요. 고칠 게 없으면 빈 목록. 후킹(첫 문단의 강한 말)은 살리세요.\n"
@@ -710,8 +712,11 @@ def humanize(site, md):
     ratio = 1 - difflib.SequenceMatcher(None, md, new).ratio()
     if lost or ratio > 0.35:
         log(f"  AI 티 다듬기 취소 (바뀐 비율 {ratio:.0%}, 빠진 표시·숫자 {len(lost)}개)")
-        return md
-    log(f"  AI 티 다듬기 완료 (바뀐 비율 {ratio:.0%})")
+        new = md
+    else:
+        log(f"  AI 티 다듬기 완료 (바뀐 비율 {ratio:.0%})")
+    new, sc = korean.polish_md(new, helper_model(site))  # 측정기(18패턴·맞춤법)로 한 번 더, 걸린 자리만
+    site["_korean_scan"] = {"grade": sc["grade"], "score": sc["score"], "left": sc["spots"][:5]}
     return new
 
 
@@ -1056,6 +1061,13 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
         if new != res["article_md"] and not checks.check(site, load_json(d / "post.json"), new):
             (d / "article.md").write_text(new, encoding="utf-8")
     post = load_json(d / "post.json")
+    if not issues and not os.environ.get("MOCK_LLM"):
+        import korean
+        try:
+            sns = korean.polish_sns(site, post, helper_model(site), th_problems)
+            post["korean_check"] = {"blog": site.pop("_korean_scan", None), "sns": sns}
+        except Exception as e:  # noqa: BLE001
+            log(f"  SNS AI 티 점검 건너뜀: {e}")
     post["checks"] = {"ok": not issues, "issues": issues, "at": now_kst().isoformat(timespec="minutes")}
     if _CHECK_HIST:
         post["check_history"] = (post.get("check_history") or []) + _CHECK_HIST[:]

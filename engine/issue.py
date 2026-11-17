@@ -192,6 +192,12 @@ def watch(only=None):
                 "threads": {"posts": w["posts"], "hooks": w.get("hooks", []), "topic_tag": w.get("topic_tag", ""), "style": "속보"},
                 "sources": w.get("sources", []),
                 "checks": {"ok": not w["problems"], "issues": ["스레드: " + i for i in w["problems"]]}}
+        try:
+            import korean
+            from generate import th_problems
+            post["korean_check"] = {"sns": korean.polish_sns(site, post, WRITE_MODEL, th_problems)}
+        except Exception as e:  # noqa: BLE001
+            log(f"  AI 티 점검 건너뜀: {e}")
         save_json(d / "post.json", post)
         s["made"] = (s["made"] + [now.isoformat(timespec="minutes")])[-20:]
         save_json(STATE, st)
