@@ -1,10 +1,12 @@
 #!/bin/bash
+A="gracelyun28:$WP_FORSMARTLIFE_PASS"; B=https://forsmartlife.com/wp-json/rankmath/v1
+curl -s -u "$A" -X POST -H "Content-Type: application/json" -d '{"action":"recreate_tables"}' $B/toolsAction | head -c 300; echo
+curl -s -u "$A" -X POST -H "Content-Type: application/json" -d '{"module":"redirections","state":"on"}' $B/saveModule; echo
 python3 - <<'PY'
-import sys
-sys.path.insert(0,'tools'); sys.path.insert(0,'engine')
-from fsl_fix import req
-raw = req("GET", "/posts/97/revisions/1600?context=edit&_fields=content").json()["content"]["raw"]
-print("되돌림", len(raw)); req("POST", "/posts/97", json={"content": raw})
+import sys; sys.path.insert(0,'tools'); sys.path.insert(0,'engine')
+import fsl_merge as m
+s = m.by_slug("fine-dust-cleansing-routine"); t = m.by_slug("fine-dust-skin-trouble")
+print(s["status"], s["link"])
+print(m.redirect(s, t["link"]), m.clear_cache(), m.check_redirect(s["link"], t["link"]))
 PY
-python3 tools/fsl_merge.py --apply
-git config user.name studio-bot; git config user.email bot@users.noreply.github.com; git add status/audit && git commit -qm merge-log && git pull -q --rebase && git push -q
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" "https://forsmartlife.com/fine-dust-cleansing-routine/"
