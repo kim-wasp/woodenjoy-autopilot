@@ -13,6 +13,10 @@ jobs:
       - run: pip install -q -r requirements.txt beautifulsoup4
       - run: bash tools/probe.sh
         env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          THREADS_TOKEN_INFOBAY: ${{ secrets.THREADS_TOKEN_INFOBAY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_TOKEN_INFOBAY: ${{ secrets.IG_TOKEN_INFOBAY }}
           THREADS_TOKEN_SISIBIBI: ${{ secrets.THREADS_TOKEN_SISIBIBI }}
           THREADS_APP_ID: ${{ secrets.THREADS_APP_ID }}
           THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
