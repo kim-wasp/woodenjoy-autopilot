@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T13:02+09:00",
+  "updated": "2026-11-18T13:23+09:00",
   "items": [
     {
       "site": "infobay",
@@ -698,6 +698,16 @@
       "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
       "platform": "threads",
       "at": "2026-11-18T12:55:51+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-18-issue-1237",
+      "title": "⚡ '아빠, 이 집 나 줄 거지?' 10억 3040 부모, 물려줄 1순위는 집이 아닌 금융상품",
+      "platform": "threads",
+      "at": "2026-11-18T13:23:50+09:00",
       "state": "done",
       "url": null
     },
