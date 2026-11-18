@@ -113,10 +113,12 @@ if anon and SB:
     spec = get(SB + "/rest/v1/", headers=H0)
     sb["openapi_anon"] = spec.status_code
     try:
+        if spec.status_code != 200:
+            raise ValueError
         tables = sorted(k.strip("/") for k in spec.json().get("paths", {}) if k.count("/") == 1 and not k.startswith("/rpc"))
         rpcs = sorted(k for k in spec.json().get("paths", {}) if k.startswith("/rpc"))
     except Exception:  # noqa: BLE001
-        tables, rpcs = ["profiles", "responses", "cards", "posts", "categories"], []
+        tables, rpcs = ["profiles", "responses", "cards", "posts", "categories", "users", "votes", "comments"], []
     sb["tables_visible"], sb["rpcs"] = tables, rpcs
     a = requests.post(SB + "/auth/v1/signup", headers={"apikey": anon, "Content-Type": "application/json"}, json={}, timeout=20)
     tok = (a.json() or {}).get("access_token") if a.status_code == 200 else None
