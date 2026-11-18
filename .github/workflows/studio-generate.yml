@@ -69,6 +69,8 @@ jobs:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           NAVER_HUB_ID: ${{ secrets.NAVER_HUB_ID }}
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
           NAVER_HUB_KEY: ${{ secrets.NAVER_HUB_KEY }}
           GH_TOKEN: ${{ github.token }}
           TOPIC: ${{ github.event.inputs.topic }}

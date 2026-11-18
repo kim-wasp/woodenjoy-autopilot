@@ -676,6 +676,11 @@ def add_coupang_wish(site, wish, d, title):
             "status": f"링크 필요 ({now_kst():%m/%d}, {title[:30]})",
             "post_dir": d.relative_to(ROOT).as_posix(), "after": w.get("after", ""), "site": site["id"]})
         have.add(k)
+    import coupang
+    if coupang.ready():  # 쿠팡 API 키가 있으면 '링크 필요' 상품을 바로 검색해서 채워요
+        n = coupang.fill(data.get("items", []), f"{now_kst():%m/%d}")
+        if n:
+            log(f"  쿠팡 링크 {n}개 자동으로 채웠어요 (관리화면 '쿠팡 링크'에서 확인)")
     save_json(f, data)
 
 
