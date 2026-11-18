@@ -32,7 +32,7 @@ def get(u, **kw):
         return R()
 
 
-for h in SITES:
+for h in ([] if os.environ.get("ONLY") == "supabase" else SITES):
     s = {"headers": {}, "paths": {}}
     r = get(f"https://{h}/", follow=True)
     s["home"] = r.status_code
@@ -73,7 +73,7 @@ for h in SITES:
         s["wp_version_feed"] = re.findall(r"wordpress.org/\?v=([0-9.]+)", rr.text or "")[:1]
     out["sites"][h] = s
 
-for d in ["forsmartlife.com", "sisibibinote.kr", "myinfobay.com", "itinfobay.co.kr"]:
+for d in ([] if os.environ.get("ONLY") == "supabase" else ["forsmartlife.com", "sisibibinote.kr", "myinfobay.com", "itinfobay.co.kr"]):
     dig = lambda t, n=d: subprocess.run(["dig", "+short", t, n], capture_output=True, text=True).stdout.strip()  # noqa: E731
     out["dns"][d] = {"mx": dig("MX"), "spf": [x for x in dig("TXT").split("\n") if "spf" in x.lower()],
                      "dmarc": subprocess.run(["dig", "+short", "TXT", f"_dmarc.{d}"], capture_output=True, text=True).stdout.strip(),
@@ -103,8 +103,11 @@ for js in sorted(set(re.findall(r'/_next/static/[^"]+\.js', html)))[:40]:
     m = re.search(r"eyJhbGciOi[\w-]+\.[\w-]+\.[\w-]+", t)
     if m:
         anon = m.group(0)
+        u = re.search(r"https://[a-z0-9]+\.supabase\.co", t)
+        if u:
+            SB = u.group(0)
         break
-sb = {"anon_key_found_in_site": bool(anon)}
+sb = {"anon_key_found_in_site": bool(anon), "url_from_site": bool(re.match(r"https://[a-z0-9]+\.supabase\.co$", SB or ""))}
 if anon and SB:
     H0 = {"apikey": anon, "Authorization": f"Bearer {anon}"}
     spec = get(SB + "/rest/v1/", headers=H0)
