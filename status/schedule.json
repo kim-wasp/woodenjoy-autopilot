@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T12:02+09:00",
+  "updated": "2026-11-18T12:27+09:00",
   "items": [
     {
       "site": "infobay",
@@ -670,6 +670,16 @@
       "at": "2026-11-18T12:02:19+09:00",
       "state": "done",
       "url": "https://sisibibinote.kr/posts/suneung-ban-10-years-bills-5-years-retroactive/"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-18-issue-1044",
+      "title": "⚡ 민주유공자법 19일 본회의 앞두고 필리버스터 대치, 찬반 핵심 정리",
+      "platform": "threads",
+      "at": "2026-11-18T12:27:31+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "woodenjoy",
