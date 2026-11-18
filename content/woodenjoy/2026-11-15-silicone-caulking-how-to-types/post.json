@@ -338,5 +338,9 @@
     "blog": "post_3c1b680f88274f9c",
     "blog_url": "https://blog.naver.com/cafe_peanut/224481547026",
     "blog_at": "2026-11-18T09:03:25+09:00"
+  },
+  "threads_progress": {
+    "ids": [],
+    "error": "업로드 실패 400: {\"error\":{\"message\":\"The requested resource does not exist\",\"type\":\"OAuthException\",\"code\":24,\"error_subcode\":4279009,\"is_transient\":false,\"error_user_title\":\"Media Not Found\",\"error_user_msg\":\"The media with id 18158314057513734 cannot be found.\",\"fbtrace_id\":\"AHKj_cQqzfkJK_rxrfjSpcB\"}}"
   }
 }
