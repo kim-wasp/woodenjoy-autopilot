@@ -144,7 +144,6 @@ if anon and SB:
     sb["writes"] = writes
 out["supabase"] = sb
 
-p = ROOT / "status/audit/sec_scan.json"
-p.parent.mkdir(parents=True, exist_ok=True)
-p.write_text(json.dumps(out, ensure_ascii=False, indent=1))
-print(json.dumps(out, ensure_ascii=False)[:200])
+# 결과는 공개 저장소에 그대로 두면 안 돼요 → 임시 파일에만 쓰고, 올리는 건 tools/seal.py 로 잠근 것만
+Path("/tmp/sec_scan.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+print("점검 끝 (결과는 잠가서 저장)")
