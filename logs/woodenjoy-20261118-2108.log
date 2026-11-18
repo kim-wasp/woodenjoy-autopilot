@@ -1,0 +1,39 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 162): {"seeds": ["저소음제습기", "충전해머드릴 벽 뚫기", "샷시 로라 교체", "붙박이장 문 처짐", "중문 레일 교체", "도어락 건전지 교체", "석고보드 못 고정", "벽걸이 선반 설치", "가죽소파 찢어짐 수선", "방한커튼 설치", "창틀 결로 곰팡이", "욕실 줄눈 곰팡이
+  키워드 후보: 도어락건전지교체(980), 욕실실리콘(2130), 타일줄눈(2140), 줄눈종류(2180), 제습기추천(2200), 제습기공기청정기(2250), 욕실곰팡이제거제(2250), 에폭시줄눈(2340), 벽지곰팡이(2340), 샷시모헤어(2440), 화장실줄눈(2500), 화장실줄눈시공가격(2500)
+  대표 이미지 생성 (gemini)
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  방향 점검 건너뜀: JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  홈피드 썸네일 완성 (스타일 1, 색 4) 새 건전지 넣었는데 / 또 삑삑 울린다면
+  카드 점검 실패:
+  - 3장: 계정명 자리 침범: "확인 2"
+  - 3장: 본문이 계정명 자리까지 내려옴
+  - 4장: 계정명 자리 침범: "확인 3"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  - 5장: 계정명 자리 침범: "확인 4"
+  - 5장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 3장: 계정명 자리 침범: "확인 2"
+   - 카드: 3장: 본문이 계정명 자리까지 내려옴
+   - 카드: 4장: 계정명 자리 침범: "확인 3"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+   - 카드: 5장: 계정명 자리 침범: "확인 4"
+   - 카드: 5장: 본문이 계정명 자리까지 내려옴
+  카드 점검 실패:
+  - 4장: 아래 빈 공간 큼 (262px)
+  점검에 걸림 → 고치기:
+   - 카드: 4장: 아래 빈 공간 큼 (262px)
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-18-doorlock-battery-replacement-alkaline-no-mixing/cards
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1303, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1064, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
