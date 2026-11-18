@@ -1,242 +1,263 @@
 {
- "updated": "2026-11-17T11:55+09:00",
+ "updated": "2026-11-18T11:26+09:00",
  "sites": {
   "forsmartlife": {
    "rising": [
     {
      "keyword": "서울초미세먼지",
-     "now": 51280,
+     "now": 51960,
      "before": 38500,
-     "change": 0.33,
-     "since": "2026-11-13"
-    },
-    {
-     "keyword": "대봉감효능",
-     "now": 10660,
-     "before": 8110,
-     "change": 0.31,
-     "since": "2026-11-13"
-    },
-    {
-     "keyword": "드럼세탁기25KG",
-     "now": 3000,
-     "before": 2240,
-     "change": 0.34,
-     "since": "2026-11-13"
-    },
-    {
-     "keyword": "인테리어무드등",
-     "now": 2880,
-     "before": 2170,
-     "change": 0.33,
-     "since": "2026-11-13"
-    },
-    {
-     "keyword": "드럼세탁기16KG",
-     "now": 2600,
-     "before": 1900,
-     "change": 0.37,
-     "since": "2026-11-13"
-    },
-    {
-     "keyword": "건조기16KG",
-     "now": 2570,
-     "before": 1900,
      "change": 0.35,
      "since": "2026-11-13"
     },
     {
+     "keyword": "대봉감효능",
+     "now": 11300,
+     "before": 8110,
+     "change": 0.39,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "슬리피솔",
+     "now": 7720,
+     "before": 5180,
+     "change": 0.49,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "드럼세탁기25KG",
+     "now": 3070,
+     "before": 2240,
+     "change": 0.37,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "인테리어무드등",
+     "now": 2960,
+     "before": 2170,
+     "change": 0.36,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "드럼세탁기16KG",
+     "now": 2670,
+     "before": 1900,
+     "change": 0.41,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "건조기16KG",
+     "now": 2630,
+     "before": 1900,
+     "change": 0.38,
+     "since": "2026-11-13"
+    },
+    {
      "keyword": "샷시로라",
-     "now": 310,
+     "now": 410,
      "before": 190,
-     "change": 0.63,
+     "change": 1.16,
      "since": "2026-11-13"
     }
    ],
    "top": [
     {
      "keyword": "미세먼지",
-     "now": 592000
+     "now": 602300
     },
     {
      "keyword": "이비인후과",
-     "now": 478600
+     "now": 489200
     },
     {
      "keyword": "내과",
-     "now": 402800
+     "now": 412500
     },
     {
      "keyword": "스포츠",
-     "now": 239700
+     "now": 233000
     },
     {
      "keyword": "독감예방접종",
-     "now": 224200
+     "now": 219000
     },
     {
      "keyword": "헬스장",
-     "now": 205800
+     "now": 204900
     },
     {
      "keyword": "아이폰",
-     "now": 170200
+     "now": 169100
     },
     {
      "keyword": "병원",
-     "now": 162400
+     "now": 163800
     },
     {
      "keyword": "한의원",
-     "now": 142000
+     "now": 142900
     },
     {
      "keyword": "소아과",
-     "now": 126420
+     "now": 125860
     },
     {
      "keyword": "멜라토닌",
-     "now": 123100
+     "now": 123700
     },
     {
      "keyword": "대상포진",
-     "now": 107200
+     "now": 107600
     },
     {
      "keyword": "건강검진",
-     "now": 97800
+     "now": 100700
     },
     {
      "keyword": "세탁기",
-     "now": 92600
+     "now": 93900
     },
     {
      "keyword": "공기청정기",
-     "now": 88300
+     "now": 88500
     },
     {
      "keyword": "대상포진증상",
-     "now": 79240
+     "now": 79110
     },
     {
      "keyword": "혈압정상수치",
-     "now": 75480
+     "now": 77250
     },
     {
      "keyword": "이석증",
-     "now": 70500
+     "now": 73600
     },
     {
      "keyword": "건조기",
-     "now": 67400
+     "now": 67200
     },
     {
      "keyword": "강남역",
-     "now": 65300
+     "now": 65900
     }
    ],
-   "days": 5
+   "days": 6
   },
   "infobay": {
    "rising": [
     {
+     "keyword": "크리스마스파티",
+     "now": 2460,
+     "before": 1870,
+     "change": 0.32,
+     "since": "2026-11-13"
+    },
+    {
+     "keyword": "망포역고기집",
+     "now": 1470,
+     "before": 1100,
+     "change": 0.34,
+     "since": "2026-11-13"
+    },
+    {
      "keyword": "논현동중식당",
-     "now": 820,
+     "now": 880,
      "before": 600,
-     "change": 0.37,
+     "change": 0.47,
      "since": "2026-11-13"
     },
     {
      "keyword": "판교중식",
-     "now": 560,
+     "now": 590,
      "before": 410,
-     "change": 0.37,
+     "change": 0.44,
      "since": "2026-11-13"
     }
    ],
    "top": [
     {
      "keyword": "식당",
-     "now": 287200
+     "now": 284400
     },
     {
      "keyword": "초밥",
-     "now": 109790
+     "now": 108590
     },
     {
      "keyword": "내주변맛집",
-     "now": 103110
+     "now": 101350
     },
     {
      "keyword": "성수맛집",
-     "now": 93500
-    },
-    {
-     "keyword": "서울가볼만한곳",
-     "now": 86500
+     "now": 93700
     },
     {
      "keyword": "저녁메뉴추천",
-     "now": 85900
+     "now": 85700
+    },
+    {
+     "keyword": "서울가볼만한곳",
+     "now": 85600
     },
     {
      "keyword": "대전가볼만한곳",
-     "now": 83750
+     "now": 82710
     },
     {
      "keyword": "돼지갈비",
-     "now": 75550
+     "now": 74490
     },
     {
      "keyword": "소고기",
-     "now": 65580
+     "now": 65640
     },
     {
      "keyword": "라멘",
-     "now": 64610
+     "now": 64250
     },
     {
      "keyword": "영종도맛집",
-     "now": 62090
+     "now": 61310
     },
     {
      "keyword": "뷔페",
-     "now": 60140
+     "now": 59720
     },
     {
      "keyword": "짜장면",
-     "now": 50220
+     "now": 49460
     },
     {
      "keyword": "부평맛집",
-     "now": 42260
+     "now": 42440
     },
     {
      "keyword": "오마카세",
-     "now": 39900
-    },
-    {
-     "keyword": "삼겹살맛집",
-     "now": 37740
-    },
-    {
-     "keyword": "갈비",
-     "now": 36480
+     "now": 39740
     },
     {
      "keyword": "설날",
-     "now": 36400
+     "now": 37800
+    },
+    {
+     "keyword": "삼겹살맛집",
+     "now": 37070
+    },
+    {
+     "keyword": "갈비",
+     "now": 36110
     },
     {
      "keyword": "성수동맛집",
-     "now": 35380
+     "now": 35410
     },
     {
-     "keyword": "성수동",
-     "now": 34820
+     "keyword": "조의금",
+     "now": 35300
     }
    ],
-   "days": 5
+   "days": 6
   },
   "sisibibi": {
    "rising": [],
@@ -247,278 +268,285 @@
     },
     {
      "keyword": "여론조사",
-     "now": 25210
+     "now": 25650
     },
     {
      "keyword": "통관번호",
-     "now": 24820
+     "now": 25080
     },
     {
      "keyword": "상속세",
-     "now": 24570
+     "now": 24660
     },
     {
      "keyword": "세금계산기",
-     "now": 23210
+     "now": 23490
     },
     {
      "keyword": "관세사",
-     "now": 20100
+     "now": 22310
     },
     {
      "keyword": "종합소득세세율",
-     "now": 15020
+     "now": 15330
     },
     {
      "keyword": "관부가세계산기",
-     "now": 13600
+     "now": 13700
     },
     {
      "keyword": "특검",
-     "now": 13300
+     "now": 13590
     },
     {
      "keyword": "관세",
-     "now": 13120
+     "now": 13270
     },
     {
      "keyword": "형사소송법",
-     "now": 12710
+     "now": 12950
     },
     {
      "keyword": "인공지능",
-     "now": 10020
-    },
-    {
-     "keyword": "밀수",
-     "now": 9730
+     "now": 10300
     },
     {
      "keyword": "인보이스",
-     "now": 9100
+     "now": 9370
+    },
+    {
+     "keyword": "밀수",
+     "now": 9250
     },
     {
      "keyword": "수출",
-     "now": 8060
+     "now": 8270
     },
     {
      "keyword": "통관",
-     "now": 7590
+     "now": 7700
     },
     {
      "keyword": "HSCODE",
-     "now": 6900
+     "now": 7380
     },
     {
      "keyword": "HSCODE조회",
-     "now": 6260
-    },
-    {
-     "keyword": "KCI논문",
-     "now": 5730
+     "now": 7090
     },
     {
      "keyword": "SURVEY",
-     "now": 5680
+     "now": 5750
+    },
+    {
+     "keyword": "KCI논문",
+     "now": 5750
     }
    ],
-   "days": 5
+   "days": 6
   },
   "woodenjoy": {
    "rising": [
     {
+     "keyword": "저소음제습기",
+     "now": 3170,
+     "before": 2400,
+     "change": 0.32,
+     "since": "2026-11-13"
+    },
+    {
      "keyword": "용접홀더",
-     "now": 920,
+     "now": 990,
      "before": 620,
-     "change": 0.48,
+     "change": 0.6,
      "since": "2026-11-13"
     },
     {
      "keyword": "충전해머드릴",
-     "now": 490,
+     "now": 550,
      "before": 200,
-     "change": 1.45,
+     "change": 1.75,
      "since": "2026-11-13"
     },
     {
      "keyword": "신한은행달력",
-     "now": 690,
+     "now": 790,
      "before": 480,
-     "change": 0.44,
+     "change": 0.65,
      "since": "2026-11-13"
     },
     {
      "keyword": "샷시로라",
-     "now": 310,
+     "now": 410,
      "before": 190,
-     "change": 0.63,
+     "change": 1.16,
      "since": "2026-11-13"
     }
    ],
    "top": [
     {
      "keyword": "미세먼지",
-     "now": 592000
+     "now": 602300
     },
     {
      "keyword": "제습기",
-     "now": 72200
+     "now": 74800
     },
     {
      "keyword": "도어락",
-     "now": 65700
+     "now": 66300
     },
     {
      "keyword": "쇼파",
-     "now": 61600
+     "now": 61200
     },
     {
      "keyword": "방풍비닐",
-     "now": 55700
-    },
-    {
-     "keyword": "붙박이장",
-     "now": 40900
+     "now": 56300
     },
     {
      "keyword": "카메라",
-     "now": 40110
+     "now": 40980
+    },
+    {
+     "keyword": "붙박이장",
+     "now": 40600
     },
     {
      "keyword": "중문",
-     "now": 38880
+     "now": 39040
     },
     {
      "keyword": "현관문도어락",
-     "now": 34050
+     "now": 34160
     },
     {
      "keyword": "방문손잡이",
-     "now": 31650
+     "now": 31860
     },
     {
      "keyword": "방한커튼",
-     "now": 29170
-    },
-    {
-     "keyword": "황사",
-     "now": 28700
+     "now": 29540
     },
     {
      "keyword": "전동드릴",
-     "now": 28530
+     "now": 28900
+    },
+    {
+     "keyword": "황사",
+     "now": 28820
     },
     {
      "keyword": "STANLEY",
-     "now": 26180
+     "now": 26310
     },
     {
      "keyword": "방풍커튼",
-     "now": 26110
+     "now": 26290
     },
     {
      "keyword": "창문방풍비닐",
-     "now": 24720
+     "now": 25180
     },
     {
      "keyword": "페인트",
+     "now": 23350
+    },
+    {
+     "keyword": "도어클로저",
      "now": 23130
     },
     {
      "keyword": "카라비너",
-     "now": 23030
-    },
-    {
-     "keyword": "도어클로저",
-     "now": 22740
+     "now": 22900
     },
     {
      "keyword": "실리콘",
-     "now": 22410
+     "now": 22620
     }
    ],
-   "days": 5
+   "days": 6
   }
  },
  "google": [
   {
-   "keyword": "피의자",
-   "traffic": "500+",
-   "news": [
-    "성범죄자 질주극에 실탄 발사‥경찰관 6명 부상",
-    "제 발 저려 시작된 추격전...6명 다치고 실탄까지 쏴"
-   ]
-  },
-  {
-   "keyword": "상장",
+   "keyword": "삼천당제약",
    "traffic": "200+",
    "news": [
-    "AI칩 투자 줄이고 앤스로픽에 50억달러 청약…거스너 “젠슨 황 복귀 서두르지 말라”",
-    "\"앤트로픽 직원들, 보유 주식 팔려면 60일 전 신고해야\""
+    "[속보] 삼천당제약 주가 돌연 급락, 장초반 강세 어디로…18% 가까이 ‘뚝’",
+    "'53억 승부수' 삼천당제약, 日 약가 등재 … 셀트리온과 맞대결"
    ]
   },
   {
-   "keyword": "너구리",
-   "traffic": "1000+",
+   "keyword": "탄약",
+   "traffic": "500+",
    "news": [
-    "농심, '볶음너구리' 정식 판매 전환…신제품 '매콤마요'도 출시",
-    "너구리 변신 계속된다…농심, '매콤마요 볶음너구리' 등 라인업 확대"
+    "인니 방산 컨설턴트, KF-21 계약 지연과 풍산 탄약 미납이 양국 신뢰 흔든다고 진단",
+    "KAI, 민항기로 글로벌 시장 진출한다"
    ]
   },
   {
-   "keyword": "2027",
+   "keyword": "변요한",
+   "traffic": "200+",
+   "news": [
+    "'신혼' 티파니, 변요한 팔짱 끼고 브이…듬직한 남편",
+    "‘혼인신고만 한’ 변요한♥티파니, 시상식이 결혼식장인 줄…부부 첫 공식활동[Oh!쎈 이슈]"
+   ]
+  },
+  {
+   "keyword": "argentina đấu với costa rica",
    "traffic": "100+",
    "news": [
-    "Raye, Rosalía and Ella Langley Top a Women-Led 2027 Grammys Field",
-    "The biggest takeaways from the 2027 Grammy nominations: Raye reigns, Olivia Rodrigo takes on her former idol and men go missing"
+    "Nico Paz trở thành họng pháo số một của tuyển Argentina",
+    "Trực tiếp Argentina vs Costa Rica: Hết hiệp 1, Argentina dẫn 4-0"
    ]
   },
   {
-   "keyword": "미스터트롯4",
-   "traffic": "2000+",
+   "keyword": "argentina vs kosta rika",
+   "traffic": "100+",
    "news": [
-    "‘미스터트롯4′ 12월 17일 첫 방송...김중연, 양지원, 박지후, 남궁진 등 티저로 베일 벗어",
-    "‘미스터트롯4’, 현역 vs 비현역 제대로 붙는다…12월 17일 첫 방송"
+    "Argentina Crush Costa Rica 7-0 Without Messi",
+    "Licensable picture: International Friendly - Argentina v Costa Rica"
    ]
   },
   {
-   "keyword": "서울고등법원",
+   "keyword": "음료",
+   "traffic": "1000+",
+   "news": [
+    "이마트24, '옐로우' 차음료 2종 출시…헬시 플레저 수요 공략",
+    "이마트24, 겨울 음료 1000원대로 즐긴다…자허블·배도라지로 상품군 확대"
+   ]
+  },
+  {
+   "keyword": "금양",
    "traffic": "500+",
    "news": [
-    "'면허정지 수준' 음주운전 서울고법 판사에 감봉 1개월 징계",
-    "현직 판사가 500m 음주운전…대법원, 감봉 1개월 징계"
+    "금양, 분기보고서 미제출로 상장폐지 사유 추가…가처분 결과까지 절차 보류",
+    "[상폐 호흡기] 120억 떼먹고 \"할말 없다\"…류광지 금양, 끝없는 추락"
    ]
   },
   {
-   "keyword": "풍자",
-   "traffic": "500+",
+   "keyword": "공무원연금공단",
+   "traffic": "100+",
    "news": [
-    "풍자 맞아? 37kg 감량 효과 미쳤다…비주얼 난리 [DA★]",
-    "\"소리지르고 삼단봉으로 때리려고 해\" 신기루, 中 입국하다 공안에 붙잡혀"
+    "공무원연금공단, 제주 ‘런케이션’ 프로그램 운영",
+    "공무원연금공단, 임직원 대상 제주4·3 역사·문화 교육 실시...\"지역상생 의식 강화\""
    ]
   },
   {
-   "keyword": "유학생",
-   "traffic": "200+",
+   "keyword": "카르다노",
+   "traffic": "100+",
    "news": [
-    "[단독] 트럼프 ‘유학생 체류 4년 제한’ 결국 무효…미 법원 “법률 취지에 어긋나”",
-    "美대학 외국인 신입 유학생 올해도 15%↓…'트럼프 반이민' 여파"
+    "\"내년엔 모두 행복해질 것\"…ADA 95% 폭락에도 카르다노 창업자의 자신감",
+    "에이다, 최고가 대비 95%↓…창립자는 \"가격 상승 보장한 적 없어\""
    ]
   },
   {
-   "keyword": "두산에너빌리티",
-   "traffic": "5000+",
+   "keyword": "메가커피",
+   "traffic": "100+",
    "news": [
-    "두산에너빌, 발전소 운영·정비에 AI…고객사와 기술 공유",
-    "말보다 숫자로 증명한 승부사… 원전·가스터빈 꽃피운 박지원"
-   ]
-  },
-  {
-   "keyword": "오태곤",
-   "traffic": "200+",
-   "news": [
-    "오태곤, 원소속팀 SSG와 3년 11억 원에 FA 계약",
-    "'보도자료는 양의지 1등, 계약서는 오태곤 1등' 대체 누가 FA 1호 계약인가요?"
+    "메가MGC커피 “고객센터 위탁업체 해킹…고객 30명 전화번호 유출”",
+    "코인 거래소 줄줄이 해킹… “외부 수탁사·업무망 관리 강화해야”"
    ]
   }
  ]
