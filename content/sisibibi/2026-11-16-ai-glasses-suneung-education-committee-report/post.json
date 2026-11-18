@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
   "site": "sisibibi",
   "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-16T22:48+09:00",
   "requested_topic": "AI 안경으로 시험 커닝 의혹…16일 국회 교육위 긴급 보고, 수능은 괜찮을까",
   "keywords": {
@@ -216,6 +216,12 @@
   "published": {
     "blog": "posts/2026-11-17-ai-glasses-suneung-education-committee-report",
     "blog_url": "https://sisibibinote.kr/posts/ai-glasses-suneung-education-committee-report/",
-    "blog_at": "2026-11-17T12:02:04+09:00"
+    "blog_at": "2026-11-17T12:02:04+09:00",
+    "threads": [
+      "18151551811569733",
+      "18030607400702491",
+      "17947315653363576"
+    ],
+    "threads_at": "2026-11-18T20:19:07+09:00"
   }
 }
