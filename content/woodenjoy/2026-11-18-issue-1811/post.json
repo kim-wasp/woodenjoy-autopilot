@@ -1,7 +1,7 @@
 {
   "site": "woodenjoy",
   "title": "⚡ 수도계량기 동파 2,754건, 절반이 복도식 아파트",
-  "status": "ready",
+  "status": "published",
   "rush": true,
   "platforms": [
     "threads"
@@ -57,5 +57,14 @@
       "스레드2": "A",
       "스레드3": "A"
     }
+  },
+  "approved_at": "2026-11-18T20:50+09:00",
+  "published": {
+    "threads": [
+      "18094053008219660",
+      "18040393943656689",
+      "17968497767981621"
+    ],
+    "threads_at": "2026-11-18T21:03:00+09:00"
   }
 }
