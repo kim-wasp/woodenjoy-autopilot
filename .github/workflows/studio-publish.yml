@@ -104,7 +104,7 @@ jobs:
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
           # 실행 기록을 studio-logs 가지에 남겨요
           if [ -s pub.log ]; then
-            cp pub.log /tmp/pub.log; cur=$(git rev-parse --abbrev-ref HEAD)
+            python3 tools/redact.py pub.log; cp pub.log /tmp/pub.log; cur=$(git rev-parse --abbrev-ref HEAD)
             git stash -q -u || true
             if git fetch -q origin studio-logs; then git checkout -q -B studio-logs FETCH_HEAD; else git checkout -q --orphan studio-logs; git rm -rqf .; fi
             mkdir -p logs; cp /tmp/pub.log "logs/publish-$(TZ=Asia/Seoul date +%Y%m%d-%H%M).log"
