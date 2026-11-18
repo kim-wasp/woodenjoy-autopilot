@@ -211,5 +211,10 @@
     "total_krw": 940,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-17T20:21+09:00"
+  "approved_at": "2026-11-17T20:21+09:00",
+  "published": {
+    "blog": "posts/2026-11-18-suneung-ban-10-years-bills-5-years-retroactive",
+    "blog_url": "https://sisibibinote.kr/posts/suneung-ban-10-years-bills-5-years-retroactive/",
+    "blog_at": "2026-11-18T12:02:19+09:00"
+  }
 }
