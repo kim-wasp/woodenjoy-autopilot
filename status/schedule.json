@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T07:37+09:00",
+  "updated": "2026-11-18T09:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -622,13 +622,24 @@
       "url": "https://myinfobay.com/blog/buzo-envelope-how-to-write-2026"
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-18-issue-0701",
+      "title": "⚡ 미중러 회담에 한국 자리는 없다? 러 외무 훈련 비난과 푸틴-이 대통령 만남 정리",
+      "platform": "threads",
+      "at": "2026-11-18T09:02:45+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-15-silicone-caulking-how-to-types",
       "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
       "platform": "blog",
-      "at": "2026-11-18T08:00+09:00",
-      "state": "planned"
+      "at": "2026-11-18T09:03:25+09:00",
+      "state": "done",
+      "url": "https://blog.naver.com/cafe_peanut/224481547026"
     },
     {
       "site": "sisibibi",
@@ -655,15 +666,6 @@
       "title": "실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요",
       "platform": "threads",
       "at": "2026-11-18T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
-      "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
-      "platform": "threads",
-      "at": "2026-11-18T19:30+09:00",
       "state": "planned"
     },
     {
@@ -705,8 +707,8 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
-      "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+      "dir": "content/sisibibi/2026-11-16-ai-glasses-suneung-education-committee-report",
+      "title": "AI 안경 수능 대책, 매 교시 안경 점검…초소형 카메라는 ‘100% 못 잡아’",
       "platform": "threads",
       "at": "2026-11-19T19:30+09:00",
       "state": "planned"
@@ -727,6 +729,15 @@
       "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
       "platform": "threads",
       "at": "2026-11-20T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
+      "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
+      "platform": "threads",
+      "at": "2026-11-20T19:30+09:00",
       "state": "planned"
     },
     {

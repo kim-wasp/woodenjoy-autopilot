@@ -333,5 +333,10 @@
       "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
       "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
     }
-  ]
+  ],
+  "published": {
+    "blog": "post_3c1b680f88274f9c",
+    "blog_url": "https://blog.naver.com/cafe_peanut/224481547026",
+    "blog_at": "2026-11-18T09:03:25+09:00"
+  }
 }
