@@ -1,0 +1,15 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 장례식 조문 예절 실수 6가지, 절은 영정 2번·상주 1번 → threads
+완료: {'threads': ['17914590927483093', '18111705749618748', '17871822036662468']}
+[가구·인테리어 (우드엔조이)] 실리콘 쏘는법, 초산·비초산·수성 잘못 고르면 다시 뜯어요 → threads
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 608, in <module>
+    publish(sys.argv[1], sys.argv[2], "--dry-run" in sys.argv)
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 564, in publish
+    res = publish_threads(site, d, post, dry)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 480, in publish_threads
+    p = _post(dry, f"{TH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/publish.py", line 322, in _post
+    raise RuntimeError(f"업로드 실패 {r.status_code}: {r.text[:300]}")
+RuntimeError: 업로드 실패 400: {"error":{"message":"The requested resource does not exist","type":"OAuthException","code":24,"error_subcode":4279009,"is_transient":false,"error_user_title":"Media Not Found","error_user_msg":"The media with id 18158314057513734 cannot be found.","fbtrace_id":"AHKj_cQqzfkJK_rxrfjSpcB"}}
