@@ -1,0 +1,24 @@
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  주제 자동 선택: 허리가 아플 때 먼저 확인할 것: 김장철 자세와 통증 관리 (네이버 월간 검색 24,710회, 11월 시기 주제) · 다른 후보: 손목이 시큰하고 저릴 때 확인할 것: 반복 동작 후 통증 관리 | 혈당 관리에 도움 되는 식사 습관, 공식 자료로 확인한 것만 | 한파에 저체온증 위험이 커지는 사람과 실내에서 챙길 것
+[건강 (forsmartlife.com)] 글 만들기 시작 · 주제: 허리가 아플 때 먼저 확인할 것: 김장철 자세와 통증 관리
+카테고리: 증상 관리
+이 글이 답할 질문: 쪼그려 앉아 작업하는 김장 중 허리 통증이 생겼을 때 집에서 할 수 있는 대처는 무엇이고, 병원이 필요한 신호는 무엇인가?
+고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 24,710회, 11월 시기 주제
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 3823자 (기준 2,500~3,500자)
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1303, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1064, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
