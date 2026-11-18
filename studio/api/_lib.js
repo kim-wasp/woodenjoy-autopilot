@@ -7,7 +7,7 @@ const path = require('path');
 
 const REPO = process.env.GITHUB_REPO || 'kim-wasp/woodenjoy-autopilot';
 const MOCK = process.env.STUDIO_MOCK_DIR;
-const SECRET = process.env.SESSION_SECRET || process.env.ADMIN_PASSWORD || 'dev';
+const SECRET = process.env.SESSION_SECRET || process.env.ADMIN_PASSWORD || (MOCK ? 'dev' : '');  // 비밀값이 없으면 아무도 로그인 안 됨(기본값으로 열리지 않게)
 const API = 'https://api.github.com';
 
 function sign(v) { return crypto.createHmac('sha256', SECRET).update(v).digest('base64url'); }
@@ -17,6 +17,7 @@ function makeCookie(days = 30) {
   return `s=${v}.${sign(v)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${days * 86400}${MOCK ? '' : '; Secure'}`;
 }
 function authed(req) {
+  if (!SECRET) return false;
   const m = (req.headers.cookie || '').match(/(?:^|;\s*)s=([^;]+)/);
   if (!m) return false;
   const [ok, exp, sig] = m[1].split('.');

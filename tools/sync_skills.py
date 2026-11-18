@@ -24,6 +24,19 @@ def source_dirs():
     return out
 
 
+PERSONAL = {"김종우": "사장"}  # 공개 저장소에 남기지 않을 말 → 바꿀 말
+
+
+def redact_personal(d):
+    for f in Path(d).rglob("*.md"):
+        t = f.read_text(encoding="utf-8")
+        n = t
+        for a, b in PERSONAL.items():
+            n = n.replace(a, b)
+        if n != t:
+            f.write_text(n, encoding="utf-8")
+
+
 def digest(d):
     h = hashlib.sha256()
     for f in sorted(p for p in Path(d).rglob("*") if p.is_file()):
@@ -56,6 +69,7 @@ def main(check=False):
             if (DST / name).exists():
                 shutil.rmtree(DST / name)
             shutil.copytree(d, DST / name)
+            redact_personal(DST / name)  # 공개 저장소라 실명 같은 개인정보는 지워서 저장
             man[name] = {"updatedAt": upd, "hash": dg, "synced": datetime.now(KST).isoformat(timespec="minutes")}
     if not check:
         json.dump(man, open(man_f, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

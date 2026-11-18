@@ -10,6 +10,8 @@ permissions:
   actions: write
 jobs:
   check:
+    # 남이 포크해서 보낸 승인 요청(PR)에서는 돌지 않아요
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
