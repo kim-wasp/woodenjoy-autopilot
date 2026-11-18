@@ -1,0 +1,39 @@
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  키워드 후보: 도어락건전지교체(980), 현관문도어락고장(630), 충전해머드릴(550), 방문손잡이교체(2400), 저소음제습기(3170), 방화문손잡이(3870), 도어락설치(3910), 산업용제습기(4110), 전동공구(4360), 원룸제습기(4370), 엘지제습기(4470), 아임삭전동드릴(4520)
+  대표 이미지 생성 (gemini)
+  홈피드 썸네일 완성 (스타일 1, 색 4) 새 건전지 넣었는데 / 또 울린다면
+  카드 점검 실패:
+  - 2장: 계정명 자리 침범: "확인 1"
+  - 2장: 본문이 계정명 자리까지 내려옴
+  - 4장: 계정명 자리 침범: "확인 3"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 2868자 (기준 1,200~2,800자)
+   - 카드: 2장: 계정명 자리 침범: "확인 1"
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+   - 카드: 4장: 계정명 자리 침범: "확인 3"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+  카드 점검 실패:
+  - 2장: 계정명 자리 침범: "확인 1"
+  - 2장: 본문이 계정명 자리까지 내려옴
+  - 4장: 계정명 자리 침범: "확인 3"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 2장: 계정명 자리 침범: "확인 1"
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+   - 카드: 4장: 계정명 자리 침범: "확인 3"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+  카드 6장 점검 통과 → content/woodenjoy/2026-11-18-doorlock-battery-replacement-alarm-again/cards
+  카드 눈 검사:
+   - 6장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없음 (캡션에는 '저장 눌러 두세요'가 있는데 카드에는 없음)
+  점검에 걸림 → 고치기:
+   - 카드: 6장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없음 (캡션에는 '저장 눌러 두세요'가 있는데 카드에는 없음)
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1303, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1064, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
