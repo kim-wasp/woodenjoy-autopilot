@@ -1,0 +1,258 @@
+{
+  "id": "infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
+  "site": "infobay",
+  "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+  "status": "ready",
+  "created_at": "2026-11-19T20:51+09:00",
+  "requested_topic": "부고 문자 답장 전 링크 누르면 손해, 관계별 예문 6개",
+  "keywords": {
+    "main": "부고 문자 답장",
+    "sub": [
+      "부고 문자 답장 예문",
+      "부고 문자 스미싱",
+      "부고 링크 클릭",
+      "상사 부고 답장",
+      "조문 못 갈 때 문자",
+      "엠세이퍼 가입제한"
+    ]
+  },
+  "brief": {
+    "reader": "지인 번호로 부고 문자를 받고 링크를 누를지, 답장을 뭐라고 할지 망설이는 20~40대 직장인",
+    "question": "부고 문자를 받으면 무엇부터 하고 관계별로 답장을 어떻게 보내야 하나요?",
+    "answer": "링크를 누르기 전에 전화나 공통 지인으로 진짜인지 확인하고, 답장은 관계에 맞춰 짧게 보내면 돼요. 링크를 이미 눌렀다면 비행기 모드부터 켜고 118에 상담하세요.",
+    "out_of_scope": "조의금 액수, 부조봉투 쓰는 법, 빈소 절 순서(각각 별도 글로 연결)",
+    "next_action": "오늘 휴대폰 사진첩의 신분증 사진을 확인하고, 출처를 알 수 없는 앱 설치를 '모두 허용 안 함'으로 바꾸기"
+  },
+  "why_this_topic": "지정 주제예요. 2026년 9월 전주지법이 부고 문자 링크를 눌러 명의를 도용당한 피해자의 3000만원 대출을 유효로 판단했고, 10월 중순 언론 보도로 다시 화제가 됐어요. 이번 급등 연관어(크리스마스데이트 +34% 등)는 이 사이트 주제와 맞지 않아 쓰지 않았어요.",
+  "title_candidates": [
+    {
+      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "pattern": "숫자·기준",
+      "score": 9
+    },
+    {
+      "title": "부고 문자 링크 눌렀다가 빚 3000만원, 법원은 대출 유효",
+      "pattern": "반전",
+      "score": 8
+    },
+    {
+      "title": "부고 문자 답장 먼저 vs 링크 먼저, 순서 바꾸면 손해",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "지인 번호로 온 부고 링크, 눌렀다면 바로 할 5단계",
+      "pattern": "짜증 장면",
+      "score": 7
+    },
+    {
+      "title": "부고 문자 답장, 상사·거래처에 보내면 실례인 말 4가지",
+      "pattern": "실수·손해",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 글 제목은 대부분 '부고 문자 답장 예문 정리·모음' 형태이고, 링크 사기 위험과 실제 판결은 빠져 있어요. 우리는 관계별 예문 6개와 2026년 9월 전주지법 3000만원 판결, 진짜 부고 확인법을 함께 다뤄요.",
+  "meta_description": "지인 번호로 온 부고 링크를 눌렀다가 3000만원 대출이 유효로 판단된 2026년 판결과 진짜 부고 확인법을 정리했어요. 친구·상사·거래처별 답장 예문 6개, 이미 눌렀을 때 할 5단계도 담았어요.",
+  "hero_prompt": "Candid smartphone photo of a person sitting on the edge of a bed at night in a Korean apartment, holding a phone with a bright but unreadable blurred screen, thumb hovering over it, dim room lit mostly by the phone and a small lamp, face out of frame, ordinary clutter like a charger cable and glasses on the nightstand, slightly off-center, no text",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "퇴근 무렵 사무실 책상에서 휴대폰 문자를 확인하는 손",
+      "prompt": "Candid smartphone snapshot of a Korean office worker's hand holding a phone at a desk late in the evening, the screen glowing but unreadable and blurred, a half-empty coffee cup and scattered documents nearby, slightly off-center framing, mixed fluorescent and monitor lighting, face not visible, ordinary clutter, not a stock photo, no glossy CGI look, no text"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "조화가 늘어선 장례식장 복도",
+      "prompt": "Candid snapshot of the entrance hallway of a Korean hospital funeral hall in the evening, a row of condolence flower wreaths along the wall, a few people in dark clothes walking away in the distance, faces not visible, slightly tilted framing, mixed warm and fluorescent lighting, not a stock photo, no text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "부고 문자 명의도용 대출…전주지법 효력 인정 (뉴스프리존)",
+      "url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=713963"
+    },
+    {
+      "title": "부고 문자 눌렀다가 빚 3000만원…그래도 갚아라 (한국경제)",
+      "url": "https://www.hankyung.com/article/2026101547831"
+    },
+    {
+      "title": "[전주지법 판결] 성명불상자가 원고 명의로 체결한 대출계약의 효력 (로이슈)",
+      "url": "https://www.lawissue.co.kr/view.php?ud=202611021224314196b50722e900_12"
+    },
+    {
+      "title": "신종 스미싱 등장, 부고 문자 사칭 (보안뉴스)",
+      "url": "https://m.boannews.com/html/detail.html?idx=124744"
+    },
+    {
+      "title": "부고 문자 스미싱 범죄에 경찰관도 당했다 (이투데이)",
+      "url": "https://www.etoday.co.kr/news/view/2313780"
+    },
+    {
+      "title": "클릭 유도 80퍼센트, 일상 문자 공격 어떻게 달라졌나 (안랩)",
+      "url": "https://www.ahnlab.com/ko/contents/content-center/36134"
+    },
+    {
+      "title": "스미싱 주의보 (KISA 보호나라)",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=71280"
+    },
+    {
+      "title": "URL 링크가 포함된 정부시스템 장애 관련 문자 안내 (한국인터넷진흥원)",
+      "url": "https://www.kisa.or.kr/402/form?postSeq=2540&page=1"
+    },
+    {
+      "title": "개인정보 유출 대처법, 개인정보노출자 등록·엠세이퍼 (재경일보)",
+      "url": "https://news.jkn.co.kr/post/1066640"
+    },
+    {
+      "title": "스미싱 링크 눌렀다면 이 순서로 (TILNOTE)",
+      "url": "https://tilnote.io/en/pages/6ae008c76c43f1ec9cf647d6"
+    },
+    {
+      "title": "명의를 도용당한 경우 대출채무 변제의무 (판례 해설)",
+      "url": "https://stibee.com/api/v1.0/emails/share/XijKhjszv8Aqyh94lVeZciXyr2-zbMQ="
+    },
+    {
+      "title": "부고 받았을 때 답장 문자 예시 모음 (피해야 할 표현)",
+      "url": "https://xn--299a782awthe5gf9d.com/blog/%EB%B6%80%EA%B3%A0-%EB%8B%B5%EC%9E%A5-%EB%AC%B8%EC%9E%90-%EC%98%88%EC%8B%9C/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "비교형",
+    "ending": "의견",
+    "cover_hooks": [
+      "답장 먼저? 링크 먼저?",
+      "부고 링크 하나에 빚 3000만원",
+      "아는 번호라서 눌렀는데"
+    ],
+    "caption": "아는 번호로 온 부고라서 괜찮다고 생각했다면 그게 함정이에요.\n\n2026년 9월 전주지법은 부고 링크를 눌러 명의를 도용당한 사람의 3000만원 대출을 유효로 판단했어요. 폰 사진첩에 있던 운전면허증 사진이 시작이었어요.\n링크는 누르기 전에 전화나 공통 지인으로 먼저 확인하세요. 이미 눌렀다면 비행기 모드를 켜고 118에 상담하면 돼요.\n\n링크만 오고 빈소 주소는 없는 부고를 받으면 상주에게 바로 전화하는 편인가요, 단톡방부터 보는 편인가요?\n\n#생활상식 #부고문자 #부고문자답장 #스미싱"
+  },
+  "threads": {
+    "style": "자가 진단",
+    "hooks": [
+      "부고 링크 눌렀다가 빚 3000만원",
+      "새벽 2시, 지인 번호로 온 부고",
+      "부고 오면 링크부터 눌러?"
+    ],
+    "posts": [
+      "부고 링크 눌렀다가 빚 3000만원 생긴 사람이 있대.\n법원은 그 대출이 유효하다고 판결했고.\n근데 남 얘기가 아닐 수도 있어. 폰 사진첩에 신분증 사진 있음, 부고 오면 링크부터 누름, 출처 모를 앱 설치 허용 켜져 있음.\n너는 이 중에 몇 개야?",
+      "2개 넘으면 오늘 이것부터 해.\n1. 사진첩에 있는 신분증 사진 지우기. 판결 사건도 폰에 있던 운전면허증 사진으로 새 폰이 개통됐어\n2. 환경설정 → 보안 및 개인정보 보호 → 출처를 알 수 없는 앱 설치 → 모두 허용 안 함\n3. 엠세이퍼(msafer.or.kr)에서 가입제한 신청하면 내 명의로 새 폰을 못 만들어\n이미 눌렀으면 118(24시간 무료), 돈이 빠져나갔으면 112로 신고해.",
+      "진짜 부고인지 확인하는 법이랑 친구·상사·거래처별 답장 예문 6개는 여기 있어 {LINK}"
+    ],
+    "topic_tag": "생활상식"
+  },
+  "revision": 5,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 1~6장: 쪽번호가 '1 / 6'~'6 / 6'인데 7장만 '7 / 7'이라 전체 장 수 표기가 맞지 않음",
+      "카드: 7장: 제목은 '관계별 예문 6개'인데 그림 칸은 4개뿐이라 약속한 개수와 다름",
+      "카드: 7장: '기독교 유족' 칸은 블로그 예문 표(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 내용이라 '블로그에 있어요'와 어긋남",
+      "카드: 6장·7장: 흰 박스 4개를 2×2로 놓은 같은 틀이 연달아 나와 구성이 비슷하고, 7장 박스는 내용 없이 이름만 있어 새 정보가 없음"
+    ],
+    "at": "2026-11-19T20:52+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-19T20:50+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3230자 (기준 1,500~3,200자)"
+    },
+    {
+      "at": "2026-11-19T20:50+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"기준 N\"",
+      "text": "카드: 3장: 계정명 자리 침범: \"기준 2\""
+    },
+    {
+      "at": "2026-11-19T20:50+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 3장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-19T20:50+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"결론\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"결론\""
+    },
+    {
+      "at": "2026-11-19T20:50+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N~N장은 쪽번호가 '/N'인데 N장만 'N/N'이라 전체 장 수 표기가 맞지 않음",
+      "text": "카드: 1~6장은 쪽번호가 '/6'인데 7장만 '7/7'이라 전체 장 수 표기가 맞지 않음"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N장: 버튼 '기독교 유족'은 블로그 예문 N개(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 항목이라 글과 어긋남. 표지에서 말한 'N개'도 N개 박스와 맞지 ",
+      "text": "카드: 7장: 버튼 '기독교 유족'은 블로그 예문 6개(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 항목이라 글과 어긋남. 표지에서 말한 '6개'도 4개 박스와 맞지 않음"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N·N장: 하단 라벨 '기준 N', '기준 N'가 무슨 뜻인지 알 수 없고 내용과 맞지 않음. N장 '눌렀다면', N장 '결론'처럼 내용에 맞는 라벨이어야 함",
+      "text": "카드: 2·3장: 하단 라벨 '기준 1', '기준 2'가 무슨 뜻인지 알 수 없고 내용과 맞지 않음. 4장 '눌렀다면', 5장 '결론'처럼 내용에 맞는 라벨이어야 함"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N장: 제목은 '답장은 먼저, 링크는 나중'인데 '친한 사이: 전화로 묻고 답장'은 전화가 먼저라 제목과 어긋남. 글 결론(링크 누르기 전에 전화로 확인)과도 맞지 않음",
+      "text": "카드: 5장: 제목은 '답장은 먼저, 링크는 나중'인데 '친한 사이: 전화로 묻고 답장'은 전화가 먼저라 제목과 어긋남. 글 결론(링크 누르기 전에 전화로 확인)과도 맞지 않음"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N~N장: 쪽번호가 'N / N'~'N / N'인데 N장만 'N / N'이라 전체 장 수 표기가 맞지 않음",
+      "text": "카드: 1~6장: 쪽번호가 '1 / 6'~'6 / 6'인데 7장만 '7 / 7'이라 전체 장 수 표기가 맞지 않음"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N장: 제목은 '관계별 예문 N개'인데 그림 칸은 N개뿐이라 약속한 개수와 다름",
+      "text": "카드: 7장: 제목은 '관계별 예문 6개'인데 그림 칸은 4개뿐이라 약속한 개수와 다름"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N장: '기독교 유족' 칸은 블로그 예문 표(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 내용이라 '블로그에 있어요'와 어긋남",
+      "text": "카드: 7장: '기독교 유족' 칸은 블로그 예문 표(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 내용이라 '블로그에 있어요'와 어긋남"
+    },
+    {
+      "at": "2026-11-19T20:51+09:00",
+      "kind": "카드: N장·N장: 흰 박스 N개를 N×N로 놓은 같은 틀이 연달아 나와 구성이 비슷하고, N장 박스는 내용 없이 이름만 있어 새 정보가 없음",
+      "text": "카드: 6장·7장: 흰 박스 4개를 2×2로 놓은 같은 틀이 연달아 나와 구성이 비슷하고, 7장 박스는 내용 없이 이름만 있어 새 정보가 없음"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 37780,
+        "output_tokens": 24834,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.6878
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 22642,
+        "output_tokens": 3415,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0794
+      }
+    },
+    "images": {},
+    "usd": 0.7672,
+    "previous_usd": 1.0561,
+    "total_usd": 1.8233,
+    "total_krw": 2550,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
