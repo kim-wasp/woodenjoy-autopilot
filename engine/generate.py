@@ -879,7 +879,8 @@ def keyword_pool(site, n_seeds=15, keep=12):
     3) 네이버 개발자센터 검색 API 키가 있으면 블로그 글 수까지 재서 '검색 수 ÷ 글 수'가 높은 것부터 줄 세워요."""
     import math
     import trends
-    sys.path.insert(0, str(ROOT / "tools"))
+    if str(ROOT / "tools") not in sys.path:  # 맨 뒤에 붙여요 (앞에 넣으면 tools/publish.py 가 engine/publish.py 를 가려요)
+        sys.path.append(str(ROOT / "tools"))
     import keywords as kt
     if not os.environ.get("NAVER_AD_API_KEY") or os.environ.get("MOCK_LLM"):
         return []
@@ -1065,7 +1066,10 @@ def generate(site_id, topic=None, notes=None, out=None, view=None, photos=None):
                            model=llm_cfg.get("model"), web_search=False, mock_name=f"{site_id}_post")
         res = {**res, **{k: v for k, v in fix.items() if k in part and v}}
     if res.get("article_md") and not os.environ.get("MOCK_LLM"):
-        import publish as _pub
+        import importlib.util as _iu  # engine/publish.py 를 경로로 콕 집어 불러요 (tools/publish.py 와 이름이 같아서)
+        _spec = _iu.spec_from_file_location("engine_publish", Path(__file__).resolve().parent / "publish.py")
+        _pub = _iu.module_from_spec(_spec)
+        _spec.loader.exec_module(_pub)
         miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
         if miss:  # 한 번 더 만들어 보고, 그래도 없으면 점검 실패로 (이미지 없는 글이 승인되지 않게)
             make_images(site, res, d)
