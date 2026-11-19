@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-17-suneung-ban-10-years-bills-5-years-retroactive",
   "site": "sisibibi",
   "title": "수능 응시제한 10년? 낸 법안은 5년, 지금 법은 1년",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-17T18:48+09:00",
   "requested_topic": "AI로 수능 부정하면 10년 못 본다? 국회에 올라온 ‘응시 제한 10년’ 법안",
   "keywords": {
@@ -215,6 +215,12 @@
   "published": {
     "blog": "posts/2026-11-18-suneung-ban-10-years-bills-5-years-retroactive",
     "blog_url": "https://sisibibinote.kr/posts/suneung-ban-10-years-bills-5-years-retroactive/",
-    "blog_at": "2026-11-18T12:02:19+09:00"
+    "blog_at": "2026-11-18T12:02:19+09:00",
+    "threads": [
+      "18350902519250670",
+      "18108367823002529",
+      "18193554598416710"
+    ],
+    "threads_at": "2026-11-19T20:03:14+09:00"
   }
 }
