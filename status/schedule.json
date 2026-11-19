@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T10:28+09:00",
+  "updated": "2026-11-19T11:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -760,6 +760,16 @@
       "at": "2026-11-19T10:28:42+09:00",
       "state": "done",
       "url": "https://blog.naver.com/cafe_peanut/224483099714"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-19-issue-0833",
+      "title": "⚡ 수능 날 미역국, 의사는 먹어도 된다는데 고3 딸 도시락엔 안 싸준다는 이유",
+      "platform": "threads",
+      "at": "2026-11-19T11:01:50+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
