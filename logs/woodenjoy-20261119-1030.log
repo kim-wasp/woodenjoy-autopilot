@@ -1,0 +1,22 @@
+  이번 글은 '공구 사용법' 차례
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  키워드 후보: 도어락건전지교체(980), 전동드릴추천(1860), 방문손잡이교체(2410), 드릴비트종류(240), 중문레일교체(200), 해머드릴(3830), 대용량제습제(3910), 방화문손잡이(3920), 소형제습기(4010), 전동공구(4370), 화장실제습기(4470), 원룸제습기(4520)
+  대표 이미지 생성 (gemini)
+  홈피드 썸네일 완성 (스타일 2, 색 5) 벽에 점만 찍히면 / 척부터 보세요
+  쿠팡 링크 2개 자동으로 채웠어요 (관리화면 '쿠팡 링크'에서 확인)
+  카드 점검 실패:
+  - 4장: 계정명 자리 침범: "2단계"
+  - 4장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 4장: 계정명 자리 침범: "2단계"
+   - 카드: 4장: 본문이 계정명 자리까지 내려옴
+  카드 7장 점검 통과 → content/woodenjoy/2026-11-19-hammer-drill-concrete-wall-mode-bit-chuck/cards
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1308, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1069, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
