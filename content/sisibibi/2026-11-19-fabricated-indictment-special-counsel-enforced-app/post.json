@@ -1,0 +1,217 @@
+{
+  "id": "sisibibi/2026-11-19-fabricated-indictment-special-counsel-enforced-app",
+  "site": "sisibibi",
+  "title": "조작기소 특검법 시행, 국힘이 추천 안 해도 특검은 나온다…마감 11월 30일",
+  "status": "ready",
+  "created_at": "2026-11-19T23:15+09:00",
+  "requested_topic": "조작기소 특검법 대통령 재가, 19일 공포·시행…이제 무엇부터 시작되나",
+  "keywords": {
+    "main": "조작기소 특검법 시행",
+    "sub": [
+      "조작기소 특검법 재가",
+      "조작기소 특검 추천 거부",
+      "특검 임명 절차",
+      "특검 수사기간 200일",
+      "조작기소 특검법 공포"
+    ]
+  },
+  "brief": {
+    "reader": "19일 '특검법 재가·공포' 뉴스를 보고 이제 특검이 언제, 어떻게 꾸려지는지 궁금한 사람",
+    "question": "조작기소 특검법이 시행됐는데 특검 출범까지 뭐가, 언제 일어나고 국힘이 추천을 거부하면 어떻게 되나?",
+    "answer": "국회의장 요청 → 3당 추천 → 대통령 임명 순서로, 기한을 다 써도 11월 30일쯤 임명되고 국힘이 추천을 안 하면 추천권 포기로 봐서 절차는 그대로 가요.",
+    "out_of_scope": "수사 대상 12개 사건 각각의 내용, 특검 후보 인물 예상, 법안 통과 과정 재설명",
+    "next_action": "20일 이후 국회의장의 임명 요청과 3당 추천 소식을 날짜표와 맞춰 보기"
+  },
+  "why_this_topic": "11월 19일 전자관보 공포·즉시 시행으로 주요 언론이 일제히 보도한 당일 이슈이고, 연관 검색어 '특검'이 월 13,880회로 이 사이트 주제 검색어 가운데 큼. 기존 기사들은 재가 사실만 전해서 날짜로 계산한 임명 마감과 추천 거부 때 어떻게 되는지를 답하는 글이 드묾",
+  "title_candidates": [
+    {
+      "title": "조작기소 특검법 시행, 국힘이 추천 안 해도 특검은 나온다…마감 11월 30일",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "조작기소 특검 언제 시작? 19일 시행, 임명은 늦어도 11월 30일",
+      "pattern": "결론 먼저",
+      "score": 8
+    },
+    {
+      "title": "조작기소 특검 180일? 200일? 기사마다 다른 이유와 임명 일정",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "조작기소 특검법 재가 뒤 순서, 의장 2일·추천 3일·임명 3일",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "조작기소 특검 추천 거부, 국힘 빠지면 누가 특검 되나",
+      "pattern": "대상·상황",
+      "score": 8
+    }
+  ],
+  "title_research": "상위 제목들은 '재가·19일 공포 즉시 시행·국힘 추천 거부'라는 사실만 알림 / 우리는 국힘이 거부해도 특검이 나오는 장치, 날짜로 계산한 임명 마감(11월 30일쯤), 180일과 200일이 섞여 나오는 이유까지 답함",
+  "meta_description": "국회의장 2일, 추천 의뢰 3일, 정당 추천 3일, 임명 3일. 기한을 다 써도 특검 임명은 11월 30일쯤이에요. 국힘이 추천을 거부해도 절차가 멈추지 않는 이유와 180일·200일 차이를 정리했어요.",
+  "hero_prompt": "A stack of official government gazette papers and a fountain pen on a dark wooden desk, an empty Korean government meeting room softly blurred in the background, calm morning light, documentary photo style, no text, no people, no logos",
+  "thumb_text": "",
+  "category": "정책과 법안",
+  "kind": "",
+  "summary": [],
+  "conclusion": "조작기소 특검법은 19일 시행됐어요. 국힘이 추천을 안 해도 절차는 멈추지 않고, 기한을 다 쓰면 11월 30일쯤 특검이 임명돼요.",
+  "opinion": "이제껏 마음대로 휘둘렀던 칼에 대한 책임을 진다고 생각하자\n이재명 대통령에 대한 부분 때문에 국힘이 저렇게 난리를 친다고 하지만\n계속 막고 방해를 한다고 하면 명분이 없음이 탄로가 날 뿐이다.\n국힘은 왜 굳이 검찰의 방패막이 되러주려고 하는가",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "법률신문 - 이재명 대통령, ‘조작기소 특검법’ 재가… 공포 즉시 시행",
+      "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=229668"
+    },
+    {
+      "title": "법률신문 - 이 대통령 ‘조작기소 특검법’ 재가… 검사들 “이정현 대행 입장 밝혀야”",
+      "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=229669"
+    },
+    {
+      "title": "서울신문 - 조작기소 특검법 시행… 민주·혁신, 후보 추천 실무 돌입",
+      "url": "https://www.seoul.co.kr/news/politics/congress/2026/11/20/20261120010001"
+    },
+    {
+      "title": "서울신문 - ‘조작기소 특검법’ 李대통령 재가 거쳐 공포…대장동 등 12개 수사",
+      "url": "https://www.seoul.co.kr/news/politics/2026/11/19/20261119500040"
+    },
+    {
+      "title": "알파경제 - 李 대통령, 순방 중 조작기소 특검법 재가…국민의힘 추천 거부 속 특검 선임 시작",
+      "url": "https://www.alphabiz.co.kr/news/articleView.html?idxno=199038"
+    },
+    {
+      "title": "신아일보 - 李대통령, '조작기소 특검법' 재가… 국힘, 후보 추천 않기로",
+      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5085573"
+    },
+    {
+      "title": "뉴스토마토 - 순방 중 재가…'조작기소 특검' 본궤도",
+      "url": "http://www.newstomato.com/ReadNews.aspx?no=1321063"
+    },
+    {
+      "title": "한국경제 - 李대통령, 순방 중 조작기소특검법 재가",
+      "url": "https://www.hankyung.com/article/2026111982991"
+    },
+    {
+      "title": "kbc - 李대통령, '조작기소 특검법' 재가…19일 공포 즉시 시행",
+      "url": "https://news.ikbc.co.kr/article/view/kbc202611190015"
+    },
+    {
+      "title": "시사위크 - ‘조작기소 특검법’ 공포… 정국에 다시 드리운 ‘먹구름’",
+      "url": "https://www.sisaweek.com/news/articleView.html?idxno=239076"
+    },
+    {
+      "title": "데일리안 - 국민의힘, '조작기소 특검법' 헌재에 권한쟁의심판 청구한다",
+      "url": "https://www.dailian.co.kr/news/view/1717465/%EB%8B%A8%EB%8F%85-%EA%B5%AD%EB%AF%BC%EC%9D%98%ED%9E%98-%EC%A1%B0%EC%9E%91%EA%B8%B0%EC%86%8C-%ED%8A%B9%EA%B2%80%EB%B2%95-%ED%97%8C%EC%9E%AC-2026"
+    },
+    {
+      "title": "매일일보 - 국힘, 조작기소 특검 추천 거부…도보투쟁 돌입",
+      "url": "https://www.m-i.kr/news/articleView.html?idxno=2020265"
+    },
+    {
+      "title": "문화일보 - 서영교 “조작기소 특검법안이 대통령 이해충돌? 헛소리”",
+      "url": "https://www.munhwa.com/article/11629665"
+    },
+    {
+      "title": "파이낸셜뉴스 - '조작기소특검' 국무회의 앞두고…野 \"李 죄지우기\" 與 \"檢 조작범죄 확인\"",
+      "url": "https://www.fnnews.com/news/202611151354018977"
+    },
+    {
+      "title": "천지일보 - 여야 ‘조작 기소 특검법’ 대치 계속… “진상규명” vs “재판 무력화”",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3446728"
+    },
+    {
+      "title": "데일리팝 - 대장동·대북송금 등 조작기소 특검법 의결…최대 309명·200일 수사",
+      "url": "http://www.dailypop.kr/news/articleView.html?idxno=104726"
+    },
+    {
+      "title": "이투데이 - 청와대 앞 국힘 “조작기소 특검에 검사 파견 거부해야”",
+      "url": "https://www.etoday.co.kr/news/view/2646227"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "썰 한 장면",
+    "hooks": [
+      "수능날 관보에 특검법이 올라왔어",
+      "국힘이 추천 안 해도 특검은 나와",
+      "특검 수사 180일이야, 200일이야?"
+    ],
+    "posts": [
+      "수능날 관보에 특검법이 올라왔어\n대통령은 중국 순방 중에 전자결재로 사인했고, 청와대는 따로 공지도 안 했대\n국힘은 수능 틈탄 기습 재가라고 하고, 민주당은 검찰 조작 의혹 밝히자는 거라고 하지\n국힘이 후보 추천 안 하면 특검 멈출까, 그냥 나올까?",
+      "그냥 나와. 기한 안에 추천 안 한 당은 추천권 포기로 봐\n1. 국회의장이 이틀 안에 임명 요청\n2. 대통령이 사흘 안에 민주·국힘·혁신당에 추천 의뢰\n3. 각 당이 사흘 안에 법조 경력 15년 넘는 사람 1명씩 추천\n4. 대통령이 사흘 안에 임명, 안 하면 후보 중 최연장자가 임명된 걸로 봐\n기한 다 쓰면 11월 30일쯤이 마감이야",
+      "180일, 200일이 왜 섞여 나오는지랑 날짜표까지 여기 있어 {LINK}"
+    ],
+    "topic_tag": "정치"
+  },
+  "revision": 0,
+  "signature": {
+    "verdict": {
+      "issue": "국민의힘이 추천을 거부하면 조작기소 특검 출범이 막힐까?",
+      "rows": [
+        {
+          "who": "국민의힘(조용술 대변인)",
+          "claim": "대통령이 자기 사건을 수사할 특검을 직접 임명하는 건 이해충돌이다",
+          "check": "수사 대상 12개 항목 가운데 6개가 이 대통령 관련 사건이고, 대통령이 3당 추천 후보 중 1명을 임명함(법률신문·알파경제)",
+          "status": "의견"
+        },
+        {
+          "who": "국민의힘(최은석 원내수석대변인)",
+          "claim": "공소취소 조항을 지워도 공소취소로 가는 길은 남아 있다",
+          "check": "공소유지 결정권·이첩 요구권은 11월 4일 법사위 심사에서 삭제됨. 특검 결과가 기존 재판에 미칠 영향은 아직 정해지지 않음(법률신문·파이낸셜뉴스)",
+          "status": "확인 중"
+        },
+        {
+          "who": "더불어민주당(서영교 법사위원장)",
+          "claim": "대통령은 특검 수사 대상이 아니고, 대상은 검찰·국정원·감사원이다",
+          "check": "법은 국가기관의 수사·기소 과정을 규명하는 내용이지만, 대장동·대북송금 등 대통령 관련 사건이 대상에 포함됨(서울신문·kbc)",
+          "status": "일부 사실"
+        },
+        {
+          "who": "더불어민주당(손명수 대변인)",
+          "claim": "국민의힘이 문제 삼은 공소유지 결정권과 이첩 요구권은 삭제했다",
+          "check": "법사위 심사에서 두 조항이 빠진 채 본회의를 통과함(법률신문·데일리팝)",
+          "status": "사실"
+        }
+      ],
+      "unknown": "국민의힘의 권한쟁의심판(23일 청구 예정)과 파견 거부 요구가 특검 출범 일정에 영향을 줄지는 19일 기준 알 수 없음"
+    },
+    "bill": {
+      "name": "윤석열 정권 검찰청, 국가정보원, 감사원 등 국가기관의 조작수사·조작기소 등 의혹의 진상규명을 위한 특별검사 임명 등에 관한 법률",
+      "number": "법률 제22136호(의안번호 미확인)",
+      "stage": "공포",
+      "as_of": "2026-11-19",
+      "url": ""
+    }
+  },
+  "checks": {
+    "ok": false,
+    "issues": [
+      "이미지: 대표사진 를 못 만들었어요 (이미지 크레딧·오류 확인. 올릴 때 한 번 더 만들어요)"
+    ],
+    "at": "2026-11-19T23:15+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 24359,
+        "output_tokens": 13439,
+        "web_searches": 4,
+        "calls": 1,
+        "usd": 0.4062
+      }
+    },
+    "images": {},
+    "usd": 0.4062,
+    "total_usd": 0.4062,
+    "total_krw": 570,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
