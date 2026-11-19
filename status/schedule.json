@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T08:02+09:00",
+  "updated": "2026-11-20T08:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -862,21 +862,22 @@
       "url": null
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-20-issue-0745",
+      "title": "⚡ 복지포인트 세금, 직장인은 과세 공무원은 비과세 논란",
+      "platform": "threads",
+      "at": "2026-11-20T08:03:38+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-19-fabricated-indictment-special-counsel-enforced-app",
       "title": "조작기소 특검법 시행, 국힘이 추천 안 해도 특검은 나온다…마감 11월 30일",
       "platform": "blog",
       "at": "2026-11-20T12:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
-      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
-      "platform": "threads",
-      "at": "2026-11-20T12:30+09:00",
       "state": "planned"
     },
     {
@@ -918,8 +919,8 @@
     {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
-      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
+      "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
       "platform": "threads",
       "at": "2026-11-23T12:30+09:00",
       "state": "planned"
@@ -931,6 +932,15 @@
       "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
       "platform": "instagram",
       "at": "2026-11-23T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
+      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "platform": "threads",
+      "at": "2026-11-25T12:30+09:00",
       "state": "planned"
     }
   ]
