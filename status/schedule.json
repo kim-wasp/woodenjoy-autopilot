@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T03:38+09:00",
+  "updated": "2026-11-20T07:01+09:00",
   "items": [
     {
       "site": "infobay",
@@ -847,8 +847,9 @@
       "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
       "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
       "platform": "blog",
-      "at": "2026-11-20T07:00+09:00",
-      "state": "planned"
+      "at": "2026-11-20T07:01:58+09:00",
+      "state": "done",
+      "url": "https://myinfobay.com/blog/funeral-notice-text-reply-smishing-2026"
     },
     {
       "site": "sisibibi",
