@@ -1,0 +1,61 @@
+[상식 (커먼센스 · 블로그 + infobay_kr)] 글 만들기 시작 · 주제: 부고 문자 답장 전 링크 누르면 손해, 관계별 예문 6개
+  사진 2 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  카드 점검 실패:
+  - 3장: 계정명 자리 침범: "기준 2"
+  - 3장: 본문이 계정명 자리까지 내려옴
+  - 5장: 계정명 자리 침범: "결론"
+  - 5장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 3230자 (기준 1,500~3,200자)
+   - 카드: 3장: 계정명 자리 침범: "기준 2"
+   - 카드: 3장: 본문이 계정명 자리까지 내려옴
+   - 카드: 5장: 계정명 자리 침범: "결론"
+   - 카드: 5장: 본문이 계정명 자리까지 내려옴
+  사진 2 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  카드 6장 점검 통과 → content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026/cards
+  카드 눈 검사:
+   - 1~6장은 쪽번호가 '/6'인데 7장만 '7/7'이라 전체 장 수 표기가 맞지 않음
+   - 7장: 버튼 '기독교 유족'은 블로그 예문 6개(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 항목이라 글과 어긋남. 표지에서 말한 '6개'도 4개 박스와 맞지 않음
+   - 2·3장: 하단 라벨 '기준 1', '기준 2'가 무슨 뜻인지 알 수 없고 내용과 맞지 않음. 4장 '눌렀다면', 5장 '결론'처럼 내용에 맞는 라벨이어야 함
+   - 5장: 제목은 '답장은 먼저, 링크는 나중'인데 '친한 사이: 전화로 묻고 답장'은 전화가 먼저라 제목과 어긋남. 글 결론(링크 누르기 전에 전화로 확인)과도 맞지 않음
+  점검에 걸림 → 고치기:
+   - 카드: 1~6장은 쪽번호가 '/6'인데 7장만 '7/7'이라 전체 장 수 표기가 맞지 않음
+   - 카드: 7장: 버튼 '기독교 유족'은 블로그 예문 6개(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 항목이라 글과 어긋남. 표지에서 말한 '6개'도 4개 박스와 맞지 않음
+   - 카드: 2·3장: 하단 라벨 '기준 1', '기준 2'가 무슨 뜻인지 알 수 없고 내용과 맞지 않음. 4장 '눌렀다면', 5장 '결론'처럼 내용에 맞는 라벨이어야 함
+   - 카드: 5장: 제목은 '답장은 먼저, 링크는 나중'인데 '친한 사이: 전화로 묻고 답장'은 전화가 먼저라 제목과 어긋남. 글 결론(링크 누르기 전에 전화로 확인)과도 맞지 않음
+  사진 2 실패: Gemini 이미지 오류 402: {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+  카드 6장 점검 통과 → content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026/cards
+  카드 눈 검사:
+   - 1~6장: 쪽번호가 '1 / 6'~'6 / 6'인데 7장만 '7 / 7'이라 전체 장 수 표기가 맞지 않음
+   - 7장: 제목은 '관계별 예문 6개'인데 그림 칸은 4개뿐이라 약속한 개수와 다름
+   - 7장: '기독교 유족' 칸은 블로그 예문 표(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 내용이라 '블로그에 있어요'와 어긋남
+   - 6장·7장: 흰 박스 4개를 2×2로 놓은 같은 틀이 연달아 나와 구성이 비슷하고, 7장 박스는 내용 없이 이름만 있어 새 정보가 없음
+  점검에 걸림 → 고치기:
+   - 카드: 1~6장: 쪽번호가 '1 / 6'~'6 / 6'인데 7장만 '7 / 7'이라 전체 장 수 표기가 맞지 않음
+   - 카드: 7장: 제목은 '관계별 예문 6개'인데 그림 칸은 4개뿐이라 약속한 개수와 다름
+   - 카드: 7장: '기독교 유족' 칸은 블로그 예문 표(친한 친구, 직장 동료, 상사, 거래처, 조문을 못 갈 때, 오랜만에 연락 온 지인)에 없는 내용이라 '블로그에 있어요'와 어긋남
+   - 카드: 6장·7장: 흰 박스 4개를 2×2로 놓은 같은 틀이 연달아 나와 구성이 비슷하고, 7장 박스는 내용 없이 이름만 있어 새 정보가 없음
+  비용 추정: Claude+사진 약 2,550원 ($1.823)
+완료: content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026 · 점검 실패 4건
+::set-output-dir::content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026
