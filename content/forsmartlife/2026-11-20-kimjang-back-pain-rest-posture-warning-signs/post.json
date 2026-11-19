@@ -1,0 +1,206 @@
+{
+  "id": "forsmartlife/2026-11-20-kimjang-back-pain-rest-posture-warning-signs",
+  "site": "forsmartlife",
+  "title": "김장 후 허리 통증, 내내 누워 있으면 손해: 안정은 2~3일까지",
+  "status": "ready",
+  "created_at": "2026-11-20T04:01+09:00",
+  "requested_topic": "김장 뒤 허리가 아플 때 생활에서 바꿀 자세와 주의 신호\n카테고리: 증상 관리\n이 글이 답할 질문: 쪼그려 앉기나 무거운 것을 드는 활동 뒤 허리 통증이 생기면 어떻게 관리하고 언제 병원에 가야 하는가?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 24,470회, 11월 시기 주제",
+  "keywords": {
+    "main": "김장 후 허리 통증",
+    "sub": [
+      "김장 허리 통증",
+      "급성 요통",
+      "허리 삐끗",
+      "김장 후유증",
+      "허리 통증 병원 가야 할 때",
+      "허리보호대",
+      "좌골신경통"
+    ]
+  },
+  "brief": {
+    "reader": "김장으로 쪼그려 앉기와 김치통 들기를 한 뒤 허리가 아픈 30~60대",
+    "question": "쪼그려 앉기나 무거운 것을 든 뒤 허리 통증이 생기면 어떻게 관리하고 언제 병원에 가야 하나요?",
+    "answer": "위험 신호가 없으면 2~3일만 쉬고 아프지 않은 만큼 움직이면 되고, 다리 저림·힘 빠짐·배뇨 이상·발열이 있거나 진통제와 휴식에도 나아지지 않으면 진료를 받아요.",
+    "out_of_scope": "주사·시술·수술 같은 병원 치료 선택, 특정 약 이름과 용량, 무릎·손목 통증, 만성 요통 운동 프로그램",
+    "next_action": "위험 신호 6가지 체크리스트를 확인하고, 해당 항목이 있으면 정형외과·신경외과·재활의학과 진료를 예약해요"
+  },
+  "why_this_topic": "네이버 월간 검색 24,470회, 11월 시기 주제. 11월 중순 김장철이라 김장 후 허리 통증 관련 기사가 이어지는데, 상위 글은 경고 위주이고 안정 기간·병원 기준을 공식 자료 숫자로 정리한 글은 드물어요.",
+  "title_candidates": [
+    {
+      "title": "김장 후 허리 통증, 내내 누워 있으면 손해: 안정은 2~3일까지",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "김장 후 허리 통증, 다리 저림·소변 이상이면 바로 병원 가세요",
+      "pattern": "결론 먼저",
+      "score": 8
+    },
+    {
+      "title": "김장 후 허리 통증, 다음 날 허리가 안 펴질 때 먼저 할 3가지",
+      "pattern": "짜증 장면",
+      "score": 8
+    },
+    {
+      "title": "김장 후 허리 통증 vs 허리디스크, 다리로 뻗치는지부터 보세요",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "김장 후 허리 통증, 보호대 계속 차면 안 되는 이유와 병원 갈 6신호",
+      "pattern": "실수·손해",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목(김장 후 허리 통증 초기에 적극 치료해야 / 급성 허리디스크 위험 높여 / 김장철 허리·무릎 통증 주의보 / 김장 후유증 줄이는 방법)은 경고와 병원 치료 쪽에 몰려 있고, 며칠 쉬어야 하는지와 병원 가는 기준을 숫자로 말해 주지 않아요 / 우리는 안정 2~3일, 7일, 위험 신호 6가지를 공식 자료 숫자로 제목과 본문에 넣어요",
+  "meta_description": "김장 다음 날 허리가 안 펴질 때 며칠 쉬어야 할까요? 대한정형외과학회는 안정 2~3일, 길어도 7일까지라고 안내해요. 보호대 오해, 김치통 드는 자세, 바로 병원 갈 신호 6가지를 정리했어요.",
+  "hero_prompt": "Candid smartphone photo of a Korean woman in her 50s slowly straightening up with a hand on her lower back next to plastic kimchi containers and leftover salted cabbage on a Korean apartment veranda the day after kimjang, late autumn natural light, slightly off-center framing, real lived-in surroundings, face not in close-up, no text",
+  "thumb_text": "",
+  "category": "증상 관리",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "바닥 대신 식탁에 서서 김장 양념을 버무리는 모습",
+      "prompt": "Candid smartphone snapshot of two Korean middle-aged women seasoning napa cabbage kimchi while standing at a kitchen dining table instead of sitting on the floor, red pepper paste in a large basin placed close to their bodies, home kitchen in a Korean apartment in late autumn, taken casually by a family member; natural uneven light, slightly off-center framing, real lived-in surroundings, not a stock photo, no glossy CGI look, faces not in close-up, no text, no medical gore, no pills or products as the main subject"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "허리를 짚고 병원 대기실에 앉아 진료를 기다리는 중년 남성",
+      "prompt": "Candid smartphone snapshot of a Korean man in his 50s sitting carefully on a bench in a clinic waiting room, one hand resting on his lower back, other patients blurred in the background, taken casually by a family member; natural uneven light, slightly off-center framing, real lived-in surroundings, not a stock photo, no glossy CGI look, faces not in close-up, no text, no medical gore, no pills or products as the main subject"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "질병관리청 국가건강정보포털 - 요통",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3796"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 - 좌골신경통",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3512"
+    },
+    {
+      "title": "대한정형외과학회 - 요통 안내",
+      "url": "https://www.koa.or.kr/general/info/?p=index_4_1&dep1=2&dep2=3"
+    },
+    {
+      "title": "KIMS 의약정보센터 - 요통(급성)",
+      "url": "https://www.kimsonline.co.kr/ResCenter/diseasefocus/view/691"
+    },
+    {
+      "title": "서울대학교병원 의학정보 - 요통",
+      "url": "https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AC000182"
+    },
+    {
+      "title": "메디팜스투데이 - 김장철 허리·무릎 통증 주의보(강동경희대병원 재활의학과 김동환 교수)",
+      "url": "https://www.apsk.co.kr/news/articleView.html?idxno=541087"
+    },
+    {
+      "title": "비건뉴스 - 바닥 물건 집기, 허리 굽힘과 비틀기 반복 줄여야(안전보건공단 매뉴얼 인용)",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=393403"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 2,
+  "signature": {
+    "myth_check": [
+      {
+        "myth": "허리 삐끗하면 며칠이고 푹 누워 있어야 해",
+        "fact": "급성 요통 안정은 대개 2~3일, 다리로 뻗치는 통증이 있어도 7일을 넘기지 않기",
+        "source": "대한정형외과학회 요통 Q&A"
+      },
+      {
+        "myth": "허리보호대는 다 나을 때까지 계속 차야 해",
+        "fact": "요통이 다 나을 때까지 보조기를 계속 착용해야 한다는 것은 잘못 알려진 상식(X)",
+        "source": "대한정형외과학회 요통 Q&A"
+      },
+      {
+        "myth": "허리가 이렇게 아프면 디스크가 분명해",
+        "fact": "요통 환자 약 85%는 검사해도 원인 질환이 없는 단순 요통, 60%는 7일 안에 좋아짐",
+        "source": "질병관리청 국가건강정보포털 좌골신경통·요통"
+      },
+      {
+        "myth": "아플 때 근력 운동으로 버텨야 빨리 나아",
+        "fact": "급성기 근력 강화 운동은 통증을 악화시킬 수 있어 권장하지 않음",
+        "source": "질병관리청 국가건강정보포털 요통"
+      }
+    ]
+  },
+  "dead_links_removed": [
+    "https://m.koa.or.kr/infor/index.php?mv1=1&mv2=3",
+    "https://www.cochrane.org/ko/CD001823/yotong-yebanggwa-ciryoreul-wihan-heori-bojojangbi"
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "블로그: 근거 없는 과장 표현 '100%'"
+    ],
+    "at": "2026-11-20T04:01+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-20T04:00+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3888자 (기준 2,500~3,500자)"
+    },
+    {
+      "at": "2026-11-20T04:00+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-20T04:00+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-20T04:01+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9635,
+        "output_tokens": 5397,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0037
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 26623,
+        "output_tokens": 25460,
+        "web_searches": 6,
+        "calls": 3,
+        "usd": 0.6757
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 1519,
+        "output_tokens": 317,
+        "web_searches": 0,
+        "calls": 3,
+        "usd": 0.0062
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.0876,
+    "total_usd": 1.0876,
+    "total_krw": 1520,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
