@@ -1,0 +1,40 @@
+  이번 글은 '공구 사용법' 차례
+[가구·인테리어 (우드엔조이)] 글 만들기 시작 · 주제: 자동 선택
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  키워드 후보: 도어락건전지교체(980), 붙박이장문짝교체(630), 물먹는하마제습제(1060), 샷시모헤어교체비용(1090), 공기청정제습기(1100), 제습기전기세(1110), 곰팡이제거방법(1110), 대용량제습기(1120), 붙박이장내부(1130), 싱크대문짝(1140), 제습기10리터(1220), 제습(1220)
+  대표 이미지 생성 (gemini)
+  홈피드 썸네일 완성 (스타일 2, 색 5) 건전지 2개만 갈면 / 금방 또 삐삐
+  쿠팡 링크 2개 자동으로 채웠어요 (관리화면 '쿠팡 링크'에서 확인)
+  카드 점검 실패:
+  - 2장: 계정명 자리 침범: "원인"
+  - 2장: 본문이 계정명 자리까지 내려옴
+  - 5장: 계정명 자리 침범: "2단계"
+  - 5장: 본문이 계정명 자리까지 내려옴
+  - 6장: 아래 빈 공간 큼 (288px)
+  - 8장: 아래 빈 공간 큼 (657px)
+  점검에 걸림 → 고치기:
+   - 카드: 2장: 계정명 자리 침범: "원인"
+   - 카드: 2장: 본문이 계정명 자리까지 내려옴
+   - 카드: 5장: 계정명 자리 침범: "2단계"
+   - 카드: 5장: 본문이 계정명 자리까지 내려옴
+   - 카드: 6장: 아래 빈 공간 큼 (288px)
+   - 카드: 8장: 아래 빈 공간 큼 (657px)
+  카드 점검 실패:
+  - 8장: 계정명 자리 침범: "4"
+  - 8장: 계정명 자리 침범: "밖에서 꺼지면 9V"
+  - 8장: 계정명 자리 침범: "단자에 대고 문 열기"
+  - 8장: 본문이 계정명 자리까지 내려옴
+  점검에 걸림 → 고치기:
+   - 카드: 8장: 계정명 자리 침범: "4"
+   - 카드: 8장: 계정명 자리 침범: "밖에서 꺼지면 9V"
+   - 카드: 8장: 계정명 자리 침범: "단자에 대고 문 열기"
+   - 카드: 8장: 본문이 계정명 자리까지 내려옴
+  카드 8장 점검 통과 → content/woodenjoy/2026-11-19-doorlock-battery-replacement-1-5v-alkaline/cards
+Traceback (most recent call last):
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1308, in <module>
+    _, iss = generate(a.site, a.topic, a.notes, a.out, a.view, a.photos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/woodenjoy-autopilot/woodenjoy-autopilot/engine/generate.py", line 1069, in generate
+    miss = _pub.missing_images(site, d, load_json(d / "post.json"), res["article_md"])
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publish' has no attribute 'missing_images'
