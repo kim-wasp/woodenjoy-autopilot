@@ -1,45 +1,12 @@
 {
   "ideas": [
     {
-      "title": "추경호 1심 무죄, 법원이 본 핵심은 '국힘 없었어도 의결 가능'…양쪽 반응은?",
-      "keyword": "추경호 1심 무죄",
-      "trend_keyword": "조희대",
-      "facts": "계엄 해제 표결 방해 의혹으로 기소된 추경호 의원이 1심에서 무죄를 받았어요. 법원은 '국힘이 없었어도 의결은 가능했다', '내란 가담은 인정 안 된다'고 판단했어요.",
-      "sides": "무죄 환영 측(오세훈 시장 등): 특검의 하명수사·기소가 무리했다는 게 드러났다 / 규탄 측(민주당): 국민이 지킨 국회를 무너뜨리는 데 앞장선 일이고, 법리는 맞아도 상식에 반한다",
-      "question": "'결과적으로 의결은 됐으니 방해 혐의도 안 된다'는 법원 논리, 사장님은 납득되세요?",
-      "metrics": {
-        "news_24h": 100,
-        "news_6h": 100,
-        "news_capped": true,
-        "trend": "조희대",
-        "trend_traffic": 10000,
-        "trend_label": "10000+",
-        "naver_month": 10
-      },
-      "links": [
-        {
-          "title": "추경호 ‘계엄해제 방해’ 1심 무죄…“윤석열 요청 입증 안 돼” - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tSFhQel9LSGltOFVMY2FBT3pBVEJIX3NDRGN3MlV0NXRlOEE3Z1RZLThLRWViQmtXanhWbzZVakk2UVJGNElFaTZ4QmRHdWFDa1JxRVB4RnZYbWQ2WTd1Vks4T00yQ0lKcTczTE9pSXBnUQ?oc=5"
-        },
-        {
-          "title": "추경호 1심에서 무죄... 法 \"내란 가담 인정 안 돼\" - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQU2JjT2NlaFJQQUVrbDQySlp3OHdXS19RLTMxUzZvdzZ2N0M2bVdHMGp4R3RxSHNGOVdKUmJET2ZuY3c1UWNISTgwSTV6bW5uVnN1bjVqaFJWc0kySVd0Q2JwQURyMXJYSkR4T2FBTjJfcXkwTHFFZXNTTl9zWWhrc2Y2N0x4R00?oc=5"
-        },
-        {
-          "title": "'계엄 해제 방해' 추경호 1심 무죄‥\"尹 요청 증명 안 돼\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1Xb0d3VVJsYV9jVVpfSi1oZlUzeEw3S0t2OFFJVVY2Q2lHQmozNWxtWWM5aHd4bF9TbjVUSTUxNVZ1R2JJVVpHT1NVTzhCcVMxWUJoSTJULTVITnNSa3ZBZkVUYktWM3ZzZUU0d0VGSV9KbGk1T3NaM9IBeEFVX3lxTE1yb2psQUNzbHFHaXhmcmxjTlVwOWhpdURKZTBsdFBBMW11bXE5NzViWWhFRHJMeVlXWlc0R0F3bjZSUUNLT3NlVHZSQjRzYWlMc3hRTDY2WkZ6bUlTcGIzUTRwVU93cFNKRnZwck5mbm92dnc1bjNCcg?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 구글 검색 급증 '조희대' 10000+, 네이버 월간 검색 10회",
-      "score": 300.1
-    },
-    {
-      "title": "공공기관 2차 이전 '규모 줄이지 말라'…국회 앞에 지역들이 몰려간 이유",
-      "keyword": "공공기관 2차 이전",
+      "title": "민주유공자법 본회의 올라가자 필리버스터…20일 처리되면 박종철도 유공자 될까",
+      "keyword": "민주유공자법 필리버스터",
       "trend_keyword": "",
-      "facts": "전국 혁신도시 주민과 진주·대구 동구·나주 등 지자체가 국회 앞에서 공공기관 2차 이전을 빨리, 규모 그대로 하라고 촉구했어요. 나주에서는 350명이 모여 발전5사 통합본사 유치를 요구했어요.",
-      "sides": "지역 측: 약속한 2차 이전을 규모 줄이지 말고 서둘러야 한다, 기존 혁신도시에 모아 배치해야 한다(김천 등) / 신중 측: 지역마다 원하는 기관이 겹쳐 배치 기준과 순서를 따져야 한다(정부 입장은 추가 확인 필요)",
-      "question": "공공기관 이전, 사장님은 기존 혁신도시에 모으는 게 맞다고 보세요, 새 지역으로 나누는 게 맞다고 보세요?",
+      "facts": "민주유공자법이 19일 더불어민주당 주도로 국회 본회의에 상정됐고, 국민의힘은 곧바로 무제한 토론(필리버스터)에 들어갔어요. 경향신문은 이 법이 20일 처리될 것으로 보고, 박종철 열사가 민주유공자가 될지에 주목했어요.",
+      "sides": "찬성 측: 민주화운동 희생자를 국가가 공식적으로 예우해야 한다 / 반대 측(국민의힘): '운동권 노후 특혜법'이라며 필리버스터로 맞섰다",
+      "question": "민주화운동 관련자를 국가유공자처럼 예우하는 것, 사장님은 필요한 일이라고 보세요, 아니면 대상과 범위가 먼저 정리돼야 한다고 보세요?",
       "metrics": {
         "news_24h": 100,
         "news_6h": 100,
@@ -47,36 +14,69 @@
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 10
+        "naver_month": 15
       },
       "links": [
         {
-          "title": "2차 공공기관 이전, 지역 발전 이어지려면…\"국가 전체 이익 높이는 배치 필요해\"[와이드이슈] - KBC광주방송",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9SSlIxUk1KMjk3SEgwUm5JV1NBU2loaTUwNHVYQzVqR3FKS05XSjFzcGpMQWh6c1FDbDN1R19oVUZfeGdOY1YxREpGWmpnaWEtWHczQkJmZDRFNHBGNzd1cEx3?oc=5"
+          "title": "‘민주유공자법’에 필리버스터…“최소한의 예우”·“대상·기준 불명확” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE90b3o4c3pGUnU4ZENtUEY0aDJELUpUclRPZEZMNzc3eDlGZmFId2xkMHhRVkQ3U2pUWExQYzFWM19LanNLR25KME1PNnkzQUhnZkxpNklkNXlxV2t1S0JtYVpRa2FOUQ?oc=5"
         },
         {
-          "title": "공공기관 2차 이전 임박, 진주시·전국혁신도시협 신속 이행 촉구 - 경남일보",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBEcHY3elFJWl9VMjBFbU9Ob3VNVGxsRlFDa0ZvWW1tT1ZQalFyejdUZnFHaVJ5aG9veWdNU1R6M1c5OGxjTzl3Qm1Db2hkM2VHZXR3QVRDbkdjS0Qybm41a2I2dzI5NGpfS3BF?oc=5"
+          "title": "민주유공자법, 국힘 필리버스터에도 민주당 주도로 본회의 상정 - 동아일보",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8tY01OY3NqNTRXbFRNNUtORUtPR1BkS3BKdmZQYWxfV0pjN3JLNVpuSGhyQXZXSUVFYlpBSjhpSjdheW9MVjVteTlkdnRTbElWbjhpaUQwaFVUOFdzTDJjcVFpUDk5WU5MSkFaU09IOE55WTR5cWww?oc=5"
         },
         {
-          "title": "혁신도시협의회, 공공기관 2차 이전 방침 이행 촉구 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OV1JMRGQyZ0l4ejlzX1psa1VXVENmeUE2c2NuOXhuckNfRDdjcm94SDA3ejQ5N1lpTHE2RWE3MHc0aEJ6bV9iNk1sd0xJRmpHblpsRGx0V3NFdXlUVmd4ddIBYEFVX3lxTE5OV1JMRGQyZ0l4ejlzX1psa1VXVENmeUE2c2NuOXhuckNfRDdjcm94SDA3ejQ5N1lpTHE2RWE3MHc0aEJ6bV9iNk1sd0xJRmpHblpsRGx0V3NFdXlUVmd4dQ?oc=5"
+          "title": "野 \"민주유공자법은 운동권 특혜법\" 필리버스터 돌입 - 조선일보",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZV9pTHBhdER2NVRPa3JGdlh5eHFiS2htS3o4VnlNSHlpQjFYX2ZicTNTdG1iLW9CUGdRN3JnT0lORERxLW5OOXV6SUFiY2lXZXdVWVdvXzgyZHVXUkVnRVpvbUp4VkFsU2Z5TzROQlAxcHY1bFQ4RWlRdVJJSGk2cnVINEtIdw?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 네이버 월간 검색 10회",
-      "score": 200.1
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 100건), 네이버 월간 검색 15회",
+      "score": 200.15
     },
     {
-      "title": "이 대통령·시진핑 34분 회담, 3번째 만남에서 나온 말…한한령 풀릴까?",
-      "keyword": "한중 정상회담 시진핑",
-      "trend_keyword": "",
-      "facts": "이 대통령이 중국 선전에서 시진핑 주석과 34분 동안 정상회담을 했고, 두 사람의 세 번째 만남이에요. 이 대통령은 '한반도 평화는 양국 공동 이익'이라 했고, 시 주석은 '양국 목표가 같다'고 답했어요. FTA 서비스·투자 협상 타결을 계기로 서로 진출을 늘리자는 말도 나왔어요.",
-      "sides": "기대하는 쪽: 서비스·투자 시장이 열리고 한한령 완화, K콘텐츠 진출 길이 열릴 수 있다 / 신중한 쪽: 미중러 회담을 앞둔 상황이라 실제 성과는 더 지켜봐야 한다",
-      "question": "이번 회담에서 사장님이 가장 '실제로 달라질 것'이라고 보는 건 경제, 문화, 안보 중 어느 쪽인가요?",
+      "title": "조작기소 특검법 대통령 재가, 19일 공포·시행…이제 무엇부터 시작되나",
+      "keyword": "조작기소 특검법 공포",
+      "trend_keyword": "특검",
+      "facts": "이재명 대통령이 조작기소 특검법을 재가했고, 이 법은 19일 공포·시행된다고 보도됐어요. 앞서 국회 통과와 국무회의 일정까지 다룬 만큼, 이 글은 시행 이후 특검 임명 절차가 핵심이에요.",
+      "sides": "찬성 측: 기소 과정에 문제가 있었는지 독립된 특검이 밝혀야 한다 / 반대 측: 진행 중인 재판에 영향을 주려는 특검이라는 비판이 이어져 왔다",
+      "question": "특검이 시작되면 사장님은 '누가 특검을 맡느냐'와 '수사 기간' 중 어느 쪽이 더 중요하다고 보세요?",
       "metrics": {
         "news_24h": 100,
-        "news_6h": 76,
+        "news_6h": 36,
         "news_capped": true,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 50
+      },
+      "links": [
+        {
+          "title": "이재명 대통령, ‘조작기소 특검법’ 재가… 공포 즉시 시행 - 법률신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5NLTNKT1pDeW8yUXR6RTk5MjJSdlROVEhqNkRnMzM5bzVYeDF0VE13WGFSZGlpTHZ3YkxSVVZDcVNPNTk5c3I2NmdOQ2pWVVp2WmRlYV9mVDdjY1hoMU5ITWZGM2FFRG1raVJ2czRn0gFyQVVfeXFMT25pV1Fma2ZFdWRjT0RvRzhXYVNjaXplb3BvQXBtWGE4YVA1VmNmX3JuU3E3M3QtSElHdTlKTENrUGl5RVRiY0JFVHVfRzFkWjVxbjRSd3c0aWhkVTc3RVYzLV9zdWNSb2RKZko2RTNMUGJ3?oc=5"
+        },
+        {
+          "title": "이 대통령, 조작기소 특검법 재가‥공포돼 즉시 시행 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE96T0R2VVF5Q09sV1g1Qm02NXdQT1dtZEM4MUUzQUx5QVA5RjZLLUF1X3VGSFZ4RG9iMzBlVUhwM0l5RElMbFdHaktxeFJ1ZkZUWW1HeFNuWVFMYXQ0a054emQzQmNiMTM3V3RydUNIck5hRXFqTC0yQtIBeEFVX3lxTE9rTFNjVEZQV0EweHZqUXlLQmhOWmRQLVJaTWdfSVFpSnBpb0xPWkE0Z1FFdVQ1WmNUYVR0ZE9WNzc2bFVyWUtmWVF2aE5HajJSNXF6OXdPSnFIS3NwbkczaW1QRVd5bU9ia2NibExCcnRMbjh3Zll1TA?oc=5"
+        },
+        {
+          "title": "野, ’조작기소특검’ 공포 반발…’민주유공자법’ 필버 대치 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1MeXE1bUZYdmxHZERRNUttaDN4dG4zZUh4Qm9GNzZ0T0pzMG4ydFZXcXItb2xESTdjQUFNeEwzcTZHSm1YX00wNHZIbldSbGViQWpDZVBkODhZRHNSWi1nNHl4b2RZUTA?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 36건), 네이버 월간 검색 50회",
+      "score": 136.5
+    },
+    {
+      "title": "민주당, 조희대 대법원장 탄핵 추진…대법원장 탄핵은 어떤 절차로 갈까",
+      "keyword": "조희대 탄핵 추진",
+      "trend_keyword": "",
+      "facts": "민주당이 조희대 대법원장 탄핵을 추진한다고 보도됐어요. 민주당은 '고위 공직자들의 처신을 합리화한다'는 점을 이유로 들었어요.",
+      "sides": "추진 측(민주당): 대법원장이 고위 공직자 처신을 합리화하고 있어 책임을 물어야 한다 / 반대 측: 사법부 수장 탄핵은 사법 독립을 흔든다는 반론이 예상됨(구체적 입장은 웹 확인 필요)",
+      "question": "대법원장 탄핵 추진, 사장님은 사법부 견제로 보세요, 아니면 사법 독립 침해 우려가 더 크다고 보세요?",
+      "metrics": {
+        "news_24h": 60,
+        "news_6h": 0,
+        "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
@@ -84,38 +84,38 @@
       },
       "links": [
         {
-          "title": "APEC : 이재명·시진핑, 세 번째 정상회담 종료…한반도 평화부터 판다까지 - BBC",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBJQ1p1V21OTF9aYlFHVHJzN0ZKeFV0VTRRZU8wWnRVSzlwVGFRZWZ1Y3E4dE5ZU0t1dTViMFIxU0F3NTE5UXhJc2VqMy00TkRTMUdHVjBYY3ItOE16bWfSAWNBVV95cUxPWjVUTHItSHJjVVRMVmtQbmhFOEJqME4wU2RGY1J3T2JCeUlyM1R3SFdUTVN5TmRqYmpOSXdUeWRjZVBmMno2TGc2Z1pobGx0bDlqUWJIelNFTVF2ZUNCRzhZbHM?oc=5"
+          "title": "[속보] 민주당, 의원총회서 조희대 대법원장 탄핵 추진 결정 - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MbFd0WkdwMVFsdnByVHo2enViM3RWLURzeG9IbEY1WjVpTDBqNS1ZUkJ2bGFELUhpUHEyRXhOV3J2S1c0WFMwWTREYXhPV01WT1lGb2pMemhVeEFOZEZ0YUhDVGpxQQ?oc=5"
         },
         {
-          "title": "李대통령, 한중 회담서 \"판다처럼 양국 마음 열어주는 일 계속되길\" - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbWdUcFJPandPUmhabjUwd25ibVhSQnZHTHFaSmpTdzZZVThhNU1JTXl4UkZHUEkwQmVkVUtzc3NPYlFYN3pON285MVRMQ1FhQUpZcmNHQTNOMXB2VUt3YWY3c0FrUzFxam1EYmlLYl8wcEFKUW1DMWI0dnJpamxkM3N5TUpVejlGaWFzYkZjMmQ?oc=5"
+          "title": "민주당 '조희대 탄핵' 추진 결론... 김민석 \"이 판결은 역사적 반역\" - OhmyNews",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5Dd3BLVV9hcG5aZl9rekoxbkJLWE1zckpzdDhJNlJZcGx2WkU0VlVXR1ZzN09iN3RKT0Qwb00tVVhlci0tTVczel94LXNzaGFNTnZUWWRTektSbllJYlBpZGh2dU04cmltMDdIRWh0ZlljMnpHWnhv?oc=5"
         },
         {
-          "title": "'8년 과제' 타결한 한중 정상‥\"북미대화\" 언급한 시진핑 - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1WUUhZdy14VUVjYjdmejJGZTlIWEJsSnJBdmd1c0VPellYY0lrNGZ3OFJBN1RycXN0b3lhRlAwMmkwTV9yWUt2SXJrV1Fsck5iSlNZRmFDNllmSGlVM0dLSkliczlEM3d6cVlRa3NuWWJSSVJqcGdwVNIBeEFVX3lxTE1VckwtTzlYdHFCR05PdTc3R2dIbGlra0laTUhiSFd0UE8zQ0xVeEp4YWlUejRDajJRSG5kMkxwN29OWVBsN3J0MXh4cVk5N2FsZzRhTmdTQVNMQ2ZkVEt4V1NYQUY1dzRZUWlUNmtEZ3hjdFA4UU5wTg?oc=5"
+          "title": "[속보] 민주, 조희대 대법원장 탄핵 추진...“절차·내용 지도부에 위임” - 경기일보",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB4RkNfbnFWZ0FqcUk0TU5lR0tiRHI4SHFXY3g2Yy04cUpWTjc3RDhLSUJEam5qclVsckdMMF9kQzE0MEZJb3BXVG01bXUyd051b2ZrVUtvTkhFUUk?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 76건), 네이버 월간 검색 10회",
-      "score": 176.1
+      "why": "구글 뉴스 24시간 기사 60건, 네이버 월간 검색 10회",
+      "score": 60.1
     }
   ],
-  "updated": "2026-11-18T21:10+09:00",
+  "updated": "2026-11-19T21:00+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 12242,
-        "output_tokens": 4867,
+        "input_tokens": 12487,
+        "output_tokens": 3631,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1463
+        "usd": 0.1226
       }
     },
     "images": {},
-    "usd": 0.1463,
-    "total_usd": 0.1463,
-    "total_krw": 200,
+    "usd": 0.1226,
+    "total_usd": 0.1226,
+    "total_krw": 170,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
