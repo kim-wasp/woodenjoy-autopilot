@@ -1,0 +1,217 @@
+{
+  "created": "2026-11-19T14:28+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "시험장에서 안경·옷 단추까지 검사받는 건 공정을 위해 감수해야 한다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "수능 당일 복도에 금속탐지기가 있었고, 감독관이 안경을 벗어 책상 위에 올리라고 지시했다.",
+      "source": {
+        "title": "\"시력 나쁜데, 그냥 안경 벗고 본대요\"…혼란은 수험생·학부모 몫[2027 수능]",
+        "url": "https://www.fnnews.com/news/202611190930597910"
+      },
+      "why": "한 수험생은 검사가 당연한 절차라고 보면서도 시험 흐름이 끊길까 걱정했다. 공정성이 먼저인지, 개인 불편이 먼저인지에서 의견이 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "시험 직전에 준비물 규정이 바뀌면 필요한 물품은 학교가 챙겨줘야 한다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "교육 당국이 수능 전날 시험장 반입 물품 기준을 손질했다. 이에 한 학부모는 직접 준비해야 하는 물품은 지급해 주면 좋겠다고 했고, 준비하지 못하는 가정도 있을 것이라고 말했다.",
+      "source": {
+        "title": "\"시력 나쁜데, 그냥 안경 벗고 본대요\"…혼란은 수험생·학부모 몫[2027 수능]",
+        "url": "https://www.fnnews.com/news/202611190930597910"
+      },
+      "why": "규정 변경은 불가피하다는 입장과, 준비 격차가 생기니 지원이 필요하다는 입장이 맞선다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "시험 부정행위를 본 사람은 신고하는 게 맞다",
+        "track": "NORM",
+        "category": "학교",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "수능 부정 제보에 '1억' 포상금이 즉시 적용된다는 보도가 나왔다. 한편 기존 카드에는 '친구의 잘못을 선생님께 이르지 않는다'가 있다. 공정과 의리가 부딪히는 지점이다.",
+      "source": {
+        "title": "1억 포상금이 무슨 소용…수능날 학부모들 분통 터진 이유",
+        "url": "https://www.hankyung.com/article/202611196411i"
+      },
+      "why": "공정한 경쟁을 지키려면 신고해야 한다는 쪽과, 친구·동료를 신고하는 건 꺼려진다는 쪽이 갈린다. 포상금이 걸리면 동기를 의심하는 시선도 생긴다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "시험을 앞둔 자녀 앞에서는 걱정이나 불만을 내색하지 않는다",
+        "track": "NORM",
+        "category": "가정/가족",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "수능 당일 한 학부모는 불안함이 있었지만 아이가 불안해할까봐 내색하지 않고 '잘하고 오라'고만 말했다고 했다.",
+      "source": {
+        "title": "수능 전자시계 불허에 '발 동동'…수험생·학부모 혼란 속 불안감",
+        "url": "https://www.newstomato.com/ReadNews.aspx?no=1321048"
+      },
+      "why": "티를 내지 않는 것이 배려라는 의견과, 솔직하게 나누는 쪽이 낫다는 의견이 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "시험 시작을 알리는 전 국민 재난문자는 부정행위를 막기 위해서라면 감수할 수 있다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "수능 부정행위 방지책으로 위급재난문자를 불시에 추가 발송하겠다는 방침이 나왔다. 모든 국민에게 문자가 간다는 점이 논란이 되고 있다.",
+      "source": {
+        "title": "필기구 교체·시험 중 재난문자…수능 혼란 가중 ['AI 부정' 파장 확산]",
+        "url": "https://m.news.nate.com/view/20261118n36032"
+      },
+      "why": "수능 시작 알림 문자가 울리자 길을 가던 행인들이 놀라는 모습도 있었다. 정책의 옳고 그름이 아니라 일상 불편을 어디까지 받아들일지를 묻는 카드다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "팀에서 간식을 돌릴 땐 계약직·인턴도 빠짐없이 챙긴다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "빼빼로데이에 팀원들이 과자를 나눠 먹는 동안 계약직 직원 한 명만 받지 못했다는 사연이 전해졌다.",
+      "source": {
+        "title": "\"다른 직원 책상엔 다 있는데\"…계약직만 빼빼로 못 받은 사연",
+        "url": "https://www.fnnews.com/news/202611171121394777"
+      },
+      "why": "댓글에는 작성자를 위로하는 반응이 이어졌다. 간식은 개인 호의이니 꼭 모두에게 줄 필요는 없다는 의견도 있을 수 있다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "회식은 1차에서 끝내고 밤 10시 전에 마친다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "일본 NHK가 술을 겸한 회식을 원칙적으로 오후 10시까지 약 3시간 이내로 제한하는 지침을 냈다. 일본 사례이지만 한국 언론이 보도했고, 지금은 연말 송년회 시즌이다.",
+      "source": {
+        "title": "직원 음주 문제에 회식 제한한 日 방송사…회식, 밤 10시까지만",
+        "url": "https://www.hankyung.com/article/2026111858497"
+      },
+      "why": "NHK 지침은 기준일 뿐이며 시간을 넘겨도 징계 대상은 아니다. 한국 직장에서도 2차·3차를 당연하게 보는 쪽과 1차면 충분하다는 쪽이 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "회식·연말 행사에는 계약직도 똑같이 부른다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "같은 사연의 글쓴이는 회식이나 연말 행사에 부르지 않는 건 그러려니 했다고 적었다. 한 누리꾼은 고용 형태를 이유로 직원을 소외시키지 말아야 한다고 주장했다.",
+      "source": {
+        "title": "\"다른 직원 책상엔 다 있는데\"…계약직만 빼빼로 못 받은 사연",
+        "url": "https://www.fnnews.com/news/202611171121394777"
+      },
+      "why": "팀워크를 위해 모두 불러야 한다는 의견과, 회식은 선택 사항이라 계약직 본인의 의사를 먼저 물어야 한다는 의견이 갈린다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "도우미 없이 살림·육아를 도맡은 건 대단한 일이다",
+        "track": "NORM",
+        "category": "가정/가족",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "한 배우가 유튜브에서 해외에서 6년간 가사도우미 없이 살림과 육아를 도맡았다고 밝힌 것이 발단이 됐다. 일부 네티즌은 특별할 것 없는 일을 대단하게 여기는 것 아니냐고 반응했다. 카드에는 특정인을 쓰지 않고 일반 상황으로 바꿨다.",
+      "source": {
+        "title": "친근함과 박탈감 사이…'양날의 검' 된 스타들의 유튜브",
+        "url": "https://m.news.nate.com/view/20261115n06541"
+      },
+      "why": "누구나 하는 일이라는 시각과, 도움 없이 해내는 건 힘든 일이라는 시각이 갈린다. 가구·육아 여건에 따라 체감이 다르다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "아이가 겁먹을 수 있는 귀신 체험도 부모가 동의하면 괜찮다",
+        "track": "NORM",
+        "category": "가정/가족",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": false,
+        "status": "draft"
+      },
+      "issue": "한국민속촌 귀신 콘텐츠를 두고 '아동학대 멈춰야'와 '할로윈도 단속할 거냐'로 의견이 갈렸다. 커뮤니티 댓글에는 아동학대라고 따질 일이면 신청한 부모에게 따져야 한다는 반응도 있었다. 원문 기사는 확인하지 못했고 커뮤니티 정리글만 확인했다. 게시 전에 원문 확인이 필요하다.",
+      "source": {
+        "title": "한국민속촌 귀신 콘텐츠 갑론을박…\"아동학대 멈춰야\" VS \"할로윈도 단속할 거냐\"",
+        "url": "https://bbs.ruliweb.com/news/board/300018/read/3825656"
+      },
+      "why": "놀이와 체험의 영역이라는 의견과, 아이에게는 공포가 해로울 수 있다는 의견이 갈린다. 나이와 아이의 성향에 따라 기준이 달라진다.",
+      "status": "pending"
+    }
+  ]
+}
