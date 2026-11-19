@@ -1,0 +1,220 @@
+{
+  "id": "infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
+  "site": "infobay",
+  "title": "부고 문자 답장 전 링크 누르면 손해, 관계별 예문 6개",
+  "status": "draft",
+  "created_at": "2026-11-19T20:12+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "부고 문자 답장",
+    "sub": [
+      "부고 카톡 답장",
+      "부고 스미싱",
+      "조문 못 갈 때 문자",
+      "삼가 조의를 표합니다"
+    ]
+  },
+  "brief": {
+    "reader": "부고 문자나 카톡을 받고 뭐라고 답할지, 같이 온 링크를 눌러도 되는지 고민하는 20~40대 직장인",
+    "question": "부고 문자에는 뭐라고 답장하고, 링크는 눌러도 될까?",
+    "answer": "답장은 위로 한 문장과 조문 여부 한 문장이면 되고, 링크는 보낸 사람에게 확인하기 전까지 누르지 않는 게 안전해요.",
+    "out_of_scope": "조의금 액수, 빈소 절하는 법, 부조봉투 쓰는 법(각각 다른 글에서 다룸)",
+    "next_action": "다음에 부고 링크를 받으면 보낸 사람에게 먼저 전화나 카톡으로 확인하기"
+  },
+  "why_this_topic": "네이버 검색광고 기준 '부고문자답장' 월 3,450회로, 후보 중 사이트 주제(관혼상제)에 맞는 키워드 가운데 검색량이 가장 많아요. 최근 쓴 조문 예절·부조봉투 글과 겹치지 않고, 연말연시마다 부고장·청첩장을 사칭한 스미싱 주의 기사가 반복돼서(전북도민일보 등) 지금 쓰기 좋은 시기예요. 상위 글이 예문 나열에 머물러 있어서 링크 위험과 대처 순서로 차별화할 수 있어요.",
+  "title_candidates": [
+    {
+      "title": "부고 문자 답장 전 링크 누르면 손해, 관계별 예문 6개",
+      "pattern": "실수·손해",
+      "score": 9
+    },
+    {
+      "title": "부고 문자 답장, '명복' 한 단어가 불편한 유족도 있어요",
+      "pattern": "반전",
+      "score": 8
+    },
+    {
+      "title": "부고 문자 답장 뭐라고? 관계별 예문 6개와 피할 말 3가지",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "부고 문자 답장 안 와서 서운할 때, 상주가 바로 못 하는 이유",
+      "pattern": "짜증 장면",
+      "score": 6
+    },
+    {
+      "title": "부고 문자 답장 vs 조문, 못 갈 때 문자로 충분할까",
+      "pattern": "비교",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 글은 '부고 문자 답장 예시 모음·총정리'처럼 예문만 늘어놓아요. 우리는 링크 스미싱(120억 사건)과 눌렀을 때 대처 순서, '명복' 대신 쓸 종교별 문구 기준까지 함께 다뤄요.",
+  "meta_description": "아는 번호로 온 부고도 링크는 확인 먼저 하세요. 부고장 위장 스미싱 120억 사건, 링크를 눌렀을 때 대처 순서 5단계, 관계별 답장 예문 6개와 '명복' 대신 쓸 문구를 정리했어요.",
+  "hero_prompt": "Candid smartphone photo in a Korean apartment living room at night, a phone lying face-up on a low table with its screen glowing but blurred and unreadable, a hand hovering just above it hesitating, a black suit jacket draped over a chair in the background, warm lamp light mixed with cool screen light, slightly off-center, no faces, no readable text",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "사무실 책상에서 부고 문자를 받은 휴대폰을 들고 있는 손",
+      "prompt": "Candid smartphone snapshot of a person's hand holding a phone above an office desk in Korea, screen content blurred and unreadable, a paper cup of coffee and a lanyard ID card nearby, late afternoon window light mixed with fluorescent office light, slightly off-center framing, ordinary clutter, face not visible, not a stock photo, no glossy CGI look, no text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "부고 문자 사칭, 스미싱 주의보 (정책브리핑)",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148923848"
+    },
+    {
+      "title": "청첩장·부고장으로 악성앱 유도…120억원 털어간 초대형 스미싱 조직 검거 (뉴시스)",
+      "url": "https://www.newsis.com/view/NISX20251126_0003417219"
+    },
+    {
+      "title": "청첩장·부고장 문자 눌렀더니… 120억 털어간 스미싱 조직 검거 (매경이코노미)",
+      "url": "https://v.daum.net/v/VVIvH5EovC?f=p"
+    },
+    {
+      "title": "정부, 교통 범칙금·명절 선물 구매 등 문자사기 주의 (보안뉴스)",
+      "url": "https://m.boannews.com/html/detail.html?idx=139491"
+    },
+    {
+      "title": "연말연시 스미싱 범죄 주의보 (전북도민일보)",
+      "url": "https://www.domin.co.kr/news/articleView.html?idxno=1495069&sc_section_code=S1N8"
+    },
+    {
+      "title": "삼가 고인의 명복을 빕니다 띄어쓰기 (국립국어원 온라인가나다)",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&qna_seq=330731&pageIndex=1"
+    },
+    {
+      "title": "기독교인은 명복이라는 용어를 쓰면 안 된다 (기독일보 칼럼)",
+      "url": "https://www.christiandaily.co.kr/news/131275"
+    },
+    {
+      "title": "기독교인들이 무심코 쓰는 단어 '명복' (마하나임뉴스)",
+      "url": "http://www.t-mhn.com/news/articleView.html?idxno=594"
+    },
+    {
+      "title": "부고 답장 문자·카톡 답장 예시 모음 (피해야 할 표현)",
+      "url": "https://xn--299a782awthe5gf9d.com/blog/%EB%B6%80%EA%B3%A0-%EB%8B%B5%EC%9E%A5-%EB%AC%B8%EC%9E%90-%EC%98%88%EC%8B%9C/"
+    },
+    {
+      "title": "부고 문자 보내는 법 (2026) 예시 문구·예절 (HC저널)",
+      "url": "https://hcjournal.com/condolence-notice-message-guide/"
+    },
+    {
+      "title": "부고문자 양식 만들기, 스미싱으로 오해받지 않게 보내는 법 (보아스매거진)",
+      "url": "https://magazine.lboas.com/%EB%B6%80%EA%B3%A0%EB%AC%B8%EC%9E%90-%EC%96%91%EC%8B%9D"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "오해와 진실형",
+    "ending": "링크",
+    "cover_hooks": [
+      "부고 문자 링크부터 눌러요?",
+      "청첩장·부고장 위장 문자에 120억",
+      "'명복을 빕니다' 아무에게나 써도 될까"
+    ],
+    "caption": "밤늦게 온 부고 문자, 손가락이 먼저 링크로 가죠.\n\n지인 번호로 와도 확인 전에는 누르지 마세요. 링크 하나로 내 주소록 전체에 같은 문자가 퍼질 수 있어요.\n답장은 위로 한 문장, 조문 여부 한 문장이면 충분해요. 교회 다니는 유족이라면 '삼가 조의를 표합니다'가 더 편할 수 있어요.\n\n친구·동료·상사·거래처별 답장 예문 6개, 링크를 눌렀을 때 대처 5단계는 블로그 표에 따로 넣었어요. 프로필에서 커먼센스 블로그로 넘어가 보세요.\n\n#생활상식 #부고문자답장 #부고스미싱 #조문예절"
+  },
+  "threads": {
+    "style": "손해 경고",
+    "hooks": [
+      "부고 링크 하나에 4억8500만원",
+      "아는 번호로 온 부고, 링크 눌러?",
+      "명복 빈다고 보냈는데 유족이 교회 다님"
+    ],
+    "posts": [
+      "부고 링크 하나에 4억8500만원\n\n작년에 잡힌 스미싱 조직 얘기야. 청첩장, 부고장인 척 문자 보내서 120억을 빼갔대.\n아는 사람 번호로 와도 가짜일 수 있다는 게 진짜 함정이더라. 내 폰이 털리면 내 주소록에 똑같이 뿌려지거든.\n\n부고 오면 너는 답장 먼저야, 링크 먼저야?",
+      "1. 링크 누르기 전에 보낸 사람한테 전화나 카톡으로 먼저 확인해.\n2. 이미 눌렀으면 112 신고하고, 거래하는 은행 콜센터에 계좌 지급정지 요청해.\n3. 경찰청 '시티즌 코난' 앱으로 폰 속 스미싱 앱 검사할 수 있어.\n4. 답장은 짧게. '삼가 고인의 명복을 빕니다.' 띄어 쓰고 마침표까지 찍는 게 국립국어원 기준이야.",
+      "관계별 답장 예문 6개랑 교회 다니는 유족한테 쓸 문구는 여기 표로 있어 {LINK}"
+    ],
+    "topic_tag": "생활상식"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 7장: 제목은 '관계별 예문 6개'인데 화면의 칸은 4개뿐이고, 그나마 '친구·동료'는 둘을 묶어 놓았어요. 블로그 표의 6개(친한 친구, 직장 동료, 상사·거래처, 조문을 못 갈 때, 늦게 확인했을 때, 기독교·천주교 유족)와 맞지 않아요. '늦게 확인했을 때'는 칸에서 빠졌어요."
+    ],
+    "at": "2026-11-19T20:12+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-19T20:11+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3349자 (기준 1,500~3,200자)"
+    },
+    {
+      "at": "2026-11-19T20:11+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 2장: 아래 빈 공간 큼 (321px)"
+    },
+    {
+      "at": "2026-11-19T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"4\""
+    },
+    {
+      "at": "2026-11-19T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N 신고, 금융사 지급정지 요청\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"112 신고, 금융사 지급정지 요청\""
+    },
+    {
+      "at": "2026-11-19T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-19T20:12+09:00",
+      "kind": "카드: N장: 제목은 '관계별 예문 N개'인데 화면의 칸은 N개뿐이고, 그나마 '친구·동료'는 둘을 묶어 놓았어요. 블로그 표의 N개(친한 친구, 직장 동료, 상사·거래처, 조문을 못 갈 때, 늦게 확인했을 때, 기",
+      "text": "카드: 7장: 제목은 '관계별 예문 6개'인데 화면의 칸은 4개뿐이고, 그나마 '친구·동료'는 둘을 묶어 놓았어요. 블로그 표의 6개(친한 친구, 직장 동료, 상사·거래처, 조문을 못 갈 때, 늦게 확인했을 때, 기독교·천주교 유족)와 맞지 않아요. '늦게 확인했을 때'는 칸에서 빠졌어요."
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 3996,
+        "output_tokens": 1199,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.001
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 38411,
+        "output_tokens": 27111,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.7459
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 12027,
+        "output_tokens": 1718,
+        "web_searches": 0,
+        "calls": 3,
+        "usd": 0.0412
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 2,
+        "usd": 0.268
+      }
+    },
+    "usd": 1.0561,
+    "total_usd": 1.0561,
+    "total_krw": 1480,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
