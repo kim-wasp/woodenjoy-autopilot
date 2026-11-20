@@ -673,7 +673,7 @@ def add_coupang_wish(site, wish, d, title):
         if k in have:
             continue
         data.setdefault("items", []).append({
-            "key": slugify(w.get("search") or w["name"])[:40] or f"item-{len(data['items']) + 1}",
+            "key": _uniq_key(slugify(w.get("search") or w["name"])[:40], data),
             "name": w["name"], "search": w.get("search", ""), "url": "",
             "status": f"링크 필요 ({now_kst():%m/%d}, {title[:30]})",
             "post_dir": d.relative_to(ROOT).as_posix(), "after": w.get("after", ""), "site": site["id"]})
@@ -691,6 +691,16 @@ def add_coupang_wish(site, wish, d, title):
         if i and i.get("url"):
             got.append({"name": w["name"], "url": i["url"], "after": w.get("after", "")})
     return got
+
+
+def _uniq_key(base, data):
+    """한글 검색어는 영문 키가 'post' 같은 흔한 말로 겹쳐서, 겹치면 숫자를 붙여요"""
+    keys = {i.get("key") for i in data.get("items", [])}
+    base = base or "item"
+    k, n = base, 2
+    while k in keys:
+        k, n = f"{base}-{n}", n + 1
+    return k
 
 
 def insert_coupang(md, got, site):
