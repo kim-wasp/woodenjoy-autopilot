@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T13:36+09:00",
+  "updated": "2026-11-20T14:52+09:00",
   "items": [
     {
       "site": "infobay",
@@ -888,6 +888,16 @@
       "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
       "platform": "threads",
       "at": "2026-11-20T12:33:30+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-20-issue-1224",
+      "title": "⚡ 카페 키오스크 앞 어르신 응대 논란, 컴포즈커피 본사 사과",
+      "platform": "threads",
+      "at": "2026-11-20T14:52:29+09:00",
       "state": "done",
       "url": null
     },
