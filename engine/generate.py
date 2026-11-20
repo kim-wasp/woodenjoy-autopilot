@@ -193,8 +193,10 @@ def schema(site):
         parts.append('"threads": {"style": "이번 스레드 형식 이름 그대로", "hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문: 친근한 반말, 200자 이내 후킹·에피소드, 링크 없음", "댓글: 반말, 핵심 정보 2~4줄", "대댓글: 반말 1~2줄 + {LINK}"], "topic_tag": "주제 태그 1개"}')
     m = site.get("monetization") or {}
     if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
-        parts.append('"coupang_wish": [{"name": "이 글 독자가 실제로 살 만한 상품(쇼핑몰에서 쓰는 이름)", "search": "쿠팡 검색어", '
-                     '"after": "본문에서 이 상품을 넣을 문단의 문장 일부(그대로 복사, 15~30자)"}] 0~2개. 아래 등록된 쿠팡 링크에 없는 상품만')
+        parts.append('"coupang_wish": [{"name": "상품 이름(쇼핑몰에서 쓰는 이름, 비교표의 그 선택지)", "search": "쿠팡 검색어(종류·규격까지, 예: 도어클로저 유압식 대형)", '
+                     '"why": "이 선택지가 맞는 사람 한 줄", '
+                     '"after": "이 상품 링크를 넣을 문단의 문장 일부(그대로 복사, 15~30자). 비교 상품들은 같은 문장"}] '
+                     '0~3개. 독자가 사야 하는 글일 때만, 사람들이 실제로 고민하는 선택지 2~3개(종류·크기·가격대가 다른 것). 등록된 쿠팡 링크에 있는 상품은 빼요')
     if site.get("topic_mix"):
         parts.append('"kind": "글 종류 — ' + " / ".join(list(site["topic_mix"]) + ["main"]) + ' 중 하나 (' + ", ".join(f"{k}={v.get('label', k)}" for k, v in site["topic_mix"].items()) + ', main=그 밖의 일반 글)"')
     import signature
@@ -271,6 +273,14 @@ def experiences(site):
 # 제목: 상위 글 확인 → 서로 다른 패턴 후보 5개 → 기준으로 고르기
 # 근거: 구글 '제목 링크' 권장(설명적·간결·키워드 나열 금지·페이지마다 고유), Backlinko 400만 검색결과 CTR 분석(40~60자·긍정 프레이밍이 약간 높음, 질문형 차이 없음),
 #       네이버 검색 작성 가이드(메인 키워드 앞, 날짜·회차 라벨 금지), 구글 디스커버 정책(과장·낚시 금지)
+COUPANG_GUIDE = """[쿠팡 상품 넣는 법 — 광고 글처럼 보이지 않게, 하지만 살 사람은 바로 고를 수 있게]
+- 독자가 무언가를 사야 하는 주제(교체, 보수, 설치)일 때만 넣어요. 사지 않아도 되는 글에는 넣지 않아요.
+- 상품은 글 앞부분이나 도입에 넣지 않아요. 방법·기준을 다 설명한 뒤, 본문 중간이나 뒤쪽의 '어떤 걸 살까' 부분 한 곳에 모아요.
+- 그 부분은 사람들이 실제로 고민하는 선택지 2~3개를 비교하는 짧은 표(선택지 / 이런 집·이런 경우 / 주의할 점 / 대략 가격대)로 쓰고, 표 바로 아래 문장을 coupang_wish 의 after 로 써요. 링크는 프로그램이 그 문장 아래에 넣어요.
+- 좋은 비교: 유압식 vs 일반 도어클로저, 대형 vs 소형, 수성 vs 비초산 실리콘. 나쁜 비교: 같은 종류 브랜드 세 개 나열, '강력 추천·최저가·지금 바로 구매' 같은 판매 문구.
+- 상품을 칭찬하지 말고 고르는 기준으로 말해요. 써 보지 않은 상품의 사용 후기처럼 쓰지 않아요.
+"""
+
 TITLE_GUIDE = """[제목 정하기 — 본문만큼 중요해요]
 1. 먼저 메인 키워드로 웹 검색해서 지금 상위에 있는 글 제목 3~5개를 보고, 그 제목들이 빠뜨린 것(구체적 숫자, 기준, 대상, 상황, 결론)을 찾아요. title_research 에 '상위 제목들의 공통점 / 우리가 다르게 갈 점'을 한 줄로.
 2. 서로 다른 패턴으로 후보 5개: 결론 먼저(답을 제목에), 숫자·기준(금액, 개수, mm, 기간), 실수·손해 피하기, 짜증 장면(독자가 겪는 그 순간), 반전(다들 믿는 것과 다른 사실), 대상·상황 특정, 비교(A vs B).
@@ -347,8 +357,10 @@ def build_prompt(site, topic, notes, view=None):
         if m.get("internal_links", True) and links:
             p.append("[내부 링크 후보 — 관련 있는 글만 본문에 2~3개 자연스럽게 [제목](주소)로]\n" + "\n".join(f"- {x['title']}: {x['url']}" for x in links))
         cp = coupang_items(site)
+        if (m.get("coupang") or {}).get("enabled") and m.get("stage") != "pre_adsense":
+            p.append(COUPANG_GUIDE)
         if cp:
-            p.append("[쿠팡 파트너스 링크 — 독자에게 실제로 필요한 문단에만 최대 2개, 아래 주소만 그대로 사용, 다른 쇼핑 링크 금지. "
+            p.append("[쿠팡 파트너스 링크 — 아래 주소만 그대로 사용, 다른 쇼핑 링크 금지. "
                      "대가성 문구는 프로그램이 글 맨 위에 한 번 넣으니 본문·링크 옆에는 쓰지 마세요. "
                      "링크는 문장 안에 [상품 이름](주소)로만 넣으면 프로그램이 상품 이미지 카드로 바꿔요]\n"
                      + "\n".join(f"- {i['name']} ({i.get('note', '')}): {i['url']}" for i in cp))
@@ -689,7 +701,7 @@ def add_coupang_wish(site, wish, d, title):
     for w in wish:
         i = by.get((w.get("search") or w["name"]).replace(" ", ""))
         if i and i.get("url"):
-            got.append({"name": w["name"], "url": i["url"], "after": w.get("after", "")})
+            got.append({"name": w["name"], "url": i["url"], "after": w.get("after", ""), "why": w.get("why", "")})
     return got
 
 
@@ -704,8 +716,8 @@ def _uniq_key(base, data):
 
 
 def insert_coupang(md, got, site):
-    """'after' 문장이 있는 문단 바로 아래에 [상품](링크) 한 줄. 글 전체 쿠팡 링크는 최대 2개(네이버 기준)"""
-    cap = ((load_json(ROOT / "config/settings.json", {}).get("affiliate") or {}).get("coupang") or {}).get("naver_max_links", 2)
+    """'after' 문장이 있는 문단 바로 아래에 [상품](링크) 한 줄. 글 전체 쿠팡 링크는 최대 3개(settings naver_max_links)"""
+    cap = ((load_json(ROOT / "config/settings.json", {}).get("affiliate") or {}).get("coupang") or {}).get("naver_max_links", 3)
     paras = md.split("\n\n")
     for g in got:
         if len(set(re.findall(r"https?://link\.coupang\.com/[^\s)\]]+", "\n\n".join(paras)))) >= cap:
@@ -718,7 +730,11 @@ def insert_coupang(md, got, site):
         if idx is None:
             log(f"  쿠팡 상품 '{g['name']}' 넣을 자리를 못 찾아 이번 글엔 빼요")
             continue
-        paras.insert(idx + 1, f"👉 [{g['name']}]({g['url']})")
+        at = idx + 1
+        while at < len(paras) and paras[at].startswith("👉 ["):  # 같은 자리 비교 상품은 순서대로 이어서
+            at += 1
+        why = f" — {g['why']}" if g.get("why") else ""
+        paras.insert(at, f"👉 [{g['name']}]({g['url']}){why}")
         log(f"  쿠팡 링크 넣음: {g['name']}")
     return "\n\n".join(paras)
 

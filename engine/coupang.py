@@ -61,11 +61,21 @@ def deeplink(urls):
     return {x.get("originalUrl"): x.get("shortenUrl") for x in (d or [])}
 
 
-def pick(products):
-    """광고 상품 말고 로켓배송 우선, 그다음 검색 순위대로"""
+def pick(products, keyword=""):
+    """검색어 낱말이 상품명에 많이 들어간 것 → 로켓배송 → 검색 순위 순. 세트·묶음은 단품 검색이면 뒤로"""
     good = [p for p in products if p.get("productUrl") and p.get("productName")]
-    rocket = [p for p in good if p.get("isRocket")]
-    return (rocket or good or [None])[0]
+    if not good:
+        return None
+    words = [w for w in (keyword or "").split() if len(w) > 1]
+    bundle = not any(w in keyword for w in ("세트", "묶음"))
+
+    def score(ip):
+        i, p = ip
+        name = p["productName"].replace(" ", "")
+        hit = sum(w in name for w in words)
+        extra = bundle and any(w in name for w in ("세트", "본품+", "+보강판", "묶음"))
+        return (-hit, extra, not p.get("isRocket"), i)
+    return sorted(enumerate(good), key=score)[0][1]
 
 
 def fill(items, today):
@@ -76,7 +86,8 @@ def fill(items, today):
             continue
         if not ready() or _calls >= MAX_CALLS:
             break
-        p = pick(search(it.get("search") or it["name"]))
+        kw = it.get("search") or it["name"]
+        p = pick(search(kw), kw)
         if not p:
             it["status"] = f"검색 결과 없음 ({today})"
             continue
