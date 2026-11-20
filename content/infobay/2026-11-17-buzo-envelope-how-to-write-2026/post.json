@@ -257,6 +257,12 @@
   "published": {
     "blog": "buzo-envelope-how-to-write-2026",
     "blog_url": "https://myinfobay.com/blog/buzo-envelope-how-to-write-2026",
-    "blog_at": "2026-11-18T07:02:29+09:00"
+    "blog_at": "2026-11-18T07:02:29+09:00",
+    "threads": [
+      "18184486039429676",
+      "18112762694186890",
+      "17957341770295175"
+    ],
+    "threads_at": "2026-11-20T12:33:30+09:00"
   }
 }
