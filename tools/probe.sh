@@ -7,7 +7,7 @@ import sys, json
 sys.path.insert(0, "engine")
 import generate as g
 from pathlib import Path
-d = Path(sys.argv[1]); post = json.loads((d/"post.json").read_text())
+d = Path(sys.argv[1]).resolve(); post = json.loads((d/"post.json").read_text())
 site = g.load_site("woodenjoy")
 got = g.add_coupang_wish(site, post["coupang_wish"], d, post["title"])
 md = (d/"article.md").read_text()
