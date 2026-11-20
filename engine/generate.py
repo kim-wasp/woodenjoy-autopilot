@@ -626,6 +626,12 @@ def write_post(site, res, d, topic):
         "threads": res.get("threads") if "threads" in platforms else None,
         "revision": old.get("revision", 0) + (1 if old else 0),
     }
+    wish = [w for w in (res.get("coupang_wish") or []) if w.get("name")]
+    if wish:
+        post["coupang_wish"] = wish
+        got = add_coupang_wish(site, wish, d, post["title"])
+        if got and res.get("article_md"):  # API로 바로 찾은 상품은 이번 글에도 넣어요 (전에는 다음 글부터였어요)
+            res["article_md"] = insert_coupang(res["article_md"], got, site)
     md = res.get("article_md")
     if md:
         cp = coupang_items(site)
@@ -633,7 +639,7 @@ def write_post(site, res, d, topic):
             "disclosure", "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.")
         # 대가성 문구는 맨 위 한 번만 (공정위 지침: 본문 첫 부분) → 링크 옆 중복 문구 제거
         md = re.sub(r"\s*[*_]?\(?이 링크는 쿠팡 파트너스[^)\n]*\)?[*_]?", "", md)
-        if cp and "link.coupang.com" in md and disclosure not in md:
+        if "link.coupang.com" in md and disclosure not in md:  # 쿠팡 링크가 있으면 무조건 맨 위에
             md = disclosure + "\n\n" + md
             post["coupang"] = True
         import signature
@@ -650,10 +656,6 @@ def write_post(site, res, d, topic):
             log(f"  고정 형식({site['signature']})이 비어서 빠졌어요")
         (d / "article.md").write_text(md, encoding="utf-8")
         res["article_md"] = md
-    wish = [w for w in (res.get("coupang_wish") or []) if w.get("name")]
-    if wish:
-        post["coupang_wish"] = wish
-        add_coupang_wish(site, wish, d, post["title"])
     save_json(d / "post.json", post)
     if res.get("cards"):
         save_json(d / "cards.json", res["cards"])
@@ -682,6 +684,33 @@ def add_coupang_wish(site, wish, d, title):
         if n:
             log(f"  쿠팡 링크 {n}개 자동으로 채웠어요 (관리화면 '쿠팡 링크'에서 확인)")
     save_json(f, data)
+    by = {(i.get("search") or i.get("name") or "").replace(" ", ""): i for i in data.get("items", [])}
+    got = []
+    for w in wish:
+        i = by.get((w.get("search") or w["name"]).replace(" ", ""))
+        if i and i.get("url"):
+            got.append({"name": w["name"], "url": i["url"], "after": w.get("after", "")})
+    return got
+
+
+def insert_coupang(md, got, site):
+    """'after' 문장이 있는 문단 바로 아래에 [상품](링크) 한 줄. 글 전체 쿠팡 링크는 최대 2개(네이버 기준)"""
+    cap = ((load_json(ROOT / "config/settings.json", {}).get("affiliate") or {}).get("coupang") or {}).get("naver_max_links", 2)
+    paras = md.split("\n\n")
+    for g in got:
+        if len(set(re.findall(r"https?://link\.coupang\.com/[^\s)\]]+", "\n\n".join(paras)))) >= cap:
+            break
+        if g["url"] in "\n\n".join(paras):
+            continue
+        key = re.sub(r"\s+", "", g.get("after") or "")[:14]
+        idx = next((n for n, p in enumerate(paras) if key and key in re.sub(r"\s+", "", p)
+                    and not p.lstrip().startswith(("|", "#", "[["))), None)
+        if idx is None:
+            log(f"  쿠팡 상품 '{g['name']}' 넣을 자리를 못 찾아 이번 글엔 빼요")
+            continue
+        paras.insert(idx + 1, f"👉 [{g['name']}]({g['url']})")
+        log(f"  쿠팡 링크 넣음: {g['name']}")
+    return "\n\n".join(paras)
 
 
 def preview_html(site, post, d):

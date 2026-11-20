@@ -7,8 +7,11 @@ saved, target = Path(sys.argv[1]), Path(sys.argv[2])
 if saved.exists():
     new = json.loads(saved.read_text(encoding="utf-8"))
     cur = json.loads(target.read_text(encoding="utf-8")) if target.exists() else {"items": []}
-    keys = {i.get("key") for i in cur.get("items", [])}
+    have = {i.get("key"): i for i in cur.get("items", [])}
     for it in new.get("items", []):
-        if it.get("key") not in keys:
+        old = have.get(it.get("key"))
+        if old is None:
             cur.setdefault("items", []).append(it)
+        elif not old.get("url") and it.get("url"):  # API로 자동 채운 링크 (사장님이 넣은 링크는 건드리지 않아요)
+            old.update({k: it[k] for k in ("url", "picked", "price", "rocket", "status") if k in it})
     target.write_text(json.dumps(cur, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -498,8 +498,21 @@ def publish_threads(site, d, post, dry):
 AI_NOTE = "※ 이 글의 사진은 이해를 돕기 위해 AI로 만든 이미지예요. 실제 인물·장소가 아니에요."
 
 
+COUPANG_NOTE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+
+
+def with_coupang_note(md):
+    """마지막 안전장치: 쿠팡 링크가 있는데 대가성 문구가 없으면 글 맨 위에 넣어요 (공정위 지침: 본문 첫 부분)"""
+    if "link.coupang.com" in md and "쿠팡 파트너스 활동" not in md:
+        print("  쿠팡 대가성 문구가 빠져 있어서 맨 위에 넣었어요")
+        return COUPANG_NOTE + "\n\n" + md
+    return md
+
+
 def with_ai_note(d, post, md):
-    """AI로 만든 사진이 한 장이라도 들어가면 글 끝에 안내 한 줄 (사장님 원칙: AI 이미지는 고지)"""
+    """AI로 만든 사진이 한 장이라도 들어가면 글 끝에 안내 한 줄 (사장님 원칙: AI 이미지는 고지)
+    모든 블로그 업로드가 이 함수를 거치므로 쿠팡 대가성 문구 점검도 여기서 해요"""
+    md = with_coupang_note(md)
     real = set(post.get("real_photos") or [])
     used = [f for f in ["hero.jpg"] + [f"photo{n}.jpg" for n in re.findall(r"\[\[photo:(\d+)\]\]", md)] if (d / f).exists() and f not in real]
     if not used or "AI로 만든" in md:

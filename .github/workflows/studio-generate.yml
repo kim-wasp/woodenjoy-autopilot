@@ -173,6 +173,8 @@ jobs:
             fi
             set +e; python3 engine/generate.py "$site" --topic "$TOPIC" --notes "$NOTES" --view "$VIEW" ${PHOTOS:+--photos "$PHOTOS"} 2>&1 | tee gen.log; ok=${PIPESTATUS[0]}; set -e
             save_log "$site"
+            # 쿠팡 '링크 필요'·자동 채운 링크는 아래 checkout -f 전에 따로 챙겨요 (전에는 여기서 날아갔어요)
+            cp topics/coupang_links.json /tmp/coupang_links.json 2>/dev/null || true
             dir=$(grep '::set-output-dir::' gen.log | tail -1 | sed 's/::set-output-dir:://')
             [ -n "$dir" ] || { echo "글 폴더가 없어요"; exit 1; }
             title=$(jq -r .title "$dir/post.json")
@@ -187,7 +189,6 @@ jobs:
           ${issues:-점검 통과}" || gh pr create --base main --head "$branch" --title "$prefix [$site] $title" --body "사이트: $site · 폴더: $dir"
             git checkout -q -f main
             # 예약 회차를 만들었다고 기록 (같은 회차를 두 번 만들지 않게)
-            cp topics/coupang_links.json /tmp/coupang_links.json 2>/dev/null || true
             for i in 1 2 3; do
               git fetch -q origin main && git reset -q --hard origin/main
               python3 engine/scheduler.py mark-generated "$site"
