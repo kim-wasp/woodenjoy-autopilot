@@ -1,0 +1,239 @@
+{
+  "id": "sisibibi/2026-11-20-cho-hee-dae-impeachment-party-line-why-now",
+  "site": "sisibibi",
+  "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
+  "status": "draft",
+  "created_at": "2026-11-20T23:19+09:00",
+  "requested_topic": "조희대 대법원장 탄핵, 민주당 당론 채택…'가능한 한 빨리' 왜 지금?",
+  "keywords": {
+    "main": "조희대 탄핵",
+    "sub": [
+      "조희대 탄핵 당론",
+      "대법원장 탄핵소추",
+      "조희대 탄핵 사유",
+      "한덕수 파기환송",
+      "국회의원 국민소환제",
+      "상고심"
+    ]
+  },
+  "brief": {
+    "reader": "민주당이 조희대 대법원장 탄핵을 당론으로 정했다는 뉴스를 보고 ‘왜 하필 지금인지, 진짜 파면까지 가는지’ 궁금한 20~50대",
+    "question": "민주당은 왜 지금 조희대 탄핵을 당론으로 정했고, 앞으로 어떻게 되나?",
+    "answer": "19일 한덕수 전 총리 상고심 판결을 계기로 20일 당론을 정했고 연내 발의가 목표예요. 국회는 민주당 단독으로 소추할 수 있지만, 파면하려면 헌재 재판관 9명 중 6명이 찬성해야 해요.",
+    "out_of_scope": "한덕수 전 총리 사건 판결의 법리 분석, 각 탄핵 사유가 실제로 위법인지에 대한 판단",
+    "next_action": "22일 추진단 공개회의에서 한덕수 판결이 탄핵 사유에 들어가는지 확인하기"
+  },
+  "why_this_topic": "지정 주제예요. 20일 의총에서 지난 글의 ‘채택 방침’이 실제 당론이 됐고, 같은 날 한덕수 판결 포함 여부가 ‘사유 아님’에서 ‘검토 중’으로 바뀌어 후속 글이 필요해요. 대법원 판결(상고심)이 계기라서 급등 검색어 ‘상고심’(월 1,430회, 7일 전보다 46% 증가)과도 맞고, ‘특검’(14,520)·‘여론조사’(24,730) 같은 정치 검색 수요도 큰 편이에요.",
+  "title_candidates": [
+    {
+      "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "조희대 탄핵 당론, 국회는 과반이면 되지만 헌재는 9명 중 6명",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "조희대 탄핵 사유 5가지, 계기가 된 판결은 왜 빠졌나",
+      "pattern": "결론 먼저",
+      "score": 7
+    },
+    {
+      "title": "대법원장 탄핵안 1985년 이후 두 번째, 조희대는 헌재까지 갈까",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "조희대 탄핵, 민주당 ‘연내 빨리’ vs 혁신당 ‘이번 주말’",
+      "pattern": "비교",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목은 거의 다 ‘민주당, 조희대 탄핵 당론 채택…연내 발의’ 같은 속보 문장이에요. 왜 하필 지금인지, 계기가 된 판결이 사유에서 빠졌다가 같은 날 다시 검토 대상이 된 일, 국회 과반과 헌재 6명이라는 문턱 차이는 제목에서 빠져 있어요. 우리는 이 세 가지로 갑니다.",
+  "meta_description": "민주당이 20일 조희대 탄핵을 당론으로 정했어요. 계기인 한덕수 판결은 사유에서 뺐다가 같은 날 ‘검토’로 바뀌었어요. 국회 과반 vs 헌재 6명, 양쪽 논리를 표로 정리했어요.",
+  "hero_prompt": "Wide shot of an empty, dimly lit courtroom with a high judge's bench and rows of vacant wooden seats, a thick stack of bound documents resting on a table in the foreground, cool late-afternoon light through tall windows, documentary photography style, no people, no text, no logos",
+  "thumb_text": "",
+  "category": "국내정치",
+  "kind": "",
+  "summary": [],
+  "conclusion": "민주당이 20일 조희대 탄핵을 당론으로 정했어요. 국회 소추는 민주당 단독으로 가능하지만 파면은 헌재 6명이 찬성해야 해요.",
+  "opinion": "쓰레기 같은 대통령도 쓰레기 같은 법관도 탄핵을 할수 있는데\n왜 쓰레기 같은 국회의원은 탄핵을 못하지??!!",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "법률신문: 與, 의총서 ‘조희대 대법원장 탄핵소추’ 당론 채택",
+      "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=229819"
+    },
+    {
+      "title": "경향신문: [속보] 민주당, 조희대 탄핵소추 당론 채택",
+      "url": "https://www.khan.co.kr/article/202611201422001/"
+    },
+    {
+      "title": "경향신문: 조희대 탄핵 나선 민주당, 20일 의총서 당론 채택",
+      "url": "https://www.khan.co.kr/article/202611192237005/"
+    },
+    {
+      "title": "네이트뉴스: 민주당, 조희대 대법원장 탄핵소추 당론 채택…연내 발의",
+      "url": "https://m.news.nate.com/view/20261120n20479"
+    },
+    {
+      "title": "네이트뉴스: 민주, 조희대 탄핵 추진 당론 채택…‘가능한 연내 처리’",
+      "url": "https://m.news.nate.com/view/20261120n29341"
+    },
+    {
+      "title": "아시아투데이: 與, ‘조희대 탄핵’ 연내 발의…한덕수 파기환송도 사유 포함 검토",
+      "url": "https://www.asiatoday.co.kr/kn/view.php?key=20261120010008145"
+    },
+    {
+      "title": "글로벌이코노믹: 민주당, 조희대 대법원장 탄핵 당론 채택…국민의힘 반발",
+      "url": "https://www.g-enews.com/article/General-News/2026/11/202611202020264806112616b072_1"
+    },
+    {
+      "title": "서플(이투데이): 與, ‘조희대 탄핵’ 당론 확정…국힘 ‘광기이자 국가적 비극’",
+      "url": "https://supple.kr/news/cmwow0fg4amhpkwp8runn08xq"
+    },
+    {
+      "title": "스페셜타임스: 더불어민주당, 조희대 대법원장 탄핵소추 당론 채택",
+      "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=488283"
+    },
+    {
+      "title": "법률방송뉴스: 與, 조희대 탄핵안 연내 발의... 법조계 ‘판결마다 법원 압박’",
+      "url": "https://www.lawtv.kr/news/articleView.html?idxno=61482"
+    },
+    {
+      "title": "재경일보: 민주당 조희대 대법원장 탄핵 당론 채택…연내 발의 방침",
+      "url": "https://news.jkn.co.kr/post/1110931"
+    },
+    {
+      "title": "뉴스핌: 민주당, 조희대 탄핵소추 ‘연내 추진’ 공식화…국민의힘 반발",
+      "url": "https://www.newspim.com/news/view/20261120001168"
+    },
+    {
+      "title": "서울경제: 野 ‘이재명 위한 무자비한 정치보복’…한동훈 ‘친위쿠데타’",
+      "url": "https://www.sedaily.com/article/20117075"
+    },
+    {
+      "title": "뉴스1: 민주, 조희대 탄핵 추진 당론 채택…5대 탄핵 사유 담아 연내 발의",
+      "url": "https://www.news1.kr/politics/assembly/6361055"
+    },
+    {
+      "title": "대한민국헌법 제64조(국회 자율권, 의원 제명)",
+      "url": "https://lawplayer.com/kr/article/001444/006400"
+    },
+    {
+      "title": "전북일보: 탄핵·주민소환, 국회의원은?",
+      "url": "https://www.jjan.kr/article/20241216580112"
+    },
+    {
+      "title": "투데이신문: 다시 떠오르는 국민소환제",
+      "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=67605"
+    },
+    {
+      "title": "나무위키: 대한민국 국회의원(제명 사례)",
+      "url": "https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "편 가르기",
+    "hooks": [
+      "판사도 탄핵되는데 국회의원은 안 돼",
+      "탄핵 계기는 한덕수 판결, 사유엔 없대",
+      "대법원장은 과반이면 탄핵소추돼"
+    ],
+    "posts": [
+      "판사도 탄핵되는데 국회의원은 안 돼\n민주당이 20일 조희대 대법원장 탄핵을 당론으로 정했거든. 국회 과반만 있으면 소추까지 가.\n근데 정작 국회의원은 탄핵 대상이 아니야. 내보내려면 동료 의원 3분의 2가 찬성해야 하고 ㅋㅋ\n국민소환제 만들자 쪽이야, 4년마다 선거로 심판하면 된다 쪽이야?",
+      "1. 대법원장 탄핵소추는 재적 3분의 1이 발의하고 과반이 찬성하면 돼. 파면은 헌재 9명 중 6명이 찬성해야 하고.\n2. 국회의원 제명은 재적 3분의 2가 찬성해야 하고, 결과를 법원에서 다툴 수도 없어(헌법 64조).\n3. 국회의원 국민소환제 법안은 17대 국회부터 계속 나왔는데 한 번도 통과 못 했어. 헌법에 임기 4년이 적혀 있어서 개헌이 먼저라는 주장도 있어.",
+      "민주당이 든 탄핵 사유랑 국민의힘·개혁신당 반박은 표로 정리해 놨어 {LINK}"
+    ],
+    "topic_tag": "정치"
+  },
+  "revision": 0,
+  "signature": {
+    "verdict": {
+      "issue": "조희대 대법원장 탄핵, 위법에 대한 책임 묻기일까 판결 불만에서 나온 탄핵일까?",
+      "rows": [
+        {
+          "who": "더불어민주당(양부남 추진단장)",
+          "claim": "19일 한덕수 판결 자체는 탄핵 사유가 아니다",
+          "check": "의총 직후엔 그렇게 말했지만, 같은 날 추진단 첫 회의 뒤 사유 포함을 ‘검토 중’이라고 밝힘(아시아투데이·이투데이 20일 보도)",
+          "status": "일부 사실"
+        },
+        {
+          "who": "더불어민주당",
+          "claim": "민주당 단독으로 탄핵소추를 할 수 있다",
+          "check": "대법원장 탄핵소추는 재적 3분의 1 발의, 과반 찬성이면 의결되고 민주당은 과반 의석 보유(글로벌이코노믹·이투데이 20일 보도)",
+          "status": "사실"
+        },
+        {
+          "who": "국민의힘(정점식 원내대표)",
+          "claim": "재판 결과가 마음에 안 든다고 대법원장을 탄핵하는 건 광기다",
+          "check": "민주당은 한덕수 판결을 계기로 밝혔지만, 공식 사유로는 계엄 대응·대법관 재제청 거부 등 다른 항목을 제시함(뉴스1·법률방송 20일 보도)",
+          "status": "의견"
+        },
+        {
+          "who": "개혁신당",
+          "claim": "전원합의체 판결을 이유로 대법원장 개인을 탄핵하는 건 부적절하다",
+          "check": "한덕수 판결은 대법원 전원합의체 판결이고, 사유 포함 여부는 20일 기준 민주당이 검토 중(글로벌이코노믹·이투데이 20일 보도)",
+          "status": "의견"
+        }
+      ],
+      "unknown": "탄핵소추안 발의 날짜와 최종 사유 목록, 헌법재판소가 실제로 파면할지는 20일 기준 정해지지 않았어요."
+    }
+  },
+  "korean_check": {
+    "blog": {
+      "grade": "A",
+      "score": 9.5,
+      "left": [
+        "접속사 남발: '. 하지만'"
+      ]
+    },
+    "sns": {
+      "스레드1": "A",
+      "스레드2": "A",
+      "스레드3": "A"
+    }
+  },
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-20T23:19+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 24721,
+        "output_tokens": 16175,
+        "web_searches": 5,
+        "calls": 1,
+        "usd": 0.4724
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 14420,
+        "output_tokens": 1049,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0393
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.6457,
+    "total_usd": 0.6457,
+    "total_krw": 900,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
