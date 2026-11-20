@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - run: pip install -q requests && python3 tools/rank_check.py
         env: { UPLIKA_RESEARCH_KEY: "${{ secrets.UPLIKA_RESEARCH_KEY }}", UPLIKA_API_KEY: "${{ secrets.UPLIKA_API_KEY }}" }
