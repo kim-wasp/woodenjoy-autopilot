@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T20:03+09:00",
+  "updated": "2026-11-20T21:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -927,17 +927,9 @@
       "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
       "title": "부조봉투 쓰는법, '삼가 고인의 명복을 빕니다'는 봉투에 안 써요",
       "platform": "instagram",
-      "at": "2026-11-20T21:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "woodenjoy",
-      "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
-      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
-      "platform": "instagram",
-      "at": "2026-11-20T21:00+09:00",
-      "state": "planned"
+      "at": "2026-11-20T21:03:48+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
@@ -996,10 +988,19 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-16-wall-hole-filling-putty-1mm-two-coats",
+      "title": "벽구멍 메우기, 퍼티 한 번에 두껍게 바르면 갈라져요… 1mm씩 2번",
+      "platform": "instagram",
+      "at": "2026-11-23T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-20-front-door-lock-replacement-3-measurements",
       "title": "현관문 도어락 교체, 사 놓고 구멍 안 맞는 집은 3곳을 안 쟀어요",
       "platform": "instagram",
-      "at": "2026-11-23T21:00+09:00",
+      "at": "2026-11-24T21:00+09:00",
       "state": "planned"
     }
   ]
