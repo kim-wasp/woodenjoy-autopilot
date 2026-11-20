@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-18-choo-kyung-ho-acquittal-first-trial-reasons-appeal",
   "site": "sisibibi",
   "title": "추경호 1심 무죄, 구형 20년인데 왜? 법원 ‘국힘 빼도 가결’",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-18T23:29+09:00",
   "requested_topic": "추경호 1심 무죄, 법원이 본 핵심은 '국힘 없었어도 의결 가능'…양쪽 반응은?",
   "keywords": {
@@ -244,6 +244,12 @@
   "published": {
     "blog": "posts/2026-11-19-choo-kyung-ho-acquittal-first-trial-reasons-appeal",
     "blog_url": "https://sisibibinote.kr/posts/choo-kyung-ho-acquittal-first-trial-reasons-appeal/",
-    "blog_at": "2026-11-19T12:02:12+09:00"
+    "blog_at": "2026-11-19T12:02:12+09:00",
+    "threads": [
+      "18123885206516220",
+      "17881190421634427",
+      "18140304502645174"
+    ],
+    "threads_at": "2026-11-20T20:03:33+09:00"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T17:29+09:00",
+  "updated": "2026-11-20T20:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -912,6 +912,16 @@
       "url": null
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-18-choo-kyung-ho-acquittal-first-trial-reasons-appeal",
+      "title": "추경호 1심 무죄, 구형 20년인데 왜? 법원 ‘국힘 빼도 가결’",
+      "platform": "threads",
+      "at": "2026-11-20T20:03:33+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-17-buzo-envelope-how-to-write-2026",
@@ -932,19 +942,10 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-18-choo-kyung-ho-acquittal-first-trial-reasons-appeal",
-      "title": "추경호 1심 무죄, 구형 20년인데 왜? 법원 ‘국힘 빼도 가결’",
-      "platform": "threads",
-      "at": "2026-11-21T19:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-19-fabricated-indictment-special-counsel-enforced-app",
       "title": "조작기소 특검법 시행, 국힘이 추천 안 해도 특검은 나온다…마감 11월 30일",
       "platform": "threads",
-      "at": "2026-11-22T19:30+09:00",
+      "at": "2026-11-21T19:30+09:00",
       "state": "planned"
     },
     {
