@@ -44,10 +44,20 @@
    "period": "11.01~11.07",
    "value": 28.9,
    "source": "https://www.medifonews.com/news/article.html?no=218804"
+  },
+  "2026-W38": {
+   "period": "09.13~09.19",
+   "value": 32.3,
+   "source": "https://www.womennews.co.kr/news/articleView.html?idxno=282578"
+  },
+  "2026-W46": {
+   "period": "11.08~11.14",
+   "value": 37.0,
+   "source": "https://www.hkilbo.kr/news/articleView.html?idxno=144154"
   }
  },
  "threshold": 12.9,
  "season": "2026-2027",
- "threshold_source": "https://www.kdca.go.kr/kdca/2847/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQxJTJGMzEyNTkzJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmZpbmRPcG53cmQlM0QlMjZmaW5kV29yZCUzRCUyNmZpbmRDbFNlcQ",
- "updated": "2026-11-17T21:43+09:00"
+ "threshold_source": "https://kdca.go.kr/kdca/2848/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQyJTJGMzEyNTkzJTJGYXJ0Y2xWaWV3LmRvJTNG",
+ "updated": "2026-11-21T17:14+09:00"
 }
