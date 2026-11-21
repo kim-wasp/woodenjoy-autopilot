@@ -1,34 +1,31 @@
 #!/bin/bash
-# 점검용 — 서치콘솔 색인 안 됨 원인 찾기 (공개 페이지만 읽어요)
-python3 - <<'PY'
-import re, requests
-UA = {"User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"}
+# 점검용 — forsmartlife 사이트맵에 남은 합친 글(301) 정리: 상태 확인 → 캐시 비우기 → 사이트맵 다시 확인
+cd tools && python3 - <<'PY'
+import re, requests, time
+from fsl_merge import GROUPS, by_slug, clear_cache, req, SITE
+srcs = [s for _, ss in GROUPS for s in ss]
+st = {}
+for s in srcs:
+    p = by_slug(s, "publish,private,draft")
+    st[s] = (p or {}).get("status", "없음")
+print("합친 글 상태:", {v: list(st.values()).count(v) for v in set(st.values())})
+for s, v in st.items():
+    if v == "publish":
+        print("  아직 공개:", s)
+# 최근 공개 글 하나를 그대로 다시 저장 → Rank Math 사이트맵 캐시 무효화
+p = req("GET", "/posts?status=publish&per_page=1&_fields=id").json()[0]
+print("다시 저장:", req("POST", f"/posts/{p['id']}", json={}).status_code)
+print("캐시 비우기:", clear_cache())
+time.sleep(5)
+UA = {"User-Agent": "Googlebot", "Cache-Control": "no-cache"}
 def urls(sm):
-    r = requests.get(sm, headers=UA, timeout=20); out = []
-    for loc in re.findall(r"<loc>([^<]+)</loc>", r.text):
+    t = requests.get(sm + ("&" if "?" in sm else "?") + f"nc={int(time.time())}", headers=UA, timeout=30).text
+    out = []
+    for loc in re.findall(r"<loc>([^<]+)</loc>", t):
         out += urls(loc) if loc.endswith(".xml") else [loc]
     return out
-def check(u):
-    r = requests.get(u, headers=UA, timeout=20, allow_redirects=False)
-    h = r.text[:200000]
-    can = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]*href=["\']([^"\']+)', h) or re.search(r'href=["\']([^"\']+)["\'][^>]*rel=["\']canonical', h)
-    rob = re.search(r'<meta[^>]+name=["\']robots["\'][^>]*content=["\']([^"\']+)', h)
-    txt = re.sub(r"<script.*?</script>|<style.*?</style>|<[^>]+>", " ", h, flags=re.S)
-    n = len(re.sub(r"\s+", "", txt))
-    return r.status_code, r.headers.get("location", ""), (can.group(1) if can else "-"), (rob.group(1) if rob else "-"), r.headers.get("x-robots-tag", "-"), n
-for site, sm in [("myinfobay", "https://myinfobay.com/sitemap.xml"), ("forsmartlife", "https://forsmartlife.com/sitemap_index.xml")]:
-    us = urls(sm); print(f"\n=== {site}: 사이트맵 {len(us)}개")
-    bad = 0
-    for u in us:
-        try:
-            s, loc, can, rob, xr, n = check(u)
-        except Exception as e:
-            print("ERR", u, e); continue
-        flag = s != 200 or (can not in ("-", u)) or "noindex" in rob + xr or n < 1500
-        if site == "myinfobay" or flag:
-            print(f"{'!!' if flag else '  '} {s} len={n} can={'SAME' if can == u else can} robots={rob} xr={xr} {loc} {u}")
-        bad += flag
-    print(f"문제 의심 {bad}개")
-for u in ["https://myinfobay.com/robots.txt", "https://forsmartlife.com/robots.txt"]:
-    print("\n---", u); print(requests.get(u, headers=UA, timeout=20).text[:600])
+us = urls(SITE + "/sitemap_index.xml")
+left = [u for u in us if u.rstrip("/").split("/")[-1] in srcs]
+print(f"사이트맵 {len(us)}개, 합친 글 남음 {len(left)}개")
+for u in left[:5]: print("  ", u)
 PY
