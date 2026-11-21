@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-19-fabricated-indictment-special-counsel-enforced-app",
   "site": "sisibibi",
   "title": "조작기소 특검법 시행, 국힘이 추천 안 해도 특검은 나온다…마감 11월 30일",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-19T23:15+09:00",
   "requested_topic": "조작기소 특검법 대통령 재가, 19일 공포·시행…이제 무엇부터 시작되나",
   "keywords": {
@@ -218,6 +218,12 @@
   "published": {
     "blog": "posts/2026-11-20-fabricated-indictment-special-counsel-enforced-app",
     "blog_url": "https://sisibibinote.kr/posts/fabricated-indictment-special-counsel-enforced-app/",
-    "blog_at": "2026-11-20T12:06:54+09:00"
+    "blog_at": "2026-11-20T12:06:54+09:00",
+    "threads": [
+      "18007669631991354",
+      "18235932148329289",
+      "18023617853977354"
+    ],
+    "threads_at": "2026-11-21T20:02:53+09:00"
   }
 }
