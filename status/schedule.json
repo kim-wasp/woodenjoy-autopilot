@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T12:55+09:00",
+  "updated": "2026-11-21T13:02+09:00",
   "items": [
     {
       "site": "infobay",
@@ -960,6 +960,16 @@
       "at": "2026-11-21T12:02:25+09:00",
       "state": "done",
       "url": "https://sisibibinote.kr/posts/cho-hee-dae-impeachment-party-line-why-now/"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-21-issue-0817",
+      "title": "⚡ 지하철 준법투쟁 첫날 큰 지연 없었다는데, 월요일 철도노조 합류는?",
+      "platform": "threads",
+      "at": "2026-11-21T13:02:48+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
