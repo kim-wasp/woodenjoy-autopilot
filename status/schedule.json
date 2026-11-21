@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T07:01+09:00",
+  "updated": "2026-11-22T07:25+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1004,11 +1004,12 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-20-cho-hee-dae-impeachment-party-line-why-now",
-      "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
+      "dir": "content/sisibibi/2026-11-22-issue-0715",
+      "title": "⚡ 이용철 법무장관 후보 청문회 24일, 공소취소·대장동·도덕성 쟁점",
       "platform": "threads",
-      "at": "2026-11-22T19:30+09:00",
-      "state": "planned"
+      "at": "2026-11-22T07:25:22+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "forsmartlife",
@@ -1044,6 +1045,15 @@
       "title": "현관문 도어락 교체, 사 놓고 구멍 안 맞는 집은 3곳을 안 쟀어요",
       "platform": "threads",
       "at": "2026-11-23T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-20-cho-hee-dae-impeachment-party-line-why-now",
+      "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
+      "platform": "threads",
+      "at": "2026-11-23T19:30+09:00",
       "state": "planned"
     },
     {
