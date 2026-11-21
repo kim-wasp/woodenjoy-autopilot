@@ -1,19 +1,24 @@
 #!/bin/bash
-# 점검용 — forsmartlife 사이트맵 캐시: 응답 헤더 보기 → Rank Math 임시 데이터 비우기 → 다시 확인
+# 점검용 — forsmartlife 사이트맵: 모듈 껐다 켜서 캐시 비우기 → 그래도 남으면 합친 글 ID 확인
 cd tools && python3 - <<'PY'
 import re, requests, time
-from fsl_merge import GROUPS, clear_cache, SITE
+from fsl_merge import GROUPS, clear_cache, SITE, req
 from fsl_fix import H
 srcs = [s for _, ss in GROUPS for s in ss]
-r = requests.get(SITE + "/post-sitemap.xml", headers={"User-Agent": "Googlebot"}, timeout=30)
-print("헤더:", {k: v for k, v in r.headers.items() if k.lower() in ("cache-control", "age", "x-cache", "cf-cache-status", "last-modified", "x-litespeed-cache", "x-proxy-cache", "server")})
-print("생성 표시:", re.findall(r"<!--.*?-->", r.text)[:3])
-for act in ("clear_transients", "clear_sitemap_cache"):
-    x = requests.post(SITE + "/wp-json/rankmath/v1/toolsAction", headers=H, json={"action": act}, timeout=60)
-    print(act, x.status_code, x.text[:120])
+def mod(state):
+    x = requests.post(SITE + "/wp-json/rankmath/v1/saveModule", headers=H, json={"module": "sitemap", "state": state}, timeout=60)
+    print("sitemap 모듈", state, x.status_code, x.text[:80])
+mod("off"); time.sleep(3); mod("on"); time.sleep(3)
 print("캐시 비우기:", clear_cache())
-time.sleep(5)
 t = requests.get(SITE + f"/post-sitemap.xml?nc={int(time.time())}", headers={"User-Agent": "Googlebot"}, timeout=30).text
 locs = re.findall(r"<loc>([^<]+)</loc>", t)
-print(f"post-sitemap {len(locs)}개, 합친 글 남음 {sum(u.rstrip('/').split('/')[-1] in srcs for u in locs)}개")
+left = [u for u in locs if u.rstrip('/').split('/')[-1] in srcs]
+print(f"post-sitemap {len(locs)}개, 합친 글 남음 {len(left)}개")
+if left:
+    s = left[0].rstrip('/').split('/')[-1]
+    for stt in ("publish", "private", "draft", "future", "pending"):
+        j = req("GET", f"/posts?slug={s}&status={stt}&_fields=id,status,slug").json()
+        print(" ", stt, j)
+    j = req("GET", f"/pages?slug={s}&status=publish,private&_fields=id,status").json()
+    print("  page:", j)
 PY
