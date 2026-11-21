@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T13:03+09:00",
+  "updated": "2026-11-21T13:04+09:00",
   "items": [
     {
       "site": "infobay",
@@ -978,6 +978,16 @@
       "title": "⚡ 尹 영화비·특활비 정보공개 소송 각하, 대통령기록관 이관이 이유",
       "platform": "threads",
       "at": "2026-11-21T13:03:52+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-21-issue-1257",
+      "title": "⚡ 시리우스항공 대표 징역 2년, 퇴직금 체불 신고처 정리",
+      "platform": "threads",
+      "at": "2026-11-21T13:04:59+09:00",
       "state": "done",
       "url": null
     },
