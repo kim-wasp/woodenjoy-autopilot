@@ -1,12 +1,9 @@
 #!/bin/bash
 cd tools && python3 - <<'PY'
-import re, requests, time
-from fsl_merge import SITE, GROUPS
-srcs = [s for _, ss in GROUPS for s in ss]
-r = requests.get(SITE + f"/wp-cron.php?doing_wp_cron={time.time():.4f}", timeout=60)
-print("wp-cron", r.status_code, len(r.text))
-time.sleep(10)
-t = requests.get(SITE + "/post-sitemap.xml", headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
-locs = re.findall(r"<loc>([^<]+)</loc>", t); lm = re.findall(r"<lastmod>([^<]+)</lastmod>", t)
-print("post-sitemap", len(locs), "첫 lastmod", lm[:1], "합친 글", sum(u.rstrip('/').split('/')[-1] in srcs for u in locs))
+from fsl_merge import req
+r = req("GET", "/plugins?_fields=plugin,name,status,version")
+print(r.status_code)
+for p in (r.json() if r.status_code == 200 else []): print(p)
+r = req("GET", "/posts?status=publish&per_page=100&_fields=id&orderby=modified")
+print("공개 글 수:", r.headers.get("X-WP-Total"))
 PY
