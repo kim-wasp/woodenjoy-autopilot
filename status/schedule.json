@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T10:03+09:00",
+  "updated": "2026-11-21T12:02+09:00",
   "items": [
     {
       "site": "infobay",
@@ -957,8 +957,9 @@
       "dir": "content/sisibibi/2026-11-20-cho-hee-dae-impeachment-party-line-why-now",
       "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
       "platform": "blog",
-      "at": "2026-11-21T12:00+09:00",
-      "state": "planned"
+      "at": "2026-11-21T12:02:25+09:00",
+      "state": "done",
+      "url": "https://sisibibinote.kr/posts/cho-hee-dae-impeachment-party-line-why-now/"
     },
     {
       "site": "sisibibi",
