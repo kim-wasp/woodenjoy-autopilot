@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T22:12+09:00",
+  "updated": "2026-11-22T23:53+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1038,6 +1038,16 @@
       "title": "⚡ 5만원 내고 22만원어치 먹은 낯선 커플, 빈 봉투 투시 기계까지 등장",
       "platform": "threads",
       "at": "2026-11-22T21:40:42+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-22-issue-2211",
+      "title": "⚡ 내일 아침 영하 4도, 창문 물방울 원인 3가지 (방풍비닐 전 확인)",
+      "platform": "threads",
+      "at": "2026-11-22T23:53:42+09:00",
       "state": "done",
       "url": null
     },
