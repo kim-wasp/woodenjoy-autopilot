@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T21:02+09:00",
+  "updated": "2026-11-22T21:40+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1028,6 +1028,16 @@
       "title": "조희대 탄핵 왜 지금? 한덕수 판결, 뺐다가 같은 날 ‘검토’",
       "platform": "threads",
       "at": "2026-11-22T20:03:08+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-22-issue-2115",
+      "title": "⚡ 5만원 내고 22만원어치 먹은 낯선 커플, 빈 봉투 투시 기계까지 등장",
+      "platform": "threads",
+      "at": "2026-11-22T21:40:42+09:00",
       "state": "done",
       "url": null
     },
