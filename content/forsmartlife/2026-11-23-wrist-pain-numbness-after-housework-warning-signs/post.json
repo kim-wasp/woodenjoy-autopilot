@@ -1,0 +1,205 @@
+{
+  "id": "forsmartlife/2026-11-23-wrist-pain-numbness-after-housework-warning-signs",
+  "site": "forsmartlife",
+  "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
+  "status": "draft",
+  "created_at": "2026-11-23T02:08+09:00",
+  "requested_topic": "집안일 후 손목이 저리고 아플 때 확인할 점과 병원 갈 신호\n카테고리: 증상 관리\n이 글이 답할 질문: 반복 동작 후 손목 통증이 생기는 이유와 쉬어도 낫지 않을 때 진료가 필요한 경우\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 11,820회, 11월 시기 주제",
+  "keywords": {
+    "main": "손목 통증",
+    "sub": [
+      "손목 저림",
+      "손목터널증후군",
+      "손목 건초염",
+      "드퀘르벵병",
+      "손 저림 밤",
+      "손목 보호대",
+      "손목 통증 병원"
+    ]
+  },
+  "brief": {
+    "reader": "설거지·김장·걸레질처럼 손을 반복해서 쓴 뒤 손목이 시큰하거나 밤에 손이 저린 30~60대",
+    "question": "반복 동작 뒤 손목 통증은 왜 생기고, 쉬어도 낫지 않으면 언제 진료를 받아야 할까?",
+    "answer": "저린 손가락과 아픈 자리로 손목터널증후군과 손목 건초염을 가늠할 수 있어요. 엄지 두덩이 꺼지거나 힘이 빠지고 감각이 둔해지면 진료를 받아야 해요.",
+    "out_of_scope": "넘어져 생긴 골절·외상, 류마티스 관절염 같은 전신 질환, 특정 제품 추천, 수술 방법 비교",
+    "next_action": "며칠 동안 저린 손가락 위치와 시간대를 메모해 두었다가 진료 때 보여 주기"
+  },
+  "why_this_topic": "네이버 월간 검색 11,820회, 11월 시기 주제(김장 등 손을 많이 쓰는 집안일이 몰리는 때). 상위 글은 병 이름 구분에 그치고 진료 시점 기준이 빠져 있음",
+  "title_candidates": [
+    {
+      "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "손목 저림, 새끼손가락은 멀쩡하다면 손목터널 신호일 수 있어요",
+      "pattern": "반전",
+      "score": 8
+    },
+    {
+      "title": "손목 통증 파스로 3개월 버티면 손해: 공식 진료 기준 정리",
+      "pattern": "실수·손해",
+      "score": 7
+    },
+    {
+      "title": "손목 통증 엄지 쪽 vs 손가락 저림, 집안일 뒤 구분하는 기준",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "손목 저림 6주 먼저 쉬고 본다? 집안일 뒤 손목 진료 기준",
+      "pattern": "숫자·기준",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 제목(하이닥·헬스경향·힐팁·성가롤로병원)은 '손목터널증후군일까 건초염일까'처럼 병 이름 구분에 머묾 / 우리는 '언제까지 집에서 보고 언제 병원에 가나'를 6주·3개월 같은 공식 기준과 신호 6가지로 답함",
+  "meta_description": "엄지부터 약지까지 밤에 저리면 손목터널, 엄지 쪽이 붓고 아프면 건초염 쪽이에요. 질병관리청 기준 6주·3개월 진료 시점과 병원 갈 신호 6가지를 표로 정리했어요.",
+  "hero_prompt": "Candid photo of a Korean home after a busy day of housework in late autumn: a middle-aged person's hands resting on a kitchen table, one hand lightly pressing the other wrist, a stack of washed bowls and a wrung-out cloth nearby, soft evening light, natural lived-in apartment, face not shown, no text in the image",
+  "thumb_text": "",
+  "category": "증상 관리",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "설거지를 마친 뒤 싱크대 앞에서 손목을 감싸 쥐고 있는 중년 여성",
+      "prompt": "Candid smartphone snapshot of a Korean middle-aged woman at a home kitchen sink after washing dishes, gently holding her own wrist with the other hand, rubber gloves set aside on the counter; natural uneven window light, slightly off-center framing, real lived-in Korean apartment kitchen, not a stock photo, no glossy CGI look, face not in close-up, no text, no medical gore, no pills or products as the main subject"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "병원 대기실에서 자신의 손바닥을 살펴보며 진료를 기다리는 사람",
+      "prompt": "Candid smartphone snapshot of a Korean adult sitting in a small clinic waiting room in Korea, resting one hand on the knee and looking at the palm, other patients blurred in background; natural fluorescent light, slightly tilted framing, real everyday setting, not a stock photo, no glossy CGI look, faces not in close-up, no text, no medical gore, no pills or products as the main subject"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "질병관리청 국가건강정보포털: 수근굴(수근관) 증후군",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6292"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털: 수근굴(수근관) 증후군 치료",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=2127"
+    },
+    {
+      "title": "국민건강보험공단: 키워드로 알아보는 근골격계 질환 (2024년 8월)",
+      "url": "https://www.nhis.or.kr/static/alim/paper/oldpaper/202408/sub/section1_2.html"
+    },
+    {
+      "title": "국민건강보험공단 건강iN: 손목터널증후군",
+      "url": "https://www.nhis.or.kr/magazin/144/html/c07.html"
+    },
+    {
+      "title": "서울아산병원 질환백과: 손목 수근관 증후군",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31570"
+    },
+    {
+      "title": "서울아산병원 질환백과: 건초염",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31863"
+    },
+    {
+      "title": "분당서울대학교병원 관절센터: 수근관 증후군",
+      "url": "https://www.snubh.org/dh/main/index.do?DP_CD=JRC&MENU_ID=002007016"
+    },
+    {
+      "title": "대한말초신경학회: 수근관 증후군",
+      "url": "https://ksspn.org/general/sub01_03.html"
+    },
+    {
+      "title": "한림성심대학교 물리치료과: 드퀘르벵 증후군",
+      "url": "https://pthsc.hsc.ac.kr/pthsc/community/study.do?mode=view&articleNo=205600"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 2,
+  "signature": {
+    "myth_check": [
+      {
+        "myth": "손 저린 건 혈액순환 문제라 주무르면 된다",
+        "fact": "엄지~약지 저림은 손목 안 정중신경이 눌려 생길 수 있고, 새끼손가락은 저리지 않는 게 특징",
+        "source": "서울아산병원 질환백과 손목 수근관 증후군"
+      },
+      {
+        "myth": "손목 저리면 결국 수술해야 한다",
+        "fact": "심하지 않으면 먼저 6주간 부목 고정·약물 등 비수술 치료를 해 봄",
+        "source": "질병관리청 국가건강정보포털 수근굴(수근관) 증후군"
+      },
+      {
+        "myth": "파스 붙이고 버티면 알아서 낫는다",
+        "fact": "3개월 이상 보존 치료에도 호전이 없거나 근육 위축이 오면 수술을 고려",
+        "source": "질병관리청 국가건강정보포털 수근굴(수근관) 증후군"
+      },
+      {
+        "myth": "저릴 땐 손목을 꺾고 돌려서 풀어 준다",
+        "fact": "손목을 접거나 뒤틀고 회전시키는 동작은 피하고, 밤·작업 중엔 부목으로 굽힘을 줄임",
+        "source": "분당서울대학교병원 수근관 증후군"
+      }
+    ]
+  },
+  "checks": {
+    "ok": false,
+    "issues": [
+      "블로그: 근거 없는 과장 표현 '100%'"
+    ],
+    "at": "2026-11-23T02:08+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-23T02:07+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-23T02:07+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-23T02:08+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 15578,
+        "output_tokens": 8352,
+        "web_searches": 0,
+        "calls": 3,
+        "usd": 0.0057
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 27130,
+        "output_tokens": 25454,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.6676
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 4744,
+        "output_tokens": 1997,
+        "web_searches": 0,
+        "calls": 8,
+        "usd": 0.0295
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 1.1048,
+    "total_usd": 1.1048,
+    "total_krw": 1550,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
