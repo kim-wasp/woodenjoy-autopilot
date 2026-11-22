@@ -2,7 +2,7 @@
   "id": "forsmartlife/2026-11-20-kimjang-back-pain-rest-posture-warning-signs",
   "site": "forsmartlife",
   "title": "김장 후 허리 통증, 내내 누워 있으면 손해: 안정은 2~3일까지",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-20T04:01+09:00",
   "requested_topic": "김장 뒤 허리가 아플 때 생활에서 바꿀 자세와 주의 신호\n카테고리: 증상 관리\n이 글이 답할 질문: 쪼그려 앉기나 무거운 것을 드는 활동 뒤 허리 통증이 생기면 어떻게 관리하고 언제 병원에 가야 하는가?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 24,470회, 11월 시기 주제",
   "keywords": {
@@ -203,5 +203,10 @@
     "total_krw": 1520,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-20T08:03+09:00"
+  "approved_at": "2026-11-20T08:03+09:00",
+  "published": {
+    "blog": 1893,
+    "blog_url": "https://forsmartlife.com/kimjang-back-pain-rest-posture-warning-signs/",
+    "blog_at": "2026-11-23T07:02:22+09:00"
+  }
 }
