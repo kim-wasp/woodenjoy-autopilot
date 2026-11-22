@@ -99,6 +99,32 @@
       "picked": "쿠잉전자 무타공 푸시풀 디지털 도어락 본품+보강판 세트, DL-D02GD, 방문설치",
       "price": 109900,
       "rocket": true
+    },
+    {
+      "key": "post-2",
+      "name": "창문 결로방지 테이프",
+      "search": "창문 결로방지 테이프 물흡수",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9831228769&itemId=29446607214&vendorItemId=96355945331&traceid=V0-153-09411175fab8cdd4&requestid=20261122201534003206275029&token=31850C%7CMIXED&pt=0&slot=6",
+      "status": "API 자동 (11/22) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-22-window-condensation-tape-humidity",
+      "after": "물 맺히는 자리를 먼저 보고 하나만 사 보세요.",
+      "site": "woodenjoy",
+      "picked": "창문 결로 방지 물흡수 테이프 유리",
+      "price": 2310.0,
+      "rocket": false
+    },
+    {
+      "key": "post-3",
+      "name": "디지털 온습도계",
+      "search": "디지털 온습도계 가정용",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9779368881&itemId=29276854782&vendorItemId=96159582498&traceid=V0-153-7a127ff2a8fba092&clickBeacon=09981310-e666-11f1-997c-9436340d93bf%7E3&requestid=20261122201534642183803739&token=31850C%7CMIXED&pt=1&slot=4",
+      "status": "API 자동 (11/22) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-22-window-condensation-tape-humidity",
+      "after": "물 맺히는 자리를 먼저 보고 하나만 사 보세요.",
+      "site": "woodenjoy",
+      "picked": "파충류 사육장 디지털 온습도계 실내 가정용, 화이트, 1개",
+      "price": 5900,
+      "rocket": false
     }
   ]
 }
