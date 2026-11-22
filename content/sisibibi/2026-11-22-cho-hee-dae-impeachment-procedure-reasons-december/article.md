@@ -1,0 +1,82 @@
+
+
+<div class="sig-verdict" style="margin:28px 0;border:1px solid #d9e2e1;border-radius:10px;overflow:hidden;background:#f6f9f8"><p class="sig-title" style="margin:0;padding:14px;font-weight:700;color:#1f2a2e">시시비비 판정표: 조희대 탄핵, 판결 불만이 아니라 &#x27;절차&#x27; 문제라는 설명은 맞나?</p><div class="sig-row" style="padding:12px 14px;border-top:1px solid #d9e2e1;background:#fff"><p class="sig-who" style="margin:0 0 4px;font-size:13px;color:#5b6b70">더불어민주당 탄핵소추 추진단(양부남 단장)</p><p class="sig-claim" style="margin:0 0 6px;color:#1f2a2e">한덕수 판결 내용은 탄핵 사유로 삼지 않는다</p><p class="sig-check" style="margin:0;font-size:14px;color:#1f2a2e"><span class="sig-status sig-s_true" style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid #1f6b57;border-radius:999px;color:#1f6b57;font-size:13px">사실</span>22일 기자간담회에서 내용은 빼고 심리 절차 하자만 검토한다고 밝힘. 20일에는 판결 내용도 검토하겠다고 했었음(재경일보·이투데이 보도)</p></div><div class="sig-row" style="padding:12px 14px;border-top:1px solid #d9e2e1;background:#fff"><p class="sig-who" style="margin:0 0 4px;font-size:13px;color:#5b6b70">더불어민주당(이용우 의원)</p><p class="sig-claim" style="margin:0 0 6px;color:#1f2a2e">특검법상 3개월 내 선고 규정을 어겼다</p><p class="sig-check" style="margin:0;font-size:14px;color:#1f2a2e"><span class="sig-status sig-s_part" style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid #8a6a12;border-radius:999px;color:#8a6a12;font-size:13px">일부 사실</span>내란특검법은 항소심 뒤 3개월 안 선고를 규정함. 항소심 5월 7일, 기한 8월 6일, 실제 선고 11월 19일(오마이뉴스). 파면할 만큼 중대한지는 헌재 판단 몫</p></div><div class="sig-row" style="padding:12px 14px;border-top:1px solid #d9e2e1;background:#fff"><p class="sig-who" style="margin:0 0 4px;font-size:13px;color:#5b6b70">국민의힘</p><p class="sig-claim" style="margin:0 0 6px;color:#1f2a2e">탄핵부터 정해 놓고 사유를 찾는 정치적 탄핵이다</p><p class="sig-check" style="margin:0;font-size:14px;color:#1f2a2e"><span class="sig-status sig-s_opinion" style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid #3d5a8a;border-radius:999px;color:#3d5a8a;font-size:13px">의견</span>19일 탄핵 추진을 결정한 뒤 20일 당론 채택, 22일 사유 정리 순서로 진행됨(경향신문·이투데이). 의도에 대한 평가는 가치 판단</p></div><div class="sig-row" style="padding:12px 14px;border-top:1px solid #d9e2e1;background:#fff"><p class="sig-who" style="margin:0 0 4px;font-size:13px;color:#5b6b70">개혁신당</p><p class="sig-claim" style="margin:0 0 6px;color:#1f2a2e">전원합의체 판결을 대법원장 개인 판단으로 볼 수 없다</p><p class="sig-check" style="margin:0;font-size:14px;color:#1f2a2e"><span class="sig-status sig-s_true" style="display:inline-block;margin-right:8px;padding:1px 8px;border:1px solid #1f6b57;border-radius:999px;color:#1f6b57;font-size:13px">사실</span>한덕수 사건은 대법관 전원이 심리하는 전원합의체가 선고함(한국경제·국제뉴스)</p></div><p class="sig-note" style="margin:0;padding:10px 14px 12px;font-size:14px;color:#5b6b70">아직 모르는 것: 소추안의 최종 사유 문구와 발의 날짜, 헌재가 2027년 6월 초 임기 만료 전에 선고할지</p><p class="sig-note" style="margin:0;padding:0 14px 12px;font-size:13px;color:#5b6b70">확인: 2026년 11월</p></div>
+
+## 22일 새로 정해진 건 뭐예요?
+
+민주당 탄핵소추 추진단이 22일 '12월 안 국회 의결'을 목표로 정했어요. [지난 글](https://sisibibinote.kr/posts/cho-hee-dae-impeachment-party-line-why-now/)에서 오락가락하던 한덕수 판결은 '내용은 빼고 절차 하자만 검토'로 정리됐어요. 발의는 계엄 2년이 되는 12월 3일 전후가 거론되는데, 12월 2일 예산안 처리 시한과 맞물려 있어서 11월 22일 보도 기준으로 날짜는 아직 안 정해졌어요.
+
+## 왜 판결 말고 절차예요?
+
+추진단은 "판결을 존중한다"면서 내용은 사유에서 뺐어요. 판결을 사유로 넣으면 사법부 독립 침해라는 비판을 받는다는 분석도 나와요. 대신 두 가지를 꼽았어요. 대법관끼리 의견을 모으기로 했던 19일을 선고일로 바꾼 일, 그리고 특검법이 정한 3개월 선고 기한(8월 6일)을 넘긴 일이에요. 대법원은 그동안 수시로 합의해 왔고 의견이 모여 선고했다고 설명해요.
+
+## 양쪽 말은 어떻게 달라요?
+
+민주당은 계엄 당시 대법원 대응, 이 대통령 선거법 사건 파기환송, 대법관 재제청 거부, 업무추진비 의혹까지 묶어서 위헌·위법이 쌓였다고 봐요. 국민의힘은 "탄핵부터 정해 놓고 사유를 찾는다"며 정치적 탄핵이라고 맞서요. 민주당 안에서도 헌재가 기각하면 역풍이 온다는 걱정이 나왔어요.
+
+## 국회 통과하면 끝나요?
+
+아니에요. 의결은 161석인 민주당 혼자서도 할 수 있지만, 가결되면 직무가 멈출 뿐이에요. 파면하려면 헌법재판관 9명 중 6명 이상이 찬성해야 해요. 조 대법원장 임기는 2027년 6월 초까지인데 헌재의 '180일 안 선고'는 꼭 지켜야 하는 규정이 아니라서, 임기 안에 결론이 나올지도 변수예요.
+
+## 편집자 생각
+
+결말은 뻔해 보여요. 민주당은 빠져나갈 구멍을 하나씩 만들어 가며 탄핵을 밀고 갈 거고, 국민의힘은 앞뒤 안 맞는 말로 반대만 하겠죠. 그사이 법원 꼭대기에 앉은 사람들은 계속 정치를 할 거고요.
+
+'대통령도 정치하는데 법관은 왜 안 되냐'고 물을 수 있어요. 저는 삼권분립 나라에서 가장 독립적이고 정치색이 없어야 할 곳이 법원이라고 봐요.
+
+계엄을 법에 이리저리 끼워 맞춰 정당화하는 해석을 하는 법관이라면 최대한 빨리 그 자리에서 내려와야 한다고 생각해요.
+
+## 더 자세히
+
+| 사유 후보 | 민주당 주장 | 반대 쪽·대법원 설명 |
+|---|---|---|
+| 19일 합의기일 → 선고일 변경 | 전례 없는 기일 지정 | 대법원: 수시로 합의했고 의견이 모여 선고 가능해짐 |
+| 특검법 3개월 선고 기한 | 강행 규정 위반 | 법원행정처장: 판결문 작성·회람에 시간 필요 |
+| 이 대통령 선거법 사건 파기환송 | 심리 절차 위반 | 국민의힘: 판결 불복, 사법부 독립 침해 |
+| 업무추진비·현금 격려금 | 횡령·국고손실 의혹 | 의혹 단계(확정된 판단 없음) |
+| 한덕수 판결 내용 | 사유에서 제외(22일) | 개혁신당: 전원합의체 판결을 대법원장 개인 판단으로 볼 수 없음 |
+
+| 단계 | 요건 |
+|---|---|
+| 발의 | 재적 3분의 1 이상(100명) |
+| 표결 | 첫 본회의 보고 뒤 24~72시간 안(법사위 회부 안 할 때) |
+| 가결 | 재적 과반(150명), 민주당 161석 |
+| 가결 뒤 | 직무 정지, 천대엽 대법관이 대행 |
+| 헌재 | 9명 중 6명 찬성 시 파면, 180일 안 선고(훈시규정) |
+
+### 일정
+- 11월 19일: 대법원 전원합의체, 한덕수 사건 일부 무죄 취지 파기환송
+- 11월 20일: 민주당 의총 당론 채택, 추진단 구성(단장 양부남)
+- 11월 21일: 국민의힘 대구 장외집회
+- 11월 22일: 추진단 첫 기자간담회, 연내 의결 목표
+- 12월 2일: 예산안 법정 처리 시한
+- 12월 3일 전후: 발의 거론(11월 22일 기준 미확정)
+- 2027년 6월 초: 조 대법원장 정년으로 임기 끝
+
+### 한덕수 상고심 날짜
+- 항소심 선고: 5월 7일
+- 특검법상 상고심 기한: 8월 6일
+- 첫 합의기일: 9월 29일
+- 선고: 11월 19일(구속기간 만료 하루 전)
+- 조 대법원장 취임 뒤 전원합의체 31건 중 합의기일이 선고일로 바뀐 사례: 없음(경향신문)
+
+### 앞으로 볼 기준 3가지
+1. 소추안 원문에 한덕수 판결 '내용'이 문구로 들어가는지
+2. 절차 하자를 '파면할 만큼 중대한 위반'으로 보여 줄 근거가 붙는지
+3. 헌재 결론이 2027년 6월 초 전에 나올 수 있는지
+
+### 전례
+- 1985년 유태흥 대법원장 탄핵안: 본회의 부결
+- 헌재가 대법원장을 파면한 사례: 없음
+- 2021년 임성근 전 부장판사: 심판 중 임기가 끝나 각하
+
+### 용어 풀이
+- 탄핵소추: 국회가 헌재에 파면을 청구하는 일
+- 합의기일: 대법관들이 모여 의견을 나누는 날
+- 전원합의체: 대법원장과 대법관 전원이 함께 심리하는 재판부
+- 훈시규정: 어겨도 결정의 효력에는 문제가 없는 권고성 기한
+- 각하: 내용을 판단하지 않고 심판을 끝내는 것
+
+12월 초 소추안 원문이 나오면 사유 칸에 한덕수 판결 내용이 들어갔는지부터 확인해 보세요. 탄핵에 필요한 표 계산은 [국민의힘 ‘이재명 탄핵’ 외쳤지만 필요한 건 200표…왜 거리로?](https://sisibibinote.kr/posts/ppp-rally-impeachment-after-special-counsel-bill/)에서 이어서 볼 수 있어요.
+
+2026년 11월 22일 기준, 주요 언론 보도와 헌법·헌법재판소법 내용 확인.
