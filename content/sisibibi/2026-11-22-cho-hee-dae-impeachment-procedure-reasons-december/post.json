@@ -1,0 +1,248 @@
+{
+  "id": "sisibibi/2026-11-22-cho-hee-dae-impeachment-procedure-reasons-december",
+  "site": "sisibibi",
+  "title": "한덕수 판결 빼고 조희대 탄핵? 민주당이 든 '절차 하자' 2가지",
+  "status": "ready",
+  "created_at": "2026-11-22T21:50+09:00",
+  "requested_topic": "조희대 탄핵안 '12월 초 발의, 연내 의결'…판결 말고 '절차'가 사유인 이유",
+  "keywords": {
+    "main": "조희대 탄핵",
+    "sub": [
+      "조희대 탄핵 사유",
+      "조희대 탄핵안 발의",
+      "한덕수 상고심",
+      "대법원장 탄핵 절차",
+      "탄핵심판 180일"
+    ]
+  },
+  "brief": {
+    "reader": "판결이 마음에 안 들어서 탄핵하는 거냐는 말을 듣고, 실제 사유가 뭔지 궁금한 정치 뉴스 독자",
+    "question": "민주당은 왜 한덕수 판결 내용을 빼고 '절차'를 조희대 탄핵 사유로 내세우나?",
+    "answer": "판결을 존중한다며 내용은 뺐고, 대신 합의기일을 선고일로 바꾼 일과 특검법 3개월 선고 기한(8월 6일)을 넘긴 일을 절차 하자로 검토해요.",
+    "out_of_scope": "한덕수 판결 자체의 법리 평가, 탄핵 인용 가능성 예측",
+    "next_action": "12월 초 소추안 원문이 공개되면 사유 칸에 한덕수 판결 내용이 문구로 들어갔는지 확인하기"
+  },
+  "why_this_topic": "11월 22일 민주당 탄핵소추 추진단이 첫 기자간담회에서 연내 의결을 공식화하고 사유를 '절차'로 정리해 당일 주요 언론 보도가 쏟아짐. 네이버 연관 검색어 '특검' 월 14,250회, '상고심'이 7일 새 960→1,440회(+50%)로 늘어 한덕수 상고심 절차 쟁점에 대한 관심이 확인됨. 지난 글(조희대 탄핵 왜 지금?)의 후속",
+  "title_candidates": [
+    {
+      "title": "한덕수 판결 빼고 조희대 탄핵? 민주당이 든 '절차 하자' 2가지",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "조희대 탄핵안 12월 3일 발의 거론…가결돼도 파면엔 헌재 6명",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "조희대 탄핵 사유 '3개월 선고 기한' 위반? 8월 6일 넘긴 대법원",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "조희대 탄핵, 연내 의결 vs '정치 탄핵'…임기 6월 초가 변수",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "판결 불만이면 탄핵 못 하는데…조희대 탄핵안이 사유를 바꾼 이유",
+      "pattern": "실수·손해",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 기사 제목들은 '연내 의결', '한덕수 판결 내용 제외'만 되풀이해요 / 우리는 실제로 꼽힌 절차 하자 2가지(선고일 변경, 8월 6일 기한)와 헌재 6명·임기라는 변수를 제목과 본문에 함께 넣어요",
+  "meta_description": "민주당이 한덕수 판결 내용 대신 고른 절차 하자 2가지(선고일 변경, 8월 6일 기한 초과), 12월 3일 전후로 거론되는 발의 시점, 가결 뒤 헌재 6명·180일·임기라는 변수를 정리했어요.",
+  "hero_prompt": "An empty grand courtroom with dark wooden benches and a raised judges' bench, a closed wooden gavel and a neat stack of legal documents on a table in the foreground, cold winter daylight through tall windows, muted neutral colors, no people, no text, no logos",
+  "thumb_text": "",
+  "category": "국내정치",
+  "kind": "",
+  "summary": [],
+  "conclusion": "민주당은 12월 안 의결이 목표예요. 한덕수 판결 내용은 빼고 선고일 변경·3개월 기한 초과 같은 절차를 사유로 검토해요. 파면은 헌재 재판관 6명 이상이 찬성해야 해요.",
+  "opinion": "민주당은 이리저리 잘 빠져나갈 구멍을 만들어서 탄핵을 진행할거고\n국힘은 이리저리 앞뒤 안맞는 말만 해대며 반대할거고\n그사이에 조희대 같은 놈들은 대법관 자리에 앉아서 정치질할거고\n대통령도 정치질하는데 대법관은 정치질히면 안되냐 한다면?\n삼권분립 국가에서 가장 독립적이고 가장 정치색을 안띠어야할 곳이 사법기관이라고 생각한다.\n계엄을 법을 이리저리 끼워맞춰서 정당화하려는 해석을 하는 법관은 절대적으로 빠른시간안에 없어져야한다.",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "이투데이: 與 \"조희대 탄핵안 12월 의결…한덕수 판결 내용은 사유 제외\"",
+      "url": "https://www.etoday.co.kr/news/view/2651317"
+    },
+    {
+      "title": "디지털타임스: 민주, 조희대 '탄핵 마이웨이'… \"연내 의결\"",
+      "url": "https://www.dt.co.kr/article/12096524"
+    },
+    {
+      "title": "파이낸셜뉴스: 與 \"연내 조희대 탄핵안 국회 의결\"… 예산안 일정과 조율",
+      "url": "https://www.fnnews.com/news/202611221805533142"
+    },
+    {
+      "title": "파이낸셜뉴스(뉴시스): 與, 조희대 탄핵안 연내 처리…\"한덕수 판결, 절차상 하자 탄핵 사유\"",
+      "url": "https://www.fnnews.com/news/202611221132168226"
+    },
+    {
+      "title": "서플(연합뉴스): 與 \"한덕수 판결, 내용 아닌 절차가 曺탄핵사유…연내의결 노력\"",
+      "url": "https://supple.kr/news/cmwro1ckvng5skwp85rcrm0r1"
+    },
+    {
+      "title": "SBS: \"판결 아닌 '절차'가 문제\"…\"결국 판결 보복\"",
+      "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857891"
+    },
+    {
+      "title": "한국일보: 與 \"조희대 탄핵안, 12월 안에 의결할 것\"",
+      "url": "https://www.hankookilbo.com/news/article/A2026112210120002281"
+    },
+    {
+      "title": "한국경제: 與 조희대 탄핵 사유, 한덕수 판결 아닌 절차상 문제",
+      "url": "https://www.hankyung.com/article/2026112224291"
+    },
+    {
+      "title": "시민언론 민들레: 주사위 던진 민주당…\"조희대 탄핵, 판결 아닌 절차 사유\"",
+      "url": "https://www.mindlenews.com/news/articleView.html?idxno=23299"
+    },
+    {
+      "title": "내외일보: 조희대 탄핵 추진 공식화… 찬반 정리",
+      "url": "https://www.naewoeilbo.com/news/articleView.html?idxno=2459866"
+    },
+    {
+      "title": "재경일보: 민주당 조희대 대법원장 탄핵 당론 채택…연내 발의 방침",
+      "url": "https://news.jkn.co.kr/post/1110931"
+    },
+    {
+      "title": "경향신문: 대법, 한덕수 구속만료 하루 전 선고",
+      "url": "https://www.khan.co.kr/article/202611162128025/"
+    },
+    {
+      "title": "경향신문: 민주당, 조희대 탄핵추진단 구성키로",
+      "url": "https://www.khan.co.kr/article/202611192225001/"
+    },
+    {
+      "title": "오마이뉴스: 대법원, 한덕수 내란 사건 19일 선고",
+      "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003285295&PAGE_CD=N0002&CMPT_CD=M0112"
+    },
+    {
+      "title": "프레시안: 한덕수 선고일 잡히자 민주당 \"만시지탄\"",
+      "url": "https://www.pressian.com/pages/articles/2026111614433355256"
+    },
+    {
+      "title": "국제뉴스: 민주당, 조희대 대법원장 탄핵 당론 채택…연내 발의 방침",
+      "url": "https://www.gukjenews.com/news/articleView.html?idxno=3758919"
+    },
+    {
+      "title": "매일신문: 조희대 대법원장 탄핵안 가결 땐 직무 정지",
+      "url": "https://www.imaeil.com/page/view/2026112216502315009"
+    },
+    {
+      "title": "서울신문: 曺탄핵안 가결 땐 즉시 '직무정지'… 전합 선고도 '개점휴업'",
+      "url": "https://seoul.co.kr/news/society/law/2026/11/23/20261123004001"
+    },
+    {
+      "title": "더퍼블릭: 與, 조희대 탄핵안 12월 3일 발의 검토",
+      "url": "https://thepublic.kr/news/articleView.html?idxno=327899"
+    },
+    {
+      "title": "파이낸셜뉴스: \"12월 전 탄핵안 의결\" 못박은 與…'조희대 대전' 일촉즉발",
+      "url": "https://www.fnnews.com/news/202611221356098775"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "퀴즈",
+    "hooks": [
+      "한덕수 판결 빼고 조희대 탄핵한대",
+      "탄핵 사유, 판결 대신 날짜가 들어감",
+      "8월 6일까지였는데 선고는 11월 19일"
+    ],
+    "posts": [
+      "한덕수 판결 빼고 조희대 탄핵한대\n22일 민주당 추진단이 판결 내용은 사유에서 빼고 절차만 문제 삼겠대.\n그래서 퀴즈. 민주당이 꼽은 절차 하자가 아닌 건?\n① 의견 모으는 날을 선고일로 바꿈 ② 3개월 선고 기한 넘김 ③ 밤 10시에 선고함\n몇 번이 가짜 같아?",
+      "정답은 ③번. 실제 선고는 19일 오후 4시였어.\n1. 19일은 원래 대법관끼리 의견 모으는 합의기일이었는데 16일에 선고일로 바뀌었어.\n2. 내란특검법은 항소심(5월 7일) 뒤 3개월 안, 그러니까 8월 6일까지 선고하라고 돼 있거든.\n대법원은 그동안 수시로 합의해 왔고 의견이 모여서 선고한 거라고 설명했어. 국힘은 정치적 탄핵이라고 맞서는 중이고.",
+      "국회 통과해도 파면은 헌재 9명 중 6명이 찬성해야 해. 임기 변수까지 여기 있어 {LINK}"
+    ],
+    "topic_tag": "정치"
+  },
+  "revision": 0,
+  "signature": {
+    "verdict": {
+      "issue": "조희대 탄핵, 판결 불만이 아니라 '절차' 문제라는 설명은 맞나?",
+      "rows": [
+        {
+          "who": "더불어민주당 탄핵소추 추진단(양부남 단장)",
+          "claim": "한덕수 판결 내용은 탄핵 사유로 삼지 않는다",
+          "check": "22일 기자간담회에서 내용은 빼고 심리 절차 하자만 검토한다고 밝힘. 20일에는 판결 내용도 검토하겠다고 했었음(재경일보·이투데이 보도)",
+          "status": "사실"
+        },
+        {
+          "who": "더불어민주당(이용우 의원)",
+          "claim": "특검법상 3개월 내 선고 규정을 어겼다",
+          "check": "내란특검법은 항소심 뒤 3개월 안 선고를 규정함. 항소심 5월 7일, 기한 8월 6일, 실제 선고 11월 19일(오마이뉴스). 파면할 만큼 중대한지는 헌재 판단 몫",
+          "status": "일부 사실"
+        },
+        {
+          "who": "국민의힘",
+          "claim": "탄핵부터 정해 놓고 사유를 찾는 정치적 탄핵이다",
+          "check": "19일 탄핵 추진을 결정한 뒤 20일 당론 채택, 22일 사유 정리 순서로 진행됨(경향신문·이투데이). 의도에 대한 평가는 가치 판단",
+          "status": "의견"
+        },
+        {
+          "who": "개혁신당",
+          "claim": "전원합의체 판결을 대법원장 개인 판단으로 볼 수 없다",
+          "check": "한덕수 사건은 대법관 전원이 심리하는 전원합의체가 선고함(한국경제·국제뉴스)",
+          "status": "사실"
+        }
+      ],
+      "unknown": "소추안의 최종 사유 문구와 발의 날짜, 헌재가 2027년 6월 초 임기 만료 전에 선고할지"
+    }
+  },
+  "korean_check": {
+    "blog": {
+      "grade": "A",
+      "score": 9,
+      "left": [
+        "관용구·결말 공식: '중대한'",
+        "관용구·결말 공식: '중대한'",
+        "AI 상투: 4"
+      ]
+    },
+    "sns": {
+      "스레드1": "A",
+      "스레드2": "A",
+      "스레드3": "A"
+    }
+  },
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-22T21:51+09:00"
+  },
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 25366,
+        "output_tokens": 16546,
+        "web_searches": 4,
+        "calls": 1,
+        "usd": 0.4724
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 14060,
+        "output_tokens": 1152,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0396
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.646,
+    "total_usd": 0.646,
+    "total_krw": 900,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
