@@ -13,6 +13,7 @@ on:
       site: { description: "사이트 id (비우면 전부)", required: false }
 permissions:
   contents: write
+  id-token: write  # Claude WIF (키 없이 단기 토큰)
   pull-requests: write
 concurrency: { group: issue-watch, cancel-in-progress: false }
 jobs:

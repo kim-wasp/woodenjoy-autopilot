@@ -1,7 +1,7 @@
 # 점검용: tools/probe.sh 를 바꿔 올리면 실행돼요 (이 워크플로 파일은 고치지 않아요 → 글 만들기와 충돌 없음)
 name: probe
 on: { workflow_dispatch: {}, push: { branches: [main], paths: ["tools/probe.sh"] } }
-permissions: { contents: write }
+permissions: { contents: write, id-token: write }
 jobs:
   p:
     runs-on: ubuntu-latest

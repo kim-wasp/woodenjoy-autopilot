@@ -86,6 +86,46 @@ def _stream(body, headers):
     return 200, "", {"content": content, "stop_reason": stop}
 
 
+
+# ---------- 인증: GitHub Actions 안에서는 WIF(키 없이 단기 토큰), 아니면 API 키 ----------
+# ID 값들은 비밀이 아니에요 (Console > Workload identity, 2026-11-22). 바꾸려면 환경변수로 덮어써요
+WIF_IDS = {
+    "federation_rule_id": os.environ.get("ANTHROPIC_FEDERATION_RULE_ID", "fdrl_01GTii2KMXRPhHmVGUNcEuRk"),
+    "organization_id": os.environ.get("ANTHROPIC_ORGANIZATION_ID", "a5d12ba1-3a4b-4dbe-b5fe-aef1f0214ae8"),
+    "service_account_id": os.environ.get("ANTHROPIC_SERVICE_ACCOUNT_ID", "svac_01NpdhqZ8YwJfVLpsDoQhRN7"),
+    "workspace_id": os.environ.get("ANTHROPIC_WORKSPACE_ID", "wrkspc_01GBLPjJ8xke1225x5sAZeNL"),
+}
+_WIF = {"tok": None, "exp": 0, "off": False, "said": False}
+
+
+def _wif_token():
+    """GitHub 신원 토큰(5분짜리)을 그때그때 새로 받아 Anthropic 단기 토큰으로 바꿔요. 만료 1분 전에 다시 받아요"""
+    if _WIF["tok"] and time.time() < _WIF["exp"] - 60:
+        return _WIF["tok"]
+    url, req_tok = os.environ["ACTIONS_ID_TOKEN_REQUEST_URL"], os.environ["ACTIONS_ID_TOKEN_REQUEST_TOKEN"]
+    jwt = requests.get(url + "&audience=https://api.anthropic.com", headers={"Authorization": f"Bearer {req_tok}"}, timeout=30).json()["value"]
+    r = requests.post("https://api.anthropic.com/v1/oauth/token", timeout=30, json={
+        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer", "assertion": jwt, **WIF_IDS})
+    if r.status_code != 200:
+        raise RuntimeError(f"WIF 교환 실패 {r.status_code}")  # 응답 내용(토큰)은 찍지 않아요
+    j = r.json()
+    _WIF.update(tok=j["access_token"], exp=time.time() + int(j.get("expires_in", 600)))
+    return _WIF["tok"]
+
+
+def auth_headers():
+    if os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL") and not _WIF["off"] and os.environ.get("ANTHROPIC_AUTH") != "key":
+        try:
+            tok = _wif_token()
+            if not _WIF["said"]:
+                log("  Claude 인증: WIF (키 없이 단기 토큰)")
+                _WIF["said"] = True
+            return {"authorization": f"Bearer {tok}"}
+        except Exception as e:  # noqa: BLE001
+            log(f"  WIF 실패 → API 키로 진행 ({str(e)[:60]})")
+            _WIF["off"] = True
+    return {"x-api-key": secret("ANTHROPIC_API_KEY")}
+
 def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, mock_name=None, max_searches=6, images=None):
     """프롬프트를 보내고 JSON 한 덩어리를 돌려받아요."""
     if os.environ.get("MOCK_LLM"):
@@ -107,11 +147,14 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
         body["messages"][0]["content"] = blocks + [{"type": "text", "text": prompt}]
     if web_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}]
-    headers = {"x-api-key": secret("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
-               "content-type": "application/json"}
     last = ""
     for attempt in range(6):
+        headers = {**auth_headers(), "anthropic-version": "2023-06-01", "content-type": "application/json"}
         code, errtext, data = _stream(body, headers)
+        if code == 401 and _WIF.get("tok"):  # 토큰이 거절되면 이번 실행은 API 키로
+            log("  WIF 토큰이 거절돼서 API 키로 바꿔요")
+            _WIF.update(tok=None, off=True)
+            continue
         if code in (429, 500, 502, 503, 529):
             time.sleep(15 * (attempt + 1))
             continue

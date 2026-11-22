@@ -15,6 +15,7 @@ on:
       photos: { description: "사진으로 글쓰기: 관리화면에서 올린 사진 폴더 (uploads/...)", required: false }
 permissions:
   contents: write
+  id-token: write  # Claude WIF (키 없이 단기 토큰)
   pull-requests: write
 concurrency: studio-generate
 jobs:
