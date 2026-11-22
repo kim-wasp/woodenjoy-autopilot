@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T12:02+09:00",
+  "updated": "2026-11-22T12:25+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1008,6 +1008,16 @@
       "title": "⚡ 이용철 법무장관 후보 청문회 24일, 공소취소·대장동·도덕성 쟁점",
       "platform": "threads",
       "at": "2026-11-22T07:25:22+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-22-issue-1059",
+      "title": "⚡ 코스피 5.21% 급락, 국힘 '블랙먼데이 대비 긴급조치' 요구",
+      "platform": "threads",
+      "at": "2026-11-22T12:25:56+09:00",
       "state": "done",
       "url": null
     },
