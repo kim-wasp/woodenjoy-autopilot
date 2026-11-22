@@ -1,0 +1,262 @@
+{
+  "id": "woodenjoy/2026-11-22-window-condensation-tape-humidity",
+  "site": "woodenjoy",
+  "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
+  "status": "ready",
+  "created_at": "2026-11-22T20:16+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "창문결로방지",
+    "sub": [
+      "창문결로",
+      "결로방지테이프",
+      "창문단열",
+      "베란다결로"
+    ]
+  },
+  "brief": {
+    "reader": "결로방지 테이프나 뽁뽁이를 붙였는데도 아침마다 창에 물이 맺혀 걸레질하는 아파트·빌라 거주자",
+    "question": "결로방지 테이프를 붙였는데 왜 유리창 물방울은 그대로이고, 무엇부터 해야 하나?",
+    "answer": "결로방지 테이프는 창틀 아래 고인 물을 빨아들이는 용도예요. 유리 물방울은 실내 습도를 40~60%로 맞추고, 맞바람 환기를 하루 3번 하고, 유리 안쪽을 단열해야 줄어요.",
+    "out_of_scope": "창호 교체 비용, 곰팡이 제거 약품 비교, 제습기 모델 추천, 건강 증상 진단",
+    "next_action": "오늘 창가에 온습도계를 두고 습도가 60%를 넘는지, 물이 유리에 맺히는지 창틀 아래에 고이는지부터 확인하기"
+  },
+  "why_this_topic": "창문결로방지 월 2,120회로 7일 전 1,120회보다 89% 늘었고, 창문결로(월 1,620회, +80%)와 베란다결로(월 750회, +44%)도 함께 오르는 중이에요. 11월 말이라 결로가 막 시작되는 때이고, 최근 글(방풍비닐 곰팡이, 뽁뽁이 붙이는 면)이 다룬 '붙이는 법'에서 빠진 '테이프가 못 막는 유리 결로'와 습도·환기 기준을 따로 다뤄 겹치지 않아요. 상위 글들은 방법만 나열하고, 물이 맺히는 자리마다 다른 해결책은 빠뜨리고 있었어요.",
+  "title_candidates": [
+    {
+      "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "창문 결로방지, 아침마다 창틀 걸레질하는 집은 습도계부터",
+      "pattern": "대상·상황",
+      "score": 8
+    },
+    {
+      "title": "창문 결로방지 테이프 vs 뽁뽁이, 물 맺히는 자리 보고 고르세요",
+      "pattern": "비교",
+      "score": 8
+    },
+    {
+      "title": "창문 결로방지 기준은 습도 40~60%, 환기는 하루 3번 30분",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "창문 결로방지, 옷장 벽에 붙이면 창 옆 벽지가 젖어요",
+      "pattern": "실수·손해",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목들의 공통점: '창문 결로 방지 방법', '2가지 방법', '해결법'처럼 방법을 나열하고 테이프·뽁뽁이·환기를 한 줄로 섞어 놓음 / 우리가 다르게 갈 점: 테이프는 창틀 아래 물만 받는다는 점, 물이 맺히는 자리(유리·창틀 아래·벽)마다 다른 해결책, 습도 40~60%와 하루 3번 환기라는 공공기관 숫자를 제목과 본문에 넣음",
+  "meta_description": "결로방지 테이프는 창틀 아래 물만 받아요. 유리 물방울은 습도 40~60%, 맞바람 환기 하루 3번 30분, 유리 단열로 줄여요. 물 맺히는 자리별로 뭘 사야 하는지 표로 정리했어요.",
+  "hero_prompt": "Casual smartphone photo inside a Korean apartment in winter, close view of the lower part of a white PVC sliding window: the glass covered in dense condensation droplets running down, a small puddle of water collected in the bottom window track and rubber gasket, a thin strip of white absorbent tape along the frame edge slightly damp. Slightly tilted frame, mixed warm indoor light and cold blue daylight from outside, a folded damp towel and a plastic plant pot at the edge of the windowsill, slight dust on the sill. Center area of the image relatively simple (fogged glass). Realistic, unpolished, no text, no people, no showroom styling, no HDR, no heavy background blur.",
+  "thumb_text": "테이프 붙였는데\n유리는 줄줄?",
+  "category": "",
+  "kind": "main",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "실내생활 늘어나는 겨울철, 공기질 관리 어떻게? (대한민국 정책브리핑, 국립환경과학원 자료)",
+      "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148909591"
+    },
+    {
+      "title": "결로 저감 위한 공동주택 생활환경 홍보물 (국토교통부)",
+      "url": "https://www.molit.go.kr/USR/policyData/m_34681/dtl.jsp?id=4099"
+    },
+    {
+      "title": "실내공기질 자율적 관리 요령 (실내공기질 관리 종합정보망)",
+      "url": "https://www.inair.or.kr/info/m/selfguide.html"
+    },
+    {
+      "title": "겨울 창틀 결로, 단열 필름 vs 에어캡 vs 결로 방지 테이프 (TILNOTE)",
+      "url": "https://tilnote.io/en/pages/6ae0e8f3e402ea9db2a3cfcb"
+    },
+    {
+      "title": "창문 뽁뽁이 효과, 결로는 늦추지만 틈바람은 따로 막기",
+      "url": "https://bringthehome.co.kr/blog/window-bubble-wrap-condensation"
+    },
+    {
+      "title": "창문 꼭 닫고 살았는데…겨울철 결로·곰팡이 키운 4가지 실수 (뷰어스)",
+      "url": "https://feed.viewus.co.kr/ai/article/360328/"
+    },
+    {
+      "title": "베란다 곰팡이 제거, 베란다 결로 막는 환기 (국토교통부 자료 인용)",
+      "url": "https://www.yugacrew.com/crewletter/balcony-mold-condensation"
+    },
+    {
+      "title": "창문 결로 해결 방법 (창호 비교표)",
+      "url": "https://sashlab.co.kr/info/%EC%B0%BD%EB%AC%B8-%EA%B2%B0%EB%A1%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95-%EC%9B%90%EC%9D%B8%EB%B6%80%ED%84%B0-%EA%B7%BC%EB%B3%B8-%ED%95%B4%EA%B2%B0%EA%B9%8C%EC%A7%80-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-j7axl"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "모음형",
+    "ending": "저장",
+    "cover_hooks": [
+      "결로방지 테이프, 유리 물방울엔 약해요",
+      "창문 결로 줄이는 5가지",
+      "아침마다 창틀 걸레질하는 집이라면"
+    ],
+    "caption": "결로방지 테이프 붙였는데 유리창은 아침마다 줄줄 흐르나요?\n\n결로방지 테이프는 창틀 아래 고인 물을 빨아들이는 용도예요. 유리에 맺히는 물방울은 실내 습도를 40~60%로 맞추고, 맞바람 환기를 하루 3번 하고, 유리 안쪽을 뽁뽁이나 단열필름으로 덮어야 줄어요.\n바깥벽에 붙은 옷장 뒤가 젖는다면 5~10cm 띄워 보세요.\n\n창가 물 닦다가 생각날 때 다시 열 수 있게 저장 버튼 하나 눌러 두세요.\n\n#셀프인테리어 #창문결로 #결로방지 #창문결로방지"
+  },
+  "threads": {
+    "style": "퀴즈",
+    "hooks": [
+      "결로방지 테이프 붙이면 유리 결로도 끝? OX",
+      "겨울 환기, 정부 안내는 하루 몇 번일까",
+      "아침 창틀 물, 범인은 습도야 창문이야?"
+    ],
+    "posts": [
+      "결로방지 테이프 붙이면 유리 결로도 끝? OX\n\n아침마다 창틀에 물 고여서 걸레 들고 서 있는 집 진짜 많더라. 그러다 결로방지 테이프 한 롤 장바구니에 넣는 거지.\n근데 붙이고 나서 다음 날 아침 유리창은 어떨까?\n\nO 아니면 X, 속으로 하나 찍고 첫 댓글 열어 봐",
+      "정답은 X야. 결로방지 테이프는 창틀 아래 고인 물을 빨아들이는 거라 유리에 맺히는 물방울엔 효과가 작아.\n유리 쪽은 이렇게 줄여\n1. 창가 습도 40~60%로 맞추기 (60% 넘으면 환기나 제습)\n2. 맞바람 환기 하루 3번, 한 번에 30분 이상 (국립환경과학원 자료 안내)\n3. 유리 안쪽은 뽁뽁이나 단열필름으로 덮기",
+      "물 맺히는 자리별로 뭘 사야 하는지는 표로 따로 만들어 놨어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "창문 결로방지 테이프",
+      "search": "창문 결로방지 테이프 물흡수",
+      "why": "유리는 괜찮은데 창틀 아래 고무 쪽에만 물이 고이는 집",
+      "after": "물 맺히는 자리를 먼저 보고 하나만 사 보세요."
+    },
+    {
+      "name": "디지털 온습도계",
+      "search": "디지털 온습도계 가정용",
+      "why": "결로 원인을 모르겠고 창가 습도부터 재 보고 싶은 집",
+      "after": "물 맺히는 자리를 먼저 보고 하나만 사 보세요."
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 4장: 계정명 자리 침범: \"3번\"",
+      "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-22T20:16+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3255자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"1번\""
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 4장: 계정명 자리 침범: \"3번\""
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"5번\""
+    },
+    {
+      "at": "2026-11-22T20:15+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 2926자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"1번\""
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 4장: 아래 빈 공간 큼 (262px)"
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"5번\""
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N번\"",
+      "text": "카드: 4장: 계정명 자리 침범: \"3번\""
+    },
+    {
+      "at": "2026-11-22T20:16+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 4392,
+        "output_tokens": 1096,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.001
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 49987,
+        "output_tokens": 28149,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 0.8129
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 633,
+        "output_tokens": 244,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0037
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 0.9516,
+    "total_usd": 0.9516,
+    "total_krw": 1330,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
