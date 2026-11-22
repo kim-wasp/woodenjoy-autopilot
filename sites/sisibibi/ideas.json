@@ -1,16 +1,16 @@
 {
   "ideas": [
     {
-      "title": "조희대 대법원장 탄핵, 민주당 당론 채택…'가능한 한 빨리' 왜 지금?",
-      "keyword": "조희대 탄핵 당론",
+      "title": "조희대 탄핵안 '12월 초 발의, 연내 의결'…판결 말고 '절차'가 사유인 이유",
+      "keyword": "조희대 탄핵 연내",
       "trend_keyword": "",
-      "facts": "여당(민주당)이 조희대 대법원장 탄핵 추진을 당론으로 정하고 '가능한 한 빠른 시일 내' 하겠다고 밝혔어요. JTBC 토론 프로그램은 '돌연 속도를 내는 이유'를 쟁점으로 다뤘어요.",
-      "sides": "추진 측: 당론으로 정한 만큼 가능한 한 빨리 진행해야 한다 / 비판 측: 국회 권력이 이미 탄탄한데 왜 갑자기 속도를 내는지 의문이다",
-      "question": "대법원장 탄핵은 사법부 독립 문제와 맞닿아 있는데, 당론 채택 다음 절차와 시점 중 독자가 가장 먼저 알아야 할 건 뭐라고 보세요?",
+      "facts": "민주당은 조희대 대법원장 탄핵소추안을 12월 초에 발의하고, 12월이 끝나기 전 국회에서 의결하겠다는 방침을 공식화했어요. 민주당은 한덕수 판결의 '내용'이 아니라 '절차상 하자'가 탄핵 사유라고 밝혔고, 탄핵안이 국회를 통과하면 대법원장 직무는 바로 정지돼요.",
+      "sides": "추진 측(민주당): 판결 결과가 아니라 재판 절차를 어긴 문제라서 탄핵 사유가 된다 / 반대 측(국민의힘): 사유부터 찾는 탄핵이고 정치적 보복이다",
+      "question": "'판결 내용이 아니라 절차 문제'라는 구분을 독자에게 설득력 있는 기준으로 보시나요, 아니면 결국 판결에 대한 반발로 보시나요?",
       "metrics": {
-        "news_24h": 100,
-        "news_6h": 60,
-        "news_capped": true,
+        "news_24h": 53,
+        "news_6h": 0,
+        "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
@@ -18,103 +18,103 @@
       },
       "links": [
         {
-          "title": "與 ’조희대 탄핵’ 당론 채택…“가능한 빨리“ - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9mZGpUSUlTV0oxYVJmZ3lqYUNzZmFMTVdMb25mUkxfME1teWpkb1dnSUVWcFkwenFrSFo3clNaQWQ3d19uQzZ3NFF5QXVycjJPczl3eE5RT05vaG5nMUlpZUUtZ1I0TkU?oc=5"
+          "title": "민주 \"조희대 탄핵 연내 처리\"…국힘 \"억지 탄핵\" - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5IZ2xVTzQ0Z1BCZzBqR3JOWHdQOHJUdHRjVk5OcDg1RHR5ams5RE5oR1JUZndVSER5b0VXQUdhYy1nMTFmTmNnVGNrN1QwbkVDOXZVRGUwc19GUGFEcDByVmxWWXZQUFE?oc=5"
         },
         {
-          "title": "[사사건건] 민주당 ‘조희대 탄핵’ 당론 채택 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1JQTRDMFhBZmJCeURuZUxFMUdCdjJiMm9JU1R5OVpyQlpCb0RBVHlEV3ZsOVdYOFpBSVFhdDNySVowVEFuTzZfMFpaTWs3cGFCc2p1NC16eGR1SEVsOXAxTW03LTdrUQ?oc=5"
+          "title": "與 “조희대 탄핵 연내 처리…한덕수 판결 내용은 제외” - 진일보 | 전남일보",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ERVdQM2JrNlBaYlhtY01NekszQUFfdi1IVmRHNlZIdnNwN2QwX3dwU3QtZ2FwV3BKZ1RTS19JRzBXdE1EVGpEeUdGeTZUSUE1ZTREWHd5UFhHQTJ1dkQ5bTZWUjU2TlJhUEZIaWxiSQ?oc=5"
         },
         {
-          "title": "민주, '조희대 탄핵' 당론 채택‥국힘 \"광기\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9yc1lUeFlPS2kzX2ltRllqeE15UklNZW1QMkFaSzR2QXhTWTJfQ05qT2R6MlRkNUpsbTMwY3B2MlJGZFdlb2VjdGJ2RlNuMzZYMEJiR3o0MjE1cVl0N1BpTVk2QzdaVVdFYlRlUkdiTVdWWUhRZl9OSNIBeEFVX3lxTE4yNGdjTmt4dTlTaHNIZmdZMjY2RFdFRV9NMF9NWTZ0MlJHMk9MVVY1cV9RdFhNVHVlWkxBeW1rUUxKQTlmTEpTMVN5OVhjRkh2R1V2d2pJc21kZjE2QVd2TWtHQ216MENhNDFuc0paQWVwVXdSQ2RtNw?oc=5"
+          "title": "민주당 \"조희대 탄핵 연내 의결...한덕수 판결 내용은 제외\" - YTN",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BMGQyaXIxcmhXZ29YY1VWcV94QndJQ1NjZlhDNFlJS2VaaGx0WlN5TXY3dkpKM25UWXVaZmtLZkpRWkJuemc2dzJueWJodEtrdm9MRW1FUzNzbng0b3phanU0ZlpiT2FKbkloYnJOOExGeFJ3cFE?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 60건), 네이버 월간 검색 10회",
-      "score": 160.1
+      "why": "구글 뉴스 24시간 기사 53건, 네이버 월간 검색 10회",
+      "score": 53.1
     },
     {
-      "title": "민주유공자법 26년 만에 통과, 635명 무엇을 받나…'예우' vs '운동권 특혜'",
-      "keyword": "민주유공자법 통과",
-      "trend_keyword": "",
-      "facts": "민주유공자법 제정안이 여당 주도로 국회 본회의를 통과했고, 국민의힘은 표결에 불참했어요. 보도에 따르면 내년 6월 시행이고, 민주화운동 희생자·유족 635명에게 의료·복지 예우를 하며 박종철·이한열 열사도 유공자가 돼요(제정 추진 기간은 언론마다 26년·28년으로 달라요).",
-      "sides": "찬성 측: 민주화운동 희생자에게 국가가 예우하는 근거가 생겼고 유가족에게 위로가 된다 / 반대 측: '운동권 특혜법'이고 형평성과 유공자 심사의 공정성 문제가 남는다",
-      "question": "윤석열 정부 때 거부권으로 막혔던 법이 2년여 만에 다시 통과됐는데, 예우 대상과 심사 기준을 어디까지 공개해야 '특혜' 논란이 줄어든다고 보세요?",
+      "title": "최교진 교육부 장관 수능 사흘 만에 면직…'AI 부정행위' 책임은 장관 사퇴로 끝날까",
+      "keyword": "최교진 면직",
+      "trend_keyword": "최교진 교육부장관",
+      "facts": "이재명 대통령이 수능 AI 부정행위 대응 논란 끝에 최교진 교육부 장관의 사의를 받아들이고 면직안을 재가했어요. 대통령은 시험 관리 실태를 전반적으로 점검하겠다고 했고, 국민의힘은 사퇴로 끝낼 일이 아니라며 AI 부정행위 전수조사와 특검을 요구했어요.",
+      "sides": "정부·여당: 장관이 책임을 졌고 이제 사후 조치와 재발 방지에 집중해야 한다 / 국민의힘: 장관 사퇴로 덮을 일이 아니라 전수조사와 특검으로 진상을 밝혀야 한다",
+      "question": "수능 AI 부정행위 문제에서 장관 사퇴 다음에 가장 먼저 확인해야 할 건 무엇이라고 보세요(전수조사, 제도 개편, 책임 규명 중)?",
       "metrics": {
-        "news_24h": 100,
-        "news_6h": 44,
-        "news_capped": true,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 130
+        "news_24h": 38,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "최교진 교육부장관",
+        "trend_traffic": 100,
+        "trend_label": "100+",
+        "naver_month": 10
       },
       "links": [
         {
-          "title": "26년 만에 민주유공자법 통과…민주화 운동 희생자·유족 의료비 등 지원 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1LcVVqRjZodl9iWEgwVXpIcUpOUlVRcUw2UXpMbEkyZV9vcHFTaVFzSkJTTGYxcEFuWTY2WmVDVDM3Y3NNX0xVUk9OTkFpQlNQZ21BOTRNSW9XNXdiS3BXOGEycXpnWC1DaW1KU01sbzNnQ2Zo?oc=5"
+          "title": "이 대통령, 최교진 교육장관 면직안 재가…사의 표명 당일 ‘속전속결’ 수리 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBRbVFlVzFETmVpOGpnRXVvTnMtd0ZZcjVtYW1DUjlFLXhCb3ZtS2dNOS05UTlmTGlRQlZrU3ExdVdPSzNZMjRIamJPT1Fpc2E5WHQtOW9DU1hfUdIBX0FVX3lxTFBnWG4zOUREc2thanhlUEcydWsyQ19OWU9sMmFaWUJjbHU0VXlPXzlHSjAyc05IeVhhRDU4U2FhbWdJNmhCSlg0Vlc5NEl0bzV1Mmk4NFloQ1h3QkFfNmVF?oc=5"
         },
         {
-          "title": "’민주유공자법’ 26년만 통과…野 “운동권 특혜법“ 반발 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16Nzd5bWNibTlLQmpmY3pDcU1KUi1CWWh3TEtiUzNUaTR3cl82R3JQcTkxWEhaSDlvWXBjWllaY2VJdTMtWDMzQkctMkljaGo3Ny1HTnc3d2dpUUZsSGxLNGRBTGNhdlk?oc=5"
+          "title": "[속보] 이 대통령, 최교진 교육장관 면직안 재가 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fRlBPYWNMZkV1bFVHUE85cTZJRGlFMGs0RGl2VE9ROGhYejhleVBzLVlXc0w0UGtHNkYyVFl0YWZFUWRwYzNZY1hzZzFHWFdrVFJvN1NJblhPSVh3ZWFsTHFHMjNwNWRSbS1z?oc=5"
         },
         {
-          "title": "'민주유공자법 제정안' 26년 만에 국회 통과…내년 6월 시행 - 대한민국 정책브리핑",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YUTFfR1hLZ0FKTDdlZTBxMWxGQTYzSWpDajNYRktPUkQ0YS1HTGU5OHJ1S3RXZzdqd01MLXpGalFWSFg5LWY2XzRBM2NweXR4YmR6SHZ3NEoxYmpqREctZklBY2ZmYjZrR3ZUWQ?oc=5"
+          "title": "이 대통령, 최교진 면직안 신속 재가‥\"사실상 경질\" - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1BRHotOTlBN1ZJOGlweDNnZUtBU0F2OUxqRjFTZDI2REJOUl94dGttaXFuR25vcmYtVC1idFByMnRMMHhlWmVaZWVrV1NrRVZvd3h6VEhVdUVTbjJtTGc5alItRUF1NFNGeFJVa0NwVFgtc2thdkZ4RNIBeEFVX3lxTFB6b1Q5SEZxZTV3dzY4Q2JQVllYQ2I2V0d4S2dwX0E2MGdISGd1U2lrTG9hR3pqQlVyWi0wSXdZOF9YMEFFUmM0elF6STV3dFRtajdDZ3BPNmc3TnN1MWdWRjNQMlhabkI0bFFwUHJTb093MmxoYWpZdg?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 100+건 (최근 6시간 44건), 네이버 월간 검색 130회",
-      "score": 145.3
+      "why": "구글 뉴스 24시간 기사 38건, 구글 검색 급증 '최교진 교육부장관' 100+, 네이버 월간 검색 10회",
+      "score": 39.1
     },
     {
-      "title": "지방의회법 35년 만에 나오나…시의회가 국회까지 찾아가 '연내' 외친 이유",
-      "keyword": "지방의회법 제정",
+      "title": "예산 마감 앞두고 '162조 미래대응기금'이 뇌관…예산·법안 올스톱 위기 왜?",
+      "keyword": "미래대응기금 예산",
       "trend_keyword": "",
-      "facts": "임인환 대구시의회 의장이 국회를 찾아 지방의회법을 연내에 만들어 달라고 촉구했어요. 법치뉴스는 지방의회가 조직과 예산에서 35년 만에 독립하는 길이 보인다고 보도했어요.",
-      "sides": "찬성 측: 지방의회가 조직·예산을 스스로 갖춰야 집행부(시청·도청)를 제대로 견제할 수 있다 / 신중 측: 반대 논리는 헤드라인에 없어 국회 심사 자료로 확인 필요",
-      "question": "지방의회 독립이 주민 입장에서 실제로 무엇이 달라지는 일인지, 독자에게 어떤 예로 설명하면 좋을까요?",
+      "facts": "내년 예산안 심의가 막바지인데 162조 원 규모 '미래대응기금'을 두고 여야가 삭감 공방을 벌이고 있어요. 여기에 대법원장 탄핵 추진과 인사청문회까지 겹치면서 예산과 법안 처리가 모두 멈출 수 있다는 보도가 이어져요.",
+      "sides": "여당 측: 미래 대응을 위해 기금이 필요하고 예산은 제때 처리해야 한다 / 야당 측: 기금 규모가 과도하며 여당이 강행 처리할 수 있다는 우려가 있다",
+      "question": "162조 미래대응기금 논쟁에서 독자가 꼭 따져봐야 할 지점은 '규모'일까요, '쓰임새를 국회가 통제할 수 있는지'일까요?",
       "metrics": {
-        "news_24h": 76,
+        "news_24h": 20,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 380
+        "naver_month": 20
       },
       "links": [
         {
-          "title": "지방의회법 제정 '청신호'…35년 만에 조직·예산 독립 가시화 - 법치뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBMMmVGeWxGYkZOdHlKaFJzRlhhbWNKbG1zSGlJWERtTTBlbWlQMzJwQ296TjFGVGlBQ2dYYzR2MzJIWlhGd3RpMWxpdW1FbGkyNFFnanoxWmFlUld1RGFkc2JzQTnSAWhBVV95cUxOUEYwVmk4TUtBYzh0YmhnR1R6S1VfVlZyS2xIa09jXzhqWEhaUEdVWUZGSXhvbUlFQV8wMUs0d3ZOZ0puQk1vUnNfdWFJRGRadzV2N3dXRkxtMDl0bnhGMHNXNm44RDZzQQ?oc=5"
+          "title": "예산 처리 시한 D-10…여야, 미래대응기금·전남광주 통합 지원금 ‘충돌’ - 진일보 | 전남일보",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1kSUZ3TWdtUEdBUlFuOVk5eGhwWnpFVEdKalZhbVpvZUNRWG5ITWVGRkdiOFpXRFY0Sy11dXJOZnVBQXZnZk9vbWJNMkRtckd0UTJ4N0xoYWoteDlDQjUzNlR5UDE4S2NHeV9PaURFNA?oc=5"
         },
         {
-          "title": "임인환 대구시의회 의장. ‘지방의회법’ 연내 제정 촉구 국회 방문 - 데일리대구경북뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1rYktLajNkRzd0XzBqeDRod3c2RzZGckFGQUh5elBrazg5ZmlibVJqZEd1WWtrOU9PWXdwNm1oSERaYXNRUkVsUk1iaDhxWFR3b3U0SnV5QnVYaUJET1E4WlI2d2VMQQ?oc=5"
+          "title": "예산안 처리 시한 D-10…여야, 162조 미래대응기금 놓고 정면충돌 - 울산매일 - 울산최초, 최고의 조간신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xcGpfejFKSGRXSXB3TTY4a3FpUk1uVlFKdXJycmJ1bkVHZlN4bmxCaHhUdjFYSFVpekpOTDM5SEM3NDRtTGtwY1VicnRmM0oweWJLNko0UVgxUHI5ZzFteGN1QkRiUU9OZjdNd2lB0gFuQVVfeXFMT3Fwal96MUpIZFdJcHdNNjhrcWlSTW5WUUp1cnJyYnVuRUdmU3hubEJoeFR2MVhIVWl6Sk5MMzlIQzc0NG1Ma3BjVWJydGYzSjB5Yks2SjRRWDFQcjlnMW14Y3VCRGJRT05mN013aUE?oc=5"
         },
         {
-          "title": "시흥시의회, 광역·기초의회 차별 없는 지방의회법 제정 - 오토투데이",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE41MDlqWWVTTjV4RzVxZU10YjJfVVg0MXNYSUxoOXNsS3FxSVFad1Y5cU5VcndEVTlZMy1lUTlGUmsyMUZGYjVoX2tsZlhPWFZYRlJGUTlmOC1vd3BBVnV1UWs5ZHdsbGIwV19xUFdjNA?oc=5"
+          "title": "예산 처리시한 D-10…여야, 미래대응기금 놓고 벼랑끝 대치 가나 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pZ3ZaczA1LXBVM3dIR0M2bUowa2trUGN4VjdicG1ac2ZCT2xBdU5FdFRYNm5iM3NvX2RmZjlnNzhfZ3dUZ1F5a2tmZzlLenBnZWpsTDJFUm9TbG_SAWBBVV95cUxQWi1mbW1HZGJ1T3M1aFBPeEtIQ3dZMERFVFlUZFh3TFJxTmpKQk5FZ2ljRmJkTmRUdFhvR0I5Y0FReU8wY0VJdWh4MFBfWElQczV2c29lU3hLTWI0ajdYRm4?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 76건, 네이버 월간 검색 380회",
-      "score": 79.8
+      "why": "구글 뉴스 24시간 기사 20건, 네이버 월간 검색 20회",
+      "score": 20.2
     }
   ],
-  "updated": "2026-11-20T22:56+09:00",
+  "updated": "2026-11-22T21:42+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 12566,
-        "output_tokens": 4090,
+        "input_tokens": 13195,
+        "output_tokens": 3825,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1321
+        "usd": 0.1293
       }
     },
     "images": {},
-    "usd": 0.1321,
-    "total_usd": 0.1321,
+    "usd": 0.1293,
+    "total_usd": 0.1293,
     "total_krw": 180,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
