@@ -71,6 +71,10 @@ def _stream(body, headers):
             stop = ev["delta"].get("stop_reason") or stop
             u = ev.get("usage") or {}
             out = max(out, u.get("output_tokens") or 0)
+            # 웹 검색 결과는 입력 토큰으로 청구돼요. 시작 때 숫자(message_start)에는 빠져 있고 끝(message_delta)에 최종값이 와요
+            if any(k in u for k in ("input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")):
+                parts = tuple(max(a, u.get(k) or 0) for a, k in zip(parts, ("input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")))
+                inp = max(inp, sum(parts))
             searches = max(searches, ((u.get("server_tool_use") or {}).get("web_search_requests")) or 0)
         elif t == "error":
             err = ev.get("error", {})
