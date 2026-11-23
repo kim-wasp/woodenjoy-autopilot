@@ -1,14 +1,47 @@
 {
   "ideas": [
     {
-      "title": "조희대 탄핵안 '12월 초 발의, 연내 의결'…판결 말고 '절차'가 사유인 이유",
-      "keyword": "조희대 탄핵 연내",
-      "trend_keyword": "",
-      "facts": "민주당은 조희대 대법원장 탄핵소추안을 12월 초에 발의하고, 12월이 끝나기 전 국회에서 의결하겠다는 방침을 공식화했어요. 민주당은 한덕수 판결의 '내용'이 아니라 '절차상 하자'가 탄핵 사유라고 밝혔고, 탄핵안이 국회를 통과하면 대법원장 직무는 바로 정지돼요.",
-      "sides": "추진 측(민주당): 판결 결과가 아니라 재판 절차를 어긴 문제라서 탄핵 사유가 된다 / 반대 측(국민의힘): 사유부터 찾는 탄핵이고 정치적 보복이다",
-      "question": "'판결 내용이 아니라 절차 문제'라는 구분을 독자에게 설득력 있는 기준으로 보시나요, 아니면 결국 판결에 대한 반발로 보시나요?",
+      "title": "생계급여 기준 2030년 '중위소득 35%'로…누가 새로 받나, 긴급 30만원은 뭔가",
+      "keyword": "생계급여 중위소득",
+      "trend_keyword": "중위소득",
+      "facts": "정부가 생계급여 선정 기준을 2030년까지 단계적으로 중위소득 35%로 올려 받는 사람을 늘리겠다고 했어요. 긴급 위기가구에는 30만원을 바로 지원하는 방안도 함께 나왔어요.",
+      "sides": "찬성 측: 기준이 낮아 지원을 못 받던 가구를 더 챙길 수 있다는 시각 / 반대 측: 대상이 늘어나는 만큼 재정 부담과 재원 마련을 따져봐야 한다는 시각(구체적 반론은 확인 필요)",
+      "question": "생계급여 문턱을 낮추는 것, 복지 사각지대를 줄이는 게 먼저라고 보세요, 아니면 재정 부담을 먼저 따져야 한다고 보세요?",
       "metrics": {
-        "news_24h": 53,
+        "news_24h": 94,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "중위소득",
+        "trend_traffic": 1000,
+        "trend_label": "1000+",
+        "naver_month": 50
+      },
+      "links": [
+        {
+          "title": "생계급여 기준, 2030년까지 중위소득 35%로 올린다 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQb2Vua1JodGZnQzZrc2tjMWVuTTAwUmRFcEFYOWIySldzMlZLWE1scFpLUjNiQ3RQVmFURU9CUDlWUDZ6TGJsWllva2pETXpTbS1VTTBBNjNFWWtqaDlEdDZTOFh3dw?oc=5"
+        },
+        {
+          "title": "생계급여 기준 2030년 중위소득 35%로…기초생활보장 확대 - 대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5MdndOcjRUUERQcXZWS01BUVZSMHRRRkhJblBQel9ZSW5SS0g0ckZ2MnJaNXhubVd5bG8ybnNwTFd0cWg5WWw5UUNwQUM3d3NQT3pXaUZNXzNDTkFnazZnRlFnMVFENDZ1bTVFbg?oc=5"
+        },
+        {
+          "title": "생계급여 2030년까지 기준 중위소득 35%로···중증장애인 가구 부양의무자 기준 폐지 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WdlJkNmRTZzRySk1zZXliLXFzV0hPVkFNSmFaTm83dGNfT2pCVHZ6RmttelktS1BBZlB5VWlSZ1F0WUZrMTBfNnpFLXhTLV83aE9xM09SQzNPUdIBX0FVX3lxTE14X2RLTnNkVzRJNE9SenVkMlU4VXpVbWF5c0NiYVRzVDdmSUxwTUUzUjdvMnIxdENyTnVHZHRKXzNwaDhWVThDcnQtNzFlNUtmTkxRX1FvMEc4eFZIZVc4?oc=5"
+        }
+      ],
+      "why": "구글 뉴스 24시간 기사 94건, 구글 검색 급증 '중위소득' 1000+, 네이버 월간 검색 50회",
+      "score": 104.5
+    },
+    {
+      "title": "국정원장 강금실·외교 임웅순·통일 홍익표·행안 한준호·문체 강유정, 5자리 바꾼 개각 한눈에",
+      "keyword": "강금실 국정원장",
+      "trend_keyword": "",
+      "facts": "이재명 대통령이 국정원장 후보로 강금실, 외교장관 후보로 임웅순 안보실 2차장을 지명했어요. 통일 홍익표, 행안 한준호, 문체 강유정 수석대변인도 장관 후보로 지명돼 '중폭 개각'이라는 보도가 나왔어요.",
+      "sides": "찬성 측: 임기 중 국정 운영을 다시 짜는 인사라는 시각 / 반대 측: 청와대 참모와 측근을 장관으로 옮긴 인사라는 비판이 나올 수 있어 청문회에서 검증해야 한다는 시각(양쪽 공식 반응은 확인 필요)",
+      "question": "측근·참모 출신을 장관에 앉히는 인사, 손발이 맞는다는 장점과 견제가 약해진다는 걱정 중 어느 쪽이 더 크다고 보세요?",
+      "metrics": {
+        "news_24h": 99,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
@@ -18,103 +51,70 @@
       },
       "links": [
         {
-          "title": "민주 \"조희대 탄핵 연내 처리\"…국힘 \"억지 탄핵\" - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5IZ2xVTzQ0Z1BCZzBqR3JOWHdQOHJUdHRjVk5OcDg1RHR5ams5RE5oR1JUZndVSER5b0VXQUdhYy1nMTFmTmNnVGNrN1QwbkVDOXZVRGUwc19GUGFEcDByVmxWWXZQUFE?oc=5"
+          "title": "이 대통령, 국정원장 후보자에 강금실 전 법무장관 지명 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9DYlBXalFRSTRFS2FDWHJxTEpwUmZjeGMtMXNacmc5bEt1NklRd2d4bENOeldVWTR2S0ZRLVM0dDROWG51X1JxamtyM0JPWHpscVl6MnhhVThfanhoU1VsWmZrWVNwalloS213?oc=5"
         },
         {
-          "title": "與 “조희대 탄핵 연내 처리…한덕수 판결 내용은 제외” - 진일보 | 전남일보",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ERVdQM2JrNlBaYlhtY01NekszQUFfdi1IVmRHNlZIdnNwN2QwX3dwU3QtZ2FwV3BKZ1RTS19JRzBXdE1EVGpEeUdGeTZUSUE1ZTREWHd5UFhHQTJ1dkQ5bTZWUjU2TlJhUEZIaWxiSQ?oc=5"
+          "title": "[프로필] 강금실 국정원장 후보자…첫 여성 법무장관 출신 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ock52UmRWUWl0dFVnQXlGbDVqY1FQWnEtNDg1cFc3eGRGOGx6dkNZWmo5cHRnRVZOd2hZRFdFWC1uRDlZd1YycmN2aHFLNENnX0p1VmtoWDhOVTTSAWBBVV95cUxOZ1JMWWRkYXUwOXRveFRyTnlnQVBXOTNJWXB5ZVRqOGZ1M1RucFNLSWlTblpmWExybms4Vi0zbzdLNzRkWmh1RXhFSmozSFRmRFpKdWJudkJmaFVmRmZPWnE?oc=5"
         },
         {
-          "title": "민주당 \"조희대 탄핵 연내 의결...한덕수 판결 내용은 제외\" - YTN",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BMGQyaXIxcmhXZ29YY1VWcV94QndJQ1NjZlhDNFlJS2VaaGx0WlN5TXY3dkpKM25UWXVaZmtLZkpRWkJuemc2dzJueWJodEtrdm9MRW1FUzNzbng0b3phanU0ZlpiT2FKbkloYnJOOExGeFJ3cFE?oc=5"
+          "title": "국정원장 후보 강금실... 첫 여성 정보기관 수장 - 조선일보",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOalhXVW5ES2JGSHM0VHBhSlR3Z3hvcWlSU3pMY0ZSaWxna1V5ZVlzVWVYcGp5UDdWdFd5eXpaanh4VzJnNUtNSkpPSENwY2NNTW5SeHZ5TEtFQVdITjkyd3BINFg3X21JZmVjOGFpTDQ3TEdzdVNibVRvbzFjdWZBSDgtd2liZVZG?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 53건, 네이버 월간 검색 10회",
-      "score": 53.1
+      "why": "구글 뉴스 24시간 기사 99건, 네이버 월간 검색 10회",
+      "score": 99.1
     },
     {
-      "title": "최교진 교육부 장관 수능 사흘 만에 면직…'AI 부정행위' 책임은 장관 사퇴로 끝날까",
-      "keyword": "최교진 면직",
-      "trend_keyword": "최교진 교육부장관",
-      "facts": "이재명 대통령이 수능 AI 부정행위 대응 논란 끝에 최교진 교육부 장관의 사의를 받아들이고 면직안을 재가했어요. 대통령은 시험 관리 실태를 전반적으로 점검하겠다고 했고, 국민의힘은 사퇴로 끝낼 일이 아니라며 AI 부정행위 전수조사와 특검을 요구했어요.",
-      "sides": "정부·여당: 장관이 책임을 졌고 이제 사후 조치와 재발 방지에 집중해야 한다 / 국민의힘: 장관 사퇴로 덮을 일이 아니라 전수조사와 특검으로 진상을 밝혀야 한다",
-      "question": "수능 AI 부정행위 문제에서 장관 사퇴 다음에 가장 먼저 확인해야 할 건 무엇이라고 보세요(전수조사, 제도 개편, 책임 규명 중)?",
-      "metrics": {
-        "news_24h": 38,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "최교진 교육부장관",
-        "trend_traffic": 100,
-        "trend_label": "100+",
-        "naver_month": 10
-      },
-      "links": [
-        {
-          "title": "이 대통령, 최교진 교육장관 면직안 재가…사의 표명 당일 ‘속전속결’ 수리 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBRbVFlVzFETmVpOGpnRXVvTnMtd0ZZcjVtYW1DUjlFLXhCb3ZtS2dNOS05UTlmTGlRQlZrU3ExdVdPSzNZMjRIamJPT1Fpc2E5WHQtOW9DU1hfUdIBX0FVX3lxTFBnWG4zOUREc2thanhlUEcydWsyQ19OWU9sMmFaWUJjbHU0VXlPXzlHSjAyc05IeVhhRDU4U2FhbWdJNmhCSlg0Vlc5NEl0bzV1Mmk4NFloQ1h3QkFfNmVF?oc=5"
-        },
-        {
-          "title": "[속보] 이 대통령, 최교진 교육장관 면직안 재가 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fRlBPYWNMZkV1bFVHUE85cTZJRGlFMGs0RGl2VE9ROGhYejhleVBzLVlXc0w0UGtHNkYyVFl0YWZFUWRwYzNZY1hzZzFHWFdrVFJvN1NJblhPSVh3ZWFsTHFHMjNwNWRSbS1z?oc=5"
-        },
-        {
-          "title": "이 대통령, 최교진 면직안 신속 재가‥\"사실상 경질\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1BRHotOTlBN1ZJOGlweDNnZUtBU0F2OUxqRjFTZDI2REJOUl94dGttaXFuR25vcmYtVC1idFByMnRMMHhlWmVaZWVrV1NrRVZvd3h6VEhVdUVTbjJtTGc5alItRUF1NFNGeFJVa0NwVFgtc2thdkZ4RNIBeEFVX3lxTFB6b1Q5SEZxZTV3dzY4Q2JQVllYQ2I2V0d4S2dwX0E2MGdISGd1U2lrTG9hR3pqQlVyWi0wSXdZOF9YMEFFUmM0elF6STV3dFRtajdDZ3BPNmc3TnN1MWdWRjNQMlhabkI0bFFwUHJTb093MmxoYWpZdg?oc=5"
-        }
-      ],
-      "why": "구글 뉴스 24시간 기사 38건, 구글 검색 급증 '최교진 교육부장관' 100+, 네이버 월간 검색 10회",
-      "score": 39.1
-    },
-    {
-      "title": "예산 마감 앞두고 '162조 미래대응기금'이 뇌관…예산·법안 올스톱 위기 왜?",
-      "keyword": "미래대응기금 예산",
+      "title": "한의원 엑스레이 허용법, 의사들 24일 국회 앞 궐기…한의계는 '국회가 답할 차례'",
+      "keyword": "한의사 엑스레이",
       "trend_keyword": "",
-      "facts": "내년 예산안 심의가 막바지인데 162조 원 규모 '미래대응기금'을 두고 여야가 삭감 공방을 벌이고 있어요. 여기에 대법원장 탄핵 추진과 인사청문회까지 겹치면서 예산과 법안 처리가 모두 멈출 수 있다는 보도가 이어져요.",
-      "sides": "여당 측: 미래 대응을 위해 기금이 필요하고 예산은 제때 처리해야 한다 / 야당 측: 기금 규모가 과도하며 여당이 강행 처리할 수 있다는 우려가 있다",
-      "question": "162조 미래대응기금 논쟁에서 독자가 꼭 따져봐야 할 지점은 '규모'일까요, '쓰임새를 국회가 통제할 수 있는지'일까요?",
+      "facts": "한의사도 X-ray를 쓸 수 있게 하는 법안을 두고 의사협회가 폐기를 요구하며 24일 국회 앞 궐기대회를 연다고 밝혔어요. 한의계는 '이제 국회가 답할 차례'라며 통과를 촉구하고 있어요.",
+      "sides": "찬성 측(한의계): 한의사도 X-ray를 쓸 수 있어야 한다며 국회 처리 요구 / 반대 측(의사협회): 허용법은 폐기해야 한다며 국회 앞 집회",
+      "question": "한의사에게 X-ray 사용을 허용하는 것, 환자 편의를 넓히는 일이라고 보세요, 아니면 의료 안전 측면에서 더 따져봐야 한다고 보세요?",
       "metrics": {
-        "news_24h": 20,
+        "news_24h": 49,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
-        "naver_month": 20
+        "naver_month": 210
       },
       "links": [
         {
-          "title": "예산 처리 시한 D-10…여야, 미래대응기금·전남광주 통합 지원금 ‘충돌’ - 진일보 | 전남일보",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1kSUZ3TWdtUEdBUlFuOVk5eGhwWnpFVEdKalZhbVpvZUNRWG5ITWVGRkdiOFpXRFY0Sy11dXJOZnVBQXZnZk9vbWJNMkRtckd0UTJ4N0xoYWoteDlDQjUzNlR5UDE4S2NHeV9PaURFNA?oc=5"
+          "title": "다시 등장한 '한의사 엑스레이 허용법' 정부도 여전히 '물음표' - 의협신문",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5DQzR2a1gwME9nQ2FkMnBKZ2xka0ZpUE9yOTNpdVpCV0piaVFCTVR0WS1RSnVwUi01Yi14RXVlUjJfYUl4NktpbVdyWU9nMkliZGZIQWplU1YzempNV3Z3Z2VranYtbDNvZmVkWG9aa2xiQQ?oc=5"
         },
         {
-          "title": "예산안 처리 시한 D-10…여야, 162조 미래대응기금 놓고 정면충돌 - 울산매일 - 울산최초, 최고의 조간신문",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xcGpfejFKSGRXSXB3TTY4a3FpUk1uVlFKdXJycmJ1bkVHZlN4bmxCaHhUdjFYSFVpekpOTDM5SEM3NDRtTGtwY1VicnRmM0oweWJLNko0UVgxUHI5ZzFteGN1QkRiUU9OZjdNd2lB0gFuQVVfeXFMT3Fwal96MUpIZFdJcHdNNjhrcWlSTW5WUUp1cnJyYnVuRUdmU3hubEJoeFR2MVhIVWl6Sk5MMzlIQzc0NG1Ma3BjVWJydGYzSjB5Yks2SjRRWDFQcjlnMW14Y3VCRGJRT05mN013aUE?oc=5"
+          "title": "의협, 특사경 궐기대회 12일만에 '한의사 엑스레이 저지 궐기' 또 나선다 - MEDI:GATE NEWS",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9vdVZYRGRpUjlNR1B4eGc0TnZaeWRqa1VncjBDRTBtcE9OUVFVVlpZMlBxb1l1bXFEMl90dFpjSXluMkx4ci1DZndLREh0aW5WUC1ON2FZSQ?oc=5"
         },
         {
-          "title": "예산 처리시한 D-10…여야, 미래대응기금 놓고 벼랑끝 대치 가나 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pZ3ZaczA1LXBVM3dIR0M2bUowa2trUGN4VjdicG1ac2ZCT2xBdU5FdFRYNm5iM3NvX2RmZjlnNzhfZ3dUZ1F5a2tmZzlLenBnZWpsTDJFUm9TbG_SAWBBVV95cUxQWi1mbW1HZGJ1T3M1aFBPeEtIQ3dZMERFVFlUZFh3TFJxTmpKQk5FZ2ljRmJkTmRUdFhvR0I5Y0FReU8wY0VJdWh4MFBfWElQczV2c29lU3hLTWI0ajdYRm4?oc=5"
+          "title": "\"한의사 엑스레이 허용은 우회 입법…면허체계 무력화\" - 청년의사",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WSG5qYVA3Ti15Qlh2YlMzV3p4NlV1aXFMek5HT0h0aEdtZ3ZELTFUWXhqbFRPcmZjNG9sQmRtLWtiamQ2cWlsYjc5YzhRaUZwcmZwQVlWRFFoS1RkOU9XdlJXVUhLNWZHa0FZbWM2d9IBc0FVX3lxTE12cmNYd28ta1huVjlsZjkxSEpHbnMtT0JWZUlfWTZPRVZBdnY0TExJd191d3F6UnlMeEZ1X3dxU3dJdHItM3ZBM1p3OFZEVG9DcWktSER1Ri1WVm83VG1VM1FLSWJCMVd2a0FPdm1YLTJmaHc?oc=5"
         }
       ],
-      "why": "구글 뉴스 24시간 기사 20건, 네이버 월간 검색 20회",
-      "score": 20.2
+      "why": "구글 뉴스 24시간 기사 49건, 네이버 월간 검색 210회",
+      "score": 51.1
     }
   ],
-  "updated": "2026-11-22T21:42+09:00",
+  "updated": "2026-11-23T21:38+09:00",
   "basis": "구글 트렌드 한국 실시간 인기 검색어 + 구글 뉴스 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 13195,
-        "output_tokens": 3825,
+        "input_tokens": 13068,
+        "output_tokens": 3705,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1293
+        "usd": 0.1264
       }
     },
     "images": {},
-    "usd": 0.1293,
-    "total_usd": 0.1293,
+    "usd": 0.1264,
+    "total_usd": 0.1264,
     "total_krw": 180,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
