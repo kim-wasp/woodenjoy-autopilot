@@ -159,6 +159,12 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
         body["messages"][0]["content"] = blocks + [{"type": "text", "text": prompt}]
     if web_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}]
+        # 절약: 웹 검색을 쓰면 검색할 때마다 같은 지침·프롬프트를 다시 읽어요 → 캐시로 두 번째부터 입력값의 5~10%만
+        body["system"] = [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}]
+        c = body["messages"][0]["content"]
+        blocks = c if isinstance(c, list) else [{"type": "text", "text": c}]
+        blocks[-1] = {**blocks[-1], "cache_control": {"type": "ephemeral"}}
+        body["messages"][0]["content"] = blocks
     last = ""
     for attempt in range(6):
         headers = {**auth_headers(), "anthropic-version": "2023-06-01", "content-type": "application/json"}
@@ -189,6 +195,11 @@ def ask_json(system, prompt, model=None, web_search=False, max_tokens=32000, moc
         except (ValueError, json.JSONDecodeError):
             last = f"JSON 형식 오류 (stop={data.get('stop_reason')}, 글자수 {len(text)}): {text[:300]}"
             log("  " + last)
+            if data.get("stop_reason") == "max_tokens" and body["max_tokens"] < 64000:  # 잘린 거면 같은 한도로 다시 물어도 또 잘려요 → 한도를 늘려 처음부터 한 번
+                body["max_tokens"] = min(64000, body["max_tokens"] * 2)
+                body["messages"] = body["messages"][:1]
+                log(f"  출력 한도를 {body['max_tokens']}로 늘려 다시 받아요")
+                continue
             body["messages"] += [{"role": "assistant", "content": text},
                                  {"role": "user", "content": "형식이 잘못됐어요. 설명 없이 JSON 한 덩어리만 다시 주세요."}]
     raise RuntimeError(last or "Claude API 가 계속 바빠요. 잠시 뒤 다시 실행하세요")

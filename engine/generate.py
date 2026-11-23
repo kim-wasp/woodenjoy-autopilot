@@ -1221,7 +1221,8 @@ def research_topic(site, topic):
          "사실은 찾은 자료에 있는 것만 쓰고 지어내지 마세요. 글감이 너무 넓으면 검색이 많은 구체적인 질문 하나로 좁혀요. "
          'JSON: {"title": "제목안(핵심 검색어 앞쪽, 후킹은 사실만)", "keyword": "사람들이 실제로 치는 검색어(2~4단어)", "angle": "이 글이 답할 질문 한 줄", '
          '"facts": "글에 쓸 핵심 정보 3문장 이내(300자 이내)", "links": [{"title": "자료 제목(기관·매체명 포함)", "url": "https://..."}] 3~6개}')])
-    x = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, max_tokens=4000, mock_name=f"{site['id']}_ideas")
+    # 절약: 글감 찾기는 본문만큼 글솜씨가 필요 없어서 보조 모델(Sonnet, Opus의 절반 가격)로
+    x = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("helper_model", "claude-sonnet-5-5"), web_search=True, max_tokens=4000, mock_name=f"{site['id']}_ideas")
     x["links"] = [l for l in (x.get("links") or []) if l.get("url") and sources.alive(l["url"])][:6]
     n, _ = trends.count_24h(x.get("keyword") or topic) if site.get("opinion") else (0, [])
     nv = trends.naver_volume(x.get("keyword") or "")
@@ -1294,7 +1295,7 @@ def ideas(site_id, topic=None):
         __import__("trends").naver_trends_block(site_id),
         "웹 검색으로 지금 시기에 검색 수요가 있고 수익(애드센스·애드포스트 단가, 제휴)에도 유리한 주제를 확인해 글감 10개를 추천하세요. 최근 제목과 겹치지 않게. "
         'JSON: {"ideas": [{"title": "후킹 있는 제목안", "keyword": "핵심 키워드", "why": "근거(검색량/시기/이슈/수익성)", "angle": "다른 글과 다른 점"}]}'])
-    res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=True, mock_name=f"{site_id}_ideas")
+    res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("helper_model", "claude-sonnet-5-5"), web_search=True, mock_name=f"{site_id}_ideas")
     res["updated"] = now_kst().isoformat(timespec="minutes")
     save_json(SITES / site_id / "ideas.json", keep_mine(site_id, res))
     log(f"글감 {len(res.get('ideas', []))}개 저장 → sites/{site_id}/ideas.json")
