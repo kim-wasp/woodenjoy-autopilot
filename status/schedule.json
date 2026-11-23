@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:02+09:00",
+  "updated": "2026-11-23T12:11+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1151,6 +1151,15 @@
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "instagram",
       "at": "2026-11-24T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-23-wrist-pain-numbness-after-housework-warning-signs",
+      "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
+      "platform": "blog",
+      "at": "2026-11-25T07:00+09:00",
       "state": "planned"
     }
   ]
