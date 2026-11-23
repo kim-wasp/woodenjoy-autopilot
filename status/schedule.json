@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T21:44+09:00",
+  "updated": "2026-11-23T22:00+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1181,12 +1181,30 @@
       "state": "planned"
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
+      "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
+      "platform": "blog",
+      "at": "2026-11-24T12:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-22-window-condensation-tape-humidity",
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "threads",
       "at": "2026-11-24T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
+      "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
+      "platform": "threads",
+      "at": "2026-11-24T19:30+09:00",
       "state": "planned"
     },
     {
