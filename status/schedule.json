@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:15+09:00",
+  "updated": "2026-11-23T12:33+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1102,15 +1102,6 @@
       "url": null
     },
     {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-23-issue-1115",
-      "title": "⚡ 하이트진로 최대 36개월분 희망퇴직, 받을지 버틸지 체크리스트",
-      "platform": "threads",
-      "at": "2026-11-23T12:15+09:00",
-      "state": "planned"
-    },
-    {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-23-issue-1115",
@@ -1121,13 +1112,33 @@
       "url": null
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-23-issue-1115",
+      "title": "⚡ 하이트진로 최대 36개월분 희망퇴직, 받을지 버틸지 체크리스트",
+      "platform": "threads",
+      "at": "2026-11-23T12:33+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
+      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "platform": "threads",
+      "at": "2026-11-23T12:33:15+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-20-front-door-lock-replacement-3-measurements",
       "title": "현관문 도어락 교체, 사 놓고 구멍 안 맞는 집은 3곳을 안 쟀어요",
       "platform": "threads",
-      "at": "2026-11-23T12:30+09:00",
-      "state": "planned"
+      "at": "2026-11-23T12:33:57+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "infobay",
@@ -1190,15 +1201,6 @@
       "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
       "platform": "blog",
       "at": "2026-11-25T07:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
-      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
-      "platform": "threads",
-      "at": "2026-11-25T12:30+09:00",
       "state": "planned"
     }
   ]
