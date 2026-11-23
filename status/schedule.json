@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T08:47+09:00",
+  "updated": "2026-11-24T08:48+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1194,6 +1194,16 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-24-issue-0701",
+      "title": "⚡ 유족연금 중복급여 조정: 20.8만명 겹침, 3.7만명은 내 연금 정지",
+      "platform": "threads",
+      "at": "2026-11-24T08:48:21+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
       "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
       "platform": "blog",
@@ -1207,15 +1217,6 @@
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "threads",
       "at": "2026-11-24T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
-      "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
-      "platform": "threads",
-      "at": "2026-11-24T19:30+09:00",
       "state": "planned"
     },
     {
@@ -1252,6 +1253,15 @@
       "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
       "platform": "threads",
       "at": "2026-11-25T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
+      "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
+      "platform": "threads",
+      "at": "2026-11-25T19:30+09:00",
       "state": "planned"
     },
     {
