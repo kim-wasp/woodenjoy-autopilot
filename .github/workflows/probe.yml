@@ -32,3 +32,6 @@ jobs:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
           GH_TOKEN: ${{ github.token }}
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

@@ -145,6 +145,8 @@ def watch(only=None):
     tl = None
     for sid in ([only] if only else site_ids()):
         site = load_site(sid)
+        import usage
+        usage.SITE = sid
         cfg = site.get("issue_track") or {}
         if not cfg.get("enabled") or not (site.get("threads") or {}).get("enabled"):
             continue

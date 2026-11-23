@@ -105,6 +105,11 @@ def generate(prompt, out, cfg, size=(1200, 675), _retry=False):
         d = r.json()["data"][0]
         raw = base64.b64decode(d["b64_json"]) if d.get("b64_json") else requests.get(d["url"], timeout=120).content
         IMAGES[cfg.get("model", "gpt-image-1")] = IMAGES.get(cfg.get("model", "gpt-image-1"), 0) + 1
+        try:
+            import usage
+            usage.image(cfg.get("model", "gpt-image-1"), "openai")
+        except Exception:  # noqa: BLE001
+            pass
     elif provider == "gemini":
         # 구글은 이미지 모델 이름이 자주 바뀌어요 → 설정한 이름부터 차례로 시도
         models = [cfg.get("model")] if cfg.get("model", "").startswith("gemini") else []
@@ -124,6 +129,11 @@ def generate(prompt, out, cfg, size=(1200, 675), _retry=False):
             parts = r.json()["candidates"][0]["content"]["parts"]
             raw = base64.b64decode(next(p["inlineData"]["data"] for p in parts if "inlineData" in p))
             IMAGES[model] = IMAGES.get(model, 0) + 1
+            try:
+                import usage
+                usage.image(model, "gemini")
+            except Exception:  # noqa: BLE001
+                pass
             break
         if raw is None:
             raise RuntimeError(f"Gemini 이미지 모델을 찾지 못했어요 ({err})")

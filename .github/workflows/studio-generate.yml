@@ -201,3 +201,6 @@ jobs:
               sleep 5
             done
           done
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

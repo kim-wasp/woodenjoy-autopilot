@@ -37,11 +37,13 @@ def _extract_json(text):
 
 def _stream(body, headers):
     """스트리밍으로 받아요 (긴 글도 시간 제한에 안 걸리게). 응답을 일반 응답 모양으로 다시 맞춰요."""
+    t0 = time.time()
     r = requests.post(API, json={**body, "stream": True}, headers=headers, timeout=900, stream=True)
     if r.status_code >= 400:
         return r.status_code, r.text, None
     blocks, stop, err = {}, None, None
     inp = out = searches = 0
+    parts = (0, 0, 0)
     for raw in r.iter_lines(decode_unicode=True):
         if not raw or not raw.startswith("data:"):
             continue
@@ -50,6 +52,7 @@ def _stream(body, headers):
         if t == "message_start":
             u = (ev.get("message") or {}).get("usage") or {}
             inp = sum(u.get(k) or 0 for k in ("input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens"))
+            parts = (u.get("input_tokens") or 0, u.get("cache_creation_input_tokens") or 0, u.get("cache_read_input_tokens") or 0)
             out = u.get("output_tokens") or 0
         if t == "content_block_start":
             b = dict(ev["content_block"])
@@ -73,6 +76,11 @@ def _stream(body, headers):
             err = ev.get("error", {})
     _add_usage(body.get("model", "?"), inp, out, searches)
     USAGE[body.get("model", "?")]["calls"] += 1
+    try:  # 사용량 장부 (사이트·작업·용도별로 나중에 합쳐 봐요)
+        import usage
+        usage.claude(body.get("model", "?"), parts[0], parts[1], parts[2], out, searches, time.time() - t0)
+    except Exception:  # noqa: BLE001
+        pass
     if err:
         code = 529 if err.get("type") == "overloaded_error" else 500
         return code, json.dumps(err, ensure_ascii=False), None

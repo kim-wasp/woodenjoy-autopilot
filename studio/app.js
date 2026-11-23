@@ -31,7 +31,7 @@ function renderLogin() {
 }
 
 // ---------- 틀 ----------
-const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['trends', '트렌드·순위'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['guide', '연결 가이드']];
+const NAV = [['home', '홈'], ['review', '승인 대기'], ['create', '만들기'], ['ideas', '글감'], ['trends', '트렌드·순위'], ['schedule', '일정'], ['cards', '앱 카드'], ['coupang', '쿠팡 링크'], ['sites', '사이트'], ['usage', '사용량'], ['guide', '연결 가이드']];
 function shell(active, inner) {
   app.innerHTML = `<header class="top"><div class="in"><div class="logo">콘텐츠 스튜디오</div>
     <nav class="tabs">${NAV.map(([k, v]) => `<a href="#/${k}" class="${k === active ? 'on' : ''}">${v}</a>`).join('')}</nav>
@@ -222,6 +222,38 @@ async function viewTrends() {
   <div class="card"><h2>저장된 검색어</h2><div class="list">${(d.entries || []).map((e) => `<div class="item"><div class="t"><b>${fmt(e.at)}${e.label ? ' · ' + esc(e.label) : ''}</b><span class="small ${fresh(e) ? '' : 'muted'}">${e.keywords.map(esc).join(', ')}</span>${fresh(e) ? '' : '<span class="small muted">7일 지나서 이제 참고하지 않아요</span>'}</div><button class="btn" data-at="${esc(e.at)}">지우기</button></div>`).join('') || '<p class="muted small">아직 없어요</p>'}</div></div></div>`;
   $('#tf').onsubmit = async (e) => { e.preventDefault(); try { const r = await api('trends', { method: 'POST', body: { text: $('#ttext').value, label: $('#tlabel').value } }); toast(`검색어 ${r.count}개 저장했어요`); viewTrends(); } catch (e2) { if (e2.message !== 'login') toast(e2.message); } };
   $('#main').querySelectorAll('[data-at]').forEach((b) => { b.onclick = async () => { try { await api('trends', { method: 'DELETE', body: { at: b.dataset.at } }); viewTrends(); } catch (e2) { if (e2.message !== 'login') toast(e2.message); } }; });
+}
+
+// ---------- 사용량 (Claude 토큰·웹 검색·사진, 추정 비용) ----------
+async function viewUsage(month) {
+  shell('usage', loading());
+  const d = await api('usage');
+  const ms = Object.keys(d.months || {}).sort().reverse();
+  if (!ms.length) { $('#main').innerHTML = '<div class="empty">아직 기록이 없어요. 다음 자동 실행부터 쌓여요.</div>'; return; }
+  const m = month && d.months[month] ? month : ms[0];
+  const mo = d.months[m], k = d.usd_krw || 1400;
+  const n = (x) => Number(x || 0).toLocaleString();
+  const won = (u) => '₩' + Math.round((u || 0) * k).toLocaleString();
+  const tok = (b) => (b.input || 0) + (b.cache_write || 0) + (b.cache_read || 0) + (b.output || 0);
+  const max = (obj) => Math.max(...Object.values(obj).map((b) => b.usd || 0), 0.0001);
+  const table = (title, obj, desc) => { const mx = max(obj); return `<div class="card"><h2>${title}</h2>${desc ? `<p class="small muted">${desc}</p>` : ''}<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>항목</th><th>추정 비용</th><th>Claude 호출</th><th>입력 토큰</th><th>출력 토큰</th><th>웹 검색</th><th>사진</th></tr></thead><tbody>${Object.entries(obj).map(([name, b]) => `<tr><td>${esc(name)}<div style="height:4px;background:#2f6b57;border-radius:2px;margin-top:4px;width:${Math.max(2, Math.round((b.usd || 0) / mx * 100))}%"></div></td><td><b>${won(b.usd)}</b><br><span class="small muted">$${(b.usd || 0).toFixed(2)}</span></td><td>${n(b.calls)}</td><td>${n((b.input || 0) + (b.cache_write || 0) + (b.cache_read || 0))}</td><td>${n(b.output)}</td><td>${n(b.web_searches)}</td><td>${n(b.images)}</td></tr>`).join('')}</tbody></table></div></div>`; };
+  const t = mo.total;
+  const days = Object.keys(mo.by_day).length || 1;
+  const runs = (d.recent_runs || []).map((r) => `<tr><td>${fmt(r.t)}</td><td>${esc(siteName(r.site) || r.site)}</td><td>${esc(r.task)}</td><td>${esc(r.workflow)}${r.event === 'schedule' ? ' (자동)' : r.event === 'workflow_dispatch' ? ' (버튼)' : ''}</td><td>${n(r.calls)}</td><td>${n(r.images)}</td><td>${won(r.usd)}</td></tr>`).join('');
+  await sites();
+  $('#main').innerHTML = `<div class="page-h"><h1>사용량</h1><select id="um">${ms.map((x) => `<option ${x === m ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
+  <div class="card"><h2>${m} 합계</h2>
+    <p style="font-size:28px;margin:6px 0"><b>${won(t.usd)}</b> <span class="small muted">($${t.usd.toFixed(2)}, 하루 평균 ${won(t.usd / days)})</span></p>
+    <p class="small">Claude 호출 ${n(t.calls)}회 · 토큰 ${n(tok(t))} (입력 ${n(t.input)}, 캐시 저장 ${n(t.cache_write)}, 캐시 읽기 ${n(t.cache_read)}, 출력 ${n(t.output)}) · 웹 검색 ${n(t.web_searches)}회 · 사진 ${n(t.images)}장</p>
+    <p class="small muted">${esc(d.note)} 마지막 갱신 ${fmt(d.updated)}</p></div>
+  ${table('사이트별', mo.by_site)}
+  ${table('작업별', mo.by_task, '실행한 일 단위 (글 만들기, 속보 감지, 업로드, 글감 추천 등)')}
+  ${table('용도별', mo.by_purpose, '한 작업 안에서 Claude를 어디에 썼는지 (본문 쓰기, 점검 고치기, AI 티 다듬기, 검색어 뽑기 등)')}
+  ${table('모델별', mo.by_model)}
+  ${table('사이트 / 작업', mo.by_site_task)}
+  ${table('날짜별', Object.fromEntries(Object.entries(mo.by_day).reverse()))}
+  <div class="card"><h2>최근 실행 60건</h2><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>시각</th><th>사이트</th><th>작업</th><th>워크플로</th><th>호출</th><th>사진</th><th>비용</th></tr></thead><tbody>${runs || '<tr><td colspan="7" class="muted">아직 없어요</td></tr>'}</tbody></table></div></div>`;
+  $('#um').onchange = (e) => { location.hash = '#/usage/' + e.target.value; };
 }
 
 // ---------- 일정 ----------
@@ -447,6 +479,7 @@ async function route() {
     if (page === 'cards') return viewCards(arg);
     if (page === 'coupang') return viewCoupang();
     if (page === 'sites') return arg ? viewSite(arg) : viewSites();
+    if (page === 'usage') return viewUsage(arg);
     if (page === 'guide') return viewGuide();
     return viewHome();
   } catch (e) { if (e.message !== 'login') { const m = $('#main'); if (m) m.innerHTML = `<div class="empty">문제가 생겼어요: ${esc(e.message)}</div>`; } }

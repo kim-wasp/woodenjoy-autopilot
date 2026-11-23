@@ -57,3 +57,6 @@ jobs:
           if [ "$MODE" = "social" ]; then python3 engine/check_social.py; else python3 engine/commonsense.py "$SITE" "$MODE"; fi
           git config user.name "studio-bot"; git config user.email "bot@users.noreply.github.com"
           git add sites status && git commit -qm "앱 카드 $MODE: $SITE" && git pull -q --rebase && git push -q || echo "바뀐 것 없음"
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

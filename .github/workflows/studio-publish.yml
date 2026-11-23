@@ -139,3 +139,6 @@ jobs:
             echo "::warning::올리기 겹침, 다시 시도 $i"; sleep 5
           done
           echo "::error::기록 저장 실패"; exit 1
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

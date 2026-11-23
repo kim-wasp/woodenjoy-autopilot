@@ -552,6 +552,8 @@ def publish(d, platform, dry=False):
     d = Path(d).resolve()
     post = load_json(d / "post.json")
     site = load_site(post["site"])
+    import usage
+    usage.SITE = post["site"]
     pub = post.setdefault("published", {})
     if pub.get(platform) and not dry and not os.environ.get("FORCE"):
         log("이미 올라갔어요")

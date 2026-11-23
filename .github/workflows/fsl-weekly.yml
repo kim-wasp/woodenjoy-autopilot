@@ -24,3 +24,6 @@ jobs:
       - run: |
           git config user.name studio-bot; git config user.email bot@users.noreply.github.com
           for i in 1 2 3; do git add status/fsl_weekly.json && git commit -qm "건강 주간 수치 $(date +%F)" || break; git pull -q --rebase && git push -q && break; sleep 5; done
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

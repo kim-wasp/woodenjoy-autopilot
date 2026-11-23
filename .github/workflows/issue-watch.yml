@@ -41,3 +41,6 @@ jobs:
             [ -n "$SITE" ] && break   # 수동 실행(사이트 지정)은 한 번만
             [ $round -lt 6 ] && sleep 3300
           done
+      - name: 사용량 기록 저장
+        if: always()
+        run: bash tools/save_usage.sh

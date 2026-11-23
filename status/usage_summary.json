@@ -1,0 +1,383 @@
+{
+ "updated": "2026-11-23T19:12+09:00",
+ "ledger_start": "2026-11-23T19:12:51+09:00",
+ "usd_krw": 1400,
+ "note": "비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 19:12 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
+ "months": {
+  "2026-11": {
+   "total": {
+    "usd": 32.3314,
+    "input": 1564108,
+    "cache_write": 0,
+    "cache_read": 0,
+    "output": 926522,
+    "web_searches": 201,
+    "calls": 185,
+    "images": 55
+   },
+   "by_site": {
+    "정치 (시시비비노트)": {
+     "usd": 9.9642,
+     "input": 443166,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 267839,
+     "web_searches": 87,
+     "calls": 47,
+     "images": 16
+    },
+    "상식 (커먼센스 · 블로그 + infobay_kr)": {
+     "usd": 9.4155,
+     "input": 401855,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 252277,
+     "web_searches": 44,
+     "calls": 47,
+     "images": 21
+    },
+    "가구·인테리어 (우드엔조이)": {
+     "usd": 8.9696,
+     "input": 561248,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 284629,
+     "web_searches": 42,
+     "calls": 58,
+     "images": 9
+    },
+    "건강 (forsmartlife.com)": {
+     "usd": 3.9821,
+     "input": 157839,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 121777,
+     "web_searches": 28,
+     "calls": 33,
+     "images": 9
+    }
+   },
+   "by_task": {
+    "글 만들기(이전 기록)": {
+     "usd": 32.3314,
+     "input": 1564108,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 926522,
+     "web_searches": 201,
+     "calls": 185,
+     "images": 55
+    }
+   },
+   "by_purpose": {
+    "글 쓰기 전체(세부 기록 전)": {
+     "usd": 24.9614,
+     "input": 1564108,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 926522,
+     "web_searches": 201,
+     "calls": 185,
+     "images": 0
+    },
+    "사진 만들기": {
+     "usd": 7.37,
+     "input": 0,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 0,
+     "web_searches": 0,
+     "calls": 0,
+     "images": 55
+    }
+   },
+   "by_model": {
+    "claude-opus-5-5": {
+     "usd": 23.7694,
+     "input": 1194143,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 849150,
+     "web_searches": 201,
+     "calls": 121,
+     "images": 0
+    },
+    "gemini-3-pro-image": {
+     "usd": 7.37,
+     "input": 0,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 0,
+     "web_searches": 0,
+     "calls": 0,
+     "images": 55
+    },
+    "claude-sonnet-5-5": {
+     "usd": 1.1724,
+     "input": 306882,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 50807,
+     "web_searches": 0,
+     "calls": 50,
+     "images": 0
+    },
+    "claude-haiku-5-5": {
+     "usd": 0.0196,
+     "input": 63083,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 26565,
+     "web_searches": 0,
+     "calls": 14,
+     "images": 0
+    }
+   },
+   "by_site_task": {
+    "정치 (시시비비노트) / 글 만들기(이전 기록)": {
+     "usd": 9.9642,
+     "input": 443166,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 267839,
+     "web_searches": 87,
+     "calls": 47,
+     "images": 16
+    },
+    "상식 (커먼센스 · 블로그 + infobay_kr) / 글 만들기(이전 기록)": {
+     "usd": 9.4155,
+     "input": 401855,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 252277,
+     "web_searches": 44,
+     "calls": 47,
+     "images": 21
+    },
+    "가구·인테리어 (우드엔조이) / 글 만들기(이전 기록)": {
+     "usd": 8.9696,
+     "input": 561248,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 284629,
+     "web_searches": 42,
+     "calls": 58,
+     "images": 9
+    },
+    "건강 (forsmartlife.com) / 글 만들기(이전 기록)": {
+     "usd": 3.9821,
+     "input": 157839,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 121777,
+     "web_searches": 28,
+     "calls": 33,
+     "images": 9
+    }
+   },
+   "by_day": {
+    "2026-11-01": {
+     "usd": 2.3096,
+     "input": 69652,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 75951,
+     "web_searches": 11,
+     "calls": 7,
+     "images": 3
+    },
+    "2026-11-03": {
+     "usd": 0.8969,
+     "input": 12148,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 19817,
+     "web_searches": 5,
+     "calls": 3,
+     "images": 3
+    },
+    "2026-11-04": {
+     "usd": 1.3375,
+     "input": 47726,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 38429,
+     "web_searches": 11,
+     "calls": 7,
+     "images": 2
+    },
+    "2026-11-05": {
+     "usd": 2.2637,
+     "input": 80589,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 56067,
+     "web_searches": 15,
+     "calls": 12,
+     "images": 5
+    },
+    "2026-11-06": {
+     "usd": 0.4722,
+     "input": 15259,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 10859,
+     "web_searches": 6,
+     "calls": 2,
+     "images": 1
+    },
+    "2026-11-07": {
+     "usd": 0.4674,
+     "input": 19014,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 11369,
+     "web_searches": 3,
+     "calls": 3,
+     "images": 1
+    },
+    "2026-11-08": {
+     "usd": 2.5725,
+     "input": 106863,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 66754,
+     "web_searches": 14,
+     "calls": 12,
+     "images": 5
+    },
+    "2026-11-09": {
+     "usd": 0.4743,
+     "input": 16310,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 11255,
+     "web_searches": 5,
+     "calls": 2,
+     "images": 1
+    },
+    "2026-11-10": {
+     "usd": 1.9196,
+     "input": 77810,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 49120,
+     "web_searches": 9,
+     "calls": 8,
+     "images": 4
+    },
+    "2026-11-11": {
+     "usd": 0.4447,
+     "input": 15991,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 9837,
+     "web_searches": 5,
+     "calls": 2,
+     "images": 1
+    },
+    "2026-11-12": {
+     "usd": 3.6901,
+     "input": 154123,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 101481,
+     "web_searches": 24,
+     "calls": 18,
+     "images": 6
+    },
+    "2026-11-13": {
+     "usd": 0.9183,
+     "input": 43081,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 31801,
+     "web_searches": 11,
+     "calls": 6,
+     "images": 0
+    },
+    "2026-11-15": {
+     "usd": 2.956,
+     "input": 207708,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 95143,
+     "web_searches": 17,
+     "calls": 18,
+     "images": 3
+    },
+    "2026-11-16": {
+     "usd": 2.5887,
+     "input": 138006,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 78228,
+     "web_searches": 13,
+     "calls": 17,
+     "images": 5
+    },
+    "2026-11-17": {
+     "usd": 1.7147,
+     "input": 91471,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 44214,
+     "web_searches": 9,
+     "calls": 13,
+     "images": 4
+    },
+    "2026-11-18": {
+     "usd": 0.6327,
+     "input": 38429,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 16249,
+     "web_searches": 6,
+     "calls": 3,
+     "images": 1
+    },
+    "2026-11-19": {
+     "usd": 1.1734,
+     "input": 84781,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 41688,
+     "web_searches": 8,
+     "calls": 6,
+     "images": 0
+    },
+    "2026-11-20": {
+     "usd": 2.7967,
+     "input": 203257,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 85270,
+     "web_searches": 15,
+     "calls": 24,
+     "images": 5
+    },
+    "2026-11-22": {
+     "usd": 1.5976,
+     "input": 94438,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 47187,
+     "web_searches": 9,
+     "calls": 8,
+     "images": 2
+    },
+    "2026-11-23": {
+     "usd": 1.1048,
+     "input": 47452,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 35803,
+     "web_searches": 5,
+     "calls": 14,
+     "images": 3
+    }
+   }
+  }
+ },
+ "recent_runs": []
+}
