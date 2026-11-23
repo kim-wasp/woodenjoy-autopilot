@@ -125,6 +125,45 @@
       "picked": "파충류 사육장 디지털 온습도계 실내 가정용, 화이트, 1개",
       "price": 5900,
       "rocket": false
+    },
+    {
+      "key": "6-4mm",
+      "name": "샷시 모헤어 비접착 (끼우는 타입)",
+      "search": "샷시 모헤어 비접착 하이샷시 6.4mm",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9818344054&itemId=19107529535&vendorItemId=74115362879&traceid=V0-153-951c909a2beb168f&pt=0&requestid=20261123201404776067584720&slot=1",
+      "status": "API 자동 (11/23) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요.",
+      "site": "woodenjoy",
+      "picked": "크리넥스 데코 앤 소프트 화장지 3겹, 38m, 24개입, 1개",
+      "price": 17990,
+      "rocket": true
+    },
+    {
+      "key": "12mm",
+      "name": "모헤어 문풍지 접착식",
+      "search": "모헤어 문풍지 접착식 12mm",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9828458757&itemId=29437972596&vendorItemId=96347584096&traceid=V0-153-bfbfd1de11359bc4&requestid=20261123201405202122738048&token=31850C%7CGM&pt=0&slot=1",
+      "status": "API 자동 (11/23) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요.",
+      "site": "woodenjoy",
+      "picked": "77guide 3M접착식 털문풍지 모헤어12mmx50M",
+      "price": 41400.0,
+      "rocket": false
+    },
+    {
+      "key": "20mm",
+      "name": "광폭 모헤어 문풍지 20mm",
+      "search": "모헤어 문풍지 광폭 20mm",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=6131393946&itemId=11694946458&vendorItemId=96005267696&traceid=V0-153-ff4fcad0d11fc683&requestid=20261123201405620038616566&token=31850C%7CGM&pt=0&slot=1",
+      "status": "API 자동 (11/23) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요.",
+      "site": "woodenjoy",
+      "picked": "세이빙 넓은 모헤어 문풍지 폭 20mm x 2M",
+      "price": 6900.0,
+      "rocket": true
     }
   ]
 }
