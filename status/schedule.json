@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:33+09:00",
+  "updated": "2026-11-23T12:55+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1114,15 +1114,6 @@
     {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-23-issue-1115",
-      "title": "⚡ 하이트진로 최대 36개월분 희망퇴직, 받을지 버틸지 체크리스트",
-      "platform": "threads",
-      "at": "2026-11-23T12:33+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
       "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
       "platform": "threads",
@@ -1137,6 +1128,16 @@
       "title": "현관문 도어락 교체, 사 놓고 구멍 안 맞는 집은 3곳을 안 쟀어요",
       "platform": "threads",
       "at": "2026-11-23T12:33:57+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-23-issue-1115",
+      "title": "⚡ 하이트진로 최대 36개월분 희망퇴직, 받을지 버틸지 체크리스트",
+      "platform": "threads",
+      "at": "2026-11-23T12:55:43+09:00",
       "state": "done",
       "url": null
     },
