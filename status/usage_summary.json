@@ -1,18 +1,18 @@
 {
  "updated": "2026-11-23T19:14+09:00",
- "ledger_start": "2026-11-23T19:14:09+09:00",
+ "ledger_start": "2026-11-23T19:14:30+09:00",
  "usd_krw": 1400,
  "note": "비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 19:14 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
     "usd": 32.3314,
-    "input": 1564137,
+    "input": 1564108,
     "cache_write": 0,
     "cache_read": 0,
-    "output": 926531,
+    "output": 926522,
     "web_searches": 201,
-    "calls": 186,
+    "calls": 185,
     "images": 55
    },
    "by_site": {
@@ -38,12 +38,12 @@
     },
     "가구·인테리어 (우드엔조이)": {
      "usd": 8.9696,
-     "input": 561277,
+     "input": 561248,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 284638,
+     "output": 284629,
      "web_searches": 42,
-     "calls": 59,
+     "calls": 58,
      "images": 9
     },
     "건강 (forsmartlife.com)": {
@@ -67,16 +67,6 @@
      "web_searches": 201,
      "calls": 185,
      "images": 55
-    },
-    "-": {
-     "usd": 0.0,
-     "input": 29,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 9,
-     "web_searches": 0,
-     "calls": 1,
-     "images": 0
     }
    },
    "by_purpose": {
@@ -99,16 +89,6 @@
      "web_searches": 0,
      "calls": 0,
      "images": 55
-    },
-    "카드 검수": {
-     "usd": 0.0,
-     "input": 29,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 9,
-     "web_searches": 0,
-     "calls": 1,
-     "images": 0
     }
    },
    "by_model": {
@@ -144,12 +124,12 @@
     },
     "claude-haiku-5-5": {
      "usd": 0.0196,
-     "input": 63112,
+     "input": 63083,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 26574,
+     "output": 26565,
      "web_searches": 0,
-     "calls": 15,
+     "calls": 14,
      "images": 0
     }
    },
@@ -193,16 +173,6 @@
      "web_searches": 28,
      "calls": 33,
      "images": 9
-    },
-    "가구·인테리어 (우드엔조이) / -": {
-     "usd": 0.0,
-     "input": 29,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 9,
-     "web_searches": 0,
-     "calls": 1,
-     "images": 0
     }
    },
    "by_day": {
@@ -398,28 +368,16 @@
     },
     "2026-11-23": {
      "usd": 1.1048,
-     "input": 47481,
+     "input": 47452,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 35812,
+     "output": 35803,
      "web_searches": 5,
-     "calls": 15,
+     "calls": 14,
      "images": 3
     }
    }
   }
  },
- "recent_runs": [
-  {
-   "file": "20261123-191409-45154142914-3269.json",
-   "workflow": "probe",
-   "event": "push",
-   "t": "2026-11-23T19:14:09+09:00",
-   "task": "-",
-   "site": "woodenjoy",
-   "calls": 1,
-   "images": 0,
-   "usd": 0.0
-  }
- ]
+ "recent_runs": []
 }
