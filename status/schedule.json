@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:13+09:00",
+  "updated": "2026-11-23T12:15+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1094,11 +1094,31 @@
     {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
-      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "dir": "content/infobay/2026-11-23-issue-0733",
+      "title": "⚡ 친정 언니 100만원 축의금, 시조카도 100 내라는 남편 (뉴스1)",
       "platform": "threads",
-      "at": "2026-11-23T12:30+09:00",
+      "at": "2026-11-23T12:14:30+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-23-issue-1115",
+      "title": "⚡ 하이트진로 최대 36개월분 희망퇴직, 받을지 버틸지 체크리스트",
+      "platform": "threads",
+      "at": "2026-11-23T12:15+09:00",
       "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-23-issue-1115",
+      "title": "⚡ 종부세 전면 폐지 vs 실거주 우대, 23일 국힘·개혁신당 회견",
+      "platform": "threads",
+      "at": "2026-11-23T12:15:01+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "woodenjoy",
@@ -1170,6 +1190,15 @@
       "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
       "platform": "blog",
       "at": "2026-11-25T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-19-funeral-notice-text-reply-smishing-2026",
+      "title": "부고 문자 답장 예문 6개, 링크 한 번에 3000만원 빚 된 판결",
+      "platform": "threads",
+      "at": "2026-11-25T12:30+09:00",
       "state": "planned"
     }
   ]

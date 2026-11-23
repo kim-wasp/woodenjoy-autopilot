@@ -1,7 +1,7 @@
 {
   "site": "sisibibi",
   "title": "⚡ 종부세 전면 폐지 vs 실거주 우대, 23일 국힘·개혁신당 회견",
-  "status": "ready",
+  "status": "published",
   "rush": true,
   "platforms": [
     "threads"
@@ -65,5 +65,14 @@
       "스레드2": "A",
       "스레드3": "A"
     }
+  },
+  "approved_at": "2026-11-23T12:13+09:00",
+  "published": {
+    "threads": [
+      "18026346998937015",
+      "18251389903310515",
+      "18128771683912303"
+    ],
+    "threads_at": "2026-11-23T12:15:01+09:00"
   }
 }
