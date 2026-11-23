@@ -809,6 +809,13 @@ def usage_cost(prev=None):
         each = (pr.get("image_per_each") or {}).get(m, (pr.get("image_per_each") or {}).get("default", 0))
         c["images"][m] = {"count": n, "usd": round(n * each, 4)}
         c["usd"] += n * each
+    # 청구처별: Claude 는 달러, Google AI Studio 는 원화 (캐시 할인까지 반영한 장부 기준. 다시 만들면 누적)
+    import usage
+    sp, old = usage.split(), prev_split(prev, pr)
+    c["claude_usd"] = round(sp["claude_usd"] + old["claude_usd"], 4)
+    c["google_usd"] = round(sp["google_usd"] + old["google_usd"], 4)
+    c["other_usd"] = round(sp["other_usd"] + old["other_usd"], 4)
+    c["google_krw"] = int(round(c["google_usd"] * pr.get("usd_krw", 1400)))
     if prev and prev.get("total_usd"):
         c["previous_usd"] = round(prev["total_usd"], 4)
     total = c["usd"] + c.get("previous_usd", 0)
@@ -816,8 +823,23 @@ def usage_cost(prev=None):
     c["total_usd"] = round(total, 4)
     c["total_krw"] = int(round(total * pr.get("usd_krw", 1400), -1))
     c["note"] = "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
-    log(f"  비용 추정: Claude+사진 약 {c['total_krw']:,}원 (${total:.3f})")
+    log(f"  비용 추정(누적): {usage.line(c)}")
     return c
+
+
+def prev_split(prev, pr=None):
+    """예전 비용 기록을 청구처별로 나눠요. 나눠 적기 전(2026-11-23 이전) 기록은 모델 이름으로 갈라요"""
+    out = {"claude_usd": 0.0, "google_usd": 0.0, "other_usd": 0.0}
+    if not prev:
+        return out
+    if "claude_usd" in prev:
+        return {k: prev.get(k, 0) or 0 for k in out}
+    out["claude_usd"] = sum((u.get("usd") or 0) for u in (prev.get("claude") or {}).values())
+    for m, u in (prev.get("images") or {}).items():
+        out["google_usd" if m.startswith("gemini") else "other_usd"] += u.get("usd") or 0
+    rest = (prev.get("previous_usd") or 0)  # 그 전 실행분은 합계만 남아 있어요 → Claude 쪽으로 (대부분 Claude 비용)
+    out["claude_usd"] += rest
+    return out
 
 def season_candidates(site, n=8):
     """계절 달력 + 구글 트렌드로 주제 후보를 만들고 네이버 월간 검색 수로 순위를 매겨요 (건강 블로그처럼 시기에 따라 검색이 바뀌는 사이트)."""

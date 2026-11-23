@@ -91,14 +91,54 @@ def claude(model, inp, cache_write, cache_read, out, searches, seconds):
 def image(model, provider):
     each = _prices().get("image_per_each") or {}
     purpose, where = _caller()
+    usd = each.get(model, each.get("default", 0))
     ENTRIES.append({"t": datetime.now(KST).isoformat(timespec="seconds"), "kind": "image", "site": _site(), "task": _task(),
                     "purpose": "사진 만들기", "where": where, "model": model, "provider": provider, "count": 1,
-                    "usd": round(each.get(model, each.get("default", 0)), 5)})
+                    "usd": round(usd, 5), "krw": round(usd * _prices().get("usd_krw", 1400))})
+
+
+def bucket(e):
+    """기록 한 줄이 어디 청구서로 가는지: claude(Claude 크레딧, 달러) / google(Google AI Studio, 원화) / other(OpenAI 등)"""
+    if e.get("kind") == "claude":
+        return "claude"
+    if e.get("provider") == "gemini" or str(e.get("model", "")).startswith("gemini"):
+        return "google"
+    return "other"
+
+
+def split(entries=None):
+    """청구처별 합계. Claude 는 달러, Google AI Studio 는 원화로 보여 줘요 (환율은 engine/prices.json 의 usd_krw)"""
+    out = {"claude_usd": 0.0, "google_usd": 0.0, "other_usd": 0.0}
+    for e in (ENTRIES if entries is None else entries):
+        out[bucket(e) + "_usd"] += e.get("usd", 0)
+    out = {k: round(v, 4) for k, v in out.items()}
+    out["google_krw"] = int(round(out["google_usd"] * _prices().get("usd_krw", 1400)))
+    return out
+
+
+def line(sp=None):
+    """한 줄 표시: Claude $0.812 · Google AI Studio 188원"""
+    sp = split() if sp is None else sp
+    s = f"Claude ${sp.get('claude_usd', 0):.3f} · Google AI Studio {int(sp.get('google_krw', 0)):,}원"
+    if sp.get("other_usd"):
+        s += f" · 그 밖(OpenAI 등) ${sp['other_usd']:.3f}"
+    return s
 
 
 @atexit.register
 def _flush():
-    if not ENTRIES or os.environ.get("MOCK_LLM") or not (os.environ.get("GITHUB_ACTIONS") or os.environ.get("USAGE_LOG")):
+    if not ENTRIES or os.environ.get("MOCK_LLM"):
+        return
+    # 작업이 끝날 때마다 이번 작업에 쓴 돈을 한 줄로 (실행 기록 + GitHub 실행 요약)
+    try:
+        msg = f"이번 작업 비용(추정) [{_site()} / {_task()}]: {line()}"
+        print(msg, file=sys.stderr, flush=True)
+        if os.environ.get("GITHUB_STEP_SUMMARY"):
+            with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
+                fh.write(msg + "\n\n")
+    except Exception:  # noqa: BLE001
+        pass
+    if not (os.environ.get("GITHUB_ACTIONS") or os.environ.get("USAGE_LOG")):
         return
     now = datetime.now(KST)
     d = ROOT / "usage" / now.strftime("%Y-%m")
