@@ -16,15 +16,23 @@ for f in (ROOT / "sites").glob("*/site.json"):
         SITE_NAMES[f.parent.name] = json.loads(f.read_text(encoding="utf-8")).get("name", f.parent.name)
     except Exception:  # noqa: BLE001
         pass
-KEYS = ("usd", "input", "cache_write", "cache_read", "output", "web_searches", "calls", "images")
+KEYS = ("usd", "claude_usd", "google_usd", "other_usd", "input", "cache_write", "cache_read", "output", "web_searches", "calls", "images")
 
 
 def blank():
     return {k: 0 for k in KEYS}
 
 
+def where(e):
+    """청구처: claude(Claude 크레딧) / google(Google AI Studio) / other(OpenAI 등)"""
+    if e["kind"] == "claude":
+        return "claude"
+    return "google" if e.get("provider") == "gemini" or str(e.get("model", "")).startswith("gemini") else "other"
+
+
 def add(b, e):
     b["usd"] += e.get("usd", 0)
+    b[where(e) + "_usd"] += e.get("usd", 0)
     if e["kind"] == "claude":
         for k in ("input", "cache_write", "cache_read", "output", "web_searches"):
             b[k] += e.get(k, 0)
@@ -47,7 +55,10 @@ def main():
         if es:
             runs.append({"file": Path(f).name, "workflow": j.get("workflow"), "event": j.get("event"), "t": es[0]["t"],
                          "task": es[0].get("task"), "site": es[0].get("site"), "calls": sum(e["kind"] == "claude" for e in es),
-                         "images": sum(e["kind"] == "image" for e in es), "usd": round(sum(e.get("usd", 0) for e in es), 4)})
+                         "images": sum(e["kind"] == "image" for e in es), "usd": round(sum(e.get("usd", 0) for e in es), 4),
+                         "claude_usd": round(sum(e.get("usd", 0) for e in es if where(e) == "claude"), 4),
+                         "google_krw": int(round(sum(e.get("usd", 0) for e in es if where(e) == "google") * krw)),
+                         "other_usd": round(sum(e.get("usd", 0) for e in es if where(e) == "other"), 4)})
     start = min((e["t"] for e in entries), default=datetime.now(KST).isoformat(timespec="seconds"))
     # 장부 이전 글: post.json 비용 기록으로 채우기
     for f in glob.glob(str(ROOT / "content/*/*/post.json")):
@@ -77,18 +88,19 @@ def main():
             if e.get("_calls"):
                 b["calls"] += e["_calls"] - 1
     out = {"updated": datetime.now(KST).isoformat(timespec="minutes"), "ledger_start": start, "usd_krw": krw,
-           "note": "비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. "
+           "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. "
                    f"{start[:16].replace('T', ' ')} 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
-           "months": {}, "recent_runs": sorted(runs, key=lambda r: r["t"], reverse=True)[:60]}
+           "months": {}, "recent_runs": sorted(runs, key=lambda r: r["t"], reverse=True)[:200]}
     for m, mo in sorted(months.items()):
-        r = lambda d: {k: {kk: (round(vv, 4) if kk == "usd" else vv) for kk, vv in v.items()} for k, v in sorted(d.items(), key=lambda kv: -kv[1]["usd"])}  # noqa: E731
-        out["months"][m] = {"total": {k: (round(v, 4) if k == "usd" else v) for k, v in mo["total"].items()},
+        fin = lambda v: {**{kk: (round(vv, 4) if kk.endswith("usd") else vv) for kk, vv in v.items()}, "google_krw": int(round(v["google_usd"] * krw))}  # noqa: E731
+        r = lambda d: {k: fin(v) for k, v in sorted(d.items(), key=lambda kv: -kv[1]["usd"])}  # noqa: E731
+        out["months"][m] = {"total": fin(mo["total"]),
                             **{k: r(mo[k]) for k in ("by_site", "by_task", "by_purpose", "by_model", "by_site_task")},
                             "by_day": {k: v for k, v in sorted(r(mo["by_day"]).items())}}
     (ROOT / "status/usage_summary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     for m, mo in out["months"].items():
         t = mo["total"]
-        print(f"{m}: 약 ${t['usd']:.2f} (₩{int(t['usd'] * krw):,}) · Claude {t['calls']}회 · 입력 {t['input']:,} · 출력 {t['output']:,} · 검색 {t['web_searches']} · 사진 {t['images']}장")
+        print(f"{m}: Claude ${t['claude_usd']:.2f} · Google AI Studio {t['google_krw']:,}원" + (f" · 그 밖 ${t['other_usd']:.2f}" if t["other_usd"] else "") + f" · Claude {t['calls']}회 · 입력 {t['input']:,} · 출력 {t['output']:,} · 검색 {t['web_searches']} · 사진 {t['images']}장")
 
 
 if __name__ == "__main__":

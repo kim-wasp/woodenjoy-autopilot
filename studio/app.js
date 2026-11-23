@@ -16,6 +16,16 @@ async function api(path, opts = {}) {
 }
 const fmt = (iso) => { if (!iso) return ''; const d = new Date(iso); return `${d.getMonth() + 1}/${d.getDate()}(${'일월화수목금토'[d.getDay()]}) ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`; };
 async function sites(force) { if (!SITES || force) SITES = (await api('sites')).sites; return SITES; }
+// 비용 표시: Claude 는 달러(크레딧), Google AI Studio 는 원화. 나눠 적기 전 기록은 모델 이름으로 갈라요
+function costSplit(c, k = 1400) {
+  if (!c) return null;
+  if (c.claude_usd != null) return { claude: c.claude_usd || 0, google: c.google_krw || 0, other: c.other_usd || 0 };
+  let claude = (c.previous_usd || 0), g = 0, other = 0;
+  Object.values(c.claude || {}).forEach((u) => { claude += u.usd || 0; });
+  Object.entries(c.images || {}).forEach(([m, u]) => { if (m.startsWith('gemini')) g += u.usd || 0; else other += u.usd || 0; });
+  return { claude, google: Math.round(g * k), other };
+}
+const costLine = (c, k) => { const x = costSplit(c, k); return x ? `Claude $${x.claude.toFixed(2)} · Google AI Studio ${Math.round(x.google).toLocaleString()}원${x.other ? ` · 그 밖 $${x.other.toFixed(2)}` : ''}` : ''; };
 const siteName = (id) => (SITES || []).find((s) => s.id === id)?.name || id;
 
 // ---------- 로그인 ----------
@@ -87,7 +97,7 @@ async function viewReview(n) {
     th: () => `<div class="card"><div class="thread">${p.threads.posts.map((t, i) => `${i ? '<div class="tline"></div>' : ''}<div class="tpost"><div class="av">${esc((site.threads?.handle || 'T')[0].toUpperCase())}</div><div class="tx"><b class="small">@${esc(site.threads?.handle || '')}</b><br>${esc(t).replace('{LINK}', `<span class="lk">${esc(link)}</span>`)}${i === 0 && p.threads.topic_tag ? `<br><span class="small muted">주제 태그: ${esc(p.threads.topic_tag)}</span>` : ''}</div></div>`).join('')}</div>${(p.threads.hooks || []).length ? `<p class="small muted" style="margin-top:10px">첫 줄 후보: ${p.threads.hooks.map(esc).join(' / ')}<br>다른 후보로 바꾸려면 아래 '고칠 점'에 적고 다시 만들기를 눌러 주세요.</p>` : ''}</div>`,
     qa: () => `<div class="grid g2"><div class="card"><h2>점검 결과</h2>${(p.checks?.issues || []).length ? `<ul class="issues">${p.checks.issues.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<p><span class="chip ok">모두 통과</span></p>'}</div>
       <div class="card"><h2>이 주제를 고른 이유</h2><p>${esc(p.why_this_topic || '-')}</p><p class="small muted">핵심 키워드: ${esc(p.keywords?.main || '-')} · ${esc((p.keywords?.sub || []).join(', '))}</p>
-      ${p.cost ? `<p class="small" style="margin-top:10px"><b>만드는 데 든 비용(추정)</b> 약 ${Number(p.cost.total_krw || 0).toLocaleString()}원 · ${Object.entries(p.cost.claude || {}).map(([m, u]) => `Claude 입력 ${Number(u.input_tokens).toLocaleString()} / 출력 ${Number(u.output_tokens).toLocaleString()} 토큰, 웹 검색 ${u.web_searches}회`).join(' · ')}${Object.entries(p.cost.images || {}).map(([m, u]) => ` · 사진 ${u.count}장(${esc(m)})`).join('')}</p>` : ''}</div>
+      ${p.cost ? `<p class="small" style="margin-top:10px"><b>만드는 데 든 비용(추정)</b> ${costLine(p.cost)}<br>${Object.entries(p.cost.claude || {}).map(([m, u]) => `Claude 입력 ${Number(u.input_tokens).toLocaleString()} / 출력 ${Number(u.output_tokens).toLocaleString()} 토큰, 웹 검색 ${u.web_searches}회`).join(' · ')}${Object.entries(p.cost.images || {}).map(([m, u]) => ` · 사진 ${u.count}장(${esc(m)})`).join('')}</p>` : ''}</div>
       <div class="card"><h2>브리프</h2><p class="small">독자: ${esc(p.brief?.reader)}<br>질문: ${esc(p.brief?.question)}<br>핵심 답: ${esc(p.brief?.answer)}<br>다루지 않음: ${esc(p.brief?.out_of_scope)}</p></div>
       <div class="card"><h2>출처</h2>${(p.sources || []).length ? `<ul>${p.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul>` : '<p class="muted small">출처 없음 (숫자·통계가 없는 글이어야 해요)</p>'}</div></div>`,
   };
@@ -189,7 +199,7 @@ async function viewIdeas(siteId) {
   const ideas = one?._ideas?.ideas || [];
   $('#main').innerHTML = `<div class="page-h"><h1>글감</h1><button class="btn" id="more">새로 추천받기</button></div>
   <div class="seg">${st.map((s) => `<button class="${s.id === siteId ? 'on' : ''}" data-id="${s.id}">${esc(s.name)}</button>`).join('')}</div>
-  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? `${esc(one._ideas.basis || '최근 보도')} 기준으로 골랐어요${one._ideas.cost ? ` (비용 약 ${Number(one._ideas.cost.total_krw || 0).toLocaleString()}원)` : ''}. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요` : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
+  <div class="card"><p class="small muted">${one?._ideas?.updated ? `추천 시각 ${fmt(one._ideas.updated)} · ${one.opinion ? `${esc(one._ideas.basis || '최근 보도')} 기준으로 골랐어요${one._ideas.cost ? ` (비용 ${costLine(one._ideas.cost)})` : ''}. 하나 골라 견해를 쓰면 그걸 바탕으로 글을 만들어요` : '웹 검색과 네이버 검색량을 보고 골랐어요'}` : '아직 추천받은 글감이 없어요. [새로 추천받기]를 눌러 주세요 (2~3분).'}</p>
   ${one ? `<form class="card" id="myf" style="margin-bottom:12px"><label class="f"><span>${one.opinion ? '내 글감으로 조사받기 (주제나 이슈를 한 줄로 적으면 관련 기사와 근거를 찾아 아래 목록 맨 위에 넣어요, 2~4분)' : '내 글감 넣기 (주제를 한 줄로 적으면 검색어와 자료를 찾아 맨 위에 넣고, 다음 정기 글에 먼저 써요. 바로 만들려면 그 글감의 [이걸로 만들기], 2~4분)'}</span><input type="text" id="mytopic" placeholder="${one.opinion ? '예: 의대 정원 다시 늘린다는데 이번엔 뭐가 다른가' : one.id === 'woodenjoy' ? '예: 타카 처음 살 때 핀 규격 고르는 법' : '예: 겨울철 실내 습도 몇 %가 적당한지'}"></label><button class="btn primary">${one.opinion ? '근거 찾아오기' : '글감 넣기'}</button></form>` : ''}
   <div class="list">${ideas.map((x, i) => `<div class="item"><div class="t"><b>${x.mine ? `<span class="chip ok">내 글감</span> ${x.used_at ? '<span class="chip">사용함</span> ' : one?.opinion ? '' : '<span class="chip">다음 정기 글</span> '}` : ''}${esc(x.title)}</b><span class="small muted">${esc(x.keyword)} · ${esc(x.why)}</span>${x.facts ? `<span class="small" style="margin-top:4px">${esc(x.facts)}</span><span class="small muted">${esc(x.sides || '')}</span>` : ''}${(x.links || []).length ? `<span class="small">${x.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a>`).join('<br>')}</span>` : ''}</div><button class="btn" data-i="${i}">${one?.opinion ? '고르고 견해 쓰기' : '이걸로 만들기'}</button></div>`).join('')}</div></div>`;
   $('.seg').onclick = (e) => { const b = e.target.closest('button'); if (b) viewIdeas(b.dataset.id); };
@@ -233,17 +243,22 @@ async function viewUsage(month) {
   const m = month && d.months[month] ? month : ms[0];
   const mo = d.months[m], k = d.usd_krw || 1400;
   const n = (x) => Number(x || 0).toLocaleString();
-  const won = (u) => '₩' + Math.round((u || 0) * k).toLocaleString();
+  const cu = (b) => (b.claude_usd != null ? b.claude_usd : (b.usd || 0));   // Claude: 달러
+  const gk = (b) => (b.google_krw != null ? b.google_krw : 0);              // Google AI Studio: 원화
+  const usd = (v) => '$' + Number(v || 0).toFixed(2);
+  const krw = (v) => Math.round(v || 0).toLocaleString() + '원';
+  const oth = (b) => (b.other_usd ? `<br><span class="small muted">그 밖 ${usd(b.other_usd)}</span>` : '');
   const tok = (b) => (b.input || 0) + (b.cache_write || 0) + (b.cache_read || 0) + (b.output || 0);
   const max = (obj) => Math.max(...Object.values(obj).map((b) => b.usd || 0), 0.0001);
-  const table = (title, obj, desc) => { const mx = max(obj); return `<div class="card"><h2>${title}</h2>${desc ? `<p class="small muted">${desc}</p>` : ''}<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>항목</th><th>추정 비용</th><th>Claude 호출</th><th>입력 토큰</th><th>출력 토큰</th><th>웹 검색</th><th>사진</th></tr></thead><tbody>${Object.entries(obj).map(([name, b]) => `<tr><td>${esc(name)}<div style="height:4px;background:#2f6b57;border-radius:2px;margin-top:4px;width:${Math.max(2, Math.round((b.usd || 0) / mx * 100))}%"></div></td><td><b>${won(b.usd)}</b><br><span class="small muted">$${(b.usd || 0).toFixed(2)}</span></td><td>${n(b.calls)}</td><td>${n((b.input || 0) + (b.cache_write || 0) + (b.cache_read || 0))}</td><td>${n(b.output)}</td><td>${n(b.web_searches)}</td><td>${n(b.images)}</td></tr>`).join('')}</tbody></table></div></div>`; };
+  const table = (title, obj, desc) => { const mx = max(obj); return `<div class="card"><h2>${title}</h2>${desc ? `<p class="small muted">${desc}</p>` : ''}<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>항목</th><th>Claude (달러)</th><th>Google AI Studio (원)</th><th>Claude 호출</th><th>입력 토큰</th><th>출력 토큰</th><th>웹 검색</th><th>사진</th></tr></thead><tbody>${Object.entries(obj).map(([name, b]) => `<tr><td>${esc(name)}<div style="height:4px;background:#2f6b57;border-radius:2px;margin-top:4px;width:${Math.max(2, Math.round((b.usd || 0) / mx * 100))}%"></div></td><td><b>${usd(cu(b))}</b>${oth(b)}</td><td><b>${krw(gk(b))}</b></td><td>${n(b.calls)}</td><td>${n((b.input || 0) + (b.cache_write || 0) + (b.cache_read || 0))}</td><td>${n(b.output)}</td><td>${n(b.web_searches)}</td><td>${n(b.images)}</td></tr>`).join('')}</tbody></table></div></div>`; };
   const t = mo.total;
   const days = Object.keys(mo.by_day).length || 1;
-  const runs = (d.recent_runs || []).map((r) => `<tr><td>${fmt(r.t)}</td><td>${esc(siteName(r.site) || r.site)}</td><td>${esc(r.task)}</td><td>${esc(r.workflow)}${r.event === 'schedule' ? ' (자동)' : r.event === 'workflow_dispatch' ? ' (버튼)' : ''}</td><td>${n(r.calls)}</td><td>${n(r.images)}</td><td>${won(r.usd)}</td></tr>`).join('');
+  const runs = (d.recent_runs || []).map((r) => `<tr><td>${fmt(r.t)}</td><td>${esc(siteName(r.site) || r.site)}</td><td>${esc(r.task)}</td><td>${esc(r.workflow)}${r.event === 'schedule' ? ' (자동)' : r.event === 'workflow_dispatch' ? ' (버튼)' : ''}</td><td>${n(r.calls)}</td><td>${n(r.images)}</td><td><b>${usd(cu(r))}</b>${oth(r)}</td><td><b>${krw(gk(r))}</b></td></tr>`).join('');
   await sites();
   $('#main').innerHTML = `<div class="page-h"><h1>사용량</h1><select id="um">${ms.map((x) => `<option ${x === m ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
   <div class="card"><h2>${m} 합계</h2>
-    <p style="font-size:28px;margin:6px 0"><b>${won(t.usd)}</b> <span class="small muted">($${t.usd.toFixed(2)}, 하루 평균 ${won(t.usd / days)})</span></p>
+    <p style="font-size:26px;margin:6px 0">Claude <b>${usd(cu(t))}</b> <span class="small muted">(하루 평균 ${usd(cu(t) / days)})</span></p>
+    <p style="font-size:26px;margin:6px 0">Google AI Studio <b>${krw(gk(t))}</b> <span class="small muted">(하루 평균 ${krw(gk(t) / days)}, 환율 ${n(k)}원 기준)</span></p>${t.other_usd ? `<p class="small">그 밖(OpenAI 등) ${usd(t.other_usd)}</p>` : ''}
     <p class="small">Claude 호출 ${n(t.calls)}회 · 토큰 ${n(tok(t))} (입력 ${n(t.input)}, 캐시 저장 ${n(t.cache_write)}, 캐시 읽기 ${n(t.cache_read)}, 출력 ${n(t.output)}) · 웹 검색 ${n(t.web_searches)}회 · 사진 ${n(t.images)}장</p>
     <p class="small muted">${esc(d.note)} 마지막 갱신 ${fmt(d.updated)}</p></div>
   ${table('사이트별', mo.by_site)}
@@ -252,7 +267,7 @@ async function viewUsage(month) {
   ${table('모델별', mo.by_model)}
   ${table('사이트 / 작업', mo.by_site_task)}
   ${table('날짜별', Object.fromEntries(Object.entries(mo.by_day).reverse()))}
-  <div class="card"><h2>최근 실행 60건</h2><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>시각</th><th>사이트</th><th>작업</th><th>워크플로</th><th>호출</th><th>사진</th><th>비용</th></tr></thead><tbody>${runs || '<tr><td colspan="7" class="muted">아직 없어요</td></tr>'}</tbody></table></div></div>`;
+  <div class="card"><h2>작업별 기록 (최근 ${(d.recent_runs || []).length}건)</h2><p class="small muted">작업이 한 번 끝날 때마다 한 줄씩 쌓여요</p><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>시각</th><th>사이트</th><th>작업</th><th>워크플로</th><th>호출</th><th>사진</th><th>Claude (달러)</th><th>Google AI Studio (원)</th></tr></thead><tbody>${runs || '<tr><td colspan="8" class="muted">아직 없어요</td></tr>'}</tbody></table></div></div>`;
   $('#um').onchange = (e) => { location.hash = '#/usage/' + e.target.value; };
 }
 

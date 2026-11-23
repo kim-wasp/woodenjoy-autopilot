@@ -17,6 +17,7 @@
 - 결정: 승인 전 사이트는 품질 우선이라 Opus 유지. infobay만 Sonnet 전환 제안했고 사장님 답 대기.
 - 일주일 뒤(11/30 전후) 할 일: 관리화면 사용량과 Console 청구 대조, 캐시 효과 확인, Max 유지 / Ultra 전환 판단 (월 API $180 넘거나 채팅 한도에 자주 걸리면 Ultra)
 - 사용량 장부: engine/usage.py → usage/YYYY-MM/*.json → tools/usage_report.py → status/usage_summary.json → 관리화면 '사용량'
+- 비용 표시 (11/23 사장님 요청): 모든 작업마다 Claude 는 달러, Google AI Studio 는 원화로 따로. 관리화면 '사용량'(표마다 두 칸, 작업별 기록 200건), 승인 화면 글별 비용, 글감 추천, 실행 기록 끝 한 줄(engine/usage.py 가 작업이 끝날 때 자동으로 찍음). 환율은 engine/prices.json 의 usd_krw 한 곳.
 - 11/23 고친 것: 웹 검색 입력 토큰 과소 집계, 웹 검색 호출에 프롬프트 캐시, 잘린 JSON 재요청 방식, 글감 찾기는 Sonnet
 
 ## 인증과 키
