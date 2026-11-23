@@ -1,0 +1,261 @@
+{
+  "id": "woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
+  "site": "woodenjoy",
+  "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
+  "status": "draft",
+  "created_at": "2026-11-23T20:15+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "모헤어문풍지",
+    "sub": [
+      "창문우풍차단",
+      "끼우는문풍지",
+      "샷시 모헤어",
+      "창문외풍차단"
+    ]
+  },
+  "brief": {
+    "reader": "창문 외풍을 막으려고 모헤어 문풍지를 사려는데 규격 숫자가 헷갈리거나, 이미 붙였는데 창이 뻑뻑해진 사람",
+    "question": "모헤어 문풍지는 어떤 규격을 어떻게 골라서 어디에 붙여야 하나?",
+    "answer": "창 닫았을 때 틈 크기에 맞는 털 길이와 바닥 폭을 상세 스펙에서 따로 확인하고, 샷시 홈에는 끼우는 샷시 모헤어를 써요.",
+    "out_of_scope": "창틀과 벽 사이 실리콘 시공, 누수·유리 교체, 샷시 전체 교체",
+    "next_action": "줄자로 창 틈 하나를 재고, 상품 상세 스펙의 모길이·폭 칸을 확인한다"
+  },
+  "why_this_topic": "메인 후보 1순위 '모헤어문풍지' 월 800회(7일 전 600회, +33%). 연관 검색어 '창문우풍차단' 월 6,820회(+39%), '끼우는문풍지' 월 4,980회, '창문문풍지' 8,870회(+37%)도 같이 오르는 외풍 시즌. 이번 차례인 '소모품 규격' 글에 맞고, 예전 문풍지 글은 틈 찾기를 다뤘으니 이번엔 모헤어 규격 읽는 법이라 겹치지 않음. 타카핀 글처럼 헷갈리는 숫자를 표 하나로 정리하는 형식",
+  "title_candidates": [
+    {
+      "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "모헤어 문풍지는 털 길수록 좋다? 틈보다 길면 창이 안 닫혀요",
+      "pattern": "반전",
+      "score": 8
+    },
+    {
+      "title": "모헤어 문풍지 12mm, 털 길이인지 폭인지 모르고 사면 헛사요",
+      "pattern": "실수·손해",
+      "score": 8
+    },
+    {
+      "title": "모헤어 문풍지 샷시 홈용, 알루미늄 6.7mm·하이샷시 6.4mm",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "모헤어 문풍지 끼우는 것 vs 붙이는 것, 샷시 홈 있으면 끼워요",
+      "pattern": "비교",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 글 공통점: 붙이는 위치·순서, 종류 소개 위주 / 우리가 다르게 갈 점: 상품명 숫자가 털 길이인지 폭인지 읽는 법, 털 길이를 틈에 맞추는 기준, 샷시 홈 폭(6.4·6.7mm)을 표 하나로 정리",
+  "meta_description": "상품명 ‘23mm x 9mm’에서 어느 게 털 길이일까요? 털은 틈에 살짝 닿을 만큼만, 샷시 홈은 알루미늄 6.7mm·하이샷시 6.4mm. 사기 전 체크리스트와 붙이는 순서까지 정리했어요.",
+  "hero_prompt": "Casual smartphone snapshot inside an ordinary Korean apartment: a white PVC sliding window, close view of the vertical edge where the sash meets the frame, a worn, flattened grey mohair weatherstrip brush with a visible thin gap and some dust, a slightly crooked frame, mixed warm indoor light and cool daylight, a bit of window condensation, a corner of a curtain and a plastic plant pot at the edge of the frame, center area fairly plain, no text, no people, not staged, no HDR, no heavy blur",
+  "thumb_text": "털 길게 샀더니\n창이 뻑뻑해요",
+  "category": "",
+  "kind": "tool",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "다나와: 모헤어 문풍지 23mm x 9mm x 5m (모길이 23mm, 폭 9mm)",
+      "url": "https://m.danawa.com/product/product.html?code=28271093"
+    },
+    {
+      "title": "다나와: 모헤어 5mm x 5m (모길이 5mm, 폭 9mm)",
+      "url": "http://m2.danawa.com/product/product.html?code=28467302"
+    },
+    {
+      "title": "다나와: 사계절 넓음 모헤어 문풍지 (두께 5mm, 폭 20mm)",
+      "url": "https://prod.danawa.com/info/?pcode=15507506"
+    },
+    {
+      "title": "철물박사: 샷시/방충망 모헤어 교체 규격 선택부터 셀프 설치까지",
+      "url": "https://chulmul84.cafe24.com/article/%EA%B6%81%EA%B8%88%ED%95%B4%EC%9A%94-%EC%B2%A0%EB%AC%BC%EB%B0%95%EC%82%AC/1002/7918/"
+    },
+    {
+      "title": "샤시24: 모헤어 판매 목록 (접착모헤어·샤시 모헤어·모문풍지 폭20mm 가격)",
+      "url": "https://sash24.com/category/%EB%AA%A8%ED%97%A4%EC%96%B4/57/"
+    },
+    {
+      "title": "샤시24: 10mm 샤시 모헤어 (하이샤시용 폭 6.4mm, 비접착 핀형)",
+      "url": "https://sash24.com/product/10mm-%EC%83%A4%EC%8B%9C-%EB%AA%A8%ED%97%A4%EC%96%B4-1%EB%A1%A4-250m-%EB%AA%A8%ED%92%8D%EC%A7%80%EB%AC%B8%ED%92%8D%EC%A7%80%EC%83%B7%EC%8B%9C%EC%B0%BD%EB%AC%B8/127/"
+    },
+    {
+      "title": "실속생활백서: 샷시 모헤어 교체, 규격 측정과 창짝 안전 체크",
+      "url": "https://livecoupang.com/2026/08/24/window-sash-mohair-replacement-20260823/"
+    },
+    {
+      "title": "온담창호: 창문 문풍지 붙이기, 종류별 위치와 금지 자리",
+      "url": "https://www.ondamwindow.co.kr/guides/weatherstrip-tape-diy"
+    },
+    {
+      "title": "클리앙: 집에 모기가 안 들어옵니다, 모헤어 사용기",
+      "url": "https://www.clien.net/service/board/use/16322361"
+    },
+    {
+      "title": "클리앙: 문풍지, 방풍 공사 삽질기",
+      "url": "https://www.clien.net/service/board/use/9978974"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "실수 바로잡기형",
+    "ending": "의견",
+    "cover_hooks": [
+      "털 긴 모헤어가 더 막는다?",
+      "모헤어 12mm, 털일까 폭일까",
+      "문풍지 붙이고 창이 안 밀린다면"
+    ],
+    "caption": "모헤어 문풍지 상품명 속 숫자, 어느 게 털 길이예요?\n\n23mm x 9mm는 털 23mm에 폭 9mm예요. 그런데 폭을 앞에 쓰는 상품도 있어서 상세 스펙 칸을 꼭 봐야 해요.\n털은 창틀에 살짝 닿는 정도면 되고, 그보다 길면 창이 뻑뻑해져요.\n샷시 홈에는 끼우는 샷시 모헤어를 쓰는데, 알루미늄은 6.7mm, 하이샷시는 6.4mm 바닥 폭이에요.\n\n창문 틈 막을 때 털 모헤어 쪽이에요, 스펀지 문풍지 쪽이에요? 써 보니 어느 쪽이 덜 떨어졌는지도 궁금해요.\n\n#셀프인테리어 #모헤어문풍지 #창문외풍차단 #샷시모헤어"
+  },
+  "threads": {
+    "style": "숫자 한 방",
+    "hooks": [
+      "모헤어 털 1~2mm가 창문을 잡아",
+      "문풍지 붙이고 창문이 안 밀려?",
+      "털 긴 문풍지가 더 막는 줄 알았지?"
+    ],
+    "posts": [
+      "모헤어 털 1~2mm가 창문을 잡아.\n외풍 막겠다고 제일 긴 털로 샀다가 창이 뻑뻑해질 수 있거든.\n털은 틈에 살짝 닿을 만큼이면 돼. 더 길면 롤러랑 잠금장치까지 힘들어하고.\n너넨 모헤어 살 때 틈부터 쟀어, 아니면 그냥 긴 걸로 골랐어?",
+      "사기 전에 이것만 봐\n1. 창 닫고 창짝이랑 틀 사이 틈부터 재\n2. 상품명 숫자가 털 길이인지 폭인지 상세 스펙에서 따로 확인해. 23mm x 9mm는 털 23, 폭 9였어\n3. 샷시 홈 자리는 끼우는 샷시 모헤어로. 알루미늄 6.7mm, 하이샷시 6.4mm 바닥 폭이야\n4. 헌 털은 눌려 있으니까 덜 닳은 구간 높이로 재",
+      "끼우는 거랑 붙이는 거 비교표, 붙이는 순서는 블로그에 정리했어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "샷시 모헤어 비접착 (끼우는 타입)",
+      "search": "샷시 모헤어 비접착 하이샷시 6.4mm",
+      "why": "창짝 홈에 박힌 헌 털을 새로 바꾸려는 집",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요."
+    },
+    {
+      "name": "모헤어 문풍지 접착식",
+      "search": "모헤어 문풍지 접착식 12mm",
+      "why": "홈 없는 방충망·창틀 면에 털을 덧대려는 집",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요."
+    },
+    {
+      "name": "광폭 모헤어 문풍지 20mm",
+      "search": "모헤어 문풍지 광폭 20mm",
+      "why": "붙일 면이 넓은 틀에 쓰려는 집",
+      "after": "샷시 홈이 있으면 끼우는 쪽부터 보세요."
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "블로그: 글자 수 2821자 (기준 1,200~2,800자)",
+      "카드: 5장: 아래 빈 공간 큼 (262px)"
+    ],
+    "at": "2026-11-23T20:15+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3809자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"실수 N\"",
+      "text": "카드: 3장: 계정명 자리 침범: \"실수 1\""
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 3장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"실수 N\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"실수 3\""
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"실수 N\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"실수 4\""
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 2982자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"실수 N\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"실수 3\""
+    },
+    {
+      "at": "2026-11-23T20:14+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-23T20:15+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 2821자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-23T20:15+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 5장: 아래 빈 공간 큼 (262px)"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9982,
+        "output_tokens": 2736,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0024
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 51657,
+        "output_tokens": 34463,
+        "web_searches": 4,
+        "calls": 3,
+        "usd": 0.9359
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 633,
+        "output_tokens": 98,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0022
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 1.0745,
+    "total_usd": 1.0745,
+    "total_krw": 1500,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
