@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T07:37+09:00",
+  "updated": "2026-11-24T08:47+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1172,13 +1172,24 @@
       "url": null
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-issue-0701",
+      "title": "⚡ 내 연금·유족연금 겹친 20.8만명, 3.7만명은 내 연금 0원",
+      "platform": "threads",
+      "at": "2026-11-24T08:46:12+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-22-window-condensation-tape-humidity",
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "blog",
-      "at": "2026-11-24T08:00+09:00",
-      "state": "planned"
+      "at": "2026-11-24T08:47:13+09:00",
+      "state": "done",
+      "url": "https://blog.naver.com/cafe_peanut/224489460480"
     },
     {
       "site": "sisibibi",

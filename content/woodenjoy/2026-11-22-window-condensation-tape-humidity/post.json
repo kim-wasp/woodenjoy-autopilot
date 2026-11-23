@@ -259,5 +259,10 @@
     "total_krw": 1330,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-22T21:40+09:00"
+  "approved_at": "2026-11-22T21:40+09:00",
+  "published": {
+    "blog": "post_89838326eae578fa",
+    "blog_url": "https://blog.naver.com/cafe_peanut/224489460480",
+    "blog_at": "2026-11-24T08:47:13+09:00"
+  }
 }
