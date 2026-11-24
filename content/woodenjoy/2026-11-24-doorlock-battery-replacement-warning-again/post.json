@@ -2,7 +2,7 @@
   "id": "woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
   "site": "woodenjoy",
   "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-24T20:16+09:00",
   "requested_topic": "",
   "keywords": {
@@ -219,7 +219,7 @@
     "usd": 1.4439,
     "claude_usd": 1.001,
     "google_usd": 0.134,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 188,
     "total_usd": 1.4439,
     "total_krw": 2020,
