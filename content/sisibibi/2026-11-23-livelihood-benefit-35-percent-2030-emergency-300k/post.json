@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-23-livelihood-benefit-35-percent-2030-emergency-300k",
   "site": "sisibibi",
   "title": "생계급여 35%? 2027년엔 32% 그대로…30만원은 선지급",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-23T21:51+09:00",
   "requested_topic": "생계급여 기준 2030년 '중위소득 35%'로…누가 새로 받나, 긴급 30만원은 뭔가",
   "keywords": {
@@ -226,6 +226,12 @@
   "published": {
     "blog": "posts/2026-11-24-livelihood-benefit-35-percent-2030-emergency-300k",
     "blog_url": "https://sisibibinote.kr/posts/livelihood-benefit-35-percent-2030-emergency-300k/",
-    "blog_at": "2026-11-24T12:02:10+09:00"
+    "blog_at": "2026-11-24T12:02:10+09:00",
+    "threads": [
+      "18149687998572241",
+      "18100585229457764",
+      "18170072197490990"
+    ],
+    "threads_at": "2026-11-24T20:03:08+09:00"
   }
 }
