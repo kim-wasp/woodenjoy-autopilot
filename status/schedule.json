@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T12:02+09:00",
+  "updated": "2026-11-24T12:32+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1217,8 +1217,9 @@
       "dir": "content/woodenjoy/2026-11-22-window-condensation-tape-humidity",
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "threads",
-      "at": "2026-11-24T12:30+09:00",
-      "state": "planned"
+      "at": "2026-11-24T12:32:44+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "woodenjoy",
