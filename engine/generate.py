@@ -990,6 +990,9 @@ def keyword_pool(site, n_seeds=15, keep=12):
     prompt = "\n\n".join(x for x in [
         f"[사이트]\n{site_profile(site)}", f"[오늘] {now_kst():%Y-%m-%d (%a)}",
         ("[이번 글 종류]\n" + turn) if turn else "",
+        ("[검색어 크기] 이 블로그는 아직 큰 검색어에서 밀려요(2026-11-24 네이버 확인: 새 글 14편 중 3편만 노출). "
+         "넓은 말(예: 도어락 교체) 대신 문제를 겪는 사람이 치는 구체적인 상황 검색어(예: 문고리 백셋 재는법, 방문경첩 나사 헛돌때, 도어락 구멍 안맞음)를 절반 이상 섞어 주세요. "
+         "지금까지 2~3위에 오른 글은 모두 이런 상황형 검색어였어요.") if site.get("keyword_target") else "",
         trends.naver_trends_block(site["id"]),
         "[최근에 쓴 제목 — 겹치지 않게]\n" + "\n".join([x["title"] for x in published_posts(site["id"])][-40:] or ["(없음)"]),
         f"이 블로그 독자가 네이버에서 실제로 칠 만한 검색어 {n_seeds}개를 주세요. 지금 시기에 맞고 최근 제목과 겹치지 않게. "
@@ -1017,7 +1020,8 @@ def keyword_pool(site, n_seeds=15, keep=12):
     grams = {w[i:i + 2] for w in seed_norm for i in range(len(w) - 1)}
     def related(k):  # 연관 검색어는 후보 검색어와 두 글자 이상 겹칠 때만 (엉뚱한 연관어 빼기)
         return any(k[i:i + 2] in grams for i in range(len(k) - 1))
-    band = [x for x in pool.values() if 150 <= x["vol"] <= 30000 and (x["seed"] or related(x["kw"]))]
+    lo, hi = (site.get("keyword_band") or [150, 30000])[:2]  # 사이트별로 노릴 월 검색 수 구간 (site.json keyword_band)
+    band = [x for x in pool.values() if lo <= x["vol"] <= hi and (x["seed"] or related(x["kw"]))]
     band.sort(key=lambda x: (not x["seed"], -x["vol"]))
     band = band[:40]
     for x in band:
@@ -1030,8 +1034,13 @@ def keyword_pool(site, n_seeds=15, keep=12):
         x["ratio"] = round(x["vol"] / d, 2) if d else None
         # 글 수를 알면 '검색 ÷ 글 수'가 핵심, 모르면 검색 수가 적당한(300~5천) 것을 앞으로
         # 글 수를 모르면 300~3천 회(새 블로그가 노려 볼 만한 크기)를 앞으로, 후보 검색어 자체에 가산
-        mid = 1 - abs(math.log10(x["vol"]) - 3.0)
-        x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None else mid) + (0.3 if x["seed"] else 0)
+        tgt = site.get("keyword_target")
+        mid = 1 - abs(math.log10(x["vol"]) - math.log10(tgt or 1000))
+        if tgt:  # 목표 크기가 정해진 사이트: 목표에 가까울수록 + 경쟁(검색÷글 수)이 낮을수록 + 문제 상황형(3단어 이상) 가산
+            x["score"] = mid + (min(x["ratio"], 3) / 3 if x["ratio"] is not None else 0) + (0.3 if x["seed"] else 0) \
+                + (0.2 if len(x["kw"]) >= 7 else 0)
+        else:
+            x["score"] = (math.log10(x["vol"]) * min(x["ratio"], 3) if x["ratio"] is not None else mid) + (0.3 if x["seed"] else 0)
     band.sort(key=lambda x: -x["score"])
     out = band[:keep]
     for x in out:
