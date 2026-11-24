@@ -1,0 +1,252 @@
+{
+  "id": "infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
+  "site": "infobay",
+  "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+  "status": "draft",
+  "created_at": "2026-11-24T20:11+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "돌잔치 축의금",
+    "sub": [
+      "돌잔치 불참 축의금",
+      "돌반지 한돈 가격",
+      "결혼식 불참 축의금",
+      "돌잔치 식대"
+    ]
+  },
+  "brief": {
+    "reader": "친구·동료 돌잔치 초대를 받았는데 배우자나 아이와 같이 가야 해서 봉투 금액이 고민인 20~40대 직장인",
+    "question": "돌잔치 축의금, 혼자 갈 때와 가족이 같이 갈 때 각각 얼마가 맞을까?",
+    "answer": "관계로 기본값(동료 5만원, 친구 10만원)을 정하고, 같이 가는 인원 × 식대(성인 5만원 안내 사례)와 비교해 큰 쪽을 고르면 가장 덜 어긋나요.",
+    "out_of_scope": "돌잔치를 여는 부모 쪽 예산·업체 고르기, 결혼식 축의금 설문 수치(별도 글), 금 투자 판단",
+    "next_action": "같이 갈 인원을 세고 '인원 × 5만원'과 관계 기본값 중 큰 금액을 봉투에 넣기"
+  },
+  "why_this_topic": "후보 키워드 중 '돌잔치축의금'이 월 검색 7,630회로 가장 많고, 사이트 주제(관혼상제)와 바로 맞아요. 최근 축의금 글은 결혼식 기준이라 겹치지 않아요. 검색 상위 글은 관계별 금액표만 있고, 가족 동반 계산과 오늘(2026-11-24) 금 시세(한국금거래소 살 때 69만원대)를 다룬 글은 없어서 빈자리가 있어요.",
+  "title_candidates": [
+    {
+      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "돌잔치 축의금 얼마? 혼자면 5만원, 가족 동반이면 다시 계산",
+      "pattern": "결론 먼저",
+      "score": 8
+    },
+    {
+      "title": "돌잔치 축의금 vs 돌반지, 오늘 금 한 돈 69만원대",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "돌잔치 축의금 실수, 불참인데 10만원 vs 셋이 가서 5만원",
+      "pattern": "실수·손해",
+      "score": 7
+    },
+    {
+      "title": "돌잔치 축의금은 결혼식보다 덜? 식대는 1인 5만원대",
+      "pattern": "반전",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목들(돌잔치 축의금 얼마가 적당할까? 관계별 금액 기준표 2026 / 관계별 평균 금액 정리 / 요즘은 얼마가 보통일까)은 모두 관계별 금액표만 약속해요. 우리는 가족이 같이 갈 때 '인원 × 식대'로 계산하는 기준과 오늘 돌반지 한 돈 시세를 제목과 본문에 넣어 차별화해요.",
+  "meta_description": "돌잔치 축의금은 혼자 가면 5만~10만원이 흔한 범위예요. 성인 식대 5만원 기준이면 어른 셋은 15만원부터예요. 불참했을 때 금액과 오늘 돌반지 한 돈 시세(살 때 69만원대)까지 표로 정리했어요.",
+  "hero_prompt": "Candid smartphone photo of a Korean family of three walking into a small doljanchi (first birthday party) restaurant room, parent holding a toddler's hand, a white gift envelope visible in the other hand, decorated dolsang table and balloons blurred in the background, natural mixed indoor lighting, slightly off-center, faces not in close-up, no text",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "돌잔치 접수대 앞에서 축의금 봉투를 든 하객의 손",
+      "prompt": "Candid smartphone snapshot at a small Korean first-birthday party venue, a guest's hands holding a white envelope near a reception table with a guest book, blurred buffet and balloons in background, slightly off-center framing, mixed warm indoor lighting, ordinary clutter, faces not in close-up, not a stock photo, no glossy CGI look, no text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "고물가·금값 상승에 돌잔치도 바뀐다…대구·경북 '가족형·촬영형' 확산 (경북일보, 다음 뉴스)",
+      "url": "https://v.daum.net/v/20260105175101850"
+    },
+    {
+      "title": "[비건뉴스] 11월 24일 금시세, 순금 한 돈 살 때 69만8000원·팔 때 59만8000원",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=410403"
+    },
+    {
+      "title": "[오늘의 금시세] 11월 24일 순금 한 돈 69만4000원 (잡포스트)",
+      "url": "https://www.job-post.co.kr/news/articleView.html?idxno=240409"
+    },
+    {
+      "title": "[오늘의 금시세] 11월 24일, 순금 구매 가격 상승 판매 가격은 보합 (톱스타뉴스)",
+      "url": "https://www.topstarnews.net/news/articleView.html?idxno=16284755"
+    },
+    {
+      "title": "11월 셋째 주 금시세 8.4% 하락…순금 한 돈 금값 67만2000원 (더페어)",
+      "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95032"
+    },
+    {
+      "title": "돌잔치 축의금 얼마가 적당할까? 관계별 금액 기준표 2026",
+      "url": "https://scenekoong.com/blog/doljanchi-gift-money-guide"
+    },
+    {
+      "title": "돌잔치 비용 총정리 체크리스트 2026 (식대·아동 반값 안내)",
+      "url": "https://scenekoong.com/blog/doljanchi-cost-checklist"
+    },
+    {
+      "title": "돌반지 한 돈 무게와 순금 표기 읽는 법 (보아스매거진)",
+      "url": "https://magazine.lboas.com/%EB%8F%8C%EB%B0%98%EC%A7%80/"
+    },
+    {
+      "title": "돌잔치 축의금은 얼마정도가 괜찮은지 궁금해요 (아하, 돌잡이 추가 의견)",
+      "url": "https://www.a-ha.io/questions/4b2c171632abe858b7e14a8563bea543"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "순서형",
+    "ending": "의견",
+    "cover_hooks": [
+      "셋이 가서 5만원 봉투?",
+      "돌잔치 식대 1인 5만원, 봉투는 얼마?",
+      "돌반지 한 돈 오늘 69만원대, 현금이 나을까?"
+    ],
+    "caption": "돌잔치 봉투에 5만원 넣다가 손이 멈췄다면\n\n대구의 한 소규모 돌잔치 공간은 성인 식대를 5만원으로 안내해요. 어른 셋이 가면 밥값만 15만원이에요.\n관계로 기본값을 정하고 인원 × 식대와 비교해 큰 쪽을 고르면 덜 어긋나요.\n오늘(11/24) 순금 한 돈은 살 때 69만원대라 돌반지는 가까운 가족 쪽 선택지예요.\n\n아이 둘 데리고 가는 동료 돌잔치라면 봉투에 얼마 넣으실 건가요?\n\n#축의금 #돌잔치축의금 #돌잔치 #돌반지",
+    "slides_note": ""
+  },
+  "threads": {
+    "style": "편 가르기",
+    "hooks": [
+      "애 둘 데리고 돌잔치 가는데 봉투는 5만원",
+      "돌잔치 식대가 1인 5만원이래",
+      "돌반지 한 돈이 오늘 69만원대야"
+    ],
+    "posts": [
+      "애 둘 데리고 돌잔치 가는데 봉투는 5만원.\n한쪽은 애들이 밥 얼마나 먹는다고, 마음이 중요하지 파.\n다른 쪽은 식대가 1인 5만원대인데 인원수만큼은 넣어야지 파.\n넌 인원수대로 올린다, 관계대로 그대로 간다 중에 어느 쪽이야?",
+      "확인된 숫자만 모아 봤어.\n1. 대구 소규모 돌잔치 공간 안내: 성인 식대 5만원, 다른 식당 코스는 1인 5만3천~6만3천원 (경북일보, 2026년 1월)\n2. 아이 식대는 보통 반값으로 받는 곳이 많아. 업체마다 다르긴 해\n3. 오늘(11/24) 순금 한 돈은 살 때 69만원대야 (한국금거래소, 부가세 포함, 공임 별도)\n돌잔치 축의금만 따로 조사한 전국 설문은 없어서 정답은 없어. 예전에 받은 기록이 있으면 그 금액이 1순위야.",
+      "인원별로 얼마부터인지 표로 정리해 뒀어 {LINK}"
+    ],
+    "topic_tag": "축의금"
+  },
+  "revision": 2,
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 6장: 아래 빈 공간 큼 (375px)"
+    ],
+    "at": "2026-11-24T20:11+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N단계\"",
+      "text": "카드: 3장: 계정명 자리 침범: \"1단계\""
+    },
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 3장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N단계\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"3단계\""
+    },
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"선택지\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"선택지\""
+    },
+    {
+      "at": "2026-11-24T20:10+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N단계\"",
+      "text": "카드: 3장: 계정명 자리 침범: \"1단계\""
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 3장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N단계\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"3단계\""
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"선택지\"",
+      "text": "카드: 6장: 계정명 자리 침범: \"선택지\""
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 6장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:11+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 6장: 아래 빈 공간 큼 (375px)"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 8910,
+        "output_tokens": 3270,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0025
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 241869,
+        "output_tokens": 20222,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 1.4219
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 1000,
+        "output_tokens": 209,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0041
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 2,
+        "usd": 0.268
+      }
+    },
+    "usd": 1.6965,
+    "claude_usd": 0.9605,
+    "google_usd": 0.268,
+    "other_usd": 0.0,
+    "google_krw": 375,
+    "total_usd": 1.6965,
+    "total_krw": 2380,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
