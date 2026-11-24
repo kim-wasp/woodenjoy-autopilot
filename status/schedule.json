@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T15:38+09:00",
+  "updated": "2026-11-24T16:22+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1218,6 +1218,16 @@
       "title": "창문 결로방지 테이프 붙였는데 유리는 그대로? 습도 60%부터 보세요",
       "platform": "threads",
       "at": "2026-11-24T12:32:44+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-issue-1140",
+      "title": "⚡ AI 쓴 거 회사에 말해야 할까? 숨기는 직장인 32% vs 섀도 AI 보안 우려",
+      "platform": "threads",
+      "at": "2026-11-24T16:21:59+09:00",
       "state": "done",
       "url": null
     },

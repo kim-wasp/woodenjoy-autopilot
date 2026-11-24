@@ -1,7 +1,7 @@
 {
   "site": "infobay",
   "title": "⚡ AI 쓴 거 회사에 말해야 할까? 숨기는 직장인 32% vs 섀도 AI 보안 우려",
-  "status": "ready",
+  "status": "published",
   "rush": true,
   "platforms": [
     "threads"
@@ -55,5 +55,14 @@
       "스레드2": "A",
       "스레드3": "A"
     }
+  },
+  "approved_at": "2026-11-24T16:21+09:00",
+  "published": {
+    "threads": [
+      "18138322828640591",
+      "17926940877440781",
+      "18079326080752065"
+    ],
+    "threads_at": "2026-11-24T16:21:59+09:00"
   }
 }
