@@ -1,0 +1,27 @@
+{
+"workflow": "속보 감지",
+"event": "schedule",
+"run_id": "45338337434",
+"argv": [
+"engine/issue.py",
+"watch"
+],
+"entries": [
+{
+"t": "2026-11-24T19:06:04+09:00",
+"kind": "claude",
+"site": "woodenjoy",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 2792,
+"cache_write": 0,
+"cache_read": 0,
+"output": 569,
+"web_searches": 0,
+"sec": 3.3,
+"usd": 0.00056
+}
+]
+}
