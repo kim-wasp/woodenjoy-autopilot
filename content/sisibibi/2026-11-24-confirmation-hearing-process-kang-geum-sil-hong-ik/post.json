@@ -1,0 +1,261 @@
+{
+  "id": "sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik",
+  "site": "sisibibi",
+  "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
+  "status": "draft",
+  "created_at": "2026-11-24T23:39+09:00",
+  "requested_topic": "장관 임명 절차, 청문회 다음은? 국정원장 강금실·통일 홍익표 등 개각 정리",
+  "keywords": {
+    "main": "인사청문회 절차",
+    "sub": [
+      "인사청문회 일정",
+      "인사청문회법",
+      "인사청문회 대상",
+      "인사청문회 뜻",
+      "인사청문회 용혜인",
+      "강금실 국정원장",
+      "홍익표 통일부 장관",
+      "재송부 요청",
+      "개각"
+    ]
+  },
+  "brief": {
+    "reader": "11월 23일 개각 뉴스를 보고 '청문회 다음엔 뭐지, 국회가 반대하면 못 하나' 궁금해진 20~50대",
+    "question": "장관·국정원장 후보자는 청문회 뒤 어떤 절차로 임명되고, 국회가 반대하면 막을 수 있나?",
+    "answer": "장관과 국정원장은 국회 표결이 없어서, 보고서가 기한 안에 안 나오면 대통령이 10일 이내 재송부 요청을 하고 그 기한이 지나면 임명할 수 있어요.",
+    "out_of_scope": "후보자 개인 의혹 단정, 청문회 결과 예측, 교육부 장관 후임 인선",
+    "next_action": "국회 인터넷의사중계 일정에서 정보위원회·외교통일위원회 청문회 날짜 확인하기"
+  },
+  "why_this_topic": "사장님 지정 주제. 11월 23일 장관급 5명 개각 직후라 검색 수요가 몰리는 시점이고, '인사청문회 절차'(네이버 월 40회)는 작지만 구체적인 설명형 검색어예요. 자동완성 '인사청문회 일정·대상·용혜인'도 함께 답할 수 있어요. 급등 검색어(관세사·HSCODE 등)는 이 주제와 관련이 없어서 쓰지 않았어요.",
+  "title_candidates": [
+    {
+      "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
+      "pattern": "반전",
+      "score": 9
+    },
+    {
+      "title": "인사청문회 절차, 보고서 없어도 10일 뒤 임명…개각 5명 남은 단계",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "인사청문회 절차 20일, 지명일부터 세면 틀려요…강금실 청문회 날짜",
+      "pattern": "실수·손해",
+      "score": 7
+    },
+    {
+      "title": "인사청문회 절차, 총리는 표결 장관은 통보…국정원장 강금실은?",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "인사청문회 절차, '부적격'이 붙어도 장관 되는 이유와 5명 일정",
+      "pattern": "짜증 장면",
+      "score": 8
+    }
+  ],
+  "title_research": "상위 글은 '인사청문회 절차·뜻·대상'을 일반론으로 설명하거나 '강금실 지명'을 인물 뉴스로만 다뤄요. 우리 글은 20일+10일 기한과 '국회가 반대해도 임명되나'라는 질문을 11월 23일 지명된 5명에 바로 붙여서 답해요.",
+  "meta_description": "국회 제출일부터 20일, 재송부 요청 최대 10일. 장관·국정원장은 보고서가 안 나와도 임명돼요. 11월 23일 지명된 5명과 보은 인사 논쟁의 양쪽 근거, 최교진 사례를 정리했어요.",
+  "hero_prompt": "An empty National Assembly hearing room in Seoul, a single witness desk with a microphone facing rows of empty curved committee desks, neat stacks of blank documents and folders on the witness desk, soft daylight, neutral colors, no people, no text, no logos, no flags, documentary photo style",
+  "thumb_text": "",
+  "category": "국내정치",
+  "kind": "",
+  "summary": [],
+  "conclusion": "장관·국정원장은 국회 표결이 없어서, 청문 보고서가 안 나와도 재송부 기한(최대 10일)이 지나면 임명돼요. 11월 23일 지명된 5명도 같은 절차를 밟아요.",
+  "opinion": "아...이재명도 보은 인사의 굴레에서 벗어나지 못하는구나...\n최 전교육부 장관 뽑았을때도 실망했는데 이번 임명은 누가봐도 보은인사...\n전문성은 개나줘버린 임명이 아닐수 없네...",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "한국일보 - 국정원장에 강금실... 외교 임웅순, 통일 홍익표, 행안 한준호, 문체 강유정",
+      "url": "https://www.hankookilbo.com/news/article/A2026112314520000253"
+    },
+    {
+      "title": "서울경제 - 국정원장에 강금실 지명…외교 임웅순 통일 홍익표",
+      "url": "https://m.sedaily.com/article/20117904"
+    },
+    {
+      "title": "연합뉴스(네이트) - 신임 국정원장 후보자에 강금실…외교 임웅순·통일 홍익표",
+      "url": "https://m.news.nate.com/view/20261123n24058"
+    },
+    {
+      "title": "국가법령정보센터 - 인사청문회법",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=147147"
+    },
+    {
+      "title": "인사청문회법 제6조(임명동의안등의 회부등) - CaseNote",
+      "url": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EC%82%AC%EC%B2%AD%EB%AC%B8%ED%9A%8C%EB%B2%95/%EC%A0%9C6%EC%A1%B0"
+    },
+    {
+      "title": "국가법령정보센터 - 인사청문회법 제6조·제7조",
+      "url": "https://www.law.go.kr/LSW//lsLawLinkInfo.do?lsJoLnkSeq=1000902705&lsId=002037&chrClsCd=010202&print=print"
+    },
+    {
+      "title": "VOA - 한국 인사청문회 절차는?",
+      "url": "https://www.voakorea.com/a/korea-now-091526/8200199.html"
+    },
+    {
+      "title": "세무사신문 - '도입 25년' 국회 인사청문회 제도",
+      "url": "https://webzine.kacta.or.kr/news/articleView.html?idxno=23165"
+    },
+    {
+      "title": "아주경제 - 李 대규모 개각에 날 세운 野 \"전문성 무시한 보은·코드 인사\"",
+      "url": "https://www.ajunews.com/view/20261123162200865"
+    },
+    {
+      "title": "아이뉴스24 - 국힘 \"李 개각 아닌 '개악'\"",
+      "url": "https://m.inews24.com/v/2029573"
+    },
+    {
+      "title": "한국사회복지저널 - 국민의힘 \"11·23 인선은 쇄신 아닌 내 사람 심기\"",
+      "url": "https://www.ksw-news.com/news/articleView.html?idxno=3066327"
+    },
+    {
+      "title": "파이낸스투데이 - 국민의힘, 이재명 개각에 '회전문·보은 인사' 비판",
+      "url": "https://www.fntoday.co.kr/news/articleView.html?idxno=399890"
+    },
+    {
+      "title": "서울신문 - '친정 체제 개각' 엄호 나선 與… 野는 강금실·한준호 정조준",
+      "url": "https://seoul.co.kr/news/politics/2026/11/25/20261125006001"
+    },
+    {
+      "title": "네이트 뉴스 - 與 \"국정 새 활력 기대\"…野 \"보은·회전문 인사\"",
+      "url": "https://m.news.nate.com/view/20261123n33352"
+    },
+    {
+      "title": "뉴스웍스 - 국힘, 강금실·홍익표·임웅순 '인물별 공세'…청문회 격돌 예고",
+      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=904257"
+    },
+    {
+      "title": "파이낸셜뉴스 - 홍익표 후보자, 남북회담본부로 첫 출근",
+      "url": "https://www.fnnews.com/news/202611241039091636"
+    },
+    {
+      "title": "MBC - 또다시 '최초' 앞에 선 강금실",
+      "url": "https://imnews.imbc.com/replay/2026/nwdesk/article/6868252_37004.html"
+    },
+    {
+      "title": "뉴스핌 - 논란에도 임명·개각서도 유임…李정부 교육 인사 '연쇄 실패'",
+      "url": "https://www.newspim.com/news/view/20261123000374"
+    },
+    {
+      "title": "뉴데일리 - 李 대통령, 최교진 후보자 '임명 강행'",
+      "url": "https://www.newdaily.co.kr/site/data/html/2025/09/12/2025091200069.html"
+    },
+    {
+      "title": "make2t - 강금실 국정원장 후보자 지명·인사청문회 절차",
+      "url": "https://make2t.kr/2026/11/2026_0743131952.html"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads"
+  ],
+  "blog_platform": "static",
+  "instagram": null,
+  "threads": {
+    "style": "공감 투덜",
+    "hooks": [
+      "청문회 보고서 없어도 장관 된대",
+      "개각 5명 중 3명이 청와대 출신이래",
+      "청문회 생중계 보며 열낸 내 저녁 시간"
+    ],
+    "posts": [
+      "청문회 보고서 없어도 장관 된대\n국회에서 '부적격' 소리가 나와도 대통령이 재송부 요청 한 번 하고 기다리면 임명이 되거든 ㅋㅋ 이번 개각도 5명 중 3명이 청와대 출신이고.\n청문회 생중계 보면서 혼자 열낸 내 저녁 시간은 뭐였나 싶음\n너는 청문 보고서에 임명 막는 힘이 있어야 한다고 봐, 지금처럼 참고용이면 된다고 봐?",
+      "장관 임명 순서 정리해 봤어.\n1. 대통령이 인사청문요청안을 국회에 내. 20일은 이날부터 세는 거야(지명일 아님)\n2. 국회는 20일 안에 청문 끝내야 해. 청문회는 3일 이내인데 장관은 보통 하루야\n3. 보고서가 안 오면 대통령이 10일 이내로 다시 보내 달라고 하고, 그래도 안 오면 임명할 수 있어\n국무총리·대법원장처럼 표결하는 자리만 국회가 부결로 막을 수 있어. 국정원장·장관은 표결이 없어.",
+      "5명 경력이랑 여야가 서로 내세우는 근거, 최교진 사례까지 여기 정리해 놨어 {LINK}"
+    ],
+    "topic_tag": "정치"
+  },
+  "revision": 1,
+  "signature": {
+    "verdict": {
+      "issue": "11월 23일 개각은 '보은 인사'일까, '국정 철학을 공유한 실용 인선'일까?",
+      "rows": [
+        {
+          "who": "국민의힘",
+          "claim": "강금실 후보자는 정보·방첩 경력이 없다",
+          "check": "보도된 경력은 판사, 노무현 정부 법무부 장관, 외교부 여성인권대사 등이고 정보기관 근무 경력은 보도되지 않음",
+          "status": "사실"
+        },
+        {
+          "who": "국민의힘",
+          "claim": "대통령과 인연 있는 사람을 챙긴 보은·회전문 인사다",
+          "check": "강 후보자는 2021년 경선 때 후원회장, 2025년 대선 때 총괄선대위원장을 지냄(아주경제). 보은인지 아닌지는 평가의 영역",
+          "status": "의견"
+        },
+        {
+          "who": "청와대·더불어민주당",
+          "claim": "홍익표 후보자는 외교·통일 전문가다",
+          "check": "대외경제정책연구원 연구원, 통일부 장관 정책보좌관, 국회 외교통일위원회 위원 경력(청와대 브리핑·파이낸셜뉴스)",
+          "status": "사실"
+        },
+        {
+          "who": "더불어민주당",
+          "claim": "대통령과 국정 철학을 공유해야 바로 일할 수 있다",
+          "check": "인선 기준에 대한 여당의 주장이고, 이를 확인할 객관적 기준은 없음(서울신문)",
+          "status": "의견"
+        }
+      ],
+      "unknown": "11월 24일 보도 기준 인사청문요청안 제출일과 청문회 날짜는 아직 확인되지 않았어요."
+    }
+  },
+  "korean_check": {
+    "blog": {
+      "grade": "A",
+      "score": 9.5,
+      "left": [
+        "추측·약화: '로 보여요'"
+      ]
+    },
+    "sns": {
+      "스레드1": "A",
+      "스레드2": "A",
+      "스레드3": "A"
+    }
+  },
+  "checks": {
+    "ok": true,
+    "issues": [],
+    "at": "2026-11-24T23:39+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-24T23:38+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-opus-5-5": {
+        "input_tokens": 262988,
+        "output_tokens": 19869,
+        "web_searches": 6,
+        "calls": 2,
+        "usd": 1.5093
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 14119,
+        "output_tokens": 1320,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0414
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 1.6848,
+    "claude_usd": 1.0669,
+    "google_usd": 0.134,
+    "other_usd": 0.0,
+    "google_krw": 188,
+    "total_usd": 1.6848,
+    "total_krw": 2360,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
