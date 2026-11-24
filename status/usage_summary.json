@@ -1,49 +1,49 @@
 {
- "updated": "2026-11-23T23:20+09:00",
+ "updated": "2026-11-24T11:42+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 34.5118,
-    "input": 1663656,
-    "cache_write": 77514,
-    "cache_read": 137557,
-    "output": 984302,
-    "web_searches": 210,
-    "calls": 197,
+    "usd": 35.2303,
+    "input": 1711796,
+    "cache_write": 249653,
+    "cache_read": 257800,
+    "output": 1010050,
+    "web_searches": 221,
+    "calls": 213,
     "images": 57
    },
    "by_site": {
     "정치 (시시비비노트)": {
-     "usd": 11.0697,
-     "input": 478610,
-     "cache_write": 77514,
-     "cache_read": 137557,
-     "output": 287993,
-     "web_searches": 92,
-     "calls": 52,
+     "usd": 11.4061,
+     "input": 495489,
+     "cache_write": 159672,
+     "cache_read": 201901,
+     "output": 296862,
+     "web_searches": 97,
+     "calls": 56,
      "images": 17
     },
     "가구·인테리어 (우드엔조이)": {
-     "usd": 10.0444,
-     "input": 625352,
+     "usd": 10.0476,
+     "input": 640458,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 322255,
+     "output": 325568,
      "web_searches": 46,
-     "calls": 65,
+     "calls": 71,
      "images": 10
     },
     "상식 (커먼센스 · 블로그 + infobay_kr)": {
-     "usd": 9.4155,
-     "input": 401855,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 252277,
-     "web_searches": 44,
-     "calls": 47,
+     "usd": 9.7945,
+     "input": 418010,
+     "cache_write": 89981,
+     "cache_read": 55899,
+     "output": 265843,
+     "web_searches": 50,
+     "calls": 53,
      "images": 21
     },
     "건강 (forsmartlife.com)": {
@@ -78,22 +78,22 @@
      "calls": 10,
      "images": 2
     },
+    "속보 감지": {
+     "usd": 0.7188,
+     "input": 49972,
+     "cache_write": 172139,
+     "cache_read": 120243,
+     "output": 26077,
+     "web_searches": 11,
+     "calls": 17,
+     "images": 0
+    },
     "글감 추천": {
      "usd": 0.1264,
      "input": 13068,
      "cache_write": 0,
      "cache_read": 0,
      "output": 3705,
-     "web_searches": 0,
-     "calls": 1,
-     "images": 0
-    },
-    "속보 감지": {
-     "usd": 0.0003,
-     "input": 1832,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 329,
      "web_searches": 0,
      "calls": 1,
      "images": 0
@@ -130,6 +130,16 @@
      "calls": 4,
      "images": 0
     },
+    "속보 글 쓰기": {
+     "usd": 0.708,
+     "input": 28,
+     "cache_write": 172139,
+     "cache_read": 120243,
+     "output": 14352,
+     "web_searches": 11,
+     "calls": 4,
+     "images": 0
+    },
     "글감 추천": {
      "usd": 0.1264,
      "input": 13068,
@@ -160,6 +170,16 @@
      "calls": 1,
      "images": 0
     },
+    "속보 고르기": {
+     "usd": 0.0109,
+     "input": 49944,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 11725,
+     "web_searches": 0,
+     "calls": 13,
+     "images": 0
+    },
     "사진 방향 검수": {
      "usd": 0.0042,
      "input": 1114,
@@ -178,16 +198,6 @@
      "output": 2736,
      "web_searches": 0,
      "calls": 2,
-     "images": 0
-    },
-    "속보 고르기": {
-     "usd": 0.0003,
-     "input": 1832,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 329,
-     "web_searches": 0,
-     "calls": 1,
      "images": 0
     }
    },
@@ -213,23 +223,23 @@
      "images": 57
     },
     "claude-sonnet-5-5": {
-     "usd": 1.2406,
-     "input": 329881,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 53023,
-     "web_searches": 0,
-     "calls": 54,
+     "usd": 1.9485,
+     "input": 329909,
+     "cache_write": 172139,
+     "cache_read": 120243,
+     "output": 67375,
+     "web_searches": 11,
+     "calls": 58,
      "images": 0
     },
     "claude-haiku-5-5": {
-     "usd": 0.0223,
-     "input": 74897,
+     "usd": 0.0328,
+     "input": 123009,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 29630,
+     "output": 41026,
      "web_searches": 0,
-     "calls": 17,
+     "calls": 29,
      "images": 0
     }
    },
@@ -294,6 +304,26 @@
      "calls": 4,
      "images": 1
     },
+    "상식 (커먼센스 · 블로그 + infobay_kr) / 속보 감지": {
+     "usd": 0.379,
+     "input": 16155,
+     "cache_write": 89981,
+     "cache_read": 55899,
+     "output": 13566,
+     "web_searches": 6,
+     "calls": 6,
+     "images": 0
+    },
+    "정치 (시시비비노트) / 속보 감지": {
+     "usd": 0.3364,
+     "input": 16879,
+     "cache_write": 82158,
+     "cache_read": 64344,
+     "output": 8869,
+     "web_searches": 5,
+     "calls": 4,
+     "images": 0
+    },
     "정치 (시시비비노트) / 글감 추천": {
      "usd": 0.1264,
      "input": 13068,
@@ -305,13 +335,13 @@
      "images": 0
     },
     "가구·인테리어 (우드엔조이) / 속보 감지": {
-     "usd": 0.0003,
-     "input": 1832,
+     "usd": 0.0035,
+     "input": 16938,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 329,
+     "output": 3642,
      "web_searches": 0,
-     "calls": 1,
+     "calls": 7,
      "images": 0
     }
    },
@@ -515,11 +545,87 @@
      "web_searches": 14,
      "calls": 26,
      "images": 5
+    },
+    "2026-11-24": {
+     "usd": 0.7185,
+     "input": 48140,
+     "cache_write": 172139,
+     "cache_read": 120243,
+     "output": 25748,
+     "web_searches": 11,
+     "calls": 16,
+     "images": 0
     }
    }
   }
  },
  "recent_runs": [
+  {
+   "file": "20261124-114204-45275506141-5721.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T11:41:11+09:00",
+   "task": "속보 감지",
+   "site": "infobay",
+   "calls": 4,
+   "images": 0,
+   "usd": 0.1936
+  },
+  {
+   "file": "20261124-104543-45275506141-5187.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T10:44:35+09:00",
+   "task": "속보 감지",
+   "site": "infobay",
+   "calls": 4,
+   "images": 0,
+   "usd": 0.2061
+  },
+  {
+   "file": "20261124-094911-45275506141-4047.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T09:49:11+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0007
+  },
+  {
+   "file": "20261124-085353-45275506141-3501.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T08:53:53+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0004
+  },
+  {
+   "file": "20261124-075836-45275506141-2970.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T07:58:36+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0006
+  },
+  {
+   "file": "20261124-070312-45275506141-2224.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-24T07:01:46+09:00",
+   "task": "속보 감지",
+   "site": "infobay",
+   "calls": 5,
+   "images": 0,
+   "usd": 0.317
+  },
   {
    "file": "20261123-222507-45170452074-2988.json",
    "workflow": "속보 감지",
