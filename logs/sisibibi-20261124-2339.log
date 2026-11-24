@@ -1,0 +1,10 @@
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: 장관 임명 절차, 청문회 다음은? 국정원장 강금실·통일 홍익표 등 개각 정리
+  Claude 인증: WIF (키 없이 단기 토큰)
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정(누적): Claude $1.067 · Google AI Studio 188원
+완료: content/sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik
+이번 작업 비용(추정) [sisibibi / 글 만들기]: Claude $1.067 · Google AI Studio 188원
