@@ -1,0 +1,90 @@
+{
+"workflow": "스튜디오 글 만들기",
+"event": "workflow_dispatch",
+"run_id": "45415693777",
+"argv": [
+"engine/generate.py",
+"sisibibi",
+"--topic",
+"장관 임명 절차, 청문회 다음은? 국정원장 강금실·통일 홍익표 등 개각 정리"
+],
+"entries": [
+{
+"t": "2026-11-24T23:38:24+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "글 쓰기(본문·SNS)",
+"where": "generate.generate",
+"model": "claude-opus-5-5",
+"input": 10,
+"cache_write": 96060,
+"cache_read": 161104,
+"output": 14766,
+"web_searches": 6,
+"sec": 128.9,
+"usd": 0.9001
+},
+{
+"t": "2026-11-24T23:38:42+09:00",
+"kind": "image",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 만들기",
+"where": "imagegen.generate",
+"model": "gemini-3-pro-image",
+"provider": "gemini",
+"count": 1,
+"usd": 0.134,
+"krw": 188
+},
+{
+"t": "2026-11-24T23:38:44+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 방향 검수",
+"where": "imagegen.orientation",
+"model": "claude-sonnet-5-5",
+"input": 481,
+"cache_write": 0,
+"cache_read": 0,
+"output": 101,
+"web_searches": 0,
+"sec": 2.0,
+"usd": 0.00197
+},
+{
+"t": "2026-11-24T23:39:17+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "글 쓰기(본문·SNS)",
+"where": "generate.generate",
+"model": "claude-opus-5-5",
+"input": 5814,
+"cache_write": 0,
+"cache_read": 0,
+"output": 5103,
+"web_searches": 0,
+"sec": 32.9,
+"usd": 0.12532
+},
+{
+"t": "2026-11-24T23:39:25+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "AI 티 다듬기",
+"where": "generate.humanize",
+"model": "claude-sonnet-5-5",
+"input": 13638,
+"cache_write": 0,
+"cache_read": 0,
+"output": 1219,
+"web_searches": 0,
+"sec": 7.4,
+"usd": 0.03947
+}
+]
+}
