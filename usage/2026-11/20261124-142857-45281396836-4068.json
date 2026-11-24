@@ -1,0 +1,43 @@
+{
+"workflow": "속보 감지",
+"event": "workflow_dispatch",
+"run_id": "45281396836",
+"argv": [
+"engine/issue.py",
+"watch"
+],
+"entries": [
+{
+"t": "2026-11-24T14:28:40+09:00",
+"kind": "claude",
+"site": "woodenjoy",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 2568,
+"cache_write": 0,
+"cache_read": 0,
+"output": 990,
+"web_searches": 0,
+"sec": 5.3,
+"usd": 0.00075
+},
+{
+"t": "2026-11-24T14:28:57+09:00",
+"kind": "claude",
+"site": "woodenjoy",
+"task": "속보 감지",
+"purpose": "속보 글 쓰기",
+"where": "issue.write",
+"model": "claude-sonnet-5-5",
+"input": 10,
+"cache_write": 56764,
+"cache_read": 87752,
+"output": 1601,
+"web_searches": 4,
+"sec": 16.3,
+"usd": 0.21549
+}
+]
+}
