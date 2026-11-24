@@ -2,7 +2,7 @@
   "id": "forsmartlife/2026-11-25-daebong-persimmon-sugar-portion-diabetes-stomach",
   "site": "forsmartlife",
   "title": "대봉감 효능보다 양이 먼저: 홍시 1개면 과일 1회분 3~5배",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-25T05:54+09:00",
   "requested_topic": "대봉감 먹으면 좋을까? 효능보다 먼저 볼 당분과 섭취량\n카테고리: 건강 루틴\n이 글이 답할 질문: 대봉감의 영양 성분은 무엇이고, 당뇨나 위장이 불편한 사람은 어떻게 먹어야 하는가\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 15,010회, 11월 시기 주제",
   "keywords": {
@@ -207,7 +207,7 @@
     "usd": 1.6272,
     "claude_usd": 1.0789,
     "google_usd": 0.402,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 563,
     "total_usd": 1.6272,
     "total_krw": 2280,
