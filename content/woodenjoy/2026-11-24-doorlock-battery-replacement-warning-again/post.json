@@ -1,0 +1,228 @@
+{
+  "id": "woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
+  "site": "woodenjoy",
+  "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
+  "status": "ready",
+  "created_at": "2026-11-24T20:16+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "도어락 건전지 교체",
+    "sub": [
+      "도어락 방전",
+      "도어락 9V 비상전원",
+      "도어락 충전지",
+      "도어락 경고음"
+    ]
+  },
+  "brief": {
+    "reader": "도어락 건전지를 갈았는데도 경고음이 또 울리거나, 처음 직접 갈아 보려는 사람",
+    "question": "도어락 건전지는 어떤 걸 몇 개, 어떤 순서로 갈아야 경고음이 다시 안 울릴까?",
+    "answer": "설명서가 정한 1.5V 알카라인을 들어 있던 개수 그대로 전부 새것으로 넣고, 문을 열어 둔 채 안팎 작동까지 시험해야 해요.",
+    "out_of_scope": "도어락 본체 교체·설치, 브랜드별 모델 비교, 스마트 도어락 앱 설정",
+    "next_action": "오늘 실내 쪽 건전지 덮개를 열어 규격(AA·AAA)과 개수를 확인하고, 외부 9V 비상전원 단자 위치도 봐 두기"
+  },
+  "why_this_topic": "메인 키워드 후보 1순위 '도어락건전지교체' 월 검색 950회(정보형). 연관 검색어 중 '도어락' 66,000회, '현관문도어락' 34,140회로 큰 편이에요. 최근 글 '현관문 도어락 교체'는 본체 교체 이야기라 겹치지 않아요. 추위에는 건전지 성능이 떨어진다는 생활 기사가 최근(11월)에 나왔고, 겨울 들어 방전 경고가 잦아지는 시기라서 골랐어요. 사야 할 물건(건전지)이 분명한 글이라 쿠팡 비교표도 자연스럽게 들어가요.",
+  "title_candidates": [
+    {
+      "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "도어락 건전지 교체, 헌 것 섞어 넣으면 경고음 다시 울려요",
+      "pattern": "실수·손해",
+      "score": 7
+    },
+    {
+      "title": "도어락 건전지 교체 전, AA 4개·8개·AAA 표기부터 보세요",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "도어락 건전지 교체는 문 열어 둔 채로, 순서 놓치면 밖에 갇혀요",
+      "pattern": "반전",
+      "score": 7
+    },
+    {
+      "title": "도어락 건전지, 충전지 vs 알카라인 설명서가 정한 답",
+      "pattern": "비교",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 제목들은 '방전 시 9V로 여는 법', '교체 방법'처럼 응급 대처나 순서 위주예요. 갈았는데 경고음이 또 울리는 장면, 그리고 그 원인인 충전지 1.2V와 헌 건전지 섞기를 제목에 올린 글은 드물어서 그 장면과 숫자로 갑니다.",
+  "meta_description": "충전지는 1.2V, 도어락 기준인 알카라인은 1.5V예요. 4개만 넣어도 1V 넘게 모자라요. 갈았는데 경고음이 또 울리는 원인, 헌 건전지 섞기, 문 열어 두고 교체하는 순서, 9V 비상전원 쓰는 법을 정리했어요.",
+  "hero_prompt": "Casual, slightly tilted smartphone photo of the indoor-side body of a digital door lock on a Korean apartment front door, battery cover slid open showing a row of AA batteries where one battery has a different color label from the others, mixed warm ceiling light and cool daylight from the hallway, small scuffs on the metal door, edge of a shoe rack and an umbrella visible at the frame edges, center of the frame relatively plain, realistic everyday look, no text, no people, no faces",
+  "thumb_text": "건전지 갈았는데\n경고음 또 울려요",
+  "category": "",
+  "kind": "main",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "뉴스클립 - 도어락 건전지는 '이렇게' 바꿔야 1년 넘게 쓸 수 있습니다",
+      "url": "https://www.newskrw.com/news/articleView.html?idxno=53753"
+    },
+    {
+      "title": "제주TWN - 충전식 넣어도 괜찮을까?…도어락은 모델 설명서 먼저",
+      "url": "https://www.jejutwn.com/news/article.html?no=462799"
+    },
+    {
+      "title": "위키트리 - 도어락 '건전지'는 문 열어둔 채 갈아보세요",
+      "url": "https://www.wikitree.co.kr/articles/1174641"
+    },
+    {
+      "title": "아던트뉴스 - 도어락 안 열릴 때 '여기'부터 확인하세요",
+      "url": "https://www.ardentnews.co.kr/news/articleView.html?idxno=20813"
+    },
+    {
+      "title": "TILNOTE - 도어락 방전 대처, 9V 건전지 대는 순서",
+      "url": "https://tilnote.io/en/pages/6ae76270a565f4932c73b59b"
+    },
+    {
+      "title": "복덕빵 - 도어락 방전 시 9V 건전지로 문 열기",
+      "url": "https://bokduckbbang.com/blog/%EB%8F%84%EC%96%B4%EB%9D%BD-%EB%B0%B0%ED%84%B0%EB%A6%AC%EA%B0%80-%EA%B0%91%EC%9E%90%EA%B8%B0-%EB%B0%A9%EC%A0%84%EB%90%98%EC%96%B4-%EB%AC%B8%EC%9D%B4-%EC%97%B4%EB%A6%AC%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C-%EB%B9%84%EC%83%81%EC%9A%A9-9v-%EA%B1%B4%EC%A0%84%EC%A7%80%EB%A5%BC-%EB%8C%80%EC%96%B4-%EB%AC%B8%EC%9D%84-%EC%97%B4%EA%B3%A0-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "비교형",
+    "ending": "한 줄 결론",
+    "cover_hooks": [
+      "도어락 건전지, 충전지 넣어도 돼?",
+      "갈았는데 또 삐삐, 범인은 1.2V",
+      "알카라인 vs 충전지, 도어락은 설명서가 정해요"
+    ],
+    "caption": "건전지 바꾼 지 얼마 안 됐는데 현관에서 또 그 멜로디가 나와요.\n\n서랍에 있던 충전지를 넣었다면 전압부터 의심해 보세요. 충전지는 1.2V, 도어락 기준인 알카라인은 1.5V라서 4개만 넣어도 1V 넘게 모자라요.\n헌 건전지 한두 개를 섞어 넣어도 경고음이 금방 다시 울려요.\n\n도어락에는 설명서가 정한 1.5V 알카라인을, 들어 있던 개수 그대로 전부 새것으로 넣으세요.\n\n#셀프집수리 #도어락건전지교체 #도어락 #도어락방전"
+  },
+  "threads": {
+    "style": "공감 투덜",
+    "hooks": [
+      "건전지 갈았는데 또 삐리리?",
+      "현관에서 경고 멜로디 나오면 민망해",
+      "도어락에 충전지 넣어, 알카라인 넣어?"
+    ],
+    "posts": [
+      "건전지 갈았는데 또 삐리리?\n현관 앞에서 비번 누를 때마다 그 멜로디 나오면 옆집 들을까 봐 괜히 민망하잖아 ㅋㅋ\n서랍에 굴러다니던 충전지 4개 넣었거나 헌 거 한두 개 남겨 넣었으면 그것 때문일 수 있어.\n너넨 도어락에 충전지 넣어, 마트에서 알카라인 사 와?",
+      "1. 충전지는 1.2V, 도어락 기준인 알카라인은 1.5V야. 4개 넣으면 1V 넘게 모자라서 경고부터 뜰 수 있어\n2. 헌 거 섞지 말고 들어 있던 개수 전부 한 묶음 새 걸로 갈아\n3. 설명서랑 건전지함 표기 먼저 봐. 직방 스마트홈은 망간·리튬·충전식 다 쓰지 말래\n4. 갈 때는 문 열어 둔 채로 해. 안팎에서 열어 보고 닫아",
+      "이미 방전돼서 문밖이면 9V로 여는 순서도 블로그에 써 놨어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "AA 알카라인 건전지 1.5V",
+      "search": "AA 알카라인 건전지 1.5V 묶음",
+      "why": "건전지함에 AA 표기가 있고 4개·8개 들어가는 도어락",
+      "after": "건전지함 표기와 같은 규격을 골라"
+    },
+    {
+      "name": "AAA 알카라인 건전지 1.5V",
+      "search": "AAA 알카라인 건전지 1.5V 묶음",
+      "why": "AAA 표기가 있는 작은 도어락",
+      "after": "건전지함 표기와 같은 규격을 골라"
+    },
+    {
+      "name": "9V 사각 알카라인 건전지",
+      "search": "9V 알카라인 건전지 사각",
+      "why": "외부 9V 비상전원 단자가 있는 도어락의 비상용",
+      "after": "건전지함 표기와 같은 규격을 골라"
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 6장: 줄 수 다름(2줄, 의도 1줄): \"저장해 두고 건전지 살 때 꺼내 보세\""
+    ],
+    "at": "2026-11-24T20:16+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-24T20:14+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3490자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-24T20:14+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"기준 N\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"기준 1\""
+    },
+    {
+      "at": "2026-11-24T20:14+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-24T20:14+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 6장: 아래 빈 공간 큼 (378px)"
+    },
+    {
+      "at": "2026-11-24T20:15+09:00",
+      "kind": "블로그: 표가 없어요",
+      "text": "블로그: 표가 없어요"
+    },
+    {
+      "at": "2026-11-24T20:15+09:00",
+      "kind": "카드: N장: 마지막 장인데 저장·보내기·블로그 같은 행동 안내가 없어요. '건전지 사러 갈 때 꺼내 보세요'만 있고 저장하라는 말은 없어요.",
+      "text": "카드: 6장: 마지막 장인데 저장·보내기·블로그 같은 행동 안내가 없어요. '건전지 사러 갈 때 꺼내 보세요'만 있고 저장하라는 말은 없어요."
+    },
+    {
+      "at": "2026-11-24T20:15+09:00",
+      "kind": "카드: N장과 N장: 같은 내용이 반복돼요. N장 N번 '한 묶음 새것으로, 제조사도 섞지 않기'와 N장 N번 '한 묶음 새것으로 전부, 헌 것·다른 제조사 섞지 않기'가 사실상 같은 말이에요.",
+      "text": "카드: 4장과 6장: 같은 내용이 반복돼요. 4장 2번 '한 묶음 새것으로, 제조사도 섞지 않기'와 6장 2번 '한 묶음 새것으로 전부, 헌 것·다른 제조사 섞지 않기'가 사실상 같은 말이에요."
+    },
+    {
+      "at": "2026-11-24T20:16+09:00",
+      "kind": "카드: N장: 줄 수 다름(N줄, 의도 N줄): \"저장해 두고 건전지 살 때 꺼내 보세\"",
+      "text": "카드: 6장: 줄 수 다름(2줄, 의도 1줄): \"저장해 두고 건전지 살 때 꺼내 보세\""
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9124,
+        "output_tokens": 3333,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0026
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 183999,
+        "output_tokens": 25104,
+        "web_searches": 3,
+        "calls": 3,
+        "usd": 1.2681
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 9959,
+        "output_tokens": 1937,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0393
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 1.4439,
+    "claude_usd": 1.001,
+    "google_usd": 0.134,
+    "other_usd": 0,
+    "google_krw": 188,
+    "total_usd": 1.4439,
+    "total_krw": 2020,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
