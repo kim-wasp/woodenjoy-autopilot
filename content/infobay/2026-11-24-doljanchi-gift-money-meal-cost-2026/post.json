@@ -249,5 +249,10 @@
     "total_krw": 2380,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-24T22:12+09:00"
+  "approved_at": "2026-11-24T22:12+09:00",
+  "published": {
+    "blog": "doljanchi-gift-money-meal-cost-2026",
+    "blog_url": "https://myinfobay.com/blog/doljanchi-gift-money-meal-cost-2026",
+    "blog_at": "2026-11-25T07:02:03+09:00"
+  }
 }

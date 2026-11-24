@@ -2,7 +2,7 @@
   "id": "forsmartlife/2026-11-23-wrist-pain-numbness-after-housework-warning-signs",
   "site": "forsmartlife",
   "title": "손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-23T02:08+09:00",
   "requested_topic": "집안일 후 손목이 저리고 아플 때 확인할 점과 병원 갈 신호\n카테고리: 증상 관리\n이 글이 답할 질문: 반복 동작 후 손목 통증이 생기는 이유와 쉬어도 낫지 않을 때 진료가 필요한 경우\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 11,820회, 11월 시기 주제",
   "keywords": {
@@ -202,5 +202,10 @@
     "total_krw": 1550,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-23T12:11+09:00"
+  "approved_at": "2026-11-23T12:11+09:00",
+  "published": {
+    "blog": 1897,
+    "blog_url": "https://forsmartlife.com/wrist-pain-numbness-after-housework-warning-signs/",
+    "blog_at": "2026-11-25T07:01:59+09:00"
+  }
 }
