@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T07:37+09:00",
+  "updated": "2026-11-25T08:13+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1287,8 +1287,9 @@
       "dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
       "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
       "platform": "blog",
-      "at": "2026-11-25T08:00+09:00",
-      "state": "planned"
+      "at": "2026-11-25T08:13:23+09:00",
+      "state": "done",
+      "url": "https://blog.naver.com/cafe_peanut/224490950843"
     },
     {
       "site": "sisibibi",
@@ -1369,6 +1370,15 @@
       "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
       "platform": "instagram",
       "at": "2026-11-26T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-25-daebong-persimmon-sugar-portion-diabetes-stomach",
+      "title": "대봉감 효능보다 양이 먼저: 홍시 1개면 과일 1회분 3~5배",
+      "platform": "blog",
+      "at": "2026-11-27T07:00+09:00",
       "state": "planned"
     }
   ]
