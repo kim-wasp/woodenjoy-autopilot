@@ -2,7 +2,7 @@
   "id": "infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
   "site": "infobay",
   "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-24T20:11+09:00",
   "requested_topic": "",
   "keywords": {
@@ -243,7 +243,7 @@
     "usd": 1.6965,
     "claude_usd": 0.9605,
     "google_usd": 0.268,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 375,
     "total_usd": 1.6965,
     "total_krw": 2380,
