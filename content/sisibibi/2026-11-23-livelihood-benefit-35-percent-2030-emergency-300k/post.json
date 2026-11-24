@@ -222,5 +222,10 @@
     "total_krw": 1960,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-23T21:59+09:00"
+  "approved_at": "2026-11-23T21:59+09:00",
+  "published": {
+    "blog": "posts/2026-11-24-livelihood-benefit-35-percent-2030-emergency-300k",
+    "blog_url": "https://sisibibinote.kr/posts/livelihood-benefit-35-percent-2030-emergency-300k/",
+    "blog_at": "2026-11-24T12:02:10+09:00"
+  }
 }
