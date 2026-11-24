@@ -164,6 +164,45 @@
       "picked": "세이빙 넓은 모헤어 문풍지 폭 20mm x 2M",
       "price": 6900.0,
       "rocket": true
+    },
+    {
+      "key": "aa-1-5v",
+      "name": "AA 알카라인 건전지 1.5V",
+      "search": "AA 알카라인 건전지 1.5V 묶음",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9515300278&itemId=28359548738&vendorItemId=95311580694&traceid=V0-153-79bb1e579d928adc&requestid=20261124201446567114066371&token=31850C%7CGM&pt=0&slot=5",
+      "status": "API 자동 (11/24) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
+      "after": "건전지함 표기와 같은 규격을 골라",
+      "site": "woodenjoy",
+      "picked": "브이와이 [VCH5NK14]건전지-알카라인 부품 AA(LR6)1.5Vx4EA 20SET",
+      "price": 10260.0,
+      "rocket": false
+    },
+    {
+      "key": "aaa-1-5v",
+      "name": "AAA 알카라인 건전지 1.5V",
+      "search": "AAA 알카라인 건전지 1.5V 묶음",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9663390886&itemId=28889695230&vendorItemId=95822291313&traceid=V0-153-558b791b8a41dd4b&clickBeacon=420d2760-e7f8-11f1-a938-da01ee270cb5%7E3&requestid=20261124201447050099781781&token=31850C%7CMIXED&pt=1&slot=3",
+      "status": "API 자동 (11/24) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
+      "after": "건전지함 표기와 같은 규격을 골라",
+      "site": "woodenjoy",
+      "picked": "HOMAX 알카라인 LR03 AAA건전지 1.5V HAB-040, 1개, 20개입",
+      "price": 5400,
+      "rocket": true
+    },
+    {
+      "key": "9v",
+      "name": "9V 사각 알카라인 건전지",
+      "search": "9V 알카라인 건전지 사각",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9838249481&itemId=29469427753&vendorItemId=96378049924&traceid=V0-153-4bc4b6c053411858&requestid=20261124201447827072226000&token=31850C%7CMIXED&pt=0&slot=3",
+      "status": "API 자동 (11/24) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
+      "after": "건전지함 표기와 같은 규격을 골라",
+      "site": "woodenjoy",
+      "picked": "듀라셀 9V 알카라인 건전지 1알 사각 배터리 무선마이크 전자제품 교체용",
+      "price": 9870.0,
+      "rocket": false
     }
   ]
 }
