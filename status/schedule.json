@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T21:03+09:00",
+  "updated": "2026-11-24T22:13+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1271,6 +1271,15 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
+      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+      "platform": "blog",
+      "at": "2026-11-25T07:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
@@ -1280,12 +1289,30 @@
       "state": "planned"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
+      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+      "platform": "threads",
+      "at": "2026-11-25T12:30+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
       "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
       "platform": "threads",
       "at": "2026-11-25T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
+      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+      "platform": "instagram",
+      "at": "2026-11-25T21:00+09:00",
       "state": "planned"
     },
     {
