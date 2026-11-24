@@ -341,6 +341,28 @@ def check_lessons(site_id, days=45, top=8):
             + "\n".join(f"- {k} (최근 {n}번)" for k, n in common))
 
 
+def search_query_block(site, topic):
+    """정치처럼 그날 이슈로 쓰는 사이트: 글감에서 고른 '설명형 검색어'로 제목과 구조를 맞춰요.
+    근거: 2026-11-24 시시비비 서치 콘솔 3개월 노출 55회. 뉴스 제목형 글은 언론사 기사에 밀리고, 사람들은 '생계급여 조건' 같은 말로 찾아요."""
+    if not site.get("opinion"):
+        return ""
+    first = (topic or "").split("\n")[0].strip()
+    idea = next((x for x in (load_json(SITES / site["id"] / "ideas.json", {}) or {}).get("ideas", [])
+                 if x.get("search_query") and (x.get("title") == first or x.get("request") == first)), None)
+    sq = idea["search_query"] if idea else ""
+    sug = (idea or {}).get("google_suggest") or []
+    return ("[검색어 맞추기 — 구글에서 찾히는 글로]\n"
+            + (f"이 글의 설명형 검색어: '{sq}'" + (f" (네이버 월 {idea['metrics'].get('search_naver_month', 0):,}회)" if idea.get("metrics") else "") + "\n" if sq else
+               "이 이슈를 보고 사람들이 구글에 직접 칠 설명형 검색어(예: '생계급여 조건', '특검법 뜻')를 먼저 하나 정하세요.\n")
+            + ("구글 자동완성(사람들이 이어 치는 말): " + ", ".join(sug[:8]) + "\n" if sug else "")
+            + "규칙: 1) 제목은 이 검색어로 시작하고, 뒤에 이번 소식의 핵심 숫자·결론을 붙여요(예: '생계급여 조건, 2027년 기준 중위소득 32%… 누가 새로 받나'). "
+              "기사 제목처럼 '누가 뭐라고 했다'로 시작하지 않아요. "
+              "2) 첫 문단은 이 검색어로 찾아온 사람의 질문에 바로 답해요(무엇인지, 누구에게 해당하는지, 언제부터, 얼마). 그다음에 이번 소식. "
+              "3) 소제목 3~4개는 자동완성에 나온 궁금증(조건, 금액, 신청, 언제부터, 뜻, 찬반)에 하나씩 답하게 질문형으로. "
+              "4) 한 번 쓰고 끝나는 속보가 아니라 몇 달 뒤 검색해도 쓸모 있게, 바뀔 수 있는 값에는 '2026년 11월 기준'. "
+              "5) keywords.main 에 이 검색어를 그대로 적어요.")
+
+
 def build_prompt(site, topic, notes, view=None):
     blog = blog_kind(site) != "none"
     m = site.get("monetization") or {}
@@ -376,6 +398,9 @@ def build_prompt(site, topic, notes, view=None):
     p.append(check_lessons(site["id"]))
     if topic:
         p.append(f"[주제/제목 지정]\n{topic}\n(이 주제로 쓰되 제목은 검색 키워드와 후킹을 살려 다듬어도 됩니다)")
+        sq = search_query_block(site, topic)
+        if sq:
+            p.append(sq)
     else:
         if site.get("_mix_turn"):
             p.append("[이번 글 종류]\n" + site["topic_mix"][site["_mix_turn"]]["guide"])
@@ -1265,7 +1290,12 @@ def ideas(site_id, topic=None):
             "위 자료만 보고(웹 검색 없이) 지금 사람들이 가장 많이 보는 정치 이슈 후보 6개를 골라 주세요. 연예·스포츠·사건사고는 정치와 직접 관련 없으면 빼요. "
             "헤드라인이 여러 개 겹치는 이슈일수록 좋아요. 사실은 위 헤드라인에 있는 것만 쓰고 지어내지 마세요. "
             "한쪽 진영만 쓰는 이름은 피하거나 두 이름을 같이 써요. "
-            'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만)", "keyword": "네이버 뉴스 검색어(2~3단어, 이 이슈 기사만 걸리게)", '
+            "중요(2026-11-24 서치 콘솔 진단): 뉴스 제목 같은 글은 구글에서 언론사 기사에 밀려 노출이 거의 없어요(3개월 노출 55회). "
+            "그래서 이슈마다 이 소식을 보고 사람들이 구글에 직접 치는 '설명형 검색어'를 함께 주세요. 기사 제목이 아니라 궁금한 것을 묻는 말이에요. "
+            "예: 생계급여 35% 발표 → '생계급여 조건', '생계급여 금액' / 정년 연장 논의 → '65세 정년 연장', '정년 연장 언제부터' / 특검법 통과 → '특검법 뜻', '특검법 내용'. "
+            "2~4단어, 날짜·연도·인물 비방 없이, 사람들이 이 이슈와 상관없이도 꾸준히 찾는 말일수록 좋아요. "
+            'JSON: {"ideas": [{"title": "후킹 있는 제목안(사실만, 설명형 검색어로 시작)", "keyword": "네이버 뉴스 검색어(2~3단어, 이 이슈 기사만 걸리게)", '
+            '"search_query": "사람들이 구글에 치는 설명형 검색어 1순위", "search_alts": ["다른 설명형 검색어", "다른 설명형 검색어"], '
             '"trend_keyword": "관련 있는 구글 트렌드 검색어(없으면 빈 문자열)", "facts": "핵심 사실 2문장(쉬운 말)", '
             '"sides": "찬성 측 한 줄 / 반대 측 한 줄", "question": "사장님께 묻는 질문 한 줄(견해 쓰기 쉽게)"}]}'])
         res = llm.ask_json(SYSTEM, prompt, model=site.get("llm", {}).get("model"), web_search=False, mock_name=f"{site_id}_ideas", max_tokens=5000)
@@ -1278,13 +1308,21 @@ def ideas(site_id, topic=None):
                             "trend_label": t["traffic_label"] if t else ""}
             nv = trends.naver_volume(x.get("keyword") or "")
             x["metrics"]["naver_month"] = nv
+            # 설명형 검색어: 사람들이 실제로 치는 말인지 (네이버 월간 검색 수 + 구글 자동완성)
+            sq, sq_nv, sug, in_sug = trends.search_demand([x.get("search_query", "")] + list(x.get("search_alts") or []))
+            if sq:
+                x["search_query"], x["google_suggest"] = sq, sug[:8]
+                x["metrics"].update({"search_query": sq, "search_naver_month": sq_nv, "in_google_suggest": in_sug})
             x["links"] = top
-            x["why"] = f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f" (최근 6시간 {n6}건)" if n >= 100 else "") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "") + (f", 네이버 월간 검색 {nv:,}회" if nv else "")
-            x["score"] = n + n6 + (t["traffic"] / 100 if t else 0) + ((nv or 0) / 100)
+            x["why"] = ((f"검색어 '{sq}' 네이버 월 {sq_nv:,}회" + (", 구글 자동완성에 있음" if in_sug else "") + " · ") if sq else "") + \
+                f"{trends.source_name()} 24시간 기사 {n}{'+' if n >= 100 else ''}건" + (f" (최근 6시간 {n6}건)" if n >= 100 else "") + (f", 구글 검색 급증 '{t['keyword']}' {t['traffic_label']}" if t else "")
+            # 순위: 화제성(기사 수)만으로 고르면 검색에 안 걸려요 → 꾸준히 찾는 검색어가 있는 이슈를 앞으로
+            demand = min(sq_nv or 0, 20000) / 50 + (60 if in_sug else 0) if sq else 0
+            x["score"] = min(n, 100) + n6 / 2 + (t["traffic"] / 200 if t else 0) + demand
             ranked.append(x)
         ranked.sort(key=lambda x: x["score"], reverse=True)
         out = {"ideas": ranked[:3], "updated": now_kst().isoformat(timespec="minutes"),
-               "basis": f"구글 트렌드 한국 실시간 인기 검색어 + {trends.source_name()} 최근 24시간 기사 수 + 네이버 월간 검색 수(검색광고 키워드 도구)", "cost": usage_cost()}
+               "basis": f"설명형 검색어의 검색 수요(네이버 월간 검색 수, 구글 자동완성) + {trends.source_name()} 최근 24시간 기사 수 + 구글 트렌드", "cost": usage_cost()}
         save_json(SITES / site_id / "ideas.json", keep_mine(site_id, out))
         log("이슈 후보 3개 저장: " + " | ".join(f"{x['title']} ({x['why']})" for x in out["ideas"]))
         return

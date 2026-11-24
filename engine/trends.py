@@ -269,3 +269,42 @@ def ranks_block(site_id):
     if not lines:
         return ""
     return ("[이 사이트 최근 글의 네이버 순위 — 다음 글 방향 참고: 순위가 잘 나온 글의 검색어 크기·제목 방식은 살리고, 안 나온 주제는 검색어를 더 구체적으로]\n" + "\n".join(lines))
+
+
+def google_suggest(query):
+    """구글 자동완성 (한국어·한국): 사람들이 이 말 뒤에 실제로 이어 치는 검색어. 공식 API가 아니라 실패하면 빈 목록이에요.
+    글감 고르기에서 '뉴스 제목'이 아니라 '사람들이 구글에 치는 말'로 주제·제목을 맞추려고 써요 (2026-11-24, 시시비비 노출 55회 진단 후)."""
+    q = (query or "").strip()
+    if not q:
+        return []
+    try:
+        r = requests.get("https://suggestqueries.google.com/complete/search", timeout=15, headers=UA,
+                         params={"client": "firefox", "hl": "ko", "gl": "kr", "q": q})
+        if r.status_code != 200:
+            return []
+        j = r.json()
+        return [x for x in (j[1] if len(j) > 1 else []) if isinstance(x, str)][:10]
+    except Exception as e:  # noqa: BLE001
+        log(f"  구글 자동완성 실패 '{q}': {e}")
+        return []
+
+
+def search_demand(candidates):
+    """설명형 검색어 후보들 중 사람들이 실제로 치는 것 고르기.
+    점수 = 네이버 월간 검색 수 + 구글 자동완성에 그대로(또는 거의 그대로) 나오면 가산. 반환: (고른 검색어, 네이버 검색 수, 자동완성 목록)"""
+    best, seen = None, {}
+    for c in [x.strip() for x in candidates if x and x.strip()][:4]:
+        head = c.split()[0] if " " in c else c
+        sug = seen.get(head)
+        if sug is None:
+            sug = seen[head] = google_suggest(head)
+        norm = lambda w: re.sub(r"\s+", "", w)  # noqa: E731
+        in_sug = any(norm(c) == norm(x) or norm(x).startswith(norm(c)) for x in sug)
+        nv = naver_volume(c) or 0
+        score = nv + (500 if in_sug else 0)
+        if best is None or score > best[3]:
+            best = (c, nv, sug, score, in_sug)
+    if not best:
+        return None, 0, [], False
+    return best[0], best[1], best[2], best[4]
+
