@@ -31,7 +31,7 @@
         "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854828"
       },
       "why": "손님 쪽은 서비스업이니 도와야 한다고 보고, 직원 쪽은 바쁜 시간이나 인력 부족 때문에 어렵다고 본다. 사람이 없는 시간대인지, 직원이 혼자인지에 따라서도 기준이 달라진다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -51,7 +51,7 @@
         "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854828"
       },
       "why": "인건비 절감과 운영 효율을 우선하는 입장과, 디지털 취약 계층의 이용권을 지켜야 한다는 입장이 맞선다. 무인 매장인지, 직원이 있는 매장인지도 쟁점이다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -71,7 +71,7 @@
         "url": "https://seoul.co.kr/news/society/2026/11/23/20261123500008"
       },
       "why": "공정성을 위해 예외를 두면 안 된다는 입장과, 고의가 없으면 현장 재량이 필요하다는 입장이 갈린다. 시험 종류와 물품 종류에 따라서도 기준이 다르다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -91,7 +91,7 @@
         "url": "https://www.khan.co.kr/article/202611210600091/"
       },
       "why": "논·서술형은 AI 대응과 사고력 평가에 유리하다는 의견이 있다. 반대로 채점의 공정성과 객관성, 응시자 규모 때문에 현실적이지 않다는 의견도 있다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -111,7 +111,7 @@
         "url": "https://m.news.nate.com/view/20261121n08690"
       },
       "why": "공정성을 지키려면 신고가 당연하다는 입장이 있다. 반대로 친구를 신고하는 부담과 오신고 위험을 걱정하는 입장도 있다. 포상금이 걸리면 동기가 달라진다는 시각도 있다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -131,7 +131,7 @@
         "url": "https://www.insight.co.kr/news/582557"
       },
       "why": "돈과 돌봄은 별개라는 의견이 다수다. 그래도 도움을 받았으니 도리를 해야 한다는 정서도 남아 있다. 배우자의 중재 여부, 이자·상환 합의 여부가 판단을 바꾼다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -151,7 +151,7 @@
         "url": "https://msn.com/ko-kr/news/other/%EC%A0%84%EB%82%A8%EC%B9%9C-%EC%B6%95%EC%9D%98%EA%B8%88-300%EB%A7%8C%EC%9B%90-%EC%8B%A0%ED%98%BC%EC%97%AC%ED%96%89%EC%97%90-%EC%93%B4-%EC%95%84%EB%82%B4-%EB%82%A8%ED%8E%B8-%EC%B6%94%EC%96%B5-%EB%8D%94%EB%9F%BD%ED%98%80%EC%A0%B8-%EC%9D%B4%ED%98%BC-%ED%86%B5%EB%B3%B4/ss-AA2hF0XR"
       },
       "why": "축하의 뜻이니 받아도 된다는 입장과, 돌려주거나 배우자에게 먼저 알려야 한다는 입장이 갈린다. 금액이 크면 부담이 커진다는 점도 변수다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -171,7 +171,7 @@
         "url": "https://seoul.co.kr/news/society/2026/11/23/20261123500008"
       },
       "why": "몰래 촬영·녹음 우려가 있으니 물어볼 수 있다는 입장이 있다. 반대로 안경 착용자를 의심하는 것 자체가 실례라는 입장도 있다. 대화, 식당, 직장 등 장소에 따라 기준이 달라진다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -191,7 +191,7 @@
         "url": "https://news.nate.com/view/20261122n00564"
       },
       "why": "안전 확인 차원에서 필요하다는 입장이 있다. 반대로 소문과 험담이 될 수 있고, 한쪽 말만 퍼질 위험이 있다는 입장이 맞선다. 확인 대상이 지인인지 불특정 다수인지도 쟁점이다.",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "row": {
@@ -211,7 +211,7 @@
         "url": "https://www.truthdaily.co.kr/news/articleView.html?idxno=7286"
       },
       "why": "오랜 수험 생활을 마친 날이니 이해해 줘야 한다는 입장이 있다. 반대로 소란, 귀가 시간, 인근 상인·주민 불편을 이유로 매너는 지켜야 한다는 입장도 있다.",
-      "status": "pending"
+      "status": "approved"
     }
   ]
 }
