@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T20:33+09:00",
+  "updated": "2026-11-25T20:34+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1423,6 +1423,33 @@
       "title": "대봉감 효능보다 양이 먼저: 홍시 1개면 과일 1회분 3~5배",
       "platform": "blog",
       "at": "2026-11-27T07:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
+      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+      "platform": "blog",
+      "at": "2026-11-27T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
+      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+      "platform": "threads",
+      "at": "2026-11-27T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
+      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+      "platform": "instagram",
+      "at": "2026-11-27T21:00+09:00",
       "state": "planned"
     }
   ]
