@@ -1,0 +1,74 @@
+{
+"workflow": "스튜디오 글 만들기",
+"event": "workflow_dispatch",
+"run_id": "45633758494",
+"argv": [
+"engine/generate.py",
+"sisibibi",
+"--topic",
+"기초연금 금액, 소득 따라 달라진다? 법안소위 통과한 개정안 핵심"
+],
+"entries": [
+{
+"t": "2026-11-25T23:27:59+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "글 쓰기(본문·SNS)",
+"where": "generate.generate",
+"model": "claude-opus-5-5",
+"input": 12,
+"cache_write": 88077,
+"cache_read": 220727,
+"output": 14496,
+"web_searches": 6,
+"sec": 138.7,
+"usd": 0.87864
+},
+{
+"t": "2026-11-25T23:28:17+09:00",
+"kind": "image",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 만들기",
+"where": "imagegen.generate",
+"model": "gemini-3-pro-image",
+"provider": "gemini",
+"count": 1,
+"usd": 0.134,
+"krw": 188
+},
+{
+"t": "2026-11-25T23:28:18+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 방향 검수",
+"where": "imagegen.orientation",
+"model": "claude-sonnet-5-5",
+"input": 481,
+"cache_write": 0,
+"cache_read": 0,
+"output": 107,
+"web_searches": 0,
+"sec": 1.3,
+"usd": 0.00203
+},
+{
+"t": "2026-11-25T23:28:24+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "AI 티 다듬기",
+"where": "generate.humanize",
+"model": "claude-sonnet-5-5",
+"input": 14054,
+"cache_write": 0,
+"cache_read": 0,
+"output": 677,
+"web_searches": 0,
+"sec": 5.1,
+"usd": 0.03488
+}
+]
+}
