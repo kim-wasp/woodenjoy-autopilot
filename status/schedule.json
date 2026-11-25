@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T08:23+09:00",
+  "updated": "2026-11-26T08:24+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1414,6 +1414,16 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-26-issue-0745",
+      "title": "⚡ 美 과잉생산 관세안: 韓 15% 상한 유지, 25% 인상 여지",
+      "platform": "threads",
+      "at": "2026-11-26T08:24:27+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
       "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
       "platform": "blog",
@@ -1427,15 +1437,6 @@
       "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
       "platform": "threads",
       "at": "2026-11-26T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
-      "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
-      "platform": "threads",
-      "at": "2026-11-26T19:30+09:00",
       "state": "planned"
     },
     {
@@ -1472,6 +1473,15 @@
       "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
       "platform": "threads",
       "at": "2026-11-27T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
+      "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
+      "platform": "threads",
+      "at": "2026-11-27T19:30+09:00",
       "state": "planned"
     },
     {
