@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik",
   "site": "sisibibi",
   "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-24T23:39+09:00",
   "requested_topic": "장관 임명 절차, 청문회 다음은? 국정원장 강금실·통일 홍익표 등 개각 정리",
   "keywords": {
@@ -262,6 +262,12 @@
   "published": {
     "blog": "posts/2026-11-25-confirmation-hearing-process-kang-geum-sil-hong-ik",
     "blog_url": "https://sisibibinote.kr/posts/confirmation-hearing-process-kang-geum-sil-hong-ik/",
-    "blog_at": "2026-11-25T12:02:40+09:00"
+    "blog_at": "2026-11-25T12:02:40+09:00",
+    "threads": [
+      "18184621345437154",
+      "18156439840554173",
+      "18117424801862885"
+    ],
+    "threads_at": "2026-11-25T20:02:57+09:00"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T13:30+09:00",
+  "updated": "2026-11-25T20:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1352,6 +1352,16 @@
       "url": null
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik",
+      "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
+      "platform": "threads",
+      "at": "2026-11-25T20:02:57+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
@@ -1385,15 +1395,6 @@
       "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
       "platform": "threads",
       "at": "2026-11-26T12:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-24-confirmation-hearing-process-kang-geum-sil-hong-ik",
-      "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
-      "platform": "threads",
-      "at": "2026-11-26T19:30+09:00",
       "state": "planned"
     },
     {
