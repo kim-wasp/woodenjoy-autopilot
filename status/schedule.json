@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T20:03+09:00",
+  "updated": "2026-11-25T20:33+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1358,6 +1358,16 @@
       "title": "인사청문회 절차, 국회가 반대해도 장관 임명? 강금실·홍익표 20일+10일",
       "platform": "threads",
       "at": "2026-11-25T20:02:57+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-25-issue-1213",
+      "title": "⚡ 국민연금 68세 수급개시설, 정은경 장관 반박…표는 어디서 나왔나",
+      "platform": "threads",
+      "at": "2026-11-25T20:33:26+09:00",
       "state": "done",
       "url": null
     },
