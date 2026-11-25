@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T12:02+09:00",
+  "updated": "2026-11-25T12:33+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1332,13 +1332,24 @@
       "url": "https://sisibibinote.kr/posts/confirmation-hearing-process-kang-geum-sil-hong-ik/"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
+      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
+      "platform": "threads",
+      "at": "2026-11-25T12:32:46+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-23-mohair-weatherstrip-size-gap-guide",
       "title": "모헤어 문풍지 붙였더니 창문 뻑뻑? 털이 틈보다 길면 그래요",
       "platform": "threads",
-      "at": "2026-11-25T12:30+09:00",
-      "state": "planned"
+      "at": "2026-11-25T12:33:31+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "infobay",
@@ -1401,15 +1412,6 @@
       "title": "대봉감 효능보다 양이 먼저: 홍시 1개면 과일 1회분 3~5배",
       "platform": "blog",
       "at": "2026-11-27T07:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-24-doljanchi-gift-money-meal-cost-2026",
-      "title": "돌잔치 축의금 5만원, 가족 셋이 가면 식대만 15만원",
-      "platform": "threads",
-      "at": "2026-11-27T12:30+09:00",
       "state": "planned"
     }
   ]
