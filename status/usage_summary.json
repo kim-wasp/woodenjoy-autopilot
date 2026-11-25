@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-25T23:28+09:00",
+ "updated": "2026-11-25T23:43+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 43.9779,
-    "claude_usd": 35.1339,
+    "usd": 43.9804,
+    "claude_usd": 35.1364,
     "google_usd": 8.844,
     "other_usd": 0,
-    "input": 1974008,
+    "input": 1983645,
     "cache_write": 974103,
     "cache_read": 1317567,
-    "output": 1221193,
+    "output": 1224300,
     "web_searches": 266,
-    "calls": 289,
+    "calls": 293,
     "images": 66,
     "google_krw": 12382
    },
@@ -35,16 +35,16 @@
      "google_krw": 3564
     },
     "가구·인테리어 (우드엔조이)": {
-     "usd": 12.8885,
-     "claude_usd": 11.2805,
+     "usd": 12.891,
+     "claude_usd": 11.283,
      "google_usd": 1.608,
      "other_usd": 0,
-     "input": 751962,
+     "input": 761599,
      "cache_write": 224595,
      "cache_read": 391112,
-     "output": 409680,
+     "output": 412787,
      "web_searches": 58,
-     "calls": 111,
+     "calls": 115,
      "images": 12,
      "google_krw": 2251
     },
@@ -107,16 +107,16 @@
      "google_krw": 2064
     },
     "속보 감지": {
-     "usd": 1.6018,
-     "claude_usd": 1.6018,
+     "usd": 1.6044,
+     "claude_usd": 1.6044,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 166155,
+     "input": 175792,
      "cache_write": 384687,
      "cache_read": 279762,
-     "output": 65176,
+     "output": 68283,
      "web_searches": 25,
-     "calls": 56,
+     "calls": 60,
      "images": 0,
      "google_krw": 0
     },
@@ -220,6 +220,20 @@
      "images": 0,
      "google_krw": 0
     },
+    "속보 고르기": {
+     "usd": 0.0367,
+     "claude_usd": 0.0367,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 174623,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 38520,
+     "web_searches": 0,
+     "calls": 50,
+     "images": 0,
+     "google_krw": 0
+    },
     "카드 검수": {
      "usd": 0.036,
      "claude_usd": 0.036,
@@ -231,20 +245,6 @@
      "output": 1740,
      "web_searches": 0,
      "calls": 1,
-     "images": 0,
-     "google_krw": 0
-    },
-    "속보 고르기": {
-     "usd": 0.0342,
-     "claude_usd": 0.0342,
-     "google_usd": 0,
-     "other_usd": 0,
-     "input": 164986,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 35413,
-     "web_searches": 0,
-     "calls": 46,
      "images": 0,
      "google_krw": 0
     },
@@ -307,8 +307,8 @@
    },
    "by_model": {
     "claude-opus-5-5": {
-     "usd": 32.1265,
-     "claude_usd": 32.1265,
+     "usd": 32.1264,
+     "claude_usd": 32.1264,
      "google_usd": 0,
      "other_usd": 0,
      "input": 1326242,
@@ -349,16 +349,16 @@
      "google_krw": 0
     },
     "claude-haiku-5-5": {
-     "usd": 0.0681,
-     "claude_usd": 0.0681,
+     "usd": 0.0706,
+     "claude_usd": 0.0706,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 274951,
+     "input": 284588,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 81169,
+     "output": 84276,
      "web_searches": 0,
-     "calls": 70,
+     "calls": 74,
      "images": 0,
      "google_krw": 0
     }
@@ -519,16 +519,16 @@
      "google_krw": 0
     },
     "가구·인테리어 (우드엔조이) / 속보 감지": {
-     "usd": 0.2327,
-     "claude_usd": 0.2327,
+     "usd": 0.2353,
+     "claude_usd": 0.2353,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 81160,
+     "input": 90797,
      "cache_write": 56764,
      "cache_read": 87752,
-     "output": 19917,
+     "output": 23024,
      "web_searches": 4,
-     "calls": 34,
+     "calls": 38,
      "images": 0,
      "google_krw": 0
     }
@@ -829,16 +829,16 @@
      "google_krw": 750
     },
     "2026-11-25": {
-     "usd": 4.8134,
-     "claude_usd": 4.1434,
+     "usd": 4.8159,
+     "claude_usd": 4.1459,
      "google_usd": 0.67,
      "other_usd": 0,
-     "input": 155722,
+     "input": 165359,
      "cache_write": 418511,
      "cache_read": 552556,
-     "output": 122566,
+     "output": 125673,
      "web_searches": 27,
-     "calls": 44,
+     "calls": 48,
      "images": 5,
      "google_krw": 938
     }
@@ -875,6 +875,48 @@
    "other_usd": 0
   },
   {
+   "file": "20261125-224808-45600555642-4317.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-25T22:48:08+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0007,
+   "claude_usd": 0.0007,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261125-215250-45600555642-3751.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-25T21:52:50+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0006,
+   "claude_usd": 0.0006,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261125-205732-45600555642-3167.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-25T20:57:32+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0007,
+   "claude_usd": 0.0007,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
    "file": "20261125-201256-45601297726-3009.json",
    "workflow": "스튜디오 글 만들기",
    "event": "workflow_dispatch",
@@ -886,6 +928,20 @@
    "usd": 1.4766,
    "claude_usd": 1.3426,
    "google_krw": 188,
+   "other_usd": 0
+  },
+  {
+   "file": "20261125-200213-45600555642-2419.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-25T20:02:13+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0005,
+   "claude_usd": 0.0005,
+   "google_krw": 0,
    "other_usd": 0
   },
   {
