@@ -1,0 +1,91 @@
+{
+"workflow": "속보 감지",
+"event": "workflow_dispatch",
+"run_id": "45502608740",
+"argv": [
+"engine/issue.py",
+"watch"
+],
+"entries": [
+{
+"t": "2026-11-25T11:17:49+09:00",
+"kind": "claude",
+"site": "infobay",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 4802,
+"cache_write": 0,
+"cache_read": 0,
+"output": 1346,
+"web_searches": 0,
+"sec": 6.5,
+"usd": 0.00115
+},
+{
+"t": "2026-11-25T11:18:08+09:00",
+"kind": "claude",
+"site": "infobay",
+"task": "속보 감지",
+"purpose": "속보 글 쓰기",
+"where": "issue.write",
+"model": "claude-sonnet-5-5",
+"input": 6,
+"cache_write": 35584,
+"cache_read": 11092,
+"output": 2437,
+"web_searches": 2,
+"sec": 18.9,
+"usd": 0.13556
+},
+{
+"t": "2026-11-25T11:18:30+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 8754,
+"cache_write": 0,
+"cache_read": 0,
+"output": 1500,
+"web_searches": 0,
+"sec": 8.0,
+"usd": 0.00163
+},
+{
+"t": "2026-11-25T11:18:35+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 8754,
+"cache_write": 0,
+"cache_read": 0,
+"output": 1053,
+"web_searches": 0,
+"sec": 5.5,
+"usd": 0.0014
+},
+{
+"t": "2026-11-25T11:18:49+09:00",
+"kind": "claude",
+"site": "woodenjoy",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 2705,
+"cache_write": 0,
+"cache_read": 0,
+"output": 507,
+"web_searches": 0,
+"sec": 2.7,
+"usd": 0.00052
+}
+]
+}
