@@ -258,5 +258,10 @@
     "total_krw": 2360,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-24T23:41+09:00"
+  "approved_at": "2026-11-24T23:41+09:00",
+  "published": {
+    "blog": "posts/2026-11-25-confirmation-hearing-process-kang-geum-sil-hong-ik",
+    "blog_url": "https://sisibibinote.kr/posts/confirmation-hearing-process-kang-geum-sil-hong-ik/",
+    "blog_at": "2026-11-25T12:02:40+09:00"
+  }
 }
