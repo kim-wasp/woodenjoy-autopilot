@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T21:43+09:00",
+  "updated": "2026-11-25T23:30+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1401,12 +1401,30 @@
       "state": "planned"
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
+      "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
+      "platform": "blog",
+      "at": "2026-11-26T12:00+09:00",
+      "state": "planned"
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-24-doorlock-battery-replacement-warning-again",
       "title": "도어락 건전지 교체했는데 또 삐삐? 충전지 1.2V면 그래요",
       "platform": "threads",
       "at": "2026-11-26T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
+      "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
+      "platform": "threads",
+      "at": "2026-11-26T19:30+09:00",
       "state": "planned"
     },
     {
