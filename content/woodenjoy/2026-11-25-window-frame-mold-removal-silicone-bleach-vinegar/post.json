@@ -1,0 +1,265 @@
+{
+  "id": "woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
+  "site": "woodenjoy",
+  "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+  "status": "ready",
+  "created_at": "2026-11-25T20:12+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "창틀 곰팡이 제거",
+    "sub": [
+      "창문 실리콘 곰팡이",
+      "베란다 곰팡이 제거",
+      "창문 결로",
+      "곰팡이 제거젤"
+    ]
+  },
+  "brief": {
+    "reader": "겨울 결로 때문에 창틀 실리콘이 까매져서 락스나 제거제를 써 봤는데 검은 줄이 안 빠지는 사람",
+    "question": "락스를 덮어도 안 지워지는 창틀 곰팡이는 더 닦아야 하나, 실리콘을 새로 쏴야 하나?",
+    "answer": "칼끝으로 긁어 속까지 까맣거나 두 번 덮어도 회색이 남으면 다 뜯고 새로 쏘고, 닦을 때는 식초 쓴 날 락스를 쓰지 않아요.",
+    "out_of_scope": "벽 속 누수·단열 공사, 실리콘 시공 순서 자세히(별도 글), 곰팡이로 인한 건강 진단",
+    "next_action": "오늘 실리콘 한 군데를 칼끝으로 살짝 긁어 속 색 확인하기"
+  },
+  "why_this_topic": "메인 후보 1순위 '창틀곰팡이제거' 월 290회(정보형). 같은 날 연관 검색어 '창문결로' 월 2,060회(7일 전 990회, +108%), '창문결로방지' 월 2,800회(+124%)로 결로 관심이 급등 중이고, 결로 다음에 오는 문제가 창틀 실리콘 곰팡이라 1~2주 앞선 주제. 최근 글은 결로 원인·테이프·실리콘 종류 고르기였고, 제거와 재시공 판단은 아직 안 다룸. 상위 글들이 락스와 식초 방법을 나란히 소개하면서 섞으면 안 된다는 경고와 안 지워질 때의 판단 기준은 거의 빠뜨림.",
+  "title_candidates": [
+    {
+      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "창틀 곰팡이 제거, 식초 뿌린 자리에 락스 바르면 염소가스 나요",
+      "pattern": "실수·손해",
+      "score": 8
+    },
+    {
+      "title": "창틀 곰팡이 제거, 칼끝으로 긁어 속이 까마면 닦지 말고 새로 쏘세요",
+      "pattern": "결론 먼저",
+      "score": 7
+    },
+    {
+      "title": "창틀 곰팡이 제거, 0.93㎡ 넘게 번졌으면 셀프 말고 상담부터",
+      "pattern": "숫자·기준",
+      "score": 6
+    },
+    {
+      "title": "창틀 곰팡이 제거 젤 vs 실리콘 재시공, 긁어 보면 답 나와요",
+      "pattern": "비교",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목은 '휴지·키친타월·이 가루 하나로 싹, 3000원, 2시간 만에'처럼 재료 하나와 빠른 결과를 약속함 / 우리는 닦아도 안 지워질 때 칼끝으로 속 색을 보고 재시공을 판단하는 기준, 식초 쓴 날 락스를 바르면 안 되는 이유(소비자원 경고), 셀프로 해도 되는 면적 0.93㎡까지 씀",
+  "meta_description": "창틀 실리콘에 락스 휴지를 두 번 덮어도 회색 줄이 남으면 칼끝으로 긁어 속 색부터 보세요. 식초 쓴 날 락스를 쓰면 안 되는 이유(소비자원), 셀프 면적 기준 0.93㎡, 습도 60%까지 정리했어요.",
+  "hero_prompt": "Close-up phone snapshot of the bottom corner of a white PVC sliding window in a Korean apartment in winter, the white silicone sealant bead along the glass edge has a dark gray-black mold line, small water droplets on the lower glass and a little puddle in the frame track, a folded tissue and a pair of rubber gloves lying at the edge of the frame, slightly tilted framing, mixed warm indoor light and cold daylight, some dust in the track, realistic and unpolished, center area kept fairly plain, no text, no people",
+  "thumb_text": "식초 쓴 자리에\n락스 덮으면 위험",
+  "category": "",
+  "kind": "main",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "곰팡이 제거 욕실세정제, 어떤 걸 살까? 선택 가이드 (서울시 미디어허브, 한국소비자원 시험)",
+      "url": "https://mediahub.seoul.go.kr/archives/2006638"
+    },
+    {
+      "title": "욕실 실리콘 곰팡이, 어떻게 닦을까? 제품별 사용법 확인 (제주교통복지신문)",
+      "url": "https://www.jejutwn.com/news/article.html?no=460507"
+    },
+    {
+      "title": "곰팡이 제거제, 뿌리기 전 환기부터 (비건뉴스)",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=385234"
+    },
+    {
+      "title": "락스랑 식초, 절대 같이 쓰지 마세요 (하루힐, 질병관리청 지침 정리)",
+      "url": "https://haruheal.com/news/7178"
+    },
+    {
+      "title": "곰팡이 없애려다 폐 망가진다…함께 쓰면 안 되는 세제 조합 (뷰어스)",
+      "url": "https://feed.viewus.co.kr/ai/article/366651/"
+    },
+    {
+      "title": "집안 곰팡이 제거 (미국 환경보호청 EPA, 한국어)",
+      "url": "https://www.epa.gov/node/254913"
+    },
+    {
+      "title": "Mold Course Chapter 2 (EPA)",
+      "url": "https://www.epa.gov/mold/mold-course-chapter-2"
+    },
+    {
+      "title": "집에서 곰팡이를 예방 및 제거하는 방법 (뉴욕시 보건부, 한국어)",
+      "url": "https://www.nyc.gov/assets/doh/downloads/pdf/epi/prevent-and-get-rid-of-mold-ko.pdf"
+    },
+    {
+      "title": "창틀 검은 곰팡이에 휴지를 붙여보세요 (위키트리)",
+      "url": "https://www.wikitree.co.kr/articles/1173805"
+    },
+    {
+      "title": "창문 실리콘 곰팡이가 잘 생기는 이유 (위키트리)",
+      "url": "https://www.wikitree.co.kr/articles/1158673"
+    },
+    {
+      "title": "원룸 욕실 실리콘 곰팡이, 제거제 vs 재시공 (TILNOTE)",
+      "url": "https://tilnote.io/en/pages/6afb7b937dd76b62dfb07990"
+    },
+    {
+      "title": "화장실 실리콘 곰팡이 셀프 재시공 (TILNOTE)",
+      "url": "https://tilnote.io/en/pages/6a710784dc356629a88a128d"
+    },
+    {
+      "title": "창틀 곰팡이에 키친타월을 붙여보세요 (푸드레시피)",
+      "url": "https://foodrecipe.co.kr/life/how-to-remove-mold-from-window-silicone/"
+    },
+    {
+      "title": "겨울철 창틀 베이킹소다·식초 곰팡이 제거 (아던트뉴스)",
+      "url": "https://www.ardentnews.co.kr/news/articleView.html?idxno=11003"
+    },
+    {
+      "title": "3000원 컷! 손쉬운 창문틀 곰팡이&결로 제거 (오늘의집)",
+      "url": "https://ohou.se/advices/10229"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "자가진단형",
+    "ending": "보내기",
+    "cover_hooks": [
+      "락스 덮어도 검은 줄 그대로?",
+      "식초 쓴 날 락스 바르면 염소가스",
+      "창틀 실리콘, 칼끝으로 긁어 봤어요?"
+    ],
+    "caption": "락스 휴지 두 번 덮었는데 창틀 실리콘이 아직 회색이에요.\n\n칼끝으로 살짝 긁어서 안쪽까지 까맣다면 닦아서는 한계예요. 다 뜯고 새로 쏘는 쪽이 빨라요.\n식초나 구연산으로 닦은 날엔 락스를 바르지 마세요. 한국소비자원이 염소가스가 생길 수 있다고 안내했어요.\n\n해마다 안방 창틀을 락스로 닦는 엄마한테 이 카드 보내 주세요.\n\n#셀프집수리 #창틀곰팡이 #창문실리콘 #곰팡이제거"
+  },
+  "threads": {
+    "style": "자가 진단",
+    "hooks": [
+      "락스 휴지 두 번 덮었는데 아직 회색?",
+      "식초로 닦은 날 락스까지 바르면",
+      "창틀 실리콘 칼로 긁어 봤어?"
+    ],
+    "posts": [
+      "락스 휴지 두 번 덮었는데 창틀 실리콘 아직 회색이야?\n이거 2개 이상이면 닦는 걸로 안 끝나더라.\n\n칼끝으로 긁었는데 속도 까맣다\n실리콘 끝이 살짝 들떴다\n아침마다 창틀에 물이 고인다\n\n너넨 몇 개 나왔어? 0개, 1개, 2개 이상 중에",
+      "1. 1개 이하면 곰팡이 제거젤이나 락스 적신 휴지 덮어서 닦아 봐. 분무기로 뿌리진 마. 두 번 해도 회색이면 그때 재시공이야.\n2. 2개 이상이면 실리콘 다 뜯고 새로 쏴. 위에 덧쏘면 또 올라와.\n3. 물 고이는 집은 습도부터. EPA는 실내 습도 60% 아래를 권해.\n4. 식초나 구연산 쓴 날 락스는 금지. 소비자원이 염소가스 생길 수 있다고 했어.",
+      "칼끝으로 긁어 보는 법이랑 젤, 재시공 고르는 표는 블로그에 올려놨어 {LINK}"
+    ],
+    "topic_tag": "셀프집수리"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "곰팡이 제거젤",
+      "search": "곰팡이 제거젤 실리콘용",
+      "why": "긁어 보니 안쪽이 하얀 표면 곰팡이, 창틀 옆면·위쪽처럼 액체가 흘러내리는 자리",
+      "after": "창틀 옆면처럼 흘러내리는 자리는 젤 타입이 편해요"
+    },
+    {
+      "name": "뿌리는 곰팡이 제거제",
+      "search": "뿌리는 곰팡이제거제",
+      "why": "넓은 창틀 바닥에 표면 곰팡이가 번졌고 휴지에 적셔 덮어 쓸 사람",
+      "after": "창틀 옆면처럼 흘러내리는 자리는 젤 타입이 편해요"
+    },
+    {
+      "name": "곰팡이방지 실리콘",
+      "search": "곰팡이방지 실리콘 백색",
+      "why": "칼끝으로 긁어도 속까지 검거나 들뜬 실리콘을 다 뜯고 새로 쏠 사람",
+      "after": "창틀 옆면처럼 흘러내리는 자리는 젤 타입이 편해요"
+    }
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 5장: 계정명 자리 침범: \"다음 세정제 전에도 꼭\"",
+      "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-25T20:12+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3218자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 5장: 아래 빈 공간 큼 (283px)"
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 아래 빈 공간 큼 (Npx)",
+      "text": "카드: 7장: 아래 빈 공간 큼 (657px)"
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"N\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"5\""
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"물걸레 → 마른걸레\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"물걸레 → 마른걸레\""
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"다음 세정제 전에도 꼭\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"다음 세정제 전에도 꼭\""
+    },
+    {
+      "at": "2026-11-25T20:12+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9496,
+        "output_tokens": 3207,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0026
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 305262,
+        "output_tokens": 34054,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 1.9521
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 633,
+        "output_tokens": 202,
+        "web_searches": 0,
+        "calls": 1,
+        "usd": 0.0033
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 1,
+        "usd": 0.134
+      }
+    },
+    "usd": 2.092,
+    "claude_usd": 1.3426,
+    "google_usd": 0.134,
+    "other_usd": 0,
+    "google_krw": 188,
+    "total_usd": 2.092,
+    "total_krw": 2930,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
