@@ -2,7 +2,7 @@
   "id": "woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
   "site": "woodenjoy",
   "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-25T20:12+09:00",
   "requested_topic": "",
   "keywords": {
@@ -256,7 +256,7 @@
     "usd": 2.092,
     "claude_usd": 1.3426,
     "google_usd": 0.134,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 188,
     "total_usd": 2.092,
     "total_krw": 2930,
