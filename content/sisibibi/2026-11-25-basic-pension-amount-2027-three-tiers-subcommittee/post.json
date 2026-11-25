@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-25-basic-pension-amount-2027-three-tiers-subcommittee",
   "site": "sisibibi",
   "title": "기초연금 금액 2027년 4월부터 3단계…38만·35.9만·35만원",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-25T23:28+09:00",
   "requested_topic": "기초연금 금액, 소득 따라 달라진다? 법안소위 통과한 개정안 핵심",
   "keywords": {
@@ -191,7 +191,7 @@
   "korean_check": {
     "blog": {
       "grade": "A",
-      "score": 10.0,
+      "score": 10,
       "left": []
     },
     "sns": {
@@ -231,7 +231,7 @@
     "usd": 1.7561,
     "claude_usd": 0.9155,
     "google_usd": 0.134,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 188,
     "total_usd": 1.7561,
     "total_krw": 2460,
