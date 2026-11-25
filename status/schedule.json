@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T08:15+09:00",
+  "updated": "2026-11-25T11:46+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1308,6 +1308,16 @@
       "title": "⚡ 한의원 엑스레이, 25일 기준 본회의 아닌 복지위 소위서 계속심사",
       "platform": "threads",
       "at": "2026-11-25T08:15:03+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-25-issue-1117",
+      "title": "⚡ 근무 중 이어폰, 한쪽 낀 신입 지적해야 할까 논쟁 (뉴시스 11/25)",
+      "platform": "threads",
+      "at": "2026-11-25T11:46:36+09:00",
       "state": "done",
       "url": null
     },
