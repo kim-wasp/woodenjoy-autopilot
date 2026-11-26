@@ -1,0 +1,74 @@
+{
+"workflow": "스튜디오 글 만들기",
+"event": "workflow_dispatch",
+"run_id": "45815261647",
+"argv": [
+"engine/generate.py",
+"sisibibi",
+"--topic",
+"'같은 일 하면 같은 월급' 법에 넣는다는데, 왜 노동계도 경영계도 난색일까"
+],
+"entries": [
+{
+"t": "2026-11-26T21:00:29+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "글 쓰기(본문·SNS)",
+"where": "generate.generate",
+"model": "claude-opus-5-5",
+"input": 10,
+"cache_write": 90709,
+"cache_read": 144792,
+"output": 12756,
+"web_searches": 6,
+"sec": 119.4,
+"usd": 0.82662
+},
+{
+"t": "2026-11-26T21:00:41+09:00",
+"kind": "image",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 만들기",
+"where": "imagegen.generate",
+"model": "gemini-3-pro-image",
+"provider": "gemini",
+"count": 1,
+"usd": 0.134,
+"krw": 188
+},
+{
+"t": "2026-11-26T21:00:47+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "사진 방향 검수",
+"where": "imagegen.orientation",
+"model": "claude-sonnet-5-5",
+"input": 481,
+"cache_write": 0,
+"cache_read": 0,
+"output": 79,
+"web_searches": 0,
+"sec": 5.1,
+"usd": 0.00175
+},
+{
+"t": "2026-11-26T21:00:55+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글 만들기",
+"purpose": "AI 티 다듬기",
+"where": "generate.humanize",
+"model": "claude-sonnet-5-5",
+"input": 13429,
+"cache_write": 0,
+"cache_read": 0,
+"output": 976,
+"web_searches": 0,
+"sec": 7.4,
+"usd": 0.03662
+}
+]
+}
