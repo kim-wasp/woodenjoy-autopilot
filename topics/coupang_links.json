@@ -242,6 +242,45 @@
       "picked": "바이오실리콘 백색(3개)(노즐포함) 욕실 주방 싱크대 세탁실 타일 방수실리콘",
       "price": 12750.0,
       "rocket": true
+    },
+    {
+      "key": "tv",
+      "name": "고정형 벽걸이 TV 거치대",
+      "search": "벽걸이 TV 거치대 고정형",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9644157717&itemId=28819501510&vendorItemId=95754264709&traceid=V0-153-3fe8afe0068e1419&clickBeacon=0fff94d0-e98b-11f1-aebd-67ddbe56d1f6%7E3&requestid=20261126201810278165882970&token=31850C%7CMIXED&pt=1&slot=1",
+      "status": "API 자동 (11/26) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요.",
+      "site": "woodenjoy",
+      "picked": "엔산마운트 벽걸이 브라켓 마운트 고정형 TV 거치대 블랙, 1개, EW-2F",
+      "price": 6900,
+      "rocket": true
+    },
+    {
+      "key": "tv-2",
+      "name": "틸트형(각도형) 벽걸이 TV 브라켓",
+      "search": "벽걸이 TV 브라켓 각도형 틸트",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=8790131579&itemId=25583555651&vendorItemId=92574461120&traceid=V0-153-9593551925e0f6c4&requestid=20261126201810918323478881&token=31850C%7CGM&pt=0&slot=4",
+      "status": "API 자동 (11/26) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요.",
+      "site": "woodenjoy",
+      "picked": "초대형 최대 100인치 벽걸이 삼성 엘지 LG TV 브라켓 호환용 각도형 틸트 티브이 거치대 티비 브라캣 특대형",
+      "price": 39000.0,
+      "rocket": false
+    },
+    {
+      "key": "tv-3",
+      "name": "암형 벽걸이 TV 거치대",
+      "search": "암형 벽걸이 TV 거치대",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7870770&pageKey=9828476367&itemId=29438018977&vendorItemId=96347629390&traceid=V0-153-c0d0c7d935147357&requestid=20261126201811481301137502&token=31850C%7CGM&pt=0&slot=3",
+      "status": "API 자동 (11/26) 확인 전",
+      "post_dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요.",
+      "site": "woodenjoy",
+      "picked": "볼타입 풀모션 알루미늄 1단, 2단, 3단 관절암형 벽걸이 TV 모니터 거치대 삼성 엘지 LG 15 18 19 21 24 27 32인치",
+      "price": 31890.0,
+      "rocket": false
     }
   ]
 }
