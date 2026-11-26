@@ -1,0 +1,22 @@
+  Claude 인증: WIF (키 없이 단기 토큰)
+  JSON 형식 오류 (stop=max_tokens, 글자수 0): 
+  출력 한도를 6000로 늘려 다시 받아요
+  주제 자동 선택: 불면증 증상과 생활 관리: 잠이 안 올 때 점검할 것 (네이버 월간 검색 12,440회, 11월 시기 주제) · 다른 후보: 겨울마스크 고르기: KF 등급 차이와 숨쉬기 불편할 때 대처 | 복근운동 초보가 허리 아프기 전에 확인할 자세 | 저체온증 증상과 한파 예방 수칙: 초기 신호부터 확인
+[건강 (forsmartlife.com)] 글 만들기 시작 · 주제: 불면증 증상과 생활 관리: 잠이 안 올 때 점검할 것
+카테고리: 증상 관리
+이 글이 답할 질문: 잠들기 어렵거나 자주 깨는 증상은 생활습관으로 관리할 수 있는 범위와 진료가 필요한 기준은?
+고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 12,440회, 11월 시기 주제
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  대표 이미지 생성 (gemini)
+  점검에 걸림 → 고치기:
+   - 블로그: 글자 수 4115자 (기준 2,500~3,500자)
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+  점검에 걸림 → 고치기:
+   - 블로그: 근거 없는 과장 표현 '100%'
+  비용 추정(누적): Claude $1.247 · Google AI Studio 563원
+완료: content/forsmartlife/2026-11-27-insomnia-symptoms-10-minute-rule-when-to-see-docto · 점검 실패 1건
+::set-output-dir::content/forsmartlife/2026-11-27-insomnia-symptoms-10-minute-rule-when-to-see-docto
+이번 작업 비용(추정) [forsmartlife / 글 만들기]: Claude $1.247 · Google AI Studio 563원
