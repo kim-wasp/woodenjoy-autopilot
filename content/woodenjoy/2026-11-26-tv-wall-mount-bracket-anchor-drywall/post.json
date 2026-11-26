@@ -2,7 +2,7 @@
   "id": "woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
   "site": "woodenjoy",
   "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-26T20:19+09:00",
   "requested_topic": "",
   "keywords": {
@@ -257,7 +257,7 @@
     "usd": 1.9851,
     "claude_usd": 1.3926,
     "google_usd": 0.268,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 375,
     "total_usd": 1.9851,
     "total_krw": 2780,
