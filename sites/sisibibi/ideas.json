@@ -1,179 +1,179 @@
 {
   "ideas": [
     {
-      "title": "기초연금 금액, 소득 따라 달라진다? 법안소위 통과한 개정안 핵심",
-      "keyword": "기초연금 소득 차등",
-      "search_query": "기초연금 금액",
+      "title": "위증죄 성립 요건은? 대법원, '한덕수 재판 위증' 윤석열 전 대통령 무죄 확정",
+      "keyword": "윤석열 위증 무죄",
+      "search_query": "위증죄 처벌",
       "search_alts": [
-        "기초연금 수급 조건",
-        "기초연금 소득인정액"
+        "위증죄 처벌",
+        "상고 기각 뜻"
       ],
-      "trend_keyword": "연금 개혁",
-      "facts": "소득에 따라 기초연금 액수가 달라지게 하는 법률 개정안이 국회 법안소위를 통과했어요. 소위 통과는 상임위 전체회의, 법사위, 본회의가 남은 단계예요.",
-      "sides": "찬성 측: 형편이 어려운 노인에게 더 두텁게 줄 수 있다(일반적 논거, 보도 확인 필요) / 신중 측: 지금보다 덜 받는 사람이 생기거나 기준선 주변에서 형평 문제가 생길 수 있다(일반적 논거, 보도 확인 필요)",
-      "question": "기초연금은 모든 노인에게 같은 금액이 맞다고 보세요, 형편 따라 달라야 한다고 보세요?",
+      "trend_keyword": "계엄",
+      "facts": "대법원이 '한덕수 재판 위증' 혐의를 받은 윤석열 전 대통령에게 무죄를 확정했어요. 검찰 상고를 기각해서 이 혐의 재판은 무죄로 끝났어요.",
+      "sides": "판결 존중 측: 세 번의 재판에서 같은 결론이 나왔으니 결과를 받아들여야 한다 / 비판 측: 위증을 인정하는 기준이 너무 좁다는 지적이 있다(구체 쟁점은 판결문 확인 필요)",
+      "question": "이 무죄 확정이 계엄 관련 다른 재판에 어떤 의미가 있다고 보세요?",
       "metrics": {
-        "news_24h": 8,
+        "news_24h": 100,
+        "news_6h": 50,
+        "news_capped": true,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 20,
+        "search_query": "위증죄 처벌",
+        "search_naver_month": 95,
+        "in_google_suggest": true
+      },
+      "google_suggest": [
+        "위증죄",
+        "위증죄 형량",
+        "위증죄 공소시효",
+        "위증죄 성립요건",
+        "위증죄 뜻",
+        "위증죄 처벌",
+        "위증죄 처벌 사례",
+        "위증죄 구성요건"
+      ],
+      "links": [
+        {
+          "title": "윤석열 ‘계엄 국무회의 위증’ 무죄 확정…대법 “허위 진술 입증 부족” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FQ0hZclAta3A2cXpEb0xZM3FiNlBQTXh5V1hkVzlCUkVUS1A4WGx5M3kyUTNOM29zcE5qZ19KYnZ4SDNPWnBPZFIzdDVrVmJZaUF5dW9oUndGX0k?oc=5"
+        },
+        {
+          "title": "[속보]윤석열 ‘한덕수 재판 위증 혐의’ 대법서 무죄 확정 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5QNlA3NWttOUwxNmVKd0FtTlAwbWZBZ0lDdTloZ25nbmdXT2oyOGg0UndZdW41dzE5VHRGblRNNnJzRkdoZVVLUEFLY1BhcDBIbXdfaER0YVNnd9IBX0FVX3lxTE5ZNldmNmhpLS1jeG5RdEVpUXkwT3lVUURCUEdEVEswSFpRcXpnWGJiVTVYTXpZRllOeGpSZUpUMGt0ZUxwSDJBRGxwYnhiM2lqaDRVblVnUk9lWHEwbmxj?oc=5"
+        },
+        {
+          "title": "윤석열, ‘한덕수 재판 위증’ 혐의 무죄 확정 - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4Z2w5SXNldnNFTWRkbUtJc0pjSmJRZG56T2ZubXRBYWhMU2VXbWNKT3VpemRhYTNkTm5BWUhxVFNJMkEyNGttUnNteUlobkcxelpBWlBjTFZZakxuaFJ4dHpGbDlxeHJnY2NhU2pfOFFvUQ?oc=5"
+        }
+      ],
+      "why": "검색어 '위증죄 처벌' 네이버 월 95회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 100+건 (최근 6시간 50건)",
+      "score": 186.9
+    },
+    {
+      "title": "청해부대 파병 연장, 국회 동의는 왜 필요할까? 국방위가 임무 구역을 오만 남방 해역까지 넓혔어요",
+      "keyword": "청해부대 파병 연장",
+      "search_query": "청해부대 파병",
+      "search_alts": [
+        "파병 동의안 뜻",
+        "청해부대 임무"
+      ],
+      "trend_keyword": "",
+      "facts": "국회 국방위원회가 청해부대 파병 연장 수정 동의안을 의결했고, 작전 구역은 오만 남방 해역까지 넓어져요. 같은 날 대학생 8명이 국회 본관에서 '파병 반대' 기습 시위를 했고 정문 유리가 깨졌는데, 깨진 경위는 아직 확인되지 않았어요.",
+      "sides": "찬성 측: 바닷길을 오가는 우리 선박과 국민을 지키려면 파병을 이어가고 구역도 넓혀야 한다 / 반대 측: 구역을 넓히면 다른 나라 분쟁에 휘말릴 위험이 커지니 파병을 철회해야 한다",
+      "question": "임무 구역을 넓혀 파병을 연장하는 일과 분쟁에 휘말릴 위험, 사장님은 어느 쪽을 더 무겁게 보세요?",
+      "metrics": {
+        "news_24h": 39,
         "news_6h": 0,
         "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
+        "naver_month": 70,
+        "search_query": "청해부대 파병",
+        "search_naver_month": 1400,
+        "in_google_suggest": true
+      },
+      "google_suggest": [
+        "청해부대",
+        "청해부대 파병",
+        "청해부대 49진",
+        "청해부대 호르무즈",
+        "청해부대 48진",
+        "청해부대 파병 후기 디시",
+        "청해부대 월급",
+        "청해부대 홋줄 사고"
+      ],
+      "links": [
+        {
+          "title": "[속보] 국회 국방위, ‘임무 구역 확대’ 청해부대 파병 연장 동의안 의결 - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1tcXVhYlRlZzREOU5SN3JCeVVxd1dJek9VTGgtNkt3SFJJZi1XemVJVHN4MmFHcUlHS08yUEdDS2tVR25hYXdqZHhOenBnMzNVWEJMVnJPRlN1VXc?oc=5"
+        },
+        {
+          "title": "국회 국방위, ‘임무 구역 확대’ 청해부대 파병 연장 동의안 의결 - JTBC",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5PSTNvNEtiaGMzUjVSY2hUd1EzMUpNMHhNUzB4UnpEcjh1TjIwV18wZWtXaEhQOU5pY0dUblZQdmh1YUxEN1REeF9fdTZ4eVJSTlVRTA?oc=5"
+        },
+        {
+          "title": "국회 국방위, 청해부대 파병 연장 동의안 의결 - 채널A",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9POWVkdGVOZ2JPSFF0QXhOelV5RG02QzNfQ3VSdWE2WjVDbGtmYktRS1B5bFF3ZFY4NFdjZ0NpMGpuS0wzSUR0TXh4bFl4SnFsLVl3Y05vSVJOOVZXWUHSAWNBVV95cUxNLWVRVl82bGhUQm5hRFJJOW1QMjlnSDFBQmZYLUZPLTZkTHYxU2NjY01jZDh1YjREeEVoZ0xNaVlYTWptY09zODRwWlZGbVY0bEJjeW1YdUtVd1lia2xEd0hnUEE?oc=5"
+        }
+      ],
+      "why": "검색어 '청해부대 파병' 네이버 월 1,400회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 39건",
+      "score": 127.0
+    },
+    {
+      "title": "검찰총장 임명 절차, 1년 4개월째 공석인데 후보 '추가 천거'는 처음이에요",
+      "keyword": "검찰총장 추가 천거",
+      "search_query": "검찰총장 공석",
+      "search_alts": [
+        "검찰총장 추천위원회",
+        "검찰총장 공석"
+      ],
+      "trend_keyword": "검찰",
+      "facts": "검찰총장 자리가 1년 4개월째 비어 있는 가운데, 법무부가 12월 9일까지 후보를 추가로 국민 천거받기로 했어요. 기존 후보 3명 외에 새로 사람을 받는 건 전례가 없는 일이에요.",
+      "sides": "찬성 측: 더 알맞은 사람을 찾으려면 후보를 넓게 받는 게 낫다 / 반대 측: 절차를 다시 열면 공석이 더 길어지고 특정 인물을 위한 것 아니냐는 의심을 산다",
+      "question": "검찰총장 공석이 길어지는 것과 후보를 다시 받는 것, 사장님은 무엇이 더 문제라고 보세요?",
+      "metrics": {
+        "news_24h": 52,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "검찰",
+        "trend_traffic": 200,
+        "trend_label": "200+",
         "naver_month": 10,
-        "search_query": "기초연금 금액",
-        "search_naver_month": 14340,
+        "search_query": "검찰총장 공석",
+        "search_naver_month": 20,
         "in_google_suggest": true
       },
       "google_suggest": [
-        "기초연금",
-        "기초연금 수급자격",
-        "기초연금 금액",
-        "기초연금 수급 자격 재산",
-        "기초연금 노령연금 차이",
-        "기초연금 재산 기준",
-        "기초연금 수급 자격 재산 계산",
-        "기초연금 재산 기준 2026"
+        "검찰총장",
+        "검찰총장 대행",
+        "검찰총장 연봉",
+        "검찰총장 후보",
+        "검찰총장 헌법",
+        "검찰총장 국무회의",
+        "검찰총장 공석",
+        "검찰총장 임기"
       ],
       "links": [
         {
-          "title": "'기초연금 소득구간별 차등 지급법' 복지위 법안소위 통과 - 뉴스1",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rSFdsbHVoUlhlWUVHOFRlYVFNenFQQkdRa3RPRkhibjFpRE5oVG1VZFhNV0kwbHJNYk53ZDVsX211aDJ5QzQwSGFJYVY3MVdPelNLaEltRkJVUQ?oc=5"
+          "title": "법무부, 검찰총장 후보 천거 추가로 받는다…새 후보 추가 예고 - 중앙일보",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9neHdZNTR0czJ4OFozVU1kWU9kdHZKZjMtZkxKamlKZjBBdkd6WjNWUHdtU0NwUE8wR2VVdmRxeTVVbHUyRHNCeHQ0YnY3Q29HY0h5VzJB?oc=5"
         },
         {
-          "title": "'기초연금 소득구간별 차등지급' 개정안, 복지위 법안소위 통과 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kVENiTzdha2NOU2pXc25SVzdmSTE3ZjNhYnAyZlpFSE9JVFJrUEJ5MjlqenUtaS1tdmR6RTBLZENIX0RZOVNWUE1XMGhlNHFZTGRiTVJONkZTQkHSAWBBVV95cUxNN2xwaS02Y0I2ZDhZTUhqcnN2SF81c0duRU1tZlU4emZ5RjR0TVlGRHFzYzlBclhqTjlPaGpJaEZLdm1raE1DU3Q0cWVaeWxWZTRsblNEaTdiWk5MOVREM0c?oc=5"
+          "title": "초유의 검찰총장 후보 추가 천거…후보군 확대? 제3자 염두?(종합2보) - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02UEVtNU1NN2xOLVlKZldWRkRjZzE1cldmMEVwNWdKVmpmdmU1ekRtSW4zRldmRzV3MTV5NE1zNXlDa0VQOFFKd21hNXNzckZlRkp5MkVnejc5WVXSAWBBVV95cUxPaHJhckVuUDV1dDNVYnBPc2hqdU5IZUxHc0FabWlnSjVGTlFMM25JVXFTbG1YdExtNVpHOVlLR1M0bkRobmliX0RKYTZnX2hhUTJVQUxIYjA3X0dnSXdiY1I?oc=5"
         },
         {
-          "title": "'기초연금 소득구간별 차등지급' 개정안, 복지위 법안소위 통과 - 열린정책뉴스",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE93X3VUcGNLeGxvLWRlRkxyN25xTFprNHNjYkZxeGR4R2ZsOFg1akhpNE9IWUNvZG1mX1kxSUhNa1FUVHRld1hESHVSeGFQaUtXY2E0RzhwLThabnlNbXVhdVBJWGNiOFFIdUJv?oc=5"
+          "title": "검찰총장 후보 천거기간 연장…’사상 초유’ - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JRDlJcnJaV2ZQMzJrRlV2Z0VKSjJTQUt3UmlvUGtHUGFKdzREUndNaEw2NHRvUTVHSGlpQkJLZWRIV3NHV3JUVGdTUVd4TVhfRmNZdWxlUE4xM0tfZWltcjlxWDRHcmc?oc=5"
         }
       ],
-      "why": "검색어 '기초연금 금액' 네이버 월 14,340회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 8건",
-      "score": 354.8
-    },
-    {
-      "title": "반의사불벌죄 뜻부터: 가정폭력, 피해자가 '처벌 원치 않아도' 처벌하게 바뀌나",
-      "keyword": "가정폭력처벌법 개정",
-      "search_query": "반의사불벌죄 뜻",
-      "search_alts": [
-        "가정폭력 처벌 기준",
-        "가정폭력처벌법 개정 내용"
-      ],
-      "trend_keyword": "",
-      "facts": "이재명 대통령이 가정폭력은 피해자가 처벌을 원하지 않아도 책임을 묻도록 법을 고치겠다고 밝혔다는 보도가 여러 곳에서 나왔어요. 남인순 국회부의장은 교제폭력·가정폭력·스토킹 피해자 보호를 강화하는 법안 3건을 대표발의했어요.",
-      "sides": "찬성 측: 피해자가 가해자 압박 때문에 '처벌 원치 않는다'고 말하는 일을 막을 수 있다(일반적 논거, 보도 확인 필요) / 신중 측: 피해자 본인의 뜻과 가정 회복 여지가 줄 수 있다(일반적 논거, 실제 반대 입장 보도 확인 필요)",
-      "question": "피해자의 뜻과 국가의 처벌 중 어느 쪽에 더 무게를 둬야 한다고 보세요?",
-      "metrics": {
-        "news_24h": 28,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 30,
-        "search_query": "반의사불벌죄 뜻",
-        "search_naver_month": 2340,
-        "in_google_suggest": true
-      },
-      "google_suggest": [
-        "반의사불벌죄",
-        "반의사불벌죄 종류",
-        "반의사불벌죄 뜻",
-        "반의사불벌죄 친고죄 차이",
-        "반의사불벌죄 반대",
-        "반의사불벌죄 성범죄",
-        "반의사불벌죄 폐지",
-        "반의사불벌죄 친고죄"
-      ],
-      "links": [
-        {
-          "title": "성명·논평 - [성명] 여성폭력추방주간, 교제폭력 포괄하는 친밀관계폭력처벌법으로 가정폭력처벌법 전면 개정하라 - 한국여성단체연합",
-          "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE1Ja3Qwa184amRyVjdWSUYyTHY1RThTbHpYc2lhN1dBZTlGWVA3aEd5RDdCTDd0YU1ZenN4c0RIOA?oc=5"
-        },
-        {
-          "title": "민주당 관계성 범죄 특위 “가정폭력 처벌법 개정, 가정 회복 아닌 피해자 보호 우선” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52dE1zY2c3bU5iaEVURnBYLTA2N3BZb0tBZXJLQ1JHNlVpTTlFSWdYanZhMHhtSDFmSlQxSEFuOS01NllLSE1WLVBBaF9aMG1HVW0yZnV0RDBrVWM?oc=5"
-        },
-        {
-          "title": "곁을 맴도는 ‘친밀한 가해자’…처벌만큼 필요한 건 ‘격리’ - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KRkEwNF8tRllFbW5kZUhjdmgxaTZDRzdCdlctZGNzQ292N3oycnRMVlZmamVGc2h4aVE2NDcwSVdPMlNLZmsyOU15M005OUZsOXB6ZVJlS3JLYzVSd3dF0gFfQVVfeXFMTkpGQTA0Xy1GWUVtbmRlSGN2aDFpNkNHN0J2Vy1kY3NDb3Y3ejJydExWVmZqZUZzaHhpUTY0NzBJV08yU0tmazI5TXkzTTk5Rmw5cHplUmVLcktjNVJ3d0U?oc=5"
-        }
-      ],
-      "why": "검색어 '반의사불벌죄 뜻' 네이버 월 2,340회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 28건",
-      "score": 134.8
-    },
-    {
-      "title": "교육교부금 뜻부터: 교육감들이 국회 앞 1인 시위에 나선 이유, '경북 2조 감소' 우려",
-      "keyword": "교육교부금 개편",
-      "search_query": "교육교부금 개편",
-      "search_alts": [
-        "교육교부금 개편",
-        "교육재정 축소 이유"
-      ],
-      "trend_keyword": "",
-      "facts": "임종식 경북교육감, 조용식 울산교육감, 강삼영 강원교육감이 국회 앞에서 1인 시위나 피켓 시위를 했어요. 임종식 교육감은 교육교부금 개편에 반대하며 경북에서만 2조 원이 줄 수 있다고 우려했고, 울산교육감은 '교육재정 상생안' 입법을 촉구했어요.",
-      "sides": "교육감 측: 교부금이 줄면 학교 운영과 아이들 교육이 흔들린다 / 개편 측: 학생 수가 줄어드는 만큼 재정 배분을 다시 짜야 한다(일반적 논거, 정부·국회 쪽 공식 근거 확인 필요)",
-      "question": "학생이 줄면 교육예산도 줄이는 게 맞다고 보세요, 아니면 학생 1인당 지원을 늘릴 기회라고 보세요?",
-      "metrics": {
-        "news_24h": 18,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 130,
-        "search_query": "교육교부금 개편",
-        "search_naver_month": 130,
-        "in_google_suggest": true
-      },
-      "google_suggest": [
-        "교육교부금",
-        "교육교부금 개편",
-        "교육교부금 뜻",
-        "교육교부금 개편안",
-        "교육교부금 비율",
-        "교육교부금 연동제",
-        "교육교부금 연동",
-        "교육교부금 삭감"
-      ],
-      "links": [
-        {
-          "title": "[초대석] 교육교부금 개편 추진…교육계에서 우려 나와 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEUi1PeUY3RE1JMXdXSlFJa2tOcEtTQXEwZUR3dE9JN1ZXQUM2T0JMNDdVdWdFZkJhcXA5cDktbVFVU0R1Z1lzRU8wVWZQSjgtb0c5Q0lmTnViT3VSaGdadXBiUWNDWk0?oc=5"
-        },
-        {
-          "title": "임종식 경북교육감, 국회서 교육교부금 개편 반대…“경북 2조 원 감소 우려” - 공뉴스",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LR2k0R2Y0dkZoSzI1UTQySm9fajJSQ2hMNi03ZnZ2QzFDTm5IRzNpQUI0blZXd0ZDeUVEVGdpa2RSY0oxZXpIUUFLOXFNS2pPU1hORWx2Mm93YUYxaEotdlROc2Y1ckNJOE1aSA?oc=5"
-        },
-        {
-          "title": "임종식 경북교육감, 국회 앞 피켓 시위…“교육교부금 개편 땐 경북 2조원 감소” - 아이뉴스24",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rY0lpS1J4MWtlSjRnOENOZmx4aVRQSHN5aUx5NHlDMjNhaDBIUFNfbVhHR0Y3c3BwU05heU4xZGpMSzZ4a2lzaGdSQQ?oc=5"
-        }
-      ],
-      "why": "검색어 '교육교부금 개편' 네이버 월 130회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 18건",
-      "score": 80.6
+      "why": "검색어 '검찰총장 공석' 네이버 월 20회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 52건, 구글 검색 급증 '검찰' 200+",
+      "score": 113.4
     }
   ],
-  "updated": "2026-11-25T23:15+09:00",
+  "updated": "2026-11-26T20:21+09:00",
   "basis": "설명형 검색어의 검색 수요(네이버 월간 검색 수, 구글 자동완성) + 구글 뉴스 최근 24시간 기사 수 + 구글 트렌드",
   "cost": {
     "claude": {
       "claude-opus-5-5": {
-        "input_tokens": 13505,
-        "output_tokens": 4562,
+        "input_tokens": 13408,
+        "output_tokens": 4091,
         "web_searches": 0,
         "calls": 1,
-        "usd": 0.1453
+        "usd": 0.1355
       }
     },
     "images": {},
-    "usd": 0.1453,
-    "claude_usd": 0.1453,
+    "usd": 0.1355,
+    "claude_usd": 0.1354,
     "google_usd": 0.0,
     "other_usd": 0.0,
     "google_krw": 0,
-    "total_usd": 0.1453,
-    "total_krw": 200,
+    "total_usd": 0.1355,
+    "total_krw": 190,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
