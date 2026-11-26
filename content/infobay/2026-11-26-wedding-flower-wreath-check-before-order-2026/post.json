@@ -1,0 +1,249 @@
+{
+  "id": "infobay/2026-11-26-wedding-flower-wreath-check-before-order-2026",
+  "site": "infobay",
+  "title": "결혼화환 보냈는데 리본만 걸린 이유, 주문 전 확인 5가지",
+  "status": "draft",
+  "created_at": "2026-11-26T20:12+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "결혼화환",
+    "sub": [
+      "결혼축하화환",
+      "결혼식화환가격",
+      "축결혼축화혼",
+      "결혼식축하화환문구"
+    ]
+  },
+  "brief": {
+    "reader": "친구·동료·거래처 결혼식에 화환을 보내려는 20~40대 직장인",
+    "question": "결혼화환은 주문하기 전에 무엇을 확인해야 할까?",
+    "answer": "식장이 외부 화환을 받는지 먼저 묻고, 재사용 화환 표시·가격·리본 문구까지 5가지를 확인하면 돼요.",
+    "out_of_scope": "축의금 액수 기준, 근조화환 문구, 특정 화원 추천",
+    "next_action": "청첩장을 받으면 신랑·신부에게 화환을 받는 식장인지 한 줄로 물어보기"
+  },
+  "why_this_topic": "키워드 후보 중 '결혼화환' 월 검색 3,980회로 가장 많고, 같은 목록의 '결혼축하화환'도 2,120회예요(글 수 자료는 없음). 축의금 액수는 승인 대기 글과 겹쳐 피했어요. 네이버 상위 글이 화원 판매 글 위주라서 예식장 반입 거절, 재사용 화환 표시제(과태료 300만~1,000만원), 2026년 쌀화환 기부 사례 같은 확인된 정보로 차별화할 수 있어요.",
+  "title_candidates": [
+    {
+      "title": "결혼화환 보냈는데 리본만 걸린 이유, 주문 전 확인 5가지",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "결혼화환 반입 금지가 법 때문? 농식품부는 허위 안내라고 봐요",
+      "pattern": "반전",
+      "score": 8
+    },
+    {
+      "title": "결혼화환 가격 4.9만~14만원, 새 꽃인지 표시부터 보세요",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "결혼화환 vs 쌀화환, 식장이 받는 쪽부터 확인해요",
+      "pattern": "비교",
+      "score": 7
+    },
+    {
+      "title": "결혼화환 주문 실수, 식장 확인 없이 보내면 생기는 일",
+      "pattern": "실수·손해",
+      "score": 7
+    }
+  ],
+  "title_research": "상위 제목(결혼식 화환 가격, 문구, 전국 배송 업체 / 결혼식 축하화환 보낼 때 매너와 타이밍 / 결혼식 축하화환 문구 추천)은 대부분 화원이 쓴 가격·문구 목록이에요. 우리는 예식장이 외부 화환을 안 받거나 리본만 걸어 둔 사례, '법 때문에 반입 금지'라는 잘못된 안내, 재사용 화환 표시와 과태료를 앞에 둬요",
+  "meta_description": "일부 예식장은 외부 화환을 안 받고 리본만 걸어 뒀어요. '법 때문에 반입 금지'가 왜 틀린 말인지, 재사용 화환 과태료(300만~1,000만원), 3단 화환 가격(4.9만~14만원), 축결혼·축화혼 문구까지 담았어요.",
+  "hero_prompt": "Candid smartphone photo of a Korean wedding hall entrance where only ribbon banners hang on a wall stand while three-tier flower wreaths stand off to the side, casual guest's view, mixed real lighting, slightly tilted framing, no readable text, no faces in close-up",
+  "thumb_text": "",
+  "category": "관혼상제",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "예식장 로비 앞에 나란히 놓인 쌀화환과 생화 화환",
+      "prompt": "Candid smartphone snapshot of a row of rice-bag wreaths and flower wreaths with ribbons lined up outside a Korean wedding hall lobby, taken casually by a guest; slightly off-center framing, mixed indoor fluorescent and window light, ordinary clutter like a stanchion and a sign stand, people only in the far background and not in close-up, not a stock photo, no glossy CGI look, no text"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "이투데이: 연말까지 재사용 화환 표시 특별 단속…과태료 최대 1000만 원",
+      "url": "https://m.etoday.co.kr/news/view/1957132"
+    },
+    {
+      "title": "국가법령정보센터: 재사용 화환 미표시 등 과태료 부과 처분사전통지서",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=157609421&flNm=%5B%EB%B3%84%EC%A7%80+4%5D+%EB%AF%B8%ED%91%9C%EC%8B%9C+%EB%93%B1+%EA%B3%BC%ED%83%9C%EB%A3%8C+%EB%B6%80%EA%B3%BC+%EC%B2%98%EB%B6%84%EC%82%AC%EC%A0%84%ED%86%B5%EC%A7%80%EC%84%9C&bylClsCd=200203"
+    },
+    {
+      "title": "Landscape Times: 화훼산업법 시행, 재사용 화환 표시",
+      "url": "https://www.latimes.kr/news/articleView.html?idxno=36153"
+    },
+    {
+      "title": "농민신문: 재사용 화환 표시제 '부작용'…예식·장례식장 화환 반입 거부",
+      "url": "https://www.nongmin.com/news/NEWS/POL/ETC/326675/view"
+    },
+    {
+      "title": "머니투데이(뉴스1): '화환 반입금지' 발끈한 청주 화훼업계 집단행동",
+      "url": "https://www.mt.co.kr/amp/policy/2021/03/22/2021032215518225687"
+    },
+    {
+      "title": "머니투데이(뉴스1): 청주 일부 예식장 반입 제한 노골화",
+      "url": "https://www.mt.co.kr/policy/2021/04/06/2021040611488235445"
+    },
+    {
+      "title": "충청타임즈: 화환 재사용 불허 … 화훼제작업계 갈등",
+      "url": "https://www.cctimes.kr/news/articleView.html?idxno=648832"
+    },
+    {
+      "title": "농민신문: 재사용 화환 단속 어쩌나",
+      "url": "https://www.nongmin.com/article/20240624500829"
+    },
+    {
+      "title": "축하화환.kr: 축하화환 가격 안내",
+      "url": "https://xn--b46b05lvvaqa.kr/"
+    },
+    {
+      "title": "정성꽃배달: 결혼식 화환 가격, 문구",
+      "url": "https://jsflower.kr/%ED%99%94%ED%99%98/%EA%B2%B0%ED%98%BC%EC%8B%9D-%ED%99%94%ED%99%98/"
+    },
+    {
+      "title": "삼식이삼촌: 결혼식 축하화환 보낼 때 매너와 타이밍",
+      "url": "https://unclesamsik.kr/%EC%9E%90%EB%8F%99-%EC%9E%84%EC%8B%9C%EA%B8%80-2/"
+    },
+    {
+      "title": "롤플라워: 결혼식 화환 문구, 축결혼·축화혼 구분",
+      "url": "https://www.lolflower.com/board/product/read.html?no=9896&board_no=1"
+    },
+    {
+      "title": "아시아경제: 결혼식 쌀화환 820㎏ 기부한 신혼부부",
+      "url": "https://view.asiae.co.kr/article/2026060214415180459"
+    },
+    {
+      "title": "베타뉴스: 버려지는 꽃 대신 쌀 1.1톤…결혼식 화환이 만든 나눔",
+      "url": "https://www.betanews.net/article/view/beta202603150010"
+    },
+    {
+      "title": "페이지시스터즈: 청첩장 안내 문구(화환 사양)",
+      "url": "https://www.pagesisters.cc/wedding/phrases/notice"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "appblog",
+  "instagram": {
+    "framework": "모음형",
+    "ending": "저장",
+    "cover_hooks": [
+      "결혼화환 보냈는데 리본만 걸렸다?",
+      "\"법 때문에 화환 금지\" 그 말, 틀렸어요",
+      "3단 화환 4.9만원 vs 14만원, 뭐가 다를까"
+    ],
+    "caption": "꽃값은 냈는데 화환은 식장에 없었다면요?\n\n외부 화환을 안 받는 예식장이 실제로 있었어요. \"법 때문에 반입 금지\"라는 안내는 농식품부가 허위로 본 말이에요. 한 번 쓴 꽃으로 만든 화환은 앞면에 '재사용 화환' 표시가 의무라서 주문 전에 상세페이지를 꼭 보세요.\n\n다음 청첩장이 오는 날, 화환 주문 전에 이 카드부터 다시 열어 보세요.\n\n#결혼식 #결혼화환 #축하화환 #쌀화환 #결혼식매너"
+  },
+  "threads": {
+    "style": "썰 한 장면",
+    "hooks": [
+      "화환 보냈는데 리본만 걸려 있었대",
+      "10만원 화환이 1~2만원에 되팔렸대",
+      "\"법 바뀌어서 화환 안 돼요\" 그 말 틀렸어"
+    ],
+    "posts": [
+      "화환 보냈는데 리본만 걸려 있었대\n\n청주 일부 예식장 얘기야. 외부 3단 화환은 안 받고, 들어오면 리본만 떼서 걸어 뒀다는 보도가 났었거든.\n보낸 사람은 꽃값 다 냈는데 신랑신부는 그 화환 구경도 못 했대.\n\n너는 화환 주문 전에 신랑한테 물어보는 편이야, 그냥 보내는 편이야?",
+      "1. 주문 전에 신랑신부한테 화환 받는 식장인지 한 줄 물어봐. 쌀화환만 받는 곳도 있었어\n2. \"화훼산업법 때문에 반입 금지\"는 틀린 말이야. 농식품부가 허위 안내로 보고 지자체에 공문까지 보냈어\n3. 한 번 쓴 꽃으로 만든 화환은 앞면에 '재사용 화환' 표시가 의무야. 안 하면 업체 과태료 1회 300만원부터\n4. 3단 화환은 화원마다 대략 4.9만~14만원이더라",
+      "가격표랑 리본 문구(축결혼·축화혼)는 여기 정리해놨어 {LINK}"
+    ],
+    "topic_tag": "결혼식"
+  },
+  "revision": 2,
+  "dead_links_removed": [
+    "https://ggnews.co.kr/123014"
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "카드: 7장: 계정명 자리 침범: \"리본 문구\"",
+      "카드: 7장: 본문이 계정명 자리까지 내려옴"
+    ],
+    "at": "2026-11-26T20:13+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-26T20:11+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3509자 (기준 1,500~3,200자)"
+    },
+    {
+      "at": "2026-11-26T20:11+09:00",
+      "kind": "카드: N장: N장 표지는 '확인할 것 N가지'라고 했는데 마지막 장은 '꺼내 볼 N칸'이라 개수가 맞지 않음. 글의 '주문 전 확인 N가지'(식장 문의, 법 안내, 재사용 표시, 가격, 리본)와도 어긋남. 식장 문",
+      "text": "카드: 7장: 1장 표지는 '확인할 것 5가지'라고 했는데 마지막 장은 '꺼내 볼 4칸'이라 개수가 맞지 않음. 글의 '주문 전 확인 5가지'(식장 문의, 법 안내, 재사용 표시, 가격, 리본)와도 어긋남. 식장 문의와 법 안내가 '식장 반입' 한 칸으로 합쳐짐"
+    },
+    {
+      "at": "2026-11-26T20:11+09:00",
+      "kind": "카드: N장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없음. 캡션은 '이 카드부터 다시 열어 보세요'라고 하는데 카드 안에는 저장 유도 문구가 없음",
+      "text": "카드: 7장: 마지막 장에 저장·보내기·블로그 같은 행동 안내가 없음. 캡션은 '이 카드부터 다시 열어 보세요'라고 하는데 카드 안에는 저장 유도 문구가 없음"
+    },
+    {
+      "at": "2026-11-26T20:12+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"리본 문구\"",
+      "text": "카드: 7장: 계정명 자리 침범: \"리본 문구\""
+    },
+    {
+      "at": "2026-11-26T20:12+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 7장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-26T20:12+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"리본 문구\"",
+      "text": "카드: 7장: 계정명 자리 침범: \"리본 문구\""
+    },
+    {
+      "at": "2026-11-26T20:12+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 7장: 본문이 계정명 자리까지 내려옴"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9600,
+        "output_tokens": 3522,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0027
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 199025,
+        "output_tokens": 30156,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 1.4492
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 12347,
+        "output_tokens": 1737,
+        "web_searches": 0,
+        "calls": 3,
+        "usd": 0.0421
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 2,
+        "usd": 0.268
+      }
+    },
+    "usd": 1.762,
+    "claude_usd": 1.2283,
+    "google_usd": 0.268,
+    "other_usd": 0.0,
+    "google_krw": 375,
+    "total_usd": 1.762,
+    "total_krw": 2470,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
