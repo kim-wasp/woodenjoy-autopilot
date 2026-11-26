@@ -237,5 +237,10 @@
     "total_krw": 2460,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   },
-  "approved_at": "2026-11-25T23:29+09:00"
+  "approved_at": "2026-11-25T23:29+09:00",
+  "published": {
+    "blog": "posts/2026-11-26-basic-pension-amount-2027-three-tiers-subcommittee",
+    "blog_url": "https://sisibibinote.kr/posts/basic-pension-amount-2027-three-tiers-subcommittee/",
+    "blog_at": "2026-11-26T12:02:08+09:00"
+  }
 }
