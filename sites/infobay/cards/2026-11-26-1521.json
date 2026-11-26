@@ -1,0 +1,97 @@
+{
+  "created": "2026-11-26T15:21+09:00",
+  "table": "cards",
+  "fields": [
+    "statement",
+    "track",
+    "category",
+    "region_scope",
+    "locale",
+    "source",
+    "correct_answer",
+    "is_event",
+    "status"
+  ],
+  "items": [
+    {
+      "row": {
+        "statement": "육아휴직 중에 이직용 자격시험 공부를 해도 된다",
+        "track": "NORM",
+        "category": "직장",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "육아휴직 중 아이를 부모에게 맡기고 세무사 시험을 준비해 합격했다는 사연이 온라인에서 논란이 됐다.",
+      "source": {
+        "title": "\"육아휴직 중 공부해 세무사 붙었다\"…합격 수기에 누리꾼 갑론을박",
+        "url": "https://m.news.nate.com/view/20261126n13034"
+      },
+      "why": "제도 취지를 훼손한다는 의견과 직업선택의 자유라는 의견으로 갈린다. 현행법에는 육아휴직 중 학업이나 자격증 취득을 금지하는 규정이 없다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "인기 캐릭터를 쓴 매장 행사에 정식 허락을 받았는지 손님이 물어봐도 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "일본 캐릭터를 쓴 가챠숍 행사를 두고 정식 사용 허락을 받았는지 확인할 필요가 있다는 의견이 커뮤니티에서 나왔다.",
+      "source": {
+        "title": "치이카와 '저작권 논란' 온라인 확산…가챠숍 행사에 누리꾼들 \"정식 협업 맞나?\"",
+        "url": "https://www.topstarnews.net/news/articleView.html?idxno=16273758"
+      },
+      "why": "소비자가 확인을 요구할 수 있다는 쪽과 매장 운영에 대한 지나친 간섭이라는 쪽으로 갈릴 수 있다. 또 해당 행사의 실제 라이선스 계약 여부는 확인되지 않았다. 그래서 카드는 특정 매장이 아니라 일반 상황으로 썼다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "친하지 않은 사람에게 장난삼아 놀리는 말을 해도 된다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "한 가수가 유튜브에 올린 디스랩 영상을 두고 유쾌하다는 반응과 친분이 없는데 무례하다는 비판이 갈렸다.",
+      "source": {
+        "title": "존박, 친분도 없는 투컷에 돌연 디스랩…투컷 \"XX, 나 마흔다섯이야\" 폭발",
+        "url": "https://sports.khan.co.kr/article/202611260959003/"
+      },
+      "why": "'장난·유머'로 받아들이는 쪽과 '관계가 쌓이지 않은 상대에겐 선을 지켜야 한다'는 쪽이 부딪힌다. 나이대와 관계에 따라 기준이 다를 수 있다.",
+      "status": "pending"
+    },
+    {
+      "row": {
+        "statement": "다른 사람의 스타일·연출을 따라 하는 건 오마주라 괜찮다",
+        "track": "NORM",
+        "category": "공공·매너",
+        "region_scope": "KR",
+        "locale": "ko-KR",
+        "source": null,
+        "correct_answer": null,
+        "is_event": true,
+        "status": "draft"
+      },
+      "issue": "한 시상식 무대의 의상·연출을 두고 해외 가수의 스타일을 차용했다는 의혹이 제기되며 누리꾼 사이에 논쟁이 이어졌다.",
+      "source": {
+        "title": "최예나, MMA 화제성 잡았지만… 사브리나 카펜터 '오마주'에 누리꾼 갑론을박",
+        "url": "https://sports.khan.co.kr/article/202611152153003/"
+      },
+      "why": "'크리스마스 시즌이면 비슷해질 수밖에 없다'는 취지의 반응과 베낀 것이라는 지적이 맞선다. 오마주와 표절의 경계를 어디에 두는지가 쟁점이다.",
+      "status": "pending"
+    }
+  ]
+}
