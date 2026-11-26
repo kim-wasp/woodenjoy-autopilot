@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T21:03+09:00",
+  "updated": "2026-11-26T21:04+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1570,6 +1570,24 @@
       "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
       "platform": "instagram",
       "at": "2026-11-27T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose",
+      "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
+      "platform": "blog",
+      "at": "2026-11-28T12:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose",
+      "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
+      "platform": "threads",
+      "at": "2026-11-28T19:30+09:00",
       "state": "planned"
     },
     {
