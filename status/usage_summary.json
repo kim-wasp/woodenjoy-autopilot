@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-26T20:20+09:00",
+ "updated": "2026-11-26T20:22+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 48.5285,
-    "claude_usd": 39.1485,
+    "usd": 48.6639,
+    "claude_usd": 39.2839,
     "google_usd": 9.38,
     "other_usd": 0,
-    "input": 2142839,
+    "input": 2156247,
     "cache_write": 1441949,
     "cache_read": 1741639,
-    "output": 1353591,
+    "output": 1357682,
     "web_searches": 296,
-    "calls": 333,
+    "calls": 334,
     "images": 70,
     "google_krw": 13132
    },
@@ -35,16 +35,16 @@
      "google_krw": 2626
     },
     "정치 (시시비비노트)": {
-     "usd": 14.6382,
-     "claude_usd": 12.0922,
+     "usd": 14.7737,
+     "claude_usd": 12.2277,
      "google_usd": 2.546,
      "other_usd": 0,
-     "input": 626152,
+     "input": 639560,
      "cache_write": 503191,
      "cache_read": 659369,
-     "output": 368551,
+     "output": 372642,
      "web_searches": 120,
-     "calls": 78,
+     "calls": 79,
      "images": 19,
      "google_krw": 3564
     },
@@ -135,16 +135,16 @@
      "google_krw": 0
     },
     "글감 추천": {
-     "usd": 0.4195,
-     "claude_usd": 0.4195,
+     "usd": 0.555,
+     "claude_usd": 0.555,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 40098,
+     "input": 53506,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 12957,
+     "output": 17048,
      "web_searches": 0,
-     "calls": 3,
+     "calls": 4,
      "images": 0,
      "google_krw": 0
     },
@@ -235,16 +235,16 @@
      "google_krw": 0
     },
     "글감 추천": {
-     "usd": 0.4195,
-     "claude_usd": 0.4195,
+     "usd": 0.555,
+     "claude_usd": 0.555,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 40098,
+     "input": 53506,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 12957,
+     "output": 17048,
      "web_searches": 0,
-     "calls": 3,
+     "calls": 4,
      "images": 0,
      "google_krw": 0
     },
@@ -377,16 +377,16 @@
    },
    "by_model": {
     "claude-opus-5-5": {
-     "usd": 34.6019,
-     "claude_usd": 34.6019,
+     "usd": 34.7374,
+     "claude_usd": 34.7374,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 1346707,
+     "input": 1360115,
      "cache_write": 770603,
      "cache_read": 1252076,
-     "output": 1117573,
+     "output": 1121664,
      "web_searches": 251,
-     "calls": 149,
+     "calls": 150,
      "images": 0,
      "google_krw": 0
     },
@@ -574,6 +574,20 @@
      "images": 0,
      "google_krw": 0
     },
+    "정치 (시시비비노트) / 글감 추천": {
+     "usd": 0.555,
+     "claude_usd": 0.555,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 53506,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 17048,
+     "web_searches": 0,
+     "calls": 4,
+     "images": 0,
+     "google_krw": 0
+    },
     "가구·인테리어 (우드엔조이) / 속보 감지": {
      "usd": 0.4826,
      "claude_usd": 0.4826,
@@ -585,20 +599,6 @@
      "output": 35028,
      "web_searches": 8,
      "calls": 46,
-     "images": 0,
-     "google_krw": 0
-    },
-    "정치 (시시비비노트) / 글감 추천": {
-     "usd": 0.4195,
-     "claude_usd": 0.4195,
-     "google_usd": 0,
-     "other_usd": 0,
-     "input": 40098,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 12957,
-     "web_searches": 0,
-     "calls": 3,
      "images": 0,
      "google_krw": 0
     },
@@ -941,16 +941,16 @@
      "google_krw": 938
     },
     "2026-11-26": {
-     "usd": 4.548,
-     "claude_usd": 4.012,
+     "usd": 4.6835,
+     "claude_usd": 4.1475,
      "google_usd": 0.536,
      "other_usd": 0,
-     "input": 159194,
+     "input": 172602,
      "cache_write": 467846,
      "cache_read": 424072,
-     "output": 129291,
+     "output": 133382,
      "web_searches": 30,
-     "calls": 40,
+     "calls": 41,
      "images": 4,
      "google_krw": 750
     }
@@ -958,6 +958,20 @@
   }
  },
  "recent_runs": [
+  {
+   "file": "20261126-202159-45809283176-2992.json",
+   "workflow": "스튜디오 글 만들기",
+   "event": "workflow_dispatch",
+   "t": "2026-11-26T20:21:36+09:00",
+   "task": "글감 추천",
+   "site": "sisibibi",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.1354,
+   "claude_usd": 0.1354,
+   "google_krw": 0,
+   "other_usd": 0
+  },
   {
    "file": "20261126-202009-45807510830-3657.json",
    "workflow": "스튜디오 글 만들기",
