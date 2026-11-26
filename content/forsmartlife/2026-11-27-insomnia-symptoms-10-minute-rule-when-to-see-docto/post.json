@@ -1,0 +1,222 @@
+{
+  "id": "forsmartlife/2026-11-27-insomnia-symptoms-10-minute-rule-when-to-see-docto",
+  "site": "forsmartlife",
+  "title": "불면증 증상, 잠 안 올 때 10분 넘게 뒤척이면 일어나세요",
+  "status": "draft",
+  "created_at": "2026-11-27T00:46+09:00",
+  "requested_topic": "불면증 증상과 생활 관리: 잠이 안 올 때 점검할 것\n카테고리: 증상 관리\n이 글이 답할 질문: 잠들기 어렵거나 자주 깨는 증상은 생활습관으로 관리할 수 있는 범위와 진료가 필요한 기준은?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 12,440회, 11월 시기 주제",
+  "keywords": {
+    "main": "불면증 증상",
+    "sub": [
+      "잠이 안 올 때",
+      "불면증 진단 기준",
+      "수면위생",
+      "자다가 자주 깸",
+      "수면무호흡증",
+      "낮잠 시간",
+      "카페인 수면"
+    ]
+  },
+  "brief": {
+    "reader": "잠들기 어렵거나 새벽에 자주 깨는 밤이 이어져 불면증인지 걱정하는 30~60대",
+    "question": "잠들기 어렵거나 자주 깨는 증상은 생활습관으로 어디까지 관리하고, 언제 진료를 받아야 하나요?",
+    "answer": "누워서 10분 넘게 잠이 안 오면 침대 밖으로 나오고 기상 시각·카페인·술·낮잠을 조정하되, 1개월 이상 이어져 낮 생활이 힘들거나 코골이 중 숨 멈춤·심한 낮 졸림이 있으면 진료를 받아요.",
+    "out_of_scope": "수면제·멜라토닌 등 약물 선택과 용량, 수면 보조 제품 추천, 소아 수면 문제",
+    "next_action": "이번 주부터 기상 시각 하나를 정해 매일 지키고, 수면일기를 적어 보기"
+  },
+  "why_this_topic": "네이버 월간 검색 12,440회, 11월 시기 주제. 연관 검색어 중 수면밴드(+34%)·수면안대추천(+31%)·멜라토닌(월 119,100회)처럼 수면 관련 검색이 함께 늘고 있어요",
+  "title_candidates": [
+    {
+      "title": "불면증 증상, 잠 안 올 때 10분 넘게 뒤척이면 일어나세요",
+      "pattern": "짜증 장면",
+      "score": 9
+    },
+    {
+      "title": "불면증 증상 1개월 넘으면 진료: 잠 안 올 때 점검 8가지",
+      "pattern": "숫자·기준",
+      "score": 8
+    },
+    {
+      "title": "불면증에 술 한 잔, 잠은 들어도 밤 후반에 자주 깨는 이유",
+      "pattern": "반전",
+      "score": 7
+    },
+    {
+      "title": "불면증, 못 잔 만큼 일찍 누우면 더 길어지는 이유",
+      "pattern": "실수·손해",
+      "score": 7
+    },
+    {
+      "title": "불면증 vs 수면무호흡증: 코골이·숨 멈춤 있으면 검사부터",
+      "pattern": "비교",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 제목들(불면증 증상·원인·치료법, 혹시 나도 불면증? 초기 증상 5가지, 불면증 해결 방법 7가지)은 증상과 방법 개수를 나열해요 / 우리는 누워서 뒤척이는 순간에 쓸 '10분' 기준과 진료가 필요한 기간(1개월·3개월)을 앞에 내세워요",
+  "meta_description": "잠 안 와 뒤척일 때 10분이 지나면 일어나야 하는 이유, 카페인·술·낮잠 기준, 진료가 필요한 1개월·3개월 기준과 코골이·숨 멈춤 위험 신호를 공식 자료로 정리했어요.",
+  "hero_prompt": "Candid photo of a dim Korean apartment bedroom at night, an adult lying awake under a thick winter blanket facing the ceiling, smartphone placed face down on the nightstand, faint streetlight through the curtain, natural grainy low light, face not in close-up, no text",
+  "thumb_text": "",
+  "category": "증상 관리",
+  "kind": "",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [
+    {
+      "file": "photo1.jpg",
+      "alt": "잠이 오지 않아 밤에 거실 스탠드 아래에서 조용히 책을 읽는 중년 여성",
+      "prompt": "Candid smartphone snapshot of a Korean woman in her 50s sitting on a living room sofa late at night under a single warm floor lamp, quietly holding a paper book, bedroom door slightly open in the background, taken casually by a family member; natural uneven light, slightly off-center framing, real lived-in Korean apartment surroundings, not a stock photo, no glossy CGI look, face not in close-up, no text, no medical gore, no pills or products as the main subject"
+    },
+    {
+      "file": "photo2.jpg",
+      "alt": "수면일기를 적은 수첩을 들고 의원 대기실에 앉아 있는 중년 부부",
+      "prompt": "Candid smartphone snapshot of a Korean middle-aged couple sitting side by side in a small clinic waiting room in Korea, the man holding a handwritten notebook, taken casually by a family member; natural uneven fluorescent light, slightly off-center framing, real everyday surroundings, not a stock photo, no glossy CGI look, faces not in close-up, no text, no medical gore, no pills or products as the main subject"
+    }
+  ],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "질병관리청 국가건강정보포털 - 불면증",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=641"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 - 수면무호흡증",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6308"
+    },
+    {
+      "title": "질병관리청 국가건강정보포털 - 수면무호흡증(증상)",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3008"
+    },
+    {
+      "title": "국가정신건강정보포털 - 불면장애",
+      "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=31"
+    },
+    {
+      "title": "국가정신건강정보포털 - 수면과 수면장애",
+      "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=32"
+    },
+    {
+      "title": "국가암정보센터 - 건강한 수면 습관 안내",
+      "url": "https://www.cancer.go.kr/download.do?uuid=3bbc0260-e428-4ce2-853a-24e8ad402f7f.pdf"
+    },
+    {
+      "title": "서울아산병원 - 불면증 질환백과",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31586"
+    },
+    {
+      "title": "서울아산병원 - 불면증이란?",
+      "url": "https://news.amc.seoul.kr/news/con/detail.do?cntId=7780"
+    },
+    {
+      "title": "세브란스병원 - 불면증",
+      "url": "https://sev.severance.healthcare/sev/doctor/board_disease.do?mode=view&articleNo=67047"
+    },
+    {
+      "title": "서울대학교병원 - 불면장애",
+      "url": "https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AA000348"
+    },
+    {
+      "title": "정책브리핑(보건복지부) - 자살예방 상담전화 109",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148954797"
+    }
+  ],
+  "platforms": [
+    "blog"
+  ],
+  "blog_platform": "wordpress",
+  "instagram": null,
+  "threads": null,
+  "revision": 2,
+  "signature": {
+    "myth_check": [
+      {
+        "myth": "잠 안 와도 누워 있으면 쉬는 거다",
+        "fact": "누워서 10분 이상 잠이 안 들면 침대 밖으로 나와 졸릴 때 다시 눕도록 권해요",
+        "source": "질병관리청 국가건강정보포털 불면증"
+      },
+      {
+        "myth": "잠 안 올 땐 술 한 잔이 최고다",
+        "fact": "술은 깊은 잠을 줄이고 탈수·이뇨 작용으로 자주 깨게 해 불면을 악화시켜요",
+        "source": "국가정신건강정보포털 수면과 수면장애"
+      },
+      {
+        "myth": "못 잔 만큼 일찍 누워서 채우면 된다",
+        "fact": "일찍 눕거나 초저녁부터 누워 잠을 기다리면 불면증이 만성으로 갈 수 있어요",
+        "source": "서울아산병원 불면증이란?"
+      },
+      {
+        "myth": "코골이는 그냥 잠버릇일 뿐이다",
+        "fact": "심한 코골이에 숨 멈춤·낮 졸림이 함께 있으면 수면무호흡증 신호, 수면다원검사로 확진해요",
+        "source": "질병관리청 국가건강정보포털 수면무호흡증"
+      }
+    ]
+  },
+  "checks": {
+    "ok": false,
+    "issues": [
+      "블로그: 근거 없는 과장 표현 '100%'"
+    ],
+    "at": "2026-11-27T00:46+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-27T00:44+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 4115자 (기준 2,500~3,500자)"
+    },
+    {
+      "at": "2026-11-27T00:44+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-27T00:45+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    },
+    {
+      "at": "2026-11-27T00:46+09:00",
+      "kind": "블로그: 근거 없는 과장 표현 'N%'",
+      "text": "블로그: 근거 없는 과장 표현 '100%'"
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 9424,
+        "output_tokens": 7996,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0049
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 288141,
+        "output_tokens": 30621,
+        "web_searches": 6,
+        "calls": 3,
+        "usd": 1.825
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 1519,
+        "output_tokens": 467,
+        "web_searches": 0,
+        "calls": 3,
+        "usd": 0.0077
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 3,
+        "usd": 0.402
+      }
+    },
+    "usd": 2.2396,
+    "claude_usd": 1.2469,
+    "google_usd": 0.402,
+    "other_usd": 0.0,
+    "google_krw": 563,
+    "total_usd": 2.2396,
+    "total_krw": 3140,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}

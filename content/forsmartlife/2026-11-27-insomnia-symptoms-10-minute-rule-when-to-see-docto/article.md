@@ -1,0 +1,103 @@
+> 잠들기 어렵거나 새벽에 자꾸 깨서 '이게 불면증인가' 싶을 때 볼 기준이에요. 누워서 10분 넘게 잠이 안 오면 침대 밖으로 나오세요. 이런 밤이 1개월 이상 이어지고 낮 생활까지 힘들면 진료를 받아 보세요.
+
+[[hero]]
+
+<div class="sig-myth" style="margin:28px 0;border:1px solid #d9e2e1;border-radius:10px;overflow:hidden;background:#f6f9f8"><p style="margin:0;padding:14px 14px 10px;font-weight:700;color:#1f2a2e">흔히 듣는 말과 공식 기준</p><table style="width:100%;border-collapse:collapse;margin:0;font-size:15px;line-height:1.6;background:#fff"><thead><tr><th style="text-align:left;padding:8px 14px;font-size:13px;color:#5b6b70;font-weight:600;background:#fff;border:0">흔히 듣는 말</th><th style="text-align:left;padding:8px 14px;font-size:13px;color:#5b6b70;font-weight:600;background:#fff;border:0">공식 기준</th></tr></thead><tbody><tr><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#9a3b2f;vertical-align:top;width:42%">잠 안 와도 누워 있으면 쉬는 거다</td><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#1f2a2e;vertical-align:top">누워서 10분 이상 잠이 안 들면 침대 밖으로 나와 졸릴 때 다시 눕도록 권해요<span style="display:block;margin-top:4px;font-size:13px;color:#5b6b70">질병관리청 국가건강정보포털 불면증</span></td></tr><tr><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#9a3b2f;vertical-align:top;width:42%">잠 안 올 땐 술 한 잔이 최고다</td><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#1f2a2e;vertical-align:top">술은 깊은 잠을 줄이고 탈수·이뇨 작용으로 자주 깨게 해 불면을 악화시켜요<span style="display:block;margin-top:4px;font-size:13px;color:#5b6b70">국가정신건강정보포털 수면과 수면장애</span></td></tr><tr><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#9a3b2f;vertical-align:top;width:42%">못 잔 만큼 일찍 누워서 채우면 된다</td><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#1f2a2e;vertical-align:top">일찍 눕거나 초저녁부터 누워 잠을 기다리면 불면증이 만성으로 갈 수 있어요<span style="display:block;margin-top:4px;font-size:13px;color:#5b6b70">서울아산병원 불면증이란?</span></td></tr><tr><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#9a3b2f;vertical-align:top;width:42%">코골이는 그냥 잠버릇일 뿐이다</td><td style="padding:12px 14px;border-top:1px solid #d9e2e1;color:#1f2a2e;vertical-align:top">심한 코골이에 숨 멈춤·낮 졸림이 함께 있으면 수면무호흡증 신호, 수면다원검사로 확진해요<span style="display:block;margin-top:4px;font-size:13px;color:#5b6b70">질병관리청 국가건강정보포털 수면무호흡증</span></td></tr></tbody></table><p style="margin:0;padding:8px 14px 12px;font-size:13px;color:#5b6b70">확인: 2026년 11월</p></div>
+
+## 불면증 증상, 어디부터 '그냥 못 잔 날'이 아닐까요?
+
+불면증은 잠들기 어렵거나(입면 장애) 자는 도중 자주 깨거나 너무 일찍 깨는(수면유지 장애) 상태예요. 질병관리청 국가건강정보포털은 이런 어려움이 1개월 이상 이어지고 낮 피로로 일상생활이 힘들 때 불면증으로 진단한다고 안내해요.
+
+하루 이틀 못 잔 건 불면증이 아니에요. 서울아산병원에 따르면 스트레스가 분명하고 곧 해결될 상황이라면 특별한 치료 없이 대부분 자연스럽게 나아져요.
+
+| 구분 | 기간 기준 | 참고 |
+|---|---|---|
+| 일시적 불면 | 며칠 | 원인이 풀리면 대부분 회복 |
+| 불면증 | 1개월 이상 + 낮 생활 지장 | 국가건강정보포털 |
+| 만성 불면장애 | 3개월 이상 | 서울대병원(DSM-5 기준) |
+
+## 잠 안 올 때 누워서 버티면 왜 더 안 올까요?
+
+잠이 안 오는데 계속 누워 있으면 침대가 '잠 못 자는 곳'으로 몸에 익어요. 세브란스병원 자료를 보면 만성 불면증 환자의 수면일기에서 실제 잠은 3~4시간인데 누워 있는 시간은 7~8시간인 경우가 매우 많았어요.
+
+국가건강정보포털이 권하는 순서는 이래요.
+
+1. 누워서 10분 이상 잠이 안 들면 침대 밖으로 나와요.
+2. 단순한 일을 하며 졸릴 때까지 기다려요.
+3. 졸음이 오면 그때 다시 누워요.
+4. 그사이 시계나 휴대전화로 시간을 확인하지 않아요(국가암정보센터).
+
+10분은 시계로 재기보다 '한참 뒤척였다' 싶을 때로 잡으면 돼요. 못 잔 잠을 채우려고 일찍 눕는 습관은 서울아산병원이 불면을 만성으로 끌고 가는 방법으로 꼽아요.
+
+[[photo:1]]
+
+## 생활습관으로 먼저 점검할 것은 무엇인가요?
+
+기관마다 숫자는 조금씩 다르지만 방향은 같아요.
+
+1. 기상 시각: 전날 늦게 잤어도 아침에는 늘 같은 시각에 일어나요.
+2. 카페인: 국가건강정보포털은 점심 이후, 국가정신건강정보포털은 잠자기 4~6시간 전부터 커피·콜라·녹차·홍차를 피하라고 해요.
+3. 술·담배: 서울아산병원은 잠자리에 들기 2시간 전부터 피하라고 안내해요.
+4. 낮잠: 피하는 게 원칙이고, 자더라도 15분 이내로 줄여요(국가정신건강정보포털).
+5. 저녁 식사: 과식은 피하고, 배가 고파 잠이 안 오면 따뜻한 우유 한 잔 정도로 달래요.
+6. 침대 사용: TV, 휴대전화, 일거리는 침대 밖에서 해요.
+
+저녁 과식이 잦다면 [식후 더부룩함·소화불량, 먼저 바꿀 식사 습관 5가지와 병원 갈 신호](https://forsmartlife.com/postmeal-bloating-indigestion-eating-habits-warnin/)도 함께 보세요.
+
+먹는 약 때문에 잠을 설치는 경우는 습관만으로 풀리지 않아요. 서울아산병원은 갑상선 치료제, 항우울제, 항경련제 등을 불면을 일으킬 수 있는 약으로 꼽아요. 임의로 끊지 말고 처방한 의사와 먼저 상의하세요.
+
+## 잠 안 올 때 술 한 잔, 괜찮을까요?
+
+술은 잠드는 데만 잠깐 도움이 되고 잠의 질은 떨어뜨려요. 국가정신건강정보포털은 술이 깊은 잠을 줄이고 탈수와 이뇨 작용으로 자주 깨게 만든다고 설명해요. 술과 수면제를 함께 먹으면 부작용 위험도 크게 늘어요. 수면제가 필요한지는 의사가 판단할 몫이에요.
+
+## 불면증, 언제 병원에 가야 하나요?
+
+아래 중 하나라도 해당하면 가까운 병원이나 의원에서 상담을 받아 보세요.
+
+- 잠 문제가 1개월 이상 이어지고 낮 피로로 일이나 집안일이 힘들어요
+- 심한 코골이 중 숨이 멈춘다는 말을 듣거나, 숨이 막혀 깨요
+- 운전 중이나 대화 중에도 졸음이 쏟아져요
+- 누우면 다리에 불편한 감각이 들거나 자면서 팔다리가 움찔거려요
+- 우울하거나 불안한 기분이 잠 문제와 함께 이어져요
+
+국가건강정보포털은 수면무호흡증을 수면다원검사로 확진한다고 안내해요. 자는 동안 본인은 모르니 가족에게 숨이 멎는지 봐 달라고 하세요. 진료 전에는 잠자리에 든 시간, 깬 횟수, 일어난 시간, 낮잠을 적은 수면일기가 도움이 돼요.
+
+손목 저림 때문에 밤에 깬다면 [손목 통증·저림에 밤마다 깬다면: 집안일 뒤 병원 갈 신호 6가지](https://forsmartlife.com/wrist-pain-numbness-after-housework-warning-signs/)를 먼저 확인해 보세요.
+
+잠 문제와 함께 극단적인 생각이 든다면 기다리지 말고 24시간 운영하는 자살예방 상담전화 109에 바로 연락하세요.
+
+[[photo:2]]
+
+## 한눈에 정리
+
+| 상황 | 할 일 |
+|---|---|
+| 누워서 10분 넘게 잠이 안 옴 | 침대 밖에 있다가 졸리면 다시 눕기 |
+| 늦게 잠든 다음 날 | 기상 시각은 그대로 |
+| 잠 안 와서 술 한 잔 | 피하기 |
+| 1개월 이상 + 낮 생활 지장 | 병원 진료 |
+| 코골이 + 숨 멈춤 | 수면무호흡증 검사 상담 |
+| 극단적인 생각 | 109 즉시 연락 |
+
+## 자주 묻는 질문
+
+Q. 주말에 늦잠으로 몰아 자도 되나요?
+A. 국가정신건강정보포털과 국가암정보센터는 전날 늦게 잤더라도 아침에 일어나는 시각을 일정하게 지키라고 권해요.
+
+이번 주에는 기상 시각 하나만 정해 매일 지켜 보세요.
+
+2026년 11월 기준, 질병관리청·국가정신건강정보포털·보건복지부·대학병원 공식 자료 확인
+
+## 참고 자료
+
+- [질병관리청 국가건강정보포털: 불면증](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=641)
+- [질병관리청 국가건강정보포털: 수면무호흡증](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6308)
+- [질병관리청 국가건강정보포털: 수면무호흡증(증상)](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3008)
+- [국가정신건강정보포털: 불면장애](https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=31)
+- [국가정신건강정보포털: 수면과 수면장애](https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=32)
+- [국가암정보센터: 건강한 수면 습관 안내](https://www.cancer.go.kr/download.do?uuid=3bbc0260-e428-4ce2-853a-24e8ad402f7f.pdf)
+- [서울아산병원: 불면증 질환백과](https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31586)
+- [서울아산병원: 불면증이란?](https://news.amc.seoul.kr/news/con/detail.do?cntId=7780)
+- [세브란스병원: 불면증](https://sev.severance.healthcare/sev/doctor/board_disease.do?mode=view&articleNo=67047)
+- [서울대학교병원: 불면장애](https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AA000348)
+- [보건복지부: 자살예방 상담전화 109](https://www.korea.kr/news/policyNewsView.do?newsId=148954797)
