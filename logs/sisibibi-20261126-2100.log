@@ -1,0 +1,9 @@
+::used-topic::sisibibi::이재명 정부 동일노동 동일월급
+[정치 (시시비비노트)] 글 만들기 시작 · 주제: '같은 일 하면 같은 월급' 법에 넣는다는데, 왜 노동계도 경영계도 난색일까
+  Claude 인증: WIF (키 없이 단기 토큰)
+  대표 이미지 생성 (gemini)
+  AI 티 다듬기 완료 (바뀐 비율 0%)
+  비용 추정(누적): Claude $0.865 · Google AI Studio 188원
+완료: content/sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose · 점검 통과
+::set-output-dir::content/sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose
+이번 작업 비용(추정) [sisibibi / 글 만들기]: Claude $0.865 · Google AI Studio 188원
