@@ -1,0 +1,43 @@
+{
+"workflow": "속보 감지",
+"event": "workflow_dispatch",
+"run_id": "45714768097",
+"argv": [
+"engine/issue.py",
+"watch"
+],
+"entries": [
+{
+"t": "2026-11-26T12:26:59+09:00",
+"kind": "claude",
+"site": "infobay",
+"task": "속보 감지",
+"purpose": "속보 고르기",
+"where": "issue.pick",
+"model": "claude-haiku-5-5",
+"input": 3480,
+"cache_write": 0,
+"cache_read": 0,
+"output": 1307,
+"web_searches": 0,
+"sec": 6.9,
+"usd": 0.001
+},
+{
+"t": "2026-11-26T12:27:26+09:00",
+"kind": "claude",
+"site": "infobay",
+"task": "속보 감지",
+"purpose": "속보 글 쓰기",
+"where": "issue.write",
+"model": "claude-sonnet-5-5",
+"input": 8,
+"cache_write": 43982,
+"cache_read": 45891,
+"output": 3512,
+"web_searches": 3,
+"sec": 27.6,
+"usd": 0.18427
+}
+]
+}
