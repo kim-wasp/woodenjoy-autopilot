@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-26T14:17+09:00",
+ "updated": "2026-11-26T15:21+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 44.8594,
-    "claude_usd": 36.0154,
+    "usd": 45.216,
+    "claude_usd": 36.372,
     "google_usd": 8.844,
     "other_usd": 0,
-    "input": 2037633,
-    "cache_write": 1178247,
-    "cache_read": 1436128,
-    "output": 1257047,
-    "web_searches": 280,
-    "calls": 311,
+    "input": 2037641,
+    "cache_write": 1260762,
+    "cache_read": 1527368,
+    "output": 1264251,
+    "web_searches": 286,
+    "calls": 312,
     "images": 66,
     "google_krw": 12382
    },
@@ -49,16 +49,16 @@
      "google_krw": 2251
     },
     "상식 (커먼센스 · 블로그 + infobay_kr)": {
-     "usd": 11.6199,
-     "claude_usd": 8.5379,
+     "usd": 11.9765,
+     "claude_usd": 8.8945,
      "google_usd": 3.082,
      "other_usd": 0,
-     "input": 452053,
-     "cache_write": 322948,
-     "cache_read": 288552,
-     "output": 307143,
-     "web_searches": 64,
-     "calls": 69,
+     "input": 452061,
+     "cache_write": 405463,
+     "cache_read": 379792,
+     "output": 314347,
+     "web_searches": 70,
+     "calls": 70,
      "images": 23,
      "google_krw": 4315
     },
@@ -133,6 +133,20 @@
      "calls": 3,
      "images": 0,
      "google_krw": 0
+    },
+    "커먼센스 카드": {
+     "usd": 0.3566,
+     "claude_usd": 0.3566,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 82515,
+     "cache_read": 91240,
+     "output": 7204,
+     "web_searches": 6,
+     "calls": 1,
+     "images": 0,
+     "google_krw": 0
     }
    },
    "by_purpose": {
@@ -203,6 +217,20 @@
      "output": 12957,
      "web_searches": 0,
      "calls": 3,
+     "images": 0,
+     "google_krw": 0
+    },
+    "collect": {
+     "usd": 0.3566,
+     "claude_usd": 0.3566,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 82515,
+     "cache_read": 91240,
+     "output": 7204,
+     "web_searches": 6,
+     "calls": 1,
      "images": 0,
      "google_krw": 0
     },
@@ -335,16 +363,16 @@
      "google_krw": 12382
     },
     "claude-sonnet-5-5": {
-     "usd": 3.8063,
-     "claude_usd": 3.8063,
+     "usd": 4.1629,
+     "claude_usd": 4.1629,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 373811,
-     "cache_write": 588831,
-     "cache_read": 398323,
-     "output": 106633,
-     "web_searches": 39,
-     "calls": 82,
+     "input": 373819,
+     "cache_write": 671346,
+     "cache_read": 489563,
+     "output": 113837,
+     "web_searches": 45,
+     "calls": 83,
      "images": 0,
      "google_krw": 0
     },
@@ -529,6 +557,20 @@
      "output": 12957,
      "web_searches": 0,
      "calls": 3,
+     "images": 0,
+     "google_krw": 0
+    },
+    "상식 (커먼센스 · 블로그 + infobay_kr) / 커먼센스 카드": {
+     "usd": 0.3566,
+     "claude_usd": 0.3566,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 82515,
+     "cache_read": 91240,
+     "output": 7204,
+     "web_searches": 6,
+     "calls": 1,
      "images": 0,
      "google_krw": 0
     }
@@ -843,16 +885,16 @@
      "google_krw": 938
     },
     "2026-11-26": {
-     "usd": 0.879,
-     "claude_usd": 0.879,
+     "usd": 1.2356,
+     "claude_usd": 1.2356,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 53988,
-     "cache_write": 204144,
-     "cache_read": 118561,
-     "output": 32747,
-     "web_searches": 14,
-     "calls": 18,
+     "input": 53996,
+     "cache_write": 286659,
+     "cache_read": 209801,
+     "output": 39951,
+     "web_searches": 20,
+     "calls": 19,
      "images": 0,
      "google_krw": 0
     }
@@ -860,6 +902,20 @@
   }
  },
  "recent_runs": [
+  {
+   "file": "20261126-152105-45767445767-2225.json",
+   "workflow": "스튜디오 앱 카드",
+   "event": "schedule",
+   "t": "2026-11-26T15:21:05+09:00",
+   "task": "커먼센스 카드",
+   "site": "infobay",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.3566,
+   "claude_usd": 0.3566,
+   "google_krw": 0,
+   "other_usd": 0
+  },
   {
    "file": "20261126-122726-45714768097-4131.json",
    "workflow": "속보 감지",

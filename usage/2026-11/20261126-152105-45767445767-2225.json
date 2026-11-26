@@ -1,0 +1,28 @@
+{
+"workflow": "스튜디오 앱 카드",
+"event": "schedule",
+"run_id": "45767445767",
+"argv": [
+"engine/commonsense.py",
+"infobay",
+"collect"
+],
+"entries": [
+{
+"t": "2026-11-26T15:21:05+09:00",
+"kind": "claude",
+"site": "infobay",
+"task": "커먼센스 카드",
+"purpose": "collect",
+"where": "commonsense.collect",
+"model": "claude-sonnet-5-5",
+"input": 8,
+"cache_write": 82515,
+"cache_read": 91240,
+"output": 7204,
+"web_searches": 6,
+"sec": 56.9,
+"usd": 0.35659
+}
+]
+}
