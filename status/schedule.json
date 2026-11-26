@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T14:15+09:00",
+  "updated": "2026-11-26T14:17+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1448,6 +1448,26 @@
       "title": "⚡ 한은 기준금리 3.25% 인상, 금통위 7명 중 2명은 동결 의견",
       "platform": "threads",
       "at": "2026-11-26T14:15:17+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-26-issue-1226",
+      "title": "⚡ 출산 1000만원 복지, 아이 없는 동료 몫은? 한화·한국콜마 사례",
+      "platform": "threads",
+      "at": "2026-11-26T14:17:01+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-26-issue-1129",
+      "title": "⚡ 하자 판정 7700여건, 고쳤는지는 시공사 등록뿐 (녹색경제신문)",
+      "platform": "threads",
+      "at": "2026-11-26T14:17:30+09:00",
       "state": "done",
       "url": null
     },
