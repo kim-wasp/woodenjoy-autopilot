@@ -1,0 +1,43 @@
+{
+"workflow": "스튜디오 업로드",
+"event": "workflow_dispatch",
+"run_id": "45806774774",
+"argv": [
+"engine/threads_poll.py",
+"due"
+],
+"entries": [
+{
+"t": "2026-11-26T20:09:49+09:00",
+"kind": "claude",
+"site": "공통",
+"task": "threads_poll",
+"purpose": "make_queue",
+"where": "threads_poll.make_queue",
+"model": "claude-sonnet-5-5",
+"input": 14639,
+"cache_write": 0,
+"cache_read": 0,
+"output": 4000,
+"web_searches": 0,
+"sec": 33.7,
+"usd": 0.06928
+},
+{
+"t": "2026-11-26T20:10:33+09:00",
+"kind": "claude",
+"site": "공통",
+"task": "threads_poll",
+"purpose": "make_queue",
+"where": "threads_poll.make_queue",
+"model": "claude-sonnet-5-5",
+"input": 14639,
+"cache_write": 0,
+"cache_read": 0,
+"output": 5693,
+"web_searches": 0,
+"sec": 44.5,
+"usd": 0.08621
+}
+]
+}

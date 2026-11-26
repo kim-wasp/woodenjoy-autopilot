@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-26T15:21+09:00",
+ "updated": "2026-11-26T20:11+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 45.216,
-    "claude_usd": 36.372,
+    "usd": 45.3715,
+    "claude_usd": 36.5275,
     "google_usd": 8.844,
     "other_usd": 0,
-    "input": 2037641,
+    "input": 2066919,
     "cache_write": 1260762,
     "cache_read": 1527368,
-    "output": 1264251,
+    "output": 1273944,
     "web_searches": 286,
-    "calls": 312,
+    "calls": 314,
     "images": 66,
     "google_krw": 12382
    },
@@ -75,6 +75,20 @@
      "calls": 41,
      "images": 12,
      "google_krw": 2251
+    },
+    "공통": {
+     "usd": 0.1555,
+     "claude_usd": 0.1555,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 29278,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 9693,
+     "web_searches": 0,
+     "calls": 2,
+     "images": 0,
+     "google_krw": 0
     }
    },
    "by_task": {
@@ -145,6 +159,20 @@
      "output": 7204,
      "web_searches": 6,
      "calls": 1,
+     "images": 0,
+     "google_krw": 0
+    },
+    "threads_poll": {
+     "usd": 0.1555,
+     "claude_usd": 0.1555,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 29278,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 9693,
+     "web_searches": 0,
+     "calls": 2,
      "images": 0,
      "google_krw": 0
     }
@@ -231,6 +259,20 @@
      "output": 7204,
      "web_searches": 6,
      "calls": 1,
+     "images": 0,
+     "google_krw": 0
+    },
+    "make_queue": {
+     "usd": 0.1555,
+     "claude_usd": 0.1555,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 29278,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 9693,
+     "web_searches": 0,
+     "calls": 2,
      "images": 0,
      "google_krw": 0
     },
@@ -363,16 +405,16 @@
      "google_krw": 12382
     },
     "claude-sonnet-5-5": {
-     "usd": 4.1629,
-     "claude_usd": 4.1629,
+     "usd": 4.3184,
+     "claude_usd": 4.3184,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 373819,
+     "input": 403097,
      "cache_write": 671346,
      "cache_read": 489563,
-     "output": 113837,
+     "output": 123530,
      "web_searches": 45,
-     "calls": 83,
+     "calls": 85,
      "images": 0,
      "google_krw": 0
     },
@@ -571,6 +613,20 @@
      "output": 7204,
      "web_searches": 6,
      "calls": 1,
+     "images": 0,
+     "google_krw": 0
+    },
+    "공통 / threads_poll": {
+     "usd": 0.1555,
+     "claude_usd": 0.1555,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 29278,
+     "cache_write": 0,
+     "cache_read": 0,
+     "output": 9693,
+     "web_searches": 0,
+     "calls": 2,
      "images": 0,
      "google_krw": 0
     }
@@ -885,16 +941,16 @@
      "google_krw": 938
     },
     "2026-11-26": {
-     "usd": 1.2356,
-     "claude_usd": 1.2356,
+     "usd": 1.3911,
+     "claude_usd": 1.3911,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 53996,
+     "input": 83274,
      "cache_write": 286659,
      "cache_read": 209801,
-     "output": 39951,
+     "output": 49644,
      "web_searches": 20,
-     "calls": 19,
+     "calls": 21,
      "images": 0,
      "google_krw": 0
     }
@@ -902,6 +958,20 @@
   }
  },
  "recent_runs": [
+  {
+   "file": "20261126-201057-45806774774-3474.json",
+   "workflow": "스튜디오 업로드",
+   "event": "workflow_dispatch",
+   "t": "2026-11-26T20:09:49+09:00",
+   "task": "threads_poll",
+   "site": "공통",
+   "calls": 2,
+   "images": 0,
+   "usd": 0.1555,
+   "claude_usd": 0.1555,
+   "google_krw": 0,
+   "other_usd": 0
+  },
   {
    "file": "20261126-152105-45767445767-2225.json",
    "workflow": "스튜디오 앱 카드",
