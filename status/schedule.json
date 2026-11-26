@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T20:28+09:00",
+  "updated": "2026-11-26T20:29+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1551,6 +1551,33 @@
       "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
       "platform": "instagram",
       "at": "2026-11-27T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
+      "platform": "blog",
+      "at": "2026-11-30T08:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
+      "platform": "threads",
+      "at": "2026-11-30T12:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+      "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
+      "platform": "instagram",
+      "at": "2026-11-30T21:00+09:00",
       "state": "planned"
     }
   ]
