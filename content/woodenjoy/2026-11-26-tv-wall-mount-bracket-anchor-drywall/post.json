@@ -1,0 +1,266 @@
+{
+  "id": "woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
+  "site": "woodenjoy",
+  "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
+  "status": "ready",
+  "created_at": "2026-11-26T20:19+09:00",
+  "requested_topic": "",
+  "keywords": {
+    "main": "벽걸이TV거치대",
+    "sub": [
+      "벽걸이티비브라켓",
+      "티비벽걸이시공",
+      "벽걸이티비무타공"
+    ]
+  },
+  "brief": {
+    "reader": "벽걸이TV 거치대를 사서 직접 달려는데 벽이 통통 울리거나 어떤 나사·앙카를 써야 할지 모르는 사람",
+    "question": "벽걸이TV 거치대를 사고 달 때 무엇을 확인하고, 벽 종류마다 무엇으로 고정해야 하나요?",
+    "answer": "TV 뒷면 VESA 간격과 무게를 거치대 범위에 맞추고, TV 쪽은 설명서 규격 나사(삼성은 M8)를 쓰고, 석고벽이면 뒤 콘크리트까지 뚫어 칼블럭이나 스크류앙카로 고정해요.",
+    "out_of_scope": "브랜드별 제품 추천, 설치비 시세, 천장형 거치대, 벽 속 배선 공사",
+    "next_action": "TV 모델명으로 설명서를 찾아 VESA 숫자와 무게를 메모하고, 거실 벽을 두드려 재질을 확인하기"
+  },
+  "why_this_topic": "이번 차례는 공구 사용법 글이에요. 후보 중 벽걸이티비거치대(월 1,080회), 벽걸이TV거치대(1,010회), 벽걸이티비브라켓(1,120회), 벽걸이티비무타공(1,040회), 티비벽걸이시공(1,000회)이 한 주제로 묶여요. 그래서 거치대·앙카·드릴을 다루는 글 하나로 다섯 검색어를 함께 받을 수 있어요. 욕실실리콘곰팡이(460회)는 공구 글이 아니고 최근 창틀 곰팡이 글과 겹쳐서 뺐어요. 최근 글이 겨울 외풍·결로 쪽에 몰려 있어서 주제를 바꿨고, 연관 검색어에도 전동드릴(29,600)이 크게 잡혀 있어요.",
+  "title_candidates": [
+    {
+      "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
+      "pattern": "실수·손해",
+      "score": 9
+    },
+    {
+      "title": "벽걸이TV 거치대 사기 전 VESA·무게·벽 속, 3가지 안 재면 다시 뚫어요",
+      "pattern": "숫자·기준",
+      "score": 7
+    },
+    {
+      "title": "벽걸이TV 거치대 벽이 통통 울리면? 석고 뒤 콘크리트부터 찾으세요",
+      "pattern": "짜증 장면",
+      "score": 8
+    },
+    {
+      "title": "벽걸이TV 거치대 구멍, VESA 간격대로 뚫으면 안 되는 이유",
+      "pattern": "반전",
+      "score": 7
+    },
+    {
+      "title": "벽걸이TV 거치대 고정형 vs 틸트형 vs 암형, 소파 위치로 고르세요",
+      "pattern": "비교",
+      "score": 6
+    }
+  ],
+  "title_research": "상위 제목은 대부분 '고르는 법·추천·VESA 규격·설치 가이드' 같은 설명형이에요. 벽 속 재질(석고/콘크리트)에 따라 앙카를 어떻게 고르는지, TV 쪽 나사 규격(M8·긴 나사 금지)은 빠져 있어요. 우리는 석고벽에 피스만 박는 흔한 실수 장면과 '콘크리트까지'라는 답을 제목에 넣어요.",
+  "meta_description": "VESA 간격을 TV 뒷면에서 재는 법, 삼성 설명서의 M8 나사 4개 기준, 석고벽이면 앙카를 콘크리트까지 박아야 하는 이유, 고정형·틸트형·암형 고르는 기준까지 담았어요.",
+  "hero_prompt": "A slightly tilted, casual smartphone photo inside a Korean apartment living room: a black metal TV wall-mount bracket on a white gypsum board wall, its upper edge pulled a few centimeters away from the wall, screws half sticking out, small white gypsum dust crumbs on the laminate floor below. A cardboard box and a power cord lie at the edge of the frame, mixed warm ceiling light and daylight from the side, faint scuffs on the wall. The center of the frame is fairly plain wall for text overlay. Realistic, unpolished, no people, no text in the image, no showroom styling, no HDR, no heavy background blur.",
+  "thumb_text": "TV 걸기 전에\n벽 속부터 보세요",
+  "category": "",
+  "kind": "tool",
+  "summary": [],
+  "conclusion": "",
+  "opinion": "",
+  "photos": [],
+  "real_photos": [],
+  "sources": [
+    {
+      "title": "삼성 UHD 스마트 TV 사용 설명서 (Manuals+)",
+      "url": "https://ko.manuals.plus/samsung/uhd-smart-tv-manual"
+    },
+    {
+      "title": "삼성 사용 설명서 (WM 벽걸이 VESA·M8 표)",
+      "url": "https://visang.tv/file/1080892454"
+    },
+    {
+      "title": "삼성 HOTEL TV 제품사용설명서 (벽걸이 규격·주의사항)",
+      "url": "https://downloadcenter.samsung.com/content/UM/201904/20190424131120451/Install_Guide-02_NF690_KOR_190419.0.pdf"
+    },
+    {
+      "title": "Samsung Product User Manual (82인치 이상 4명)",
+      "url": "https://manuals.plus/samsung/samsung-product-manual"
+    },
+    {
+      "title": "엘비영 홈케어집수리: 벽걸이TV 설치할 때 벽면이 석고보드인 경우",
+      "url": "https://houserepair.pcguy.co.kr/%EB%B2%BD%EA%B1%B8%EC%9D%B4tv-%EC%84%A4%EC%B9%98%ED%95%A0%EB%95%8C-%EB%B2%BD%EB%A9%B4%EC%9D%B4-%EC%84%9D%EA%B3%A0%EB%B3%B4%EB%93%9C%EC%9D%B8-%EA%B2%BD%EC%9A%B0/"
+    },
+    {
+      "title": "DVDPrime: TV 벽걸이 석고보드 벽에 설치가 되나요?",
+      "url": "https://dvdprime.com/g2/bbs/board.php?bo_table=tvmonitor&wr_id=177309"
+    },
+    {
+      "title": "G마켓: 벽걸이TV 설치용 콘크리트 스크류앙카 (상품명 확인)",
+      "url": "https://m.gmarket.co.kr/vi/product/2227158911"
+    },
+    {
+      "title": "TV 벽걸이 브라켓 & 스탠드 설치 가이드 (수평계·벽체별 앙카)",
+      "url": "https://gola4u.com/tv-wall-mount-stand-recommendation-2025/"
+    },
+    {
+      "title": "40인치 TV 벽걸이형 (고정형·틸트형·풀모션 비교)",
+      "url": "https://cvinet.com/40%EC%9D%B8%EC%B9%98-tv-%EB%B2%BD%EA%B1%B8%EC%9D%B4%ED%98%95-%EA%BF%80%ED%8C%81-%EC%B4%9D%EC%A0%95%EB%A6%AC/"
+    },
+    {
+      "title": "오늘의집: 무타공 벽걸이 TV 검색 결과 (상품명 확인)",
+      "url": "https://m.ohou.se/productions/feed?query=%EB%AC%B4%ED%83%80%EA%B3%B5%EB%B2%BD%EA%B1%B8%EC%9D%B4%ED%8B%B0%EB%B9%84"
+    },
+    {
+      "title": "TV 거치대 고르는 법: 벽면밀착·이젤형·이동식 비교",
+      "url": "https://picdam.com/tv-stand-vesa-size-weight-guide/"
+    }
+  ],
+  "platforms": [
+    "blog",
+    "threads",
+    "instagram"
+  ],
+  "blog_platform": "naver",
+  "instagram": {
+    "framework": "모음형",
+    "ending": "링크",
+    "cover_hooks": [
+      "TV 걸기 전 5가지 확인",
+      "석고벽에 피스만? 2년 버티다 빠져나왔대요",
+      "거치대 왔는데 TV 구멍이 안 맞아요?"
+    ],
+    "caption": "TV 뒷면 나사 구멍 사이, 몇 cm인지 알아요?\n그 숫자(VESA)가 거치대 상세페이지 범위에 들어가야 걸 수 있어요.\n삼성 설명서 기준 TV 쪽 나사는 M8이고, 표준보다 긴 나사는 TV 속을 망가뜨릴 수 있어요.\n벽이 통통 울리면 석고 피스만으로 걸지 말고 뒤 콘크리트까지 앙카를 박아야 해요.\n벽 속 재질별 앙카 고르는 표와 7단계 설치 순서는 프로필 링크의 블로그 글에 있어요.\n\n#셀프인테리어 #벽걸이TV #벽걸이TV거치대 #티비벽걸이"
+  },
+  "threads": {
+    "style": "상식 뒤집기",
+    "hooks": [
+      "석고벽이면 TV 못 건다고?",
+      "석고 피스로 건 TV, 2년 뒤 빠져나왔대",
+      "벽걸이 구멍, VESA 간격대로 뚫었어?"
+    ],
+    "posts": [
+      "석고벽이면 TV 못 건다고?\n벽 두드렸는데 통통 소리 나면 다들 벽걸이 접고 스탠드부터 알아보잖아.\n근데 석고 뒤에 콘크리트가 숨어 있는 집도 있어. 그럼 얘기가 완전 달라짐.\n너네 거실 TV 벽은 통통이야, 딱딱이야?",
+      "벽 속이 뭐냐에 따라 달라.\n1. 석고 뒤 콘크리트: 석고 지나서 콘크리트까지 뚫고 칼블럭이나 스크류앙카\n2. 석고 뒤 합판: 합판에 목공 피스\n3. 석고만 있는 가벽: 합판으로 보강하거나 각재 자리 찾기, TV 크면 스탠드\n석고 전용 피스로만 걸었다가 2년쯤 버티고 브라켓이 빠져나온 사례도 집수리 업체 블로그에 있더라.",
+      "벽 종류별 앙카랑 거치대 고르는 표는 여기 정리했어 {LINK}"
+    ],
+    "topic_tag": "셀프인테리어"
+  },
+  "revision": 2,
+  "coupang_wish": [
+    {
+      "name": "고정형 벽걸이 TV 거치대",
+      "search": "벽걸이 TV 거치대 고정형",
+      "why": "벽에 바짝 붙여 정면에서만 보는 집",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요."
+    },
+    {
+      "name": "틸트형(각도형) 벽걸이 TV 브라켓",
+      "search": "벽걸이 TV 브라켓 각도형 틸트",
+      "why": "TV를 높게 달아 아래로 숙이거나 반사를 줄이고 싶은 집",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요."
+    },
+    {
+      "name": "암형 벽걸이 TV 거치대",
+      "search": "암형 벽걸이 TV 거치대",
+      "why": "소파나 식탁 쪽으로 화면을 돌려 봐야 하는 집",
+      "after": "TV 무게와 VESA 범위를 상세페이지에서 먼저 맞춰 보세요."
+    }
+  ],
+  "dead_links_removed": [
+    "https://digiters.co.kr/digi-%EB%B2%BD%EA%B1%B8%EC%9D%B4tv%EC%84%A4%EC%B9%98%EB%B0%A9%EB%B2%95/"
+  ],
+  "checks": {
+    "ok": false,
+    "issues": [
+      "블로그: 글자 수 2927자 (기준 1,200~2,800자)",
+      "카드: 7장 안내와 캡션 불일치: 캡션에는 '7단계 설치 순서'와 '앙카 고르는 표'가 블로그 글에 있다고 쓰여 있습니다. 실제 글의 설치 순서는 6단계이고, 앙카 안내는 표가 아니라 목록입니다."
+    ],
+    "at": "2026-11-26T20:20+09:00"
+  },
+  "check_history": [
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 4074자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"확인 N\"",
+      "text": "카드: 2장: 계정명 자리 침범: \"확인 1\""
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 2장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"확인 N\"",
+      "text": "카드: 4장: 계정명 자리 침범: \"확인 3\""
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 4장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 계정명 자리 침범: \"확인 N\"",
+      "text": "카드: 5장: 계정명 자리 침범: \"확인 4\""
+    },
+    {
+      "at": "2026-11-26T20:18+09:00",
+      "kind": "카드: N장: 본문이 계정명 자리까지 내려옴",
+      "text": "카드: 5장: 본문이 계정명 자리까지 내려옴"
+    },
+    {
+      "at": "2026-11-26T20:19+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 3078자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-26T20:19+09:00",
+      "kind": "카드: 캡션·N장 연결: 캡션은 '벽 속 재질별 앙카 고르는 표와 N단계 설치 순서'가 블로그 글에 있다고 안내하지만, 글에는 앙카 안내가 표가 아니라 목록이고 설치 순서도 N단계입니다. N장의 '앙카 고르는 법은 ",
+      "text": "카드: 캡션·7장 연결: 캡션은 '벽 속 재질별 앙카 고르는 표와 7단계 설치 순서'가 블로그 글에 있다고 안내하지만, 글에는 앙카 안내가 표가 아니라 목록이고 설치 순서도 6단계입니다. 7장의 '앙카 고르는 법은 블로그 글에'를 보고 글을 찾는 사람에게 어긋나므로 캡션을 '목록'과 '6단계'로 고쳐야 합니다."
+    },
+    {
+      "at": "2026-11-26T20:20+09:00",
+      "kind": "블로그: 글자 수 N자 (기준 N~N자)",
+      "text": "블로그: 글자 수 2927자 (기준 1,200~2,800자)"
+    },
+    {
+      "at": "2026-11-26T20:20+09:00",
+      "kind": "카드: N장 안내와 캡션 불일치: 캡션에는 'N단계 설치 순서'와 '앙카 고르는 표'가 블로그 글에 있다고 쓰여 있습니다. 실제 글의 설치 순서는 N단계이고, 앙카 안내는 표가 아니라 목록입니다.",
+      "text": "카드: 7장 안내와 캡션 불일치: 캡션에는 '7단계 설치 순서'와 '앙카 고르는 표'가 블로그 글에 있다고 쓰여 있습니다. 실제 글의 설치 순서는 6단계이고, 앙카 안내는 표가 아니라 목록입니다."
+    }
+  ],
+  "cost": {
+    "claude": {
+      "claude-haiku-5-5": {
+        "input_tokens": 10372,
+        "output_tokens": 4162,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.0031
+      },
+      "claude-opus-5-5": {
+        "input_tokens": 216898,
+        "output_tokens": 34944,
+        "web_searches": 5,
+        "calls": 3,
+        "usd": 1.6165
+      },
+      "claude-sonnet-5-5": {
+        "input_tokens": 23136,
+        "output_tokens": 5126,
+        "web_searches": 0,
+        "calls": 6,
+        "usd": 0.0975
+      }
+    },
+    "images": {
+      "gemini-3-pro-image": {
+        "count": 2,
+        "usd": 0.268
+      }
+    },
+    "usd": 1.9851,
+    "claude_usd": 1.3926,
+    "google_usd": 0.268,
+    "other_usd": 0,
+    "google_krw": 375,
+    "total_usd": 1.9851,
+    "total_krw": 2780,
+    "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
+  }
+}
