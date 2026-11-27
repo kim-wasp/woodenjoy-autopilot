@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-26-cheonghae-unit-dispatch-national-assembly-consent-",
   "site": "sisibibi",
   "title": "청해부대 파병, 대통령 혼자 못 보낸다…오만 남방 2배·395명",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-26T20:30+09:00",
   "requested_topic": "청해부대 파병 연장, 국회 동의는 왜 필요할까? 국방위가 임무 구역을 오만 남방 해역까지 넓혔어요",
   "keywords": {
@@ -242,6 +242,12 @@
   "published": {
     "blog": "posts/2026-11-27-cheonghae-unit-dispatch-national-assembly-consent-",
     "blog_url": "https://sisibibinote.kr/posts/cheonghae-unit-dispatch-national-assembly-consent-/",
-    "blog_at": "2026-11-27T12:02:04+09:00"
+    "blog_at": "2026-11-27T12:02:04+09:00",
+    "threads": [
+      "17919367950519318",
+      "18155690581556938",
+      "18120869276326723"
+    ],
+    "threads_at": "2026-11-27T20:02:51+09:00"
   }
 }

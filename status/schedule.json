@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T16:43+09:00",
+  "updated": "2026-11-27T20:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1592,6 +1592,16 @@
       "url": null
     },
     {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-26-cheonghae-unit-dispatch-national-assembly-consent-",
+      "title": "청해부대 파병, 대통령 혼자 못 보낸다…오만 남방 2배·395명",
+      "platform": "threads",
+      "at": "2026-11-27T20:02:51+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "infobay",
       "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
       "dir": "content/infobay/2026-11-26-wedding-flower-wreath-check-before-order-2026",
@@ -1621,19 +1631,10 @@
     {
       "site": "sisibibi",
       "site_name": "정치 (시시비비노트)",
-      "dir": "content/sisibibi/2026-11-26-cheonghae-unit-dispatch-national-assembly-consent-",
-      "title": "청해부대 파병, 대통령 혼자 못 보낸다…오만 남방 2배·395명",
-      "platform": "threads",
-      "at": "2026-11-28T19:30+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "sisibibi",
-      "site_name": "정치 (시시비비노트)",
       "dir": "content/sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose",
       "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
       "platform": "threads",
-      "at": "2026-11-29T19:30+09:00",
+      "at": "2026-11-28T19:30+09:00",
       "state": "planned"
     },
     {
