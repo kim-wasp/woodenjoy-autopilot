@@ -2,7 +2,7 @@
   "id": "forsmartlife/2026-11-27-insomnia-symptoms-10-minute-rule-when-to-see-docto",
   "site": "forsmartlife",
   "title": "불면증 증상, 잠 안 올 때 10분 넘게 뒤척이면 일어나세요",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-27T00:46+09:00",
   "requested_topic": "불면증 증상과 생활 관리: 잠이 안 올 때 점검할 것\n카테고리: 증상 관리\n이 글이 답할 질문: 잠들기 어렵거나 자주 깨는 증상은 생활습관으로 관리할 수 있는 범위와 진료가 필요한 기준은?\n고른 근거(why_this_topic 에 그대로 적기): 네이버 월간 검색 12,440회, 11월 시기 주제",
   "keywords": {
@@ -213,7 +213,7 @@
     "usd": 2.2396,
     "claude_usd": 1.2469,
     "google_usd": 0.402,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 563,
     "total_usd": 2.2396,
     "total_krw": 3140,
