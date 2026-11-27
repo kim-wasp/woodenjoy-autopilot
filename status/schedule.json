@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T14:20+09:00",
+  "updated": "2026-11-27T16:41+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1568,6 +1568,16 @@
       "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
       "platform": "threads",
       "at": "2026-11-27T12:33:07+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-27-issue-1112",
+      "title": "⚡ 청첩장 예식 시간 10분 당겨 적기, 센스냐 속임수냐",
+      "platform": "threads",
+      "at": "2026-11-27T16:41:53+09:00",
       "state": "done",
       "url": null
     },
