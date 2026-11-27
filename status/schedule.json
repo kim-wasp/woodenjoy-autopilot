@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T20:03+09:00",
+  "updated": "2026-11-27T21:03+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1607,17 +1607,9 @@
       "dir": "content/infobay/2026-11-26-wedding-flower-wreath-check-before-order-2026",
       "title": "결혼화환 보냈는데 리본만 걸린 이유, 주문 전 확인 5가지",
       "platform": "instagram",
-      "at": "2026-11-27T21:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "woodenjoy",
-      "site_name": "가구·인테리어 (우드엔조이)",
-      "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
-      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
-      "platform": "instagram",
-      "at": "2026-11-27T21:00+09:00",
-      "state": "planned"
+      "at": "2026-11-27T21:03:09+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "sisibibi",
@@ -1667,10 +1659,19 @@
     {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
+      "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
+      "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
+      "platform": "instagram",
+      "at": "2026-11-30T21:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "woodenjoy",
+      "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-26-tv-wall-mount-bracket-anchor-drywall",
       "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
       "platform": "instagram",
-      "at": "2026-11-30T21:00+09:00",
+      "at": "2026-12-01T21:00+09:00",
       "state": "planned"
     }
   ]
