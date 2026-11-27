@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T08:16+09:00",
+  "updated": "2026-11-27T09:24+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1591,6 +1591,15 @@
       "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
       "platform": "threads",
       "at": "2026-11-28T19:30+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "forsmartlife",
+      "site_name": "건강 (forsmartlife.com)",
+      "dir": "content/forsmartlife/2026-11-27-insomnia-symptoms-10-minute-rule-when-to-see-docto",
+      "title": "불면증 증상, 잠 안 올 때 10분 넘게 뒤척이면 일어나세요",
+      "platform": "blog",
+      "at": "2026-11-30T07:00+09:00",
       "state": "planned"
     },
     {
