@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T12:02+09:00",
+  "updated": "2026-11-27T12:33+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1552,13 +1552,24 @@
       "url": "https://sisibibinote.kr/posts/cheonghae-unit-dispatch-national-assembly-consent-/"
     },
     {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-26-wedding-flower-wreath-check-before-order-2026",
+      "title": "결혼화환 보냈는데 리본만 걸린 이유, 주문 전 확인 5가지",
+      "platform": "threads",
+      "at": "2026-11-27T12:32:40+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
       "site": "woodenjoy",
       "site_name": "가구·인테리어 (우드엔조이)",
       "dir": "content/woodenjoy/2026-11-25-window-frame-mold-removal-silicone-bleach-vinegar",
       "title": "창틀 곰팡이 제거, 락스 덮어도 검은 줄 남으면 실리콘 속이에요",
       "platform": "threads",
-      "at": "2026-11-27T12:30+09:00",
-      "state": "planned"
+      "at": "2026-11-27T12:33:07+09:00",
+      "state": "done",
+      "url": null
     },
     {
       "site": "infobay",
@@ -1621,15 +1632,6 @@
       "title": "벽걸이TV 거치대 석고벽에 피스만 박으면 빠져나와요, 앙카는 콘크리트까지",
       "platform": "blog",
       "at": "2026-11-30T08:00+09:00",
-      "state": "planned"
-    },
-    {
-      "site": "infobay",
-      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
-      "dir": "content/infobay/2026-11-26-wedding-flower-wreath-check-before-order-2026",
-      "title": "결혼화환 보냈는데 리본만 걸린 이유, 주문 전 확인 5가지",
-      "platform": "threads",
-      "at": "2026-11-30T12:30+09:00",
       "state": "planned"
     },
     {
