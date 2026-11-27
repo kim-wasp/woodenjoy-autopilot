@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T16:41+09:00",
+  "updated": "2026-11-27T16:43+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1578,6 +1578,16 @@
       "title": "⚡ 청첩장 예식 시간 10분 당겨 적기, 센스냐 속임수냐",
       "platform": "threads",
       "at": "2026-11-27T16:41:53+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-27-issue-1112",
+      "title": "⚡ 수도권 신규택지 99% 경기도 쏠림, 경기도 보고서와 국토부 발표 정리",
+      "platform": "threads",
+      "at": "2026-11-27T16:43:01+09:00",
       "state": "done",
       "url": null
     },
