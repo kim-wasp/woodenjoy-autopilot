@@ -1,7 +1,7 @@
 {
   "site": "infobay",
   "title": "⚡ 출산 40일 시모 3박 방문 논쟁, 불편 vs 서운",
-  "status": "ready",
+  "status": "published",
   "rush": true,
   "platforms": [
     "threads"
@@ -57,5 +57,14 @@
       "스레드2": "A",
       "스레드3": "A"
     }
+  },
+  "approved_at": "2026-11-27T09:24+09:00",
+  "published": {
+    "threads": [
+      "18104302202646648",
+      "18403428121204423",
+      "18109803482295452"
+    ],
+    "threads_at": "2026-11-27T09:25:00+09:00"
   }
 }
