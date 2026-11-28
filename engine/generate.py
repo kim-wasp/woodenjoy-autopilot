@@ -84,6 +84,29 @@ THREADS_REACT = """[스레드 반응 받는 법 — 성과 분석 결과, 위 �
 - 가정 상황(~하면 어떡할래?)보다 실제로 있었던 일에 붙이는 게 반응이 커요. 최근 기사·화제가 있으면 그걸로 시작.
 - 반응 낚시 문구(댓글 달아줘, 공감하면 좋아요) 금지는 그대로."""
 
+# 스레드 첫 줄 세기 (2026-11-28 사장님 지시: 첫 줄이 점점 약해짐 → 더 자극적으로. 시시비비·커먼센스는 갈등 구도까지, 아니면 감정을 건드리게)
+HOOK_COMMON = """[스레드 첫 줄 세기 — 사장님 지시, 위 규칙보다 우선]
+- 최근 첫 줄이 '○○했대', '○○래' 같은 기사 전달로 약해졌어요. 소식을 옮기지 말고 읽는 사람 감정을 바로 건드려요: 억울함, 분노, 배신감, 손해 본 느낌, 부러움, 민망함, '말도 안 돼'.
+- 약한 예 → 센 예 (사실은 그대로, 각도만 바꿈):
+  '국민연금 202조가 석 달 만에 증발했대' → '내 노후 돈 202조, 석 달 만에 날아갔어'
+  '금요일 밤 10시에 회장이 불렀대' → '금요일 밤 10시 호출, 너 같으면 가?'
+  '건전지 갈았는데 또 삐리리?' → '새 건전지 넣었는데 또 삐삐, 돈 버린 거야'
+- 첫 줄 후보 3개(hooks)를 만든 뒤 '타임라인에서 손가락이 멈추는가'로 스스로 1~10점을 매기고, 8점 미만이면 더 세게 다시 써요. 가장 센 것을 첫 줄로.
+- 둘째 줄은 첫 줄의 감정에 기름을 붓는 사실 하나(숫자, 누가 득 보고 누가 손해 보는지).
+- 지켜야 할 선(이건 세기와 상관없이 그대로): 사실만(숫자·인용은 기사 그대로), 지어낸 경험 금지, 특정 개인 조롱·욕설 금지, 성별·지역·출신·장애 비하 금지, 확인 안 된 의혹 단정 금지, 건강은 공포 조장 금지."""
+HOOK_CONFLICT = """[갈등 구도 허용 — 시시비비·커먼센스]
+- 사람들이 실제로 갈리는 두 편을 첫 줄에 정면으로 세워도 돼요: 세입자 vs 집주인, 신입 vs 부장, 며느리 vs 시어머니, 하객 vs 혼주, 청년 vs 은퇴 세대, 세금 내는 쪽 vs 받는 쪽, 회사 vs 직원.
+  구도 예시(문장을 그대로 쓰지 말고, 숫자·사실은 그날 기사로 채워요): '축의금 5만원 낸 친구, 손절해도 돼?' / '더 내는 건 우리, 더 받는 건 누구?' / '안 판 집에 세금 고지서, 이게 맞아?'
+- 읽는 사람이 어느 한쪽에 서서 댓글로 싸우고 싶어지게 끝내요. 마지막 줄은 둘 중 하나 고르게.
+- 정치(시시비비): 정당·정치인 이름으로 편을 가르지 말고, 정책 때문에 득 보는 사람과 손해 보는 사람으로 가르세요. 여야 어느 한쪽 응원·비방 금지, 양쪽 지지자가 다 찔리게."""
+
+
+def threads_hook_block(site):
+    """사이트별 스레드 첫 줄 세기: site.json threads.hook_level = conflict(갈등 구도까지) / strong(기본)"""
+    lvl = (site.get("threads") or {}).get("hook_level", "strong")
+    return HOOK_COMMON + ("\n" + HOOK_CONFLICT if lvl == "conflict" else "")
+
+
 CARD_GUIDE = """카드(인스타 캐러셀, 1080x1350) 규칙:
 - slides 6~8장. 1장째는 표지(가장 강한 후킹, "big": true), 마지막 장은 저장·유입 안내.
 - 장마다 새 정보 하나. 같은 문장 반복 금지.
@@ -448,6 +471,7 @@ def build_prompt(site, topic, notes, view=None):
         p.append(THREADS_GUIDE)
         p.append(THREADS_REACT)
         p.append(skills.block("threads-kr"))
+        p.append(threads_hook_block(site))
     if img_cfg(site)["instagram"] == "photo_cards":
         p.append(PHOTO_CARD_GUIDE)
     p.append("[한국어 AI 티 줄이기 — 블로그·카드·캡션·스레드 모두]\n" + skills.text("korean-natural", 4500))
@@ -1388,7 +1412,7 @@ def rewrite_threads(site_id, dir_):
     post = load_json(d / "post.json")
     md = (d / "article.md").read_text(encoding="utf-8") if (d / "article.md").exists() else ""
     exp = experiences(site) if "experiences" in globals() else ""
-    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n" + THREADS_REACT + "\n" + skills.block("threads-kr") + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
+    res = llm.ask_json(SYSTEM, THREADS_GUIDE + "\n" + THREADS_REACT + "\n" + skills.block("threads-kr") + "\n" + threads_hook_block(site) + "\n[글 제목] " + post["title"] + "\n[운영자 경험]\n" + (exp or "(없음)")
                        + "\n[블로그 글]\n" + md[:9000] + '\n\n출력: {"hooks": ["첫 줄 후보1", "후보2", "후보3"], "posts": ["본문", "댓글", "대댓글 + {LINK}"], "topic_tag": "주제 태그 1개"}',
                        model=(site.get("llm") or {}).get("model"), web_search=False, mock_name="threads")
     posts = [x for x in (res.get("posts") or []) if x]

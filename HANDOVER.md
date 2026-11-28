@@ -81,6 +81,11 @@
 - tools/publish.py 가 engine/publish.py 를 가려 우드엔조이 글 3편이 저장 직전에 날아감 → 수정.
 - Gemini 선불 크레딧 소진으로 대표사진 빠짐 → 충전·자동 충전 권장.
 
+### 11/28 스레드 첫 줄 세기
+- 사장님: 첫 줄이 점점 약해짐(기사 전달형 '~했대') → 더 자극적으로. 시시비비·커먼센스는 갈등 구도까지, 아니면 감정 건드리기.
+- engine/generate.py HOOK_COMMON / HOOK_CONFLICT, site.json threads.hook_level (sisibibi·infobay = conflict, woodenjoy = strong). 정규 글·스레드 다시 쓰기·속보 모두 적용.
+- 그대로 지키는 선: 사실만, 개인 조롱·비하 금지, 정치는 정당 말고 득·손해 보는 사람으로 가르기.
+
 ### 11/21~11/23 서치콘솔, 비용
 - 애드센스 순서: forsmartlife 12월 초 → 시시비비 12월 중순 → myinfobay(커먼센스)는 블로그 글이 쌓인 뒤.
 - myinfobay 예전 글 주소 301 연결은 안 하기로 (예전 유입이 적어서, 404는 구글이 감점하지 않음).

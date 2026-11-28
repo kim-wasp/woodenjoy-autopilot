@@ -31,7 +31,8 @@
   "threads": {
     "enabled": true,
     "handle": "woodenjoy00",
-    "token_secret": "THREADS_TOKEN"
+    "token_secret": "THREADS_TOKEN",
+    "hook_level": "strong"
   },
   "schedule": {
     "generate": {

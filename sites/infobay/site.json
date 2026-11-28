@@ -37,7 +37,8 @@
   "threads": {
     "enabled": true,
     "handle": "infobay_kr",
-    "token_secret": "THREADS_TOKEN_INFOBAY"
+    "token_secret": "THREADS_TOKEN_INFOBAY",
+    "hook_level": "conflict"
   },
   "schedule": {
     "generate": {

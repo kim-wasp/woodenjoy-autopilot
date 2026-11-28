@@ -109,7 +109,7 @@ STANCE = {
 
 
 def write(site, chosen, rows):
-    from generate import THREADS_GUIDE, THREADS_REACT, site_profile, th_problems
+    from generate import THREADS_GUIDE, THREADS_REACT, site_profile, th_problems, threads_hook_block
     src = next((r for r in rows if r["id"] == chosen["id"]), None) or {}
     cfg = site.get("issue_track") or {}
     links = published_links(site["id"])
@@ -117,7 +117,7 @@ def write(site, chosen, rows):
         f"[사이트]\n{site_profile(site)}",
         f"[지금] {now_kst():%Y-%m-%d %H:%M} (오늘 뜬 이슈를 몇 시간 안에 올리는 속보 글이에요)",
         f"[이슈]\n{src.get('text', '')}\n검색어: {chosen.get('keyword')}\n왜 지금: {chosen.get('why')}\n방향: {chosen.get('angle')}\n참고 기사: " + " ".join(l for l in src.get("links", []) if l),
-        THREADS_GUIDE, THREADS_REACT, skills.block("threads-kr"),
+        THREADS_GUIDE, THREADS_REACT, skills.block("threads-kr"), threads_hook_block(site),
         f"[입장]\n{STANCE.get(cfg.get('stance', 'both'), STANCE['both'])}",
         "[링크 고르기]\n대댓글의 {LINK} 에 들어갈 우리 글: 아래 목록에서 이 이슈와 가장 가까운 글의 url 하나를 link 에. 맞는 글이 없으면 빈칸(홈으로 가요).\n"
         + "\n".join(f"- {l['title']} {l['url']}" for l in links),

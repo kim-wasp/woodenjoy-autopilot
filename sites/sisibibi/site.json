@@ -34,7 +34,8 @@
   "threads": {
     "enabled": true,
     "handle": "sisibibi.note",
-    "token_secret": "THREADS_TOKEN_SISIBIBI"
+    "token_secret": "THREADS_TOKEN_SISIBIBI",
+    "hook_level": "conflict"
   },
   "schedule": {
     "slots": {
