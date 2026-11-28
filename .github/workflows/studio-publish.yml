@@ -43,7 +43,7 @@ jobs:
           fi
           cat due.txt
           echo "any=$([ -s due.txt ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - run: pip install -q -r requirements.txt
       - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
