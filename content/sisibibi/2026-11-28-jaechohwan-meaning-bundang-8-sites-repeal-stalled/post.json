@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-28-jaechohwan-meaning-bundang-8-sites-repeal-stalled",
   "site": "sisibibi",
   "title": "재초환 뜻, 안 판 집에 2.2억 고지서…폐지법은 왜 2년째 멈췄나",
-  "status": "draft",
+  "status": "ready",
   "created_at": "2026-11-28T20:21+09:00",
   "requested_topic": "재초환 뜻, 분당 선도지구 8곳까지 '폐지하라'…그런데 국회는 왜 안 움직이나",
   "keywords": {
@@ -246,7 +246,7 @@
     "usd": 1.4889,
     "claude_usd": 0.9088,
     "google_usd": 0.134,
-    "other_usd": 0.0,
+    "other_usd": 0,
     "google_krw": 188,
     "total_usd": 1.4889,
     "total_krw": 2080,
