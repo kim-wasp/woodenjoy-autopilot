@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T20:07+09:00",
+  "updated": "2026-11-28T20:46+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1670,6 +1670,24 @@
       "at": "2026-11-28T20:07:51+09:00",
       "state": "done",
       "url": null
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-28-jaechohwan-meaning-bundang-8-sites-repeal-stalled",
+      "title": "재초환 뜻, 안 판 집에 2.2억 고지서…폐지법은 왜 2년째 멈췄나",
+      "platform": "blog",
+      "at": "2026-11-29T12:00+09:00",
+      "state": "planned"
+    },
+    {
+      "site": "sisibibi",
+      "site_name": "정치 (시시비비노트)",
+      "dir": "content/sisibibi/2026-11-28-jaechohwan-meaning-bundang-8-sites-repeal-stalled",
+      "title": "재초환 뜻, 안 판 집에 2.2억 고지서…폐지법은 왜 2년째 멈췄나",
+      "platform": "threads",
+      "at": "2026-11-29T19:30+09:00",
+      "state": "planned"
     },
     {
       "site": "forsmartlife",
