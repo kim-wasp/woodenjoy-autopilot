@@ -2,7 +2,7 @@
   "id": "sisibibi/2026-11-26-equal-pay-equal-work-law-labor-business-oppose",
   "site": "sisibibi",
   "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
-  "status": "ready",
+  "status": "published",
   "created_at": "2026-11-26T21:00+09:00",
   "requested_topic": "'같은 일 하면 같은 월급' 법에 넣는다는데, 왜 노동계도 경영계도 난색일까",
   "keywords": {
@@ -228,6 +228,12 @@
   "published": {
     "blog": "posts/2026-11-28-equal-pay-equal-work-law-labor-business-oppose",
     "blog_url": "https://sisibibinote.kr/posts/equal-pay-equal-work-law-labor-business-oppose/",
-    "blog_at": "2026-11-28T12:02:04+09:00"
+    "blog_at": "2026-11-28T12:02:04+09:00",
+    "threads": [
+      "18121814069119410",
+      "18050166701822480",
+      "18138013828733214"
+    ],
+    "threads_at": "2026-11-28T20:03:17+09:00"
   }
 }
