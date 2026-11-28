@@ -1,216 +1,181 @@
 {
   "ideas": [
     {
-      "title": "'같은 일 하면 같은 월급' 법에 넣는다는데, 왜 노동계도 경영계도 난색일까",
-      "keyword": "동일노동 동일임금",
-      "facts": "노동부는 12월 '동일가치노동 동일임금' 로드맵 발표를 목표로 전문가 의견을 듣고 있어요(10월 18일 보도). 이 원칙은 지금 남녀고용평등법에만 있어서, 근로기준법에도 넣는 방안을 검토 중이에요. 11월 23일 매일노동뉴스에 따르면 정부 관계자는 직무분석이 원칙적 전제라고 했어요. 다만 직무분석을 할지는 여론을 살피겠다는 입장이에요.",
-      "sides": "정부·찬성 쪽: 같은 사업장에서 같은 일을 하는데 정규직이냐 비정규직이냐로 임금이 갈리는 건 바로잡아야 하고, 그래야 노동시장 이중구조가 줄어든다 / 노동계: 직무급제(일의 난도·책임에 따라 임금을 정하는 방식)가 임금 삭감 수단이 될 수 있다 · 경영계: 같은 일이어도 사람마다 능력 차이가 있어 일률적인 동일 임금은 어렵다",
-      "question": "'같은 일엔 같은 월급' 원칙에는 공감하세요? 그렇다면 그 '같은 일'을 가르는 직무분석(일의 가치를 따지는 평가)을 누가, 어떤 기준으로 해야 한다고 보세요?",
+      "title": "재초환 뜻, 분당 선도지구 8곳까지 '폐지하라'…그런데 국회는 왜 안 움직이나",
+      "keyword": "재초환 폐지 분당",
+      "search_query": "재초환 뜻",
+      "search_alts": [
+        "재건축초과이익환수제",
+        "재초환 폐지",
+        "재건축 부담금"
+      ],
+      "trend_keyword": "",
+      "facts": "분당 선도지구 8곳이 국회와 정부에 재건축초과이익환수제(재초환) 폐지를 요구하고 나섰어요. 다른 지역에 이어 분당까지 목소리를 냈지만, 국회에서는 아직 처리 움직임이 없다는 보도가 나왔어요(보도 기준 11월 28일).",
+      "sides": "폐지 찬성: 부담금 때문에 재건축 사업성이 떨어져 공급이 늦어진다 / 유지 찬성: 재건축으로 생긴 큰 이익의 일부는 사회에 돌려야 한다",
+      "question": "재건축으로 오른 집값 이익을 부담금으로 거두는 제도, 폐지·완화·유지 중 어느 쪽이 맞다고 보세요?",
+      "metrics": {
+        "news_24h": 25,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 10,
+        "search_query": "재초환 뜻",
+        "search_naver_month": 24400,
+        "in_google_suggest": true
+      },
+      "google_suggest": [
+        "재초환",
+        "재초환 뜻",
+        "재초환 부담금",
+        "재초환 계산",
+        "재초환 합헌",
+        "재초환 장기보유 감면",
+        "재초환 재개발",
+        "재초환 폐지"
+      ],
       "links": [
         {
-          "title": "노동부, 연내 '동일가치노동, 동일임금' 로드맵 마련 - 시대일보",
-          "url": "https://www.sidae.com/article/2026101817292235696"
+          "title": "분당 재건축 8곳 ‘재초환 폐지’ 공동성명 발표… 첫 집단대응 - MTN 머니투데이방송",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CZGF5SDFsUWVzMFcxM3JtOXdjelNVR1VEbTNqYlpERGZESUQ1c3ptS1VPM2RHSTBuSWtPc1QzaE9WeWhkR1V2U215dmU1OGV3U3M4ekt0b1l5T3F2Q3k0?oc=5"
         },
         {
-          "title": "[K-양극화 심화에] 노동부 '동일노동 동일임금' 속도 낼까 - 매일노동뉴스",
-          "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237875"
+          "title": "분당 재건축 선도지구 8곳 \"재초환 조속 폐지\" 공동성명 - 매일경제 마켓",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5zQk4wQ3FLV1hGS2UyVmc5OXJJWHBodE02YnZFUVpVUUYwS0l1djdvejZZcGtZZWNzXzNGdDhKUjgtSl84SHVYUjNUWl9tQ1N4T0E?oc=5"
         },
         {
-          "title": "정부, 임금체계 개편 추진…'동일가치노동 동일임금' 법제화 - 이코노미스트",
-          "url": "https://economist.co.kr/article/view/ecn202610180001"
-        },
-        {
-          "title": "'동일가치노동 동일임금' 법제화 착수…뿌리 깊은 호봉제 벽에 실효성 의문 - 더쎈뉴스",
-          "url": "https://www.mhns.co.kr/news/articleView.html?idxno=764869"
-        },
-        {
-          "title": "노동부, 연내 '동일가치노동 동일임금' 로드맵 발표 - 서울경제",
-          "url": "https://m.sedaily.com/article/20102953"
+          "title": "\"집 팔지도 않았는데 돈 내라니\" … 분당 8곳 재초환 폐지 반발, 2만2459가구 집단행동 - 뉴데일리 경제",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9KN0FmQlZuYVJMNndxLUVJQ0NuWGVWWmpoN3k1UE4ycU5EOWtmSldrMmhVMVE0dVRBa1BabFJfT2hyYUQxYUNwRGJnYXhVZHZsbGZNbld2M0txdVV3NWJxeERPaFZ3OHFCeTVRWS1LTzk5RVRtc3BxWjBWTdIBgAFBVV95cUxNbUtZSnlHa293clBxVDVCY1l6dFBmc3J6SDV6b0VValdPVS1uWGlXSW5ZR0dhWkYtUVB6UjFEQmxqYzRFZWVxU2RoQ3hOR3NPWkdCYWNKWExFZl9ReTVBVVNmZ3pJdHpRLU83WFBlaFJlaXN3SFdtZnluUjRLRmpsbA?oc=5"
         }
       ],
-      "metrics": {
-        "news_24h": 11,
-        "naver_month": 9100
-      },
-      "why": "사장님 글감 · 구글 뉴스 24시간 기사 11건, 네이버 월간 검색 9,100회",
-      "mine": true,
-      "request": "이재명 정부 동일노동 동일월급",
-      "used_at": "2026-11-26T21:01+09:00"
+      "why": "검색어 '재초환 뜻' 네이버 월 24,400회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 25건",
+      "score": 485.0
     },
     {
-      "title": "위증죄 성립 요건은? 대법원, '한덕수 재판 위증' 윤석열 전 대통령 무죄 확정",
-      "keyword": "윤석열 위증 무죄",
-      "search_query": "위증죄 처벌",
+      "title": "관저 이전 예산 전용, 김대기 1심 징역 2년 집행유예 3년…같은 재판 이상민은 왜 무죄?",
+      "keyword": "김대기 관저 이전 1심",
+      "search_query": "집행유예 뜻",
       "search_alts": [
-        "위증죄 처벌",
-        "상고 기각 뜻"
+        "집행유예 뜻",
+        "대통령 관저 이전 예산",
+        "1심 판결 확정 시기"
       ],
-      "trend_keyword": "계엄",
-      "facts": "대법원이 '한덕수 재판 위증' 혐의를 받은 윤석열 전 대통령에게 무죄를 확정했어요. 검찰 상고를 기각해서 이 혐의 재판은 무죄로 끝났어요.",
-      "sides": "판결 존중 측: 세 번의 재판에서 같은 결론이 나왔으니 결과를 받아들여야 한다 / 비판 측: 위증을 인정하는 기준이 너무 좁다는 지적이 있다(구체 쟁점은 판결문 확인 필요)",
-      "question": "이 무죄 확정이 계엄 관련 다른 재판에 어떤 의미가 있다고 보세요?",
+      "trend_keyword": "",
+      "facts": "윤석열 정부 때 대통령 관저를 옮기면서 예산을 불법으로 돌려 썼다는 혐의로 김대기 전 비서실장이 1심에서 징역 2년, 집행유예 3년을 받았어요. 같이 재판받은 이상민 전 장관은 무죄가 나왔고, KBS는 이 사건을 '김건희 친분 업체에 예산 전용'으로 보도했어요.",
+      "sides": "판결을 무겁게 보는 쪽: 국회가 정한 용도와 다르게 예산을 쓴 건 위법이라는 첫 판단이 나왔다 / 신중론: 1심일 뿐이라 항소심에서 바뀔 수 있고 확정 전까지는 무죄 추정이다",
+      "question": "정부가 급하다며 다른 항목 예산을 끌어다 쓰는 일, 어디까지는 허용되고 어디부터 처벌해야 한다고 보세요?",
       "metrics": {
-        "news_24h": 100,
-        "news_6h": 50,
-        "news_capped": true,
+        "news_24h": 8,
+        "news_6h": 0,
+        "news_capped": false,
+        "trend": "",
+        "trend_traffic": 0,
+        "trend_label": "",
+        "naver_month": 10,
+        "search_query": "집행유예 뜻",
+        "search_naver_month": 11310,
+        "in_google_suggest": true
+      },
+      "google_suggest": [
+        "집행유예 뜻",
+        "집행유예",
+        "집행유예 빨간줄",
+        "집행유예 전과",
+        "집행유예 해외여행",
+        "집행유예 선고유예 차이",
+        "집행유예 영어로",
+        "집행유예 기간"
+      ],
+      "links": [
+        {
+          "title": "'관저 이전 예산 전용' 김대기 1심 징역형 집행유예·석방…이유는 - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00S0RBWWlVcGxvZFNRRlFVM1cyOEJIb2RBTlgzZjBHaWdNczFudDJmc0ZDZmxwSjVhREVUNmhPc0FRUlladFNiT3R3RlNNNHZxQW5ETGhnTGFHbEsxUm43NFZRdWxLTE51eENv0gFwQVVfeXFMTTRmVDV3Z2F3WFRDWTkwZUIxT2pLQUMyYmVSemdJZHlyMnZFRkdEWnFYMHptYnlreTEwYmIxUnlyejR0dV85WmxJTE9YSHljZzdJS1BHcFF5LXZFcHJoSW1YTV96dFRhLU9tSXQwNmZ0Uw?oc=5"
+        },
+        {
+          "title": "‘尹관저 이전 예산 전용’ 김대기 1심 징역형 집유 - 동아일보",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJRjlIblFEVjZaRlJReW9Ud29OdXBNSHdTQ2REcjZQdi1MUDhrVWs1b0N0WFJpRl9MNFJNMTA5RldEejNLRkZUNVVWOHRWdDNkSFpObzA0T2MzRExkQUVkZFNSeV8wZVlwZGVmTW5rTzJVTXMzUnfSAWZBVV95cUxOdDVMUlIwVTNaV0hVWTZKMkphYXpVSkVzM0pYOXAwdkQxSUZDVWlMNC11UnVmUDhDNVoxVmhON1dJUzNlbXBUaUxONU5PRk1VOW1HSzVsRzRNa0ZaeTlvSWVRY09xRHc?oc=5"
+        },
+        {
+          "title": "'관저이전 예산 전용' 김대기 1심 집행유예...이상민 '무죄' - YTN",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE40aFlyQjVtOUJqSElDbmJtUnRDOEc0T09pQWZYekRzOVNXX2tIVjVaanBEbVlsNE13XzlrTFVrdVVfYXozX2RrQVRyZVpPVDRwaG5JOGJXaDNXYkFfRVE?oc=5"
+        }
+      ],
+      "why": "검색어 '집행유예 뜻' 네이버 월 11,310회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 8건",
+      "score": 294.2
+    },
+    {
+      "title": "증안펀드 뜻, 이번엔 진짜 가동될까? 이 대통령 '자본시장대전환위원장에 전권' 지시와 코스피 4,900선",
+      "keyword": "자본시장대전환위원회 김용범",
+      "search_query": "증안펀드 뜻",
+      "search_alts": [
+        "증권시장안전펀드",
+        "자본시장대전환위원회",
+        "증안펀드 투입 효과"
+      ],
+      "trend_keyword": "뉴스1",
+      "facts": "이재명 대통령이 \"자본시장 정상화는 핵심 국정과제\"라며 김용범 자본시장대전환위원장에게 전권을 주겠다고 했고, 관련 부처는 원칙적으로 받아들였다는 보도가 나왔어요. 증권시장안전펀드(증안펀드) 가동이 임박했다는 기대와 배당 이슈 속에 코스피는 4,900선을 되찾았어요(보도 기준 11월 28일).",
+      "sides": "찬성 쪽: 급락장에서 시장을 받쳐 주고 흩어진 정책을 한곳에서 빨리 결정할 수 있다 / 우려 쪽: 위원회 한 곳에 전권이 몰리면 부처 견제와 국회 감시가 약해질 수 있다",
+      "question": "주가가 크게 떨어질 때 정부 돈으로 시장을 받치는 증안펀드, 필요한 안전판으로 보세요, 시장 개입으로 보세요?",
+      "metrics": {
+        "news_24h": 20,
+        "news_6h": 0,
+        "news_capped": false,
         "trend": "",
         "trend_traffic": 0,
         "trend_label": "",
         "naver_month": 20,
-        "search_query": "위증죄 처벌",
-        "search_naver_month": 95,
+        "search_query": "증안펀드 뜻",
+        "search_naver_month": 6770,
         "in_google_suggest": true
       },
       "google_suggest": [
-        "위증죄",
-        "위증죄 형량",
-        "위증죄 공소시효",
-        "위증죄 성립요건",
-        "위증죄 뜻",
-        "위증죄 처벌",
-        "위증죄 처벌 사례",
-        "위증죄 구성요건"
+        "증안펀드",
+        "증안펀드란",
+        "증안펀드 뜻",
+        "증안펀드 규모",
+        "증안펀드가 뭐야",
+        "증안펀드 가동",
+        "10조 증안펀드"
       ],
       "links": [
         {
-          "title": "윤석열 ‘계엄 국무회의 위증’ 무죄 확정…대법 “허위 진술 입증 부족” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FQ0hZclAta3A2cXpEb0xZM3FiNlBQTXh5V1hkVzlCUkVUS1A4WGx5M3kyUTNOM29zcE5qZ19KYnZ4SDNPWnBPZFIzdDVrVmJZaUF5dW9oUndGX0k?oc=5"
+          "title": "녹아내리는 국장 살린다…李대통령 \"자본시장대전환위원장에 전권\" - KBC광주방송",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9DeDVfcy05aF92bEM1UVJ5NldJZExsUC01cWtBR0txMlZnd1NsOW9RTzRuU2JvRWExV2dXV3kzM3BFR0ZnNHR1b3VlLW5mbjN6ZjY2dFU3YWZZcU5OMy1pVg?oc=5"
         },
         {
-          "title": "[속보]윤석열 ‘한덕수 재판 위증 혐의’ 대법서 무죄 확정 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5QNlA3NWttOUwxNmVKd0FtTlAwbWZBZ0lDdTloZ25nbmdXT2oyOGg0UndZdW41dzE5VHRGblRNNnJzRkdoZVVLUEFLY1BhcDBIbXdfaER0YVNnd9IBX0FVX3lxTE5ZNldmNmhpLS1jeG5RdEVpUXkwT3lVUURCUEdEVEswSFpRcXpnWGJiVTVYTXpZRllOeGpSZUpUMGt0ZUxwSDJBRGxwYnhiM2lqaDRVblVnUk9lWHEwbmxj?oc=5"
+          "title": "李 대통령, 자본시장대전환위원장에 전권 부여 힘 실어 - 전북도민일보",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBIZUd4V21FTHBSM1ljOHBKMHpnSGZzaC1DY083VnczeUluSWpRMC0wRjFncHlvRGFtcW10dVJsa252Rkc2WjJRcFBJR3pEWjRnY3J1cGduWUlCYWE1Yl95NVlGcDYzbEhEcmc?oc=5"
         },
         {
-          "title": "윤석열, ‘한덕수 재판 위증’ 혐의 무죄 확정 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4Z2w5SXNldnNFTWRkbUtJc0pjSmJRZG56T2ZubXRBYWhMU2VXbWNKT3VpemRhYTNkTm5BWUhxVFNJMkEyNGttUnNteUlobkcxelpBWlBjTFZZakxuaFJ4dHpGbDlxeHJnY2NhU2pfOFFvUQ?oc=5"
+          "title": "李대통령 \"김용범 자본시장 대전환 위원장에 전권 부여\" - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YajFveENJWWotYUc4QU15aE5jTGZ2UnFvbWtFWTJuR3RVc1hBOUNXU1hqMzV0c3NBZ0psVktKTlFQSklkR1ZJWWpFUFFmWmdtbVpDeE9idV9fNWo2UlBIOE84Sm9WT3l4RVZ2cWRQOVIwZ9IBckFVX3lxTE5YajFveENJWWotYUc4QU15aE5jTGZ2UnFvbWtFWTJuR3RVc1hBOUNXU1hqMzV0c3NBZ0psVktKTlFQSklkR1ZJWWpFUFFmWmdtbVpDeE9idV9fNWo2UlBIOE84Sm9WT3l4RVZ2cWRQOVIwZw?oc=5"
         }
       ],
-      "why": "검색어 '위증죄 처벌' 네이버 월 95회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 100+건 (최근 6시간 50건)",
-      "score": 186.9
-    },
-    {
-      "title": "청해부대 파병 연장, 국회 동의는 왜 필요할까? 국방위가 임무 구역을 오만 남방 해역까지 넓혔어요",
-      "keyword": "청해부대 파병 연장",
-      "search_query": "청해부대 파병",
-      "search_alts": [
-        "파병 동의안 뜻",
-        "청해부대 임무"
-      ],
-      "trend_keyword": "",
-      "facts": "국회 국방위원회가 청해부대 파병 연장 수정 동의안을 의결했고, 작전 구역은 오만 남방 해역까지 넓어져요. 같은 날 대학생 8명이 국회 본관에서 '파병 반대' 기습 시위를 했고 정문 유리가 깨졌는데, 깨진 경위는 아직 확인되지 않았어요.",
-      "sides": "찬성 측: 바닷길을 오가는 우리 선박과 국민을 지키려면 파병을 이어가고 구역도 넓혀야 한다 / 반대 측: 구역을 넓히면 다른 나라 분쟁에 휘말릴 위험이 커지니 파병을 철회해야 한다",
-      "question": "임무 구역을 넓혀 파병을 연장하는 일과 분쟁에 휘말릴 위험, 사장님은 어느 쪽을 더 무겁게 보세요?",
-      "metrics": {
-        "news_24h": 39,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "",
-        "trend_traffic": 0,
-        "trend_label": "",
-        "naver_month": 70,
-        "search_query": "청해부대 파병",
-        "search_naver_month": 1400,
-        "in_google_suggest": true
-      },
-      "google_suggest": [
-        "청해부대",
-        "청해부대 파병",
-        "청해부대 49진",
-        "청해부대 호르무즈",
-        "청해부대 48진",
-        "청해부대 파병 후기 디시",
-        "청해부대 월급",
-        "청해부대 홋줄 사고"
-      ],
-      "links": [
-        {
-          "title": "[속보] 국회 국방위, ‘임무 구역 확대’ 청해부대 파병 연장 동의안 의결 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1tcXVhYlRlZzREOU5SN3JCeVVxd1dJek9VTGgtNkt3SFJJZi1XemVJVHN4MmFHcUlHS08yUEdDS2tVR25hYXdqZHhOenBnMzNVWEJMVnJPRlN1VXc?oc=5"
-        },
-        {
-          "title": "국회 국방위, ‘임무 구역 확대’ 청해부대 파병 연장 동의안 의결 - JTBC",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5PSTNvNEtiaGMzUjVSY2hUd1EzMUpNMHhNUzB4UnpEcjh1TjIwV18wZWtXaEhQOU5pY0dUblZQdmh1YUxEN1REeF9fdTZ4eVJSTlVRTA?oc=5"
-        },
-        {
-          "title": "국회 국방위, 청해부대 파병 연장 동의안 의결 - 채널A",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9POWVkdGVOZ2JPSFF0QXhOelV5RG02QzNfQ3VSdWE2WjVDbGtmYktRS1B5bFF3ZFY4NFdjZ0NpMGpuS0wzSUR0TXh4bFl4SnFsLVl3Y05vSVJOOVZXWUHSAWNBVV95cUxNLWVRVl82bGhUQm5hRFJJOW1QMjlnSDFBQmZYLUZPLTZkTHYxU2NjY01jZDh1YjREeEVoZ0xNaVlYTWptY09zODRwWlZGbVY0bEJjeW1YdUtVd1lia2xEd0hnUEE?oc=5"
-        }
-      ],
-      "why": "검색어 '청해부대 파병' 네이버 월 1,400회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 39건",
-      "score": 127.0
-    },
-    {
-      "title": "검찰총장 임명 절차, 1년 4개월째 공석인데 후보 '추가 천거'는 처음이에요",
-      "keyword": "검찰총장 추가 천거",
-      "search_query": "검찰총장 공석",
-      "search_alts": [
-        "검찰총장 추천위원회",
-        "검찰총장 공석"
-      ],
-      "trend_keyword": "검찰",
-      "facts": "검찰총장 자리가 1년 4개월째 비어 있는 가운데, 법무부가 12월 9일까지 후보를 추가로 국민 천거받기로 했어요. 기존 후보 3명 외에 새로 사람을 받는 건 전례가 없는 일이에요.",
-      "sides": "찬성 측: 더 알맞은 사람을 찾으려면 후보를 넓게 받는 게 낫다 / 반대 측: 절차를 다시 열면 공석이 더 길어지고 특정 인물을 위한 것 아니냐는 의심을 산다",
-      "question": "검찰총장 공석이 길어지는 것과 후보를 다시 받는 것, 사장님은 무엇이 더 문제라고 보세요?",
-      "metrics": {
-        "news_24h": 52,
-        "news_6h": 0,
-        "news_capped": false,
-        "trend": "검찰",
-        "trend_traffic": 200,
-        "trend_label": "200+",
-        "naver_month": 10,
-        "search_query": "검찰총장 공석",
-        "search_naver_month": 20,
-        "in_google_suggest": true
-      },
-      "google_suggest": [
-        "검찰총장",
-        "검찰총장 대행",
-        "검찰총장 연봉",
-        "검찰총장 후보",
-        "검찰총장 헌법",
-        "검찰총장 국무회의",
-        "검찰총장 공석",
-        "검찰총장 임기"
-      ],
-      "links": [
-        {
-          "title": "법무부, 검찰총장 후보 천거 추가로 받는다…새 후보 추가 예고 - 중앙일보",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9neHdZNTR0czJ4OFozVU1kWU9kdHZKZjMtZkxKamlKZjBBdkd6WjNWUHdtU0NwUE8wR2VVdmRxeTVVbHUyRHNCeHQ0YnY3Q29HY0h5VzJB?oc=5"
-        },
-        {
-          "title": "초유의 검찰총장 후보 추가 천거…후보군 확대? 제3자 염두?(종합2보) - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02UEVtNU1NN2xOLVlKZldWRkRjZzE1cldmMEVwNWdKVmpmdmU1ekRtSW4zRldmRzV3MTV5NE1zNXlDa0VQOFFKd21hNXNzckZlRkp5MkVnejc5WVXSAWBBVV95cUxPaHJhckVuUDV1dDNVYnBPc2hqdU5IZUxHc0FabWlnSjVGTlFMM25JVXFTbG1YdExtNVpHOVlLR1M0bkRobmliX0RKYTZnX2hhUTJVQUxIYjA3X0dnSXdiY1I?oc=5"
-        },
-        {
-          "title": "검찰총장 후보 천거기간 연장…’사상 초유’ - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JRDlJcnJaV2ZQMzJrRlV2Z0VKSjJTQUt3UmlvUGtHUGFKdzREUndNaEw2NHRvUTVHSGlpQkJLZWRIV3NHV3JUVGdTUVd4TVhfRmNZdWxlUE4xM0tfZWltcjlxWDRHcmc?oc=5"
-        }
-      ],
-      "why": "검색어 '검찰총장 공석' 네이버 월 20회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 52건, 구글 검색 급증 '검찰' 200+",
-      "score": 113.4
+      "why": "검색어 '증안펀드 뜻' 네이버 월 6,770회, 구글 자동완성에 있음 · 구글 뉴스 24시간 기사 20건",
+      "score": 215.4
     }
   ],
-  "updated": "2026-11-26T20:43+09:00",
+  "updated": "2026-11-28T20:09+09:00",
   "basis": "설명형 검색어의 검색 수요(네이버 월간 검색 수, 구글 자동완성) + 구글 뉴스 최근 24시간 기사 수 + 구글 트렌드",
   "cost": {
     "claude": {
-      "claude-sonnet-5-5": {
-        "input_tokens": 91023,
-        "output_tokens": 2404,
-        "web_searches": 4,
-        "calls": 1,
-        "usd": 0.2461
+      "claude-opus-5-5": {
+        "input_tokens": 27414,
+        "output_tokens": 9999,
+        "web_searches": 0,
+        "calls": 2,
+        "usd": 0.3096
       }
     },
     "images": {},
-    "usd": 0.2461,
-    "claude_usd": 0.2068,
+    "usd": 0.3096,
+    "claude_usd": 0.3096,
     "google_usd": 0.0,
     "other_usd": 0.0,
     "google_krw": 0,
-    "total_usd": 0.2461,
-    "total_krw": 340,
+    "total_usd": 0.3096,
+    "total_krw": 430,
     "note": "추정치 (engine/prices.json 단가 기준). 실제 청구액은 Anthropic 콘솔·Google 결제 화면 기준"
   }
 }
