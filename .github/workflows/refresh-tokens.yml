@@ -9,7 +9,7 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: meta 방식인지 확인
         id: mode
         run: echo "meta=$([ "$(jq -r .social_via config/settings.json)" = "meta" ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
