@@ -54,10 +54,15 @@
    "period": "11.08~11.14",
    "value": 37.0,
    "source": "https://www.hkilbo.kr/news/articleView.html?idxno=144154"
+  },
+  "2026-W47": {
+   "period": "11.15~11.21",
+   "value": 41.1,
+   "source": "https://m.sedaily.com/article/20119865"
   }
  },
  "threshold": 12.9,
  "season": "2026-2027",
- "threshold_source": "https://kdca.go.kr/kdca/2848/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQyJTJGMzEyNTkzJTJGYXJ0Y2xWaWV3LmRvJTNG",
- "updated": "2026-11-21T17:14+09:00"
+ "threshold_source": "http://www.knongnews.com/news/articleView.html?idxno=24995",
+ "updated": "2026-11-28T17:52+09:00"
 }
