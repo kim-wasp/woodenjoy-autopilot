@@ -1,0 +1,45 @@
+{
+"workflow": "스튜디오 글 만들기",
+"event": "workflow_dispatch",
+"run_id": "46138363507",
+"argv": [
+"engine/generate.py",
+"sisibibi",
+"--ideas",
+"--topic"
+],
+"entries": [
+{
+"t": "2026-11-28T20:08:44+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글감 추천",
+"purpose": "글감 추천",
+"where": "generate.ideas",
+"model": "claude-opus-5-5",
+"input": 13707,
+"cache_write": 0,
+"cache_read": 0,
+"output": 5000,
+"web_searches": 0,
+"sec": 45.6,
+"usd": 0.15483
+},
+{
+"t": "2026-11-28T20:09:27+09:00",
+"kind": "claude",
+"site": "sisibibi",
+"task": "글감 추천",
+"purpose": "글감 추천",
+"where": "generate.ideas",
+"model": "claude-opus-5-5",
+"input": 13707,
+"cache_write": 0,
+"cache_read": 0,
+"output": 4999,
+"web_searches": 0,
+"sec": 43.5,
+"usd": 0.15481
+}
+]
+}
