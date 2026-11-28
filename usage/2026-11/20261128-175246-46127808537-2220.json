@@ -1,0 +1,28 @@
+{
+"workflow": "건강 주간 수치",
+"event": "schedule",
+"run_id": "46127808537",
+"argv": [
+"tools/fsl_pages.py",
+"weekly",
+"--update"
+],
+"entries": [
+{
+"t": "2026-11-28T17:52:37+09:00",
+"kind": "claude",
+"site": "공통",
+"task": "forsmartlife 페이지",
+"purpose": "update",
+"where": "fsl_pages.update",
+"model": "claude-sonnet-5-5",
+"input": 8,
+"cache_write": 33553,
+"cache_read": 26800,
+"output": 1963,
+"web_searches": 3,
+"sec": 13.7,
+"usd": 0.13889
+}
+]
+}

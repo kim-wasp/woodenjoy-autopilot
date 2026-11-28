@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-28T13:49+09:00",
+ "updated": "2026-11-28T17:52+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 53.6253,
-    "claude_usd": 43.5753,
+    "usd": 53.7641,
+    "claude_usd": 43.7141,
     "google_usd": 10.05,
     "other_usd": 0,
-    "input": 2356894,
-    "cache_write": 2022567,
-    "cache_read": 2388031,
-    "output": 1482102,
-    "web_searches": 334,
-    "calls": 396,
+    "input": 2356902,
+    "cache_write": 2056120,
+    "cache_read": 2414831,
+    "output": 1484065,
+    "web_searches": 337,
+    "calls": 397,
     "images": 75,
     "google_krw": 14070
    },
@@ -77,16 +77,16 @@
      "google_krw": 2814
     },
     "공통": {
-     "usd": 0.1555,
-     "claude_usd": 0.1555,
+     "usd": 0.2944,
+     "claude_usd": 0.2944,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 29278,
-     "cache_write": 0,
-     "cache_read": 0,
-     "output": 9693,
-     "web_searches": 0,
-     "calls": 2,
+     "input": 29286,
+     "cache_write": 33553,
+     "cache_read": 26800,
+     "output": 11656,
+     "web_searches": 3,
+     "calls": 3,
      "images": 0,
      "google_krw": 0
     }
@@ -173,6 +173,20 @@
      "output": 9693,
      "web_searches": 0,
      "calls": 2,
+     "images": 0,
+     "google_krw": 0
+    },
+    "forsmartlife 페이지": {
+     "usd": 0.1389,
+     "claude_usd": 0.1389,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 33553,
+     "cache_read": 26800,
+     "output": 1963,
+     "web_searches": 3,
+     "calls": 1,
      "images": 0,
      "google_krw": 0
     }
@@ -318,6 +332,20 @@
      "images": 0,
      "google_krw": 0
     },
+    "update": {
+     "usd": 0.1389,
+     "claude_usd": 0.1389,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 33553,
+     "cache_read": 26800,
+     "output": 1963,
+     "web_searches": 3,
+     "calls": 1,
+     "images": 0,
+     "google_krw": 0
+    },
     "속보 고르기": {
      "usd": 0.0788,
      "claude_usd": 0.0788,
@@ -419,16 +447,16 @@
      "google_krw": 14070
     },
     "claude-sonnet-5-5": {
-     "usd": 5.8474,
-     "claude_usd": 5.8474,
+     "usd": 5.9863,
+     "claude_usd": 5.9863,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 469171,
-     "cache_write": 994691,
-     "cache_read": 653977,
-     "output": 158099,
-     "web_searches": 66,
-     "calls": 110,
+     "input": 469179,
+     "cache_write": 1028244,
+     "cache_read": 680777,
+     "output": 160062,
+     "web_searches": 69,
+     "calls": 111,
      "images": 0,
      "google_krw": 0
     },
@@ -641,6 +669,20 @@
      "output": 9693,
      "web_searches": 0,
      "calls": 2,
+     "images": 0,
+     "google_krw": 0
+    },
+    "공통 / forsmartlife 페이지": {
+     "usd": 0.1389,
+     "claude_usd": 0.1389,
+     "google_usd": 0,
+     "other_usd": 0,
+     "input": 8,
+     "cache_write": 33553,
+     "cache_read": 26800,
+     "output": 1963,
+     "web_searches": 3,
+     "calls": 1,
      "images": 0,
      "google_krw": 0
     }
@@ -983,16 +1025,16 @@
      "google_krw": 563
     },
     "2026-11-28": {
-     "usd": 0.5826,
-     "claude_usd": 0.5826,
+     "usd": 0.7214,
+     "claude_usd": 0.7214,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 59248,
-     "cache_write": 141232,
-     "cache_read": 77124,
-     "output": 22572,
-     "web_searches": 9,
-     "calls": 20,
+     "input": 59256,
+     "cache_write": 174785,
+     "cache_read": 103924,
+     "output": 24535,
+     "web_searches": 12,
+     "calls": 21,
      "images": 0,
      "google_krw": 0
     }
@@ -1000,6 +1042,20 @@
   }
  },
  "recent_runs": [
+  {
+   "file": "20261128-175246-46127808537-2220.json",
+   "workflow": "건강 주간 수치",
+   "event": "schedule",
+   "t": "2026-11-28T17:52:37+09:00",
+   "task": "forsmartlife 페이지",
+   "site": "공통",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.1389,
+   "claude_usd": 0.1389,
+   "google_krw": 0,
+   "other_usd": 0
+  },
   {
    "file": "20261128-134952-46077737360-4759.json",
    "workflow": "속보 감지",
