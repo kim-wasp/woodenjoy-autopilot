@@ -49,7 +49,7 @@ jobs:
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           NAVER_HUB_ID: ${{ secrets.NAVER_HUB_ID }}
           NAVER_HUB_KEY: ${{ secrets.NAVER_HUB_KEY }}
-          HAS_KEY: ${{ secrets.SUPABASE_URL != '' && secrets.ANTHROPIC_API_KEY != '' && 'yes' || '' }}
+          HAS_KEY: ${{ secrets.SUPABASE_URL != '' && (secrets.ANTHROPIC_API_KEY != '' || github.repository == 'kim-wasp/woodenjoy-autopilot') && 'yes' || '' }}  # 이 저장소는 WIF(키 없이)로 돼요
           SITE: ${{ github.event.inputs.site || 'infobay' }}
           MODE: ${{ github.event.inputs.mode || 'collect' }}
         run: |

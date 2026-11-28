@@ -22,7 +22,7 @@
 
 ## 인증과 키
 - Claude: GitHub Actions 안에서는 WIF (서비스 계정 woodenjoy-autopilot, 규칙 github-workloads, 주체 repo:kim-wasp@275420324/woodenjoy-autopilot@1423432938:ref:refs/heads/main, ref 클레임 refs/heads/main). 실패하면 ANTHROPIC_API_KEY 로 대체.
-- 남은 일: 며칠 WIF로 문제없으면 GitHub Secrets 의 ANTHROPIC_API_KEY 와 Console 키(woodenjoy-key-2) 삭제. 옛 키 woodenjoy-key 는 11/30 만료.
+- 11/28 확인: 11/22 이후 Claude 쓰는 실행 34건 모두 WIF 성공, API 키 대체 0건. 글 만들기·앱 카드 워크플로가 ANTHROPIC_API_KEY 비밀값이 없으면 건너뛰던 조건을 이 저장소는 WIF로 통과하게 고침(11/28). 이제 GitHub Secrets 의 ANTHROPIC_API_KEY 와 Console 키(woodenjoy-key-2) 삭제해도 됨. 옛 키 woodenjoy-key 는 11/30 만료.
 - 쿠팡 파트너스 Open API: COUPANG_ACCESS_KEY / COUPANG_SECRET_KEY (11/18). 글에 필요한 비교 상품 2~3개를 API로 찾아 '어떤 걸 살까' 한 곳에 비교표와 함께. 대가성 문구는 맨 위, 업로드 직전에도 강제.
 - Gemini 이미지는 선불 크레딧 (AI Studio). 11/19에 소진돼 대표사진이 빠진 적 있음 → 자동 충전 권장했음.
 

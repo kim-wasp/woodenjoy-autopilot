@@ -36,7 +36,7 @@ jobs:
           # Claude API 키가 아직 없으면 조용히 건너뛰어요 (실패 메일이 가지 않게)
           if [ -z "$HAS_KEY" ]; then echo "ANTHROPIC_API_KEY 가 아직 없어서 건너뜀"; echo "sites=" >> "$GITHUB_OUTPUT"; fi
         env:
-          HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' && 'yes' || '' }}
+          HAS_KEY: ${{ (secrets.ANTHROPIC_API_KEY != '' || github.repository == 'kim-wasp/woodenjoy-autopilot') && 'yes' || '' }}  # 이 저장소는 WIF(키 없이)로 돼요
       - uses: ./.github/actions/setup
         if: steps.pick.outputs.sites != ''
       - name: 만들기
