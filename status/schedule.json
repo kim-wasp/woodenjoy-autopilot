@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T20:03+09:00",
+  "updated": "2026-11-28T20:07+09:00",
   "items": [
     {
       "site": "infobay",
@@ -1658,6 +1658,16 @@
       "title": "동일노동 동일임금, 월급 194만원 차이인데 노사 둘 다 난색인 이유",
       "platform": "threads",
       "at": "2026-11-28T20:03:17+09:00",
+      "state": "done",
+      "url": null
+    },
+    {
+      "site": "infobay",
+      "site_name": "상식 (커먼센스 · 블로그 + infobay_kr)",
+      "dir": "content/infobay/2026-11-28-issue-1349",
+      "title": "⚡ 경복궁 반려견 출입 허용 요구에 견주들도 반대한 이유",
+      "platform": "threads",
+      "at": "2026-11-28T20:07:51+09:00",
       "state": "done",
       "url": null
     },
