@@ -1,21 +1,21 @@
 {
- "updated": "2026-11-28T17:52+09:00",
+ "updated": "2026-11-28T18:27+09:00",
  "ledger_start": "2026-11-23T20:09:58+09:00",
  "usd_krw": 1400,
  "note": "Claude 는 달러(크레딧에서 빠지는 단위), Google AI Studio 는 원화로 따로 보여 줘요. 비용은 engine/prices.json 단가로 계산한 추정치예요. 실제 청구액은 Claude Console(사용량·비용)과 Google AI Studio(결제) 기준. 2026-11-23 20:09 이전은 글마다 남긴 합계만 있어서 용도별 세부가 없어요.",
  "months": {
   "2026-11": {
    "total": {
-    "usd": 53.7641,
-    "claude_usd": 43.7141,
+    "usd": 53.7665,
+    "claude_usd": 43.7165,
     "google_usd": 10.05,
     "other_usd": 0,
-    "input": 2356902,
+    "input": 2369062,
     "cache_write": 2056120,
     "cache_read": 2414831,
-    "output": 1484065,
+    "output": 1486413,
     "web_searches": 337,
-    "calls": 397,
+    "calls": 402,
     "images": 75,
     "google_krw": 14070
    },
@@ -35,16 +35,16 @@
      "google_krw": 3940
     },
     "가구·인테리어 (우드엔조이)": {
-     "usd": 14.8123,
-     "claude_usd": 12.9363,
+     "usd": 14.8147,
+     "claude_usd": 12.9387,
      "google_usd": 1.876,
      "other_usd": 0,
-     "input": 890197,
+     "input": 902357,
      "cache_write": 366460,
      "cache_read": 541720,
-     "output": 482453,
+     "output": 484801,
      "web_searches": 67,
-     "calls": 159,
+     "calls": 164,
      "images": 14,
      "google_krw": 2626
     },
@@ -121,16 +121,16 @@
      "google_krw": 3752
     },
     "속보 감지": {
-     "usd": 3.6118,
-     "claude_usd": 3.6118,
+     "usd": 3.6142,
+     "claude_usd": 3.6142,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 377437,
+     "input": 389597,
      "cache_write": 858042,
      "cache_read": 525856,
-     "output": 154450,
+     "output": 156798,
      "web_searches": 56,
-     "calls": 125,
+     "calls": 130,
      "images": 0,
      "google_krw": 0
     },
@@ -347,16 +347,16 @@
      "google_krw": 0
     },
     "속보 고르기": {
-     "usd": 0.0788,
-     "claude_usd": 0.0788,
+     "usd": 0.0812,
+     "claude_usd": 0.0812,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 375222,
+     "input": 387382,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 82619,
+     "output": 84967,
      "web_searches": 0,
-     "calls": 101,
+     "calls": 106,
      "images": 0,
      "google_krw": 0
     },
@@ -461,16 +461,16 @@
      "google_krw": 0
     },
     "claude-haiku-5-5": {
-     "usd": 0.1235,
-     "claude_usd": 0.1235,
+     "usd": 0.1259,
+     "claude_usd": 0.1259,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 514583,
+     "input": 526743,
      "cache_write": 0,
      "cache_read": 0,
-     "output": 144055,
+     "output": 146403,
      "web_searches": 0,
-     "calls": 131,
+     "calls": 136,
      "images": 0,
      "google_krw": 0
     }
@@ -631,16 +631,16 @@
      "google_krw": 0
     },
     "가구·인테리어 (우드엔조이) / 속보 감지": {
-     "usd": 0.4959,
-     "claude_usd": 0.4959,
+     "usd": 0.4983,
+     "claude_usd": 0.4983,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 174005,
+     "input": 186165,
      "cache_write": 108730,
      "cache_read": 123243,
-     "output": 48458,
+     "output": 50806,
      "web_searches": 8,
-     "calls": 71,
+     "calls": 76,
      "images": 0,
      "google_krw": 0
     },
@@ -1025,16 +1025,16 @@
      "google_krw": 563
     },
     "2026-11-28": {
-     "usd": 0.7214,
-     "claude_usd": 0.7214,
+     "usd": 0.7238,
+     "claude_usd": 0.7238,
      "google_usd": 0,
      "other_usd": 0,
-     "input": 59256,
+     "input": 71416,
      "cache_write": 174785,
      "cache_read": 103924,
-     "output": 24535,
+     "output": 26883,
      "web_searches": 12,
-     "calls": 21,
+     "calls": 26,
      "images": 0,
      "google_krw": 0
     }
@@ -1042,6 +1042,20 @@
   }
  },
  "recent_runs": [
+  {
+   "file": "20261128-182708-46107772894-4097.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-28T18:27:08+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0005,
+   "claude_usd": 0.0005,
+   "google_krw": 0,
+   "other_usd": 0
+  },
   {
    "file": "20261128-175246-46127808537-2220.json",
    "workflow": "건강 주간 수치",
@@ -1053,6 +1067,62 @@
    "images": 0,
    "usd": 0.1389,
    "claude_usd": 0.1389,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261128-173151-46107772894-3829.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-28T17:31:51+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0004,
+   "claude_usd": 0.0004,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261128-163634-46107772894-3554.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-28T16:36:34+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0004,
+   "claude_usd": 0.0004,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261128-154117-46107772894-3320.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-28T15:41:17+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0006,
+   "claude_usd": 0.0006,
+   "google_krw": 0,
+   "other_usd": 0
+  },
+  {
+   "file": "20261128-144559-46107772894-2909.json",
+   "workflow": "속보 감지",
+   "event": "workflow_dispatch",
+   "t": "2026-11-28T14:45:59+09:00",
+   "task": "속보 감지",
+   "site": "woodenjoy",
+   "calls": 1,
+   "images": 0,
+   "usd": 0.0004,
+   "claude_usd": 0.0004,
    "google_krw": 0,
    "other_usd": 0
   },
